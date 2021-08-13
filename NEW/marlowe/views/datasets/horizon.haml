@@ -1,0 +1,42 @@
+- content_for(:head) do
+  %script{type: 'text/javascript', src: "/charts/timeseries.js"}
+  %script{type: 'text/javascript', src: "/charts/horizon.js"}
+  :javascript
+    $data.width = 800
+    $data.height = 100
+    $data.file = "#{@file}";
+    $data.yMax = #{@y_max};
+    $data.density = 15
+    $data.apdex_t = #{@apdex_t};
+    $data.measure = "#{@measure}";
+    $data.primary_dim = "#{@primary_dim}";
+    $data.dimensions = #{@dimensions.to_json};
+    $data.filter = "#{@filter_label}";
+    $data.only = "#{@only ? '1' : '0'}";
+
+  :css
+    #logTransformGroup, #densityGroup, #apdexTGroup, #filterGroup, #attrGroup {
+      display: none;
+    }
+
+
+.row
+  .span4
+    #horizon-controls.form-inline
+      %span#horizon-bands
+        %span#horizon-bands-value 1
+        %button.first &#x2212
+        %button.last +
+      %label.checkbox.inline
+        %input#unnormalized{type: 'checkbox', name: 'normalized', value: 'true', onchange: 'refreshData();'}
+        Use local Y Max
+      %img.horizon.busy{src:'/images/busy.gif', style: 'display:none'}
+
+.row
+  .span12
+    #horizon-chart
+
+:javascript
+
+  horizonInit(d3.select("#horizon-chart"));
+  $data.dispatch.reloadData();

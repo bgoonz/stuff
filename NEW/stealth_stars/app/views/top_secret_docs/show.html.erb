@@ -1,0 +1,15 @@
+<h1><%= @doc.title %></h1>
+
+<p>
+<button id="crypt-toggle" type="button" class="btn" data-toggle="button">Show Decrypted</button>
+</p>
+
+<div class="crypt-section">
+  <code style="word-wrap: break-word; white-space: normal; display: block">
+  <%= @doc.encrypted_body %>
+  </code>
+</div>
+
+<div class="crypt-section" style="display: none">
+  <pre><%= @doc.body %></pre>
+</div>

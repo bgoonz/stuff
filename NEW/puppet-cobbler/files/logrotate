@@ -1,0 +1,9 @@
+/var/log/cobbler/cobbler.log {
+    rotate 5
+    missingok
+    notifempty
+    size=+30k
+    compress
+    copytruncate
+    monthly
+}

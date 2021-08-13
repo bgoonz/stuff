@@ -1,0 +1,23 @@
+<h2>Admin Listing blogs</h2>
+
+<p>Back to <%= link_to "Non-admin page", blogs_url %></p>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Author</th>
+  </tr>
+
+<% for blog in @blogs %>
+  <tr>
+    <td><%=h blog.title %></td>
+    <td><%=h blog.author.name %></td>
+    <td><%= link_to 'Show', blog %></td>
+    <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
+    <td><%= link_to 'Destroy', blog, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New blog', new_blog_path %>

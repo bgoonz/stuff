@@ -1,0 +1,82 @@
+- content_for(:head) do
+  %script{type: 'text/javascript', src: "/charts/timeseries.js"}
+  %script{type: 'text/javascript', src: "/charts/histogram.js"}
+  %script{type: 'text/javascript', src: "/charts/treemap.js"}
+  :javascript
+    $data.file = "#{@file}";
+    $data.yMax = #{@y_max};
+    $data.density = #{@density};
+    $data.apdex_t = #{@apdex_t};
+    $data.measure = "#{@measure}";
+    $data.filter = "#{@filter_label}";
+    $data.primary_dim = "#{@primary_dim}";
+    $data.dimensions = #{@dimensions.to_json};
+    $data.only = "#{@only ? '1' : '0'}";
+
+    function loadTreemapData(switchedFile) {
+      d3.selectAll("img.busy").style("display", "inline");
+      d3.json("/data/treemap/"+$data.file + "?" +
+        "measure="+$data.measure + "&" +
+        "primary_dim="+$data.primary_dim + "&" +
+        "only=" + $data.only + "&" +
+        "buckets=" + ($data.density * $data.width / $data.height) + "&" +
+        "filter=" + $data.filter + "&" +
+        "density=" + $data.density + "&" +
+        "y_max=" + $data.yMax + "&" +
+        "cols="+ Math.floor($data.density * ($data.width / $data.height)), 
+        function(error, data) {
+          $data.treemapRoot = data.tree;
+          $data.dispatch.newTreemapData();
+      });
+    }
+  :css
+    #logTransformGroup, #apdexTGroup {
+      display: none;
+    }
+
+.row
+  .span6
+    %h3 
+      Timeseries
+      %img.timeseries.busy{src:'/images/busy.gif', style: 'display:none'}
+    %p 
+      Click on any item in the legend to toggle its display
+  .span6
+    %h3 
+      Histogram
+      %img.histogram.busy{src:'/images/busy.gif', style: 'display:none'}
+.row
+  #timeseries-sect.span6
+    .timeseries
+  #histogram-sect.span6
+    .histogram
+
+.row
+  .span12
+    %h3 
+      Treemap Breakdown
+      %span#range
+        All Data
+      %button#reset{style: 'display: none', onClick: 'resetSelection();'}
+        RESET
+      %img.treemap.busy{src:'/images/busy.gif', style: 'display:none'}
+    %p
+      Display requests grouped by selected dimension.  Color groupings based on the first segment of a dimension,
+      separated by '/'.  If there is no '/' character then the map is all one color.
+      %a{href: '/data/treemap/nr-queuing-spike.json', target: "_new"}
+        See sample json.
+    #treemap-sect
+
+:javascript
+
+  // This defines the attributes of the timeslice record that are in the legend of the plot.
+  var plots = ["mean", "median", "mode", "throughput"];
+  timeseries(d3.select("#timeseries-sect > div.timeseries"))
+    .legend(plots);
+  
+  histogram(d3.select("#histogram-sect > div.histogram"))
+    .enableBucketSelection();
+  
+  treemapInit(d3.select("div#treemap-sect"));
+  $data.dispatch.on("reloadData.treemap", loadTreemapData);
+  $data.dispatch.reloadData();

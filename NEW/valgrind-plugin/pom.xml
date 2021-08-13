@@ -1,0 +1,81 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.jenkins-ci.plugins</groupId>
+    <artifactId>plugin</artifactId>
+    <version>1.424</version>
+  </parent>
+
+  <artifactId>helgrind</artifactId>
+  <version>0.19-SNAPSHOT</version>
+  <packaging>hpi</packaging>
+  <name>Jenkins Helgrind Plug-in</name>
+  <url>http://wiki.jenkins-ci.org/display/JENKINS/Valgrind+Plugin</url>
+  
+	<licenses>
+	    <license>
+	        <name>MIT license</name>
+	        <comments>All source code is under the MIT license.</comments>
+	    </license>
+	</licenses>  
+  
+  <developers>
+    <developer>
+      <id>eXistence</id>
+      <name>Johannes Ohlemacher</name>
+      <email>johannes.ohlemacher@googlemail.com</email>
+    </developer>
+    <developer>
+      <id>newrelic</id>
+      <name>Robert R. Henry</name>
+      <email>rrh@newrelic.com</email>
+    </developer>
+  </developers>  
+  
+  <scm>
+    <connection>scm:git:ssh://github.com/jenkinsci/valgrind-plugin.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/jenkinsci/valgrind-plugin.git</developerConnection>
+    <url>https://github.com/jenkinsci/valgrind-plugin</url>
+  </scm>  
+
+   <repositories>
+     <repository>
+       <id>repo.jenkins-ci.org</id>
+       <url>http://repo.jenkins-ci.org/public/</url>
+     </repository>
+   </repositories>
+
+   <pluginRepositories>
+     <pluginRepository>
+       <id>repo.jenkins-ci.org</id>
+       <url>http://repo.jenkins-ci.org/public/</url>
+     </pluginRepository>
+   </pluginRepositories>
+   
+	 <dependencies>  
+	    <dependency>
+	      	<groupId>de.java2html</groupId>
+	      	<artifactId>java2html</artifactId>
+	      	<version>5.0</version>
+	    </dependency>
+      
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.8.2</version>
+        <scope>test</scope>
+      </dependency>
+      
+      <dependency>
+        <groupId>org.easymock</groupId>
+        <artifactId>easymock</artifactId>
+        <version>3.0</version>
+        <scope>test</scope>
+      </dependency>
+	 </dependencies>
+   
+
+	 
+	 
+
+</project>

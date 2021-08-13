@@ -1,0 +1,24 @@
+<h2>Listing Blogs</h2>
+
+<p>Go to <%= link_to "Admin Page", admin_blogs_path %></p>
+<p>Go to <%= link_to "Authors Page", authors_path %> (this is ignored by instrumentation).</p>
+<p>Here is an <%= link_to "About Page", :action => 'about'%> which links to a template without a controller action.
+<p>Here is <%= link_to "Page", admin_status_path %> that makes an external call.
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Author</th>
+  </tr>
+
+<% for blog in @blogs %>
+  <tr>
+    <td><%=h blog.title %></td>
+    <td><%=h blog.author.name %></td>
+    <td><%= link_to 'Show', blog %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New blog', new_blog_path %>

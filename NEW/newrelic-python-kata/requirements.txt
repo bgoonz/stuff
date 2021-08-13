@@ -1,0 +1,8 @@
+django==1.5
+requests
+gunicorn
+pywapi
+dj-database-url
+#boom
+psycopg2
+newrelic

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="New Relic nuget packages : A Developer&#39;s best friend" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>New Relic nuget packages</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/newrelic/nuget">View on GitHub</a>
+
+          <h1 id="project_title">New Relic nuget packages</h1>
+          <h2 id="project_tagline">A Developer&#39;s best friend</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/newrelic/nuget/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/newrelic/nuget/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="new-relic-nuget-packages" class="anchor" href="#new-relic-nuget-packages"><span class="octicon octicon-link"></span></a>New Relic Nuget Packages</h1>
+
+<h3>
+<a name="nuget-azure-cloud-services" class="anchor" href="#nuget-azure-cloud-services"><span class="octicon octicon-link"></span></a><a href="https://github.com/newrelic/nuget-azure-cloud-services">nuget-azure-cloud-services</a>
+</h3>
+
+<p>The package that includes the latest New Relic x64 installer, so that you can easily include New Relic in your Windows Azure deployment.</p>
+
+<p>github: </p>
+
+<pre><code>&gt; git clone git@github.com:newrelic/nuget-azure-cloud-services.git
+</code></pre>
+
+<p>nuget:</p>
+
+<pre><code>PM&gt; Install-Package NewRelicWindowsAzure
+</code></pre>
+
+<h3>
+<a name="nuget-azure-web-sites" class="anchor" href="#nuget-azure-web-sites"><span class="octicon octicon-link"></span></a><a href="https://github.com/newrelic/nuget-azure-web-sites">nuget-azure-web-sites</a>
+</h3>
+
+<p>The nuget package for x86 apps (of type "web site") running on Windows Azure.</p>
+
+<p>github:</p>
+
+<pre><code>&gt; git clone git@github.com:newrelic/nuget-azure-web-sites.git
+</code></pre>
+
+<p>nuget:</p>
+
+<pre><code>PM&gt; Install-Package NewRelic.Azure.WebSites
+</code></pre>
+
+<h3>
+<a name="nuget-azure-web-sites-x64" class="anchor" href="#nuget-azure-web-sites-x64"><span class="octicon octicon-link"></span></a><a href="https://github.com/newrelic/nuget-azure-web-sites-x64">nuget-azure-web-sites-x64</a>
+</h3>
+
+<p>The nuget package for x64 apps (of type "web site") running on Windows Azure.</p>
+
+<p>github:</p>
+
+<pre><code>&gt; git clone git@github.com:newrelic/nuget-azure-web-sites-x64.git
+</code></pre>
+
+<p>nuget:</p>
+
+<pre><code>PM&gt; Install-Package NewRelic.Azure.WebSites.x64
+</code></pre>
+
+<h3>
+<a name="nuget-agent-api" class="anchor" href="#nuget-agent-api"><span class="octicon octicon-link"></span></a><a href="https://github.com/newrelic/nuget-agent-api">nuget-agent-api</a>
+</h3>
+
+<p>The New Relic .NET Agent API supports custom error and metric reporting, and custom transaction parameters. If the agent is not installed or is disabled, method invocations of this API will have no effect. You can find more information about the NewRelic.Agent.Api at <a href="http://newrelic.com/docs/dotnet/AgentApi">http://newrelic.com/docs/dotnet/AgentApi</a>.</p>
+
+<p>github:</p>
+
+<pre><code>&gt; git clone git@github.com:newrelic/nuget-agent-api.git
+</code></pre>
+
+<p>nuget:</p>
+
+<pre><code>PM&gt; Install-Package NewRelic.Agent.Api
+</code></pre>
+
+<h2>
+<a name="contribute" class="anchor" href="#contribute"><span class="octicon octicon-link"></span></a>Contribute</h2>
+
+<h3>
+<a name="setting-up-your-local-environment-to-contribute" class="anchor" href="#setting-up-your-local-environment-to-contribute"><span class="octicon octicon-link"></span></a>Setting up your local environment to contribute</h3>
+
+<ol>
+<li>Open visual studio</li>
+<li>Tools menu &gt;&gt; Library Package Manager &gt;&gt; Package manager settings</li>
+<li>Under the Package Manager, click on Package sources</li>
+<li>Create a source named "Local" and set the directory to where you cloned the repositories (something like "c:\code\newrelic_nuget_packages")</li>
+<li>Click Add then "OK"</li>
+</ol><h3>
+<a name="using-the-packages-locally" class="anchor" href="#using-the-packages-locally"><span class="octicon octicon-link"></span></a>Using the packages locally</h3>
+
+<ol>
+<li> To use it you can open up your web app and choose &gt;&gt; tools &gt;&gt; Library Package Manager &gt;&gt; Package manager console</li>
+<li> In the console make sure that the source drop down is set to local</li>
+<li> Then type in "Install-Package [PACKAGE-NAME]"</li>
+<li> Hit enter</li>
+</ol><h3>
+<a name="pull-requests" class="anchor" href="#pull-requests"><span class="octicon octicon-link"></span></a>Pull requests</h3>
+
+<ol>
+<li><a href="https://help.github.com/articles/fork-a-repo">Fork the repository</a></li>
+<li>Add awesome code or fix an issue with awesome code</li>
+<li>Submit a pull request</li>
+</ol>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">New Relic nuget packages maintained by <a href="https://github.com/newrelic">newrelic</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>

@@ -1,0 +1,79 @@
+- content_for(:head) do
+  %script{type: 'text/javascript', src: "/charts/timeseries.js"}
+  %script{type: 'text/javascript', src: "/charts/histogram.js"}
+  %script{type: 'text/javascript', src: "/charts/summary_numbers.js"}
+  :javascript
+    $data.file = "#{@file}";
+    $data.yMax = #{@y_max};
+    $data.logTransform = #{@log_transform};
+    $data.density = #{@density};
+    $data.apdex_t = #{@apdex_t};
+    $data.measure = "#{@measure}";
+    $data.primary_dim = "#{@primary_dim}";
+    $data.dimensions = #{@dimensions.to_json};
+    $data.filter = "#{@filter_label}";
+    $data.only = "#{@only ? '1' : '0'}";
+    $data.width = 1000;
+    $data.height = 320;
+
+.row
+  .span12
+    #summary-values-sect
+    %div
+      .radio.inline Show middle quartiles: 
+      %label.radio.inline
+        %input{type: 'radio', name: 'quartile', value: "arithmetic", onchange: 'selectQuartile(this);'}
+        arithmetic
+      %label.radio.inline
+        %input{type: 'radio', name: 'quartile', value: "geometric", onchange: 'selectQuartile(this);'}
+        geometric
+      %label.radio.inline
+        %input{type: 'radio', name: 'quartile', value: "actual", onchange: 'selectQuartile(this);'}
+        actual
+      %label.radio.inline
+        %input{type: 'radio', name: 'quartile', value: "", checked: true, onchange: 'selectQuartile(this);'}
+        none
+
+.row
+  .span12
+    %h3 
+      Histogram     
+      %span#range
+      %button#reset{style: 'display: none', onClick: 'resetSelection();'}
+        RESET
+
+      %img.histogram.busy{src:'/images/busy.gif', style: 'display:none'}
+    #histogram
+
+.row
+  #timeseries-sect.span12
+    %h3 
+      Timeseries Plots
+      %img.timeseries.busy{src:'/images/busy.gif', style: 'display:none'}
+    %p
+      %label.inline.checkbox
+        %input{type: 'checkbox', name: 'heatmap', onchange: 'timeseries.heatmap(this.checked);' }
+        Show heatmap
+      
+    #timeseries
+
+
+:javascript
+  // This defines the attributes of the timeslice record that are in the legend of the plot.
+  
+  var timeseries = timeseries(d3.select("#timeseries"));
+  //  .legend(["mean", "mode", "median", "apdex", "rpm"]);
+
+  var histogram = histogram(d3.select("div#histogram"));
+
+  var s = summary(d3.select("div#summary-values-sect"));
+  s.row()
+      .column("50 % (Median)", "median", "ms")
+      .column("Mean", "mean", "ms")
+      .column("75 %", "pct_75", "ms")
+      .column("85 %", "pct_85", "ms")
+      .column("95 %", "pct_95", "ms")
+      .column("Apdex","apdex", "score");
+  s.init();
+
+  $data.dispatch.reloadData();

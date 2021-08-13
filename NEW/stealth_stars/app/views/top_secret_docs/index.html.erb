@@ -1,0 +1,32 @@
+<h1>Top Secret Docs</h1>
+
+<div class="modal hide fade" id="modal" style="width: 700px">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3>For Your Eyes Only</h3>
+  </div>
+  <div class="modal-body">
+    <p>Loading...</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn btn-primary">Decrypt</a>
+    <a href="#" class="btn" data-dismiss="modal">Close</a>
+  </div>
+</div>
+
+<div>
+  <table class="table">
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Last Updated</th>
+    </tr>
+    <% @docs.each do |doc| -%>
+      <tr>
+        <td><%= link_to(doc.title, doc) %></td>
+        <td><%= doc.author.name %></td>
+        <td><%= doc.updated_at %></td>
+      </tr>
+    <% end -%>
+  </table>
+</div>

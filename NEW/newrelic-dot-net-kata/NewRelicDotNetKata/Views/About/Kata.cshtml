@@ -1,0 +1,64 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "About :: This Kata";
+    Layout = "~/Views/shared/_BootstrapLayout.basic.cshtml";
+}
+
+      <div class="hero-unit">
+        <h1>New Relic .NET Kata</h1>
+        <p>Code Kata is a term coined by Dave Thomas, co-author of the book The Pragmatic Programmer, in a bow to the Japanese concept of kata in the martial arts. A code kata is an exercise in programming which helps a programmer hone their skills through practice and repetition..</p>
+        <p>The goal of this Kata is to get your mind wired into performance driven development, 
+            to reinforce your skills as a user of <a href="http://newrelic.com">New Relic</a> 
+            and to help you get more familiar with <a href="http://www.windowsazure.com/">Azure Cloud services</a>.</p>
+        <p>Note: The code in some areas of this application is intentionally bad, what fun would this be if everything worked the way it should?</p>
+        <p><a href="http://codekata.pragprog.com/" class="btn btn-primary btn-large">Learn more about Code Katas &raquo;</a></p>
+        
+      </div>
+
+      <div class="row">
+        <div class="span4">
+          <h2>Step 1</h2>
+          <p>Sign up for New Relic, get your license key and install the agent.  You can watch a <a href="http://newrelic.com/resources/training">video on getting started</a> with the New Relic agent to help get you started.
+              The New Relic agent will help you find and solve the performance issues in this application as well as help you see the complete impact of your changes.
+          </p>
+          <p><a class="btn" href="https://newrelic.com/">Sign up! &raquo;</a></p>
+        </div>
+        <div class="span4">
+          <h2>Step 2</h2>
+          <p>Download and install the Windows Azure SDK. The Azure compute and storage emulators will be used to support the execution of this MVC4 application </p>
+          <p><a class="btn" href="http://www.windowsazure.com/en-us/develop/net/">Get the SDK &raquo;</a></p>
+       </div>
+       <div class="span4">
+          <h2>Step 3</h2>
+          <p>Get the code. The code is waiting to be forked on <a href="https://github.com/newrelic/newrelic-dot-net-kata">github</a>.</p>
+          <pre>git clone https://github.com/newrelic/newrelic-dot-net-kata.git</pre>
+          <p><a class="btn" href="https://github.com/newrelic/newrelic-dot-net-kata">Get the source on github &raquo;</a></p>
+       </div> 
+      </div>
+    <div class="row">
+        <div class="span4">
+          <h2>Step 4</h2>
+            <p>Install the newrelic nuget package: </p>
+            <p>For cloud services:</p>
+            <pre>Install-Package NewRelicWindowsAzure</pre>
+            <p>or for websites:</p>
+            <pre>Install-Package NewRelic.Azure.WebSites</pre>
+            <p><a class="btn" href="http://newrelic.github.com/nuget/">Get the nuget source or contribute &raquo;</a></p>
+        </div>
+        <div class="span4">
+          <h2>Step 5</h2>
+            <script></script>
+          <p>Fix the code / Solve as many of the Katas as you can. There are 7 distinct Katas in this application that can be torn apart and fixed by using your awesome dev abilities and the deep metrics that New Relic provides.</p>
+          <p><a id="theanswers" class="btn" onclick="$('a#theanswers').text('NEVER!');" href="#">View the answers &raquo;</a></p>
+        </div>
+        <div class="span4">
+          <h2>Step 6</h2>
+            <script></script>
+          <p>Let us know how you did, what you liked or disliked, 
+              what helped you find problems or what were the challenges, 
+              what you like about New Relic or Windows Azure and what you don't - we just want to hear from you and see what we can do to get better.  
+              We'll even send you something for demonstrating your geek super powers when you complete the Kata - just provide us with your thoughts and a link to your forked repo.</p>
+          <p><a class="btn" href="https://support.newrelic.com/home">Tell us! &raquo;</a></p>
+        </div>
+      </div>

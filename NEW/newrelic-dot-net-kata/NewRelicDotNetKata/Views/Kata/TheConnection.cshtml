@@ -1,0 +1,19 @@
+﻿@model dynamic
+
+@{
+    Layout = "~/Views/shared/_BootstrapLayout.basic.cshtml";
+}
+
+<h1>The Connection</h1>
+
+<pre>
+    Kata : Connection leaking and port exhaustion will destroy your apps when you least expect it.
+
+    1. Find the connection leak
+
+    Hint: Go to New Relic and look at the scalability analysis of this site to determine if you have connection leaking (look for hockey sticks!).  Then see if you can find out why.
+</pre>
+
+<p>
+    @Html.Raw(ViewBag.Message)
+</p>

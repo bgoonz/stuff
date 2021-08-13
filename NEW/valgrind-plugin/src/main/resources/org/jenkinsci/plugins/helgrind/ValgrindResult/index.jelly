@@ -1,0 +1,128 @@
+<j:jelly
+  xmlns:j="jelly:core"
+  xmlns:st="jelly:stapler"
+  xmlns:d="jelly:define"
+  xmlns:l="/lib/layout"
+  xmlns:t="/lib/hudson"
+  xmlns:f="/lib/form"
+  xmlns:i="jelly:fmt"
+  xmlns:local="local">
+
+	<l:layout norefresh="true">
+		<st:include it="${it.owner}" page="sidepanel.jelly" />
+		<l:main-panel>
+			   <h1>Helgrind Result</h1>
+
+			   <j:if test="${it.report.allErrors == null}">
+			   		<i>no errors</i>
+			   </j:if>
+
+			   <j:if test="${it.report.allErrors != null}">
+			    <j:forEach var="process" items="${it.report.processes}">
+
+			    	<h2>
+			    	<img height="16" style="margin: 2px;" alt="" width="16" src="/plugin/helgrind/icons/process-64.png"/>
+			    	<a name="pid${process.pid}" />			    	
+			    	<a href="pid=${process.pid}">${process.executable} (process ${process.pid})</a>
+			    	</h2>
+
+					<table class="pane" id="files">
+   				    <tr>
+				      <td class="pane-header" style="width:2em">Arguments</td>				
+				      <td class="pane">				      					      		
+						"bla" "blub2" "dum die dasasdsd"
+				      </td>
+				    </tr>
+				    <tr>
+				      <td class="pane-header" style="width:2em">Parent process</td>
+				      <td class="pane">
+					   <j:if test="${process.parent == null}">
+					   		${process.ppid}
+					   </j:if>	
+					   <j:if test="${process.parent != null}">
+					   		<a href="#pid${process.parent.pid}">${process.parent.pid} (${process.parent.executable})</a>
+					   </j:if>
+				      </td>
+				    </tr>
+				    <tr>
+				      <td class="pane-header" style="width:2em">Child processes</td>				
+				      <td class="pane">				      					      		
+				      		<j:forEach var="child" items="${process.childs}">			    		
+			    				<p style="margin: 0px;"><a href="#pid${child.pid}">${child.pid} (${child.executable})</a></p>
+			    			</j:forEach>
+				      </td>
+				    </tr>
+				    </table>
+				    <table class="pane" id="files">
+
+				    <j:set var="errorCount" value="${process.errorList.uninitializedValueErrorCount}"/>
+				    <j:set var="errorName" value="Uninitialized value errors"/>
+					<st:include page="errorcountrow.jelly"/>
+
+				    <j:set var="errorCount" value="${process.errorList.uninitializedConditionErrorCount}"/>
+				    <j:set var="errorName" value="Uninitialized condition errors"/>
+					<st:include page="errorcountrow.jelly"/>
+
+				    <j:set var="errorCount" value="${process.errorList.invalidWriteErrorCount}"/>
+				    <j:set var="errorName" value="Invalid write errors"/>
+					<st:include page="errorcountrow.jelly"/>					
+
+				    <j:set var="errorCount" value="${process.errorList.invalidReadErrorCount}"/>
+				    <j:set var="errorName" value="Invalid read errors"/>
+					<st:include page="errorcountrow.jelly"/>
+
+				    <j:set var="errorCount" value="${process.errorList.overlapErrorCount}"/>
+				    <j:set var="errorName" value="Overlap errors"/>
+					<st:include page="errorcountrow.jelly"/>
+
+				    <j:set var="errorCount" value="${process.errorList.syscallParamErrorCount}"/>
+				    <j:set var="errorName" value="Syscall param errors"/>
+					<st:include page="errorcountrow.jelly"/>					
+
+				    <j:set var="errorCount" value="${process.errorList.invalidFreeErrorCount}"/>
+				    <j:set var="errorName" value="Invalid free errors"/>
+					<st:include page="errorcountrow.jelly"/>
+
+				    <j:set var="errorCount" value="${process.errorList.mismatchedFreeErrorCount}"/>
+				    <j:set var="errorName" value="Mismatched free errors"/>
+					<st:include page="errorcountrow.jelly"/>
+
+				    <j:set var="errorCount" value="${process.errorList.leakDefinitelyLostErrorCount}"/>
+				    <j:set var="errorName" value="Memory leak errors (definitely lost)"/>
+				    <j:set var="errorBytes" value="${process.errorList.definitelyLeakedBytes}"/>
+					<st:include page="errorcountrow.jelly"/>
+
+				    <j:set var="errorCount" value="${process.errorList.leakIndirectlyLostErrorCount}"/>
+				    <j:set var="errorName" value="Memory leak errors (indirectly lost)"/>
+				    <j:set var="errorBytes" value="${process.errorList.possiblyLeakedBytes}"/>
+					<st:include page="errorcountrow.jelly"/>
+
+				    <j:set var="errorCount" value="${process.errorList.leakPossiblyLostErrorCount}"/>
+				    <j:set var="errorName" value="Memory leak errors (possibly lost)"/>
+				    <j:set var="errorBytes" value="null"/>
+					<st:include page="errorcountrow.jelly"/>
+
+				    <j:set var="errorCount" value="${process.errorList.leakStillReachableErrorCount}"/>
+				    <j:set var="errorName" value="Memory leak errors (still reachable)"/>
+				    <j:set var="errorBytes" value="null"/>
+					<st:include page="errorcountrow.jelly"/>																				
+				    <j:set var="errorCount" value="${process.errorList.raceErrorCount}"/>
+				    <j:set var="errorName" value="data races"/>
+					<st:include page="errorcountrow.jelly"/>
+
+   				    <tr>
+				      <td class="pane-header" style="width:2em" align="right">total</td>				
+				      <td class="pane">				      					      		
+						${process.errorList.errorCount}
+				      </td>
+				    </tr>				    			    				
+				    </table>
+
+				    <st:include page="errorlist.jelly"/>
+
+				</j:forEach>
+			   </j:if>
+
+		</l:main-panel>
+	</l:layout>
+</j:jelly>

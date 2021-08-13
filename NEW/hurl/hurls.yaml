@@ -1,0 +1,22 @@
+# The default Hurls shown on the home page
+Twilio API (view account):
+  url: https://api.twilio.com/2010-04-01/Accounts
+  method: GET
+  auth: basic
+  username: account_sid_here
+  password: auth_token_here
+          
+Twitter API (public timeline):
+  url: http://twitter.com/statuses/public_timeline.json
+  method: GET
+  auth: none
+
+Vimeo API (video):
+  url: http://vimeo.com/api/v2/video/6238577.xml
+  method: GET
+  auth: none
+
+GitHub API (repository):
+  url: http://github.com/api/v2/json/repos/show/twilio/hurl
+  method: GET
+  auth: none

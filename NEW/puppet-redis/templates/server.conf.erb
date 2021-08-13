@@ -1,0 +1,110 @@
+###############################################################################
+#                      THIS FILE IS MAINTAINED BY PUPPET                      #
+###############################################################################
+
+################################### GENERAL ###################################
+daemonize <%= @daemonize %>
+pidfile <%= @pidfile %>
+port <%= @port %>
+bind <%= @bind %>
+<% if @unixsocket -%>
+unixsocket <%= @unixsocket %>
+unixsocketperm <%= @unixsocketperm %>
+<% end -%>
+timeout <%= @timeout %>
+loglevel <%= @log_level %>
+logfile <%= @logfile %>
+<% if @syslog_enabled == true -%>
+syslog-enabled yes
+syslog-ident <%= @syslog_ident %>
+syslog-facility <%= @syslog_facility %>
+<% end -%>
+databases <%= @databases %>
+
+################################ SNAPSHOTTING  #################################
+<% @save.each do |save_record| -%>
+save <%= save_record %>
+<% end -%>
+stop-writes-on-bgsave-error <%= @stop_writes_on_bgsave_error %>
+rdbcompression <%= @rdbcompression %>
+rdbchecksum <%= @rdbchecksum %>
+dbfilename <%= @dbfilename %>
+dir <%= @dir %>
+
+################################# REPLICATION #################################
+<% if @slaveof -%>
+slaveof <%= @slaveof %>
+<%   if @masterauth -%>
+masterauth <%= @masterauth %>
+<%   end -%>
+<% end -%>
+slave-serve-stale-data <%= @slave_serve_stale_data %>
+slave-read-only <%= @slave_read_only %>
+<% if @repl_ping_slave_period -%>
+repl-ping-slave-period <%= @repl_ping_slave_period %>
+<% end -%>
+<% if @repl_timeout %>
+repl-timeout <%= @repl_timeout %>
+<% end -%>
+slave-priority <%= @slave_priority %>
+
+################################## SECURITY ###################################
+<% if @requirepass -%>
+requirepass <%= @requirepass %>
+<% end -%>
+<% if @rename_command -%>
+<%   @rename_command.each do |cmd| -%>
+rename-command <%= cmd %>
+<%   end -%>
+<% end -%>
+
+################################### LIMITS ####################################
+<% if @maxclients -%>
+maxclients <%= @maxclients %>
+<% end -%>
+<% if @maxmemory -%>
+maxmemory <%= @maxmemory %>
+<%   if @maxmemory_policy -%>
+maxmemory-policy <%= @maxmemory_policy %>
+<%   end -%>
+<%   if @maxmemory_samples -%>
+maxmemory-samples <%= @maxmemory_samples %>
+<%   end -%>
+<% end -%>
+
+############################## APPEND ONLY MODE ###############################
+appendonly <%= @appendonly %>
+appendfsync <%= @appendfsync %>
+no-appendfsync-on-rewrite <%= @no_appendfsync_on_rewrite %>
+auto-aof-rewrite-percentage <%= @auto_aof_rewrite_percentage %>
+auto-aof-rewrite-min-size <%= @auto_aof_rewrite_min_size %>
+
+################################ LUA SCRIPTING  ###############################
+lua-time-limit <%= @lua_time_limit %>
+
+################################## SLOW LOG ###################################
+slowlog-log-slower-than <%= @slowlog_log_slower_than %>
+slowlog-max-len <%= @slowlog_max_len %>
+
+############################### ADVANCED CONFIG ###############################
+hash-max-ziplist-entries <%= @hash_max_ziplist_entries %>
+hash-max-ziplist-value <%= @hash_max_ziplist_value %>
+list-max-ziplist-entries <%= @list_max_ziplist_entries %>
+list-max-ziplist-value <%= @list_max_ziplist_value %>
+set-max-intset-entries <%= @set_max_intset_entries %>
+zset-max-ziplist-entries <%= @zset_max_ziplist_entries %>
+zset-max-ziplist-value <%= @zset_max_ziplist_value %>
+activerehashing <%= @activerehashing %>
+<% if @client_output_buffer_limit -%>
+<%   @client_output_buffer_limit.each do |cobl| -%>
+client-output-buffer-limit <%= cobl %>
+<%   end -%>
+<% end -%>
+
+################################## INCLUDES ###################################
+<% if @include_files -%>
+<%   @include_files.each do |filename| -%>
+include <%= filename %>
+<%   end -%>
+<% end -%>
+

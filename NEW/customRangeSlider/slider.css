@@ -1,0 +1,696 @@
+/* Slider
+----------------------------------*/
+.ui-slider { position: relative; text-align: left; }
+.ui-slider .ui-slider-handle { position: absolute; z-index: 2; width: 1.2em; height: 1.2em; cursor: default; }
+.ui-slider .ui-slider-range { position: absolute; z-index: 1; font-size: .7em; display: block; border: 0; }
+
+.ui-slider-horizontal { height: .8em; }
+.ui-slider-horizontal .ui-slider-handle { top: -.3em; margin-left: -.6em; }
+.ui-slider-horizontal .ui-slider-range { top: 0; height: 100%; }
+.ui-slider-horizontal .ui-slider-range-min { left: 0; }
+.ui-slider-horizontal .ui-slider-range-max { right: 0; }
+
+.ui-slider-vertical { width: .8em; height: 100px; }
+.ui-slider-vertical .ui-slider-handle { left: -.3em; margin-left: 0; margin-bottom: -.6em; }
+.ui-slider-vertical .ui-slider-range { left: 0; width: 100%; }
+.ui-slider-vertical .ui-slider-range-min { bottom: 0; }
+.ui-slider-vertical .ui-slider-range-max { top: 0; }
+
+
+
+
+/* Component containers
+----------------------------------*/
+.ui-widget { font-size: 1.1em/*{fsDefault}*/; }
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {font-size: 1em; }
+.ui-widget-content { border: 1px solid #aaaaaa/*{borderColorContent}*/; background: #ffffff/*{bgColorContent}*/ url(images/ui-bg_flat_75_ffffff_40x100.png)/*{bgImgUrlContent}*/ 50%/*{bgContentXPos}*/ 50%/*{bgContentYPos}*/ repeat-x/*{bgContentRepeat}*/; color: #222222/*{fcContent}*/; }
+.ui-widget-content a { color: #222222/*{fcContent}*/; }
+.ui-widget-header { border: 1px solid #aaaaaa/*{borderColorHeader}*/; background: #cccccc/*{bgColorHeader}*/ url(images/ui-bg_highlight-soft_75_cccccc_1x100.png)/*{bgImgUrlHeader}*/ 50%/*{bgHeaderXPos}*/ 50%/*{bgHeaderYPos}*/ repeat-x/*{bgHeaderRepeat}*/; color: #222222/*{fcHeader}*/; font-weight: bold; }
+.ui-widget-header a { color: #222222/*{fcHeader}*/; }
+
+/* Interaction states
+----------------------------------*/
+.ui-state-default, .ui-widget-content .ui-state-default { border: 1px solid #d3d3d3/*{borderColorDefault}*/; background: #e6e6e6/*{bgColorDefault}*/ url(images/ui-bg_glass_75_e6e6e6_1x400.png)/*{bgImgUrlDefault}*/ 50%/*{bgDefaultXPos}*/ 50%/*{bgDefaultYPos}*/ repeat-x/*{bgDefaultRepeat}*/; font-weight: normal/*{fwDefault}*/; color: #555555/*{fcDefault}*/; outline: none; }
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { color: #555555/*{fcDefault}*/; text-decoration: none; outline: none; }
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus { border: 1px solid #999999/*{borderColorHover}*/; background: #dadada/*{bgColorHover}*/ url(images/ui-bg_glass_75_dadada_1x400.png)/*{bgImgUrlHover}*/ 50%/*{bgHoverXPos}*/ 50%/*{bgHoverYPos}*/ repeat-x/*{bgHoverRepeat}*/; font-weight: normal/*{fwDefault}*/; color: #212121/*{fcHover}*/; outline: none; }
+.ui-state-hover a, .ui-state-hover a:hover { color: #212121/*{fcHover}*/; text-decoration: none; outline: none; }
+.ui-state-active, .ui-widget-content .ui-state-active { border: 1px solid #aaaaaa/*{borderColorActive}*/; background: #ffffff/*{bgColorActive}*/ url(images/ui-bg_glass_65_ffffff_1x400.png)/*{bgImgUrlActive}*/ 50%/*{bgActiveXPos}*/ 50%/*{bgActiveYPos}*/ repeat-x/*{bgActiveRepeat}*/; font-weight: normal/*{fwDefault}*/; color: #212121/*{fcActive}*/; outline: none; }
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { color: #212121/*{fcActive}*/; outline: none; text-decoration: none; }
+
+
+
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Corner radius */
+.ui-corner-tl { -moz-border-radius-topleft: 4px/*{cornerRadius}*/; -webkit-border-top-left-radius: 4px/*{cornerRadius}*/; }
+.ui-corner-tr { -moz-border-radius-topright: 4px/*{cornerRadius}*/; -webkit-border-top-right-radius: 4px/*{cornerRadius}*/; }
+.ui-corner-bl { -moz-border-radius-bottomleft: 4px/*{cornerRadius}*/; -webkit-border-bottom-left-radius: 4px/*{cornerRadius}*/; }
+.ui-corner-br { -moz-border-radius-bottomright: 4px/*{cornerRadius}*/; -webkit-border-bottom-right-radius: 4px/*{cornerRadius}*/; }
+.ui-corner-top { -moz-border-radius-topleft: 4px/*{cornerRadius}*/; -webkit-border-top-left-radius: 4px/*{cornerRadius}*/; -moz-border-radius-topright: 4px/*{cornerRadius}*/; -webkit-border-top-right-radius: 4px/*{cornerRadius}*/; }
+.ui-corner-bottom { -moz-border-radius-bottomleft: 4px/*{cornerRadius}*/; -webkit-border-bottom-left-radius: 4px/*{cornerRadius}*/; -moz-border-radius-bottomright: 4px/*{cornerRadius}*/; -webkit-border-bottom-right-radius: 4px/*{cornerRadius}*/; }
+.ui-corner-right {  -moz-border-radius-topright: 4px/*{cornerRadius}*/; -webkit-border-top-right-radius: 4px/*{cornerRadius}*/; -moz-border-radius-bottomright: 4px/*{cornerRadius}*/; -webkit-border-bottom-right-radius: 4px/*{cornerRadius}*/; }
+.ui-corner-left { -moz-border-radius-topleft: 4px/*{cornerRadius}*/; -webkit-border-top-left-radius: 4px/*{cornerRadius}*/; -moz-border-radius-bottomleft: 4px/*{cornerRadius}*/; -webkit-border-bottom-left-radius: 4px/*{cornerRadius}*/; }
+.ui-corner-all { -moz-border-radius: 4px/*{cornerRadius}*/; -webkit-border-radius: 4px/*{cornerRadius}*/; }
+
+/* Overlays */
+.ui-widget-overlay { background: #aaaaaa/*{bgColorOverlay}*/ url(images/ui-bg_flat_0_aaaaaa_40x100.png)/*{bgImgUrlOverlay}*/ 50%/*{bgOverlayXPos}*/ 50%/*{bgOverlayYPos}*/ repeat-x/*{bgOverlayRepeat}*/; opacity: .3;filter:Alpha(Opacity=30)/*{opacityOverlay}*/; }
+.ui-widget-shadow { margin: -8px/*{offsetTopShadow}*/ 0 0 -8px/*{offsetLeftShadow}*/; padding: 8px/*{thicknessShadow}*/; background: #aaaaaa/*{bgColorShadow}*/ url(images/ui-bg_flat_0_aaaaaa_40x100.png)/*{bgImgUrlShadow}*/ 50%/*{bgShadowXPos}*/ 50%/*{bgShadowYPos}*/ repeat-x/*{bgShadowRepeat}*/; opacity: .3;filter:Alpha(Opacity=30)/*{opacityShadow}*/; -moz-border-radius: 8px/*{cornerRadiusShadow}*/; -webkit-border-radius: 8px/*{cornerRadiusShadow}*/; }
+
+
+
+/* Custom for New Relic site */
+
+div#calculator {
+  width: 960px;
+  margin: 10px 0 0 0;
+  padding: 0;
+  color: #000;
+}
+
+
+/* Package buttons and headlines */
+
+div.pkgbuttons {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+div.pkgbuttons h1, div.pkgbuttons h2, div.pkgbuttons p {
+  padding-left: 10px;
+}
+
+div.pkgbuttons p {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+div.buttonwrap {
+  width: 940px;
+}
+
+div.calctype {
+  width: 172px;
+  float: left;
+  margin-right: 20px;
+  padding-bottom: 20px;
+  cursor: pointer;
+}
+
+* html div.calctype { /* IE6 */
+  margin-right: 10px;
+}
+
+div.calctype p.pkgname {
+  margin: 0 0 0.25em 0;
+  text-transform: uppercase;
+  color: #777777;
+  font-weight: bold;
+  text-indent: 5px;
+  float: left;
+  font-size: 10px;
+  line-height: 10px;
+  padding: 0;
+}
+
+div.calctype p.pkgname span.pname {
+  float: left;
+  display: block;
+  text-indent: -9999em;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: top left;
+  height: 11px;
+  margin-left: 5px;
+}
+
+div.calctype p.pkgname span.help {
+  display: block;
+  float: left;
+  width: 12px;
+  height: 12px;
+  margin-left: 5px;
+  text-indent: -9999em;
+  background: transparent url("../../images/pricecalculator/question-mark-circle.png") no-repeat center center;
+  overflow: hidden;
+  color: #fff;
+}
+
+div#rpmlite {
+  margin-top: 116px;
+}
+
+div#rpmlite p.pkgname span.pname {
+  background-image: url("../../images/pricecalculator/calc-lite-label.gif");
+  width: 76px;
+}
+
+div#rpmbronze, div#rpmstandard {
+  margin-top: 87px;
+}
+
+div#rpmbronze p.pkgname span.pname {
+  background-image: url("../../images/pricecalculator/calc-bronze-label.gif");
+  width: 105px;
+}
+
+div#rpmstandard p.pkgname span.pname {
+  background-image: url("../../images/pricecalculator/calc-standard-label.png");
+  width: 124px;
+}
+
+div#rpmsilver {
+  margin-top: 58px;
+}
+
+div#rpmsilver p.pkgname span.pname {
+  background-image: url("../../images/pricecalculator/calc-silver-label.gif");
+  width: 96px;
+}
+
+div#rpmgold, div#rpmprofessional {
+  margin-top: 29px;
+}
+
+div#rpmgold p.pkgname span.pname {
+  background-image: url("../../images/pricecalculator/calc-gold-label.gif");
+  width: 86px;
+}
+
+div#rpmprofessional p.pkgname span.pname {
+  background-image: url("../../images/pricecalculator/calc-professional-label.png");
+  width: 160px;
+}
+
+div#rpmenterprise {
+  margin-right: 0;
+}
+
+div#rpmenterprise p.pkgname span.pname {
+  background-image: url("../../images/pricecalculator/calc-enterprise-label.gif");
+  width: 134px;
+}
+
+div.calctype ul {
+  clear: both;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+div.calctype li {
+  cursor: pointer;
+  width: 220px;
+  height: 27px;
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  text-indent: -9999px;
+  display: block;
+  margin: 0 0 2px 0;
+  padding: 0;
+}
+
+div.current li {
+  background-position: bottom left;
+}
+
+div.calctype li.monitor {
+  background-image: url("../../images/pricecalculator/calc-monitor.png");
+}
+
+div.calctype li.troubleshoot {
+  background-image: url("../../images/pricecalculator/calc-troubleshoot.png");
+}
+
+div.calctype li.rootcause {
+  background-image: url("../../images/pricecalculator/calc-rootcause.png");
+}
+
+div.calctype li.proactive {
+  background-image: url("../../images/pricecalculator/calc-proactive.png");
+}
+
+div.calctype li.all {
+  background-image: url("../../images/pricecalculator/calc-all.png");
+}
+
+
+/* Package Descriptions */
+
+div#pkgdescriptions {
+  clear: both;
+  margin-bottom: 1em;
+  width: 940px;
+  margin: 0 auto;
+}
+
+div#pkgdescriptions div.pkgdesc {
+  border: 5px solid #cccccc;
+  padding: 20px;
+  display: none;
+  margin-bottom: 20px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+div#pkgdescriptions div.pkgdesc h2 {
+  margin: 0;
+}
+
+div#pkgdescriptions div.pkgdesc p {
+  margin-bottom: 0;
+}
+
+
+div#pkgdescriptions div#rpmlitedesc div.submit {
+  padding-bottom: 0;
+}
+
+
+
+/* Slider and calculation blocks */
+
+div#sliders {
+  clear: both;
+  display: none;
+  width: 960px;
+  margin: 0;
+  background: transparent url("../../images/pricecalculator/fullwidth-bevel.gif") no-repeat left top;
+  padding-top: 20px;
+/*  padding-bottom: 20px; */
+}
+
+div#sliders h2 {
+  margin-left: 28px;
+}
+
+
+
+
+
+/* Actual sliders */
+
+.slider-wrapper {
+  position: relative;
+  height: 200px;
+  margin-left: 50px;
+  padding-top: 10px;
+  background: transparent url("../../images/pricecalculator/slider-background.gif") no-repeat top left;
+}
+
+#slider-vertical1, #slider-vertical2 {
+  height: 185px;
+  background: none;
+  border: none;
+}
+
+.ui-slider-vertical .ui-slider-handle {
+  width: 90px;
+  height: 25px;
+  border: none;
+  background: transparent url("../../images/pricecalculator/slider-handle.png") no-repeat top left;
+  left: -18px;
+  margin-bottom: -12px;
+  outline: none;
+  outline-style: none;
+  outline-width:0;
+  padding-left: 55px;
+  font-size: 130%;
+  text-decoration: none;
+  color: #668800;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+* html .ui-slider-vertical .ui-slider-handle /* IE6 PNG transparency */
+{
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../../images/pricecalculator/slider-handle.png", sizingMethod="crop");
+} 
+
+.ui-slider-vertical a:active, .ui-slider-vertical a:focus {
+  outline: none;
+  outline-style:none;
+  outline-width:0;
+
+}
+
+.ui-widget-header {
+  background: none;
+}
+
+
+/* Slider numerical labels */
+
+div.slider-wrapper div.label {
+  font-size: 10px;
+  position: absolute;
+}
+
+#label1 { /* Top of per_host */
+  top: 0;
+  left: -40px;
+}
+
+#label2 { /* Bottom of per_host */
+  top: 180px;
+  left: -40px;
+}
+
+#label3 { /* Top of per_hour */
+  top: 0;
+  left: -40px;
+}
+
+#label4 { /* Bottom of per_hour */
+  top: 180px;
+  left: -50px;
+}
+
+
+/* End of actual sliders */
+
+/* Boxes around sliders, labels and descriptions */
+
+
+p.description { /* Below entire pricing section */
+  clear: both;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 1em 20px 0 20px;
+}
+
+div.sliderbox {
+  float: left;
+  margin-bottom: 
+}
+
+div.sliderbox div.desc {
+  color: #000;
+
+}
+
+div.sliderbox div.desc h3 {
+  margin-left: 5px;
+  margin-top: 0;
+}
+
+div.sliderbox div.desc h3 a {
+  background: transparent url("../../images/pricecalculator/question-mark-circle.png") no-repeat right center;
+  padding-right: 15px;
+  color: #882222;
+  outline: none;
+}
+
+div.sliderbox div.desc h3 a:hover, div.sliderbox div.desc h3 a:active {
+  text-decoration: none;
+}
+
+div.sliderbox div.desc p.highlight {
+  font-size: 10px;
+  line-height: 14px;
+  padding: 5px;
+  background-color: #bbeeee;
+  display: inline;
+}
+
+div.sliderbox div.desc p.text {
+  margin-left: 5px;
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 0;
+}
+
+div.sliderbox div.sliderouterwrap p.title {
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-left: 25%;
+}
+
+p.configtext {
+  color: #666666;
+  font-size: 12px;
+  line-height: 18px;
+  margin-left: 15px;
+  height: 20px;
+  float: left;
+  margin-top: 0;
+  margin-bottom: 15px;
+  
+}
+
+/* Boxes around pricing information */
+
+div.pricingbox {
+  clear: both;
+  float: left;
+}
+
+p.pricing {
+  clear: both;
+} 
+
+p.pricing span.calculation {
+  font-weight: bold;
+  color: #557700;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: right;
+  display: inline-block;
+  width: 110px;
+  padding-right: 5px;
+}
+
+p.pricing span.calculation img {
+  padding: 6px 0 0 0;
+}
+
+p.pricing span.label {
+  font-size: 14px;
+  line-height: 22px;
+  color: #666666;
+  text-align: left;
+  padding-top: 8px;
+  font-weight: bold;
+}
+
+div.submit {
+  clear: both;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+
+
+
+/* Per Host slider (Monthly and Annual) */
+
+div#per_host_slider {
+  width: 620px;
+  float: left;
+  margin-left: 10px;
+}
+
+div#per_host_slider div.sliderbox {
+  background: transparent url("../../images/pricecalculator/slider-monthly-bg.png") no-repeat top right;
+  padding: 15px 10px 10px 10px;
+  width: 600px;
+}
+
+div#per_host_slider div.sliderbox div#annual_desc {
+  width: 200px;
+  float: left;
+  margin-right: 40px;
+}
+
+div#per_host_slider div.sliderbox div#monthly_desc {
+  width: 180px;
+  float: left;
+}
+
+div#per_host_slider div.sliderbox div#message-perhost {
+  background-color: white;
+  margin-left: 5px;
+  font-size: 12px;
+  line-height: 18px;
+  font-style: italic;
+  border: 5px solid #bbeeee;
+  position: absolute;
+  padding: 0.5em;
+  display: block;
+  z-index: 5;
+  left: 250px;
+}
+div#per_host_slider div.sliderbox div#message-perhost p {
+  margin: 0;
+}
+
+div#per_host_slider div.sliderouterwrap {
+  width: 160px;
+  float: left;
+}
+
+div#per_host_slider div.pricingbox {
+  border: 5px solid #cccccc;
+  padding: 0;
+  width: 610px;
+}
+
+
+div#per_host_slider div#annual_price_box {
+  float: left;
+  width: 250px;
+  margin-left: 5px;
+  margin-right: 15px;
+  padding-right: 40px;
+  background: transparent url("../../images/pricecalculator/calc-arrow-left-sm.gif") no-repeat 100% 5.25em;
+}
+
+div#per_host_slider div#monthly_price_box {
+  float: left;
+  width: 250px;
+  margin-right: 10px;
+  padding-left: 40px;
+  background: transparent url("../../images/pricecalculator/calc-arrow-right-sm.gif") no-repeat 0 5.25em;
+}
+
+
+* html div#per_host_slider div#annual_price_box { /* IE6 */
+  margin-right: 0;
+  margin-left: 0;
+}
+
+
+* html div#per_host_slider div#monthly_price_box { /* IE6 */
+  margin-right: 0;
+}
+
+
+
+/* Per Hour slider (On Demand) */
+
+div#per_hour_slider {
+  width: 300px;
+  float: left;
+  padding-left: 20px;
+}
+
+div#per_hour_slider div.sliderouterwrap {
+  width: 160px;
+  float: left;
+  margin: 0 auto;
+}
+
+div#per_hour_slider div.sliderbox {
+  background: transparent url("../../images/pricecalculator/slider-hourly-bg.png") no-repeat top left;
+  padding: 15px 10px 10px 10px;
+  /*width: 300px;*/
+}
+
+div#per_hour_slider div.sliderbox div#hourly_desc {
+  width: 120px;
+  float: left;
+}
+
+div#per_hour_slider div.pricingbox {
+  margin-top: 35px;
+  border: 5px solid #cccccc;
+  padding: 0;
+  width: 290px;
+  background: transparent url("../../images/pricecalculator/calc-arrow-right-sm.gif") no-repeat 10px 5.25em;
+}
+
+div#per_hour_slider div.pricingbox div.pricingboxwrap {
+  padding: 0 10px 0 50px;
+}
+
+p.pricing {
+  clear: both;
+} 
+
+div#per_hour_slider p.pricing span.calculation {
+  width: 150px;
+}
+
+p#ondemand_cost span.calculation {
+  width: 150px;
+}
+
+div#hourly_price_box h3 {
+  margin-left: -45px;
+}
+/*------------------------ RPM Change Subscription Calculator specific CSS -------------------*/
+h2 {
+  font-size:18px;
+  font-weight:normal;
+  line-height:24px;
+}
+div#calculator h2 {
+  color: #882222;
+}
+h3 {
+  color:#882222;
+  font-size:14px;
+  font-weight:normal;
+  line-height:18px;
+  margin-bottom: 0.4em;
+}
+p.text {
+  margin-top: 12px;
+}
+p.pricing span {
+  height: 25px;
+}
+div.submit button {
+  background-color: #888888;
+  color: white;
+  font-size: 110%;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  width: 220px;
+  cursor: pointer;
+}
+div.submit button.nochange {
+  background-color: #cccccc;
+  cursor: default;
+}
+#utility_button {
+  width: 250px;
+  position: relative;
+  left: -30px;
+}
+div#nosliders div.submit{
+  text-align: left;
+  padding: 20px;
+}
+a.videoicon, a.demo {
+  -moz-background-clip:border;
+  -moz-background-inline-policy:continuous;
+  -moz-background-origin:padding;
+  background:transparent url(../../images/pricecalculator/icon-video.gif) no-repeat scroll left center;
+  padding-left:20px;
+  display: none; /* temporarily hide until shadowbox works */
+}
+div#calculator {
+  font-family:'Lucida Grande','Lucida Sans Unicode',Arial,Helvetica,Verdana,sans-serif;
+  font-size:101.01%;
+  line-height:1.4em;
+}
+div#pkgdescriptions div.pkgdesc#rpmenterprisedesc p {
+  margin-bottom: 1em;
+}
+div#pkgdescriptions div.pkgdesc#rpmenterprisedesc img {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+div.pricingboxwrap h3 {
+  margin-top: 10px;
+}

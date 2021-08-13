@@ -1,0 +1,142 @@
+
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler"
+	xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson"
+	xmlns:f="/lib/form" xmlns:i="jelly:fmt">
+	<l:layout norefresh="true">
+		<st:include it="${it.owner}" page="sidepanel.jelly" />
+		<l:main-panel>
+			<h1>Helgrind Error Details</h1>
+
+			<table class="pane" id="files">
+		    <tr>
+		      <td class="pane-header" style="width:2em">Executable</td>
+		      <td class="pane">${it.error.executable}</td>
+		    </tr>
+		    <tr>
+		      <td class="pane-header" style="width:2em">PID</td>
+		      <td class="pane">${it.error.pid}</td>
+		    </tr>
+			<tr>
+		      <td class="pane-header" style="width:2em">PPID</td>
+		      <td class="pane">${it.error.ppid}</td>
+		    </tr>
+		    <tr>
+		      <td class="pane-header" style="width:2em">Unique ID</td>
+		      <td class="pane">${it.error.uniqueId}</td>
+		    </tr>
+		    <tr>
+		      <td class="pane-header" style="width:2em">Text</td>
+		      <td class="pane">${it.error.description}</td>
+		    </tr>
+
+		    <tr>
+		      <td class="pane-header" style="width:2em">Auxiliary</td>
+		      <td class="pane">
+		      	<j:forEach var="aux" items="${it.error.auxiliaryData}">
+		      		${aux.description}<br/>
+		      	</j:forEach>
+			  </td>
+		    </tr>
+
+		    <tr>
+		      <td class="pane-header" style="width:2em">helgrind Auxiliary</td>
+		      <td class="pane">
+		      	<j:forEach var="xaux" items="${it.error.xauxiliaryData}">
+		      		${xaux.description}<br/>
+		      	</j:forEach>
+			  </td>
+		    </tr>
+
+		    </table>
+
+			<h2>Stacktrace</h2>
+		    <st:header name="Content-Type" value="text/html;charset=UTF-8" />
+	        <j:forEach var="frame" items="${it.error.stacktrace.frames}">
+	            <table class="pane" id="files">
+			    <tr>
+			      <td class="pane-header" style="width:2em">Object</td>
+			      <td class="pane">${frame.objectName}</td>
+			    </tr>
+			    <tr>
+			      <td class="pane-header" style="width:2em">Function</td>
+			      <td class="pane">${frame.functionName}</td>
+			    </tr>
+			    <tr>
+			      <td class="pane-header" style="width:2em">File/Line</td>
+			      <td class="pane">${frame.filePathAndLine}</td>
+			    </tr>
+			    <tr>
+			      <td class="pane-header" style="width:2em">Code</td>
+			      <td class="pane">${frame.sourceCode}</td>
+			    </tr>
+			    </table>
+			    <br/>
+	        </j:forEach>
+
+	        <j:if test="${it.error.auxiliaryData != null}">
+                        <h2>Auxiliary Details</h2>
+		        <j:forEach var="aux" items="${it.error.auxiliaryData}">
+		        	<j:if test="${aux.description != null}">
+		        		<h3>${aux.description}</h3>
+		        	</j:if>
+					<j:if test="${aux.stacktrace != null}">
+						<j:forEach var="frame" items="${aux.stacktrace.frames}">
+			                <table class="pane" id="files">
+						    <tr>
+						      <td class="pane-header" style="width:2em">Object</td>
+						      <td class="pane">${frame.objectName}</td>
+						    </tr>
+						    <tr>
+						      <td class="pane-header" style="width:2em">Function</td>
+						      <td class="pane">${frame.functionName}</td>
+						    </tr>
+						    <tr>
+						      <td class="pane-header" style="width:2em">File/Line</td>
+						      <td class="pane">${frame.filePathAndLine}</td>
+						    </tr>
+						    <tr>
+						      <td class="pane-header" style="width:2em">Code</td>
+						      <td class="pane">${frame.sourceCode}</td>
+						    </tr>
+						    </table>
+						    <br/>
+						</j:forEach>
+		        	</j:if>
+		        </j:forEach>
+			</j:if>
+
+	        <j:if test="${it.error.xauxiliaryData != null}">
+                        <h2>Helgrind Auxiliary Details</h2>
+		        <j:forEach var="xaux" items="${it.error.xauxiliaryData}">
+		        	<j:if test="${xaux.description != null}">
+		        		<h3>${xaux.description}</h3>
+		        	</j:if>
+					<j:if test="${xaux.stacktrace != null}">
+						<j:forEach var="frame" items="${xaux.stacktrace.frames}">
+			                <table class="pane" id="files">
+						    <tr>
+						      <td class="pane-header" style="width:2em">Object</td>
+						      <td class="pane">${frame.objectName}</td>
+						    </tr>
+						    <tr>
+						      <td class="pane-header" style="width:2em">Function</td>
+						      <td class="pane">${frame.functionName}</td>
+						    </tr>
+						    <tr>
+						      <td class="pane-header" style="width:2em">File/Line</td>
+						      <td class="pane">${frame.filePathAndLine}</td>
+						    </tr>
+						    <tr>
+						      <td class="pane-header" style="width:2em">Code</td>
+						      <td class="pane">${frame.sourceCode}</td>
+						    </tr>
+						    </table>
+						    <br/>
+						</j:forEach>
+		        	</j:if>
+		        </j:forEach>
+			</j:if>
+
+		</l:main-panel>
+	</l:layout>
+</j:jelly>

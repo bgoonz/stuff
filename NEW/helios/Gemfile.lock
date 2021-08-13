@@ -1,0 +1,45 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    aws-sdk (1.21.0)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4, < 1.6.0)
+      uuidtools (~> 2.1)
+    json (1.7.7)
+    kgio (2.8.1)
+    metaclass (0.0.1)
+    mocha (0.14.0)
+      metaclass (~> 0.0.1)
+    multi_json (1.7.7)
+    narray (0.6.0.8)
+    nokogiri (1.5.10)
+    rack (1.5.2)
+    raindrops (0.12.0)
+    rake (10.1.0)
+    redis (3.0.5)
+    serialport (1.1.0)
+    simplecov (0.7.1)
+      multi_json (~> 1.0)
+      simplecov-html (~> 0.7.1)
+    simplecov-html (0.7.1)
+    syslog-logger (1.6.8)
+    unicorn (4.6.3)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
+    uuidtools (2.1.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  aws-sdk
+  json (~> 1.7.7)
+  mocha
+  narray
+  rake
+  redis
+  serialport
+  simplecov
+  syslog-logger
+  unicorn

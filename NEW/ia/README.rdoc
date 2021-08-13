@@ -1,0 +1,133 @@
+= New Relic Infrastructure Agent
+
+Gem for collecting memcached, disk, cpu and IO statistics.  Collected
+stats are sent to the New Relic RPM application.
+
+Use this gem to collect statistics from a given host by running
+newrelic_ia -a as a daemon.  This will contribute System/* metrics
+to your RPM console which can be viewed with custom dashboards.
+
+== Synopsis
+
+    newrelic_ia [ options ] aspect, aspect.. 
+
+    aspect: one or more of 'iostat' or 'disk' or 'memcached' (more to come)
+
+    -a, --all                        use all available aspects
+    -v, --verbose                    debug output
+    -q, --quiet                      quiet output
+    -e, --environment=ENV            use ENV section in newrelic.yml
+        --install                    create a default newrelic.yml
+    -h, --help                       Show this help message.
+
+== Requirements
+
+* New Relic Agent version 2.10.6 or later
+* Gold Subscription for creating and viewing custom dashboards
+
+== Install
+
+    sudo gem install newrelic_ia
+
+Once installed, run from the home directory of your Rails 
+application, or create a separate working directory and run
+
+    newrelic_ia --install
+
+to create a template newrelic.yml file you can use.  Edit this file
+and substitute your license key and app_name value.
+
+specify memcached nodes in memcached-nodes.txt. 
+
+== Credits
+
+Special thanks to Chandra Patni and Tony Ford of IGN for the Memcached
+sampler.
+
+== Memcached Details
+
+Memcached statistics sampler collects subset of stats provided by
+memcached daemon, once a minute.  In addition it computes other stats
+dervied from memcached stats. Also support stats derivatives over time
+to compute rate etc.  Specify Memcached nodes configuration in the
+newrelic.yml file.
+
+Memcached stats are reported for each node and also sample reports aggregated stats
+
+=== Stats Detail
+
+    uptime                     Number of seconds this server has been running
+    curr_items                 Current number of items stored by the server
+    total_items                Total number of items stored by this server 
+                               ever since it started
+    bytes                      Current number of bytes used by this server to store items
+    curr_connections           Number of open connections
+    total_connections          Total number of connections opened since 
+                               the server started running
+    connection_structures      Number of connection structures allocated by the server
+    cmd_get                    Cumulative number of retrieval requests
+    cmd_set                    Cumulative number of storage requests
+    get_hits                   Number of keys that have been requested and found present
+    get_misses                 Number of items that have been requested and not found
+    evictions                  Number of valid items removed from cache to free 
+                               memory for new items
+    bytes_read                 Total number of bytes read by this server from network
+    bytes_written              Total number of bytes sent by this server to network
+    limit_maxbytes             Number of bytes this server is allowed to use for storage
+    threads                    Number of worker threads requested
+    
+Derived Stats (computed stats):
+
+    free_maxbytes              Number of free bytes this server has available for storage
+
+Stats Derivatives (time derivatives of stats):
+
+    hit_ratio                  Percent of keys that have been requested and found present
+    miss_ratio                 Percent of keys that have been requested and found missing
+    rpm                        Requests per minutes 
+    gpm                        Gets per minutes
+    hpm                        Hits per minutes
+    mpm                        Misses per minutes
+    spm                        Sets per minutes
+    fpm                        Flushes per minutes
+    epm                        Evictions per minutes
+
+
+=== Sample Custom View
+
+Liquid template for NewRelic custom dashboard:
+
+    <div>
+        <div style="float: left; width: 50%;">
+            {% line_chart value:average_value title:'Cache Miss Ratio' metric:'System/Memcached/Miss Ratio' simple_tooltip:true label:segment_3 value_suffix:'%' %}
+        </div>
+        <div style="float: left; width: 50%;">
+            {% line_chart value:average_value title:'Cache Memory' regexp:'System/Memcached/(Bytes|Free Bytes|Limit Maxbytes)' simple_tooltip:true label:segment_3 %}
+        </div>
+        <br style="clear: both" />
+    </div>
+    
+    <div style="padding-top: 20px">&nbsp;</div>
+    
+    <div>
+        <div style="float: left; width: 50%;">
+            {% line_chart value:average_value title:'Cache Gets & Sets' regexp:'System/Memcached/(Gpm|Spm)' simple_tooltip:true label:segment_3 %}
+        </div>
+        <div style="float: left; width: 50%;">
+            {% line_chart value:average_value title:'Cache Misses, Flushes, & Evictions' regexp:'System/Memcached/(Mpm|Epm|Fpm)' simple_tooltip:true label:segment_3 %}
+        </div>
+        <br style="clear: both" />
+    </div>
+    
+    <div style="padding-top: 20px">&nbsp;</div>
+    
+    <div>
+        <div style="float: left; width: 50%;">
+        {% line_chart value:average_value title:'Active Connections' metric:'System/Memcached/Curr Connections' simple_tooltip:true hide_legend:true %}
+        </div>
+        <div style="float: left; width: 50%;">
+        {% line_chart value:average_value title:'Cache Objects' metric:'System/Memcached/Curr Items' simple_tooltip:true hide_legend:true %}
+        </div>
+        <br style="clear: both" />
+    </div>
+

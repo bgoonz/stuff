@@ -1,0 +1,28 @@
+suite_condition("Yajl not supported for JRuby") do
+  RUBY_PLATFORM != 'java'
+end
+
+if RUBY_VERSION >= '2.4.0'
+  gemfile <<-RB
+    gem 'rack'
+    gem 'yajl-ruby', '~> 1.4.0', require: ['yajl', 'yajl/json_gem']
+    #{ruby3_gem_webrick}
+  RB
+else
+  gemfile <<-RB
+    gem 'rack'
+    gem 'yajl-ruby', '~> 1.3.0', require: ['yajl', 'yajl/json_gem']
+  RB
+
+  gemfile <<-RB
+    gem 'rack'
+    gem 'yajl-ruby', '~> 1.2.1'
+  RB
+
+  gemfile <<-RB
+    gem 'rack'
+    gem 'yajl-ruby', '~> 1.1.0'
+  RB
+end
+
+# vim: ft=ruby

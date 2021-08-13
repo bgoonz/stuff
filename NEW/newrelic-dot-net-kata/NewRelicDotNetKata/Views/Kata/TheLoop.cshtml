@@ -1,0 +1,22 @@
+﻿@model dynamic
+
+@{
+    Layout = "~/Views/shared/_BootstrapLayout.basic.cshtml";
+}
+
+<h1>The Loop</h1>
+
+<pre>
+    Kata : N + 1 or some other unintended looping mishap can really hurt your site by stealing away cycles and speed.
+    We are not exactly dealing with n+1 here but what is happening is not really any better.
+    
+    1. There is something fundamentally wrong with how data is being processed on this page - 
+    There is a way to reduce the time it takes to process this page while working within the constraints of the 1 second sleep found in FormatValue.  
+    Find it and fix it.
+
+    Hint: Hint: Go to New Relic and create a custom dashboard for the Metric : Custom/FormatValueResponseTime - see if anything sticks out as odd to you.
+</pre>
+
+<p>
+    @Html.Raw(ViewBag.Message)
+</p>

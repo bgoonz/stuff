@@ -1,0 +1,12 @@
+== Intro
+
+This is a simple dumb blog app that is meant to be a sandbox for testing
+the RPM agent.  It has branches for different versions of rails.  
+
+The master is the generic functionality of the blog app.  Branches periodically
+merge the master to keep up to date.  Version specific features like metal
+belong on the individual branches.
+
+== Questions or Comments?
+
+Contact support@newrelic.com, or find us on #newrelic at freenode.

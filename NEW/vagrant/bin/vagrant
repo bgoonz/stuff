@@ -1,0 +1,88 @@
+#!/usr/bin/env ruby
+
+# Trap interrupts to quit cleanly. This will be overriden at some point
+# by Vagrant. This is made to catch any interrupts while Vagrant is
+# initializing which have historically resulted in stack traces.
+Signal.trap("INT") { exit 1 }
+
+require 'log4r'
+require 'vagrant'
+require 'vagrant/cli'
+require 'vagrant/util/platform'
+
+# Create a logger right away
+logger = Log4r::Logger.new("vagrant::bin::vagrant")
+logger.info("`vagrant` invoked: #{ARGV.inspect}")
+
+# Stdout/stderr should not buffer output
+$stdout.sync = true
+$stderr.sync = true
+
+# These will be the options that are passed to initialze the Vagrant
+# environment.
+opts = {}
+
+# Disable color if the proper argument was passed or if we're
+# on Windows since the default Windows terminal doesn't support
+# colors.
+if ARGV.include?("--no-color") || !$stdout.tty? || !Vagrant::Util::Platform.terminal_supports_colors?
+  # Delete the argument from the list so that it doesn't cause any
+  # invalid arguments down the road.
+  ARGV.delete("--no-color")
+  opts[:ui_class] = Vagrant::UI::Basic
+else
+  opts[:ui_class] = Vagrant::UI::Colored
+end
+
+env = nil
+begin
+  # Create the environment, which is the cwd of wherever the
+  # `vagrant` command was invoked from
+  logger.debug("Creating Vagrant environment")
+  env = Vagrant::Environment.new(opts)
+
+  # XXX: This is temporary and should be removed prior to release.
+  env.ui.warn("You're using a development version of Vagrant. This version\n" +
+              "makes structural changes to the `~/.vagrant.d` folder such that\n" +
+              "you will be _unable_ to downgrade back to a 1.0.x release. This\n" +
+              "affects all Vagrant environments on your computer. Other users\n" +
+              "of Vagrantfiles you create and use can continue to use 1.0.x without\n" +
+              "issue so long as it is on a computer that has never run this\n" +
+              "development version.\n" +
+              "\n" +
+              "This message will be removed when this version is officially released.",
+              :prefix => false)
+  result = nil
+  begin
+    result = env.ui.ask("If you're sure you'd like to continue, type 'Y' and then enter: ")
+  rescue Interrupt
+    result = nil
+  rescue Vagrant::Errors::UIExpectsTTY
+    result = nil
+  end
+
+  exit 0 if !result || result.upcase != "Y"
+
+  # Load the environment
+  logger.debug("Loading environment")
+  env.load!
+
+  # Execute the CLI interface, and exit with the proper error code
+  exit(env.cli(ARGV))
+rescue Vagrant::Errors::VagrantError => e
+  logger.error("Vagrant experienced an error! Details:")
+  logger.error(e.inspect)
+  logger.error(e.message)
+  logger.error(e.backtrace.join("\n"))
+
+  if env
+    opts = { :prefix => false }
+    env.ui.error e.message, opts if e.message
+  else
+    $stderr.puts "Vagrant failed to initialize at a very early stage:\n\n"
+    $stderr.puts e.message
+  end
+
+  exit e.status_code if e.respond_to?(:status_code)
+  exit 999 # An error occurred with no status code defined
+end

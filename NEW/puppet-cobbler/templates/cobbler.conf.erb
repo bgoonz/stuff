@@ -1,0 +1,34 @@
+# This configuration file allows cobbler data
+# to be accessed over HTTP.
+
+AliasMatch ^/cblr(?!/svc/)(.*)?$ "<%= @webroot %>$1"
+AliasMatch ^/cobbler_track(.*)?$ "<%= @webroot %>$1"
+#AliasMatch ^/cobbler(.*)?$ "<%= @webroot %>$1"
+Alias /cobbler <%= @webroot %>
+Alias /cobbler_webui_content <%= @webroot %>_webui_content
+
+WSGIScriptAliasMatch ^/cblr/svc/([^/]*) <%= @webroot -%>/svc/services.py
+
+<Directory "<%= @webroot %>">
+    Options Indexes FollowSymLinks
+    Order allow,deny
+    Allow from all
+</Directory>
+
+ProxyRequests off
+
+ProxyPass /cobbler_api http://localhost:25151/
+ProxyPassReverse /cobbler_api http://localhost:25151/
+
+BrowserMatch "MSIE" AuthDigestEnableQueryStringHack=On
+
+# the webui is now part of the "cobbler-web" package
+# and is visited at http://.../cobbler_web not this URL.
+# this is only a pointer to the new page.
+
+<Directory "<%= @webroot %>/web/">
+    Options Indexes FollowSymLinks
+    Order allow,deny
+    Allow from all
+</Directory>
+

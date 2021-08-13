@@ -1,0 +1,40 @@
+#!/usr/bin/env ruby
+
+require 'newrelic_plugin'
+require 'getoptlong'
+
+unless $:.include?(File.dirname(__FILE__) + '/../lib/')
+  $: << File.dirname(__FILE__) + '/../lib'
+end
+
+def usage
+  <<-EOF
+newrelic_rs [OPTS]
+  --config-file -c:          Path to configuration file
+  --help -h:                 This text
+EOF
+end
+
+opts = GetoptLong.new(
+  ['--config-file', '-c', GetoptLong::NO_ARGUMENT],
+  ['--help', '-h', GetoptLong::NO_ARGUMENT]
+)
+
+opts.each do |opt,arg|
+  case opt
+  when '--config-file'
+    NewRelic::Plugin::Config.config_file = arg
+  else
+    puts usage
+    exit 1
+  end
+end
+
+# Load any rackspace agents we find
+NewRelic::Plugin::Config.config.options['agents'].find_all do |agent, opts|
+  agent.start_with?('rackspace_') && opts['enabled']
+end.each do |rackspace_agent, _|
+  require "newrelic_#{rackspace_agent}"
+end
+
+NewRelic::Plugin::Run.setup_and_run

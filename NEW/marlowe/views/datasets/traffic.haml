@@ -1,0 +1,47 @@
+- content_for(:head) do
+  %script{type: 'text/javascript', src: "/charts/timeseries.js"}
+  %script{type: 'text/javascript', src: "/charts/traffic.js"}
+  :css
+    #logTransformGroup, #apdexTGroup, #densityGroup {
+      display: none;
+    }
+
+
+  :javascript
+    $data.file = "#{@file}";
+    $data.width = 800;
+    $data.height = 200;
+    $data.yMax = #{@y_max};
+    $data.density = 30;
+    $data.apdex_t = #{@apdex_t};
+    $data.measure = "frontend";
+    $data.filter = "#{@filter_label}";
+    $data.primary_dim = "#{@primary_dim}";
+    $data.dimensions = #{@dimensions.to_json};
+    $data.only = "#{@only ? '1' : '0'}";
+
+.row
+  #display.span12
+    %p#readout
+.row
+  #timeseries.span12
+
+:javascript
+  initTraffic(d3.select("#display"));
+  $data.dispatch.on("reloadData.traffic", function(switchedFile)  {
+       d3.json("/data/filtered/"+$data.file + "?" +
+        "only=" + $data.only + "&" +
+        "filter=" + $data.filter, function(error, json) {
+         header = json.shift(); // remove the header row
+         dimensionIndex = header.indexOf($data.primary_dim);
+         updateTraffic(error, json, d3.select("#display"), dimensionIndex);
+       });
+  });
+
+  // This defines the attributes of the timeslice record that are in the legend of the plot.
+  var plots = ["mean", "mode", "median", "apdex", "rpm"];
+  timeseries(d3.select("#timeseries"))
+    .legend(plots)
+    .timeline();
+  
+  $data.dispatch.reloadData();

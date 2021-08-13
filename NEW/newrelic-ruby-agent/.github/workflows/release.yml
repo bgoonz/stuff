@@ -1,0 +1,87 @@
+name: Release
+
+on: 
+  push: 
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7
+
+    - name: Install onetimepass
+      run: pip install onetimepass
+
+    - name: Configure gem credentials
+      run: |
+        echo "GEM_HOST_API_KEY=${{ secrets.RUBYGEMS_API_KEY }}" >> $GITHUB_ENV
+        echo "RUBYGEMS_MFA_KEY=${{ secrets.RUBYGEMS_MFA_KEY }}" >> $GITHUB_ENV
+
+    - name: Build newrelic_rpm gem
+      run: gem build newrelic_rpm.gemspec
+
+    - name: Build newrelic-infinite_tracing gem
+      run: |
+        cd infinite_tracing
+        gem build newrelic-infinite_tracing.gemspec
+        cd ..
+
+    - name: Determine version
+      run: |
+        echo "VERSION=$(ls newrelic_rpm-*.gem | ruby -pe 'sub(/newrelic_rpm\-(.*).gem/, "\\1")')" >> $GITHUB_ENV
+
+    - name: Create github release
+      uses: softprops/action-gh-release@v1
+      if: $(git tag -l ${{ env.VERSION }}) == false
+      with:
+        tag_name: ${{ env.VERSION }}
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Obtain OTP to publish newrelic_rpm to rubygems.org
+      run: echo "RUBYGEMS_OTP=$(python ./.github/workflows/scripts/rubygems-authenticate.py RUBYGEMS_MFA_KEY)" >> $GITHUB_ENV
+
+    - name: Publish newrelic_rpm to rubygems.org
+      run: ruby ./.github/workflows/scripts/rubygems-publish.rb newrelic_rpm
+
+    - name: Obtain OTP to publish newrelic-infinite_tracing to rubygems.org
+      run: echo "RUBYGEMS_OTP=$(python ./.github/workflows/scripts/rubygems-authenticate.py RUBYGEMS_MFA_KEY)" >> $GITHUB_ENV
+
+    - name: Publish newrelic-infinite_tracing to rubygems.org
+      run: ruby ./.github/workflows/scripts/rubygems-publish.rb infinite_tracing/newrelic-infinite_tracing
+
+    - name: Update system configuration page
+      run: |
+        PAYLOAD="{
+             \"system_configuration\": {
+               \"key\":   \"ruby_agent_version\",
+               \"value\": \"${{ env.VERSION }}\"
+            }
+          }"
+        CONTENT_TYPE='Content-Type: application/json'
+
+        # STAGING
+        curl -X POST 'https://staging-api.newrelic.com/v2/system_configuration.json' \
+          -H "X-Api-Key:${{ secrets.NEW_RELIC_API_KEY_STAGING }}" -i \
+          -H "$CONTENT_TYPE" \
+          -d "$PAYLOAD"
+
+        # PRODUCTION
+        curl -X POST 'https://api.newrelic.com/v2/system_configuration.json' \
+          -H "X-Api-Key:${{ secrets.NEW_RELIC_API_KEY_PRODUCTION }}" -i \
+          -H "$CONTENT_TYPE" \
+          -d "$PAYLOAD"
+
+        # EU PRODUCTION
+        curl -X POST 'https://api.eu.newrelic.com/v2/system_configuration.json' \
+          -H "X-Api-Key:$ {{ secrets.NEW_RELIC_API_KEY_PRODUCTION }}" -i \
+          -H "$CONTENT_TYPE" \
+          -d "$PAYLOAD"

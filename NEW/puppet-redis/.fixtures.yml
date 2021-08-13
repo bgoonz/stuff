@@ -1,0 +1,4 @@
+fixtures:
+  symlinks:
+      "redis": "#{source_dir}"
+

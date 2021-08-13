@@ -1,0 +1,76 @@
+﻿@model dynamic
+
+@{
+    Layout = "~/Views/shared/_BootstrapLayout.basic.cshtml";
+}
+
+<h1>The Query</h1>
+
+<pre>
+    Kata : Performance problems with databases and queries are legendary - much like this one, overlooked details can make your site crawl
+
+    1. Find the issue with leaking connections
+    2. Find the error that this page is generating
+    3. Come up with a better way to get and display the information below
+    
+    Hint: Use New Relic to look at the query plan of all of the queries on this page
+    to see if any suggestions about what to do with the query or schema can be made.
+
+</pre>
+
+<p>
+
+    <h4>Product <small>Listing</small></h4>
+        <table class="table table-striped">
+            <caption></caption>
+            <thead>
+                <tr>
+                    <th>
+                        Product Name
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                    <th>
+                        Color
+                    </th>
+                    <th>
+                        Price
+                    </th>
+                    <th>
+                        Quantity
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @item.Name
+                    </td> 
+                    <td>
+                        @item.Desctiption
+                    </td> 
+                    <!-- I totally in-lined a style -->
+                    <td style="color:@item.ColorHex">
+                        @item.Color
+                    </td> 
+                    <td>
+                        @item.Price
+                    </td>    
+                    <td>
+                        @try{
+                            int.Parse(item.DistributionCenters.FirstOrDefault().Quantity);
+                        }
+                        catch (Exception ex){
+                            //This will never be null right?  Example of how you can replace custom error logs with New Relic API calls
+                            NewRelic.Api.Agent.NewRelic.NoticeError(ex);
+                        }
+                    </td>             
+                   
+                </tr>
+            }
+
+        </table>
+</p>

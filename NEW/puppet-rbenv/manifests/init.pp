@@ -1,0 +1,36 @@
+# Class: rbenv
+#
+# This module manages puppet-rbenv
+#
+# Parameters:
+# - *user*: the user who is going to install rbenv. defaults to $USER
+# - *compile*: whether or not a ruby version will be compiled
+# - *version*: the global ruby version which is going to be compiled and
+#   installed. It is optional.
+#
+# Actions:
+#
+# Requires:
+# - git and curl
+# - Some packages for compiling native extensions
+#
+# Sample Usage:
+#
+#     class { "rbenv":
+#         user     => "alup",
+#         group    => "users",
+#         home_dir => "/project/alup",
+#         compile  => true,
+#         version  => "1.9.3-p0",
+#     }
+#
+# [Remember: No empty lines between comments and class definition]
+class rbenv ( $user, $group=$user, $home_dir="/home/${user}", $compile=true, $version='1.9.3-p194' ) {
+  rbenv::user { 
+    "rbenv_class_${version}_for_${user}":
+      group => $group,
+      home_dir => $home_dir,
+      compile => $compile,
+      version => $version;
+  }
+}

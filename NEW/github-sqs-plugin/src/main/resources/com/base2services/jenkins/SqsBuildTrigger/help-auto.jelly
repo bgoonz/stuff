@@ -1,0 +1,10 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+    <l:ajax>
+        <div>
+            In this mode, Jenkins will add/remove the SQS Queue hook to GitHub based on the project configuration of Jenkins.
+            <p>
+                Currently Jenkins will only use the details from the first SQS Profile when registering the SQS Queue hook.
+            </p>
+        </div>
+    </l:ajax>
+</j:jelly>

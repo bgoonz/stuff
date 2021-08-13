@@ -1,0 +1,19 @@
+{
+  "name": "cassandra-driver-tests",
+  "version": "0.0.0",
+  "private": true,
+  "tests": [
+    {
+      "engines": {
+        "node": ">=12"
+      },
+      "dependencies": {
+        "cassandra-driver": ">=3.4.0 <4"
+      },
+      "files": [
+        "query.tap.js"
+      ]
+    }
+  ],
+  "dependencies": {}
+}

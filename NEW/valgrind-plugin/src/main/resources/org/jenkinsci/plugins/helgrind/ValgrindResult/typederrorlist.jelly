@@ -1,0 +1,45 @@
+<j:jelly xmlns:j="jelly:core" 
+         xmlns:st="jelly:stapler" 
+         xmlns:d="jelly:define"
+         xmlns:l="/lib/layout" 
+         xmlns:t="/lib/hudson" 
+         xmlns:f="/lib/form"
+         xmlns:i="jelly:fmt"  
+         xmlns:local="local">
+         
+    <st:header name="Content-Type" value="text/html;charset=UTF-8"/>
+    
+    
+       
+   <j:if test="${errorList != null}">
+	   <p><b>${errorListName}:</b>	
+	   ${errorListDesc} (<a href="${manualLink}" target="_blank">Helgrind Manual</a>)
+	   
+	   <st:header name="Content-Type" value="text/html;charset=UTF-8" />
+	   <table class="pane sortable" id="files">
+	    <tr>	    
+	      <td class="pane-header" style="width:2em">ID</td>
+	    <j:if test="${isLeak == true}">
+	      <td class="pane-header" style="width:2em">Bytes</td>	    
+	      <td class="pane-header" style="width:2em">Blocks</td>
+	    </j:if>	      
+	      <td class="pane-header">Error</td>
+	    </tr>			    
+	    <tbody>			
+	    <j:forEach var="err" items="${errorList}">    
+	        <tr>	        	            
+	          <td class="pane">${err.uniqueId}</td>
+	        <j:if test="${isLeak == true}">
+	          <td class="pane">${err.leakedBytes}</td>
+	          <td class="pane">${err.leakedBlocks}</td>
+	        </j:if>	          
+	          <td class="pane"><a href="${url_prefix}pid=${process.pid},${err.uniqueId}">${err.description}</a></td>
+	        </tr>
+	    </j:forEach>			
+	    </tbody>    
+	   </table>	
+	   </p>	
+   </j:if>	
+   
+    
+</j:jelly>

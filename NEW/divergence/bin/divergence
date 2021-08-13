@@ -1,0 +1,55 @@
+#!/usr/bin/env ruby
+
+require "thor"
+require "thor/group"
+
+module CLI
+  class Init < Thor::Group
+    include ::Thor::Actions
+
+    desc "Initializes a divergence application into the current directory"
+
+    def self.source_root
+      ::File.expand_path('../../generators/files',  __FILE__)
+    end
+
+    def create_directories
+      empty_directory "config"
+      empty_directory "log"
+      empty_directory "tmp"
+    end
+
+    def copy_templates
+      template "config.rb", "config/config.rb"
+      template "callbacks.rb", "config/callbacks.rb"
+      template "config.ru", "config.ru"
+    end
+  end
+end
+
+module CLI
+  class Base < Thor
+    register CLI::Init, "init", "init", "Initializes a divergence application into the current directory"
+
+    desc "start", "Start divergence"
+    method_options :port => :number, :dev => :boolean
+    def start
+
+      cmd = 'rackup'
+      cmd << " -p #{options[:port]}" if options[:port]
+      cmd << " -D" unless options[:dev]
+      cmd << " -P tmp/rack.pid"
+      
+      puts "Divergence started"
+      exec cmd
+    end
+
+    desc "stop", "Stop divergence"
+    def stop
+      `kill -9 $(cat tmp/rack.pid) && rm tmp/rack.pid`
+      puts "Divergence halted"
+    end
+  end
+end
+
+CLI::Base.start

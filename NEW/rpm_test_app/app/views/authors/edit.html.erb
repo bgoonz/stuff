@@ -1,0 +1,23 @@
+<h1>Editing author</h1>
+
+<% form_for(@author) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :login_id %><br />
+    <%= f.text_field :login_id %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+
+<%= link_to 'Show', @author %> |
+<%= link_to 'Back', authors_path %>
+
+<p><%= link_to 'Blogs', blogs_path %></p>

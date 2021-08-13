@@ -1,0 +1,31 @@
+%w(2.7.6 2.7.8 2.7.11).each do |version|
+  gemfile <<-RB
+    gem 'dalli', '~> #{version}'
+  RB
+end
+
+%w(1.8.5 1.5.0).each do |version|
+  gemfile <<-RB
+    gem 'memcache-client', '~> #{version}', :require => 'memcache'
+  RB
+end
+
+unless RUBY_PLATFORM == 'java'
+  gemfile <<-RB
+    gem 'memcached', '~> 1.8.0'
+  RB
+end
+
+def memcache_running?
+  begin
+  require 'socket'
+    TCPSocket.new('localhost', 11211)
+    true
+  rescue
+    false
+  end
+end
+
+before_suite do
+  system('memcached -d -l localhost') unless memcache_running?
+end

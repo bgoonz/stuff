@@ -1,0 +1,10 @@
+--- 
+groups: 
+- - Installation and configuration
+  - /install|config|custom/i
+- - How Tos
+  - /how/i
+- - Advanced topics
+  - //
+docurl: http://mycompany.tenderapp.com
+depth: 1

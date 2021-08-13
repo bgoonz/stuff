@@ -1,0 +1,13 @@
+<h1>The Tweets</h1>
+<div class="jumbotron">
+  <p>Kata: One of the most popular things to do these days is call
+	an external service and pull down some sort of social flair to make the app more "hip."</p>
+	<p>Hint: Use the New Relic Real User Monitoring (RUM) to find out if the problem is
+		on the client stream or in the controller code</p>
+</div>
+
+<%
+@nodes.each do |node|
+	%><p><%= node.html_safe %></p><%
+end
+%>

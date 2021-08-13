@@ -1,0 +1,274 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block title %} :: dashboard{% endblock %}
+
+{% block main_content %}
+<div class="toolbar fill">
+    <div class="btn-group">
+        <a id="btn-refresh-containers" href="{% url 'containers.views.refresh' %}" class="btn btn-default">{% trans 'Refresh' %}</a>
+    </div>
+    <div class="btn-group">
+        <a href="#dialog-crane-application" role="button" data-toggle="modal" class="btn btn-success">{% trans 'Create application' %}</a>
+    </div>
+    <div class="btn-group">
+        <a href="#dialog-create-container" role="button" data-toggle="modal" class="btn btn-success">{% trans 'Launch application' %}</a>
+    </div>
+<!--
+    <div class="btn-group">
+        <a href="#dialog-crane-interpreter" role="button" data-toggle="modal" class="btn btn-success">{% trans 'build intepreter' %}</a>
+    </div>
+    <div class="btn-group">
+        <a href="#dialog-crane-os" role="button" data-toggle="modal" class="btn btn-success">{% trans 'build OS' %}</a>
+    </div>
+-->
+</div>
+
+<!-- 
+<div id="dialog-crane-interpreter" class="modal hide">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3>{% trans 'Interpreter' %}</h3>
+  </div>
+  <div class="modal-body">
+    {% crispy form_build_interpreter form_build_interpreter.helper %}
+  </div>
+  <div class="modal-footer">
+    <a href="#" id="btn-build-interpreter" class="btn btn-primary btn-large">{% trans 'Build' %}</a>
+    <a href="#" class="btn btn-large" data-dismiss="modal" aria-hidden="true">{% trans 'Cancel' %}</a>
+  </div>
+</div>
+<div id="dialog-crane-os" class="modal hide">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3>{% trans 'Os' %}</h3>
+  </div>
+  <div class="modal-body">
+    {% crispy form_build_os form_build_os.helper %}
+  </div>
+  <div class="modal-footer">
+    <a href="#" id="btn-build-os" class="btn btn-primary btn-large">{% trans 'Build' %}</a>
+    <a href="#" class="btn btn-large" data-dismiss="modal" aria-hidden="true">{% trans 'Cancel' %}</a>
+  </div>
+</div>
+-->
+
+
+<div id="dialog-create-container" class="modal hide">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3>{% trans 'Create Container' %}</h3>
+  </div>
+  <div class="modal-body">
+    {% crispy form_create_container form_create_container.helper %}
+  </div>
+  <div class="modal-footer">
+    <a href="#" id="btn-create-container" class="btn btn-primary btn-large">{% trans 'Create' %}</a>
+    <a href="#" class="btn btn-large" data-dismiss="modal" aria-hidden="true">{% trans 'Cancel' %}</a>
+  </div>
+</div>
+<div id="dialog-crane-application" class="modal hide">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3>{% trans 'Application' %}</h3>
+  </div>
+  <div class="modal-body">
+    {% crispy form_build_application form_build_application.helper %}
+  </div>
+  <div class="modal-footer">
+    <a href="#" id="btn-build-application" class="btn btn-primary btn-large">{% trans 'Build' %}</a>
+    <a href="#" class="btn btn-large" data-dismiss="modal" aria-hidden="true">{% trans 'Cancel' %}</a>
+  </div>
+</div>
+
+
+<div id="host-info" class="fill">
+</div>
+<script type="text/javascript">
+    function loadContainers(showAll) {
+        $("div#host-info").html('<div class="loading center"><img src="{{ STATIC_URL }}img/loader_64.gif" /></div>');
+        var extra = '';
+        if (showAll) {
+            extra = '?showall=True';
+        }
+        $("#host-info").load("{% url 'dashboard.views._host_info' %}" + extra);
+    }
+    $(function() {
+        loadContainers();
+        $("#nav-dashboard").addClass('active');
+    });
+    $("#btn-add-host").click(function(){
+        $("#form-add-host").submit();
+    });
+    $("#btn-import-repository").click(function(){
+        $("#form-import-repository").submit();
+    });
+    $("#btn-create-container").click(function(){
+        $("#form-create-container").submit();
+    });
+    $("#btn-build-image").click(function(){
+        $("#form-build-image").submit();
+    });
+
+    $("#btn-search-repository").click(function(){
+        var qry = $("#search-repository-query").val();
+        $.getJSON("{% url 'containers.views.search_repository' %}?query=" + qry, function(data){
+            console.log(data);
+            var d = '<table class="table table-bordered table-condensed">';
+            d += '<thead><th>{% trans "Name" %}</th><th>{% trans "Description" %}</th><th></th></thead>';
+            d += '<tbody>';
+            for (var i=0, l=data.length; i<l; i++) {
+                var o = data[i];
+                d += '<tr>';
+                d += '<td>' + o.Name + '</td>';
+                d += '<td>' + o.Description + '</td>';
+                d += '<td><a href="#" rel="tooltip" title="{% trans "Import" %}" class="import-repository" data-repository-name="' + o.Name + '"><i class="icon-plus"></i></a></td>';
+                d += '</tr>';
+            }
+            d += '</tbody></table>';
+            $("#search-repository-results").html(d);
+            $("a.import-repository").click(function(d) {
+                var repoName = (this).getAttribute('data-repository-name');
+                $("#dialog-search-repository").modal('toggle');
+                $("input#id_repository").val(repoName);
+                $("#dialog-import-repository").modal('toggle');
+                return false;
+            });
+        });
+        return false;
+    });
+    $("#form-search-repository").on('keypress', function(e) {
+        if (e.keyCode == 13) {
+            return false;
+        }
+    });
+    $("input#search-repository-query").on('keyup', function(e) {
+        if (e.keyCode == 13) {
+            $("#btn-search-repository").trigger('click');
+        }
+        return false;
+    });
+</script>
+<script type="text/javascript">
+    <!-- Crane behaviour -->
+    $("#btn-create-container").click(function(){
+        $("#form-create-container").submit();
+    });
+    $("#btn-build-os").click(function(){
+        $("#form-build-os").submit();    
+    });
+    $("#btn-build-interpreter").click(function(){
+        $("#form-build-interpreter").submit();    
+    });
+    $("#btn-build-application").click(function(){
+     if ($("#id_database_name").val().replace(/^\s+|\s+$/g, '') == ''){
+         $("#hint_id_database_name").css("color", "red");
+         $("#hint_id_database_name").text("Enter a database name.");
+     }
+     else
+         $("#form-build-application").submit();
+    });
+    $("#btn-build-third").click(function(){
+        $("#form-build-third").submit();    
+    });
+
+    function refresh_version(emitter) {
+        emitter_id = '#' + emitter + '_interpreter'
+        emitter_version = '#' + emitter + '_version'
+
+        var ajax_requext = $.ajax({
+            url : '/craneui/versions',
+            data: {'interpreter': $(emitter_id).val()}
+        })
+        .done(function(result) {
+                 $(emitter_version).empty();
+
+                 for (i = 0; i < result['versions'].length; ++i) {
+                    $(emitter_version).append($("<option></option>").text(result['versions'][i][0]))
+                 }
+        })
+        .fail(function( jqxhr, textStatus, error  ) {
+                 var err = textStatus + ', ' + error;
+                 console.log( "Request Failed: " + err );
+        });
+    }
+
+// FIXME : these two function could be factorized into one:
+    function interpreter_extension(interpreter) {
+        return ajax_requext = $.ajax({
+            url : '/craneui/extensions',
+            data: {'interpreter': interpreter}
+        })
+        .done(function(result) {
+        })
+        .fail(function( jqxhr, textStatus, error  ) {
+                 var err = textStatus + ', ' + error;
+                 console.log( "Request Failed: " + err );
+        });
+    }
+
+    function existing_databases(software, application_name) {
+	return ajax_requext = $.ajax({
+            url : '/craneui/databases/',
+            data: {'software': software
+		  ,'application_name' : application_name}
+        })
+        .done(function(result) {
+        })
+        .fail(function( jqxhr, textStatus, error  ) {
+                 var err = textStatus + ', ' + error;
+                 console.log( "Request Failed: " + err );
+        });
+    }
+
+     $("#id_git_url").change(function(){
+        if ($("#id_git_url").val().replace(/^\s+|\s+$/g, '').substring(0, 4) == 'git@'){
+           $("#hint_id_git_url").css("color", "red");
+           $("#hint_id_git_url").text("You cant use an ssh url here.");
+        }
+        else
+           $("#hint_id_git_url").text('');
+     });
+
+    $("#interpreter_interpreter").change(function(){refresh_version('interpreter');});
+
+    $("#application_interpreter").change(function(){
+        refresh_version('application');
+        var interpreter = $('#application_interpreter').val()
+
+        $.when(interpreter_extension(interpreter))
+         .done(function(result) {
+             $('#id_launch').val(interpreter + ' app.' + result['extension']);
+             $('#id_before_launch').val(interpreter + ' db.' + result['extension']);
+        });
+     });
+
+     $("#id_third_party_software").change(application_third_party);
+     $("#id_application").change(application_third_party);
+
+     function application_third_party(){
+	var software = $('#id_third_party_software').val();
+	var application = $('#id_application').val();
+
+	if (application.length) {
+	   application_name = application.split('/')
+           application_name = application_name[application_name.length - 1]
+	   application_name = application_name.split(':')[0]
+	
+           if (software.length)
+	      $.when(existing_databases(software, application_name))
+               .done(function(result) {
+                 $('#id_existing_database').empty();
+//                 $('id_existing_database').append($("<option></option>").text('----------'));
+
+                 for (i = 0; i < result['databases'].length; ++i) {
+		    console.log(result['databases'][i]);
+                    $('#id_existing_database').append($("<option></option>").text(result['databases'][i]))
+                 }
+	       });
+	   }
+     }
+    <!-- End-->
+</script>
+{% endblock %}

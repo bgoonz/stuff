@@ -1,0 +1,179 @@
+# ******************************************************************
+# Cobbler managed dhcpd.conf file
+# Puppet managed dhcpd.template file for node: <%= @fqdn %>
+#
+# generated from cobbler dhcp.conf template ($date)
+# Do NOT make changes to /etc/dhcpd.conf. Instead, make your changes
+# in /etc/cobbler/dhcp.template, as /etc/dhcpd.conf will be
+# overwritten.
+#
+# ******************************************************************
+
+authoritative;
+
+allow booting;
+deny bootp;
+
+ddns-update-style ad-hoc;
+ignore client-updates;
+
+set vendorclass = pick-first-value(option vendor-class-identifier, "UNKNOWN");
+
+key omapi_key {
+  algorithm hmac-md5;
+  secret <%= @omapi_key %>;
+};
+
+omapi-key omapi_key;
+omapi-port 7911;
+
+<% if @role == "primary" %>
+failover peer "dhcp-failover" {
+  primary; # declare this to be the primary server
+  address <%= @ipaddress %>;
+  port 647;
+  peer address <%= @secondary_server_ip %>;
+  peer port 647;
+  max-response-delay 60;
+  max-unacked-updates 10;
+  load balance max seconds 5;
+  mclt 3600;
+  split 128;
+}
+<% elsif @role == "secondary" %>
+failover peer "dhcp-failover" {
+  secondary; # declare this to be the secondary server
+  address <%= @ipaddress %>;
+  port 647;
+  peer address  <%= @primary_server_ip %>;
+  peer port 647;
+  max-response-delay 60;
+  max-unacked-updates 10;
+  load balance max seconds 5;
+}
+<% end %>
+
+<% @networking_subnets.each_pair do |key, data| -%>
+subnet <%= data['subnet'] %> netmask <%= data['netmask'] %> {
+
+  option routers                  <%= data['router'] %>;
+  option subnet-mask              <%= data['netmask'] %>;
+  option broadcast-address        <%= data['broadcast'] %>;
+  option domain-name              "<%= data['domainname'] %>";
+  option domain-search            "<%= data['dnssearch'] %>";
+  option domain-name-servers      <%= data['resolvers'].join(', ') %>;
+  option ntp-servers              <%= data['ntpservers'].join(', ') %>;
+  filename                        "/pxelinux.0";
+  next-server                     <%= @ipaddress %>;
+
+  pool  {
+    <% if @role != "solitary" %>
+    failover peer              "dhcp-failover";
+    <% end %>
+    <% data['ranges'].each do |range| -%>
+    range                      <%= range %>;
+    <% end -%>
+    max-lease-time             <%= @maxlease %>;
+    default-lease-time         <%= @deflease %>;
+    allow                      all clients;
+  }
+
+  <% if scope.function_any2bool([@enable_on_commit_hook]) == true %>
+  on commit {
+      set clientip = binary-to-ascii(10, 8, ".", leased-address);
+      set clientmac = binary-to-ascii(16, 8, ":", substring(hardware, 1, 6));
+      set leasetime = binary-to-ascii(10,32,"",encode-int(lease-time,32));
+      set vendorclass = pick-first-value(option vendor-class-identifier, "UNKNOWN");
+      set ddns-hostname = pick-first-value(
+          option fqdn.hostname,
+          option host-name,
+          concat( "dhcp-", binary-to-ascii(10, 8, "-",
+          suffix(leased-address, 2))));
+      execute(<%= @on_commit_hook.join(', ') %>);
+  }
+  <% end %>
+
+#for dhcp_tag in $dhcp_tags.keys():
+#if $dhcp_tag == "vlan<%= data['vlanid'] %>"
+# hosts for Cobbler DHCP tag: $dhcp_tag
+        #for mac in $dhcp_tags[$dhcp_tag].keys():
+            #set iface = $dhcp_tags[$dhcp_tag][$mac]
+  host $iface.name {
+    hardware ethernet $mac;
+    #if $iface.ip_address:
+    fixed-address $iface.ip_address;
+    #end if
+    #if $iface.hostname:
+    option host-name "$iface.hostname";
+    #end if
+    #if $iface.netmask:
+    option subnet-mask $iface.netmask;
+    #end if
+    #if $iface.gateway:
+    option routers $iface.gateway;
+    #end if
+    #if $iface.enable_gpxe:
+    if exists user-class and option user-class = "gPXE" {
+        filename "http://$cobbler_server/cblr/svc/op/gpxe/system/$iface.owner";
+    } else if exists user-class and option user-class = "iPXE" {
+        filename "http://$cobbler_server/cblr/svc/op/gpxe/system/$iface.owner";
+    } else {
+        filename "undionly.kpxe";
+    }
+    #else
+    filename "$iface.filename";
+    #end if
+  }
+  #end for
+#end if
+#end for
+
+}
+
+<% end -%>
+
+#for dhcp_tag in $dhcp_tags.keys():
+#if $dhcp_tag == "default"
+    ## group could be subnet if your dhcp tags line up with your subnets
+    ## or really any valid dhcpd.conf construct ... if you only use the
+    ## default dhcp tag in cobbler, the group block can be deleted for a
+    ## flat configuration
+# group for Cobbler DHCP tag: $dhcp_tag
+group {
+        #for mac in $dhcp_tags[$dhcp_tag].keys():
+            #set iface = $dhcp_tags[$dhcp_tag][$mac]
+    host $iface.name {
+        hardware ethernet $mac;
+        #if $iface.ip_address:
+        fixed-address $iface.ip_address;
+        #end if
+        #if $iface.hostname:
+        option host-name "$iface.hostname";
+        #end if
+        #if $iface.netmask:
+        option subnet-mask $iface.netmask;
+        #end if
+        #if $iface.gateway:
+        option routers $iface.gateway;
+        #end if
+        #if $iface.enable_gpxe:
+        if exists user-class and option user-class = "gPXE" {
+            filename "http://$cobbler_server/cblr/svc/op/gpxe/system/$iface.owner";
+        } else if exists user-class and option user-class = "iPXE" {
+            filename "http://$cobbler_server/cblr/svc/op/gpxe/system/$iface.owner";
+        } else {
+            filename "undionly.kpxe";
+        }
+        #else
+        filename "$iface.filename";
+        #end if
+        ##
+        ## Cobbler defaults to $next_server, but some users
+        ## may like to use $iface.system.server for proxied setups
+        next-server $next_server;
+        ## next-server $iface.next_server;
+    }
+        #end for
+}
+#end if
+#end for

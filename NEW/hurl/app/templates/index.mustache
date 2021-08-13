@@ -1,0 +1,156 @@
+<form id="hurl-form" method="post" action="/">
+  <p>
+    {{# previous_hurl}}
+      <a href="/hurls/{{ hurl }}" id="page-prev" title="previous">&lang;</a>
+    {{/ previous_hurl}}
+
+    {{^ previous_hurl}}
+      <a href="#" style="display:none; "id="page-prev" title="previous">&lang;</a>
+    {{/ previous_hurl}}
+
+    {{# next_hurl}}
+      <a href="/hurls/{{ hurl }}" id="page-next" title="next">&rang;</a>
+    {{/ next_hurl}}
+
+    {{^ next_hurl}}
+      {{# hurl?}}
+        {{# logged_in?}}
+          <a href="/" id="page-next" title="next">&rang;</a>
+        {{/ logged_in?}}
+
+        {{^ logged_in?}}
+          <a href="/" style="display:none;" id="page-next" title="next">&rang;</a>
+        {{/ logged_in?}}
+      {{/ hurl?}}
+    {{/ next_hurl}}
+
+    <input type="text" name="url" title="URL" value="{{ hurl_url }}"/>
+  </p>
+  <p>
+    <select id="select-method" name="method" class="form-alpha">
+      <option value="GET" {{# method_is_GET? }}selected="selected"{{/ method_is_GET? }}>GET</option>
+      <option value="HEAD" {{# method_is_HEAD? }}selected="selected"{{/ method_is_HEAD? }}>HEAD</option>
+      <option value="POST" {{# method_is_POST? }}selected="selected"{{/ method_is_POST? }}>POST</option>
+      <option value="PUT" {{# method_is_PUT? }}selected="selected"{{/ method_is_PUT? }}>PUT</option>
+      <option value="DELETE" {{# method_is_DELETE? }}selected="selected"{{/ method_is_DELETE? }}>DELETE</option>
+    </select>
+    <span class="form-beta">
+      <label>
+      <input type="checkbox" id="follow_redirects" name="follow_redirects" {{# follows_redirects? }}checked="checked"{{/ follows_redirects? }} />
+        follow redirects
+      </label>
+    </span>
+    <div id="post-params" style="display: none;">
+      <a id="add-param" href="#"><span class="link-icon">+</span> add param</a>
+      <a id="set-post-body" href="#"><span class="link-icon">+</span> set post body</a>
+      {{# hurl_param_keys }}
+        <p id="param-fields">
+          <a href="#" class="param-delete"><img class="delete" src="/img/delete.png" title="remove"/></a>
+          <input type="text" name="param-keys[]" class="form-alpha" value="{{ name }}" />
+          <input type="text" name="param-vals[]" class="form-beta" value="{{ value }}" />
+        </p>
+      {{/ hurl_param_keys }}
+
+      {{# no_hurl_param_keys }}
+        <p id="param-fields" style="display:none;">
+          <a href="#" class="param-delete"><img class="delete" src="/img/delete.png" title="remove"/></a>
+          <input type="text" name="param-keys[]" class="form-alpha"/>
+          <input type="text" name="param-vals[]" class="form-beta" />
+        </p>
+      {{/ no_hurl_param_keys }}
+
+      <p id="post-body" {{^ hurl_post_body}}style="display:none;"{{/ hurl_post_body}}>
+        <textarea rows="15" name="post-body">{{ hurl_post_body }}</textarea>
+      </p>
+    </div>
+  </p>
+  <p id="auth-selection">
+    <label>
+      <input type="radio" name="auth" value="none" checked="checked"/>
+      no auth
+    </label>
+    <label>
+      <input type="radio" name="auth" value="basic"
+        {{# hurl_basic_auth? }}
+          checked="checked"
+        {{/ hurl_basic_auth? }}
+      />
+      HTTP basic
+    </label>
+    <div id="basic-auth-fields" style="display:none;">
+      <input type="text" name="username" class="form-alpha" title="username" value="{{ hurl_username }}"/>
+      <input type="password" name="password" class="form-beta" title="password" value="{{ hurl_password }}"/>
+    </div>
+  </p>
+  <p id="header-selection">
+    <a id="add-header" href="#"><span class="link-icon">+</span> add header</a>
+  </p>
+
+  {{# hurl_header_keys }}
+  <p id="header-fields">
+    <a href="#" class="header-delete"><img class="delete" src="/img/delete.png" title="remove"/></a>
+    <input type="text" name="header-keys[]" class="form-alpha" value="{{ name }}" />
+    <input type="text" name="header-vals[]" class="form-beta" value="{{ value }}" />
+  </p>
+  {{/ hurl_header_keys }}
+
+  {{# no_hurl_header_keys }}
+    <p id="header-fields" style="display:none;">
+      <a href="#" class="header-delete"><img class="delete" src="/img/delete.png" title="remove"/></a>
+      <input type="text" name="header-keys[]" class="form-alpha"/>
+      <input type="text" name="header-vals[]" class="form-beta"/>
+    </p>
+  {{/ no_hurl_header_keys }}
+
+  <p id="send-wrap" class="clearwrap">
+    <button type="submit" class="bigbutton">Send</button>
+    <img src="/img/ajax-loader.gif" id="spinner" />
+  </p>
+</form>
+<div class="help-blurb" {{# help_blurb_hidden? }}style="display: none;"{{/ help_blurb_hidden? }}>
+  <div id="help-text">
+    <p>Hurl makes HTTP requests.</p>
+    <p>Enter a URL, set some headers, view the response, then share it with others.</p>
+    <p>Perfect for demoing and debugging APIs.</p>
+  </div>
+</div>
+<div class="help-blurb" {{# try_it_hidden? }}style="display: none;"{{/ try_it_hidden? }}>
+ <div id="try-it">
+    <h4>Try it out:</h4>
+    <ul class="examples">
+      {{# default_hurls }}
+        <li class="{{ class }}"><a href="/hurls/{{ sha }}">{{ name }}</a></li>
+      {{/ default_hurls }}
+    </ul>
+  </div>
+</div>
+<div id="request-and-response" {{# hide_request_and_response? }}style="display:none;"{{/ hide_request_and_response? }}>
+  <div class="utils">
+    <a href="{{ view_permalink }}" class="full-size-link nav-item" target="_blank">view full size</a>
+    <a href="{{ hurl_permalink }}" class="permalink nav-item">permalink</a>
+  </div>
+  <p>
+    <span class="toggle-reqres" style="display: none;">
+      <span class="tab-current">request</span> <a class="toggle-reqres-link" href="#">response</a>
+    </span>
+    <span class="toggle-reqres">
+      <a class="toggle-reqres-link" href="#">request</a> <span class="tab-current">response</span>
+    </span>
+  </p>
+  <div id="code-request" class="code-wrap" style="display: none;">
+    <div id="request" class="code-text">
+      {{{ view_request }}}
+    </div>
+  </div>
+  <div id="code-response" class="code-wrap">
+    <div id="response" class="code-text">
+      {{# view }}
+        <pre>{{{ header }}}</pre>{{{ body }}}
+      {{/ view }}
+    </div>
+  </div>
+  <div class="utils">
+    <a href="#" class="full-size-link nav-item" target="_blank">view full size</a>
+    <a href="#" class="permalink nav-item">permalink</a>
+  </div>
+</div>

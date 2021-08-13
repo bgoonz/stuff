@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+<pre>
+    Kata: It's faster to access the data locally.
+
+    This page displays the weather information for a bunch of cities. 
+    It is using the pywapi module to make calls to Yahoo weather. 
+
+    Check 'External Services' and find out how expensive are the calls to Yahoo Weather.
+
+    Hint: Weather doesn't change every 10mins. <a href="https://docs.djangoproject.com/en/dev/topics/cache/">Cache</a>
+</pre>
+{% if forecasts %}
+<table class="table table-bordered"><tr>
+    <th>City</th>
+    <th>Forecast</th>
+  </tr>
+  {% for f in forecasts %}
+  <tr>
+    <td valign="top">{{ f.location.city }}</td>
+    <td>
+      <table class="table table-bordered">
+        <tr>
+          <td valign="top">Conditions</td>
+          <td colspan="2">
+            {{ f.condition.text }}<br/>
+            Temp: {{ f.condition.temp }} {{ f.units.temperature }}<br/>
+            Wind: {{ f.wind.speed }} {{ f.units.speed }}
+          </td>
+        </tr>
+        <tr>
+          <td>Sunrise/Sunset</td>
+          <td>{{ f.astronomy.sunrise }}</td>
+          <td>{{ f.astronomy.sunset }}</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% else %}
+    <p>No forecast.</p>
+{% endif %}
+{% endblock %}

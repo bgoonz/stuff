@@ -1,0 +1,19 @@
+﻿@model dynamic
+
+@{
+    Layout = "~/Views/shared/_BootstrapLayout.basic.cshtml";
+}
+
+<h1>The Request</h1>
+
+<pre>
+    Kata : Dealing with streams can be dangerous (especially if you cross them).
+
+    1. This code is flawed and is missing some critical things to let the framework finish it's job.  Find the issue and fix it!
+    
+    Hint: Use New Relic and drill into the transaction trace of this page.
+</pre>
+
+<p>
+    @Html.Raw(ViewBag.Message)
+</p>

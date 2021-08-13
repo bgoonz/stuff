@@ -1,0 +1,46 @@
+# ************************************
+# Vhost template in module cobbler
+# This clobbers the one from puppetlabs-apache
+#
+# Managed by Puppet
+# ************************************
+
+Listen 80
+NameVirtualHost *:80
+
+<VirtualHost *:80>
+  ServerName default
+  ServerAdmin <%= @reporting_email %>
+
+  ## Vhost docroot
+  DocumentRoot <%= @www_html_dir %>
+
+  ## Directories, there should at least be a declaration for <%= @www_html_dir %>
+
+  <Directory <%= @www_html_dir %>>
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+  ## Logging
+  ErrorLog /var/log/httpd/default_error.log
+  LogLevel warn
+  ServerSignature Off
+  CustomLog /var/log/httpd/access_log combined
+
+  <LocationMatch "^/cobbler_web/*">
+     RewriteEngine on
+     RewriteRule ^(.*) https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+  </LocationMatch>
+
+  ## Script alias directives
+  ScriptAlias /cgi-bin/ "/var/www/cgi-bin/"
+  <Directory "/var/www/cgi-bin">
+    AllowOverride None
+    Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+    Order allow,deny
+    Allow from all
+  </Directory>
+</VirtualHost>

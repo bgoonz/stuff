@@ -1,0 +1,110 @@
+# Versions <= 1.7.1 are not supported and never will be.
+# We have tests to assert unsupported versions of MongoDB, 
+# hence the reason they appear in this list
+# newer versions of mongo support 2.3+
+if RUBY_VERSION >= '2.3.0'
+  mongo_versions = [
+    '2.12.0',
+    '2.9.0',
+    '2.7.0',
+    '2.5.0',
+    '2.4.0',
+    '2.1.0',
+    '2.0.0',
+    '1.10.0',
+    ['1.9.2', 2.6],
+    ['1.8.6', 2.6],
+    '1.7.1'
+  ]
+else 
+  mongo_versions = [
+    '2.9.0',
+    '2.7.0',
+    '2.5.0',
+    '2.4.0',
+    '2.1.0',
+    '2.0.0',
+    '1.10.0',
+    ['1.9.2', 2.6],
+    ['1.8.6', 2.6],
+    '1.7.1'
+  ]
+end
+
+bson_ext_needed_before_version = Gem::Version::new("1.10.0")
+
+def installed_mongo_server_version
+  @mongo_server_version ||= `mongo --version`.scan(/version\sv([\d\.]+)/).join.to_f
+end
+
+mongo_versions.each do |mongo_version|
+  if mongo_version.is_a?(Array)
+    last_supported_server_version = mongo_version[1]
+    if installed_mongo_server_version > last_supported_server_version
+      next
+    end
+    mongo_version = mongo_version[0]
+  end
+
+  if Gem::Version.new(mongo_version) < bson_ext_needed_before_version
+    gemfile <<-RB
+      gem 'mongo', '~>#{mongo_version}'
+      gem 'bson', '< 4.8'
+      gem 'bson_ext', :platforms => :ruby
+    RB
+  elsif Gem::Version.new(mongo_version) >= Gem::Version.new("2.12.0")
+    gemfile <<-RB
+      gem 'mongo', '~>#{mongo_version}'
+      gem 'bson', '~> 4.8'
+    RB
+  else
+    gemfile <<-RB
+      gem 'mongo', '~>#{mongo_version}'
+      gem 'bson', '< 4.8'
+    RB
+  end
+end
+
+require 'timeout'
+require 'socket'
+
+class PreExistingMongo
+  attr_reader :host, :port
+
+  def initialize(host, port)
+    @host = host
+    @port = port
+  end
+
+  def stop(*_)
+  end
+end
+
+$mongo = PreExistingMongo.new("127.0.0.1", 27017)
+
+def mongo_running?
+  Timeout::timeout(1) do
+    begin
+      TCPSocket.new($mongo.host, $mongo.port).close
+      true
+    rescue Errno::ECONNREFUSED, Errno::EHOSTUNREACH
+      false
+    end
+  end
+rescue Timeout::Error
+  false
+end
+
+before_suite do
+  if !mongo_running?
+    require File.join(File.dirname(__FILE__), 'helpers', 'mongo_server')
+    $mongo = MongoServer.new
+    $mongo.start(false)
+  end
+end
+
+after_suite do
+  $mongo.stop
+end
+
+# vim: ft=ruby

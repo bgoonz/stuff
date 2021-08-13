@@ -1,0 +1,128 @@
+#platform=x86, AMD64, or Intel EM64T
+#version=DEVEL
+# Firewall configuration
+firewall --disabled
+# Install OS instead of upgrade
+install
+# Use network installation
+url --url="http://<%= server_ip %>/distros/<%= distro %>"
+# Root password
+rootpw --iscrypted <%= defaultrootpw %>
+# System authorization information
+authconfig --enableshadow --passalgo=sha512
+# Use text mode install
+text
+# System keyboard
+keyboard us
+# System language
+lang en_US
+# SELinux configuration
+selinux --disabled
+# Do not configure the X Window System
+skipx
+# Installation logging level
+logging --level=info
+# create yum repos for installation
+$yum_repo_stanza
+# Reboot after installation
+reboot
+# System timezone
+timezone  Europe/Zagreb
+# Network information
+network  --bootproto=dhcp --device=eth0 --onboot=on
+# System bootloader configuration
+bootloader --location=mbr --driveorder=sda
+# Clear the Master Boot Record
+zerombr
+# Partition clearing information
+clearpart --drives=sda --all
+# Disk partitioning information
+part /boot --ondisk=sda --asprimary --fstype="ext2" --size=100
+part swap  --ondisk=sda --asprimary --fstype="swap" --size=4096
+part /     --ondisk=sda --asprimary --fstype="ext3" --size=20480
+part /data --ondisk=sda --asprimary --fstype="ext4" --size=4096 --grow
+
+#
+# pre script
+#
+%pre
+
+# log pre
+$SNIPPET('log_ks_pre')
+# network config
+$SNIPPET('pre_install_network_config')
+# enable installation monitoring
+$SNIPPET('pre_anamon')
+
+#
+# packages list
+#
+%packages
+@base
+glibc-devel
+kernel-devel
+gcc
+cpp
+ntp
+postfix
+-aspell
+-aspell-en
+-bluez-utils
+-bluez-libs
+-bluez-gnome
+-ypbind
+-nss_ldap
+-nss_ldap.i386
+-nscd
+-irda-utils
+-pcmciautils
+-ccid
+-coolkey
+-coolkey.i386
+-ifd-egate
+-pcsc-lite
+-sendmail
+-smartmontools
+# Puppet
+$SNIPPET('puppet_install_if_enabled')
+# End Puppet
+
+#
+# post script
+#
+%post
+# log post
+$SNIPPET('log_ks_post')
+# config network
+$SNIPPET('post_install_network_config')
+# config kernel options
+$SNIPPET('post_install_kernel_options')
+
+# ntp
+ntpdate 161.53.2.70
+# end ntp
+
+# Puppet
+echo "<%= server_ip %>	puppet" >> /etc/hosts
+$SNIPPET('puppet_register_if_enabled')
+# End puppet
+
+$SNIPPET('download_config_files')
+
+# SSH
+mkdir -m 700 /root/.ssh
+
+# disable services
+for i in atd auditd haldaemon iptables ip6tables iscsi iscsid lvm2-monitor mdmonitor messagebus; do chkconfig $i off; done || true
+for i in gpm kudzu yum-updatesd; do chkconfig $i off; done || true
+
+# setup network
+sed -i 's/NETWORKING_IPV6=yes/NETWORKING_IPV6=no/' /etc/sysconfig/network
+echo "IPV6INIT=no" >> /etc/sysconfig/network
+echo "NOZEROCONF=yes" >> /etc/sysconfig/network
+
+# Enable post-install boot notification
+$SNIPPET('post_anamon')
+# Start final steps
+$SNIPPET('kickstart_done')
+# End final steps

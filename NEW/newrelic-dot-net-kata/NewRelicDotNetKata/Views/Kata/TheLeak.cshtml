@@ -1,0 +1,22 @@
+﻿@model dynamic
+
+@{
+    Layout = "~/Views/shared/_BootstrapLayout.basic.cshtml";
+}
+
+<h1>The Leak!</h1>
+
+<pre>
+    Kata : Resources are precious, especially when you're dealing with cloud based ones.  
+    If you have code that doesn't do a good job of cleaning stuff up you'll end up paying for it in performance and usage fees. 
+
+    1. Find the leak - stop it!
+
+    Hint: Go to New Relic and look at the scalability analysis of this site to determine if you have connection leaking (look for hockey sticks!).  
+    Then see if you can find out why by looking at the transaction.
+
+</pre>
+
+<p>
+    @Html.Raw(ViewBag.Message)
+</p>

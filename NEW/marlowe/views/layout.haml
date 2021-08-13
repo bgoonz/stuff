@@ -1,0 +1,147 @@
+!!!
+%html
+  %head
+    -# script{type: 'text/javascript', src:"http://d3js.org/d3.v3.js"}
+    %meta{name:"viewport", content:"width=device-width, initial-scale=1.0"}
+    %script{type: 'text/javascript', src:"/d3.js"}
+    %script{type: 'text/javascript', src: "/data.js"}
+    %link{type: 'text/css', rel: 'stylesheet', href: '/css/plots.css'}
+    %link{type: 'text/css', rel: 'stylesheet', media: 'screen', href: '/css/bootstrap.min.css'}
+    :css
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    %link{type: 'text/css', rel: 'stylesheet', media: 'screen', href: '/css/bootstrap-responsive.css'}
+    = yield_content :head
+
+%body
+  .navbar.navbar-inverse.navbar-fixed-top
+    .navbar-inner
+      .container
+        %a.brand{href:"http://github.com/newrelic/marlowe"} Marlowe
+        .nav-collapse.collapse
+          %ul.nav
+            %li.dropdown
+              %a.dropdown-toggle{:href=>"#", :'data-toggle' => "dropdown"}
+                Timeseries Plots
+                %b.caret
+              %ul.dropdown-menu
+                %li
+                  %a{href:"/datasets/histogram.html"} Histogram/Heatmap Demo
+                %li
+                  %a{href:"/datasets/threeway.html"} Treemap Demo
+                %li
+                  %a{href:"/datasets/quartiles.html"} Quartiles Estimation Experiment
+            %li{class: (params[:view] == "horizon" ? 'active' : nil)}
+              %a{href:"/datasets/horizon.html"} Horizon Plots
+            %li{class: (params[:view] == "traffic" ? 'active' : nil)}
+              %a{href:"/datasets/traffic.html"} Traffic Animation
+            %li
+              %a{href:"/about.html"} About
+  .container
+    %form.form-horizontal{method: 'get', onsubmit: 'return refreshData();'}
+      .span-row
+        .span4
+          .control-group#yMaxGroup
+            %label.control-label y max
+            .controls
+              %input#y_max{type: 'text', size: 6, name: 'y_max', onchange: 'this.form.submit();' }
+              %input.slider{type:'range', min: 1000, step: 100, max: 20000, onchange: "updateYMax(this)"}
+          .control-group#densityGroup
+            %label.control-label plot density
+            .controls
+              %input#density{type: 'text', size: 6, name: 'density', onchange: 'this.form.submit();' }
+              %input.slider{type:'range', min: 8, step: 2, max: 140, onchange: "updateDensity(this)"}
+          .control-group#apdexTGroup
+            %label.control-label apdex T
+            .controls
+              %input#apdex_t{type: 'text', size: 6, name: 'apdex_t', onchange: 'this.form.submit();' }
+              %input.slider{type:'range', min: 100, step: 100, max: 5100, onchange: "updateApdex(this)"}
+        .span4
+          .control-group
+            %label.control-label dataset
+            .controls
+              %select{id: 'filename', name: 'filename', size: 1, onchange: 'refreshData();'}
+                - (@files||[]).each do |filename|
+                  %option{value: filename, selected: @file == filename}
+                    = filename
+              &nbsp;
+              %label.radio.inline
+                %input#frontend{type: 'radio', name: 'measure', value: "frontend", onchange: 'refreshData();'}
+                end user
+              %label.radio.inline
+                %input#backend{type: 'radio', name: 'measure', value: "backend", onchange: 'refreshData();'}
+                app server
+
+          .control-group#attrGroup
+            %label.control-label group by
+            .controls
+              %select#primary_dim{name: 'primary_dim', size: 1, onchange: 'refreshData();'}
+                - (@dimensions||[:transaction]).each do |m|
+                  %option{value: m, selected: (@primary_dim.to_s == m.to_s)}
+                    = m
+
+          .control-group#filterGroup
+            %label.control-label filter
+            .controls
+              %select{id: 'filter', name: 'filter', size: 1, onchange: 'refreshData();'}
+                %option{value: '', selected: @filter_label.nil?}          
+                  All
+                - (@top10||[]).each do |transaction|
+                  %option{value: transaction, selected: transaction == @filter_label}
+                    = transaction
+              &nbsp;
+              %label.radio.inline
+                %input#only{type: 'radio', name: 'only', value: "1", onchange: 'refreshData();'}
+                only
+              %label.radio.inline
+                %input#except{type: 'radio', name: 'only', value: "0", onchange: 'refreshData();'}
+                except
+
+          .control-group#logTransformGroup
+            .controls
+              %label.inline.checkbox
+                %input#log_transform{type: 'checkbox', name: 'log_transform', onchange: 'refreshData();' }
+                transform to logspace
+  .container
+    = yield
+
+  %script{type: 'text/javascript', src: "http://code.jquery.com/jquery.js"}
+  %script{type: 'text/javascript', src: "/js/bootstrap.min.js"}
+
+  :javascript
+
+    d3.selectAll("#yMaxGroup input").attr("value", $data.yMax);
+    d3.selectAll("#densityGroup input").attr("value", $data.density);
+    d3.selectAll("#apdexTGroup input").attr("value", $data.apdex_t);
+    d3.select("input#slider").attr("value", $data.apdex_t);
+    d3.select("input#log_transform").attr("checked", $data.logTransform ? true : null);
+    function updateApdex(slider) {
+      var val = slider.value;
+      d3.select("input#apdex_t").node().value = val;
+      $data.apdex_t = val;
+      $data.dispatch.newTimesliceData();
+      if (slider.sliderTimer) {
+        clearTimeout(slider.sliderTimer);
+      }
+      slider.sliderTimer = setTimeout(refreshData, 500);
+    }
+    function updateDensity(slider) {
+      var val = slider.value;
+      d3.select("input#density").node().value = val;
+      $data.density = val;
+      $data.dispatch.newTimesliceData();
+      if (slider.sliderTimer) {
+        clearTimeout(slider.sliderTimer);
+      }
+      slider.sliderTimer = setTimeout(refreshData, 500);
+    }
+    function updateYMax(slider) {
+      var val = slider.value;
+      d3.select("input#y_max").node().value = val;
+      $data.yMax = val;
+      if (slider.sliderTimer) {
+        clearTimeout(slider.sliderTimer);
+      }
+      slider.sliderTimer = setTimeout(refreshData, 500);
+    }

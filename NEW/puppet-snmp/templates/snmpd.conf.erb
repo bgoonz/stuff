@@ -1,0 +1,74 @@
+###
+### File managed by Puppet
+###
+
+################################################################################
+# AGENT BEHAVIOUR
+
+<% if (@agentaddress.is_a?(Array)) and (@agentaddress.count > 0) -%>
+agentaddress <%= @agentaddress.join(',') %>
+<% end -%>
+
+################################################################################
+# ACCESS CONTROL
+
+# ------------------------------------------------------------------------------
+# Traditional Access Control
+#rocommunity <%= @ro_community %> <%= @ro_network %>
+<% if @rw_community -%>
+#rwcommunity <%= @rw_community %> <%= @rw_network %>
+<% end -%>
+
+# ------------------------------------------------------------------------------
+# VACM Configuration
+#       sec.name       source        community
+com2sec notConfigUser  default       <%= @ro_community %>
+
+#       groupName      securityModel securityName
+group   notConfigGroup v1            notConfigUser
+group   notConfigGroup v2c           notConfigUser
+
+#       name          incl/excl  subtree             mask(optional)
+<% @views.each do |view| -%>
+view    <%= view %>
+<% end -%>
+
+#       group          context sec.model sec.level prefix read       write notif
+<% @accesses.each do |access| -%>
+access  <%= access %>
+<% end -%>
+
+# ------------------------------------------------------------------------------
+# Typed-View Configuration
+
+################################################################################
+# SYSTEM INFORMATION
+
+# ------------------------------------------------------------------------------
+# System Group
+syslocation <%= @location %>
+syscontact <%= @contact %>
+sysservices <%= @services %>
+
+################################################################################
+# EXTENDING AGENT FUNCTIONALITY
+
+<% if @dlmod.any? -%>
+# ------------------------------------------------------------------------------
+# Dynamically Loadable Modules
+<% @dlmod.each do |mod| -%>
+dlmod <%= mod %>
+<% end -%>
+
+<% end -%>
+################################################################################
+# OTHER CONFIGURATION
+
+# notifications are sent to the trap daemon on <%= @trap2_sink %>
+#
+trapcommunity <%= @trap_community %>
+trap2sink <%= @trap2_sink %>
+
+<% @snmpd_config.each do |line| -%>
+<%= line %>
+<% end -%>

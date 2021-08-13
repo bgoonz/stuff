@@ -1,0 +1,84 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form"  xmlns:u="/util">
+
+  <f:entry title="Working Directory" field="workingDirectory">
+    <f:textbox />
+  </f:entry>
+    
+  <f:entry title="Executable Include Pattern" field="includePattern" 
+    description="Pattern to find executables, valgrind will be called for each of them.">
+    <f:textbox />
+  </f:entry>
+  
+  <f:entry title="Executable Exclude Pattern" field="excludePattern" 
+    description="The matching files will be skipped, valgrind will not be called for them">
+    <f:textbox />
+  </f:entry>
+  
+  <f:entry title="Executable Arguments" field="programOptions"
+    description="Command line arguments for executable under test. $${PROGRAM_NAME} contains name of current executable.">
+    <f:textbox />
+  </f:entry>
+  
+  <f:entry title="Output Directory" field="outputDirectory">
+    <f:textbox />
+  </f:entry>
+  
+  <f:entry title="File Ending" field="outputFileEnding">    
+    <f:textbox />
+  </f:entry> 
+  
+  <f:advanced>
+    
+	  <f:entry title="Valgrind Executable" field="valgrindExecutable"
+	    description="Location of valgrind executable to use. Leave empty to use default valgrind found via PATH">
+	    <f:textbox />
+	  </f:entry>	
+	  
+	  <f:entry title="Ignore exit code" field="ignoreExitCode"
+	    description="Usally any exit code other than 0 (from valgrind or the program under test) is treated as an error and the build will fail, enable this option to ignore the exit code.">
+	    <f:checkbox name="ignoreExitCode" />
+	  </f:entry>  
+	
+	  <f:entry title="Show Reachable" field="showReachable"
+	    description="When disabled, the memory leak detector only shows 'definitely lost' and 'possibly lost' blocks. When enabled, the leak detector also shows 'reachable' and 'indirectly lost' blocks. (valgrind option '--show-reachable=yes|no')">
+		<f:checkbox name="showReachable" />
+	  </f:entry>
+	  
+	  <f:entry title="Detect undefined value errors" field="undefinedValueErrors"
+	    description="Controls whether Memcheck reports uses of undefined value errors. Uncheck this if you don't want to see undefined value errors. It also has the side effect of speeding up Memcheck somewhat. (valgrind option '--undef-value-errors=yes|no')">
+		<f:checkbox name="undefinedValueErrors" />
+	  </f:entry>
+	  
+	  <f:entry title="Track origins" field="trackOrigins"
+	    description="This makes Memcheck run more slowly, but can make it much easier to track down the root causes of uninitialised value errors (valgrind option '--track-origins=yes|no'). This option will be silently ignored if 'Detect undefined value errors' is not enabled"
+	    >
+		<f:checkbox name="trackOrigins" />
+	  </f:entry>
+	  
+	  <f:entry title="Leak check level" field="leakCheckLevel"
+	    description="When enabled, search for memory leaks when the program finishes. If set to summary, it says how many leaks occurred. If set to full or yes, it also gives details of each individual leak.">	    
+	  	<select class="setting-input" name="leakCheckLevel" >
+	      <j:forEach var="level" items="${descriptor.leakCheckLevels}">
+	          <f:option selected="${level==instance.leakCheckLevel}" 
+	                    value="${level}">${level}</f:option>
+	      </j:forEach>
+	     </select>
+	  </f:entry>
+	  
+	  <f:entry title="Trace children" field="traceChildren"
+	    description="TODO: insert description here">
+		<f:checkbox name="traceChildren" />
+	  </f:entry>
+	  
+	  <f:entry title="Child silent after fork" field="childSilentAfterFork"
+	    description="TODO: insert description here">
+		<f:checkbox name="childSilentAfterFork" />
+	  </f:entry>
+	  
+	  <f:entry title="Additional Valgrind Options" field="valgrindOptions"
+	    description="This plugin does not expose all valgrind options, so if you want to call valgrind with a special option, you can configure it here.">
+	    <f:textbox />
+	  </f:entry>
+	  
+  </f:advanced>
+</j:jelly>

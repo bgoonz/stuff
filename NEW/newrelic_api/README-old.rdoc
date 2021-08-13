@@ -1,0 +1,1628 @@
+= New Relic REST API
+
+This gem contains the documentation and examples for using the New Relic REST API for RPM customers.
+
+Rails developers can use the ActiveResource helper file found in this gem.
+Refer to the gem rdocs.
+
+
+New Relic supports a RESTful API that can be used
+to list applications within a given account
+and enumerate the health indicators of each application.
+The API uses the XML response format.
+As a convenience, New Relic offers an ActiveResource wrapper API,
+but developers are welcome to work directly with the XML.
+
+== Authentication
+
+New Relic supports an api key-based authentication mechanism.
+The key is the api key associated with an account
+and can be obtained using the RPM Account settings for Integrations.
+This key should be passed as a request header
+with each request.
+All API calls described in this document require authentication.
+
+API requests require HTTPS in order to ensure the API key cannot be easily read by a third party.
+
+You will need to enable API access to your account.
+To do this, go to Account settings (upper right corner of the New Relic site),
+and then click on API + web integration.
+Select API access, and enable it.
+
+=== Request Headers
+
+x-api-key::   API key for account, used for authentication (required)
+
+=== Account ID
+
+Many New Relic API calls require both an API key in the call header and an Account ID in the request URI. However, when requesting authorization from users to access New Relic APIs on their behalf, you only need to ask those users for their New Relic API key; you do not need to request their New Relic Account ID.
+
+Make the following call, using only the API key in the header:
+
+    https://api.newrelic.com/api/v1/accounts.xml
+
+New Relic will return the Account ID for that API key. The Account ID appears between data-access-key and license-key as id. For example:
+
+  <account>
+    <allow-rails-core> false </allow-rails-core>
+    <api-key> xxxxxxxxxxxxxxxxxxxxx </api-key>
+    <data-access-key> xxxxxxxxxxxxxxxxxxxxx </data-access-key>
+    <id type='integer'> 1234567 </id>
+    <license-key> xxxxxxxxxxxxxxxxxxxxx </license-key>
+    ...
+
+Save that Account ID alongside the user's API key, and use them both in subsequent calls to New Relic's APIs.
+
+=== ActiveResource authentication under Rails
+
+    NewRelicApi.api_key = '<api key>'
+
+== Proxy Support
+
+If you are behind a proxy:
+
+    NewRelicApi.proxy = 'http://localhost:3128'
+
+== ActiveResource API
+
+The New Relic ActiveResource-based API helper is NewRelicApi.
+If you are using ActiveResource to access our API
+you can focus on the documentation and examples contained in the {Ruby Documentation}[link:NewRelicApi.html].
+
+The remainder of this document will describe our XML API.
+
+== View applications
+
+URL::            <code>https://api.newrelic.com/api/v1/accounts/:account_id/applications.xml</code>
+Method::         GET
+Restrictions::   None
+Active Resource Helper  ::  {NewRelicApi::Account}[link:NewRelicApi/Account.html]
+
+Replace <tt>:account_id</tt> with your account number.
+You can see this in the browser URL when you log in to {rpm.newrelic.com}[link:https://rpm.newrelic.com].
+
+=== Data Returned
+
+Sample data:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <applications type="array">
+      <application>
+        <id type="integer">123</id>
+        <name>My Application</name>
+        <overview-url>https://rpm.newrelic.com/accounts/1/applications/123</overview-url>
+        <servers-url>https://api.newrelic.com/api/v1/accounts/1/applications/123/servers</servers-url>
+      </application>
+      <application>
+        <id type="integer">124</id>
+        <name>My Application2</name>
+        <overview-url>https://rpm.newrelic.com/accounts/1/applications/124</overview-url>
+        <servers-url>https://api.newrelic.com/api/v1/accounts/1/applications/123/servers</servers-url>
+      </application>
+    </applications>
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+
+== View a list of servers for an application
+
+URL::            <code>https://api.newrelic.com/api/v1/accounts/:account_id/applications/:application_id/servers.xml</code>
+Method::         GET
+Restrictions::   None
+
+Replace <tt>:account_id</tt> and <tt>:application_id</tt> with your account number and application number.
+You can see this in the browser URL when you log in to {rpm.newrelic.com}[link:https://rpm.newrelic.com].
+
+=== Data Returned
+
+Sample data:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <servers type="array">
+      <server>
+        <id type="integer">111</id>
+        <hostname>host-1.example.com</hostname>
+        <overview-url>https://rpm.newrelic.com/accounts/1/servers/111</overview-url>
+      </server>
+      <server>
+        <id type="integer">222</id>
+        <hostname>host-2.example.com</hostname>
+        <overview-url>https://rpm.newrelic.com/accounts/1/servers/222</overview-url>
+      </server>
+    </servers>
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+* Application not found (404)
+
+== View settings of all applications
+
+URL::            <code>https://api.newrelic.com/api/v1/accounts/:account_id/application_settings.xml</code>
+Method::         GET
+Restrictions::   None
+
+Replace <tt>:account_id</tt> with your account number.
+You can see this in the browser URL when you log in to {rpm.newrelic.com}[link:https://rpm.newrelic.com].
+
+=== Data Returned
+
+Note: <code>app-apdex-t</code> is only included for applications that support apdex T as a server side setting.
+
+Sample data:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <applications-settings type="array">
+      <application-setting>
+        <application-id type="integer">123</application-id>
+        <name>My Application One</name>
+        <alerts-enabled>true</alerts-enabled>
+        <rum-apdex-t>7.0</rum-apdex-t>
+        <rum-enabled>false</rum-enabled>
+        <url>https://api.newrelic.com/api/v1/accounts/1/application_settings/123</url>
+      </application-setting>
+      <application-setting>
+        <application-id type="integer">124</application-id>
+        <name>My Application Two</name>
+        <alerts-enabled>false</alerts-enabled>
+        <app-apdex-t>0.01</app-apdex-t>
+        <rum-apdex-t>4.0</rum-apdex-t>
+        <rum-enabled>true</rum-enabled>
+        <url>https://api.newrelic.com/api/v1/accounts/1/application_settings/124</url>
+      </application-setting>
+    </applications-settings>
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+
+== View an application's settings
+
+URL::            <code>https://api.newrelic.com/api/v1/accounts/:account_id/application_settings/:app_id.xml</code>
+Method::         GET
+Restrictions::   None
+
+Replace <tt>:account_id</tt> and <tt>:app_id</tt> with your account and application number.
+You can see this in the browser URL when you log in to {rpm.newrelic.com}[link:https://rpm.newrelic.com].
+
+=== Data Returned
+
+Note: <code>app-apdex-t</code> is only included for applications that support apdex T as a server side setting.
+
+Sample data:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <application-setting>
+      <application-id type="integer">124</application-id>
+      <name>My Application Two</name>
+      <alerts-enabled>false</alerts-enabled>
+      <app-apdex-t>0.01</app-apdex-t>
+      <rum-apdex-t>4.0</rum-apdex-t>
+      <rum-enabled>true</rum-enabled>
+    </application-setting>
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+* Application not found (404)
+
+== Update an application's settings
+
+URL::            <code>https://api.newrelic.com/api/v1/accounts/:account_id/application_settings/:app_id.xml</code>
+Method::         PUT
+Restrictions::   None
+
+=== Request Parameters
+
+The following settings can be updated:
+
+* +alerts_enabled+: Specifies whether this application will generate alerts when its defined thresholds are
+  violated. This is an account wide setting for the application that effects all users.
+  When <code>false</code> the application will not generate alerts or notifications. When
+  <code>true</code> the application will generate alerts when it is experiencing problems
+  and registered users will be notified.
+* +app_apdex_t+: Specifies the application's app tier Apdex-T value in seconds. Requests responding in less than
+  this value are satisfying (s); requests responding in the range of this value to 4 times this value
+  are tolerating (t); and requests responding in greater than 4 times this value are frustrating (f). 
+* +rum_apdex_t+: Specifies the application's end user Apdex-T value in seconds. Page loads completing in less than
+  this value are satisfying (s); page loads completing in the range of this value to 4 times this value
+  are tolerating (t); and page loads completing in greater than 4 times this value are frustrating (f). 
+* +rum_enabled+: Specifies whether real user monitoring (RUM) is enbabled for this application. When <code>true</code>
+  the agent will inject RUM JavaScript into your pages to collect end user page load times.
+  When <code>false</code> the agent will not inject RUM JavaScript and end user page load times will
+  not be collected.
+
+Replace <tt>:account_id</tt> and <tt>:app_id</tt> with your account and application number.
+You can see this in the browser URL when you log in to {rpm.newrelic.com}[link:https://rpm.newrelic.com].
+
+=== Example
+
+This example uses curl to enable alerts for an application.
+
+    curl -H "x-api-key:YOUR_API_KEY_HERE" -X PUT -d "alerts_enabled=true" https://api.newrelic.com/api/v1/accounts/1/application_settings/124.xml   
+
+Result:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <application-setting>
+      <application-id type="integer">124</application-id>
+      <name>My Application Two</name>
+      <alerts-enabled>true</alerts-enabled>
+      <app-apdex-t>0.01</app-apdex-t>
+      <rum-apdex-t>4.0</rum-apdex-t>
+      <rum-enabled>true</rum-enabled>
+    </application-setting>
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+* Application not found (404)
+* No parameters specified (422)
+* Invalid parameters (422 or 400)
+
+== View all alert thresholds for an application
+
+URL::            <code>https://api.newrelic.com/api/v1/accounts/:account_id/applications/:app_id/thresholds.xml</code>
+Method::         GET
+Restrictions::   None
+
+Replace <tt>:account_id</tt> and <tt>:app_id</tt> with your account and application number.
+You can see this in the browser URL when you log in to {rpm.newrelic.com}[link:https://rpm.newrelic.com].
+
+=== Data Returned
+
+Note: Error monitoring and alerting thresholds are only supported at the Pro subscription level.
+
+Sample data:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <thresholds type="array">
+      <threshold>
+        <id type="integer">456</id>
+        <type>Apdex</type>
+        <caution-value>0.8</caution-value>
+        <critical-value>0.7</critical-value>
+        <url>https://api.newrelic.com/api/v1/accounts/1/applications/123/thresholds/456</url>
+      </threshold>
+      <threshold>
+        <id type="integer">789</id>
+        <type>ErrorRate</type>
+        <caution-value>1</caution-value>
+        <critical-value>5</critical-value>
+        <url>https://api.newrelic.com/api/v1/accounts/1/applications/123/thresholds/789</url>
+      </threshold>
+    </thresholds>
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+* Application not found (404)
+
+== View an alert threshold for an application
+
+URL::            <code>https://api.newrelic.com/api/v1/accounts/:account_id/applications/:app_id/thresholds/:id.xml</code>
+Method::         GET
+Restrictions::   None
+
+Replace <tt>:account_id</tt> and <tt>:app_id</tt> with your account and application number.
+You can see this in the browser URL when you log in to {rpm.newrelic.com}[link:https://rpm.newrelic.com].
+Replace <tt>:id</tt> with the threshold's ID. You can see this in the XML returned for an application's thresholds.
+
+=== Data Returned
+
+Sample data:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <threshold>
+      <id type="integer">456</id>
+      <type>Apdex</type>
+      <caution-value>0.8</caution-value>
+      <critical-value>0.7</critical-value>
+    </threshold>
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+* Application not found (404)
+* Threshold not found (404)
+
+== Update an alert threshold for an application
+
+URL::            <code>https://api.newrelic.com/api/v1/accounts/:account_id/applications/:app_id/thresholds/:id.xml</code>
+Method::         PUT
+Restrictions::   None
+
+=== Request Parameters
+
+* +caution_value+: Exceeding this value for an extended period results in the creation of a caution event.
+  For Apdex, a value between 0 and 1.0 should be specified. Use an empty value to indicate "None".
+  For error rate, a percentage between 0 and 100 should be specified. Use an empty value to indicate "None".
+* +critical_value+: Exceeding this value for an extended period results in the creation of a critical event.
+  For Apdex, a value between 0 and 1.0 should be specified. Use an empty value to indicate "None".
+  For error rate, a percentage between 0 and 100 should be specified. Use an empty value to indicate "None".
+                    
+When an application has alerts enabled and a critical event has been open longer than 3 minutes, New Relic will
+create an alert an notify registered users.
+
+Replace <tt>:account_id</tt> and <tt>:app_id</tt> with your account and application number.
+You can see this in the browser URL when you log in to {rpm.newrelic.com}[link:https://rpm.newrelic.com].
+Replace <tt>:id</tt> with the threshold's ID. You can see this in the XML returned for an application's thresholds.
+
+=== Apdex Example
+
+This example uses curl to modify Apdex caution and critical values. The caution value must be greater
+than the critical value, as a decreasing Apdex score corresponds to a degradation in performance. 
+
+    curl -H "x-api-key:YOUR_API_KEY_HERE" -X PUT -d "caution_value=0.9;critical_value=0.75" https://api.newrelic.com/api/v1/accounts/1/applications/123/thresholds/456.xml
+
+Result:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <threshold>
+      <id type="integer">456</id>
+      <type>Apdex</type>
+      <caution-value>0.9</caution-value>
+      <critical-value>0.75</critical-value>
+    </threshold>
+    
+=== Error Rate Example
+
+This example uses curl to modify error rate caution and critical values. The caution value must be less
+than the critical value, as a increasing error corresponds to a degradation in performance. 
+
+    curl -H "x-api-key:YOUR_API_KEY_HERE" -X PUT -d "caution_value=5;critical_value=10" https://api.newrelic.com/api/v1/accounts/1/applications/123/thresholds/789.xml
+
+Result:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <threshold>
+      <id type="integer">789</id>
+      <type>ErrorRate</type>
+      <caution-value>5</caution-value>
+      <critical-value>10</critical-value>
+    </threshold>
+
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+* Application not found (404)
+* Threshold not found (404)
+* Missing or invalid parameters (422 or 400)
+
+== View servers
+
+URL::            <code>https://api.newrelic.com/api/v1/accounts/:account_id/servers.xml</code>
+Method::         GET
+Restrictions::   None
+
+Replace <tt>:account_id</tt> with your account number.
+You can see this in the browser URL when you log in to {rpm.newrelic.com}[link:https://rpm.newrelic.com].
+
+=== Data Returned
+
+Sample data:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <servers type="array">
+      <server>
+        <overview-url>https://rpm.newrelic.com/accounts/1/servers/555</overview-url>
+        <hostname>my-hostname.newrelic.com</hostname>
+        <id type="integer">555</id>
+      </server>
+      <server>
+        <overview-url>https://rpm.newrelic.com/accounts/1/servers/556</overview-url>
+        <hostname>my-hostname-2.newrelic.com</hostname>
+        <id type="integer">556</id>
+      </server>
+    </servers>
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+
+== Find servers
+
+URL::            <code>https://api.newrelic.com/api/v1/accounts/:account_id/servers/find.xml</code>
+Method::         POST
+Parameters::     name, a string representing the host name, or partial host name, of the server you are trying to find.
+Restrictions::   None
+
+Replace <tt>:account_id</tt> with your account number.
+You can find your account number in the browser URL
+when you log in to {rpm.newrelic.com}[link:https://rpm.newrelic.com].
+
+=== Example
+
+This example uses curl to find servers that match "my-hostname".
+
+    curl -H "x-api-key:YOUR_API_KEY_HERE" -X POST -d "name=my-hostname" https://api.newrelic.com/api/v1/accounts/1/servers/find.xml
+
+Returned:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <servers type="array">
+      <server>
+        <overview-url>https://rpm.newrelic.com/accounts/1/servers/555</overview-url>
+        <hostname>my-hostname.newrelic.com</hostname>
+        <id type="integer">555</id>
+      </server>
+      <server>
+        <overview-url>https://rpm.newrelic.com/accounts/1/servers/556</overview-url>
+        <hostname>my-hostname-2.newrelic.com</hostname>
+        <id type="integer">556</id>
+      </server>
+    <server>
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+
+== Delete servers
+
+URL::            <code>https://api.newrelic.com/api/v1/accounts/:account_id/servers/:id.xml</code>
+Method::         DELETE
+Restrictions::   None
+
+Replace <tt>:account_id</tt> with your account number.
+Replace <tt>:id</tt> with the server number you want to delete.
+You can find your account and server number in the browser URL
+when you log in to {rpm.newrelic.com}[link:https://rpm.newrelic.com] and navigate to the server you want to delete.
+The first number in the URL is your account number and the last number is your server number.
+
+=== Data Returned
+
+Sample data:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <servers type="array">
+      <server name="My Server" id="123456">
+        <result>deleted</result>
+      </server>
+    </servers>
+
+Or:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <servers type="array">
+      <server name="My Server" id="123456">
+        <result>failed</result>
+      </server>
+    </servers>
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+
+== View settings of all servers
+
+URL::            <code>https://api.newrelic.com/api/v1/accounts/:account_id/server_settings.xml</code>
+Method::         GET
+Restrictions::   None
+
+Replace <tt>:account_id</tt> with your account number.
+You can see this in the browser URL when you log in to {rpm.newrelic.com}[link:https://rpm.newrelic.com].
+
+=== Data Returned
+
+Sample data:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <servers-settings type="array">
+      <server-setting>
+        <server-id type="integer">222</server-id>
+        <hostname>my-hostname.example.com</hostname>
+        <alerts-enabled>false</alerts-enabled>
+        <display-name>My Hostname</display-name>
+        <url>https://api.newrelic.com/api/v1/accounts/1/server_settings/222</url>
+      </server-setting>
+    </servers-settings>
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+
+== View a server's settings
+
+URL::            <code>https://api.newrelic.com/api/v1/accounts/:account_id/server_settings/:server_id.xml</code>
+Method::         GET
+Restrictions::   None
+
+Replace <tt>:account_id</tt> and <tt>:server_id</tt> with your account and server number.
+You can see this in the browser URL when you log in to {rpm.newrelic.com}[link:https://rpm.newrelic.com].
+
+=== Data Returned
+
+Sample data:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <server-setting>
+      <server-id type="integer">222</server-id>
+      <hostname>my-hostname.example.com</hostname>
+      <alerts-enabled>false</alerts-enabled>
+      <display-name>My Hostname</display-name>
+      <url>https://api.newrelic.com/api/v1/accounts/1/server_settings/222</url>
+    </server-setting>
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+* Server not found (404)
+
+== Update a server's settings
+
+URL::            <code>https://api.newrelic.com/api/v1/accounts/:account_id/server_settings/:server_id.xml</code>
+Method::         PUT
+Restrictions::   None
+
+=== Request Parameters
+
+The following settings can be updated:
+
+* +alerts_enabled+: Specifies whether this server will generate alerts when its defined thresholds are
+  violated. This is an account wide setting for the server that effects all users.
+  When <code>false</code> the server will not generate alerts or notifications. When
+  <code>true</code> the server will generate alerts when it is experiencing problems
+  and registered users will be notified.
+
+* +display_name+: Sets a display name for the server that will be used throughout
+  the New Relic user interface. If no display name is set, the host name of the 
+  server will be used in the user interface.
+
+Replace <tt>:account_id</tt> and <tt>:server_id</tt> with your account and server number.
+You can see this in the browser URL when you log in to {rpm.newrelic.com}[link:https://rpm.newrelic.com].
+
+=== Examples
+
+This example uses curl to enable alerts for a server.
+
+    curl -H "x-api-key:YOUR_API_KEY_HERE" -X PUT -d "alerts_enabled=true" https://api.newrelic.com/api/v1/accounts/1/server_settings/222.xml
+
+Result:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <server-setting>
+      <server-id type="integer">222</server-id>
+      <hostname>my-hostname.example.com</hostname>
+      <alerts-enabled>true</alerts-enabled>
+      <display-name>My Hostname</display-name>
+      <url>https://api.newrelic.com/api/v1/accounts/1/server_settings/222</url>
+    </server-setting>
+
+This example uses curl to set a display name for a server.
+
+    curl -H "x-api-key:YOUR_API_KEY_HERE" -X PUT -d "display_name=My Hostname" https://api.newrelic.com/api/v1/accounts/1/server_settings/222.xml
+
+Result:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <server-setting>
+      <server-id type="integer">222</server-id>
+      <hostname>my-hostname.example.com</hostname>
+      <alerts-enabled>false</alerts-enabled>
+      <display-name>My Hostname</display-name>
+      <url>https://api.newrelic.com/api/v1/accounts/1/server_settings/222</url>
+    </server-setting>
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+* Server not found (404)
+* Missing or invalid parameters (422 or 400)
+
+== View all alert thresholds for a server
+
+URL::            <code>https://api.newrelic.com/api/v1/accounts/:account_id/servers/:server_id/thresholds.xml</code>
+Method::         GET
+Restrictions::   None
+
+Replace <tt>:account_id</tt> and <tt>:server_id</tt> with your account and server number.
+You can see this in the browser URL when you log in to {rpm.newrelic.com}[link:https://rpm.newrelic.com].
+
+=== Data Returned
+
+Sample data:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <thresholds type="array">
+      <threshold>
+        <id type="integer">11</id>
+        <type>SystemCpu</type>
+        <caution-value>59</caution-value>
+        <critical-value>80</critical-value>
+        <url>https://api.newrelic.com/api/v1/accounts/1/servers/222/thresholds/11</url>
+      </threshold>
+      <threshold>
+        <id type="integer">22</id>
+        <type>SystemDiskIo</type>
+        <caution-value>70</caution-value>
+        <critical-value>89</critical-value>
+        <url>https://api.newrelic.com/api/v1/accounts/1/servers/222/thresholds/22</url>
+      </threshold>
+      <threshold>
+        <id type="integer">33</id>
+        <type>SystemFullestDisk</type>
+        <caution-value>85</caution-value>
+        <critical-value>95</critical-value>
+        <url>https://api.newrelic.com/api/v1/accounts/1/servers/222/thresholds/33</url>
+      </threshold>
+      <threshold>
+        <id type="integer">44</id>
+        <type>SystemMemory</type>
+        <caution-value>85</caution-value>
+        <critical-value>95</critical-value>
+        <url>https://api.newrelic.com/api/v1/accounts/1/servers/222/thresholds/44</url>
+      </threshold>
+    </thresholds>
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+* Server not found (404)
+
+== View an alert threshold for a server
+
+URL::            <code>https://api.newrelic.com/api/v1/accounts/:account_id/servers/:server_id/thresholds/:id.xml</code>
+Method::         GET
+Restrictions::   None
+
+Replace <tt>:account_id</tt> and <tt>:server_id</tt> with your account and server number.
+You can see this in the browser URL when you log in to {rpm.newrelic.com}[link:https://rpm.newrelic.com].
+Replace <tt>:id</tt> with the threshold's ID. You can see this in the XML returned for a server's thresholds.
+
+=== Data Returned
+
+Sample data:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <threshold>
+      <id type="integer">11</id>
+      <type>SystemCpu</type>
+      <caution-value>59</caution-value>
+      <critical-value>80</critical-value>
+    </threshold>
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+* Server not found (404)
+* Threshold not found (404)
+
+== Update an alert threshold for a server
+
+URL::            <code>https://api.newrelic.com/api/v1/accounts/:account_id/servers/:server_id/thresholds/:id.xml</code>
+Method::         PUT
+Restrictions::   None
+
+=== Request Parameters
+
+* +caution_value+: Exceeding this value for an extended period results in the creation of a caution event.
+  Value represents a percentage between 0 and 100. 
+* +critical_value+: Exceeding this value for an extended period results in the creation of a critical event.
+  Value represents a percentage between 0 and 100.
+                    
+When a server has alerts enabled and a critical event has been open for an extended period of time, New Relic will
+create an alert an notify registered users.
+
+Replace <tt>:account_id</tt> and <tt>:server_id</tt> with your account and server number.
+You can see this in the browser URL when you log in to {rpm.newrelic.com}[link:https://rpm.newrelic.com].
+Replace <tt>:id</tt> with the threshold's ID. You can see this in the XML returned for a server's thresholds.
+
+=== CPU Example
+
+This example uses curl to modify CPU utilization caution and critical values. The caution value must be less
+than the critical value, as a increase in CPU represents a potential performance issue. 
+
+    curl -H "x-api-key:YOUR_API_KEY_HERE" -X PUT -d "caution_value=75;critical_value=90" https://api.newrelic.com/api/v1/accounts/1/servers/222/thresholds/11.xml
+
+Result:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <threshold>
+      <id type="integer">11</id>
+      <type>SystemCpu</type>
+      <caution-value>75</caution-value>
+      <critical-value>90</critical-value>
+    </threshold>
+    
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+* Server not found (404)
+* Threshold not found (404)
+* Missing or invalid parameters (422 or 400)
+
+== View hosts
+
+This gives you the list of hosts, so you can look up application data filtered by host.
+
+URL::            <code>https://api.newrelic.com/api/v1/accounts/:account_id/applications/:app_id/hosts.xml</code>
+Method::         GET
+Parameters::     <code>connected_only</code>: a boolean specifying whether to include hosts that are currently reporting. By default, the value is <code>false</code> and all hosts are reported. Specify <code>connected_only=true</code> to limit to currently connected hosts.
+Restrictions::   None
+
+Replace <tt>:account_id</tt> with your account number,
+and <tt>:app_id</tt> with the application ID.
+You can see this in the browser URL when you log in to {rpm.newrelic.com}[link:https://rpm.newrelic.com],
+or you can look up the applications using the API to view applications.
+JSON is also supported.
+
+=== Data Returned
+
+Sample data:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <hosts type="array">
+      <host>
+        <overview-url>https://rpm.newrelic.com/accounts/1/applications/123_h3333</overview-url>
+        <name>App name (my-hostname.newrelic.com)</name>
+        <id>123_h3333</id>
+      </host>
+    </hosts>
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+
+
+== View instances
+
+This gives you the list of instances of your application, so you can look up application data filtered by instance.
+
+URL::            <code>https://api.newrelic.com/api/v1/accounts/:account_id/applications/:app_id/instances.xml</code>
+Method::         GET
+Restrictions::   None
+
+Replace <tt>:account_id</tt> with your account number, and <tt>:app_id</tt> with the application ID.
+You can see this in the browser URL when you log in to {rpm.newrelic.com}[link:https://rpm.newrelic.com],
+or you can look up the applications using the API to view applications.
+JSON is also supported.
+
+=== Data Returned
+
+Sample data:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <instances type="array">
+      <instance>
+        <overview-url>https://rpm.newrelic.com/accounts/1/applications/123/instances/1441_i7584</overview-url>
+        <name>App name (my-hostname.newrelic.com)</name>
+        <id>1441_i7584</id>
+      </instance>
+    </instances>
+
+The overview URL may vary depending on the language of your application.
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+
+
+== Delete applications
+URL::            <code>https://api.newrelic.com/api/v1/accounts/:account_id/applications/delete.xml</code>
+Method::         POST
+Parameters::     app, a string representing the name of your application, or
+                 app_id, an integer representing the id of your application
+Replace <tt>:account_id</tt> with the your account number.
+You can see this in the browser URL when you log in to {rpm.newrelic.com}[link:https://rpm.newrelic.com].
+
+EXAMPLE 1 - Deleting an app via browser URL field
+We want to delete the app called "dotNet qa3" which has the app_id of 11068.
+The account number is 26286.
+The data_access_key is the API key for this account.
+
+https://api.newrelic.com/api/v1/accounts/26286/applications/delete.xml?app_id[]=11068&data_access_key=4a249e3f3b437002efb6121844e0a4ee1d00942b18cfb9
+
+Actual response via browser:
+
+    <applications type="array">
+        <application name="dotNet qa3" id="11068">
+            <result>deleted</result>
+        </application>
+    </applications>
+
+EXAMPLE 2 - Deleting an app via Curl
+
+curl -H "x-api-key:4a249e3f3b437002efb6121844e0a4ee1d00942b18cfb9" 'https://api.newrelic.com/api/v1/accounts/26286/applications/delete.xml?app_id=11253'
+
+Actual response:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+        <applications type="array">
+            <application name="test100" id="11253">
+                <result>deleted</result>
+            </application>
+    </applications>
+
+
+=== Data Returned
+
+Sample data:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <applications type="array">
+      <application name="MyApp" id="1234">
+        <result>deleted</result>
+      </application>
+      <application name="MyApp 2" id="2345">
+        <result>failed</result>
+      </application>
+      </record>
+    </applications>
+    
+== View all users
+
+URL::            <code>https://api.newrelic.com/api/v1/accounts/:account_id/users.xml</code>
+Method::         GET
+Restrictions::   None
+
+Replace <tt>:account_id</tt> with your account number.
+You can see this in the browser URL when you log in to {rpm.newrelic.com}[link:https://rpm.newrelic.com].
+
+=== Data Returned
+
+An alert settings URL is included with each user. It can be used to retrieve the user's alert settings
+associated with each application.
+
+Sample data:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <users type="array">
+      <user>
+        <id type="integer">44</id>
+        <email>bob@example.com</email>
+        <send-weekly-report>false</send-weekly-report>
+        <send-alert-email>false</send-alert-email>
+        <alert-settings-url>https://api.newrelic.com/api/v1/accounts/1/users/44/alert_settings</alert-settings-url>
+      </user>
+      <user>
+        <id type="integer">88</id>
+        <email>alice@example.com</email>
+        <send-weekly-report>true</send-weekly-report>
+        <send-alert-email>true</send-alert-email>
+        <alert-settings-url>https://api.newrelic.com/api/v1/accounts/1/users/88/alert_settings</alert-settings-url>
+      </user>
+    </users>
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+
+== View a user
+
+URL::            <code>https://api.newrelic.com/api/v1/accounts/:account_id/users/:id.xml</code>
+Method::         GET
+Restrictions::   None
+
+Replace <tt>:account_id</tt> with your account number.
+You can see this in the browser URL when you log in to {rpm.newrelic.com}[link:https://rpm.newrelic.com].
+Replace <tt>:id</tt> with a user ID. This can be seen in the XML returned when viewing all users.
+
+=== Data Returned
+
+The alert settings URL included with the user can be used to retrieve the user's alert settings
+associated with each application.
+
+Sample data:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <user>
+      <id type="integer">44</id>
+      <email>bob@example.com</email>
+      <send-weekly-report>false</send-weekly-report>
+      <send-alert-email>false</send-alert-email>
+      <alert-settings-url>https://api.newrelic.com/api/v1/accounts/1/users/44/alert_settings</alert-settings-url>
+    </user>
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+* User not found (404)
+
+== Update a user's settings
+
+URL::            <code>https://api.newrelic.com/api/v1/accounts/:account_id/users/:id.xml</code>
+Method::         PUT
+Restrictions::   None
+
+=== Request Parameters
+
+* +send_weekly_report+: Boolean specifying whether the user will receive weekly performance report via email.
+* +send_alert_email+: Boolean specifying whether the user will receive email notification for applcation and
+  server alerts associated with the account. When <code>true</code>, the user will receive
+  alert notifications for the applications they have subscribed to. When <code>false</code>,
+  the user won't recieve any alert notifications.
+
+Replace <tt>:account_id</tt> with your account number.
+You can see this in the browser URL when you log in to {rpm.newrelic.com}[link:https://rpm.newrelic.com].
+Replace <tt>:id</tt> with a user ID. This can be seen in the XML returned when viewing all users.
+
+=== Example
+
+This example uses curl to specify a user should receive email alerts.
+
+    curl -H "x-api-key:YOUR_API_KEY_HERE" -X PUT -d "send_alert_email=true" https://api.newrelic.com/api/v1/accounts/1/users/44.xml   
+
+Result:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <user>
+      <id type="integer">44</id>
+      <email>bob@example.com</email>
+      <send-weekly-report>false</send-weekly-report>
+      <send-alert-email>true</send-alert-email>
+      <alert-settings-url>https://api.newrelic.com/api/v1/accounts/1/users/44/alert_settings</alert-settings-url>
+    </user>
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+* User not found (404)
+* Missing or invalid parameters (422 or 400)
+
+== View a user's alert settings for all applications
+
+URL::            <code>https://api.newrelic.com/api/v1/accounts/:account_id/users/:user_id/alert_settings.xml</code>
+Method::         GET
+Restrictions::   None
+
+Replace <tt>:account_id</tt> with your account number.
+You can see this in the browser URL when you log in to {rpm.newrelic.com}[link:https://rpm.newrelic.com].
+Replace <tt>:user_id</tt> with a user ID. This can be seen in the XML returned when viewing all users.
+
+=== Data Returned 
+
+An array of alert settings is retuned for the user with an entry for each application.  
+
+Sample Data:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <alert-settings type="array">
+      <alert-setting>
+        <application-id type="integer">123</application-id>
+        <application-name>My Application One</application-name>
+        <email-alerts>true</email-alerts>
+        <url>https://api.newrelic.com/api/v1/accounts/1/users/44/alert_settings/123</url>
+      </alert-setting>
+      <alert-setting>
+        <application-id type="integer">456</application-id>
+        <application-name>My Application Two</application-name>
+        <email-alerts>false</email-alerts>
+        <url>https://api.newrelic.com/api/v1/accounts/1/users/44/alert_settings/456</url>
+      </alert-setting>
+    </alert-settings>
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+* User not found (404)
+
+== View a user's alert setting for a specific application
+
+URL::            <code>https://api.newrelic.com/api/v1/accounts/:account_id/users/:user_id/alert_settings/:id.xml</code>
+Method::         GET
+Restrictions::   None
+
+Replace <tt>:account_id</tt> with your account number.
+You can see this in the browser URL when you log in to {rpm.newrelic.com}[link:https://rpm.newrelic.com].
+Replace <tt>:user_id</tt> with a user ID. This can be seen in the XML returned when viewing all users.
+Replace <tt>:id</tt> with an application number.
+
+=== Data Returned 
+
+Sample Data:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <alert-setting>
+      <application-id type="integer">123</application-id>
+      <application-name>My Application One</application-name>
+      <email-alerts>true</email-alerts>
+    </alert-setting>
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+* User not found (404)
+* Application not found (404)
+
+== Update a user's alert setting for a specific application
+
+URL::            <code>https://api.newrelic.com/api/v1/accounts/:account_id/users/:user_id/alert_settings/:id.xml</code>
+Method::         PUT
+Restrictions::   None
+
+=== Request Parameters
+
+* +email_alerts+: Boolean specifying whether the user will recieve email alert notifiactions for the specified application.
+
+Replace <tt>:account_id</tt> with your account number.
+You can see this in the browser URL when you log in to {rpm.newrelic.com}[link:https://rpm.newrelic.com].
+Replace <tt>:user_id</tt> with a user ID. This can be seen in the XML returned when viewing all users.
+Replace <tt>:id</tt> with an application number.
+
+=== Example
+
+This example uses curl to specify a user does not want to recieve email alerts for a specific application.
+
+    curl -H "x-api-key:YOUR_API_KEY_HERE" -X PUT -d "email_alerts=false" https://api.newrelic.com/api/v1/accounts/1/users/44/alert_settings/123.xml   
+
+Result:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <alert-setting>
+      <application-id type="integer">123</application-id>
+      <application-name>My Application One</application-name>
+      <email-alerts>false</email-alerts>
+    </alert-setting>
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+* User not found (404)
+* Application not found (404)
+* Missing or invalid parameters (422 or 400)
+
+== Application Summary Metrics
+
+Fetch summary metrics and threshold values (traffic light information) for one application.
+
+URL::  <code>https://api.newrelic.com/api/v1/accounts/:account_id/applications/:app_id/threshold_values.xml</code>
+Replace <tt>:account_id</tt> and <tt>:app_id</tt> with the account and application IDs.
+Method::    GET
+Restrictions::   This API should be called at most once per minute
+Active Resource Helper::  {NewRelicApi::Account}[link:NewRelicApi/Application.html]
+
+=== Data Returned
+Note: Application Busy data will only be returned to Professional and Volume customers.
+Errors data will only be returned to Professional and Volume customers.
+
+Sample data:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <threshold-values type="array">
+      <threshold_value name="Apdex" begin_time="Fri Dec 12 01:22:00 +0000 2008" end_time="Fri Dec 12 01:27:00 +0000 2008" formatted_metric_value="0.96 [1.0]*" threshold_value="1" metric_value="0.96"/>
+      <threshold_value name="Application Busy" begin_time="Fri Dec 12 01:22:00 +0000 2008" end_time="Fri Dec 12 01:27:00 +0000 2008" formatted_metric_value="3%" threshold_value="1" metric_value="3"/>
+      <threshold_value name="CPU" begin_time="Fri Dec 12 01:22:00 +0000 2008" end_time="Fri Dec 12 01:27:00 +0000 2008" formatted_metric_value="52.86 %" threshold_value="1" metric_value="52.86"/>
+      <threshold_value name="Memory" begin_time="Fri Dec 12 01:22:00 +0000 2008" end_time="Fri Dec 12 01:27:00 +0000 2008" formatted_metric_value="261.42 MB" threshold_value="1" metric_value="261.42"/>
+      <threshold_value name="Errors" begin_time="Fri Dec 12 01:22:00 +0000 2008" end_time="Fri Dec 12 01:27:00 +0000 2008" formatted_metric_value="0.0 epm" threshold_value="1" metric_value="0.0"/>
+      <threshold_value name="Response Time" begin_time="Fri Dec 12 01:22:00 +0000 2008" end_time="Fri Dec 12 01:27:00 +0000 2008" formatted_metric_value="31 ms" threshold_value="1" metric_value="31"/>
+      <threshold_value name="Throughput" begin_time="Fri Dec 12 01:22:00 +0000 2008" end_time="Fri Dec 12 01:27:00 +0000 2008" formatted_metric_value="14028.6 cpm" threshold_value="1" metric_value="14028.6"/>
+      <threshold_value name="DB" begin_time="Fri Dec 12 01:22:00 +0000 2008" end_time="Fri Dec 12 01:27:00 +0000 2008" formatted_metric_value="46.82 %" threshold_value="1" metric_value="46.82"/>
+    </threshold-values>
+
+* Apdex is a measurement of the experience of people hitting your site, with a value between 0 and 1.
+  Errors and poor performance lower the score.
+* Application Busy shows the count of apps (agents) reporting
+  and the percentage of wallclock time that is spent handing requests as an average of the reporting apps.
+  In other words, how often your app your busy handling stuff compared to the elapsed time (as a percentage).
+* CPU shows the percentage of time spent in User space by the CPU as an average of reporting apps (agents).
+* Memory shows memory usage by your app
+* Errors shows the errors per minute for your app
+* Response time show the overall response-time on average across
+  your whole application at the app server layer (not including any browser data)
+* Throughput is the total of all activity (in requests per min) across all web transactions of your app
+* DB shows the time spent in the database as a percent of the time
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+* Unknown Application (404)
+
+== Application Summary Metrics (All applications)
+
+Fetch summary metrics and threshold values (traffic light information) for all applications.
+
+URL::   <code>https://api.newrelic.com/api/v1/accounts.xml?include=application_health</code>
+Method::   GET
+Restrictions::   This API should be called at most once per minute
+Active Resource Helper::  {NewRelicApi::Account}[link:NewRelicApi/Application.html]
+
+=== Data Returned
+
+Note: Application Busy data will only be returned to Professional and Volume customers.
+Errors data will only be returned to Professional and Volume customers.
+
+Sample data:
+
+    <accounts type="array">
+      <account>
+        <id>1</id>
+        <name>New Relic Administration</name>
+        <applications type="array">
+          <application>
+            <id type="integer">5</id>
+            <name>My Application</name>
+            <threshold-values type="array">
+              <threshold_value begin_time="Fri Nov 21 20:03:00 +0000 2008" formatted_metric_value="0.96 [1.0]*" name="Apdex" end_time="Fri Nov 21 20:08:00 +0000 2008" threshold_value="1" metric_value="0.96"/>
+              <threshold_value begin_time="Fri Nov 21 20:03:00 +0000 2008" formatted_metric_value="3%" name="Application Busy" end_time="Fri Nov 21 20:08:00 +0000 2008" threshold_value="1" metric_value="3"/>
+              <threshold_value begin_time="Fri Nov 21 20:03:00 +0000 2008" formatted_metric_value="2.59 %" name="CPU" end_time="Fri Nov 21 20:08:00 +0000 2008" threshold_value="1" metric_value="2.59"/>
+              <threshold_value begin_time="Fri Nov 21 20:03:00 +0000 2008" formatted_metric_value="151.62 MB" name="Memory" end_time="Fri Nov 21 20:08:00 +0000 2008" threshold_value="1" metric_value="151.62"/>
+              <threshold_value begin_time="Fri Nov 21 20:03:00 +0000 2008" formatted_metric_value="0.0 epm" name="Errors" end_time="Fri Nov 21 20:08:00 +0000 2008" threshold_value="1" metric_value="0.0"/>
+              <threshold_value begin_time="Fri Nov 21 20:03:00 +0000 2008" formatted_metric_value="947 ms" name="Response Time" end_time="Fri Nov 21 20:08:00 +0000 2008" threshold_value="1" metric_value="947"/>
+              <threshold_value begin_time="Fri Nov 21 20:03:00 +0000 2008" formatted_metric_value="2.4 cpm" name="Throughput" end_time="Fri Nov 21 20:08:00 +0000 2008" threshold_value="1" metric_value="2.4"/>
+              <threshold_value begin_time="Fri Nov 21 20:03:00 +0000 2008" formatted_metric_value="0.52 %" name="DB" end_time="Fri Nov 21 20:08:00 +0000 2008" threshold_value="1" metric_value="0.52"/>
+            </threshold-values>
+          </application>
+        </applications>
+      </account>
+    </accounts>
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+
+== Dashboard HTML fragment (All applications)
+
+New Relic provides an HTML fragment of the
+{dashboard view}[https://api.newrelic.com] of RPM.
+CSS styles are included,
+and images linked absolutely,
+which enables callers to embed the response directly
+in their applications.
+Authentication is through setting the appropriate API key header as outlined above,
+or through the regular login cookie.
+When using the regular login cookie,
+the logged-in user's default account's applications will be shown.
+
+URL::    <code>https://api.newrelic.com/application_dashboard</code>
+Method::   GET
+Restrictions::   This API should be called at most once per minute
+Active Resource Helper::  None available currently
+
+=== Data Returned
+
+Sample data:
+
+    <div id="newrelic-rpm-2">
+      <div id="newrelic-rpm-2-content">
+        <style type="text/css" media="screen">
+           ...embeded styles...
+        </style>
+
+    <table id="all_applications" cellspacing="0" class="section agent_display span-16">
+      <thead>
+        <tr>
+          <th class="header">Application</th>
+          <th title="Apdex Score is a industry-standard measurement of customer satisfaction. It is calculated essentially as weighted response time. The larger number is your Apdex Score, out of 1, and the smaller number is the threshold for an acceptable response time, in seconds." class="apdex">Apdex Score <a href="http://support.newrelic.com/faqs/general/apdex" target="_blank"><img alt="?" src="https://api.newrelic.com/images/v2/12x12/moreinfo.png?1285097852" style="border: 0px none;" /></a></th>
+          <th title="Response Time is the average time it took to generate a response to all requests.">Resp. Time</th>
+          <th title="Errors is the percentage of your requests that received an error as a response.">Errors</th>
+          <th title="Throughput is total number of requests processed by your application per minute." class="throughput last">Throughput<br>(change from <abbr title="24 hours ago">24h</abbr>/<abbr title="7 days ago">7d</abbr>)</th>
+        </tr>
+      </thead>
+      <tbody class="application application_1">
+        <tr class="application_tier data">
+          <td class="agent">
+            <img alt="Normal" src="https://api.newrelic.com/images/v2/16x16/light-green.png?1285097852" />
+            <span class="name">
+              <a href="https://api.newrelic.com/accounts/1/applications/1" class="application">RPM</a>
+            </span>
+            <span class="status reporting">1 Host and 5 Instances</span>
+          </td>
+          <td class="data apdex">
+            <a href="https://api.newrelic.com/accounts/1/applications/1/transactions#sort_by%3Dapdex">0.99<sub>0.025</sub></a>
+          </td>
+          <td class="data"><a href="https://api.newrelic.com/accounts/1/applications/1/transactions">5.7 ms</a></td>
+          <td class="data"><a href="https://api.newrelic.com/accounts/1/applications/1/traced_errors">0.00 %</a></td>
+          <td class="data throughput last">
+            <a href="https://api.newrelic.com/accounts/1/applications/1/transactions#sort_by%3Dthroughput">92 rpm</a>
+            <div class="throughput_history">
+              <span class="yesterday" title="Throughput down 2% from 24 hours ago"><strong class="down ">-2%</strong></span>
+              <span class="last_week" title="Throughput up 0% from 7 days ago"><strong class="up ">0%</strong></span>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script type="text/javascript" charset="utf-8">
+
+      // Link catching via event delegation
+
+      var getTarget = function(x){
+        x = x || window.event;
+        return x.target || x.srcElement;
+      };
+
+      var linkCatcher = function(event){
+        var target = getTarget(event);
+
+        var link = findLink(target);
+        if(link !== null){
+          window.open(link.href);
+          return false;
+        }
+      };
+
+      var findLink = function(el){
+        while(el.nodeName.toLowerCase() !== "body"){
+          if(el.nodeName.toLowerCase() === 'a'){
+            return el;
+          }
+          else {
+            el = el.parentNode;
+          }
+        }
+        return null;
+      };
+
+      var table = document.getElementById("all_applications");
+      table.onclick = linkCatcher;
+    </script>
+
+
+      </div>
+    </div>
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+
+== Dashboard HTML fragment (One application)
+
+URL::   <code>https://api.newrelic.com/application_dashboard?application_id=:id</code>
+Replace <tt>:id</tt> with application ID.
+Method::   GET
+Restrictions::   This API should be called at most once per minute
+Active Resource Helper::  None available currently
+
+=== Request Parameters
+
+* +application_id+: the ID of the application to view
+
+=== Data Returned
+
+Sample data:
+
+    <div id="newrelic-rpm-2">
+      <div id="newrelic-rpm-2-content">
+        <style type="text/css" media="screen">
+          ...embeded styles...
+        </style>
+
+    <table id="all_applications" cellspacing="0" class="section agent_display span-16">
+      <thead>
+        <tr>
+          <th class="header">Application</th>
+          <th title="Apdex Score is a industry-standard measurement of customer satisfaction. It is calculated essentially as weighted response time. The larger number is your Apdex Score, out of 1, and the smaller number is the threshold for an acceptable response time, in seconds." class="apdex">Apdex Score <a href="http://support.newrelic.com/faqs/general/apdex" target="_blank"><img alt="?" src="https://api.newrelic.com/images/v2/12x12/moreinfo.png?1285097852" style="border: 0px none;" /></a></th>
+          <th title="Response Time is the average time it took to generate a response to all requests.">Resp. Time</th>
+          <th title="Errors is the percentage of your requests that received an error as a response.">Errors</th>
+          <th title="Throughput is total number of requests processed by your application per minute." class="throughput last">Throughput<br>(change from <abbr title="24 hours ago">24h</abbr>/<abbr title="7 days ago">7d</abbr>)</th>
+        </tr>
+      </thead>
+      <tbody class="application application_1">
+        <tr class="application_tier data">
+          <td class="agent">
+            <img alt="Normal" src="https://api.newrelic.com/images/v2/16x16/light-green.png?1285097852" />
+            <span class="name">
+              <a href="https://api.newrelic.com/accounts/1/applications/1" class="application">RPM</a>
+            </span>
+            <span class="status reporting">1 Host and 5 Instances</span>
+          </td>
+          <td class="data apdex">
+            <a href="https://api.newrelic.com/accounts/1/applications/1/transactions#sort_by%3Dapdex">0.99<sub>0.025</sub></a>
+          </td>
+          <td class="data"><a href="https://api.newrelic.com/accounts/1/applications/1/transactions">5.7 ms</a></td>
+          <td class="data"><a href="https://api.newrelic.com/accounts/1/applications/1/traced_errors">0.00 %</a></td>
+          <td class="data throughput last">
+            <a href="https://api.newrelic.com/accounts/1/applications/1/transactions#sort_by%3Dthroughput">92 rpm</a>
+            <div class="throughput_history">
+              <span class="yesterday" title="Throughput down 2% from 24 hours ago"><strong class="down ">-2%</strong></span>
+              <span class="last_week" title="Throughput up 0% from 7 days ago"><strong class="up ">0%</strong></span>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script type="text/javascript" charset="utf-8">
+
+      // Link catching via event delegation
+
+      var getTarget = function(x){
+        x = x || window.event;
+        return x.target || x.srcElement;
+      };
+
+      var linkCatcher = function(event){
+        var target = getTarget(event);
+
+        var link = findLink(target);
+        if(link !== null){
+          window.open(link.href);
+          return false;
+        }
+      };
+
+      var findLink = function(el){
+        while(el.nodeName.toLowerCase() !== "body"){
+          if(el.nodeName.toLowerCase() === 'a'){
+            return el;
+          }
+          else {
+            el = el.parentNode;
+          }
+        }
+        return null;
+      };
+
+      var table = document.getElementById("all_applications");
+      table.onclick = linkCatcher;
+    </script>
+
+      </div>
+    </div>
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+* Unknown Application (404)
+
+== Deployment Notifications
+
+Unlike other API requests,
+the deployments API will accept either a license key
+(in the +x-license-key+ header)
+or an API key (in the +x-api-key+ header).
+Furthermore, when using the license key,
+you do not need to enable the API in the account settings.
+This is the standard mechanism used by the agent
+to upload deployments from the built in capistrano recipes.
+
+URL::      <code>https://api.newrelic.com/deployments.xml</code>
+Method::   POST
+Active Resource Helper::  {NewRelicApi::Account}[link:NewRelicApi/Deployment.html]
+
+=== Request Parameters
+
+Exactly one of the following is required:
+* <tt>deployment[app_name]</tt>: The value of app_name in the newrelic.yml file used by the application.
+  This may be different than the label that appears in the RPM UI.
+  You can find the app_name value in RPM by looking at the label settings for your application.
+* <tt>deployment[application_id]</tt>: The application id, found in the URL when viewing the application in RPM.
+
+Following are optional parameters:
+* <tt>deployment[description]</tt>: Text annotation for the deployment -- notes for you
+* <tt>deployment[revision]</tt>: A revision number (e.g., git commit SHA)
+* <tt>deployment[changelog]</tt>: A list of changes for this deployment
+* <tt>deployment[user]</tt>: The name of the user/process that triggered this deployment
+
+The optional fields may be set to anything you wish,
+and are not validated.
+For example, you could set the <tt>user</tt> to <tt>"auto deployment script"</tt>.
+
+=== Example
+
+Here's an example using <tt>curl</tt>:
+
+    curl -H "x-api-key:YOUR_API_KEY_HERE" -d "deployment[app_name]=iMyFace.ly Production" https://api.newrelic.com/deployments.xml
+
+If you were to specify the optional <tt>description</tt>,
+<tt>changelog</tt> and <tt>user</tt> fields,
+then the command would look like this:
+
+    curl -H "x-api-key:YOUR_API_KEY_HERE" -d "deployment[app_name]=iMyFace.ly Production" -d "deployment[description]=This deployment was sent using curl" -d "deployment[changelog]=many hands make light work" -d "deployment[user]=Joe User" https://api.newrelic.com/deployments.xml
+
+== Metric Names
+
+Fetches all metrics for an application,
+or allows you to use a regular expression to get a subset of the metrics.
+These metrics are used to retrieve metric values from the Metric Data API (below).
+Each metric is returned with a list of fields that are valid for that metric.
+
+URL::  <code>https://api.newrelic.com/api/v1/agents/:agent_id/metrics.:format</code>
+Replace +:format+ with the one of (+json+, +xml+, +csv+).
++:agent_id+ is either an application ID, server ID, host ID, or instance ID, from the APIs documented above.
+Method::    GET
+Restrictions::   This API should be called at most once per minute.
+
+For partner admins,
+you can use a slightly different URL
+to get metric names for your customers (requires partner permissions).
+
+URL::  <code>https://api.newrelic.com/api/v1/accounts/:account_id/agents/:agent_id/metrics.:format</code>
+Replace +:account_id+ with the account ID of the customer,
++:agent_id+ with the application, server, host, or instance ID for the customer,
+and +:format+ with one of (+json+, +xml+, +csv+).
+Method::    GET
+Restrictions::   This API should be called at most once per minute.
+
+=== Request Parameters
+
+* +re+: A regular expression to filter the metric names by. This is Optional.
+* +limit+: The number of metrics to retrieve. This is Optional. By default the limit is 5000.
+
+=== Data Returned
+
+Note: Metric names will only be returned to Standard (and higher) customers.
+
+Sample requests:
+
+https://api.newrelic.com/api/v1/agents/:agent_id/metrics.xml?re=WebTransaction&limit=2
+
+Sample data:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <metrics type="array">
+      <metric name="WebTransaction">
+        <fields type="array">
+          <field name="average_call_time"/>
+          <field name="average_response_time"/>
+          <field name="call_count"/>
+          <field name="max_call_time"/>
+          <field name="min_call_time"/>
+          <field name="requests_per_minute"/>
+          <field name="throughput"/>
+          <field name="total_call_time"/>
+        </fields>
+      </metric>
+      <metric name="WebTransaction/RPMCollector/AgentListener/connect">
+        <fields type="array">
+          <field name="average_call_time"/>
+          <field name="average_response_time"/>
+          <field name="call_count"/>
+          <field name="max_call_time"/>
+          <field name="min_call_time"/>
+          <field name="requests_per_minute"/>
+          <field name="throughput"/>
+          <field name="total_call_time"/>
+        </fields>
+      </metric>
+    </metrics>
+
+=== Fields
+
+Several different values are recorded or computed for each metric.
+Each value is returned in a 'field' in the metric data API response.
+Each field contains a value having a specific meaning and unit of measurement.
+
+Time values are measured in seconds (s):
+* +average_call_time+, +average_response_time+: Average time spent per invocation
+* +max_call_time+, +max_response_time+
+* +min_call_time+, +min_response_time+
+* +total_call_time+
+* +average_exclusive_time+: Average time spent per invocation,
+  exclusive of any time instrumented by other metrics
+
+Some fields imply their units, or have none:
+* +call_count+, +throughput+: Number of calls/requests in the given time period
+* +requests_per_minute+: Number of calls/requests per minute in the given time period
+* +count+
+* +average_value+
+* +total_value+
+* +percent+
+
+For the error-rate metric ('Errors/all')
+* +errors_per_minute+
+
+For memory metrics (e.g., 'Memory/Physical')
+* +used+: in Megabytes (MB)
+
+For instance-counting metrics (e.g., 'Instance/Busy'):
+* +busy_percent+: Percentage of total app server instances busy over the given time period
+* +instance_count+: Count of app server instances reporting in the given time period
+
+Apdex metrics support a particular set of fields:
+* +score+: Apdex score (e.g., 0.95)
+* +s+: Percent of responses that are "Satisfied", or have response times <= the Apdex "T" value
+* +t+: Percent of responses that are "Tolerated", or have response times > T and <= 4T
+* +f+: Percent of responses that are "Frustrated", or have response times >4T (or are errors)
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+* Invalid parameters (422) - the response body will be in the requested format and will contain the error message(s).
+
+
+== Metric Data
+
+Returns the data values for metrics collected by New Relic for your application.
+You can use this API to build your own view of almost any metric data tracked by New Relic.
+
+URL::  <code>https://api.newrelic.com/api/v1/accounts/:account_id/metrics/data.:format</code>
+Replace +:account_id+ and +:format+ with your New Relic account ID
+(found in the URL when you access New Relic),
+and for format use one of (+json+, +xml+, +csv+).
+Method::    GET
+Restrictions::   This API is rate-limited per minute, and the limit is subject to change at any point.
+
+For partner admins,
+you can use a slightly different URL to get metric data for your customers (requires partner permissions).
+
+URL::  <code>https://api.newrelic.com/api/v1/accounts/:account_id/agents/:agent_id/data.:format</code>
+Replace +:account_id+ with the account ID of the customer,
++:agent_id+ with the application, server, host, or instance ID for the customer,
+and +:format+ with one of (+json+, +xml+, +csv+).
+Method::    GET
+Restrictions::   This API is rate-limited per minute, and the limit is subject to change at any point.
+
+
+=== Request Parameters
+
+* +app+ or +agent_id+: Application name, or agent ID, respectively.
+  The application name must be an exact match.
+  You can pass in an array of apps to query by specifying +app[]=First&app[]=Second+.
+  The +agent_id+ is either an ID for an application, an instance, a server, or a host.
+  You can look each of these up using our API;
+  see the documentation above for "view applications", "view servers", "view hosts", "view instances".
+  You can query multiple agents at the same time,
+  but they must all be of the same type:
+  application, instance, server, or host.
+  Examples:
+  * agent_id[]=1234&agent_id[]=2345 (for applications);
+  * agent_id[]=1441_i7584&agent_id[]=1441_i7588 (for instances);
+  * agent_id[]=123_h3333&agent_id[]=123_h3388 (for host filtered application data);
+  * agent_id[]=555&agent_id[]=556 (for server data).
+* +begin+: Begin time, in XML UTC format.
+  For example: <tt>2011-04-20T15:47:00Z</tt>
+  (note that the New Relic site graphs are NOT in UTC format, so when comparing results, be sure to convert.)
+* +end+: End time, in XML UTC format.
+  For example: <tt>2011-04-20T15:52:00Z</tt>
+* +metrics+: Included one or many times, this lists the metrics you are interested in.
+  You can only specify a specific metric once.
+  If you specify multiple metrics,
+  the request parameter should look like <tt>metrics[]=foo&metrics[]=bar</tt>
+  (append '[]' to the end of the name of the parameter).
+  You can specify <tt>metrics[]</tt> even if there is a single metric.
+* +field+: Each metric supports different fields, such as 'average_response_time'.
+  If the field is not valid for a given metric,
+  you will get a blank value,
+  and if there are no valid fields for the metrics you request, you will get an error.
+* +summary+: 1 or 0, defaults to 0.
+  This determines whether you get back a single value
+  aggregated over the entire time period, or a time series.
+  Summary results do not include the <tt>begin</tt> and <tt>end</tt> times in the result.
+  Time series results give you a separate row for each time segment.
+
+=== Data Returned
+
+Note: Metric data will only be returned to Standard (and higher) customers.
+
+Sample time series request:
+
+https://api.newrelic.com/api/v1/accounts/:account_id/metrics/data.xml?begin=2011-04-20T15:47:19Z&end=2011-04-20T15:52:19Z&metrics[]=ActiveRecord/all&field=average_response_time&app=My%20Application
+
+Sample time series data:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <metrics type="array">
+      <metric app="My Application" agent_id="123456" begin="2011-04-20T15:47:00Z" end="2011-04-20T15:48:00Z" name="ActiveRecord/all">
+        <field type="integer" name="average_response_time">0</field>
+      </metric>
+      <metric app="My Application" agent_id="123456" begin="2011-04-20T15:48:00Z" end="2011-04-20T15:49:00Z" name="ActiveRecord/all">
+        <field type="integer" name="average_response_time">0</field>
+      </metric>
+      <metric app="My Application" agent_id="123456" begin="2011-04-20T15:49:00Z" end="2011-04-20T15:50:00Z" name="ActiveRecord/all">
+        <field type="integer" name="average_response_time">0</field>
+      </metric>
+      <metric app="My Application" agent_id="123456" begin="2011-04-20T15:50:00Z" end="2011-04-20T15:51:00Z" name="ActiveRecord/all">
+        <field type="integer" name="average_response_time">0</field>
+      </metric>
+      <metric app="My Application" agent_id="123456" begin="2011-04-20T15:51:00Z" end="2011-04-20T15:52:00Z" name="ActiveRecord/all">
+        <field type="integer" name="average_response_time">0</field>
+      </metric>
+    </metrics>
+
+Sample summary request:
+
+https://api.newrelic.com/api/v1/accounts/:account_id/metrics/data.xml?begin=2011-04-20T15:47:19Z&end=2011-04-20T15:52:19Z&metrics[]=ActiveRecord/all&field=average_response_time&app=My%20Application&summary=1
+
+Sample summary data:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <metrics type="array">
+      <metric agent_id="123456" app="My Application" name="ActiveRecord/all">
+        <field type="integer" name="average_response_time">0</field>
+      </metric>
+    </metrics>
+
+=== Possible Error Conditions
+
+* Invalid API Key (403)
+* Invalid parameters (422) - the response body will be in the requested format and will contain the error message(s).
+
+
+== Copyright
+
+Copyright (c) 2012 New Relic, Inc.
+

@@ -1,0 +1,19 @@
+<h1>New blog</h1>
+
+<% form_for(@blog) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :author %><br />
+    <%= f.select(:author_id, Author.find(:all).map{ |a| [a.name, a.id] }) %> <%= link_to "New", new_author_path %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', blogs_path %>

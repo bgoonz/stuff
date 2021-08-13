@@ -1,0 +1,29 @@
+<h1>Listing posts</h1>
+<p>Note: After making a change to a post there's a 5 second delay designed to 
+  trigger a transaction trace.</p>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+    <th>Published</th>
+    <th>Updated At</th>
+    <th>Blog</th>
+  </tr>
+
+<% for post in @posts %>
+  <tr>
+    <td><%=h post.title %></td>
+    <td><%=h post.body %></td>
+    <td><%=h post.published %></td>
+    <td><%=h post.updated_at %></td>
+    <td><%=h post.blog_id %></td>
+    <td><%= link_to 'Show', blog_post_path(@blog, post) %></td>
+    <td><%= link_to 'Edit', edit_blog_post_path(@blog, post) %></td>
+    <td><%= link_to 'Destroy', blog_post_path(@blog, post), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New post', new_blog_post_path(:blog_id => @blog) %>

@@ -1,0 +1,58 @@
+body {
+  font-size: 11px;
+}
+.custom_slider_form_to_hide {
+  display: none;
+}
+.ui-slider-horizontal {
+  width: 100%;
+  margin: 0 0 0 1px;
+  height: 10px;
+  box-sizing: border-box;
+}
+.ui-slider-horizontal .ui-slider-handle {
+  background: #fc6;
+  width: 10px;
+  height: 25px;
+  top: -8px;
+  cursor: pointer;
+  border: 1px solid #999;
+}
+
+.ui-slider-horizontal a:last-child {
+  background: #b93c3e;
+}
+
+.ui-slider-range {
+  background: #fc6;
+}
+
+.upper_slider_input, .lower_slider_input {
+  width: 1.5rem;
+  text-align: center;
+  border: 1px solid #ccc;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  position: absolute;
+  top: -23px;
+  left: -9px;
+}
+
+.lower_slider_input {
+  border: 1px solid #ccc;
+}
+
+.upper_slider_input {
+  border: 1px solid #ccc;
+  top: 26px;
+}
+
+.upper_slider {
+  background: #b93c3e;
+  position: absolute;
+  top: 0;
+  margin: 0;
+  border: none;
+  width: 5px;
+  right: 0;
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Blogs: <%= h(controller.action_name) %></title>
+  <%= stylesheet_link_tag 'scaffold' %>
+</head>
+<body>
+<h1 style="color: red;">Awesome Blogness</h1>
+<p>Check out the metal app for <a href="/logins">who is logged in right now</a></p>
+<p style="color: green"><%= flash[:notice] %></p>
+
+<%= yield  %>
+
+<hr/>
+<p><%= link_to "README", admin_readme_path %></p>
+</body>
+</html>

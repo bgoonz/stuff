@@ -1,0 +1,18 @@
+#!/bin/bash
+
+USER=`whoami`
+GIT_SHA=`git log -n 1 --pretty="%h"`
+ENV=production
+
+bundle exec newrelic deployments -e $ENV -u $USER -r $GIT_SHA
+
+PIDFILE="tmp/pids/unicorn.pid"
+if [ -f $PIDFILE ]; then
+  echo "Restarting unicorn"
+  kill -USR2 `cat $PIDFILE`
+  sleep 1
+  kill -QUIT `cat ${PIDFILE}.oldbin`
+else
+  echo "Starting unicorn"
+  bundle exec unicorn_rails -c config/unicorn.conf.rb -E $ENV -D
+fi

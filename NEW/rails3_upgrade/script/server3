@@ -1,0 +1,4 @@
+#!/bin/sh
+export USE_RAILS_3=true
+bundle --no-cache
+exec rails server -c config_rails3.ru thin

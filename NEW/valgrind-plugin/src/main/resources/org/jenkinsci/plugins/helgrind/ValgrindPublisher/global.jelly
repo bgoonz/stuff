@@ -1,0 +1,15 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+
+  <f:section title="Helgrind Publisher">
+  
+  <f:entry title="Stacktrace, prefix lines of code">
+	<f:textbox name="helgrind.linesBefore" value="${descriptor.linesBefore}" />
+  </f:entry>
+  
+  <f:entry title="Stacktrace, suffix lines of code">
+	<f:textbox name="helgrind.linesAfter" value="${descriptor.linesAfter}" />
+  </f:entry>
+    
+  </f:section>
+  
+</j:jelly>

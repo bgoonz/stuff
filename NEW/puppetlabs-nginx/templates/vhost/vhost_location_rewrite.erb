@@ -1,0 +1,3 @@
+<% @rewrite.each do |comment, rewrite| -%>
+    rewrite <%= rewrite['regex'] %> <%= rewrite['replacement'] %><%= (' ' + rewrite['flag']) if rewrite['flag'] %>; # <%= comment %>
+<% end -%>

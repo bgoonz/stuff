@@ -1,0 +1,149 @@
+#!/usr/bin/env ruby
+
+require 'uri'
+require 'net/http'
+require 'thread'
+
+class Queue
+  DRAIN_MARKER = :__drain_marker__
+
+  def mark_and_drain
+    self << DRAIN_MARKER
+    entries = []
+    loop do
+      entry = self.pop
+      break if entry == DRAIN_MARKER
+      entries << entry
+    end
+    entries
+  end
+end
+
+class Worker
+  def initialize(target, queue)
+    @target = target
+    @state = :stopped
+    @queue = queue
+    @thread = Thread.new { run }
+  end
+
+  def start
+    @state = :starting
+  end
+
+  def stop
+    @state = :stopping
+  end
+
+  def run
+    loop do
+      case @state
+      when :running
+        catch_exceptions { run_once }
+      when :stopping
+        @state = :stopped
+      when :starting
+        @state = :running
+      else
+        sleep 0.1
+      end
+    end
+  end
+
+  def catch_exceptions
+    begin
+      yield
+    rescue StandardError => e
+      puts "Error in worker: #{e}"
+      puts e.backtrace.join("\n")
+    end
+  end
+
+  def run_once
+    uri = URI(@target)
+    http = Net::HTTP.new(uri.host, uri.port)
+    request = Net::HTTP::Get.new(@target)
+    t0 = Time.now
+    rsp = http.request(request)
+    t1 = Time.now
+    @queue << [rsp.code, (t1 - t0)]
+    sleep 2.0
+  end
+end
+
+class WorkerPool
+  def initialize(target)
+    @target = target
+    @workers = []
+    @queue = Queue.new
+    @last_mark ||= Time.now
+  end
+
+  def scale_to(target, duration=nil)
+    workers_delta = (target - @workers.size)
+    interval = duration ? (duration / workers_delta).abs : 0
+    workers_delta.abs.times do
+      if workers_delta > 0
+        add_worker
+      else
+        remove_worker
+      end
+      sleep(interval)
+    end
+  end
+
+  def add_worker
+    worker = Worker.new(@target, @queue)
+    worker.start
+    @workers << worker
+    print_status
+  end
+
+  def remove_worker
+    worker = @workers.shift
+    worker.stop
+    print_status
+  end
+
+  def wait(duration)
+    sleep(duration)
+    print_status
+  end
+
+  def print_status
+    elapsed = Time.now - @last_mark
+    @last_mark = Time.now
+    results = @queue.mark_and_drain
+    response_times = results.map { |result| result[1] }
+    total_rsp_time = response_times.inject(:+) || 0
+    count = response_times.size
+    latency = count > 0 ? (total_rsp_time / count) : 0
+    throughput = count / elapsed * 60
+
+    puts "#{count} requests over #{elapsed} s, throughput = #{throughput} rpm, latency = #{latency} s"
+  end
+end
+
+if ARGV.size != 2 || !['steady', 'oscillate'].include?(ARGV[0])
+  $stderr.puts "Usage: traffic (steady|oscillate) <target URL>"
+  exit
+end
+
+type = ARGV[0]
+target = ARGV[1]
+rsp_queue = Queue.new
+
+pool = WorkerPool.new(target)
+
+if type == 'steady'
+  pool.scale_to(4)
+  loop { pool.wait(60) }
+elsif type == 'oscillate'
+  baseline = 20
+  max = 70
+  loop do
+    pool.scale_to(max, 60*2)
+    pool.scale_to(baseline, 60*2)
+    pool.wait(60*3)
+  end
+end

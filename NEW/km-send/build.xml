@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="KMProcessor" default="all">
+    
+
+	<path id="app.classpath">
+        <pathelement location="build/classes/main"/>
+        <fileset dir="lib">
+            <include name="**/*.jar"/>
+        	<exclude name="junit-4.8.2.jar"/>
+        </fileset>
+	</path>
+		
+    <path id="test.classpath">
+        <path refid="app.classpath"/>
+        <pathelement location="lib/classes/test"/>
+	    <pathelement location="lib/junit-4.8.2.jar"/>
+    </path>
+    
+    <target name="all" depends="clean,jar"/>
+
+    <target name="app.compile">
+        <mkdir dir="build/classes/main"/>
+        <javac destdir="build/classes/main" srcdir="src" debug="on" nowarn="off">
+            <classpath refid="app.classpath"/>
+        </javac>
+    </target>
+
+	<target name="tests.compile">
+        <mkdir dir="build/classes/test"/>
+        <javac destdir="build/classes/test" debug="on" nowarn="off">
+            <classpath refid="test.classpath"/>
+            <src location="${base}/tests"/>
+        </javac>
+    </target>
+    
+    <target name="jar" depends="app.compile">
+        <pathconvert property="server.jarlist" refid="app.classpath" pathsep=' '>
+            <mapper type="flatten"/>
+        </pathconvert>
+        <jar jarfile="build/km-send.jar">
+            <manifest>
+                 <attribute name="Main-Class" value="com.newrelic.util.Main"/>
+            </manifest>
+            <fileset dir="build/classes/main"/>
+            <zipgroupfileset dir="lib">
+              	<include name="*.jar"/>
+               	<exclude name="junit*.jar"/>
+            </zipgroupfileset>
+       	</jar>
+    </target>
+	
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+    
+    <target name="test">
+    	<mkdir dir="build/tests-xml"/>
+        <junit>
+            <classpath refid="test.classpath"/>
+            <formatter type="xml"/>
+            <batchtest todir="build/tests-xml">
+                <fileset dir="tests">
+                    <include name="**/*Test*.java"/>
+                </fileset>
+            </batchtest>
+        </junit>
+        <mkdir dir="build/tests-html"/>
+        <junitreport todir="build/tests-html">
+            <fileset dir="build/tests-xml">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="build/tests-html"/>
+        </junitreport>
+
+    </target>
+    
+</project>

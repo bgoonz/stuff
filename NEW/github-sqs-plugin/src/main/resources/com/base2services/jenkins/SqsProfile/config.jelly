@@ -1,0 +1,12 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+  <f:entry title="${%Queue Name or URL}" field="sqsQueue">
+    <f:textbox/>
+  </f:entry>
+  <f:entry title="${%Access Key}" field="awsAccessKeyId">
+    <f:textbox/>
+  </f:entry>
+  <f:entry title="${%Secret Key}" field="awsSecretAccessKey">
+    <f:password/>
+  </f:entry>
+  <f:validateButton title="${%Test Access}" with="awsAccessKeyId,awsSecretAccessKey,sqsQueue" method="validate"/>
+</j:jelly>

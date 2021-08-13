@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta charset=utf-8>
+    <title>customRangeSlider</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="jquery.customRangeSlider.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('.custom_slider').customRangeSlider({"maxValue" : 100, "minValue" : 0});
+      });
+    </script>
+    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="customslider.css">
+    <style>
+      .slider_container {
+        width: 500px;
+        margin: 50px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="slider_container">
+      <div class="custom_slider">
+        <form class="custom_slider_form_to_hide">
+          <input type="text" value="80" class="custom_slider_upper_input"/>
+          <input type="text" value="20" class="custom_slider_lower_input"/>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

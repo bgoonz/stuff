@@ -1,0 +1,22 @@
+rack_test_version = RUBY_VERSION < "2.2.2" ? "< 0.8.0" : ">= 0.8.0"
+instrumentation_methods :chain, :prepend
+
+
+if RUBY_VERSION < '2.7.0'
+  if RUBY_VERSION >= '2.2.0'
+    gemfile <<-RB
+      gem 'activesupport', '~> 3'
+      gem 'padrino', '~> 0.14.0'
+      gem 'rack-test', '#{rack_test_version}', :require => 'rack/test'
+    RB
+  end
+end
+
+if RUBY_VERSION >= '2.7.0'
+  gemfile <<-RB
+    gem 'activesupport', '~> 3'
+    gem 'padrino', '~> 0.15.0'
+    gem 'rack-test', '#{rack_test_version}', :require => 'rack/test'
+  RB
+end
+# vim: ft=ruby

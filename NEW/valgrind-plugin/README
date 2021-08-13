@@ -1,0 +1,16 @@
+This directory is a fork of
+  https://github.com/jenkinsci/valgrind-plugin
+
+The fork was made on 20Feb2013 so that rrh@newrelic.com could make
+a jenkins plugin that understood the output of helgrind.  With 2
+different plugins, we can separately monitor helgrind and valgrind
+issues in the same job.  The downside is code divergence in this
+plugin.
+
+To build, see general instructions here
+  https://wiki.jenkins-ci.org/display/JENKINS/Plugin+tutorial
+end then do:
+  mvn install
+
+To make jenkins use the newly built hpi, follow the lead shown in (your directory names may vary):
+  rrh-install-on-jenkins.sh

@@ -1,0 +1,12 @@
+﻿{
+    "agents" : [
+        {
+            "name" : "FunctionalTest1",
+            "value": 2.0
+        },
+        {
+            "name" : "FunctionalTest2",
+            "value": 3.0
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "uninstrumented-tests",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "amqplib": "*",
+    "cassandra-driver": "*",
+    "connect": "*",
+    "bluebird": "*",
+    "director": "*",
+    "express": "*",
+    "generic-pool": "*",
+    "hapi": "*",
+    "ioredis": "*",
+    "koa": "*",
+    "memcached": "*",
+    "mongodb": "*",
+    "mysql": "*",
+    "mysql2": "*",
+    "pg": "*",
+    "pg.js": "*",
+    "q": "*",
+    "redis": "*",
+    "restify": "*",
+    "superagent": "*",
+    "oracle": "*",
+    "when": "*"
+  }
+}

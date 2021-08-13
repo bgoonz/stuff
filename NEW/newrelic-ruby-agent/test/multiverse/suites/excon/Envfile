@@ -1,0 +1,20 @@
+gemfile <<-RB
+  gem 'excon'
+  gem 'rack'
+  gem 'json', :platforms => [:rbx, :mri_18]
+  #{ruby3_gem_webrick}
+RB
+
+excon_versions = %w(0.64.0
+                    0.70.0
+                    0.78.1
+)
+
+excon_versions.each do |excon_version|
+  gemfile <<-RB
+    gem 'excon', '~> #{excon_version}'
+    gem 'rack'
+    gem 'json', :platforms => [:rbx, :mri_18]
+    #{ruby3_gem_webrick}
+  RB
+end

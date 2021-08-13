@@ -1,0 +1,29 @@
+{
+  "name": "restify-tests",
+  "version": "0.0.0",
+  "private": true,
+  "tests": [
+    {
+      "engines": {
+        "node": ">=12"
+      },
+      "dependencies": {
+        "restify": ">=5.0.0 <7",
+        "express": "4.16",
+        "restify-errors": "6.1"
+      },
+      "files": [
+        "capture-params.tap.js",
+        "ignoring.tap.js",
+        "restify.tap.js",
+        "router.tap.js",
+        "rum.tap.js",
+        "transaction-naming.tap.js"
+      ]
+    }
+  ],
+  "dependencies": {
+    "express": "4.16",
+    "restify-errors": "6.1"
+  }
+}

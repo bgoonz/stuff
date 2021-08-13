@@ -1,0 +1,17 @@
+<h1>Operatives Overview</h1>
+
+<table class="table">
+  <tr>
+    <th>Operative</th>
+    <th>Assigned Mission</th>
+    <th>Priority</th>
+  </tr>
+  <%- @operatives.each do |operative| %>
+    <tr>
+      <td><%= operative.name %></td>
+      <td><%= operative.mission.codename %></td>
+      <td><%= operative.mission.priority %></td>
+    </tr>
+  <%- end %>
+</table>
+

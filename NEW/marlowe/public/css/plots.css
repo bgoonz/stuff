@@ -1,0 +1,245 @@
+.arithmetic {
+    fill: #8e2;
+    stroke: #8e2;
+}
+.mean {
+    stroke: #8E2;
+    background: #8E2
+}
+.a_p75 {
+    stroke: #8E2 ;
+    background: #8E2;
+    stroke-dasharray: 20, 3, 3, 3, 3, 3;
+}
+.a_p85 {
+    stroke: #8E2 ;
+    background: #8E2;
+    stroke-dasharray: 20, 3;
+}
+.a_p95 {
+    stroke: #8E2 ;
+    background: #8E2;
+    stroke-dasharray: 10, 3;
+}
+.a_p99 {
+    stroke: #8E2 ;
+    background: #8E2;
+    stroke-dasharray: 5, 3;
+}
+.geometric {
+    fill: #0a9;
+    stroke: #0a9;
+}
+.g_mean {
+    stroke: #0a9 ;
+    background: #0a9
+}
+.g_p75 {
+    stroke: #0a9 ;
+    background: #0a9;
+    stroke-dasharray: 20, 3, 3, 3, 3, 3;
+}
+.g_p85 {
+    stroke: #0a9 ;
+    background: #0a9;
+    stroke-dasharray: 20, 3;
+}
+.g_p95 {
+    stroke: #0a9 ;
+    background: #0a9;
+    stroke-dasharray: 10, 3;
+}
+.g_p99 {
+    stroke: #0a9 ;
+    background: #0a9;
+    stroke-dasharray: 5, 3;
+}
+.max {
+    stroke: black ;
+    background: black
+}
+.min {
+    stroke: black ;
+    background: black
+}
+.actual {
+    fill: #900;
+    stroke: #900 ;
+}
+.pct_75 {
+    stroke: #F66 ;
+    background: #F66;
+    stroke-dasharray: 20, 3, 3, 3, 3, 3;
+}
+.pct_85 {
+    stroke: #F66 ;
+    background: #F66;
+    stroke-dasharray: 20, 5;
+}
+.pct_95 {
+    stroke: #900 ;
+    background: #900;
+    stroke-dasharray: 10, 5;
+}
+.pct_99 {
+    stroke: #600 ;
+    background: #600;
+    stroke-dasharray: 5, 5;
+}
+.median {
+    stroke: #F00 ;
+    background: #F00
+}
+.mode {
+    stroke: #060 ;
+    background: #060
+}
+.rpm {
+    stroke: #333;
+    background: #F0F;
+    stroke-dasharray: 8, 3;
+    stroke-width: 1px;
+}
+.apdex {
+    stroke: #33C ;
+    background: #33C
+}
+
+.apdex_s {
+    fill: #FDCC8A;
+    stroke: #FDCC8A;
+}
+.apdex_t {
+    fill: #E34A33;
+    stroke: #E34A33;
+}
+.apdex_f {
+    fill: #333;
+    stroke: #333;
+}
+
+.quartiles  {
+    opacity: 0.8;
+    stroke-width: 1px;
+}
+
+/*
+ * timeseries 
+ */
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+.axis text {
+    font: 13px sans-serif;
+}
+.series {
+    fill: none;
+    stroke-width: 2.5px;
+}
+.clickrect {
+    fill: #F6F6F6;
+    stroke: #999;
+    stroke-width: 2px;
+}
+.legend { 
+    font-size: 12px;
+}
+rect.legenditem { 
+    fill: #FFD;
+    stroke: black;
+    stroke-width: 1px;
+}
+.legenditem line {
+}
+
+/*
+ * summary values (summary_numbers.js)
+ */
+
+div.summary-row {
+    display: table-row;
+    position: relative;
+    float: none;
+}
+div.summary-item {
+//    border: solid 1px #999;
+    display: inline;
+    position: relative;
+    float: left;
+    margin: 2px;
+    padding: 8px;
+    width: 110px;
+}       
+.summary-item {
+    text-align: center;
+}
+.summary-item .label {
+    text-align: center;
+}
+.summary-item span.value {
+    font-size: 20px;
+    text-align: center;
+}
+.summary-item span.units {
+    font-size: 16px;
+    text-align: center;
+}
+
+.summary-item div.bg {
+    position: absolute;
+    float: left;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.0;
+}
+
+/*
+ * Treemap 
+ */
+#treemap-sect .node {
+    border: solid 1px white;
+    font: 10px sans-serif;
+    line-height: 12px;
+    overflow: hidden;
+    position: absolute;
+    text-indent: 2px;
+}
+#treemap-sect p.range {
+    font-size: 1.4em;
+}
+
+/*
+ * Horizon plot
+ */
+
+#horizon-controls {
+    width: 940px;
+    padding: 10px;
+    z-index: 1;
+}
+#horizon-controls.form-inline {
+    margin-bottom: 24px;
+}
+#horizon_controls .checkbox {
+    margin-left: 24px;
+}
+.sparkline .name {
+    text-align: right;
+}
+/*
+ * Traffic animation
+ */
+#display svg {
+    border: 1px solid black; 
+    margin-bottom: 18px;
+}
+#time-marker {
+    stroke: #900;
+    stroke-width: 3px;
+    stroke-dasharray: 5, 2;
+}

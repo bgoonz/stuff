@@ -1,0 +1,34 @@
+<h1>Editing blog</h1>
+
+<% form_for(@blog) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p><%= link_to 'New Post', new_blog_post_path(:blog_id => @blog) %>
+  <table>
+  <tr>
+    <th>Title</th>
+    <th>Published?</th>
+    <th>Created at</th>
+<th>Actions</th>
+  </tr>
+  <% @blog.posts.each do |post| -%>
+    <tr>
+      <td><%= post.title %></td>
+      <td><%= post.published? %></td>
+      <td><%= post.created_at %></td>
+<td>[<%= link_to "edit", edit_blog_post_path(@blog, post) %>]
+	</td>
+    </tr>
+  <% end -%>
+  </table>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @blog %> |
+<%= link_to 'Back', blogs_path %>

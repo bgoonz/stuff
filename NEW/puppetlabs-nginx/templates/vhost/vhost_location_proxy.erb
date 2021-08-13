@@ -1,0 +1,9 @@
+  location <%= location %> {
+    proxy_pass <%= proxy %>;
+    proxy_read_timeout     <%= proxy_read_timeout %>;
+    proxy_intercept_errors <%= proxy_intercept_errors %>;
+<% if @ssi == 'on' -%>
+    ssi on
+<% end -%>
+  }
+

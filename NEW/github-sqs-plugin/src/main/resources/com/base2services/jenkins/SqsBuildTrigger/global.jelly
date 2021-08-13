@@ -1,0 +1,49 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+    <f:section title="${%Amazon SQS Configuration}">
+        <f:nested>
+            <table style="width:100%">
+                <f:section title="${%Amazon SQS Profiles}">
+                    <f:block>
+                        <f:repeatable field="sqsProfiles" minimum="${1}" noAddButton="true">
+                            <table style="width:100%">
+                                <st:include from="${descriptor}" page="${descriptor.configPage}" />
+                                <f:entry>
+                                    <div align="right">
+                                        <input type="button" value="${%Add}" class="repeatable-add show-if-last" />
+                                        <f:repeatableDeleteButton />
+                                    </div>
+                                </f:entry>
+                            </table>
+                        </f:repeatable>
+                    </f:block>
+                </f:section>
+                <f:section title="${%Github SQS Queue Hook}">
+                    <f:radioBlock name="sqsHookMode" value="auto" title="${%Let Jenkins auto-manage the Github SQS hook}" checked="${instance.isManageHook()}"
+                                  help="${descriptor.getHelpFile('auto')}">
+                        <f:nested>
+                            <table style="width:100%">
+                            <f:section title="${%GitHub Credentials}">
+                                <f:block>
+                                    <f:repeatable field="credentials" minimum="${1}" noAddButton="true">
+                                        <table style="width:100%">
+                                            <st:include from="${descriptor}" page="${descriptor.configPage}" />
+                                            <f:entry>
+                                                <div align="right">
+                                                    <input type="button" value="${%Add}" class="repeatable-add show-if-last" />
+                                                    <f:repeatableDeleteButton />
+                                                </div>
+                                            </f:entry>
+                                        </table>
+                                    </f:repeatable>
+                                </f:block>
+                            </f:section>
+                            </table>
+                        </f:nested>
+                    </f:radioBlock>
+                    <f:radioBlock name="sqsHookMode" value="none" title="${%Manually manage the Github SQS hook}" checked="${!instance.isManageHook()}"
+                                  help="${descriptor.getHelpFile('manual')}"/>
+                </f:section>
+            </table>
+        </f:nested>
+    </f:section>
+</j:jelly>

@@ -1,0 +1,85 @@
+#!/usr/bin/env ruby
+require "rubygems"
+require "bundler/setup"
+require "newrelic_plugin"
+require "net/http"
+
+#
+#
+# The entire agent should be enclosed in a "WikipediaAgent" module
+#
+#
+module WikipediaAgent
+
+  #
+  # Agent, Metric and PollCycle classes
+  #
+  # Each agent module must have an Agent, Metric and PollCycle class that inherits from their
+  # Component counterparts as you can see below.
+  #
+  class Agent < NewRelic::Plugin::Agent::Base
+
+    agent_guid   "com.newrelic.examples.wikipedia"
+    agent_version "1.0.4"
+
+    #
+    # Each agent class must also include agent_human_labels. agent_human_labels requires:
+    # A friendly name of your component to appear in graphs.
+    # A block that returns a friendly name for this instance of your component.
+    #
+    # The block runs in the context of the agent instance.
+    #
+    agent_human_labels("Wikipedia") { "Wikipedia #{hostname}" }
+
+
+    #
+    # agent_config is a list of variables that the component will need
+    # from its instances. The Wikipedia agent is asking for the
+    # hostname to get the information from which it uses when it asks for the data.
+    #
+    agent_config_options :hostname
+
+    def setup_metrics
+      @WIKIPEDIA_STAT_URL = URI.parse("http://#{hostname}/w/api.php?action=query&format=json&meta=siteinfo&siprop=statistics")
+      @article_creation_rate = NewRelic::Processor::EpochCounter.new
+    end
+
+
+    def poll_cycle
+      num_articles = get_num_articles
+      if num_articles
+        report_metric("Articles/Created", "articles/sec", @article_creation_rate.process(num_articles))
+        report_metric("Articles/Count", "articles", num_articles)
+      end
+    end
+
+    private
+
+    def get_num_articles
+      begin
+        resp = ::Net::HTTP.get_response(@WIKIPEDIA_STAT_URL)
+      rescue
+        return nil
+      end
+      data = resp.body
+
+      begin
+        result = JSON.parse(data)  # if server unavailable, then data may be html, not json
+      rescue
+        return nil
+      end
+      puts "returning #{result['query']['statistics']['articles']} total articles"
+      result['query']['statistics']['articles']
+    end
+  end
+
+
+  NewRelic::Plugin::Setup.install_agent :wikipedia,WikipediaAgent
+
+
+  #
+  # Launch the agent (never returns)
+  #
+  NewRelic::Plugin::Run.setup_and_run
+
+end

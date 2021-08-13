@@ -1,0 +1,148 @@
+* 1.0.22
+  - Add Hardware ECDHE-RSA key exchange and AES-GCM bulk
+
+* 1.0.21
+  - Add Hardware SYN Cookie generation / detection metrics
+
+* 1.0.20
+  - Add TLS v1.1 and v1.2 specific global metrics
+
+* 1.0.19
+  - Adapt to CPU reporting changes in versions after 11.4.1
+
+* 1.0.18
+  - Added global SSL statistics
+    - Requests/second
+    - Transactions per Protocol (SSLv3, TLSv1, TLSv2)
+    - Transactions per Digest
+    - Transactions per Key Exchange
+
+* 1.0.17
+  - Adapt to CPU reporting changes in 11.4.1
+
+* 1.0.16
+  - Added Interface statistics
+    - State
+    - Throughput
+    - Packets per second (Unicast/Multicast)
+    - Errors per second
+    - Dropped packets per second
+    - Collisions per second
+
+* 1.0.15
+  - Fix bug in 1.0.14 where pool data collection was multiplied by 8 twice
+
+* 1.0.14
+  - Refactored the agent code so each module is more self contained
+  - Limit data reported for Virtuals and Pools to the top 150
+
+* 1.0.13
+  - Added more global TCP statistics:
+    - Received error rates: Bad Checksums, and Resets
+    - Segments: Retransmitted, RX Out of Order, and RX Malformed
+    - SYN-Cookies: Received, Bad, and Cache overflows
+    - Connections Failed, Expired, and Abandoned
+
+* 1.0.12
+  - Added Virtual Servers and Pools statistics:
+    - Inbound Packets per second
+    - Outbound Packets per second
+
+* 1.0.11
+  - Add Client SSL profile statistics:
+    - Current connections
+    - Session Cache entries
+    - Session Cache hits/sec
+    - Session Cache lookups/sec
+    - Session Cache invalidations/sec
+  - Better logic for skipping metrics that do not exist
+
+* 1.0.10
+  - Add iRule statistics:
+    - Executions per second
+    - Failures per second
+    - Aborts per second
+    - Average cycles taken (requires timing to be enabled)
+  - Updated SNMP connection logic to skip devices that are unreachable
+  - Skip collecting metrics if we can not get list of names for them
+
+* 1.0.9
+  - Add SNAT Pools statistics:
+    - Current Connections
+    - Connections per second
+    - Max Connections
+    - Throughput (In/Out)
+    - Packets per Second (In/Out)
+
+* 1.0.8
+  - Changed the name attribute to agent_name as name wasn't being picked up
+    and we don't want to break systems that might have it set.
+
+* 1.0.7
+  - Better handling of older versions of BIG-IP (pre 11.3.0)
+  - Print F5 version in debug logs
+
+* 1.0.6
+  - Fix throughput reporting issue caused by the refactor.
+
+* 1.0.5
+  - Upgrade to newer version of newrelic_plugin
+    - Add proxy support
+    - Improves connectivity to New Relic
+  - Major refactoring, and inclusion of better debug logging
+
+* 1.0.4
+  - Add Virtual Server CPU usage metric based on the F5's 1 minute CPU ratio
+
+* 1.0.3
+  - Add Pool statistics:
+    - Requests per second
+    - Current Connections
+    - Connections per second
+    - Throughput (In/Out)
+
+* 1.0.2
+  - Removed bundler requirement as it was not needed
+
+* 1.0.1
+  - Added Virtual Server statistics:
+    - Requests per second
+    - Current Connections
+    - Connections per second
+    - Throughput (In/Out)
+
+* 1.0.0
+  - Updated version for release!
+
+* 0.0.8
+  - Updated to require newrelic_platform.gem > 0.2.10
+  - Added a total throughput metric
+
+* 0.0.7
+  - Initial reporting of Nodes (Monitor Status)
+  - Include a Total throughput summary metric
+
+* 0.0.6
+  - Change the GUID to match the standard naming scheme
+  - Added a summary metric for CPU usage
+  - Added summary metrics for SSL
+  - Added HTTP Compression metrics
+
+* 0.0.5
+  - Changed bytes to bits on throughput metrics
+
+* 0.0.4
+  - Added SSL metric collection
+  - Changed CPU to be a percentage of 100 by asking how many CPUs the device has
+
+* 0.0.3
+  - Added more HTTP metrics
+  - Added default port so you don't have to specify it in the yaml
+  - Refactored much of the agent implementation to make if more modular
+
+* 0.0.2
+  - Added Global CPU Metrics
+
+* 0.0.1
+  - In Dev
+

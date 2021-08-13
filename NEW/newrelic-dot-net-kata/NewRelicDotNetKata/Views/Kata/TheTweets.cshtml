@@ -1,0 +1,20 @@
+﻿@model dynamic
+
+@{
+    Layout = "~/Views/shared/_BootstrapLayout.basic.cshtml";
+}
+
+<h1>The Tweets</h1>
+
+<pre>
+    Kata : One of the most popular things to do these days is call an external service and pull down some sort of social flair to make the app more "hip."  
+    
+    1. Make it look pretty and see if there is a better "preforming" way to get this info
+    2. Try to meet the controller SLA of keeping the processing under 250 milliseconds (use the unit test to determine success)
+    
+    Hint: Use the New Relic Real User Monitoring (RUM) to find out if the problem is on the client stream or in the controller code
+</pre>
+
+<p>
+    @Html.Raw(ViewBag.Message)
+</p>
