@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mostafadaneshvar",
+			"RigiMahnoor"
+		]
+	},
+	"antispoof-desc": "شرکتن حساب گون پیچیدگین اسکریپ،  پیچیدگین و ساده این نام کاربری محدود کنت",
+	"antispoof-conflict-top": "نام «$1» باز پر {{PLURAL:$2|ائ حساب کاربری|ائ حسابانی کاربری}} یکجندی داریت.",
+	"antispoof-conflict-bottom": "دزبندی دگر نامء بزیر ات.",
+	"antispoof-name-illegal": "نام \"$1\" مجاز په بوتن په خاطر جلوگرگ چه پیچیدگین نام شرکتن نهنت$2.\nلطفا یک دگه نامی انتخاب کنیت.",
+	"antispoof-badtype": "بدین نوع دیتا",
+	"antispoof-empty": "رشتگ حالیکین",
+	"antispoof-prohibited": "ائ بلک لیستء کرکتر توکا انت $1",
+	"antispoof-combining": "بنگیج بیت گون جمعی علامت $1",
+	"antispoof-unassigned": "ائ نامالومین یانکه نالوٹین کرکتر توکا انت",
+	"antispoof-deprecated": "ائ نالوٹین کرکترء توکا انت $1",
+	"antispoof-noletters": "شامل هچ حرفی نهنت",
+	"antispoof-mixedscripts": "شامل نا سازین جمع اسکریپتانء",
+	"antispoof-tooshort": "استاندارد این نام باز هوردن",
+	"antispoof-ignore": "ندید گرگ کنترل په کلاهبرداری",
+	"right-override-antispoof": "چه کنترلان کلاهبرداری رد بوت"
+}

@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eitvys200",
+			"Macofe",
+			"Manvydasz"
+		]
+	},
+	"batchuserrights-desc": "Leidžia pridėti vieną ar daugiau vartotojų į grupę ar daugiau grupių vienu veiksmu",
+	"batchuserrights-names": "Vartotojų vardai, pridėjimui į šią grupę (po vieną eilutėje):",
+	"batchuserrights-intro": "Šis puslapis leis jums pridėti grupę prie kelių vartotojų vienu metu.\nSaugumo sumetimais, sąrašas grupių, kurias galime pridėti, yra nustatomas plėtinio konfigūracijoje ir negali būti pakeistas pačioje viki.\nPrašome kreiptis į sistemos administratorių, jei jums reikia kitų grupių masinio pridėjimo.",
+	"batchuserrights-single-progress-update": "Pridėta {{PLURAL:$1| grupė | grupės}} į <strong>$2</strong> .",
+	"batchuserrights-add-groups": "{{PLURAL:$1|Pridedamas vienas vartotojas|Pridedami $1 vartotojai}} į {{PLURAL:$2|šią grupę|šias grupes}}: <strong>$3</strong>.",
+	"batchuserrights-userload-error": "Nepavyko įkelti {{GENDER:$1|naudotojo|naudotojos}} '''$1'''.",
+	"right-batchuserrights": "Pridėkite vieną ar daugiau vartotojų į grupę ar kelias grupes vienu veiksmu",
+	"action-batchuserrights": "Pridėkite vieną ar daugiau vartotojų į grupę ar kelias grupes vienu veiksmu"
+}

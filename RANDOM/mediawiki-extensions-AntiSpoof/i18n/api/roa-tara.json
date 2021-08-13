@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"apihelp-antispoof-description": "Verifiche 'nu nome utende condre a le verifiche de normalizzazzione AntiSpoof.",
+	"apihelp-antispoof-summary": "Verifiche 'nu nome utende cu le verifiche de normalizzazzione AntiSpoof.",
+	"apihelp-antispoof-param-username": "'U nome utende da verificà condre a AntiSpoof.",
+	"apihelp-antispoof-example-1": "Verifiche 'u nome utende \"Foo\" condre a AntiSpoof",
+	"apihelp-createaccount-param-ignoreantispoof": "Lasse perdere le verifiche de spoofing (vole 'u deritte <code>override-antispoof</code>)."
+}

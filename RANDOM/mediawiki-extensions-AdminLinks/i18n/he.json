@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Guycn2",
+			"Rotemliss",
+			"Steeve815",
+			"YaronSh"
+		]
+	},
+	"adminlinks": "קישורים למפעילי מערכת",
+	"adminlinks-desc": "הוספת [[Special:AdminLinks|דף מיוחד]] המכיל קישורים שימושיים למפעילי מערכת",
+	"adminlinks_documentation": "התיעוד של $1",
+	"adminlinks_general": "כללי",
+	"adminlinks_editsidebar": "עריכת סרגל הצד",
+	"adminlinks_editcss": "עריכת קובץ CSS",
+	"adminlinks_editmainpagename": "עריכת שם העמוד הראשי",
+	"adminlinks_users": "משתמשים",
+	"adminlinks_browsesearch": "עיון וחיפוש",
+	"adminlinks_importexport": "ייבוא וייצוא",
+	"adminlinks_pagenotfound": "לא ניתן היה למצוא דף מיוחד בשם: $1.",
+	"action-adminlinks": "צפייה בקישורים למפעילי מערכת",
+	"right-adminlinks": "צפייה ב[[Special:AdminLinks|קישורים למפעילי מערכת]]"
+}

@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bencemac",
+			"Dani",
+			"Dj",
+			"Tacsipacsi"
+		]
+	},
+	"antispoof-desc": "Letiltja a kevert szövegű, zavaró és hasonló nevű felhasználói fiókok készítését",
+	"antispoof-conflict-top": "A megadott „$1” felhasználónév túl hasonló a következő {{PLURAL:$2|azonosítóhoz|azonosítókhoz}}:",
+	"antispoof-conflict-bottom": "Kérjük, válassz másik felhasználónevet.",
+	"antispoof-name-illegal": "A megadott „$1” felhasználónév nem engedélyezett a zavaró vagy becsapó felhasználónevek megelőzése érdekében: $2. Kérjük, válassz másik felhasználónevet.",
+	"antispoof-bad-char": "\"$1\" ($2)",
+	"antispoof-badtype": "Hibás adattípus",
+	"antispoof-empty": "Üres szöveg",
+	"antispoof-prohibited": "Tiltott karaktert tartalmaz: $1",
+	"antispoof-combining": "Összekapcsoló jellel kezdődik: $1",
+	"antispoof-unassigned": "Még nem kiosztott karaktert tartalmaz: $1",
+	"antispoof-deprecated": "Érvénytelen karaktert tartalmaz: $1",
+	"antispoof-noletters": "Nem tartalmaz egyetlen betűt sem",
+	"antispoof-mixedscripts": "Összeférhetetlen kevert szöveget tartalmaz",
+	"antispoof-tooshort": "A kanonizált változat túl rövid",
+	"antispoof-ignore": "Névellenőrzés figyelmen kívül hagyása",
+	"action-override-antispoof": "felhasználói nevek ellenőrzésének figyelmen kívül hagyása",
+	"right-override-antispoof": "felhasználói nevek ellenőrzésének figyelmen kívül hagyása"
+}

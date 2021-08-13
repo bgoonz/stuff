@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Marwan Mohamad"
+		]
+	},
+	"coll-remove": "Yinggila",
+	"coll-show": "Popobilohe",
+	"coll-move_up": "Heyiya ode yitaato",
+	"coll-move_down": "Heyiya ode tibawa",
+	"coll-print_export": "Ceetakiya/ekspor",
+	"coll-create_a_book": "Pohutuwa buku",
+	"coll-book_creator": "Ta lohutu buku",
+	"coll-download_as": "Mopohuli persi $1",
+	"coll-disable": "he'uti",
+	"coll-book_creator_disable": "He'uti mohutu buku",
+	"coll-book_creator_disable_tooltip": "Pohuheli mopohuna ta hemohutu buku",
+	"coll-add_this_page": "Duhengi halaman botiye ode bukumu",
+	"coll-add_page_tooltip": "Duhengi halaman wiki botiye ode delomo bukumu",
+	"coll-help": "Wubodu",
+	"coll-help_tooltip": "Popobilohe wubodu mohutu buku",
+	"coll-helppage": "Help:Buku",
+	"coll-n_pages": "$1 {{PLURAL:$1|halaman}}",
+	"coll-remove_this_page": "Yinggila halaman botiye monto bukumu",
+	"coll-show_collection": "Bilohi buku",
+	"coll-show_collection_tooltip": "Kutiya momoli'o/modetohu/molahuli bukumu",
+	"coll-make_suggestions": "Mopoyingo halaman",
+	"coll-make_suggestions_tooltip": "Popobilohe huhama payu halaman to delomo bukumu",
+	"coll-attribution-anons": "Ta ohu'uwo o Polilungo: $1",
+	"coll-article-attribution": "<b>$1</b> <i>Bungo:</i> $2 <i>Kontributor:</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>Bungo:</i> $2 <i>Lisensi:</i> $3 <i>Kontributor:</i> $4 <i>Ta lohutu asli:</i> $5"
+}

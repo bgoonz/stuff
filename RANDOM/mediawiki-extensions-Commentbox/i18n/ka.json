@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"David1010"
+		]
+	},
+	"commentbox-savebutton": "კომენტარის შენახვა",
+	"commentbox-name": "სახელი:",
+	"commentbox-log": "ახალი კომენტარები",
+	"commentbox-first-comment-heading": "== კომენტარები ==",
+	"commentbox-regex": "/\\n==\\s*კომენტარები\\s*==\\s*\\n/i"
+}

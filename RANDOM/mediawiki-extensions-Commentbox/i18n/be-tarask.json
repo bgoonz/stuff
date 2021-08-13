@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"EugeneZelenko",
+			"Jim-by"
+		]
+	},
+	"commentbox-desc": "Дадае поле камэнтару для вызначаных старонак",
+	"commentbox-intro": "== Даданьне камэнтару... ==\nВы маеце камэнтар да гэтай старонкі? Дадайце яго тут альбо <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} непасрэдна адрэдагуйце старонку]</span>.",
+	"commentbox-savebutton": "Захаваць камэнтар",
+	"commentbox-name": "Імя:",
+	"commentbox-name-explanation": "<small>(Падказка: Калі Вы [[Special:UserLogin|ўвойдзеце ў сыстэму]], Вам не патрэбна будзе ўводзіць Ваша тут імя ўручную)</small>",
+	"commentbox-log": "Новыя камэнтары",
+	"commentbox-first-comment-heading": "== Камэнтары ==",
+	"commentbox-regex": "/\\n==\\s*Камэнтары\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Памылка пад час стварэньня камэнтара",
+	"commentbox-error-page-nonexistent": "Гэта старонка не існуе!",
+	"commentbox-error-namespace": "У гэтай прасторы назваў камэнтары забароненыя!",
+	"commentbox-error-empty-comment": "Пустыя камэнтары не дазволеныя!"
+}

@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mainframe98",
+			"Siebrand"
+		]
+	},
+	"authorprotect": "Pagina beveiligen voor niet-auteurs",
+	"authorprotect-desc": "Staat de auteur van een pagina toe deze te beveiligen voor andere gebruikers",
+	"authorprotect-notauthor": "{{GENDER:$1|U}} bent niet de {{GENDER:$1|auteur}} van deze pagina",
+	"authorprotect-confirm": "Beveiligingsniveaus wijzigen",
+	"authorprotect-edit": "Alleen bewerken door auteurs",
+	"authorprotect-move": "Alleen hernoemen door auteurs",
+	"authorprotect-intro": "Gebruik dit formulier om de pagina voor niet-auteurs te beveiligen",
+	"authorprotect-success": "Beveiliging ingesteld!",
+	"protect-level-author": "Beveiligen voor niet-auteurs",
+	"restriction-level-author": "Alleen te bewerken door auteurs",
+	"action-authorprotect": "te beveiligen voor niet-auteurs",
+	"right-authorprotect": "Zelf bewerkte pagina's beveiligen",
+	"action-author": "pagina's die alleen door auteurs te bewerken zijn te bewerken",
+	"right-author": "Pagina's die alleen door auteurs te bewerken zijn te bewerken"
+}

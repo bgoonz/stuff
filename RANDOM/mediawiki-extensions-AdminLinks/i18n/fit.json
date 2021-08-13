@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pyscowicz"
+		]
+	},
+	"adminlinks": "Ylläpidon länkit",
+	"adminlinks-desc": "Lissää [[Special:AdminLinks|spesiaalisivun]], joka sisälthää hyövylisiä länkkejä ylläpitäjille.",
+	"adminlinks_documentation": "$1 tokymenttasuuni",
+	"adminlinks_general": "Yleiset",
+	"adminlinks_editsidebar": "Mookkaa sivupalkkia",
+	"adminlinks_editcss": "Mookkaa CSS-fiiliä",
+	"adminlinks_editmainpagename": "Mookkaa alkusivun nimeä",
+	"adminlinks_users": "Käyttäjät",
+	"adminlinks_browsesearch": "Selaaminen ja hakeminen",
+	"adminlinks_importexport": "Importeeraus ja eksporteeraus",
+	"adminlinks_pagenotfound": "Spesiaalisivua nimellä $1 ei löyetty.",
+	"action-adminlinks": "nähä ylläpitäjän länkkejä",
+	"right-adminlinks": "Nähä länkin sivule [[Special:AdminLinks|ylläpitäjitten länkit]]"
+}

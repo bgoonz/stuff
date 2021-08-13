@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Murma174"
+		]
+	},
+	"antispoof-desc": "Ferhanert det iinrachten faan brükerkontos mä aparte tiakens of nöömer, diar dü lacht ferwaksle könst",
+	"antispoof-conflict-top": "Di brükernööm „$1“ as bal disalew üs {{PLURAL:$2|didiar brükernööm|jodiar $2 brükernöömer}}:",
+	"antispoof-conflict-bottom": "Wees so gud an nem en öödern brükernööm.",
+	"antispoof-name-illegal": "Didiar brükernööm „$1“ gongt ei. Grünj: $2<br />Wees so gud an nem en öödern nööm.",
+	"antispoof-badtype": "Ferkiard dooten-typ",
+	"antispoof-empty": "Leesag fial",
+	"antispoof-prohibited": "Diar as det ei tuläät tiaken $1 uun.",
+	"antispoof-combining": "Begant mä en ferbinjangs-tiaken $1",
+	"antispoof-unassigned": "Diar as det ünbekäänd tiaken $1 uun.",
+	"antispoof-deprecated": "Diar as det ei tuläät tiaken $1 uun.",
+	"antispoof-noletters": "Diar san nian buksteewen uun.",
+	"antispoof-mixedscripts": "Diar san tiakens faan ünlik skraft-süsteemen uun.",
+	"antispoof-tooshort": "Di nööm as tu kurt.",
+	"antispoof-ignore": "Ei efter nai nöömer schük",
+	"right-override-antispoof": "Det preew efter ünpaasin nöömer hialandaal ufstel"
+}

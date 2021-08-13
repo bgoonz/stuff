@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Benel",
+			"Bunukwiki",
+			"Tokoabibi"
+		]
+	},
+	"antispoof-desc": "satezep pisaungay palalamel tu Script, dayum masiwala saca atu izaway misaungayay a kalungangan tadamasasengi misaungayay a kalungangan panganganen ku canghaw.",
+	"antispoof-badtype": "mungangaway a kalunasulitan nikalahizaan",
+	"antispoof-empty": "inayi’ay a sulisulitan",
+	"antispoof-prohibited": "yamalyilu pasilsi kakaian tademaw a tatebanan-nisulitan $1",
+	"antispoof-combining": "pulung han miteka tatebanan-nisulitan $1",
+	"antispoof-unassigned": "yamalyilu mawawada’ay a tatebanan-nisulitan $1",
+	"antispoof-deprecated": "yamalyilu caay patahkal nizateng pisaungay a tatebanan-nisulitan $1",
+	"antispoof-noletters": "naynayi’ mahicahicaay tu cacay a sulit-bacu",
+	"antispoof-mixedscripts": "yamalyilu macamulay caay mangangalep a Script",
+	"antispoof-ignore": "sekipo pahengad kinsa",
+	"antispoof-ignore-help": "mahasa sizumaay tungus a situngusay patizeng baluhayay a changhaw malecalecaday ayzaay a changhaw.",
+	"right-override-antispoof": "mitahap pahengad tu kinsa"
+}

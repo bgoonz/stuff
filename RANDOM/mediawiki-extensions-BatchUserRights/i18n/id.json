@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Arifin.wijaya",
+			"C5st4wr6ch",
+			"Daud I.F. Argana",
+			"Diki Ananta",
+			"Farras",
+			"Macofe",
+			"Sumbukompor"
+		]
+	},
+	"batchuserrights": "Hak pengguna massal",
+	"batchuserrights-desc": "Memungkinkan menambahkan satu atau lebih pengguna untuk kelompok atau lebih kelompok dalam satu tindakan",
+	"batchuserrights-names": "Nama-nama pengguna untuk ditambahkan ke kelompok ini (satu per baris):",
+	"batchuserrights-intro": "Halaman ini mengizinkan Anda menambahkan sebuah grup ke banyak pengguna sekaligus.\nUntuk alasan keamanan, daftar grup yang dapat ditambahkan telah diatur dalam pengaturan ekstensi dan tidak dapat diubah dari dalam wiki.\nSilakan minta ke seorang pengurus sistem jika Anda butuh mengizinkan penambahan-massal dari grup-grup lain.",
+	"batchuserrights-single-progress-update": "Ditambahkan {{PLURAL:$1|grup|grup}} untuk <strong>$2</strong>.",
+	"batchuserrights-add-groups": "Menambahkan {{PLURAL:$1|satu pengguna|$1 pengguna}} ke {{PLURAL:$2|kelompok|kelompok-kelompok}} berikut: <strong>$3</strong>.",
+	"batchuserrights-userload-error": "Tidak bisa memuat {{GENDER:$1|pengguna}} '''$1'''.",
+	"batchuserrights-no-groups": "Anda tidak memilih kelompok manapun.\nIni tidak akan menghasilkan apa-apa.\nSisa halaman akan diizinkan untuk dimuat agar Anda dapat dengan mudah melihat jika ada nama pengguna yang tidak dapat dimuat.",
+	"right-batchuserrights": "Tambahkan satu atau lebih pengguna untuk kelompok atau beberapa kelompok dalam satu tindakan",
+	"action-batchuserrights": "tambahkan satu atau lebih pengguna untuk kelompok atau beberapa kelompok dalam satu tindakan"
+}

@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrumps",
+			"Rail",
+			"Railfail536",
+			"Sp5uhe"
+		]
+	},
+	"adminlinks": "Linki dla administratorów",
+	"adminlinks-desc": "Dodaje [[Special:AdminLinks|stronę specjalną]] z linkami użytecznymi dla administratorów",
+	"adminlinks_documentation": "Dokumentacja $1",
+	"adminlinks_general": "Ogólne",
+	"adminlinks_editsidebar": "Edycja menu bocznego",
+	"adminlinks_editcss": "Edycja pliku CSS",
+	"adminlinks_editmainpagename": "Zmiana nazwy strony głównej",
+	"adminlinks_users": "Użytkownicy",
+	"adminlinks_browsesearch": "Przeglądanie i wyszukiwanie",
+	"adminlinks_importexport": "Importowanie i eksportowanie",
+	"adminlinks_pagenotfound": "Nie udało się znaleźć strony specjalnej o nazwie: $1.",
+	"action-adminlinks": "podglądu linków dla administratorów",
+	"right-adminlinks": "Podgląd zawartości strony [[Special:AdminLinks|Linki dla administratorów]]"
+}

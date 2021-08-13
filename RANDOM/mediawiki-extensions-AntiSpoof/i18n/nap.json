@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"C.R.",
+			"Ruthven"
+		]
+	},
+	"antispoof-desc": "Fremma 'a criazione 'e cunte utente cu nu script-mmescato, cu nomme ca criano ammuina o ca s'arrassumigliano",
+	"antispoof-conflict-top": "'O nomme \"$1\" s'assomiglia assaje assaje a {{PLURAL:$2|'o cunto|'e cunte}}:",
+	"antispoof-conflict-bottom": "Pe' piacere scigliete n'atu nomme.",
+	"antispoof-name-illegal": "'O nomme \"$1\" nun è permesso pe prevenì casine o mbruoglie 'e nomme utente: $2.\nPe' piacere scigliete n'atu nomme.",
+	"antispoof-badtype": "Tipo 'e data errato",
+	"antispoof-empty": "Stringa abbacante",
+	"antispoof-prohibited": "Cuntene carattere dint' 'a lista nira $1",
+	"antispoof-combining": "Accummencia cu na marca cumbinata $1",
+	"antispoof-unassigned": "Cuntene nu carattere nun azegnato $1",
+	"antispoof-deprecated": "Cuntene carattere deprecato $1",
+	"antispoof-noletters": "Nun cuntene nisciuna lettera",
+	"antispoof-mixedscripts": "Cuntene script mmiscate incompatibbele",
+	"antispoof-tooshort": "Nomme canonizzato troppo curto",
+	"antispoof-ignore": "Lassa perdere 'e check pe' spoofing (mbruoglie)",
+	"antispoof-ignore-help": "Premmettesse a ll'editure ch' 'e privilegge 'e crià nu cunto pure si 'o nomme assumigliass'a nu cunto ch'esiste già.",
+	"right-override-antispoof": "Sovrascrive 'e check pe' spoofing (mbruoglie)"
+}

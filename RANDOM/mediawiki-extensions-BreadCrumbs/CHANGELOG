@@ -1,0 +1,39 @@
+This file contains the CHANGELOG (version history) of the BreadCrumbs extension.
+
+* v0.6.1 - 2018-10-08
+  - Removed dependencies on globals $wgUser and $wgRequest
+  - Removed compatibility code for 1.18.0 that had been obsolete since 2016 (change 328894)
+
+* v0.6.0 - 2018-06-10
+  - Converted to use extension registration
+  - Minor style fixes
+
+* v0.5.0 - 2017-07-17
+  - Remove I18n shim
+
+* v0.4.1 - 2016-03-18
+  - Add license lable to show on "Special:Version"
+  - Fix "typos" in the LICENSE file
+  - Fix style position warnings
+  - Switch to consitently use DIR
+
+* v0.4.0 - 2014-03-30
+  - Migrate to JSON i18n
+
+* v0.3.0 - 2012-06-26
+  - Began to restrict options for better administration
+  - Provided loading for CSS, instructions for overriding CSS
+
+* v0.2.1 - 2012-06-14
+  - Exposed a variety of options to the user in "Special:Preferences"
+  - Provided advanced logic for breadcrumb creation/handling
+
+* v0.2.0 - 2012-06-12
+  - fixed breadcrumb uniqueness checker
+  - removed CSS file, replaced with in-wiki formatting
+  - Checked for use of deprecated wiki functions
+
+* v0.1.0 - 2007-03-21
+  - first working version
+  - added CSS file
+  - restructured

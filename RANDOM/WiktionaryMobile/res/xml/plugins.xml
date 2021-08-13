@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugins>
+    <plugin name="App" value="com.phonegap.App"/>
+    <plugin name="Geolocation" value="com.phonegap.GeoBroker"/>
+    <plugin name="Device" value="com.phonegap.Device"/>
+    <plugin name="Accelerometer" value="com.phonegap.AccelListener"/>
+    <plugin name="Compass" value="com.phonegap.CompassListener"/>
+    <plugin name="Media" value="com.phonegap.AudioHandler"/>
+    <plugin name="Camera" value="com.phonegap.CameraLauncher"/>
+    <plugin name="Contacts" value="com.phonegap.ContactManager"/>
+    <plugin name="Crypto" value="com.phonegap.CryptoHandler"/>
+    <plugin name="File" value="com.phonegap.FileUtils"/>
+    <plugin name="Network Status" value="com.phonegap.NetworkManager"/>
+    <plugin name="Notification" value="com.phonegap.Notification"/>
+    <plugin name="Storage" value="com.phonegap.Storage"/>
+    <plugin name="Temperature" value="com.phonegap.TempListener"/>
+    <plugin name="FileTransfer" value="com.phonegap.FileTransfer"/>
+    <plugin name="Capture" value="com.phonegap.Capture"/>
+    <plugin name="SimpleMenu" value="com.phonegap.menu.AppMenu"/> 
+    <plugin name="SelectTextPlugin" value="org.wiktionary.beta.SelectTextPlugin" />
+    <plugin name="SoftKeyBoard" value="com.phonegap.softkeyboard.SoftKeyBoard" />
+    <plugin name="ToastPlugin" value="com.chariotsolutions.toast.plugin.ToastPlugin" />
+    <plugin name="Share" value="com.schaul.plugins.share.Share"/>
+    <plugin name="URLCache" value="com.phonegap.urlcache.URLCache"/>
+    <plugin name="CacheModePlugin" value="org.wiktionary.CacheModePlugin" />
+    <plugin name="ApplicationVersion" value="org.wiktionary.ApplicationVersion"/>
+    <plugin name="GlobalizationCommand" value="com.phonegap.plugins.globalization.GlobalizationCommand"/>
+    <plugin name="WebIntent" value="com.borismus.webintent.WebIntent"/>
+    <plugin name="Preferences" value="org.wiktionary.PreferencesPlugin"/>
+</plugins>

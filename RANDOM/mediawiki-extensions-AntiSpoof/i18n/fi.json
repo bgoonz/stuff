@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"01miki10",
+			"3Johnny",
+			"Crt",
+			"Linnea",
+			"Majavah",
+			"Nike",
+			"Pyscowicz",
+			"Samoasambia",
+			"Silvonen",
+			"Str4nd"
+		]
+	},
+	"antispoof-desc": "Estää käyttäjätunnusten luonnin, jos ne sisältävät eri kirjoitusjärjestelmiä, harhaanjohtavia tai samankaltaisia käyttäjänimiä.",
+	"antispoof-conflict-top": "Tunnus ”$1” on liian samankaltainen kuin seuraava(t)\n{{PLURAL:$2|tunnus|tunnusta}}:",
+	"antispoof-conflict-bottom": "Valitse toinen käyttäjänimi.",
+	"antispoof-name-illegal": "Käyttäjänimeä ”$1” ei sallita hämäävien tai huijaustarkoitukseen sopivien tunnusten välttämiseksi: $2. Valitse toinen käyttäjänimi.",
+	"antispoof-badtype": "Virheellinen tietotyyppi",
+	"antispoof-empty": "Tyhjä merkkijono",
+	"antispoof-prohibited": "Sisältää kielletyn $1-merkin",
+	"antispoof-combining": "Alkaa yhdistävällä merkillä $1",
+	"antispoof-unassigned": "Sisältää määrittämättömiä merkkejä $1",
+	"antispoof-deprecated": "Sisältää kielletyn merkin $1",
+	"antispoof-noletters": "Ei sisällä mitään kirjaimia",
+	"antispoof-mixedscripts": "se sisältää yhteensopimattomia kirjoitusjärjestelmiä",
+	"antispoof-tooshort": "Normalisoitu nimi liian lyhyt",
+	"antispoof-ignore": "Älä käytä hämäävien tunnusten tarkistusta",
+	"action-override-antispoof": "ohittaa tarkastukset samankaltaisista tai epäilyttävistä käyttäjänimistä",
+	"right-override-antispoof": "Ohittaa tarkastukset samankaltaisista tai epäilyttävistä käyttäjänimistä"
+}

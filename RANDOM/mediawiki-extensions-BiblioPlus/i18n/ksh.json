@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Purodha"
+		]
+	},
+	"biblioplus-desc": "Hollt automattesch Zitaate vun dä PubMed Daatebangk unuß dä ISBN Daatebangk.",
+	"biblioplus-doi-tooltip": "Lißß udder kouf dä Atikkel beim Verlaach",
+	"biblioplus-pmid-tooltip": "Lißß udder kouf dä Atikkel beim Verlaach wann müjjelesch",
+	"biblioplus-isbn-tooltip": "Aanjahbe zom Bohch op <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\">isbndb.org</i>",
+	"biblioplus-medline-abstracts": "Alle Zosammefaßonge op <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"Medical Literature Analysis and Retrieval System Online\">Medline</i>:",
+	"biblioplus-pubmed-abstracts": "Alle Zosammefaßonge op <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"free search engine accessing primarily the MEDLINE database of references and abstracts on life sciences and biomedical topics\">PubMed</i>",
+	"biblioplus-hubmed-abstracts": "Alle Zosammefaßonge op <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"An alternative, third-party interface to PubMed, the database of biomedical literature produced by the National Library of Medicine\">HubMed</i>",
+	"biblioplus-vkey-title": "Lengk op en biblijojraafesche Daatebangk"
+}

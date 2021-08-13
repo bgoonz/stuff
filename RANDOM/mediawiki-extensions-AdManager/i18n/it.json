@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"Beta16",
+			"Joetaras",
+			"Mario"
+		]
+	},
+	"admanager": "Gestione pubblicità",
+	"admanagerzones": "Gestione zone per pubblicità",
+	"admanager-desc": "Fornisce una [[Special:AdManager|pagina speciale]] che permette agli amministratori di impostare le zone per pagine o categorie",
+	"admanager_docu": "Per aggiungere o rimuovere la zona per la pubblicità di una pagina o l'intera categoria, aggiungi o rimuovi il titolo della pagina o della categoria sotto.",
+	"admanagerzones_docu": "Inserisci il numero di ogni zona nella propria riga.",
+	"admanager_invalidtargetpage": "Nessuna pagina trovata con il titolo \"$1\".",
+	"admanager_invalidtargetcategory": "Nessuna categoria trovata con il titolo \"$1\".",
+	"admanager_notable": "Errore! Una tabella di database richiesta non è stata trovata! Eseguire update.php prima di procedere.",
+	"admanager_noAdManagerZones": "Errore! È necessario aggiungere alcune zone per la pubblicità. Inseriscile nella [[Special:AdManagerZones|Gestione zone per pubblicità]].",
+	"admanager_labelPage": "Titoli di pagine",
+	"admanager_labelCategory": "Nomi delle categorie",
+	"admanager_submit": "Invia",
+	"admanager_noads": "Non visualizzare pubblicità",
+	"admanager_Page": "Pagine",
+	"admanager_Category": "Categorie",
+	"admanager_added": "Le modifiche sono state salvate",
+	"admanager_addedzone": "Zone aggiunte $1.",
+	"admanager_removedzone": "Zone rimosse $1.",
+	"admanager_nozonesadded": "Nessuna zona è stata aggiunta.",
+	"admanager_nozonesremoved": "Nessuna zona è stata rimossa.",
+	"admanager_zonenum": "Zona #: $1",
+	"admanager_zonenotnumber": "Errore! $1 non è un numero.",
+	"admanager_return": "Ritorna a [[Special:AdManager|Gestione pubblicità]]",
+	"admanager_gotoads": "[[Special:AdManager|Modifica il posizionamento della pubblicità]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Modifica zone pubblicità]]",
+	"action-admanager": "gestire la configurazione della pubblicità",
+	"right-admanager": "[[Special:AdManager|Gestisce la configurazione della pubblicità]]"
+}

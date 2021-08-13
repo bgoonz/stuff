@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Rancher"
+		]
+	},
+	"breadcrumbs-desc": "Показује путање корисника кроз Вики",
+	"prefs-breadcrumbs-separator-max": "Можете да унесете најмање два знака.",
+	"prefs-breadcrumbs": "Мрвице",
+	"prefs-breadcrumbs-showcrumbs": "Приказуј мрвице",
+	"prefs-breadcrumbs-numberofcrumbs": "Број мрвица",
+	"prefs-breadcrumbs-numberofcrumbs-max": "Може се приказати највише двадесет мрвица.",
+	"prefs-breadcrumbs-preceding-text-max": "Можете да унесете највише тридесет знакова."
+}

@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chmee2"
+		]
+	},
+	"commentbox-savebutton": "Uložit komentář",
+	"commentbox-name": "Jméno:",
+	"commentbox-log": "Nové komentáře",
+	"commentbox-first-comment-heading": "== Komentáře ==",
+	"commentbox-errorpage-title": "Chyba při vytváření komentáře",
+	"commentbox-error-page-nonexistent": "Tato stránka neexistuje!",
+	"commentbox-error-namespace": "Komentáře nejsou povoleny v tomto jmenném prostoru!",
+	"commentbox-error-empty-comment": "Prázdné komentáře nejsou povoleny."
+}

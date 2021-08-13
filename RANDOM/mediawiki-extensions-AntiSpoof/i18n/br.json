@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fohanno",
+			"Fulup",
+			"Y-M D"
+		]
+	},
+	"antispoof-desc": "Stankañ a ra, dre ur skript kemmesk, krouidigezh kontoù dezho anvioù implijer heñvel pe a c'hall sevel amjestregezh diwarno",
+	"antispoof-conflict-top": "Heñvel betek re eo an anv \"$1\" da hini {{PLURAL:$2|anv implijer}}:",
+	"antispoof-conflict-bottom": "Dibabit un anv all mar plij.",
+	"antispoof-name-illegal": "N'eo ket aotreet ober gant an anv \"$1\" kuit da gemmeskañ gant un anv all pe da implijout an anv : $2.\nGrit gant un anv all mar plij.",
+	"antispoof-bad-char": "\"$1\" ($2)",
+	"antispoof-badtype": "Seurt roadennoù fall",
+	"antispoof-empty": "Neudennad goullo",
+	"antispoof-prohibited": "Emañ an arouezenn berzet $1 e-barzh",
+	"antispoof-combining": "Kregiñ a ra gant ar merk kenaozet $1",
+	"antispoof-unassigned": "Un arouezenn dispredet pe dispisaet zo e-barzh",
+	"antispoof-deprecated": "Emañ an arouezenn dispredet $1 e-barzh",
+	"antispoof-noletters": "Lizherenn ebet e-barzh",
+	"antispoof-mixedscripts": "Meur a skript digenglotus zo e-barzh",
+	"antispoof-tooshort": "Anv skoueriekaet re verr",
+	"antispoof-ignore": "Chom hep gwiriañ hag-eñ n'eus ket un implijer all gantañ un anv damheñvel",
+	"right-override-antispoof": "Chom hep gwiriañ ha touellerezh zo"
+}

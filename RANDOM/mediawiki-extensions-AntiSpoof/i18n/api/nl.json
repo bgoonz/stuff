@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mainframe98",
+			"Mar(c)",
+			"McDutchie",
+			"Siebrand"
+		]
+	},
+	"apihelp-antispoof-description": "Een gebruikersnaam controleren met de normaliseringscontrole van AntiSpoof.",
+	"apihelp-antispoof-summary": "Een gebruikersnaam in de normaliseringscontrole van AntiSpoof opnemen.",
+	"apihelp-antispoof-param-username": "De gebruikersnaam om met AntiSpoof te controleren.",
+	"apihelp-antispoof-example-1": "De gebruikersnaam \"Foo\" controleren met AntiSpoof",
+	"apihelp-createaccount-param-ignoreantispoof": "Spoofcontroles negeren (vereist het recht <code>override-antispoof</code>)."
+}

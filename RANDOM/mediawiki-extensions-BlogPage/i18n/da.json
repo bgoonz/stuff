@@ -1,0 +1,38 @@
+{
+	"@metadata": {
+		"authors": [
+			"Saederup92"
+		]
+	},
+	"blog-and": "og",
+	"blog-author-more-by": "Mere af $1",
+	"blog-author-votes": "$1 {{PLURAL:$1|stemme|stemmer}}",
+	"blog-by": "af",
+	"blog-by-user-category": "Artikler af brugeren $1",
+	"blog-comments-of-day": "Dagens kommentar",
+	"blog-created-ago": "oprettet for $1 siden",
+	"blog-in-the-news": "I nyhederne",
+	"blog-new-articles": "Nye artikler",
+	"blog-recent-editors-message": "Forbedre denne side ved at redigere den.",
+	"blog-view-archive-link": "Vis alle",
+	"articlelists": "Nye blogartikler",
+	"blog-ah-no-results": "Ingen sider fundet.",
+	"blog-ah-popular-articles": "Populære artikler",
+	"blog-ah-new-articles": "Nye aftikler",
+	"blog-ah-write-article": "Skriv en artikel",
+	"blog-ah-todays-articles": "Dagens artikler",
+	"blog-ah-most-votes": "Flest stemmer (72 timer)",
+	"blog-ah-what-talking-about": "Flest kommentarer (72 timer)",
+	"createblogpost": "Opret blogindlæg",
+	"blog-create-title": "Titel",
+	"blog-create-text": "Tekst",
+	"blog-create-categories": "Kategorier",
+	"blog-create-button": "Opret!",
+	"blog-more": "mere",
+	"blog-time-ago": "$1 siden",
+	"blog-time-days": "{{PLURAL:$1|en dag|$1 dage}}",
+	"blog-time-hours": "{{PLURAL:$1|en time|$1 timer}}",
+	"blog-time-minutes": "{{PLURAL:$1|et minut|$1 minutter}}",
+	"blog-time-seconds": "{{PLURAL:$1|et sekund|$1 sekunder}}",
+	"blog-user-articles-votes": "{{PLURAL:$1|stemme|stemmer}}"
+}

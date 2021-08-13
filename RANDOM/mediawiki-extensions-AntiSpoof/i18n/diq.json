@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"1917 Ekim Devrimi",
+			"Erdemaslancan",
+			"Gorizon",
+			"Kumkumuk",
+			"Mirzali",
+			"Orbot707",
+			"Xoser"
+		]
+	},
+	"antispoof-desc": "Hesaban pê skriptê miksi, nameyê takeşa bloke keno",
+	"antispoof-conflict-top": "Ena nameyé \"$1\"i ena {{PLURAL:$2|Namey karberi|namey karbera}} zaf paweno:",
+	"antispoof-conflict-bottom": "Xorê yewna nameyê karberi weçine.",
+	"antispoof-name-illegal": "Namey şıma name dê \"$2\"ya pê nêvawiyo deye name dê $1  rê mısade çıni yo.  \nYewna name weçine.",
+	"antispoof-bad-char": "\"$1\" ($2)",
+	"antispoof-badtype": "Xırab tipê datay",
+	"antispoof-empty": "Rêza veng",
+	"antispoof-prohibited": "$1'i miyan de karaktero xırab esto",
+	"antispoof-combining": "Sembol dê $1 grênayışi ra nata yeno",
+	"antispoof-unassigned": "$1 zerre de çiyo xırab esto",
+	"antispoof-deprecated": "$1 miyan de karaktero xırabın esto",
+	"antispoof-noletters": "Yew zi herf çini yo",
+	"antispoof-mixedscripts": "Te de skriptanê xeripîyaye esto",
+	"antispoof-tooshort": "Eno name zehf kılmo",
+	"antispoof-ignore": "Kontrolê spoofî rê diket meke",
+	"antispoof-ignore-help": "Name, nameyanê binan ra ca bıaso zi fına zi karberanê bêemsal name vinayeyan rê mısade danê",
+	"action-override-antispoof": "Kontrolanê xapeynayışa mehesıbnê",
+	"right-override-antispoof": "Kontrolanê xapeynayışi dewre ra vecê."
+}

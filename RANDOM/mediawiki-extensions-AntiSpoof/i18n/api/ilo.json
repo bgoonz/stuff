@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lam-ang"
+		]
+	},
+	"apihelp-antispoof-description": "Kitaen ti nagan ti agar-aramat nga isuppiat iti normalisasion a panagkita ti AntiSpoof.",
+	"apihelp-antispoof-param-username": "Ti nagan ti agar-aramat a kitaen a maisuppiat iti AntiSpoof.",
+	"apihelp-antispoof-example-1": "Kitaen ti nagan ti agar-aramat \"Foo\" a maisuppiat iti AntiSpoof",
+	"apihelp-createaccount-param-ignoreantispoof": "Di ikaskaso ti panagkita ti spoofing (nasken ti karbengan ti <code>override-antispoof</code>)."
+}

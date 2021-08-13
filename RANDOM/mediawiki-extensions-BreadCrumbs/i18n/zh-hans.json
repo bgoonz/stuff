@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gaoxuewei",
+			"Hydra",
+			"Hzy980512",
+			"Liuxinyu970226",
+			"Yfdyh000"
+		]
+	},
+	"breadcrumbs-desc": "显示用户在这个网站的轨迹。",
+	"prefs-breadcrumbs-separator": "面包屑分隔器",
+	"prefs-breadcrumbs-separator-max": "最多可输入2个字母",
+	"prefs-breadcrumbs": "面包屑",
+	"prefs-breadcrumbs-showcrumbs": "显示面包屑",
+	"prefs-breadcrumbs-numberofcrumbs": "面包屑数量",
+	"prefs-breadcrumbs-numberofcrumbs-max": "最多可以显示20个面包屑。",
+	"prefs-breadcrumbs-namespaces": "在面包屑中包含名字空间",
+	"prefs-breadcrumbs-filter-duplicates": "滤出多次访问过的页面",
+	"prefs-breadcrumbs-preceding-text": "面包屑前出现的文字",
+	"prefs-breadcrumbs-preceding-text-max": "最多可输入30个字母。"
+}

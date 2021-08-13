@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lam-ang"
+		]
+	},
+	"antispoof-desc": "Serraanna ti panagaramid kadagiti pakabilangan nga addaan iti naglalaok a panagsurat, makaallilaw ken dagiti agpapada a nagan ti agar-aramat",
+	"antispoof-conflict-top": "Ti nagan a \"$1\" ket kapada unay ti sumaganad a {{PLURAL:$2|a nagan ti agar-aramat|a nagan dagiti agar-aramat}}:",
+	"antispoof-conflict-bottom": "Pangngaasi nga agpilika iti sabali a nagan.",
+	"antispoof-name-illegal": "Ti nagan a \"$1\" ket saan a maipalubos a mangpawil ti makaallilaw wenno dagiti naanigaas a nagan ti agar-aramat: $2.\nPangngaasi nga agpili iti sabali a nagan.",
+	"antispoof-badtype": "Dakes a kita ti datos",
+	"antispoof-empty": "Awan linaon a kuerdas",
+	"antispoof-prohibited": "Naglaon kadagiti naiparit a karakter ti $1",
+	"antispoof-combining": "Nangrugi ti panagtipon ti marka ti $1",
+	"antispoof-unassigned": "Naglaon kadagiti saan a nainaganan wenno nasukatanen a karakter ti $1",
+	"antispoof-deprecated": "Naglaon ti nasukatanen a karakter ti $1",
+	"antispoof-noletters": "Saan nga aglaon kadagiti ania man a letra",
+	"antispoof-mixedscripts": "Aglaon kadagiti saan a mabalin nga aglalaok nga eskritu",
+	"antispoof-tooshort": "Ti kanonikalisado a nagan ket ababa unay",
+	"antispoof-ignore": "Saan nga ikaskaso dagiti kinita nga aningaas",
+	"antispoof-ignore-help": "Mangipalubos kadagiti agar-aramat nga addaan iti makaanay a pribilihio iti agpartuat iti maysa a pakabilangan urayno no ti naganna ket kapada iti maysa nga addan a pakabilangan.",
+	"right-override-antispoof": "Parabawan ti panagkita nga aningaas"
+}

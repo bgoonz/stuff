@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": []
+	},
+	"antispoof-name-illegal": "قاتىسۋشى اتى شاتاقتاۋىن نەمەسە قالجىنداۋىن بٶگەۋ ٷشٸن «$1» اتاۋى رۇقسات ەتٸلمەيدٸ: $2. باسقا اتاۋ تاڭداڭىز.",
+	"antispoof-badtype": "جارامسىز دەرەك تٷرٸ",
+	"antispoof-empty": "بوس جول",
+	"antispoof-prohibited": "قارا تٸزٸمگە كٸرگەن ٵرٸپ بار",
+	"antispoof-combining": "قۇرامدى بەلگٸمەن باستالعان",
+	"antispoof-unassigned": "تاعايىندالماعان نەمەسە تىيىلعان ٵرٸپ بار",
+	"antispoof-noletters": "ٸشٸندە ەشبٸر ٵرٸپ جوق",
+	"antispoof-mixedscripts": "ٸشٸندە سيىسپايتىن ارالاس جازۋ تٷرلەرٸ بار",
+	"antispoof-tooshort": "ەرەجەلەنگەن اتاۋى تىم قىسقا"
+}

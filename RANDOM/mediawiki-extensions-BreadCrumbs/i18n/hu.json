@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dani",
+			"Dj"
+		]
+	},
+	"breadcrumbs-desc": "Megjeleníti a felhasználó által a wikiben bejárt utat",
+	"prefs-breadcrumbs-separator": "Zsemlemorzsák elválasztó jele",
+	"prefs-breadcrumbs-separator-max": "Legfeljebb 2 karaktert lehet beírni.",
+	"prefs-breadcrumbs": "Zsemlemorzsa",
+	"prefs-breadcrumbs-showcrumbs": "Zsemlemorzsák megjelenítése",
+	"prefs-breadcrumbs-numberofcrumbs": "Zsemlemorzsák száma",
+	"prefs-breadcrumbs-numberofcrumbs-max": "Legfeljebb 20 zsemlemorzsa jeleníthető meg.",
+	"prefs-breadcrumbs-namespaces": "Névtér hozzávétele a zsemlemorzsákhoz",
+	"prefs-breadcrumbs-filter-duplicates": "Ismételten meglátogatott oldalak szűrése",
+	"prefs-breadcrumbs-preceding-text": "Zsemlemorzsák előtt megjelenítendő szöveg",
+	"prefs-breadcrumbs-preceding-text-max": "Legfeljebb 30 karaktert lehet beírni."
+}

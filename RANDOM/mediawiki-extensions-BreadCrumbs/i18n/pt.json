@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu"
+		]
+	},
+	"breadcrumbs-desc": "Adiciona um trilho de navegação até a página corrente",
+	"prefs-breadcrumbs-separator": "Separador do trilho de navegação",
+	"prefs-breadcrumbs-separator-max": "Pode introduzir um máximo de 2 caracteres.",
+	"prefs-breadcrumbs": "Trilho de navegação",
+	"prefs-breadcrumbs-showcrumbs": "Apresentar o trilho de navegação",
+	"prefs-breadcrumbs-numberofcrumbs": "Número de passos",
+	"prefs-breadcrumbs-numberofcrumbs-max": "Pode ser apresentado um máximo de 20 passos.",
+	"prefs-breadcrumbs-namespaces": "Incluir os espaços nominais no trilho de navegação",
+	"prefs-breadcrumbs-filter-duplicates": "Excluir as páginas visitadas com frequência",
+	"prefs-breadcrumbs-preceding-text": "Texto a mostrar antes do trilho de navegação",
+	"prefs-breadcrumbs-preceding-text-max": "Pode introduzir um máximo de 30 caracteres."
+}

@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dr Lotus Black"
+		]
+	},
+	"commentbox-name": "အမည်:",
+	"commentbox-log": "မှတ်ချက်အသစ်များ",
+	"commentbox-first-comment-heading": "== မှတ်ချက်များ ==",
+	"commentbox-regex": "/\\n==\\s*မှတ်ချက်များ\\s*==\\s*\\n/i",
+	"commentbox-error-page-nonexistent": "ဤစာမျက်နှာ မရှိပါ",
+	"commentbox-error-empty-comment": "ဗလာမှတ်ချက်များကို ခွင့်မပြုပါ"
+}

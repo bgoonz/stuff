@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pyt"
+		]
+	},
+	"antispoof-desc": "Ferhinnert dät Moakjen fon Benutserkonten mäd miskede Teekensatse, fertoogede un äänelke Benutsernoomen",
+	"antispoof-conflict-top": "Die Noome „$1“ is {{PLURAL:$2|dät existierjende Benutserkonto|do foulgjende $2 Benutserkonten}} tou äänelk:",
+	"antispoof-conflict-bottom": "Wääl n uur Noome.",
+	"antispoof-name-illegal": "Die wonskede Benutsernoome „$1“ is nit ferlööwed. Gruund: $2<br />Wääl n uur Benutsernoome.",
+	"antispoof-badtype": "Ungultigen Doatentyp",
+	"antispoof-empty": "Loos Fäild",
+	"antispoof-prohibited": "Änthaalt nit tousteene Teekene.",
+	"antispoof-combining": "Kombinationsteeken toun Ounfang.",
+	"antispoof-unassigned": "Änthaalt nit tou-oardnede of nit wonskede Teekene.",
+	"antispoof-noletters": "Änthaalt neen Bouksteeuwe.",
+	"antispoof-mixedscripts": "Änthaalt Teekene fon uunglieke Skriftsysteme.",
+	"antispoof-tooshort": "Die kanonisierde Noome is tou kuut.",
+	"antispoof-ignore": "Ignorierje Äänelkhaidswröich",
+	"right-override-antispoof": "Buute Kraft sätten fon ju Benutsernoome-Äänelkhaidswröige"
+}

@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"BadDog",
+			"Kizule"
+		]
+	},
+	"blog-and": "и",
+	"blog-author-comments": "$1 {{PLURAL:$1|коментар|коментара}}",
+	"blog-by": "од",
+	"blog-by-user-category": "Чланци корисника/це $1",
+	"blog-comments-of-day": "Коментари дана",
+	"blog-created": "направљено $1",
+	"blog-created-ago": "направљено пре $1",
+	"blog-in-the-news": "У вестима",
+	"blog-new-articles": "Нови чланци",
+	"blog-permission-required": "Немате дозволу да правите странице.",
+	"blog-view-archive-link": "Види све",
+	"blog-ah-no-results": "Нема пронађених страница.",
+	"blog-ah-popular-articles": "Популарни чланци",
+	"blog-ah-new-articles": "Нови чланци",
+	"blog-ah-write-article": "Напиши чланак",
+	"blog-ah-todays-articles": "Данашњи чланци",
+	"blog-create-title": "Наслов",
+	"blog-create-text": "Текст",
+	"blog-create-categories": "Категорије",
+	"blog-create-error-need-title": "'''Грешка:''' Морате да дате наслов објави за блог.",
+	"blog-more": "више",
+	"blog-time-ago": "пре $1",
+	"action-createblogpost": "правите нове објаве за блог",
+	"blog-user-articles-title": "Блогови"
+}

@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"breadcrumbs-desc": "Staje trag mrvica ispod trake sa jezičcima",
+	"prefs-breadcrumbs-separator": "Separator pregeldničke staze",
+	"prefs-breadcrumbs-separator-max": "Možete unijeti najviše 2 znaka.",
+	"prefs-breadcrumbs": "Mrvice",
+	"prefs-breadcrumbs-showcrumbs": "Prikazivaj mrvice",
+	"prefs-breadcrumbs-numberofcrumbs": "Broj mrvica",
+	"prefs-breadcrumbs-numberofcrumbs-max": "Se prikazivaju najviše 20 mrvica.",
+	"prefs-breadcrumbs-namespaces": "Uključi imenske prostore u putove posjeta",
+	"prefs-breadcrumbs-filter-duplicates": "Filtriranje (izuzimanje) često posjećenih stranica",
+	"prefs-breadcrumbs-preceding-text": "Tekst što će stajati ispred pregledničke staze",
+	"prefs-breadcrumbs-preceding-text-max": "Možete unijeti najviše 30 znaka."
+}

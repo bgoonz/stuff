@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Asenoner",
+			"Fierodelveneto",
+			"Starladin"
+		]
+	},
+	"coll-collection": "Liber",
+	"coll-remove": "Tò demez",
+	"coll-show": "Mostra",
+	"coll-move_up": "Sposta su",
+	"coll-move_down": "Sposta ju",
+	"coll-print_export": "Stampé/esporté",
+	"coll-create_a_book": "Mët adum n liber",
+	"coll-book_creator": "Generadú de libri",
+	"coll-download_as": "Cëria ju coche $1",
+	"coll-disable": "dejativé",
+	"coll-book_creator_disable": "Dejativëia le generadú de libri",
+	"coll-book_creator_disable_tooltip": "Lascia da adoré le generadú de libri",
+	"coll-add_this_page": "Injuntëia chësta plata pro to liber",
+	"coll-add_page_tooltip": "Injuntëia la plata wiki atuala a to liber",
+	"coll-help": "Aiüt",
+	"coll-help_tooltip": "Mostra aiüt por cherié libri",
+	"coll-helppage": "Help:Libri",
+	"coll-n_pages": "$1 {{PLURAL:$1|plata|plates}}",
+	"coll-remove_this_page": "Tol demez chësta plata da to liber",
+	"coll-show_collection": "Mostra liber",
+	"coll-show_collection_tooltip": "Clicchëia por mudé/dejciarié o aposté to liber",
+	"coll-make_suggestions": "Aconsiëia plates",
+	"coll-make_suggestions_tooltip": "Mostra propostes sön la basa dles plates te to liber",
+	"coll-attribution-anons": "Anonim: $1",
+	"coll-article-attribution": "<b>$1</b> <i>Funtana:</i> $2 <i>Contribuënc:</i> $3",
+	"coll-image-attribution": "\n<b>$1</b> <i>Font:</i> $2 <i>Lizënza:</i> $3 <i>L à da contribuc:</i> $4 <i>Artist uriginel:</i> $5"
+}

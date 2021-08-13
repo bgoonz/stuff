@@ -1,0 +1,948 @@
+/*----- FEEDBACK LISTING ------*/
+
+/** Overall structure **/
+.articleFeedbackv5-feedback {
+	overflow: hidden;
+	position: relative;
+	min-height: 115px;
+	min-width: 75px;
+	width: 100%;
+}
+.articleFeedbackv5-feedback .articleFeedbackv5-comment-container {
+	float: left;
+	margin-left: -260px;
+	padding: 10px 0 5px 0;
+	width: 100%;
+}
+.articleFeedbackv5-feedback .articleFeedbackv5-comment-wrap {
+	padding: 0 10px 20px 30px;
+	margin-left: 260px;
+}
+/* Don't preserve toolbox space if there is no toolbox */
+.articleFeedbackv5-comment-notoolbox .articleFeedbackv5-comment-container {
+	margin-left: 0;
+}
+.articleFeedbackv5-comment-notoolbox .articleFeedbackv5-comment-wrap {
+	margin-left: 0;
+}
+.articleFeedbackv5-feedback .articleFeedbackv5-comment-wrap .articleFeedbackv5-comment-head {
+	margin-top: 10px;
+	line-height: 24px;
+}
+.articleFeedbackv5-feedback .articleFeedbackv5-comment-wrap .articleFeedbackv5-comment-head h3 {
+	font-size: 1em;
+}
+.articleFeedbackv5-feedback .articleFeedbackv5-comment-wrap .articleFeedbackv5-comment-head h3 a {
+	font-size: 1.2em;
+}
+.articleFeedbackv5-feedback .articleFeedbackv5-comment-wrap .articleFeedbackv5-comment-head .articleFeedbackv5-comment-anon-message {
+	margin-top: -3px;
+	font-size: 0.9em;
+}
+.articleFeedbackv5-feedback .articleFeedbackv5-comment-wrap blockquote {
+	display: block;
+	margin: 10px 0;
+}
+.articleFeedbackv5-feedback .articleFeedbackv5-comment-wrap .articleFeedbackv5-vote-wrapper {
+	position: absolute;
+	bottom: 0;
+	right: 260px; /* toolbox width */
+	left: 0;
+	margin-left: 30px;
+	margin-bottom: 5px;
+	font-size: 0.9em;
+}
+.articleFeedbackv5-feedback .articleFeedbackv5-comment-tags {
+	padding: 0 10px 0 0;
+	float: right;
+}
+
+/** Feedback row **/
+.articleFeedbackv5-feedback {
+	padding: 0;
+	border-bottom: 1px solid #D6D7D5;
+
+	background-image: linear-gradient(right, #F5F5F4 260px, transparent 0%);
+	background-image: -o-linear-gradient(right, #F5F5F4 260px, transparent 0%);
+	background-image: -moz-linear-gradient(right, #F5F5F4 260px, transparent 0%);
+	background-image: -webkit-linear-gradient(right, #F5F5F4 260px, transparent 0%);
+	background-image: -ms-linear-gradient(right, #F5F5F4 260px, transparent 0%);
+}
+.articleFeedbackv5-feedback.articleFeedbackv5-comment-notoolbox {
+	background: transparent;
+}
+.articleFeedbackv5-feedback.articleFeedbackv5-feedback-highlighted {
+	background-color: #EFF5FE;
+	margin-top: 3px;
+}
+.articleFeedbackv5-feedback:after {
+	clear: both;
+}
+
+/** Comment block: icon **/
+.articleFeedbackv5-comment-wrap {
+	background-size: 22px;
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+.articleFeedbackv5-comment-wrap.articleFeedbackv5-comment-positive {
+	/* @embed */
+	background-image: url(images/emotion_positive.png);
+	/* @embed */
+	background-image: -webkit-linear-gradient(transparent, transparent), url(images/emotion_positive.svg);
+	/* @embed */
+	background-image: -moz-linear-gradient(transparent, transparent), url(images/emotion_positive.svg);
+	/* @embed */
+	background-image: linear-gradient(transparent, transparent), url(images/emotion_positive.svg);
+}
+.articleFeedbackv5-comment-wrap.articleFeedbackv5-comment-negative {
+	/* @embed */
+	background-image: url(images/emotion_negative.png);
+	/* @embed */
+	background-image: -webkit-linear-gradient(transparent, transparent), url(images/emotion_negative.svg);
+	/* @embed */
+	background-image: -moz-linear-gradient(transparent, transparent), url(images/emotion_negative.svg);
+	/* @embed */
+	background-image: linear-gradient(transparent, transparent), url(images/emotion_negative.svg);
+}
+.articleFeedbackv5-comment-wrap.articleFeedbackv5-comment-neutral {
+	/* @embed */
+	background-image: url(images/emotion_neutral.png);
+	/* @embed */
+	background-image: -webkit-linear-gradient(transparent, transparent), url(images/emotion_neutral.svg);
+	/* @embed */
+	background-image: -moz-linear-gradient(transparent, transparent), url(images/emotion_neutral.svg);
+	/* @embed */
+	background-image: linear-gradient(transparent, transparent), url(images/emotion_neutral.svg);
+}
+
+/** Comment block: top line **/
+.articleFeedbackv5-comment-wrap h3 {
+	font-weight: normal;
+	color: #444;
+	padding-right: 15px;
+}
+.articleFeedbackv5-feedback .articleFeedbackv5-comment-wrap h3 {
+	display: inline;
+	width: 450px;
+}
+.articleFeedbackv5-comment-details {
+	color: #888;
+	display: inline-block;
+}
+.articleFeedbackv5-feedback.articleFeedbackv5-feedback-highlighted .articleFeedbackv5-comment-details-date {
+	font-weight: bold;
+	color: #000;
+}
+
+/** Comment block: body **/
+.articleFeedbackv5-feedback blockquote {
+	margin: 10px 0;
+	padding: 0;
+	display: block;
+}
+.articleFeedbackv5-feedback blockquote .articleFeedbackv5-comment-full {
+	display: none;
+}
+.articleFeedbackv5-comment-toggle {
+	margin-left: 7px;
+}
+
+/** Comment block: bottom line **/
+.articleFeedbackv5-comment-foot-helpful,
+.articleFeedbackv5-comment-foot-abuse,
+.articleFeedbackv5-comment-foot-hide {
+	display: inline-block;
+	/* IE7 inline-block hack */
+	zoom: 1;
+	*display: inline;
+}
+.articleFeedbackv5-comment-foot-helpful,
+.articleFeedbackv5-comment-foot-abuse {
+	margin-right: 45px;
+}
+.articleFeedbackv5-comment-foot-helpful .articleFeedbackv5-helpful-caption {
+	margin: 0 15px 0 0;
+}
+
+/** Comment block: bottom line: Helpful/unhelpful **/
+.articleFeedbackv5-comment-foot-helpful .articleFeedbackv5-helpful-link,
+.articleFeedbackv5-comment-foot-helpful .articleFeedbackv5-unhelpful-link,
+.articleFeedbackv5-comment-foot-helpful .articleFeedbackv5-undo-helpful-link,
+.articleFeedbackv5-comment-foot-helpful .articleFeedbackv5-undo-unhelpful-link {
+	padding: 2px 15px 0 15px;
+	text-align: left;
+	color: #333;
+	font-weight: bold;
+	/* @embed */
+	background: url(images/thumbup.png) left no-repeat;
+}
+.articleFeedbackv5-comment-foot-helpful .articleFeedbackv5-unhelpful-link,
+.articleFeedbackv5-comment-foot-helpful .articleFeedbackv5-undo-unhelpful-link {
+	/* @embed */
+	background: url(images/thumbdwn.png) left no-repeat;
+}
+.articleFeedbackv5-comment-foot-helpful .articleFeedbackv5-helpful-link:hover,
+.articleFeedbackv5-comment-foot-helpful .articleFeedbackv5-unhelpful-link:hover,
+.articleFeedbackv5-comment-foot-helpful .articleFeedbackv5-undo-helpful-link:hover,
+.articleFeedbackv5-comment-foot-helpful .articleFeedbackv5-undo-unhelpful-link:hover {
+	/* @embed */
+	background: url(images/thumbup_hover.png) left no-repeat;
+	cursor: pointer;
+	color: #333;
+	text-decoration: none;
+}
+.articleFeedbackv5-comment-foot-helpful .articleFeedbackv5-unhelpful-link:hover,
+.articleFeedbackv5-comment-foot-helpful .articleFeedbackv5-undo-unhelpful-link:hover {
+	/* @embed */
+	background: url(images/thumbdwn_hover.png) left no-repeat;
+}
+.articleFeedbackv5-comment-foot-helpful .articleFeedbackv5-helpful-link.helpful-active,
+.articleFeedbackv5-comment-foot-helpful .articleFeedbackv5-helpful-link.helpful-active:hover,
+.articleFeedbackv5-comment-foot-helpful .articleFeedbackv5-undo-helpful-link.helpful-active,
+.articleFeedbackv5-comment-foot-helpful .articleFeedbackv5-undo-helpful-link.helpful-active:hover {
+	/* @embed */
+	background: url(images/thumbup_active.png) left no-repeat;
+}
+.articleFeedbackv5-comment-foot-helpful .articleFeedbackv5-unhelpful-link.helpful-active,
+.articleFeedbackv5-comment-foot-helpful .articleFeedbackv5-unhelpful-link.helpful-active:hover,
+.articleFeedbackv5-comment-foot-helpful .articleFeedbackv5-undo-unhelpful-link.helpful-active,
+.articleFeedbackv5-comment-foot-helpful .articleFeedbackv5-undo-unhelpful-link.helpful-active:hover {
+	/* @embed */
+	background: url(images/thumbdwn_active.png) left no-repeat;
+}
+.articleFeedbackv5-helpful-votes {
+	color: #888;
+	display: none;
+}
+.articleFeedbackv5-helpful-votes.articleFeedbackv5-has-votes {
+	display: inline;
+}
+.articleFeedbackv5-helpful-votes.articleFeedbackv5-votes-positive,
+.articleFeedbackv5-helpful-votes.articleFeedbackv5-votes-negative {
+	padding: 2px 15px 0 20px;
+	/* @embed */
+	background: url(images/thumbup.png) left no-repeat;
+}
+.articleFeedbackv5-helpful-votes.articleFeedbackv5-votes-negative {
+	/* @embed */
+	background: url(images/thumbdwn.png) left no-repeat;
+}
+
+/** Comment block: bottom line: Flag as abuse **/
+.articleFeedbackv5-flag-link,
+.articleFeedbackv5-unflag-link {
+	height: 16px;
+	padding-left: 16px;
+	/* @embed */
+	background-image: url(images/flag.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+.articleFeedbackv5-flag-link:hover {
+	/* @embed */
+	background-image: url(images/flag_hover.png);
+}
+.articleFeedbackv5-unflag-link {
+	/* @embed */
+	background-image: url(images/flag_active.png);
+}
+.articleFeedbackv5-abuse-count {
+	padding-left: 10px;
+	color: #888;
+	display: none;
+}
+.articleFeedbackv5-abuse-count.abusive {
+	color: #832831;
+}
+.articleFeedbackv5-abuse-count.articleFeedbackv5-has-abuse-flags {
+	display: inline;
+}
+
+/** Tags Block (featured, resolved) **/
+.articleFeedbackv5-feedback .articleFeedbackv5-feature-marker:before {
+	/* @embed */
+	background-image: url(images/toolbox_feature.png);
+	background-image: -webkit-linear-gradient(transparent, transparent), url(images/toolbox_feature.svg);
+	background-image: -moz-linear-gradient(transparent, transparent), url(images/toolbox_feature.svg);
+	background-image: linear-gradient(transparent, transparent), url(images/toolbox_feature.svg);
+}
+.articleFeedbackv5-feedback .articleFeedbackv5-resolve-marker:before {
+	/* @embed */
+	background-image: url(images/toolbox_resolve.png);
+	background-image: -webkit-linear-gradient(transparent, transparent), url(images/toolbox_resolve.svg);
+	background-image: -moz-linear-gradient(transparent, transparent), url(images/toolbox_resolve.svg);
+	background-image: linear-gradient(transparent, transparent), url(images/toolbox_resolve.svg);
+}
+.articleFeedbackv5-feedback .articleFeedbackv5-archive-marker:before {
+	/* @embed */
+	background-image: url(images/toolbox_archive.png);
+	background-image: -webkit-linear-gradient(transparent, transparent), url(images/toolbox_archive.svg);
+	background-image: -moz-linear-gradient(transparent, transparent), url(images/toolbox_archive.svg);
+	background-image: linear-gradient(transparent, transparent), url(images/toolbox_archive.svg);
+}
+.articleFeedbackv5-feedback .articleFeedbackv5-noaction-marker:before {
+	/* @embed */
+	background-image: url(images/toolbox_noaction.png);
+	background-image: -webkit-linear-gradient(transparent, transparent), url(images/toolbox_noaction.svg);
+	background-image: -moz-linear-gradient(transparent, transparent), url(images/toolbox_noaction.svg);
+	background-image: linear-gradient(transparent, transparent), url(images/toolbox_noaction.svg);
+}
+.articleFeedbackv5-feedback .articleFeedbackv5-inappropriate-marker:before {
+	/* @embed */
+	background-image: url(images/toolbox_inappropriate.png);
+	background-image: -webkit-linear-gradient(transparent, transparent), url(images/toolbox_inappropriate.svg);
+	background-image: -moz-linear-gradient(transparent, transparent), url(images/toolbox_inappropriate.svg);
+	background-image: linear-gradient(transparent, transparent), url(images/toolbox_inappropriate.svg);
+}
+.articleFeedbackv5-feedback .articleFeedbackv5-autohide-marker:before,
+.articleFeedbackv5-feedback .articleFeedbackv5-hide-marker:before {
+	/* @embed */
+	background-image: url(images/toolbox_hide.png);
+	background-image: -webkit-linear-gradient(transparent, transparent), url(images/toolbox_hide.svg);
+	background-image: -moz-linear-gradient(transparent, transparent), url(images/toolbox_hide.svg);
+	background-image: linear-gradient(transparent, transparent), url(images/toolbox_hide.svg);
+}
+.articleFeedbackv5-feedback .articleFeedbackv5-oversight-marker:before {
+	/* @embed */
+	background-image: url(images/toolbox_oversight.png);
+	background-image: -webkit-linear-gradient(transparent, transparent), url(images/toolbox_oversight.svg);
+	background-image: -moz-linear-gradient(transparent, transparent), url(images/toolbox_oversight.svg);
+	background-image: linear-gradient(transparent, transparent), url(images/toolbox_oversight.svg);
+}
+.articleFeedbackv5-feedback .articleFeedbackv5-feature-marker,
+.articleFeedbackv5-feedback .articleFeedbackv5-resolve-marker,
+.articleFeedbackv5-feedback .articleFeedbackv5-noaction-marker,
+.articleFeedbackv5-feedback .articleFeedbackv5-inappropriate-marker,
+.articleFeedbackv5-feedback .articleFeedbackv5-autohide-marker,
+.articleFeedbackv5-feedback .articleFeedbackv5-hide-marker,
+.articleFeedbackv5-feedback .articleFeedbackv5-archive-marker,
+.articleFeedbackv5-feedback .articleFeedbackv5-oversight-marker {
+	float: left;
+	line-height: 25px;
+	font-weight: bold;
+	color: #656763;
+	text-transform: uppercase;
+}
+
+.articleFeedbackv5-feedback .articleFeedbackv5-feature-marker:before,
+.articleFeedbackv5-feedback .articleFeedbackv5-resolve-marker:before,
+.articleFeedbackv5-feedback .articleFeedbackv5-noaction-marker:before,
+.articleFeedbackv5-feedback .articleFeedbackv5-inappropriate-marker:before,
+.articleFeedbackv5-feedback .articleFeedbackv5-autohide-marker:before,
+.articleFeedbackv5-feedback .articleFeedbackv5-hide-marker:before,
+.articleFeedbackv5-feedback .articleFeedbackv5-archive-marker:before,
+.articleFeedbackv5-feedback .articleFeedbackv5-oversight-marker:before {
+	content: '';
+
+	float: left;
+	height: 25px;
+	width: 25px;
+	margin-right: 5px;
+	background-repeat: no-repeat;
+	background-position: left;
+
+	/* grayscale background image */
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: gray;
+}
+
+/** Tools **/
+.articleFeedbackv5-feedback .articleFeedbackv5-feedback-tools {
+	padding: 10px;
+	position: relative;
+	float: right;
+	width: 240px; /* 260px toolbox width minus the 10 padding on both sides */
+}
+.articleFeedbackv5-feedback .articleFeedbackv5-feedback-tools ul {
+	margin: 10px 0 5px;
+	list-style: none;
+	list-style-image: none; /* IE7 is stubborn & specifically needs it like this */
+}
+.articleFeedbackv5-feedback .articleFeedbackv5-feedback-tools ul li ul {
+	padding: 0 10px;
+}
+.articleFeedbackv5-feedback .articleFeedbackv5-feedback-tools ul li ul li a:hover {
+	cursor: hand;
+}
+.articleFeedbackv5-inappropriate-link, .articleFeedbackv5-hide-link, .articleFeedbackv5-oversight-link {
+	cursor: pointer;
+}
+.articleFeedbackv5-feedback .articleFeedbackv5-feedback-tools p.articleFeedbackv5-form-toolbox-error {
+	color: red;
+}
+.articleFeedbackv5-feedback .articleFeedbackv5-feedback-tools p.articleFeedbackv5-form-toolbox-label {
+	display: none;
+	color: #888;
+	position: absolute;
+	top: 0;
+}
+/* Display only on mouseover */
+.articleFeedbackv5-feedback:hover .articleFeedbackv5-feedback-tools p.articleFeedbackv5-form-toolbox-label {
+	display: block;
+}
+.articleFeedbackv5-comment-foot-hide a,
+.articleFeedbackv5-feedback-tools li a {
+	display: inline-block;
+	position: relative;
+	padding-left: 35px;
+	height: 25px;
+	line-height: 25px;
+}
+.articleFeedbackv5-comment-foot-hide a {
+	height: 20px;
+	padding-left: 25px;
+}
+.articleFeedbackv5-noaction-own-link:before,
+.articleFeedbackv5-unnoaction-own-link:before,
+.articleFeedbackv5-feedback-tools li a:before {
+	display: block;
+	position: absolute;
+	left: 0;
+	width: 25px;
+	height: 25px;
+	margin: 0 5px;
+	background-repeat: no-repeat;
+	background-position: left;
+	content: ' ';
+}
+.articleFeedbackv5-noaction-own-link:hover:before,
+.articleFeedbackv5-unnoaction-own-link:hover:before,
+.articleFeedbackv5-feedback-tools li a:hover:before {
+	opacity : 0.4;
+	filter: alpha(opacity=40);
+}
+.articleFeedbackv5-noaction-own-link:before,
+.articleFeedbackv5-unnoaction-own-link:before {
+	margin: 0;
+	height: 20px;
+}
+.articleFeedbackv5-feedback-tools li a.articleFeedbackv5-feature-link:before {
+	/* @embed */
+	background-image: url(images/toolbox_feature.png);
+	background-image: -webkit-linear-gradient(transparent, transparent), url(images/toolbox_feature.svg);
+	background-image: -moz-linear-gradient(transparent, transparent), url(images/toolbox_feature.svg);
+	background-image: linear-gradient(transparent, transparent), url(images/toolbox_feature.svg);
+}
+.articleFeedbackv5-feedback-tools li a.articleFeedbackv5-resolve-link:before {
+	/* @embed */
+	background-image: url(images/toolbox_resolve.png);
+	background-image: -webkit-linear-gradient(transparent, transparent), url(images/toolbox_resolve.svg);
+	background-image: -moz-linear-gradient(transparent, transparent), url(images/toolbox_resolve.svg);
+	background-image: linear-gradient(transparent, transparent), url(images/toolbox_resolve.svg);
+}
+.articleFeedbackv5-noaction-own-link:before,
+.articleFeedbackv5-feedback-tools li a.articleFeedbackv5-noaction-link:before {
+	/* @embed */
+	background-image: url(images/toolbox_noaction.png);
+	background-image: -webkit-linear-gradient(transparent, transparent), url(images/toolbox_noaction.svg);
+	background-image: -moz-linear-gradient(transparent, transparent), url(images/toolbox_noaction.svg);
+	background-image: linear-gradient(transparent, transparent), url(images/toolbox_noaction.svg);
+}
+.articleFeedbackv5-feedback-tools li a.articleFeedbackv5-inappropriate-link:before {
+	/* @embed */
+	background-image: url(images/toolbox_inappropriate.png);
+	background-image: -webkit-linear-gradient(transparent, transparent), url(images/toolbox_inappropriate.svg);
+	background-image: -moz-linear-gradient(transparent, transparent), url(images/toolbox_inappropriate.svg);
+	background-image: linear-gradient(transparent, transparent), url(images/toolbox_inappropriate.svg);
+}
+.articleFeedbackv5-feedback-tools li a.articleFeedbackv5-hide-link:before {
+	/* @embed */
+	background-image: url(images/toolbox_hide.png);
+	background-image: -webkit-linear-gradient(transparent, transparent), url(images/toolbox_hide.svg);
+	background-image: -moz-linear-gradient(transparent, transparent), url(images/toolbox_hide.svg);
+	background-image: linear-gradient(transparent, transparent), url(images/toolbox_hide.svg);
+}
+.articleFeedbackv5-feedback-tools li a.articleFeedbackv5-archive-link:before {
+	/* @embed */
+	background-image: url(images/toolbox_archive.png);
+	background-image: -webkit-linear-gradient(transparent, transparent), url(images/toolbox_archive.svg);
+	background-image: -moz-linear-gradient(transparent, transparent), url(images/toolbox_archive.svg);
+	background-image: linear-gradient(transparent, transparent), url(images/toolbox_archive.svg);
+}
+.articleFeedbackv5-feedback-tools li a.articleFeedbackv5-request-link:before,
+.articleFeedbackv5-feedback-tools li a.articleFeedbackv5-oversight-link:before {
+	/* @embed */
+	background-image: url(images/toolbox_oversight.png);
+	background-image: -webkit-linear-gradient(transparent, transparent), url(images/toolbox_oversight.svg);
+	background-image: -moz-linear-gradient(transparent, transparent), url(images/toolbox_oversight.svg);
+	background-image: linear-gradient(transparent, transparent), url(images/toolbox_oversight.svg);
+}
+.articleFeedbackv5-feedback-tools li a.articleFeedbackv5-decline-link:before {
+	/* @embed */
+	background-image: url(images/toolbox_decline.png);
+	background-image: -webkit-linear-gradient(transparent, transparent), url(images/toolbox_decline.svg);
+	background-image: -moz-linear-gradient(transparent, transparent), url(images/toolbox_decline.svg);
+	background-image: linear-gradient(transparent, transparent), url(images/toolbox_decline.svg);
+}
+.articleFeedbackv5-feedback-tools li a.articleFeedbackv5-discuss-link:before {
+	/* @embed */
+	background-image: url(images/toolbox_discuss.png);
+	background-image: -webkit-linear-gradient(transparent, transparent), url(images/toolbox_discuss.svg);
+	background-image: -moz-linear-gradient(transparent, transparent), url(images/toolbox_discuss.svg);
+	background-image: linear-gradient(transparent, transparent), url(images/toolbox_discuss.svg);
+}
+.articleFeedbackv5-feedback-tools li a.articleFeedbackv5-discuss-talk-link:before {
+	/* @embed */
+	background-image: url(images/toolbox_discuss_talk.png);
+	background-image: -webkit-linear-gradient(transparent, transparent), url(images/toolbox_discuss_talk.svg);
+	background-image: -moz-linear-gradient(transparent, transparent), url(images/toolbox_discuss_talk.svg);
+	background-image: linear-gradient(transparent, transparent), url(images/toolbox_discuss_talk.svg);
+}
+.articleFeedbackv5-feedback-tools li a.articleFeedbackv5-discuss-user-link:before {
+	/* @embed */
+	background-image: url(images/toolbox_discuss_user.png);
+	background-image: -webkit-linear-gradient(transparent, transparent), url(images/toolbox_discuss_user.svg);
+	background-image: -moz-linear-gradient(transparent, transparent), url(images/toolbox_discuss_user.svg);
+	background-image: linear-gradient(transparent, transparent), url(images/toolbox_discuss_user.svg);
+}
+.articleFeedbackv5-feedback-tools li a.articleFeedbackv5-discuss-exists-link:before {
+	/* @embed */
+	background-image: url(images/toolbox_discuss_view.png);
+	background-image: -webkit-linear-gradient(transparent, transparent), url(images/toolbox_discuss_view.svg);
+	background-image: -moz-linear-gradient(transparent, transparent), url(images/toolbox_discuss_view.svg);
+	background-image: linear-gradient(transparent, transparent), url(images/toolbox_discuss_view.svg);
+}
+.articleFeedbackv5-feedback-tools li a.articleFeedbackv5-activity-link:before {
+	/* @embed */
+	background-image: url(images/toolbox_activity.png);
+}
+.articleFeedbackv5-unnoaction-own-link:before,
+.articleFeedbackv5-feedback-tools li a.articleFeedbackv5-unfeature-link:before,
+.articleFeedbackv5-feedback-tools li a.articleFeedbackv5-unresolve-link:before,
+.articleFeedbackv5-feedback-tools li a.articleFeedbackv5-unnoaction-link:before,
+.articleFeedbackv5-feedback-tools li a.articleFeedbackv5-uninappropriate-link:before,
+.articleFeedbackv5-feedback-tools li a.articleFeedbackv5-unarchive-link:before,
+.articleFeedbackv5-feedback-tools li a.articleFeedbackv5-unhide-link:before,
+.articleFeedbackv5-feedback-tools li a.articleFeedbackv5-unrequest-link:before,
+.articleFeedbackv5-feedback-tools li a.articleFeedbackv5-unoversight-link:before {
+	/* @embed */
+	background-image: url(images/toolbox_undo.png);
+	background-image: -webkit-linear-gradient(transparent, transparent), url(images/toolbox_undo.svg);
+	background-image: -moz-linear-gradient(transparent, transparent), url(images/toolbox_undo.svg);
+	background-image: linear-gradient(transparent, transparent), url(images/toolbox_undo.svg);
+}
+.articleFeedbackv5-feedback-tools li a.articleFeedbackv5-request-link.inactive:before,
+.articleFeedbackv5-feedback-tools li a.articleFeedbackv5-decline-link.inactive:before {
+	/* grayscale background image */
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: gray;
+}
+.articleFeedbackv5-feedback-tools li a.articleFeedbackv5-request-link.inactive,
+.articleFeedbackv5-feedback-tools li a.articleFeedbackv5-decline-link.inactive {
+	color: #444;
+	cursor: default;
+	text-decoration: none;
+}
+
+.articleFeedbackv5-feedback-tools a.articleFeedbackv5-note-link {
+	padding: 3px;
+	background-color: #E6E7E5;
+	border: 1px solid #D6D7D5;
+	margin-right: 10px;
+}
+.articleFeedbackv5-feedback-tools span.articleFeedbackv5-note-added {
+	color: #888;
+	margin-right: 10px;
+}
+
+.articleFeedbackv5-feedback-tools p.articleFeedbackv5-activity-short-status {
+	color: #888;
+}
+
+/* Messages that it is not possible to flag own feedback */
+p.articleFeedbackv5-form-own-feedback {
+	color: #888;
+}
+
+/* Flyover Panels */
+.tipsy {
+	padding: 5px 11px 5px 5px;
+	width: 375px;
+}
+.tipsy-inner {
+	padding: 0;
+	border-color: #888;
+	max-width: 40em;
+	-moz-box-shadow: -2px 2px 1px #999;
+	-webkit-box-shadow: -2px 2px 1px #999;
+	box-shadow: -2px 2px 1px #999;
+	overflow: hidden;
+}
+.tipsy-e .tipsy-arrow,
+.tipsy-w .tipsy-arrow {
+	/* @embed */
+	background-image: url(images/tipsy-flyover.png);
+	width: 11px;
+	height: 23px;
+	margin-top: -11px;
+	background-position: right;
+}
+form.articleFeedbackv5-form-flyover {
+	padding: 0 25px 0 0;
+}
+form.articleFeedbackv5-form-flyover label {
+	display: block;
+	margin: 5px 10px;
+}
+form.articleFeedbackv5-form-flyover input#articleFeedbackv5-noteflyover-note {
+	margin: 0 0 0 10px;
+	width: 100%;
+}
+.articleFeedbackv5-flyover-header {
+	background-color: #d2e5f7;
+	padding: 0 10px 3px 10px;
+	-moz-border-radius: 3px 3px 0 0;
+	-webkit-border-radius: 3px 3px 0 0;
+	border-radius: 3px 3px 0 0;
+	-khtml-border-radius: 3px 3px 0 0;
+}
+.articleFeedbackv5-flyover-header h3 {
+	font-size: 1.1em;
+}
+.articleFeedbackv5-flyover-footer {
+	width: 100%;
+	padding: 10px;
+}
+.articleFeedbackv5-flyover-help {
+	margin: 0 0 0 10px;
+	display: inline-block;
+	float: right;
+	margin-top: 4px;
+}
+#articleFeedbackv5-noteflyover-close {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 25px;
+	margin-top: 14px;
+	width: 16px;
+	height: 16px;
+	/* @embed */
+	background-image: url(images/bg-close-off-16.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-size: 16px 16px;
+}
+#articleFeedbackv5-noteflyover-close:hover {
+	/* @embed */
+	background-image: url(images/bg-close-hov-16.png);
+}
+#articleFeedbackv5-noteflyover-description {
+	padding: 0 10px;
+}
+.articleFeedbackv5-flyover-button {
+	display: inline-block;
+	float: left;
+	height: 22px;
+	line-height: 22px;
+	min-width: 34px;
+	padding: 0 8px;
+	margin: 0 10px 0 0;
+	text-align: center;
+	color: #333;
+	font-weight: bold;
+	/* @embed */
+	background: url(images/bg-button-disable.png) repeat-x;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-moz-box-shadow: -2px 2px 1px #999;
+	-webkit-box-shadow: -2px 2px 1px #999;
+	box-shadow: -2px 2px 1px #999;
+}
+.articleFeedbackv5-flyover-button:hover {
+	/* @embed */
+	background: url(images/bg-button-hov.png) repeat-x;
+	cursor: pointer;
+	color: #333;
+	text-decoration: none;
+}
+
+/** Activity Log **/
+#articleFeedbackv5-activity-log {
+	width: 350px;
+	height: 360px;
+}
+.articleFeedbackv5-activity-feedback {
+	padding: 10px 10px;
+}
+.articleFeedbackv5-activity-feedback-permalink {
+	position: absolute;
+	top: 62px;
+	right: 22px;
+}
+.articleFeedbackv5-activity-log-items {
+	height: 290px;
+	overflow: auto;
+}
+.articleFeedbackv5-activity-count {
+	background-color: #ddd;
+	padding: 3px 10px 3px 10px;
+}
+.articleFeedbackv5-activity-item {
+	padding: 5px 10px;
+	color: #555;
+}
+.articleFeedbackv5-activity-item a {
+	font-weight: bold;
+}
+.articleFeedbackv5-activity-item .articleFeedbackv5-activity-item-action {
+	font-weight: bold;
+	padding: 0 5px;
+}
+.articleFeedbackv5-activity-item .articleFeedbackv5-activity-item-action span {
+	font-weight: normal;
+	color: #555555;
+}
+.articleFeedbackv5-activity-item .articleFeedbackv5-activity-item-action.articleFeedbackv5-activity-item-action-positive {
+	color: green;
+}
+.articleFeedbackv5-activity-item .articleFeedbackv5-activity-item-action.articleFeedbackv5-activity-item-action-negative {
+	color: red;
+}
+
+/* Settings pane */
+#articleFeedbackv5-settings-menu {
+	height: 30px;
+	padding: 10px;
+}
+#articleFeedbackv5-settings-link {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	text-indent: -9999px;
+	background-size: 20px auto;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	/* @embed */
+	background-image: url(images/cog.png);
+	/* @embed */
+	background-image: -webkit-linear-gradient(transparent, transparent), url(images/cog.svg);
+	/* @embed */
+	background-image: -moz-linear-gradient(transparent, transparent), url(images/cog.svg);
+	/* @embed */
+	background-image: linear-gradient(transparent, transparent), url(images/cog.svg);
+}
+a.inactive {
+	color: #444;
+	pointer-events: none;
+	cursor: default;
+}
+
+/* Don't show mask by default */
+.articleFeedbackv5-post-screen {
+	display: none;
+}
+/* Only display the mask for posts marked as hidden/oversighted */
+.articleFeedbackv5-feedback-hide .articleFeedbackv5-post-screen,
+.articleFeedbackv5-feedback-oversight .articleFeedbackv5-post-screen {
+	display: block;
+	z-index: 99;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #dae2eb;
+	padding: 10px 30px;
+}
+.articleFeedbackv5-post-screen .articleFeedbackv5-mask-text-wrapper {
+	width: 100%;
+	color: #777;
+	font-size: 1.4em;
+	position: absolute;
+	line-height: 2em;
+	top: 50%;
+	margin-top: -1em;
+}
+.articleFeedbackv5-mask-view {
+	padding-left: 10px;
+}
+.articleFeedbackv5-activity-more {
+	display: block;
+	text-align: center;
+	padding: 5px;
+	background-color: #d2e5f7;
+}
+.articleFeedbackv5-feedback-emptymask .articleFeedbackv5-post-screen {
+	display: block;
+	min-height: 100px;
+}
+
+/** Loading tag **/
+#articleFeedbackv5-feedback-loading-top {
+	position: absolute;
+	left: 50%;
+	width: 200px;
+	margin-left: -100px;
+	margin-top: 3px;
+	z-index: 100;
+}
+#articleFeedbackv5-feedback-loading-top span {
+	background: #F9EECD;
+	padding: 5px;
+	color: #A55858;
+	border: 1px solid #A55858;
+	border-top: none;
+	zoom: 1; /* trigger IE hasLayout */
+}
+#articleFeedbackv5-feedback-loading-bottom {
+	position: absolute;
+	left: 50%;
+	width: 200px;
+	margin-left: -100px;
+	margin-top: -40px;
+	z-index: 100;
+}
+#articleFeedbackv5-feedback-loading-bottom span {
+	background: #F9EECD;
+	padding: 5px;
+	color: #A55858;
+	border: 1px solid #A55858;
+	border-bottom: none;
+	zoom: 1; /* trigger IE hasLayout */
+}
+
+/** Permalink overrides **/
+.articleFeedbackv5-feedback-permalink {
+	border-top: 2px solid #D6D7D5;
+	border-bottom-width: 1px;
+	margin-top: 20px;
+}
+.articleFeedbackv5-feedback-permalink.articleFeedbackv5-comment-notoolbox {
+	border-bottom-width: 2px;
+	margin-bottom: 20px;
+}
+
+/** Permalink info box **/
+#articleFeedbackv5-feedback-permalink-info {
+	padding: 20px 8px;
+	border-bottom: 2px solid #D6D7D5;
+	margin-bottom: 20px;
+	overflow: auto;
+	clear: both;
+}
+#articleFeedbackv5-feedback-permalink-info .articleFeedbackv5-feedback-permalink-about,
+#articleFeedbackv5-feedback-permalink-info .articleFeedbackv5-feedback-permalink-activity {
+	float: left;
+	width: 50%;
+}
+#articleFeedbackv5-feedback-permalink-info .articleFeedbackv5-feedback-permalink-activity > * {
+	margin: 0 10px;
+}
+
+#articleFeedbackv5-feedback-permalink-info h4 {
+	padding: 0 0 0.4em 22px;
+	font-size: 1.3em;
+	background-position: 0 1px;
+	background-repeat: no-repeat;
+}
+#articleFeedbackv5-feedback-permalink-info h4 span {
+	color: #696B67;
+	font-size: 0.875em;
+	padding-left: 0.5em;
+}
+#articleFeedbackv5-feedback-permalink-info p.articleFeedbackv5-feedback-permalink-activity-status {
+	background-color: #F5F5F4;
+	margin: 0;
+	padding: 10px;
+}
+#articleFeedbackv5-feedback-permalink-info span.articlefeedbackv5-permalink-last-action {
+	float: right;
+	color: #888;
+}
+#articleFeedbackv5-feedback-permalink-info span.articlefeedbackv5-permalink-last-action-comment {
+	display: block;
+}
+#articleFeedbackv5-feedback-permalink-info .articleFeedbackv5-activity-item {
+	padding: 6px;
+}
+#articleFeedbackv5-feedback-permalink-info .articleFeedbackv5-activity-item:nth-child(odd) {
+	background-color: #F5F5F4;
+}
+#articleFeedbackv5-feedback-permalink-info .articleFeedbackv5-feedback-permalink-activity-more {
+	margin: 6px 10px;
+}
+
+#articleFeedbackv5-feedback-permalink-info .articleFeedbackv5-feedback-permalink-about h4 {
+	/* @embed */
+	background-image: url(images/info.png);
+}
+#articleFeedbackv5-feedback-permalink-info .articleFeedbackv5-feedback-permalink-activity h4 {
+	/* @embed */
+	background-image: url(images/activity.png);
+}
+
+#articleFeedbackv5-feedback-permalink-info .articleFeedbackv5-feedback-permalink-meta {
+	margin-bottom: 2em;
+}
+#articleFeedbackv5-feedback-permalink-info .articleFeedbackv5-feedback-permalink-meta p {
+	margin: 0 0 0.3em 0;
+}
+#articleFeedbackv5-feedback-permalink-info .articleFeedbackv5-feedback-permalink-meta p span {
+	color: #8C8D8A;
+}
+#articleFeedbackv5-feedback-permalink-info .articleFeedbackv5-feedback-permalink-meta p.articleFeedbackv5-old-revision {
+	margin: 10px 0;
+	padding-left: 22px;
+	/* @embed */
+	background-image: url(images/old.png);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+#articleFeedbackv5-feedback-permalink-info dl.articleFeedbackv5-feedback-permalink-stats {
+	overflow: auto;
+}
+#articleFeedbackv5-feedback-permalink-info dt {
+	float: left;
+	clear: left;
+}
+#articleFeedbackv5-feedback-permalink-info dd {
+	margin-left: 8em;
+}
+#articleFeedbackv5-feedback-permalink-info dd.articleFeedbackv5-feedback-permalink-scores dl {
+	overflow: auto;
+}
+#articleFeedbackv5-feedback-permalink-info dd.articleFeedbackv5-feedback-permalink-scores dt {
+	font-weight: normal;
+}
+#articleFeedbackv5-feedback-permalink-info dd.articleFeedbackv5-feedback-permalink-scores dd {
+	margin-left: 7em;
+}
+
+#articleFeedbackv5-feedback-permalink-info .articleFeedbackv5-feedback-permalink-status {
+	color: #8C8D8A;
+}
+#articleFeedbackv5-feedback-permalink-info .articleFeedbackv5-feedback-permalink-status strong {
+	color: #000;
+}
+
+.articleFeedbackv5-comment-short,
+.articleFeedbackv5-comment-full {
+	font-size: 1.2em;
+	line-height: 1.5em;
+}
+
+.articleFeedbackv5-clear {
+	display: block !important;
+	height: 0 !important;
+	overflow: hidden !important;
+	clear: both !important;
+	float: none !important;
+	width: 100% !important;
+	border: none !important;
+}

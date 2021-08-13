@@ -1,0 +1,97 @@
+{ EventEmitter,
+} = require 'emitters'
+{ generateId, guidFor,
+} = require './guid'
+
+
+/**
+ * @class Mixin base-class. Extend this to create a new mixin, attaching the
+ *  donor methods as you would instance methods.
+ *  
+ *  To mingle your mixin with another class or object:
+ *  
+ *  class MyMixin extends Mixin
+ *      foo: -> "foo!"
+ *  
+ *  # Mix into an object...
+ *  o = MyMixin.mix { bar:1 }
+ *  
+ *  # Mix into a Coco class...
+ *  class Bar
+ *      MyMixin.mix this
+ *      bar : 1
+ *  
+ */
+class exports.Mixin
+    
+    # Make all Mixin class-objects event emitters, however don't force
+    # `Mixin` instances to inherit `EventEmitter` methods.
+    this import EventEmitter::
+    
+    
+    # Class metdata, reset for each subclass when extended
+    @__id__         = generateId()
+    @__class__      = this
+    @__super__      = null
+    @__superclass__ = null
+    
+    
+    /**
+     * Mixes this mixin into the target. If `target` is not a class, a new
+     * object will be returned which inherits from the mixin.
+     * 
+     * @static
+     * @param {Class|Object} target Target for the mixin.
+     * @returns {*} The target.
+     */
+    @mix = (target) ->
+        return that unless target
+        
+        MixinClass = Mixin
+        MixinClass = @constructor   if this instanceof Mixin
+        MixinClass = this           if this instanceof Function
+        
+        # Fire an event on the Mixin class prior to modifying the target
+        MixinClass.trigger 'before-mix', target, MixinClass
+        
+        if typeof target is 'function'
+            TargetClass = target
+            
+            # Copy over prototype contents, but don't override extant values
+            for k, v in MixinClass::
+                TargetClass::[k] ?= v
+            
+            # Copy over class methods, excepting the Mixin machinery 
+            for own k, v in MixinClass
+                continue if TargetClass[k]? or EventEmitter::[k] is v or <[ mix extended ]>.indexOf(k) >= 0
+                TargetClass[k] = v
+            
+        else
+            target = new MixinClass() import target
+        
+        (target.__mixins__ or= []).push MixinClass
+        
+        # Fire an event on the Mixin class now that we're done
+        MixinClass.trigger 'mix', target, MixinClass
+        
+        target
+    
+    
+    /**
+     * Coco metaprogramming hook to propagate class properties and methods.
+     */
+    @extended = (SubClass) ->
+        SuperClass = this
+        SubClass.__id__ = guidFor this
+        
+        for own k, v in SuperClass
+            SubClass[k] = v unless SubClass[k]
+        
+        SubClass.__class__      = SubClass
+        SubClass.__super__      = SuperClass::
+        SubClass.__superclass__ = SuperClass
+        SuperClass.trigger? 'extended', SubClass, SuperClass
+        SubClass
+    
+    
+

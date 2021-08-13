@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"antispoof-desc": "Bloca le creation de contos con alphabetos mixte, e nomines de utilisator similar o confundente",
+	"antispoof-conflict-top": "Le nomine de usator \"$1\" es troppo similar al sequente {{PLURAL:$2|nomine|nomines}} de usator:",
+	"antispoof-conflict-bottom": "Per favor elige un altere nomine de usator.",
+	"antispoof-name-illegal": "Le nomine de usator \"$1\" non es permittite pro evitar le nomines de usator confundente o falsificate: $2.\nPer favor elige un altere nomine de usator.",
+	"antispoof-badtype": "Mal typo de datos",
+	"antispoof-empty": "Serie de characteres vacue",
+	"antispoof-prohibited": "Contine le character prohibite $1",
+	"antispoof-combining": "Comencia con le marca combinatori $1",
+	"antispoof-unassigned": "Contine un character non assignate o obsolete",
+	"antispoof-deprecated": "Contine le character $1 que non plus es permittite",
+	"antispoof-noletters": "Non contine litteras",
+	"antispoof-mixedscripts": "Contine un mixtura incompatibile de alphabetos",
+	"antispoof-tooshort": "Nomine normalisate troppo curte",
+	"antispoof-ignore": "Ignorar le verificationes contra falsification",
+	"antispoof-ignore-help": "Permitte al usatores con privilegios sufficiente de crear un conto mesmo si su nomine es similar a illo de un conto existente.",
+	"action-override-antispoof": "ignorar le verificationes contra falsification",
+	"right-override-antispoof": "Ignorar le verificationes contra falsification"
+}

@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Metalhead64"
+		]
+	},
+	"autoproxyblock-desc": "Ermöglicht es, offene Proxies am Durchführen von Aktionen im Wiki zu hindern",
+	"proxy-blocked": "{{GENDER:|Deine}} IP-Adresse ist als Proxy gelistet. Die ausgeführte Aktion wurde verworfen.",
+	"abusefilter-edit-builder-vars-is-proxy": "Wahr, falls diese Aktion von einem Proxy ausgeführt wurde",
+	"tag-proxy": "Aktion durch einen Proxy",
+	"action-proxyunbannable": "automatische Proxysperren zu umgehen",
+	"right-proxyunbannable": "Ausnahme von automatischen Proxysperren",
+	"action-notagproxychanges": "Proxies am Markieren von Änderungen zu hindern",
+	"right-notagproxychanges": "Proxies am Markieren von Änderungen hindern",
+	"action-autoproxyblock-log": "das Logbuch automatisch gesperrter Änderungen durch Proxies anzusehen",
+	"right-autoproxyblock-log": "Das Logbuch automatisch gesperrter Änderungen durch Proxies ansehen",
+	"proxyblock-log-name": "Automatisches-Proxy-Sperr-Logbuch",
+	"proxyblock-log-header": "Liste automatisch gesperrter Änderungen durch Proxies",
+	"proxyblock-logentry-blocked": "Die Aktion „$2“ {{GENDER:$3|des Benutzers|der Benutzerin}} $3 auf der Seite [[$1]] wurde automatisch gesperrt."
+}

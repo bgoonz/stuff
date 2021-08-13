@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"biblioplus-desc": "Автоматски се оповикува на наводи од PubMed и базата на ISBN",
+	"biblioplus-doi-tooltip": "Прочитајте или купете ја статијата од издавачот",
+	"biblioplus-pmid-tooltip": "Прочитајте или купете ја статијата од издавачот (ако е достапна)",
+	"biblioplus-isbn-tooltip": "Информации за книгата на isbndb.org",
+	"biblioplus-medline-abstracts": "Сите извадоци од Medline:",
+	"biblioplus-pubmed-abstracts": "Сите извадоци од PubMed",
+	"biblioplus-hubmed-abstracts": "Сите извадоци од HubMed",
+	"biblioplus-vkey-title": "Врска до библиографската база"
+}

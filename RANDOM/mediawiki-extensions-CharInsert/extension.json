@@ -1,0 +1,55 @@
+{
+	"name": "CharInsert",
+	"author": "Brion Vibber",
+	"url": "https://www.mediawiki.org/wiki/Extension:CharInsert",
+	"descriptionmsg": "charinsert-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "parserhook",
+	"requires": {
+		"MediaWiki": ">= 1.35.0"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "CharInsertHookHandler",
+		"BeforePageDisplay": "CharInsertHookHandler"
+	},
+	"HookHandlers": {
+		"CharInsertHookHandler": {
+			"class": "MediaWiki\\Extensions\\CharInsert\\Hooks"
+		}
+	},
+	"MessagesDirs": {
+		"CharInsert": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"ext.charinsert": {
+			"scripts": [
+				"ext.charinsert.js"
+			],
+			"dependencies": [
+				"jquery.textSelection"
+			],
+			"targets": [
+				"desktop"
+			]
+		},
+		"ext.charinsert.styles": {
+			"styles": [
+				"ext.charinsert.css"
+			],
+			"targets": [
+				"desktop"
+			]
+		}
+
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "modules",
+		"remoteExtPath": "CharInsert/modules"
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extensions\\CharInsert\\": "includes/"
+	},
+	"manifest_version": 2
+}

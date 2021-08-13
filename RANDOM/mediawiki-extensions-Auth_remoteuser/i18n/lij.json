@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Giromin Cangiaxo"
+		]
+	},
+	"auth_remoteuser-desc": "O registra aotomaticamente i utenti doeuviando a variabbile d'ambiente <code>REMOTE_USER</code>"
+}

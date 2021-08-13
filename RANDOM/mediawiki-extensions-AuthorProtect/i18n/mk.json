@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"authorprotect": "Заштити ја страницата од неавтори",
+	"authorprotect-desc": "Му овозможува на авторот на една страница да ја заштити од други корисници",
+	"authorprotect-notauthor": "Не {{GENDER:$1|сте}} {{GENDER:$1|автор}} на оваа страница.",
+	"authorprotect-confirm": "Промени го нивото на заштита",
+	"authorprotect-edit": "Само автори можат да уредуваат",
+	"authorprotect-move": "Само автори можат да преместуваат",
+	"authorprotect-intro": "Користете го овој образец за да ја заклучите страницата од неавтори",
+	"authorprotect-success": "Заштитата е воспоставена!",
+	"protect-level-author": "Заштити од неавтори",
+	"restriction-level-author": "Авторска заштита",
+	"action-authorprotect": "заштита од неавтори",
+	"right-authorprotect": "Заштити авторски страници",
+	"action-author": "уредување на страници заштитени од авторот",
+	"right-author": "Уредување на страници заштитени од авторот"
+}

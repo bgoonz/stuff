@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gomoko",
+			"IAlex",
+			"Peter17",
+			"Verdy p"
+		]
+	},
+	"breadcrumbs-desc": "Ajoute une suite de panneaux de navigation sous la barre d’onglets",
+	"prefs-breadcrumbs-separator": "Séparateur de panneaux de navigation",
+	"prefs-breadcrumbs-separator-max": "Un maximum de 2 caractères peuvent être saisis.",
+	"prefs-breadcrumbs": "Panneaux de navigation",
+	"prefs-breadcrumbs-showcrumbs": "Afficher les panneaux de navigation",
+	"prefs-breadcrumbs-numberofcrumbs": "Nombre de panneaux de navigation",
+	"prefs-breadcrumbs-numberofcrumbs-max": "Au maximum 20 panneaux de navigation peuvent être affichés.",
+	"prefs-breadcrumbs-namespaces": "Inclure les espaces de noms dans les panneaux de navigation",
+	"prefs-breadcrumbs-filter-duplicates": "Filtrer les pages visitées à plusieurs reprises",
+	"prefs-breadcrumbs-preceding-text": "Texte à afficher avant les panneaux de navigation",
+	"prefs-breadcrumbs-preceding-text-max": "Un maximum de 30 caractères peuvent être saisis."
+}

@@ -1,0 +1,112 @@
+{
+	"name": "BibManager",
+	"version": "1.23.0",
+	"author": [
+		"Hornemann Institut",
+		"Hallo Welt! Medienwerkstatt GmbH",
+		"Tobias Weichart",
+		"Robert Vogel"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:BibManager",
+	"descriptionmsg": "bibmanager-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "specialpage",
+	"requires": {
+		"MediaWiki": ">= 1.36.0"
+	},
+	"AvailableRights": [
+		"bibmanageredit",
+		"bibmanagerdelete",
+		"bibmanagercreate"
+	],
+	"GroupPermissions": {
+		"sysop": {
+			"bibmanageredit": true,
+			"bibmanagerdelete": true,
+			"bibmanagercreate": true
+		}
+	},
+	"SpecialPages": {
+		"BibManagerList": "SpecialBibManagerList",
+		"BibManagerListAuthors": "SpecialBibManagerListAuthors",
+		"BibManagerImport": "SpecialBibManagerImport",
+		"BibManagerExport": "SpecialBibManagerExport",
+		"BibManagerDelete": "SpecialBibManagerDelete",
+		"BibManagerCreate": "SpecialBibManagerCreate",
+		"BibManagerEdit": "SpecialBibManagerEdit"
+	},
+	"MessagesDirs": {
+		"BibManager": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"BibManagerAlias": "BibManager.alias.php"
+	},
+	"AutoloadClasses": {
+		"Structures_BibTex": "includes/libs/Structures_BibTex/BibTex.php",
+		"BibManagerHooks": "includes/BibManagerHooks.php",
+		"BibManagerFieldsList": "includes/BibManagerFieldsList.php",
+		"BibManagerLocalMWDatabaseRepo": "includes/BibManagerLocalMWDatabaseRepo.php",
+		"BibManagerPagerList": "includes/BibManagerPagerList.php",
+		"BibManagerPagerListAuthors": "includes/BibManagerPagerListAuthors.php",
+		"BibManagerRepository": "includes/BibManagerRepository.php",
+		"BibManagerValidator": "includes/BibManagerValidator.php",
+		"SpecialBibManagerList": "includes/specials/SpecialBibManagerList.php",
+		"SpecialBibManagerListAuthors": "includes/specials/SpecialBibManagerListAuthors.php",
+		"SpecialBibManagerImport": "includes/specials/SpecialBibManagerImport.php",
+		"SpecialBibManagerExport": "includes/specials/SpecialBibManagerExport.php",
+		"SpecialBibManagerCreate": "includes/specials/SpecialBibManagerCreate.php",
+		"SpecialBibManagerDelete": "includes/specials/SpecialBibManagerDelete.php",
+		"SpecialBibManagerEdit": "includes/specials/SpecialBibManagerEdit.php"
+	},
+	"ResourceModules": {
+		"ext.bibManager.styles": {
+			"styles": "ext.bibManager.css"
+		},
+		"ext.bibManager.List": {
+			"scripts": "ext.bibManager.List.js",
+			"dependencies": "ext.bibManager.styles"
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "BibManager/resources"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "BibManagerHooks::onParserFirstCallInit",
+		"BeforePageDisplay": "BibManagerHooks::onBeforePageDisplay",
+		"LoadExtensionSchemaUpdates": "BibManagerHooks::onLoadExtensionSchemaUpdates"
+	},
+	"config": {
+		"BibManagerRepoClass": {
+			"value": "BibManagerLocalMWDatabaseRepo"
+		},
+		"BibManagerCitationFormats": {
+			"value": {
+				"-": "%author%: %title%, %year%",
+				"article": "%author% (%year%): %title%. <em>%journal%</em>, %volume%, %pages%",
+				"book": "%author% (%year%): %title%. (%edition%). <em>%publisher%</em>, %address%, %pages%",
+				"booklet": "%title%",
+				"conference": "%author% (%year%): %title%. %booktitle%",
+				"inbook": "%author% (%year%): %title%. (%edition%). <em>%publisher%</em>, %address%, %pages%, %editor%, %chapter%",
+				"incollection": "%author% (%year%): %title%.  %booktitle%",
+				"inproceedings": "%author% (%year%): %title%. <em>%publisher%</em>, %booktitle%",
+				"manual": "%title%",
+				"mastersthesis": "%author% (%year%): %title%. %school%",
+				"misc": "%author%: %title%, %year%",
+				"phdthesis": "%author% (%year%): %title%. %school%",
+				"proceedings": "%title% (%year%)",
+				"techreport": "%author% (%year%): %title%. %institution%.",
+				"unpublished": "%author%: %title%. %note%."
+			}
+		},
+		"BibManagerCitationArticleNamespace": {
+			"value": 0
+		},
+		"BibManagerScholarLink": {
+			"value": "http://scholar.google.com/scholar?q=%title%"
+		}
+	},
+	"manifest_version": 2
+}

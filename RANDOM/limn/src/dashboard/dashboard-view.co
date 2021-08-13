@@ -1,0 +1,135 @@
+_ = require 'underscore'
+ko = require 'knockout'
+{
+    unwrapObservable : unwrap
+    peekObservable   : peek
+} = ko.utils
+
+{ compareIds, OrderedSet, formatters,
+} = require '../util'
+{ View,
+} = require '../base/view'
+{ Dashboard,
+} = require './dashboard-model'
+{ DashboardTabView,
+} = require './dashboard-tab-view'
+
+
+
+class exports.DashboardView extends View
+    template: 'dashboard'
+    
+    defaults: ->
+        model       : null
+        action      : null
+        isDisposed : false
+        tabs        : []
+    
+    attributeTypes: ->
+        tabs        : (tab) -> new DashboardTabView this, tab
+    
+    
+    (model, action) ->
+        super()
+        
+        # Decorate properties we need to clean up with history tracking
+        @tabs = @attributes.tabs = @tabs.history({ -includeInitial })
+        @tabs.equalityComparer = compareIds
+        @tabs.subscribe ~>
+            if @tabs().length
+                
+                tabsShown = ko.observable(0)
+                @tabs().forEach (tab) ->
+                    tab.el.subscribe ->
+                        tabsShown(tabsShown()+1)
+                
+                tabsShown.subscribe ~>
+                    return if tabsShown() < @tabs().length
+                    
+                    if location.hash
+                        # enable link to tab, if one present in the url
+                        showTab = @$("li.tab-button a[href=#{location.hash}]")
+                    else
+                        # otherwise, open first tab
+                        showTab = @$('li.tab-button:first a')
+                    
+                    showTab.tab('show')
+                    showTab.click()
+                    
+                    # On navigate, change hash
+                    @$('li.tab-button a').on('shown', (e) ->
+                        location.hash = e.target.hash
+                        console.log('hi' + e.target.hash)
+                    )
+        
+        if model instanceof Dashboard
+            model.fetch()
+        else if typeof model is 'string'
+            model = Dashboard.load { id:model }
+        else
+            model = new Dashboard model
+        
+        @action action
+        @model  model
+        
+        @watching()
+    
+    
+    watchDeps: ->
+        @model().tabs()
+        @tabs()
+    
+    
+    watchOthers : ->
+        # console.log "#this.watchOthers!"
+        tabs = @watchModels()
+        _.invoke @tabs(), 'watching'
+        tabs
+    
+    
+    watchModels : @computed ->
+        # console.log "#this.watchModels!"
+        @tabs newModels = @model().tabs().slice()
+        newModels
+    
+    
+    updateActiveTab: ->
+        @everActivated true
+    
+    
+    ### Navigation Between Graphs {{{
+    
+    
+    /**
+     * Scroll to the specified graph.
+     * 
+     * @param {String|Number|Graph} graph The Graph to scroll to; can be specified as a
+     *  Graph id, an index into the Graphs list, or a Graph object.
+     * @returns {this} 
+     */
+    scrollToGraph: (graph) ->
+        if typeof graph is 'string'
+            graph = @graphs.get graph
+        else if typeof graph is 'number'
+            graph = @graphs.at graph
+        unless graph instanceof Graph
+            console.error "#this.scrollToGraph() Unknown graph #graph!"
+            return this
+        return this unless view = _.find @subviews, -> it.model is graph
+        $ 'body' .scrollTop view.$el.offset().top if view.$el.is ':visible'
+        this
+    
+    
+    findClosestGraph: (scroll) ->
+        scroll or= $ 'body' .scrollTop()
+        views = @subviews
+            .filter -> it.$el.is ':visible'
+            .map -> [ it.$el.offset().top, it ]
+            .filter -> it[0] >= scroll
+            .sort (a,b) -> op.cmp a[0], b[0]
+        return views[0][1] if views.length
+    
+    
+    ### }}}
+    
+    

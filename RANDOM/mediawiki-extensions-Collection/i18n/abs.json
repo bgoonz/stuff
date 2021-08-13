@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Anok kutai jang",
+			"MuratTheTurkish"
+		]
+	},
+	"coll-remove": "Kas apus",
+	"coll-show": "Kas tunjuk kamuka",
+	"coll-move_up": "Kas nae",
+	"coll-move_down": "Kas turung",
+	"coll-print_export": "Kas cetak/kiring",
+	"coll-create_a_book": "Biking buku",
+	"coll-book_creator": "Pambiking buku",
+	"coll-download_as": "Ambel dar internet dalang bentuk $1",
+	"coll-disable": "tutup",
+	"coll-book_creator_disable": "Tutp pambiking buku",
+	"coll-book_creator_disable_tooltip": "Barenti bapake pambiking buku",
+	"coll-add_this_page": "Kas tambah akang kintal ka dalang ale pung buku",
+	"coll-add_page_tooltip": "Kas tamba akang wiki pung kintal ka ale pung buku",
+	"coll-help": "Bantuan",
+	"coll-help_tooltip": "Kas lia bantuan par biking buku-buku",
+	"coll-helppage": "Help:Buku",
+	"coll-n_pages": "$1 {{PLURAL:$1|kintal}}",
+	"coll-remove_this_page": "Hapus kintal dar ale pung buku",
+	"coll-show_collection": "Lia buku",
+	"coll-show_collection_tooltip": "Klik par robah/ambel dar internet/pasang ale pung buku",
+	"coll-make_suggestions": "Ka saran kintal sabiji",
+	"coll-attribution-anons": "Pangguna anonim: $1",
+	"coll-article-attribution": "<b>$1</b> <i>Sumber:</i> $2 <i>Kontributor:</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>Sumber:</i> $2 <i>Lisensi:</i> $3 <i>Kontributor:</i> $4 <i>Peambiking batul:</i> $5"
+}

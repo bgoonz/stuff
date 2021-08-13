@@ -1,0 +1,43 @@
+_       = require 'underscore'
+ko      = require 'knockout'
+Seq     = require 'seq'
+
+{ compareIds, OrderedSet, formatters,
+} = require '../util'
+{ StoredModel,
+} = require '../base'
+{ Graph,
+} = require '../graph/graph-model'
+{ DashboardTab,
+} = require './dashboard-tab-model'
+
+class exports.Dashboard extends StoredModel
+    resource : 'dashboards'
+    getId    : -> @get 'id'
+    
+    /**
+     * @constructor
+     */
+    -> super ...
+    
+    
+    defaults: ->
+        id          : null
+        headline    : ''
+        subhead     : ''
+        tabs        : []
+    
+    attributeTypes: ->
+        tabs        : DashboardTab
+    
+    
+    /**
+     * Inform sub-objects its safe to begin their watchers.
+     */
+    watching: @computed ->
+        # console.log "#this.watching!"
+        @isWatching = true
+        @tabs()
+        ko.dependencyDetection.ignore ~>
+            _.invoke @tabs(), 'watching'
+    

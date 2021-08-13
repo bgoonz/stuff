@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cocu",
+			"Danmichaelo",
+			"Jeblad",
+			"Jon Harald Søby",
+			"Nghtwlkr",
+			"Simen47"
+		]
+	},
+	"apihelp-pollsubmitvote-description": "API-modul for AJAXPoll",
+	"apihelp-pollsubmitvote-summary": "API-modul for AJAXPoll",
+	"apihelp-pollsubmitvote-param-poll": "Poll-ID, som 832A5FA2C2583A5732B90CEFF658FE25; ID-er dannes ved å hashe innputten (spørsmål + svaralternativer, altså teksten mellom <code>&lty;poll&gt;…&lt;/poll&gt;</code>-taggene) med MD5-algoritmen og så konvertere resultatet til STORE BOKSTAVER med PHPs <code>strtoupper</code>-funksjon",
+	"apihelp-pollsubmitvote-param-answer": "Numerisk svaralternativ-ID; bruk 0 for å nullstille en tidligere avgitt stemme",
+	"apihelp-pollsubmitvote-example-1": "Lever det tredje (3) svaret til avstemningen med ID-en 832A5FA2C2583A5732B90CEFF658FE25",
+	"ajaxpoll-desc": "Tillater AJAX-baserte avstemminger med <code>&lt;poll&gt;</code> tagg",
+	"ajaxpoll-tracking-category": "Sider med en avstemning",
+	"ajaxpoll-tracking-category-desc": "Siden har en <code>&lt;poll&gt;</code>.",
+	"ajaxpoll-vote-update": "Din stemme har blitt oppdatert.",
+	"ajaxpoll-vote-add": "Din stemme har blitt lagt til.",
+	"ajaxpoll-vote-error": "Det oppstod et problem med behandlingen av din stemme, vennligst prøv igjen.",
+	"ajaxpoll-percent-votes": "$1&nbsp;% av alle stemmer",
+	"ajaxpoll-your-vote": "Du stemte for «$1» $3 kl. $4. Du kan endre stemmen din ved å klikke på et annet svar nedenfor.",
+	"ajaxpoll-no-vote": "Vennligst stem nedenfor.",
+	"ajaxpoll-no-vote-results-after-voting": "Vennligst stem under. Resultatene vil bli vist når du har stemt.",
+	"ajaxpoll-info": "Det har kommet inn {{PLURAL:$1|én stemme|$1 stemmer}} siden spørreundersøkelsen ble opprettet den $2.",
+	"ajaxpoll-submitting": "Vennligst vent, sender inn stemmen din.",
+	"ajaxpoll-vote-permission": "Du har ikke rettigheter til å stemme.",
+	"ajaxpoll-readonly": "Denne avstemningen kan ikke stemmes i fordi databasen er låst av følgende årsak: $1.",
+	"ajaxpoll-view-results-permission": "Du har ikke rettigheter til å vise resultatene i denne avstemningen.",
+	"ajaxpoll-view-results-before-vote-permission": "Du har ikke rettigheter til å vise resultatene av denne avstemningen før du har stemt.",
+	"ajaxpoll-revoke-vote": "Jeg vil trekke tilbake stemmen min",
+	"ajaxpoll-vote-revoked": "Din stemme har blitt tilbakekalt.",
+	"right-ajaxpoll-vote": "Kan stemme i AJAX-baserte avstemninger",
+	"right-ajaxpoll-view-results": "Kan se resultater i AJAX-baserte avstemninger",
+	"right-ajaxpoll-view-results-before-vote": "Kan se resultater i AJAX-baserte avstemninger før stemme er avgitt",
+	"action-ajaxpoll-vote": "stemme i AJAX-baserte avstemninger",
+	"action-ajaxpoll-view-results": "se resultater i AJAX-baserte avstemninger",
+	"action-ajaxpoll-view-results-before-vote": "se resultater i AJAX-baserte avstemninger før avstemming"
+}

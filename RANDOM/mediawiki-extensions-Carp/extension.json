@@ -1,0 +1,23 @@
+{
+	"name": "Carp",
+	"version": "0.2.0",
+	"author": [
+		"[https://www.mediawiki.org/wiki/User:Van_de_Bugger Van de Bugger]"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:Carp",
+	"descriptionmsg": "carp-desc",
+	"license-name": "AGPL-3.0-only",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.32.0"
+	},
+	"MessagesDirs": {
+		"Carp": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"Carp": "Carp.class.php"
+	},
+	"manifest_version": 2
+}

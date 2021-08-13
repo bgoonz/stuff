@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Arlin",
+			"Sahran"
+		]
+	},
+	"admanager": "ئېلان باشقۇرغۇچ",
+	"admanagerzones": "ئېلان باشقۇرغۇچ رايون",
+	"admanager-desc": "بىر [[Special:AdManager|ئالاھىدە بەت]]  تەمىنلىگەن، ئۇ باشقۇرغۇچىنىڭ بەت ياكى تۈرگە ئايرىش دائىرىسىنى تەڭشىشىگە يول قويىدۇ.",
+	"admanagerzones_docu": "ئۆزىنىڭ قۇرىدا ھەر بىر ئېلان رايونىنىڭ نومۇرىنى كىرگۈزۈڭ.",
+	"admanager_invalidtargetpage": "ماۋزۇسى \"$1\" بولغان بەت تېپىلمىدى.",
+	"admanager_invalidtargetcategory": "ماۋزۇسى \"$1\" بولغان كاتېگورىيە تېپىلمىدى.",
+	"admanager_notable": "خاتالىق! زۆرۈر بىر ساندان جەدۋىلىنى تاپالمىدى! ئالدى بىلەن update.php نى ئىجرا قىلىڭ.",
+	"admanager_noAdManagerZones": "خاتالىق! چوقۇم ئېلان ئورنى قىستۇرۇشىڭىز كېرەك.  [[Special:AdManagerZones|ئېلان ئورنىنى باشقۇرۇش]] نىڭ ئىچىگە ئۇنى كىرگۈزۈڭ.",
+	"admanager_labelPage": "بەت ماۋزۇسى:",
+	"admanager_labelCategory": "كاتېگورىيە ئىسمى",
+	"admanager_submit": "تاپشۇر",
+	"admanager_noads": "ئېلان كۆرسەتمە",
+	"admanager_Page": "بەتلەر",
+	"admanager_Category": "كاتېگورىيە",
+	"admanager_added": "ئۆزگەرتىش ساقلاندى",
+	"admanager_addedzone": "قوشۇلغان رايون",
+	"admanager_zonenum": "رايۇن # :$1",
+	"admanager_zonenotnumber": "خاتا! $1 سان ئەمەس.",
+	"admanager_return": "[[Special:AdManager|ئېلان باشقۇرغۇچ]] غا قايت.",
+	"admanager_gotoads": "[[Special:AdManager|ئېلان ئورنىنى تەھرىرلەش]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|ئېلان رايوننى تەھرىرلەش]]",
+	"right-admanager": "[[Special:AdManager|ئېلان باشقۇرغۇچنى تەڭشە]]"
+}

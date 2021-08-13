@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bennylin",
+			"Daud I.F. Argana",
+			"Rachmat04"
+		]
+	},
+	"adminlinks": "Pranala pengurus",
+	"adminlinks-desc": "Menambahkan sebuah [[Special:AdminLinks|halaman istimewa]] yang berisi pranala-pranala yang berguna untuk pengurus",
+	"adminlinks_documentation": "Dokumentasi $1",
+	"adminlinks_general": "Umum",
+	"adminlinks_editsidebar": "Sunting bilah samping",
+	"adminlinks_editcss": "Sunting berkas CSS",
+	"adminlinks_editmainpagename": "Sunting nama halaman utama",
+	"adminlinks_users": "Pengguna",
+	"adminlinks_browsesearch": "Menjelajah dan mencari",
+	"adminlinks_importexport": "Impor dan ekspor",
+	"adminlinks_pagenotfound": "Gagal menemukan halaman istimewa dengan nama: $1.",
+	"action-adminlinks": "lihat pranala pengurus",
+	"right-adminlinks": "Lihat pranala ke [[Special:AdminLinks|pranala pengurus]]"
+}

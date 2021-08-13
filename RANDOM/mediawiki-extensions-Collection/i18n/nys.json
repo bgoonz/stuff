@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gnangarra"
+		]
+	},
+	"coll-remove": "Moon garng",
+	"coll-show": "Yong-a",
+	"coll-move_up": "irak",
+	"coll-move_down": "ardak",
+	"coll-print_export": "Print/export",
+	"coll-create_a_book": "wallak boola bibol",
+	"coll-book_creator": "Boola bibol quadga",
+	"coll-download_as": "Download as $1",
+	"coll-disable": "warra",
+	"coll-book_creator_disable": "Warra boola bibol wallak",
+	"coll-book_creator_disable_tooltip": "Nan-nap using the boola bibol creator",
+	"coll-add_this_page": "nidja bibol noonook boola bibol",
+	"coll-add_page_tooltip": "Wer yeye bibol noonook boola bibol",
+	"coll-help": "Mar yirra",
+	"coll-help_tooltip": "Yong-a mar yira wallakiny boorla bibol",
+	"coll-helppage": "Help:Boola bibol",
+	"coll-n_pages": "$1 {{PLURAL:$1|bibol}}",
+	"coll-remove_this_page": "Moon garng nidja bibol noonook boola bibol",
+	"coll-show_collection": "Yong-a boola bibol",
+	"coll-show_collection_tooltip": "Burrunginy wallak/burrunginy bibol waanginy",
+	"coll-make_suggestions": "Bibol kiar-be",
+	"coll-make_suggestions_tooltip": "Yong-a kiar-be mokin bibol bura boola bibol",
+	"coll-attribution-anons": "Ngeern $1",
+	"coll-article-attribution": "<b>$1</b> <i>Birnup:</i> $2 <i>Niall:</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>Source:</i> $2 <i>License:</i> $3 <i>Contributors:</i> $4 <i>Original artist:</i> $5"
+}

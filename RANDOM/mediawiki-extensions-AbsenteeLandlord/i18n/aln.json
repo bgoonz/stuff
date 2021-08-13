@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bresta"
+		]
+	},
+	"absenteelandlord-reason": "Baza e të dhânave âsht bllokue automatikisht për shkak të mosaktivitetit të administruesve.",
+	"absenteelandlord-desc": "E vetë-bllokon bazën e të dhânave nëse administruesit janë joaktiv për nji kohë të caktueme."
+}

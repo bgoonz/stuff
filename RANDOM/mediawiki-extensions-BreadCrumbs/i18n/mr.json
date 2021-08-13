@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"V.narsikar"
+		]
+	},
+	"breadcrumbs-desc": "विकिमधील सदस्याचा मार्ग (पाथ) दर्शविते",
+	"prefs-breadcrumbs-separator": "भाकर-तुकडा वेचक",
+	"prefs-breadcrumbs-separator-max": "जास्तीत जास्त दोन अक्षरे असावीत.",
+	"prefs-breadcrumbs": "भाकर-तुकडे",
+	"prefs-breadcrumbs-showcrumbs": "भाकर तुकडे दाखवा",
+	"prefs-breadcrumbs-numberofcrumbs": "भाकर तुकड्यांची संख्या",
+	"prefs-breadcrumbs-numberofcrumbs-max": "जास्तीत जास्त २० भाकर तुकडे दाखविल्या जाउ शकतात.",
+	"prefs-breadcrumbs-namespaces": "भाकर तुकड्यात नामविश्वे अंतर्भूत करा",
+	"prefs-breadcrumbs-filter-duplicates": "भेट दिलेल्या पानांची- वारंवार गाळणी करा",
+	"prefs-breadcrumbs-preceding-text": "भाकर तुकड्याच्या आधी टाकावयाचा मजकूर",
+	"prefs-breadcrumbs-preceding-text-max": "जास्तीत जास्त ३० अक्षरे टाकता येतील."
+}

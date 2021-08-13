@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"David1010"
+		]
+	},
+	"authorprotect": "გვერდების დაცვა არა-ავტორებისაგან",
+	"authorprotect-desc": "გვერდის ავტორს უფლებას აძლევს დაიცვას გვერდი სხვა მომხმარებელბის რედაქტირებისაგან",
+	"authorprotect-notauthor": "{{GENDER:$1|თქვენ}} არ ხართ ამ გვერდის {{GENDER:$1|ავტორი}}.",
+	"authorprotect-confirm": "დაცვის დონის შეცვლა",
+	"authorprotect-edit": "რედაქტირება შეუძლიათ მხოლოდ ავტორებს",
+	"authorprotect-move": "გადატანა შეუძლიათ მხოლოდ ავტორებს",
+	"authorprotect-intro": "გამოიყენეთ ეს ფორმა, რათა დაიცვათ გვერდი მომხმარებლებისაგან, რომლების არ არიან ავტორები",
+	"authorprotect-success": "დაცვა დაყენდა!",
+	"protect-level-author": "დაცვა არა-ავტორებისაგან",
+	"restriction-level-author": "საავტორო დაცვა",
+	"right-authorprotect": "საავტორო გვერდების დაცვა",
+	"right-author": "საავტორო დაცული გვერდების რედაქტირება"
+}

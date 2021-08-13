@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aleš Kapica",
+			"Cvanca",
+			"Mormegil"
+		]
+	},
+	"accesscontrol-desc": "Toto je rozšíření, které přidává uživatelskou možnost omezení přístupu ke stránce",
+	"accesscontrol-info": "Toto je zabezpečená stránka.",
+	"accesscontrol-info-box": "Na této stránce bylo zavedeno omezení přístupu. Pokud vidíte tuto zprávu, nemáte na tuto stránku přístup."
+}

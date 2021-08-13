@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bhawani Gautam",
+			"Bhawani Gautam Rhk",
+			"RajeshPandey",
+			"पर्वत सुबेदी",
+			"राम प्रसाद जोशी",
+			"हिमाल सुबेदी"
+		]
+	},
+	"code-comments": "टिप्पणीहरू",
+	"code-change-removed": "हटाइयाे:",
+	"code-authors": "लेखकहरु",
+	"code-author-link": "लिङ्क गर्ने?",
+	"code-author-unlink": "लिङ्क तोड़ने",
+	"code-field-status": "स्थिति",
+	"code-field-path": "पथ",
+	"code-field-text": "सूचना",
+	"code-field-select": "चुन्ने",
+	"code-rev-message": "टिप्पणी :",
+	"code-rev-status": "स्थिति:",
+	"code-status-new": "नयाँ",
+	"code-status-ok": "हुन्छ",
+	"code-signoff-field-user": "प्रयोगकर्ता",
+	"code-rev-submit": "परिवर्तन सङ्ग्रह गर्ने",
+	"codereview-subtitle": "$1 का लागि",
+	"code-stats": "तथ्याङ्कहरू"
+}

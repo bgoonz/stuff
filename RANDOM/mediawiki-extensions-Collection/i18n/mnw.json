@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aue Nai",
+			"Htawmonzel"
+		]
+	},
+	"coll-desc": "[[Special:Book|ခၞံကၠောန် လိက်အုပ်ဂမၠိုၚ်]]",
+	"coll-manage_your_book": "ကောပ်ကာဲ လိက်အုပ် မၞး",
+	"coll-book_creator_help": "ရံၚ် [[{{MediaWiki:Coll-helppage}}|မုက်လိက်ရီုပရူလိက်အုပ်ဂမၠိုၚ်]] သွက်တၚ်နၚ်ဗွဲမဂၠိုၚ်.",
+	"coll-collection": "လိက်",
+	"coll-collections": "လိက်ဂမၠိုၚ်",
+	"coll-your_book": "လိက်အုပ် မၞး",
+	"coll-download_title": "တံင်လုပ်",
+	"coll-download_text": "သ္ဂောံဂြဲဖျေံလိက်အုပ်မၞးဂှ် ရုဲစှ် နဲကဲကၠောန်ၜိုတ်မွဲ တုဲ ဍဵုကေတ် ကောန်ဍောၚ်",
+	"coll-remove": "ပတိတ်",
+	"coll-show": "ထ္ၜး",
+	"coll-move_up": "ပြံင်ပတိုန် လတူ",
+	"coll-move_down": "ပြံင်ဖျေဟ် သၟဝ်",
+	"coll-print_export": "ပရေန်/ပတိတ်",
+	"coll-create_a_book": "ခၞံကၠောန် လိက်ကၞပ် မွဲ",
+	"coll-book_creator": "ညးမခၞံကၠောန် လိက်",
+	"coll-download_as": "တံင်လုပ် နဒဒှ် $1",
+	"coll-disable": "ဟွံသၟဟ်အစောံ",
+	"coll-book_creator_disable": "ကၟာတ်ပလီု အရာမခၞံကၠောန် လိက်ကၞပ်",
+	"coll-book_creator_disable_tooltip": "ဒေါအ် နူ ပွမသုင်စောဲ အရာမခၞံကၠောန်လိက်ကၞပ်",
+	"coll-add_this_page": "စုတ် မုက်လိက်ဏအ် ပ္ဍဲ လိက်ကၞပ် မၞး",
+	"coll-add_page_tooltip": "စုတ် မုက်လိက်ဝဳကဳ ဏအ် ပ္ဍဲ လိက်ကၞပ် မၞး",
+	"coll-help": "ရီု",
+	"coll-help_tooltip": "ထ္ၜး အရီုအဗင် ပရူ မခၞံကၠောန် လိက်ဂမၠိုင်",
+	"coll-helppage": "Help:လိက်ကၞပ်ဂမၠိုင်",
+	"coll-n_pages": "$1 {{PLURAL:$1|မုက်လိက်|မုက်လိက်ဂမၠိုင်}}",
+	"coll-remove_this_page": "ပတိတ်ထောအ် မုက်လိက်ဏအ် နူ လိက်ကၞပ်မၞး",
+	"coll-show_collection": "ထ္ၜး လိက်ကၞပ်",
+	"coll-show_collection_tooltip": "ဍဵု သွက်ဂွံ ပလေဝ်/ကေတ်ဒံင်လုပ်/ဗကန် လိက်မၞး",
+	"coll-make_suggestions": "မုက်လိက် မကဵုကသပ်ဂမၠိုင်",
+	"coll-make_suggestions_tooltip": "ထ္ၜး တင်မကဵုကသပ် မဒုင်သဇိုင် မုက်လိက် ပ္ဍဲလိက်ကၞပ်မၞး",
+	"coll-attribution-anons": "မသက္ကုယၟု- $1",
+	"coll-article-attribution": "<b>$1</b> <i>တမ်ရိုဟ်:</i> $2 <i>ညးမကၠောန်ဗဒှ်ဂမၠိုင်:</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>တမ်ရိုဟ်-</i> $2 <i>လာင်ဇြေန်-</i> $3 <i>ညးမရီုဒက်ပတန်-</i> $4 <i>အစာကသူ တမ်မူလ-</i> $5"
+}

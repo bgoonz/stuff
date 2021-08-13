@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Arifin.wijaya",
+			"Farras"
+		]
+	},
+	"biblioplus-desc": "Secara otomatis mengambil kutipan dari PubMed dan database ISBN",
+	"biblioplus-doi-tooltip": "Lihat atau beli artikel dari penerbit",
+	"biblioplus-pmid-tooltip": "Lihat atau beli artikel dari penerbit (jika tersedia)",
+	"biblioplus-isbn-tooltip": "Informasi buku di isbndb.org",
+	"biblioplus-medline-abstracts": "Semua abstrak Medline:",
+	"biblioplus-pubmed-abstracts": "Semua abstrak di PubMed",
+	"biblioplus-hubmed-abstracts": "Semua abstrak di HubMed",
+	"biblioplus-vkey-title": "tautan ke basis data pustaka"
+}

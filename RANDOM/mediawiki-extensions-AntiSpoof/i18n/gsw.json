@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Als-Holder",
+			"Hendergassler"
+		]
+	},
+	"antispoof-desc": "Verhinderet s Aalege vu Benutzerkonte mit gmischlete Zeichesätz, Benutzernäme wu verwirre oder ähnligs",
+	"antispoof-conflict-top": "Dr Name „$1“ isch {{PLURAL:$2|däm Benutzerkonto|däne $2 Benutzerkonte}} zue ähnli:",
+	"antispoof-conflict-bottom": "Bitte wehl e andere Name.",
+	"antispoof-name-illegal": "Dr Name \"$1\" isch nit gstattet, wel s e Problem chennt gee mit \"$2\". <br />Nimm e andre Name.",
+	"antispoof-badtype": "Datetyp isch nit giltig.",
+	"antispoof-empty": "Läär Fäld",
+	"antispoof-prohibited": "S het s Zeiche $1 din, wu nit zuelässig isch.",
+	"antispoof-combining": "Fangt aa mit Verbindigszeiche $1",
+	"antispoof-unassigned": "S het s Zeiche $1 din, wo nit zuegordnet oder nit gwinscht isch.",
+	"antispoof-deprecated": "S het s veraltet Zeiche $1 din.",
+	"antispoof-noletters": "S sin kaini Buechstabe din.",
+	"antispoof-mixedscripts": "S sin Zeiche vo unterschidlige Schriftsyschtem din enthalte.",
+	"antispoof-tooshort": "Dr kanonisiert Name isch z churz.",
+	"antispoof-ignore": "Ignorier d Ähnlichkeitspriefig",
+	"right-override-antispoof": "D Benutzernäme-Ähnligkeitspriefig usser Chraft setze"
+}

@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bhawani Gautam",
+			"Bhawani Gautam Rhk",
+			"Nirajan pant",
+			"राम प्रसाद जोशी",
+			"सरोज कुमार ढकाल"
+		]
+	},
+	"antispoof-desc": "भ्रामक तथा एकै प्रकारका प्रयोगकर्ता नामहरू, मिश्रित-स्क्रिप्ट भएका खाताहरू बनाउनमाथि रोक लगाउने",
+	"antispoof-conflict-top": " \"$1\" नाम  {{PLURAL:$2|वर्तमान खाता|निम्नलिखित  $2 खाताहरू}}सँग धेरै मिल्न जान्छ :",
+	"antispoof-conflict-bottom": "कृपया अर्को प्रयोगकर्तानाम छान्नुहोस्।",
+	"antispoof-name-illegal": "$2 भ्रामक र जाली प्रयोगकर्ता नामको रोकथामको निम्ति \"$1\" नामलाई अनुमति छैन।\nकृपया अर्को नाम छान्नुहोस्।",
+	"antispoof-badtype": "अमान्य आँकड़ा प्रकार",
+	"antispoof-empty": "रिक्त रज्जु (string)",
+	"antispoof-prohibited": "कालो सुचीमा रहेको वर्ण $1 रहेको छ",
+	"antispoof-combining": "संयोजन चिन्ह $1 बाट शुरू हुन्छ",
+	"antispoof-noletters": "कुनै अक्षरहरु नभएको",
+	"antispoof-mixedscripts": "असंगत मिश्रित लिपिहरू सम्मिलित गरिएको",
+	"antispoof-tooshort": "संक्षिप्त साह्रै छोटो नाम",
+	"antispoof-ignore": "धोका रोकाईलाई अन्देखा गर्ने"
+}

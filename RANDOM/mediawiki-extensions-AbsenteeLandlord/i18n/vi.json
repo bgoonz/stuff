@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Minh Nguyen",
+			"Vinhtantran"
+		]
+	},
+	"absenteelandlord-reason": "Cơ sở dữ liệu đã bị tự động khóa do không có bảo quản viên nào hoạt động.",
+	"absenteelandlord-desc": "Tự động khóa cơ sở dữ liệu nếu tất cả bảo quản viên đều không hoạt động vào một thời điểm"
+}

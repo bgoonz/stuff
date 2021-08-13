@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Christian List",
+			"Dittaeva",
+			"Froztbyte",
+			"Jan Friberg",
+			"Joedalton",
+			"Jon Harald Søby",
+			"Saederup92",
+			"Sarrus",
+			"Tjernobyl"
+		]
+	},
+	"antispoof-desc": "Blokerer for oprettelse af konti med blandede tegnsæt, forvirrende eller lignende brugernavne",
+	"antispoof-conflict-top": "Brugernavnet »$1« ligner for meget det/de følgende {{PLURAL:$2|brugernavn|brugernavne}}:",
+	"antispoof-conflict-bottom": "Vælg et andet brugernavn.",
+	"antispoof-name-illegal": "Brugernavnet »$1« er ikke tilladt for at forhindre forvirrende eller efterlignede brugernavne: $2. Vælg venligst et andet brugernavn.",
+	"antispoof-badtype": "Ugyldig datatype",
+	"antispoof-empty": "Tom streng",
+	"antispoof-prohibited": "Indeholder det sortlistede tegn $1",
+	"antispoof-combining": "Begynder med kombinationstegnet $1",
+	"antispoof-unassigned": "Indeholder det ikke-tildelte tegn $1",
+	"antispoof-deprecated": "Indeholder det udfasede tegn $1",
+	"antispoof-noletters": "Indeholder ingen bogstaver",
+	"antispoof-mixedscripts": "Indeholder inkompatible, blandede tegnsæt",
+	"antispoof-tooshort": "Normaliseret navn er for kort",
+	"antispoof-ignore": "Ignorér misbrugskontrol",
+	"antispoof-ignore-help": "Giver bruger med tilstrækkelige privilegier adgang til at oprette en konto selv om deres navn ligner en eksisterende konto.",
+	"action-override-antispoof": "omgå kontrollerne af brugernavne",
+	"right-override-antispoof": "Omgå kontrollerne af brugernavne"
+}

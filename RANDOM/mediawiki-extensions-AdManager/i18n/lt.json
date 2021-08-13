@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eitvys200",
+			"Mantak111",
+			"Manvydasz"
+		]
+	},
+	"admanager": "Skelbimų tvarkyklė",
+	"admanagerzones": "Skelbimų tvarkyklės zonos",
+	"admanager-desc": "Suteikia [[Special:AdManager|specialų puslapį]], kuris leidžia sysops nustatyti zonas puslapiams ar kategorijoms.",
+	"admanager_docu": "Norint pridėti ar pašalinti skelbimų zoną iš puslapio ar kategorijos, pridėkite ar pašalinkite puslapio ar kategorijos pavadinimus žemiau.",
+	"admanagerzones_docu": "Įveskite kiekvieną skelbimų zonos numerį kitoje linijoje.",
+	"admanager_invalidtargetpage": "Puslapis nerastas su pavadinimu \"$1\".",
+	"admanager_invalidtargetcategory": "Kategorija nerasta su pavadinimu \"$1\".",
+	"admanager_notable": "Klaida! Rekalinga duomenų bazės lentelė nebuvo rasta. Pirma paleiskite update.php.",
+	"admanager_noAdManagerZones": "Klaida! Jūs privalote pridėti keletą skelbimų zonų.Įveskite jas [[Special:AdManagerZones|Skelbimų tvarkymo zonos]].",
+	"admanager_labelPage": "Puslapio pavadinimai",
+	"admanager_labelCategory": "Kategorijų pavadinimai",
+	"admanager_submit": "Siųsti",
+	"admanager_noads": "Nerodyti reklamų",
+	"admanager_Page": "Puslapiai",
+	"admanager_Category": "Kategorijos",
+	"admanager_added": "Jūsų pakeitimai buvo įrašyti",
+	"admanager_addedzone": "Pridėta zona $1.",
+	"admanager_removedzone": "Pašalinta zona $1.",
+	"admanager_nozonesadded": "Jokios zonos nebuvo pridėtos.",
+	"admanager_nozonesremoved": "Jokios zonos nebuvo pašalintos.",
+	"admanager_zonenum": "Zona #: $1",
+	"admanager_zonenotnumber": "Klaida! $1 nėra skaičius.",
+	"admanager_return": "Grįžti į [[Special:AdManager|Reklamos valdytoją]]",
+	"admanager_gotoads": "[[Special:AdManager|Redaguoti skelbimų vietą]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Redaguoti reklamos zonas]]",
+	"right-admanager": "[[Special:AdManager|Tvarkyti skelbimų konfigūraciją]]"
+}

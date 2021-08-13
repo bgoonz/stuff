@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kghbln",
+			"Metalhead64"
+		]
+	},
+	"admanager": "Anzeigenverwaltung",
+	"admanagerzones": "Anzeigenverwaltung - Anzeigenbereiche",
+	"admanager-desc": "Erweitert das Wiki um eine [[Special:AdManager|Spezialseite]], die es Administratoren ermöglicht einen Bereich für Werbeanzeige auf Seiten und Kategorien festzulegen",
+	"admanager_docu": "Um einen Anzeigenbereich bei einer Seite oder Kategorie hinzuzufügen oder zu entfernen, muss der Seiten- oder Kategorienname hinzugefügt oder entfernt werden.",
+	"admanagerzones_docu": "Bitte die Nummer jedes Anzeigenbereichs in einer eigenen Zeile angeben.",
+	"admanager_invalidtargetpage": "Es wurde keine Seite mit dem Namen „$1“ gefunden.",
+	"admanager_invalidtargetcategory": "Es wurde keine Kategorie mit dem Namen „$1“ gefunden.",
+	"admanager_notable": "Fehler: Die erforderliche Datenbanktabelle wurde nicht gefunden. Bitte update.php ausführen.",
+	"admanager_noAdManagerZones": "Fehler: Es müssen zunächst Anzeigebereiche hinzugefügt werden. Dies ist auf der Spezialseite [[Special:AdManagerZones|Anzeigenverwaltung - Anzeigenbereiche]] möglich.",
+	"admanager_labelPage": "Seitennamen",
+	"admanager_labelCategory": "Kategorienamen",
+	"admanager_submit": "Speichern",
+	"admanager_noads": "Keine Anzeigen anzeigen",
+	"admanager_Page": "Seiten",
+	"admanager_Category": "Kategorien",
+	"admanager_added": "Die Änderungen wurden gespeichert",
+	"admanager_addedzone": "Anzeigenbereich $1 wurde hinzugefügt",
+	"admanager_removedzone": "Zone $1 entfernt.",
+	"admanager_nozonesadded": "Es wurden keine Zonen hinzugefügt.",
+	"admanager_nozonesremoved": "Es wurden keine Zonen entfernt.",
+	"admanager_zonenum": "Anzeigenbereichsnummer: $1",
+	"admanager_zonenotnumber": "Fehler: Bei $1 handelt es sich nicht um eine Anzeigenbereichsnummer.",
+	"admanager_return": "Zurück zur [[Special:AdManager|Anzeigenverwaltung]]",
+	"admanager_gotoads": "[[Special:AdManager|Anzeigen bearbeiten]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Anzeigenbereiche bearbeiten]]",
+	"action-admanager": "Anzeigen zu konfigurieren",
+	"right-admanager": "[[Special:AdManager|Anzeigen konfigurieren]]"
+}

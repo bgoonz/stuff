@@ -1,0 +1,85 @@
+## Hallo Welt! Medienwerkstatt GmbH
+## Copyright 2012 by Hallo Welt! Medienwerkstatt GmbH
+## http://www.hallowelt.biz
+
+###############################################################################
+#                   BibManager Extension for MW 1.16.1                        #
+###############################################################################
+
+Extension:BibManager/Manual/DE
+
+Diese Anleitung beschreibt den Umgang mit der BibManager Erweiterung für 
+MediaWiki 1.16.1.
+
+==Installation und Konfiguration==
+===Installation===
+
+===Konfiguration===
+
+==Benutzerhandbuch==
+===Spezialseiten===
+====BibManager: Übersicht====
+Dies Ansicht dient zur Übersicht über die vorhandenen Datensätze alphabetisch
+sortiert nach Zitatschlüsseln. Die Zitate zum zugehörigen Zitatschlüssel werden 
+ebenso angezeigt.
+Durch einen Klick auf den Zitatschlüssel wird man auf die Wiki-Seite des
+Zitatschlüssels weitergeleitet.
+Durch Aktionsknöpfe am Ende der Zeilen kann man den jeweiligen Datensatz
+bearbeiten, löschen oder exportieren. Mehrere Datensätze können durch
+Mehrfachauswahl exportiert werden.
+
+====BibManager: Übersicht Autoren====
+Diese Ansicht dient zur Übersicht über die vorhandenen Autoren. Am Ende der
+Zeilen wird die Zahl der Datensätze angezeigt, die den Autor als Attributwert
+verwenden.
+Durch einen Klick auf den Autorennamen wird man auf die Übersichtsseite
+weitergeleitet, auf der man alle Zitatschlüssel findet, die den Autorennamen als
+Attributwert besitzen.
+
+====BibManager: Eintrag anlegen====
+
+====BibManager: Eintrag bearbeiten====
+
+====BibManager: Eintrag löschen====
+
+====BibManager: Eintrag importieren====
+
+====BibManager: Eintrag exportieren====
+
+
+===Tags===
+====bib====
+Damit lassen sich Zitate in den Fließtext eines Artikels einfügen. Existiert 
+ein Zitat noch nicht wird ein Link zum anlegen generiert. Andernfalls werden die 
+Daten des Zitats in einem Tooltip bereitgestellt und ein Link zu einer 
+Beschreibungsseite erzeugt.
+
+Beispiel:
+ <bib id="Citation" />
+
+====biblist====
+Dieses Tag listet alle in dem Artikel vorkommenden Zitate auf.
+
+Beispiel:
+ <biblist />
+
+====bibprint====
+Über das "filter"-Attribut lassen sich Listen von Zitaten generieren, welche 
+bestimmte Werte in ihren Feldern haben.
+
+ <bibprint filter="year:2011" />
+
+Es können auch nach mehreren Eigenschaften gefiltert werden.
+
+ <bibprint filter="year:2011, author:hawkins" />
+
+Desweiteren kann auch eine Veroderung verwendet werden.
+
+ <bibprint filter="year:2011|2010, author:hawkins" />
+
+===Entwickler===
+====Hooks====
+Für eine Liste der verfügbaren Hooks sehen Sie bitte in der Datei 
+"docs/Hooks.txt" nach.
+
+====Datenbankfelder hinzufügen====

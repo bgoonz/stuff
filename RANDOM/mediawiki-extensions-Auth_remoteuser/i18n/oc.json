@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cedric31"
+		]
+	},
+	"auth_remoteuser-desc": "Connècta automaticament los utilizaires en utilizant la variabla d’environament <code>REMOTE_USER</code>"
+}

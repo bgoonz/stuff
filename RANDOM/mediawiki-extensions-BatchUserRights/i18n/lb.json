@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Les Meloures",
+			"Robby",
+			"Soued031"
+		]
+	},
+	"batchuserrights": "Benotzerrechter automatiséieren",
+	"batchuserrights-desc": "Erlaabt et een oder méi Benotzer an enger Aktioun an eng Grupp oder a méi Gruppen derbäizesetzen",
+	"batchuserrights-names": "Benotzernimm fir an dës Grupp derbäizesetzen (ee pro Linn):",
+	"batchuserrights-intro": "Op dëser Säit kënnt Dir méi Benotzer mateneen bei eng Benotzergrupp setzen.\nAus Sécherheetsgrënn ass d'Lëscht vu Benotzergruppen déi derbäigesat kënne ginn am Konfiguratiounsfichier vun der Erweiderung festgeluecht a kann net vun dëser Wiki aus geännert ginn.\nFrot wgl. e System-Administrateur wann dës Funktioun fir aner Benotzergruppe gebraucht gëtt.",
+	"batchuserrights-single-progress-update": "{{PLURAL:$1|Grupp|Gruppe}} bei <strong>$2</strong> dobäigesat.",
+	"batchuserrights-add-groups": "{{PLURAL:$1|Ee Benotzer gëtt|$1 Benotzer gi}} bei dës {{PLURAL:$2|Benotzergrupp|Benotzergruppen}} dobäigesat: <strong>$3</strong>",
+	"batchuserrights-userload-error": "De {{GENDER:$1|Benotzer}} '''$1''' konnt net geluede ginn.",
+	"batchuserrights-no-groups": "Dir hutt keng Gruppen erausgesicht.\nEt gëtt näischt geännert.\nDe Rescht vun der Säit gëtt nei opgebaut sou datt Dir einfach gesi kënnt ob ee vun de Benotzernimm net konnt geluede ginn.",
+	"right-batchuserrights": "Een oder méi Benotzer an enger Aktioun an eng oder méi Gruppen derbäisetzen",
+	"action-batchuserrights": "een oder méi Benotzer an enger Aktioun an eng oder méi Gruppen deräisetzen"
+}

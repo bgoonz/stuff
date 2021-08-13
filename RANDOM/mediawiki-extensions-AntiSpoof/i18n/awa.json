@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"1AnuraagPandey"
+		]
+	},
+	"antispoof-desc": "मिश्रित लिपि अव भ्रम पैदा करय वाले अउर मिलत-जुलत सदस्यनावँ कय प्रयोग पे रोक लगावत है।",
+	"antispoof-conflict-top": "\"$1\" नावँ निचे {{PLURAL:$2|सदस्यनावँ|सदस्यनावँ कुल}} से बहुत मिलत-जुलत है:",
+	"antispoof-conflict-bottom": "कृपया कवनो दुसर नाँव चुना जाय ।",
+	"antispoof-name-illegal": "भ्रामक नाँव कय रोकेक लिए नाँव \"$1\" राखब मिनाही है: $2\nकृपया कवनो दुसर नाँव लिहा जाय।",
+	"antispoof-badtype": "गलत डाटा प्रकार",
+	"antispoof-empty": "खाली स्ट्रिंग",
+	"antispoof-prohibited": "एहमा ब्लैकलिस्टेड कैरैक्टर $1 है",
+	"antispoof-combining": "एकत्रिकरण चिन्ह $1 से शुरु होत है",
+	"antispoof-unassigned": "एहमा गलत अक्षर $1 है",
+	"antispoof-deprecated": "एहमा गलत अक्षर $1 है",
+	"antispoof-noletters": "एहमा कवनो अक्षर नाई है",
+	"antispoof-mixedscripts": "एहमा असंगत मिश्र लिपि कुल हैं",
+	"antispoof-tooshort": "अधिकारयुक्त नाँव बहुत छोट हय",
+	"antispoof-ignore": "स्पूफिंग जाँच नज़रंदाज़ करा जाय",
+	"right-override-antispoof": "स्पूफिंग चेक्स कय ना देखा जाय"
+}

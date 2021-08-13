@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Guycn2",
+			"Yona b",
+			"חיים",
+			"ליאור"
+		]
+	},
+	"biblioplus-desc": "אחזור ציטוטים באופן אוטומטי מתוך PubMed ומתוך מסד הנתונים ISBN",
+	"biblioplus-doi-tooltip": "הצג או קנה מאמר מ- publisher",
+	"biblioplus-pmid-tooltip": "הצג או קנה מאמר מ- publisher (במידה וזמין)",
+	"biblioplus-isbn-tooltip": "מידע אודות ספרים ב- isbndb.org",
+	"biblioplus-medline-abstracts": "כל תקצירי Medline:",
+	"biblioplus-pubmed-abstracts": "כל תקצירי המאמרים מאתר פאבמד (PubMed)",
+	"biblioplus-hubmed-abstracts": "כל תקצירי המאמרים מאתר האבמד (HubMed)",
+	"biblioplus-vkey-title": "קישור למסד נתונים ביבליוגרפי"
+}

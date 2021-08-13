@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jopparn",
+			"Lokal Profil"
+		]
+	},
+	"auth_remoteuser-desc": "Loggar automatiskt in användare genom att använda <code>REMOTE_USER</code> miljövariabeln"
+}

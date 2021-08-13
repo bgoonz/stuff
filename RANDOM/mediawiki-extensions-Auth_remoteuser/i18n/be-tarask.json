@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Red Winged Duck"
+		]
+	},
+	"auth_remoteuser-desc": "Аўтаматычна выконвае ўваход у сыстэму з дапамогай зьменнай асяродзьдзя <code>REMOTE_USER</code>"
+}

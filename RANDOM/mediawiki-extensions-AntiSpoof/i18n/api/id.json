@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Rachmat04"
+		]
+	},
+	"apihelp-antispoof-description": "Periksa nama pengguna dengan pemeriksaan normalisasi AntiPenipuan.",
+	"apihelp-antispoof-summary": "Periksa nama pengguna dengan pemeriksaan normalisasi AntiPenipuan.",
+	"apihelp-antispoof-param-username": "Nama pengguna yang akan diperiksa dengan AntiPenipuan.",
+	"apihelp-antispoof-example-1": "Periksa nama pengguna \"Foo\" dengan AntiPenipuan",
+	"apihelp-createaccount-param-ignoreantispoof": "Abaikan pemeriksaan penipuan (memerlukan hak akses <code>override-antispoof</code>)."
+}

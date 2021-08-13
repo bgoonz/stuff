@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Macofe",
+			"Mainframe98",
+			"McDutchie",
+			"SPQRobin",
+			"Siebrand"
+		]
+	},
+	"batchuserrights": "Gebruikersrechtenbeheer (en masse)",
+	"batchuserrights-desc": "Maakt het toevoegen van één of meerdere gebruikers aan een groep of groepen in één handeling mogelijk",
+	"batchuserrights-names": "Gebruikersnamen om deze groep aan toe te voegen (één per regel):",
+	"batchuserrights-intro": "Via deze pagina kunt u meerdere gebruikers tegelijkertijd aan een groep toevoegen.\nOm beveiligingsredenen wordt de lijst met beschikbare groepen ingesteld in de instellingen van de uitbreiding en deze groepen kunnen niet vanuit de wiki gewijzigd worden.\nVraag hulp van een systeembeheerder als u de beschikbare groepen wilt wijzigen.",
+	"batchuserrights-single-progress-update": "De {{PLURAL:$1|groep is|groepen zijn}} toegevoegd aan <strong>$2</strong>.",
+	"batchuserrights-add-groups": "Bezig met het toevoegen van {{PLURAL:$1|één gebruiker|$1 gebruikers}} aan de volgende {{PLURAL:$2|groep|groepen}}: <strong>$3</strong>.",
+	"batchuserrights-userload-error": "De {{GENDER:$1|gebruiker}} '''$1''' kon niet geladen worden.",
+	"batchuserrights-no-groups": "U hebt geen groepen gekozen.\nNu wordt er niets uitgevoerd.\nDe rest van de pagina kan uitgevoerd worden zodat u eenvoudig kunt zien of een van de gebruikersnamen niet geladen kon worden.",
+	"right-batchuserrights": "Een of meerdere gebruikers aan meerdere groepen toevoegen in één handeling",
+	"action-batchuserrights": "een of meerdere gebruikers aan meerdere groepen toe te voegen in één handeling"
+}

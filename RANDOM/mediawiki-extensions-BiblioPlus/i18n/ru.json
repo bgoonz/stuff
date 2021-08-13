@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kaganer"
+		]
+	},
+	"biblioplus-desc": "Автоматически извлекает цитаты из PubMed и базы данных ISBN",
+	"biblioplus-doi-tooltip": "Просмотр или купить статью у издателя",
+	"biblioplus-pmid-tooltip": "Просмотреть или купить статью у издателя (если доступно)",
+	"biblioplus-isbn-tooltip": "Информация о книге на isbndb.org",
+	"biblioplus-medline-abstracts": "Все тезисы из Medline:",
+	"biblioplus-pubmed-abstracts": "Все тезисы в PubMed",
+	"biblioplus-hubmed-abstracts": "Все тезисы в HubMed",
+	"biblioplus-vkey-title": "ссылка на библиографическую базу данных"
+}

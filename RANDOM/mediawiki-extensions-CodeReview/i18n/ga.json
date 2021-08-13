@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Alison",
+			"පසිඳු කාවින්ද"
+		]
+	},
+	"code-comments": "Nótaí tráchta",
+	"code-field-author": "Údar",
+	"code-field-message": "Achoimre tiomnú",
+	"code-field-timestamp": "Dáta",
+	"code-field-comments": "Nótaí tráchta",
+	"code-rev-author": "Údar:",
+	"code-rev-date": "Dáta:",
+	"code-rev-message": "Nóta tráchta:",
+	"code-rev-comment-preview": "Réamhamharc",
+	"code-rev-inline-preview": "Réamhamharc:",
+	"code-rev-history-link": "Stair",
+	"code-status-new": "nua",
+	"code-signoff-field-date": "Dáta",
+	"codereview-email-body": "Chuir úsáideoir \"$1 nóta tráchta ar $3.\n\nDearbh-URL: $2\n\nNóta tráchta:\n\n$4",
+	"repoadmin-new-button": "Cruthaigh"
+}

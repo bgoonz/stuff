@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Beta16",
+			"BrokenArrow",
+			"Dansita",
+			"Darth Kule",
+			"Matteocng",
+			"Nemo bis",
+			"Pietrodn"
+		]
+	},
+	"antispoof-desc": "Impedisce la creazione di nomi utente con caratteri misti e nomi utente che generano confusione o troppo simili tra loro.",
+	"antispoof-conflict-top": "Il nome utente \"$1\" è troppo simile {{PLURAL:$2|al seguente nome utente|ai seguenti nomi utente}}:",
+	"antispoof-conflict-bottom": "Scegli un altro nome utente.",
+	"antispoof-name-illegal": "Il nome utente \"$1\" non è consentito, per evitare confusione o utilizzi fraudolenti: $2. Scegli un altro nome utente.",
+	"antispoof-badtype": "Tipo di dati errato",
+	"antispoof-empty": "Stringa vuota",
+	"antispoof-prohibited": "Contiene il carattere proibito $1",
+	"antispoof-combining": "Inizia con la combinazione di caratteri $1",
+	"antispoof-unassigned": "Contiene il carattere non assegnato $1",
+	"antispoof-deprecated": "Contiene il carattere deprecato $1",
+	"antispoof-noletters": "Assenza di lettere",
+	"antispoof-mixedscripts": "Combinazione di sistemi di scrittura non compatibili",
+	"antispoof-tooshort": "Nome normalizzato troppo corto",
+	"antispoof-ignore": "Ignora i controlli per spoofing",
+	"antispoof-ignore-help": "Consente agli utenti con privilegi sufficienti di creare un'utenza, anche se il suo nome è simile a quella di un'altra già esistente.",
+	"action-override-antispoof": "Ignora i controlli spoofing",
+	"right-override-antispoof": "Ignora i controlli spoofing"
+}

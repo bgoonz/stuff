@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"BadDog",
+			"Charmed94",
+			"Жељко Тодоровић"
+		]
+	},
+	"checkpoint": "Сачувај и настави са уређивањем",
+	"checkpoint-desc": "Омогућава Вам да сачувате измене и наставите уређивање",
+	"checkpoint-tooltip": "Сачувајте свој напредак и наставите уређивање странице",
+	"checkpoint-notice": "([[{{ns:project}}:Checkpoint|прелаз чувања]])"
+}

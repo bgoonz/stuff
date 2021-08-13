@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Boesenbergia",
+			"NoiX180"
+		]
+	},
+	"coll-remove": "Kosot",
+	"coll-show": "Angghâlaghi",
+	"coll-move_up": "Allè ka attas",
+	"coll-move_down": "Allè ka bâbâ",
+	"coll-print_export": "Cètha'/èkspor",
+	"coll-create_a_book": "Ghâbây buku",
+	"coll-book_creator": "Pangangghit buku",
+	"coll-download_as": "Onḍhu vèrsi $1",
+	"coll-disable": "totop",
+	"coll-book_creator_disable": "Totop pangangghit buku",
+	"coll-book_creator_disable_tooltip": "Ambu ngangghuy pangangghit buku",
+	"coll-add_this_page": "Tambâ'aghi kaca rèya ka bukuna bâ'na",
+	"coll-add_page_tooltip": "Tambâ'aghi kaca wiki arèya ka bukuna bâ'na",
+	"coll-help": "Pètolong",
+	"coll-help_tooltip": "Angghâlaghi bhântowan pangghâbâyân buku",
+	"coll-helppage": "Help:Buku",
+	"coll-n_pages": "$1 {{PLURAL:$1|kaca}}",
+	"coll-remove_this_page": "Buwâng kaca rèya ḍâri bukuna bâ'na",
+	"coll-show_collection": "Angghâlaghi buku",
+	"coll-show_collection_tooltip": "Klik ghâbây meccè'/ngonḍhu/messen bukuna bâ'na",
+	"coll-make_suggestions": "Tarè kaca",
+	"coll-make_suggestions_tooltip": "Angghâlaghi saran sâ aḍhâsâr ka kaca-kaca è bukuna bâ'na",
+	"coll-attribution-anons": "Pangangghuy anonim: $1",
+	"coll-article-attribution": "<b>$1</b> <i>Sombher:</i> $2 <i>Kontributor:</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>Sombher:</i> $2 <i>Lisènsi:</i> $3 <i>Padhurrun:</i> $4 <i>Pangghâbây sokkla:</i> $5"
+}

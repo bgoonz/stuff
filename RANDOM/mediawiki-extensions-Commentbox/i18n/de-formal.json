@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Imre"
+		]
+	},
+	"commentbox-intro": "== Kommentar hinzufügen … ==\nSie haben einen Kommentar zu dieser Seite? Tragen Sie ihn hier ein oder <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} bearbeiten Sie die Seite direkt]</span>.",
+	"commentbox-name-explanation": "<small>(Tipp: Wenn Sie sich [[Special:UserLogin|anmelden]], müssen Sie hier nicht mehr Ihren Namen angeben)</small>"
+}

@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Shirayuki",
+			"Sujiniku",
+			"Yusuke1109"
+		]
+	},
+	"accesscontrol-desc": "利用者単位でページのグループアクセス制限を有効にします",
+	"accesscontrol-info": "これは保護されたページです。",
+	"accesscontrol-info-box": "このページのアクセス制限が設定されました。このメッセージが表示された場合、このページにアクセスすることはできません。"
+}

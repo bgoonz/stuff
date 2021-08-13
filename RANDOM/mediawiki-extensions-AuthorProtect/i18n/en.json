@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ryan Schmidt"
+		]
+	},
+	"authorprotect": "Protect page from non-authors",
+	"authorprotect-desc": "Allows the author of a page to protect it from other users",
+	"authorprotect-notauthor": "{{GENDER:$1|You}} are not the {{GENDER:$1|author}} of this page.",
+	"authorprotect-confirm": "Change protection levels",
+	"authorprotect-edit": "Restrict editing to authors",
+	"authorprotect-move": "Restrict moving to authors",
+	"authorprotect-intro": "Use this form to lock this page from non-authors.",
+	"authorprotect-success": "Protection set!",
+	"protect-level-author": "Protect from non-authors",
+	"restriction-level-author": "Author-protected",
+	"action-authorprotect": "protect from non-authors",
+	"right-authorprotect": "Protect authored pages",
+	"action-author": "edit author-protected pages",
+	"right-author": "Edit author-protected pages"
+}

@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"NMW03",
+			"PPerviz",
+			"Sortilegus"
+		]
+	},
+	"authorprotect": "Səhifənin qeyri-müəlliflərdən mühafizəsi",
+	"authorprotect-desc": "Müəllifə səhifəni digər istifadəçilərin redaktəsindən mühafizə etmək imkanı verir",
+	"authorprotect-notauthor": "{{GENDER:$1|Siz}} bu səhifənin {{GENDER:$1|müəllifi}} deyilsiniz",
+	"authorprotect-confirm": "Mühafizə səviyyələrini dəyişdir",
+	"authorprotect-edit": "Yalnız müəlliflər redaktə edə bilərlər",
+	"authorprotect-move": "Yalnız müəlliflər adını dəyişdirə bilərlər",
+	"authorprotect-intro": "Səhifəni onun müəllifi olmayan istifadəçilərin redaktələrindən mühafizə etmək üçün bu formadan istifadə edin",
+	"authorprotect-success": "Mühafizə olundu!",
+	"protect-level-author": "Qeyri-müəlliflərdən mühafizə",
+	"restriction-level-author": "Müəllif mühafizəsi",
+	"right-authorprotect": "Müəllif səhifələrinin mühafizəsi"
+}

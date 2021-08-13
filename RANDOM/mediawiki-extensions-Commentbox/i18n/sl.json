@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dbc334"
+		]
+	},
+	"commentbox-desc": "Doda polje za pripombe na nekatere strani",
+	"commentbox-intro": "== Dodajte pripombo ... ==\nImate pripombo na to stran? Dodajte jo tukaj <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} ali neposredno uredite stran]</span>.",
+	"commentbox-savebutton": "Shrani pripombo",
+	"commentbox-name": "Ime:",
+	"commentbox-name-explanation": "<small>(Nasvet: Če se [[Special:UserLogin|prijavite]], vam tukaj ne bo potrebno ročno vnesti svojega imena)</small>",
+	"commentbox-log": "Nove pripombe",
+	"commentbox-first-comment-heading": "== Pripombe ==",
+	"commentbox-regex": "/\\n==\\s*Pripombe\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Napaka med ustvarjanjem pripombe",
+	"commentbox-error-page-nonexistent": "Ta stran ne obstaja!",
+	"commentbox-error-namespace": "Pripombe niso dovoljene v tem imenskem prostoru!",
+	"commentbox-error-empty-comment": "Prazne pripombe niso dovoljene!"
+}

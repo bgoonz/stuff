@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Arystanbek",
+			"BaRaN6161 TURK"
+		]
+	},
+	"apihelp-antispoof-description": "AntiSpoof'un normalizasyon kontrollerine karşı bir kullanıcı adı kontrol edin.",
+	"apihelp-antispoof-summary": "AntiSpoof'un normalizasyon kontrollerine karşı bir kullanıcı adı kontrol edin.",
+	"apihelp-antispoof-param-username": "Kullanıcı adı AntiSpoof karşı kontrol edin.",
+	"apihelp-antispoof-example-1": "AntiSpoof'a karşı \"Örnek\" kullanıcı adını kontrol edin",
+	"apihelp-createaccount-param-ignoreantispoof": "Sahtekarlık çeklerini yoksay (<code>override-antispoof</code> hakkı gerektirir)."
+}

@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gnu1742",
+			"Kghbln",
+			"Raimond Spekking"
+		]
+	},
+	"absenteelandlord-reason": "Die Datenbank wurde automatisch für den Schreibzugriff gesperrt, da momentan kein Administrator des Wikis aktiv ist.",
+	"absenteelandlord-desc": "Ermöglicht eine automatische Sperre der Datenbank für den Schreibzugriff, sofern alle Administratoren eines Wikis für einen bestimmten Zeitraum inaktiv sind"
+}

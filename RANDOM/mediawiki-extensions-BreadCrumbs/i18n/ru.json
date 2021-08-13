@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"DCamer",
+			"Diralik",
+			"Kaganer",
+			"Александр Сигачёв"
+		]
+	},
+	"breadcrumbs-desc": "Добавляет навигационный путь по сайту («хлебные крошки») под панель вкладок",
+	"prefs-breadcrumbs-separator": "Разделитель навигационной цепочки",
+	"prefs-breadcrumbs-separator-max": "Можно ввести не более 2 символов.",
+	"prefs-breadcrumbs": "Хлебные крошки",
+	"prefs-breadcrumbs-showcrumbs": "Показывать «хлебные крошки»",
+	"prefs-breadcrumbs-numberofcrumbs": "Число элементов навигационной цепочки (т.н. «хлебных крошек»)",
+	"prefs-breadcrumbs-numberofcrumbs-max": "Может отображаться не более 20 «хлебных крошек».",
+	"prefs-breadcrumbs-namespaces": "Включить пространства имён в навигационную цепочку",
+	"prefs-breadcrumbs-filter-duplicates": "Отфильтровать неоднократно посещенные страницы",
+	"prefs-breadcrumbs-preceding-text": "Текст, появляющийся перед навигационной цепочкой",
+	"prefs-breadcrumbs-preceding-text-max": "Можно ввести не более 30 символов."
+}

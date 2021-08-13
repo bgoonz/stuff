@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nedergard",
+			"VezonThunder"
+		]
+	},
+	"biblioplus-desc": "Hakee lähteet automaattisesti PubMedistä ja ISBN-tietokannasta",
+	"biblioplus-doi-tooltip": "Lue tai osta artikkeli julkaisijalta",
+	"biblioplus-pmid-tooltip": "Lue tai osta artikkeli julkaisijalta (jos saatavilla)",
+	"biblioplus-isbn-tooltip": "Kirjan tiedot osoitteessa isbndb.org",
+	"biblioplus-medline-abstracts": "Kaikki Medlinen tiivistelmät:",
+	"biblioplus-pubmed-abstracts": "Kaikki tiivistelmät PubMedissä",
+	"biblioplus-hubmed-abstracts": "Kaikki tiivistelmät HubMedissä",
+	"biblioplus-vkey-title": "linkki bibliografiseen tietokantaan"
+}

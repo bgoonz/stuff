@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Audun",
+			"Chameleon222",
+			"Jon Harald Søby",
+			"Macofe",
+			"Nghtwlkr"
+		]
+	},
+	"batchuserrights": "Puljeoppdater brukerrettigheter",
+	"batchuserrights-desc": "Tillater å legge én eller flere brukere til en eller flere grupper i én handling",
+	"batchuserrights-names": "Brukernavn som skal legges til denne gruppen (ett per linje):",
+	"batchuserrights-intro": "Denne siden lar deg legge flere brukere til en gruppe samtidig.\nAv sikkerhetsmessige årsaker, er listen over mulige grupper satt i utvidelseskonfigurasjonen og kan ikke endres fra wikien.\nVennligst spør en systemadministrator hvis du har behov for å tillate puljetillegging av andre grupper.",
+	"batchuserrights-single-progress-update": "Lagt til {{PLURAL:$1|gruppe|grupper}} for <strong>$2</strong>.",
+	"batchuserrights-add-groups": "Legger {{PLURAL:$1|én bruker|$1 brukere}} til {{PLURAL:$2|den|de}} følgende {{PLURAL:$2|gruppen|gruppene}}: <strong>$3</strong>.",
+	"batchuserrights-userload-error": "Kunne ikke laste {{GENDER:$1|brukeren}} '''$1'''.",
+	"batchuserrights-no-groups": "Du valgte ingen grupper.\nDette vil ikke oppnå noe.\nResten av siden vil få lov til å kjøre slik at du enkelt kan se om noen av brukernavnene ikke kunnes lastes.",
+	"right-batchuserrights": "Legge én eller flere brukere til en eller flere grupper i én handling",
+	"action-batchuserrights": "legge én eller flere brukere til en eller flere grupper i én handling"
+}

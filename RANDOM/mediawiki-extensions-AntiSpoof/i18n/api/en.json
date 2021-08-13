@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Brad Jorsch",
+			"datguy",
+			"FunPika",
+			"Gergő Tisza"
+		]
+	},
+	"apihelp-antispoof-description": "Check a username against AntiSpoof's normalisation checks.",
+	"apihelp-antispoof-summary": "Check a username against AntiSpoof's normalisation checks.",
+	"apihelp-antispoof-param-username": "The username to check against AntiSpoof.",
+	"apihelp-antispoof-example-1": "Check username \"Foo\" against AntiSpoof",
+	"apihelp-createaccount-param-ignoreantispoof": "Ignore spoofing checks (requires the <code>override-antispoof</code> right)."
+}

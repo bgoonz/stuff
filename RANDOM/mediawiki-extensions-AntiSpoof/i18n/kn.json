@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Abhirama",
+			"Ananth subray",
+			"Omshivaprakash",
+			"VASANTH S.N.",
+			"ಮಲ್ನಾಡಾಚ್ ಕೊಂಕ್ಣೊ"
+		]
+	},
+	"antispoof-conflict-bottom": "ದಯವಿಟ್ಟು ಇನ್ನೊಂದು ಬಳಕೆದಾರ ಹೆಸರನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.",
+	"antispoof-name-illegal": "\"$1\"ಹೆಸರನ್ನು ಗೊಂದಲ ಅಥವಾ ವಂಚಕ ಬಳಕೆದಾರರ : $2ಹೆಸರುಗಳನ್ನು ತಡೆಯಲು ಅನುಮತಿಸಲಾಗುತ್ತಿಲ್ಲ.\nಮತ್ತೊಂದು ಹೆಸರನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.",
+	"antispoof-badtype": "ಕೆಟ್ಟ ಮಾಹಿತಿ ರೀತಿ",
+	"antispoof-empty": "ಖಾಲಿ ಅಕ್ಷರಪುಂಜ"
+}

@@ -1,0 +1,40 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jose77",
+			"Pare Mo",
+			"Redhotchili23"
+		]
+	},
+	"coll-collection": "Libro",
+	"coll-collections": "Mga libro",
+	"coll-download_title": "Deskargaron",
+	"coll-download": "Deskargaron",
+	"coll-remove": "Kakason",
+	"coll-show": "Ipakita",
+	"coll-move_up": "Magsaka",
+	"coll-move_down": "Magpanaog",
+	"coll-title": "Titulo:",
+	"coll-subtitle": "Subtitulo:",
+	"coll-yes": "Huo",
+	"coll-cancel": "Kanselahon",
+	"coll-suggest_your_book": "Imong libro",
+	"coll-print_export": "Imprimiron/eksportaron",
+	"coll-create_a_book": "Maghimo sing libro",
+	"coll-book_creator": "Taghimo sing libro",
+	"coll-download_as": "Deskargaron bilang $1",
+	"coll-add_this_page": "Idugang ang ini nga panid sa imo nga libro",
+	"coll-help": "Bulig",
+	"coll-helppage": "Help:Mga libro",
+	"coll-n_pages": "$1 {{PLURAL:$1|panid|mga panid}}",
+	"coll-remove_this_page": "Kakason ang ini nga panid sa imo nga libro",
+	"coll-show_collection": "Ipakita ang libro",
+	"coll-show_collection_tooltip": "Klikon para liwaton/deskargaron/orderon ang imong libro",
+	"coll-make_suggestions": "Magtanyag sing mga panid",
+	"coll-setting-toc-yes": "Huo",
+	"coll-attribution-anons": "Anonimo: $1",
+	"coll-article-attribution": "<i>Gin·gikanan sg</i> <b>$1</b><i>:</i> $2 <i>Mga tig·amot:</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>Ginhalinan:</i> $2 <i>Lisensiya:</i> $3 <i>Mga tig·amot:</i> $4 <i>Orihinal nga artista:</i> $5",
+	"coll-images-title": "Mga imahen",
+	"coll-images-license": "Lisensiya"
+}

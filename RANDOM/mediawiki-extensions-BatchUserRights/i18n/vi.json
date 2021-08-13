@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dinhxuanduyet",
+			"Macofe",
+			"Minh Nguyen",
+			"Phjtieudoc"
+		]
+	},
+	"batchuserrights-desc": "Cho phép thêm một hoặc nhiều người dùng vào cùng một nhóm hoặc nhiều nhóm với một động tác",
+	"batchuserrights-names": "Nhập tên người dùng để thêm nhóm này vào (một người mỗi dòng):",
+	"batchuserrights-intro": "Trang này sẽ cho phép bạn thêm một nhóm để nhiều người dùng cùng một lúc.\nVì lý do an ninh, danh sách addable nhóm được thiết lập trong cấu hình của phần mở rộng và không thể được thay đổi từ trong wiki.\nXin vui lòng hỏi người quản trị hệ thống, nếu bạn cần phải cho phép thêm hàng loạt của các nhóm khác.",
+	"batchuserrights-single-progress-update": "Đã thêm {{PLURAL:$1}}nhóm vào <strong>$2</strong>.",
+	"batchuserrights-add-groups": "Đang thêm {{PLURAL:$1|một người dùng|$1 người dùng}} vào {{PLURAL:$2}}nhóm sau: <strong>$3</strong>.",
+	"batchuserrights-userload-error": "Không thể tải thành viên '''$1'''.",
+	"batchuserrights-no-groups": "Bạn đã không chọn bất kỳ nhóm.\nĐiều này sẽ không thực hiện bất cứ điều gì.\nPhần còn lại của trang web sẽ được phép chạy chỉ vì vậy mà bạn có thể dễ dàng nhìn thấy nếu bất kỳ tên người dùng có thể không được nạp.",
+	"right-batchuserrights": "Thêm một hoặc nhiều người dùng vào cùng một nhóm hoặc nhiều nhóm với một động tác",
+	"action-batchuserrights": "thêm một hoặc nhiều người dùng vào cùng một nhóm hoặc nhiều nhóm bằng một động tác"
+}

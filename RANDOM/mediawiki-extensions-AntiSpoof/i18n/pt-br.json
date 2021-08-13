@@ -1,0 +1,39 @@
+{
+	"@metadata": {
+		"authors": [
+			"!Silent",
+			"Cainamarques",
+			"Caio1478",
+			"Dianakc",
+			"Eduardo Addad de Oliveira",
+			"Eduardo.mps",
+			"Eduardoaddad",
+			"Felipe L. Ewald",
+			"He7d3r",
+			"Helder.wiki",
+			"Luckas",
+			"Mariagarbin",
+			"Rhaijin",
+			"Trigonometria87",
+			555
+		]
+	},
+	"antispoof-desc": "Impede a criação de contas com escrita mista, e nomes de usuário confusos e semelhantes",
+	"antispoof-conflict-top": "O nome \"$1\" é demasiado semelhante {{PLURAL:$2|ao seguinte nome de usuário|aos seguintes nomes de usuário}}:",
+	"antispoof-conflict-bottom": "Por favor, escolha outro nome de usuário.",
+	"antispoof-name-illegal": "O nome de usuário \"$1\" não é permitido para prevenir que seja confundido com outro ou falsificado: $2.\nPor favor, escolha outro nome de usuário.",
+	"antispoof-bad-char": "\"$1\" ($2)",
+	"antispoof-badtype": "Formato de dados incorreto",
+	"antispoof-empty": "Linha vazia",
+	"antispoof-prohibited": "Contém o caractere proibido $1",
+	"antispoof-combining": "Inicia com o caractere de combinação $1",
+	"antispoof-unassigned": "Contém caracteres não reconhecidos: $1",
+	"antispoof-deprecated": "Contém o parâmetro depreciado $1",
+	"antispoof-noletters": "Não contém nenhuma letra",
+	"antispoof-mixedscripts": "Contém scripts de escrita incompatíveis mesclados",
+	"antispoof-tooshort": "Nome normalizado muito curto",
+	"antispoof-ignore": "Ignorar verificações de \"spoofing\"",
+	"antispoof-ignore-help": "Permite que os usuários com os privilégios necessários criem uma conta com nome seja semelhante ao de outra conta existente.",
+	"action-override-antispoof": "sobrepor verificações de spoofing",
+	"right-override-antispoof": "Sobrepor verificações de spoofing"
+}

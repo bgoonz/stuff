@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Beta16"
+		]
+	},
+	"checkpoint": "Salva e continua a modificare",
+	"checkpoint-desc": "Permette di salvare una modifica e di continuare ad apportare modifiche",
+	"checkpoint-tooltip": "Salva i tuoi cambiamenti e continua con la modifica della pagina",
+	"checkpoint-notice": "([[{{ns:project}}:Checkpoint|checkpoint]])"
+}

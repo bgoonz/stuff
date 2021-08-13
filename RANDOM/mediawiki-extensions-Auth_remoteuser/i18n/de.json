@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Metalhead64",
+			"Umherirrender"
+		]
+	},
+	"auth_remoteuser-desc": "Ermöglicht die automatische Anmeldung von Benutzern mithilfe der <code>REMOTE_USER</code>-Umgebungsvariable"
+}

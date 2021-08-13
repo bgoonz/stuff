@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Belkacem77"
+		]
+	},
+	"admanager": "Amsefrak n udellel",
+	"admanagerzones": "Timnadin n umsefrak n udellel",
+	"admanager-desc": "Ad d-imudd [[Special:AdManager|page spéciale]] ara yessirgen i sysops ad srsen tamnaḍt deg iwen n umḍiq i yisebtar neɣ taggayin",
+	"admanager_docu": "Akken ad ternuḍ neq ad tekkseḍ tamnaḍt n usebter neɣ taggayt i meṛṛa, rnu neɣ kkes azwel n usebter neɣ taggayt ddaw-a.",
+	"admanagerzones_docu": "Sekcem yal uṭṭun n temnaḍt n udellel ɣef izirig-is.",
+	"admanager_invalidtargetpage": "Ulac ula d yiwen n usebter yettwafen s uzwel \"$1\".",
+	"admanager_invalidtargetcategory": "Ulac taggayt yettwafen s uzwel \"$1\".",
+	"admanager_notable": "Tuccḍa! Tafelwit n taffa n isefka yettwasran ur tettwaf ara! Senker di tazwara update.php.",
+	"admanager_noAdManagerZones": "Tuccḍa! Yessefk ad ternuḍ timnaḍin n udellel. Sekcem di [[Special:AdManagerZones|timnadin n umsefrak n udellel]].",
+	"admanager_labelPage": "Izwal n isebtar",
+	"admanager_labelCategory": "Ismawen n taggayt",
+	"admanager_submit": "Azen",
+	"admanager_noads": "Ur skan ara adellel",
+	"admanager_Page": "Isebtar",
+	"admanager_Category": "Taggayin",
+	"admanager_added": "Asnifel-ik yettwasekles.",
+	"admanager_addedzone": "Tamnaḍt $1 tettwarna.",
+	"admanager_removedzone": "Tamnaḍt $1 tettwarna.",
+	"admanager_nozonesadded": "Ulac timnaḍin yettwarnan.",
+	"admanager_nozonesremoved": "Ulac timnaḍin yettwakksen.",
+	"admanager_zonenum": "Tamnaḍt #: $1",
+	"admanager_zonenotnumber": "Tuccḍa! $1 mačči d amḍan.",
+	"admanager_return": "Uɣal ar [[Special:AdManager|Amsefrak n udellel]]",
+	"admanager_gotoads": "[[Special:AdManager|Snifel adig n udellel]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Snifel timnadin n udellel]]",
+	"right-admanager": "[[Special:AdManager|Sefrek tawila n udellel]]"
+}

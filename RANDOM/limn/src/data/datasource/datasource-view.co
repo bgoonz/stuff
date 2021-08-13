@@ -1,0 +1,252 @@
+_ = require 'underscore'
+ko = require 'knockout'
+
+{ View,
+} = require '../../base/view'
+{ DataSource, ColumnDef,
+} = require './datasource'
+{ ParsingMixin,
+} = require '../../util'
+{ GraphView, Graph,
+} = require '../../graph'
+{ CanvasNodeData, CanvasSeriesNodeData, ViewportNodeData, GraphNodeData,
+} = require '../../graph/node'
+
+
+class exports.DataSourceView extends View
+    template: 'datasources'
+    
+    defaults: ->
+        model  : null
+        action : null
+        isDisposed : false
+    
+    # Apply Parser mixin
+    ParsingMixin.mix this
+    
+    /**
+     * @constructor
+     * @param {DataSource} model DataSource model for this view.
+     * @param {string} action the action this view was created to respond to
+     */
+    (model, action) ->
+        super()
+        
+        @model = ko.observableArray()
+        if model and model instanceof DataSource
+            @model.push model
+        else
+            DataSource.fetchAll().done ~>
+                @model(_.sortBy DataSource.getAllSources(), (d) -> d.name())
+                @$('.datasourceSearch').typeahead({source: @model().map -> it.name()})
+            @blankDataSource = ko.observable()
+            @showAddForm = ko.computed ~> @blankDataSource?()?.url?()?.length > 0
+            @hideAddForm = ko.computed ~> not @showAddForm()
+            
+            @action action
+            @message = ko.observable()
+            @visualizeDialog = ko.observable()
+            @filter = ko.observable()
+            @filteredModel = ko.computed ~>
+                if @filter()?.length
+                    filter = @filter().toLowerCase()
+                    @model().filter ~>
+                        id = it.id()?.toLowerCase?() or ''
+                        name = it.name()?.toLowerCase?() or ''
+                        return id.indexOf(filter) >= 0 or
+                             name.indexOf(filter) >= 0
+                else
+                    @model()
+    
+    
+    initializeAddForm: ->
+        @blankDataSource new DataSource()
+        saveButton = @$el.find 'button.save'
+        enableButton = -> saveButton.attr 'disabled', false
+        @blankDataSource().url.subscribe ~>
+            return if it is null or it.indexOf('?') is 0
+            @message "Attempting to analyze that Datafile"
+            
+            @blankDataSource().determineFormat()
+            saveButton.attr 'disabled', true
+        
+        @blankDataSource().data.subscribe ~>
+            return if @blankDataSource().url() is ''
+            dataset = @blankDataSource().data()
+            @blankDataSource().columns []
+            try
+                dataset.getLabels().map (label, i) ~>
+                    id = _.str.underscored (label or "#i").toLowerCase()
+                    type = @getTypeNameFromExample dataset.data[0][i]
+                    newColumn = new ColumnDef {id, label, type}, @blankDataSource()
+                    if dataset.type is 'mobile_device_by_geo'
+                        label = 'unknown' unless label
+                        switch label
+                            case 'name'
+                                capitalizedLabel = 'Name'
+                                newColumn.type 'string'
+                            case 'id'
+                                capitalizedLabel = 'ID'
+                                newColumn.type 'string'
+                            default
+                                capitalizedLabel = label.charAt(0).toUpperCase() + label.slice(1)
+                        newColumn.id label
+                        newColumn.label capitalizedLabel
+                    @blankDataSource().columns.push newColumn
+                @message "Metrics detected, please verify"
+            catch
+                @message "Failed to analyze metrics (check file format)"
+        
+        @blankDataSource().data()
+    
+    
+    /**
+     * Called by Knockout once the DataSource template has finished rendering.
+     */
+    afterRender: (element) ->
+        # FIXME: this seems to get called every time a property of @blankDataSource changes, which is very bad
+        # ^^ This might apply to the whole project
+        return if @el()
+        @el element
+        
+        if @action() is 'edit'
+            new EditView this
+        
+        @initializeAddForm()
+    
+    
+    addMetric: -> @columns.push new ColumnDef {label:'', type:''}, this
+    
+    removeMetricFrom: (datasource) -> (column) -> datasource.columns.remove column
+    
+    newDataSource: (form) ->
+        # refresh the indices of the columns to match the order they were entered
+        for column, i of @blankDataSource().columns()
+            column.index i
+        
+        ds = _.clone @blankDataSource()
+        if ds.slug()
+            ds.save(options={url:'/datasources'})
+                .done ~>
+                    ds.id ds.slug()
+                    @model.insert ds, 0
+                    @initializeAddForm()
+                    @message "Saved"
+                .fail (obj, msg, res) ~>
+                    @message "Failed to Save: #{res.responseText}"
+        else
+            @message "Failed to Save: Invalid"
+    
+    
+    /**
+     * Invoked via Knockout in the context of a datasource
+     * Creates a new GraphView and loads all the metrics from the datasource as Line nodes
+     */
+    visualizeLineGraph: -> limn.view.visualize this, 'line'
+    /**
+     * Invoked via Knockout in the context of a datasource
+     * Creates a new GraphView and loads all the metrics from the datasource as Geo Feature nodes
+     */
+    visualizeWorldMap: -> limn.view.visualize this, 'geo-feature'
+    
+    
+    visualize: (datasource, metricType) ->
+        datasource.fetch().done ~>
+            limn.view.visualizeDialog new GraphView @buildGraphModel datasource, metricType
+            limn.view.$('> .visualizeDialog').modal()
+            limn.view.visualizeDialog().resize()
+    
+    
+    buildGraphModel: (datasource, metricType, options) ->
+        options ?= {}
+        columns = _.clone datasource.columns()
+        # filter out columns that aren't meant to be visualized
+        switch metricType
+            case 'line'
+                columns = columns.slice(1)
+                graph = @buildLineGraph datasource, columns, metricType, options
+            case 'geo-feature'
+                columns = columns.filter -> it.id() is not 'id' and it.id() is not 'name'
+                graph = @buildWorldMapGraph datasource, columns, metricType, options
+        graph
+    
+    
+    buildWorldMapGraph: (datasource, columns, metricType, options) ->
+        worldMapChildren = columns.map ->
+            nodeType: 'geo-feature'
+            metric:
+                source_id: datasource.id()
+                source_col: it.id()
+            options:
+                label: it.label()
+                scale : 'log'
+                fill  : ['#D4E7ED', '#0A3A4B']
+            stroke :
+                width   : 3.0
+                color   : '#FFFFFF'
+                opacity : [0, 1.0]
+        
+        worldMapChildren.push {nodeType: 'zoom-pan'}
+        worldMapChildren.push {nodeType: 'infobox'}
+        
+        return do
+            name: "All Metrics in #{datasource.name()}"
+            root:
+                nodeType: 'canvas'
+                width: 'auto'
+                height: 750
+                children: [
+                    nodeType: 'geo-map'
+                    metric:
+                        source_id: 'map-world_countries'
+                    options:
+                        projection: 'mercator'
+                        backgroundColor: 'white'
+                        featuresColor: '#EEEEEE'
+                    children: worldMapChildren
+                ]
+    
+    
+    buildLineGraph: (datasource, columns, metricType, options) ->
+        graph = do
+            name: "All Metrics in #{datasource.name()}"
+            root:
+                nodeType: 'canvas'
+                y:
+                    scaleType: options.scale or 'linear'
+                width: options.width or 900
+                height: options.height or 350
+                children: [
+                    {nodeType: 'axis', options: {dimension: 'x', orient: 'bottom'}}
+                    {nodeType: 'axis', options: {dimension: 'y', orient: 'left'}}
+                    {nodeType: 'grid', options: {dimension: 'x'}}
+                    {nodeType: 'grid', options: {dimension: 'y'}}
+                    {nodeType: 'legend', options: {dateFormat: 'HH:mm on MMM DD, YYYY'}}
+                    {nodeType: 'zoom-brush'}
+                    {
+                        nodeType: "#{metricType}-group",
+                        options: {palette: 'category10'},
+                        children: columns.map -> {
+                            nodeType: metricType
+                            metric: {
+                                source_id: datasource.id()
+                                source_col: it.index()
+                                type: it.type()
+                            }
+                            options: {
+                                label: it.label()
+                            }
+                        }
+                    }
+                ]
+        
+        unless options.noTweaks
+            graph.root.children.push {
+                nodeType: 'tweaks',
+                children: [
+                    {nodeType: 'smooth'},
+                    {nodeType: 'scaling'}
+                ]
+            }
+        
+        return graph

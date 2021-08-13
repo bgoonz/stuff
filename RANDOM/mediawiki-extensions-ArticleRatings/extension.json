@@ -1,0 +1,61 @@
+{
+	"name": "ArticleRating",
+	"version": "2.4.2",
+	"author": "UltrasonicNXT/Adam Carter",
+	"url": "https://www.mediawiki.org/wiki/Extension:ArticleRatings",
+	"descriptionmsg": "ratings-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.33.0"
+	},
+	"GroupPermissions": {
+		"reviewer": {
+			"change-rating": true
+		}
+	},
+	"AvailableRights": [
+		"change-rating"
+	],
+	"SpecialPages": {
+		"ChangeRating": "SpecialChangeRating",
+		"MassRatings": "SpecialMassRatings"
+	},
+	"LogTypes": [
+		"ratings"
+	],
+	"LogActionsHandlers": {
+		"ratings/*": "LogFormatter"
+	},
+	"MessagesDirs": {
+		"ArticleRatings": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"ArticleRatingsAlias": "ArticleRatings.alias.php"
+	},
+	"AutoloadClasses": {
+		"RatingData": "RatingData.php",
+		"Rating": "Rating.php",
+		"AreHooks": "ArticleRatingsHooks.php",
+		"SpecialChangeRating": "SpecialChangeRating.php",
+		"SpecialMassRatings": "SpecialMassRatings.php"
+	},
+	"Hooks": {
+		"BaseTemplateToolbox": "AreHooks::onBaseTemplateToolbox",
+		"TitleMove": "AreHooks::onTitleMove",
+		"ParserFirstCallInit": "AreHooks::onParserFirstCallInit",
+		"LoadExtensionSchemaUpdates": "AreHooks::onLoadExtensionSchemaUpdates",
+		"ArticleDeleteComplete": "AreHooks::onArticleDeleteComplete"
+	},
+	"config": {
+		"AREUseInitialRatings": {
+			"value": false
+		},
+		"ARENamespaces": {
+			"value": []
+		}
+	},
+	"manifest_version": 2
+}

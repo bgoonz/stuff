@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Innocentbunny"
+		]
+	},
+	"auth_remoteuser-desc": "<code>REMOTE_USER</code> एन्वायरमेंट वेरिएबल की मदद से उपयोकाओं का स्वचालित रूप से प्रवेश करवा देता है"
+}

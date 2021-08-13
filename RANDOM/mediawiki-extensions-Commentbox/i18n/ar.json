@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Meno25",
+			"OsamaK"
+		]
+	},
+	"commentbox-desc": "يضيف صندوق تعليق لصفحات معينة",
+	"commentbox-intro": "== أضف تعليقا... ==\nلديك تعليق على هذه الصفحة؟ أضفه هنا أو <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} عدل الصفحة مباشرة]</span>.",
+	"commentbox-savebutton": "حفظ التعليق",
+	"commentbox-name": "الاسم:",
+	"commentbox-name-explanation": "<small>(نصيحة: لو أنك [[Special:UserLogin|ستسجل الدخول]]، فلن تحتاج إلى ملأ اسمك هنا يدويا)</small>",
+	"commentbox-log": "تعليقات جديدة",
+	"commentbox-first-comment-heading": "== تعليقات ==",
+	"commentbox-regex": "/\\n==\\s*نعليقات\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "خطأ أثناء إنشاء تعليق",
+	"commentbox-error-page-nonexistent": "هذه الصفحة غير موجودة!",
+	"commentbox-error-namespace": "لا يسمح بالتعليقات في هذه الصفحة!",
+	"commentbox-error-empty-comment": "التعليقات الفارغة غير مسموح بها!"
+}

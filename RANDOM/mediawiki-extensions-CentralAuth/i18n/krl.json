@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ilja.mos",
+			"Mashoi7",
+			"Varvana"
+		]
+	},
+	"centralauth-admin-blocklog": "šalpaušloki",
+	"centralauth-foreign-contributions": "$1 {{PLURAL:$1|korjauš|korjaušta}} wikissä $2",
+	"centralauth-foreign-link": "Käyttäjä $1 projektissa $2",
+	"centralauth-merge-method-login": "luotu kirjuttautumishetkellä"
+}

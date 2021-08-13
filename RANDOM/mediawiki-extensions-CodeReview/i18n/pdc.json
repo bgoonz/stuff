@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xqt"
+		]
+	},
+	"code-comments": "Aamaerickinge",
+	"code-references": "Neegschte Versione",
+	"code-change-removed": "gelöscht:",
+	"code-change-added": "dezu geduh:",
+	"code-authors": "Schreiwer",
+	"code-field-author": "Schreiwer",
+	"code-field-comments": "Aamaerickinge",
+	"code-field-path": "Paad",
+	"code-rev-author": "Schreiwer",
+	"code-rev-message": "Aamaericking:",
+	"code-rev-rev-viewvc": "uff ViewVC",
+	"code-rev-modified-a": "dezu geduh",
+	"code-rev-modified-d": "gelescht",
+	"code-rev-modified-m": "gennert",
+	"code-rev-comment-by": "Aamaericking vun $1",
+	"code-rev-comment-preview": "Aagucke",
+	"code-rev-inline-preview": "Aagucke:",
+	"code-status-new": "nei",
+	"code-status-ok": "OK",
+	"code-status-old": "ald",
+	"code-signoff-field-user": "Yuuser",
+	"code-revfilter-cr_author": "Schreiwer = $1",
+	"code-rev-submit": "Enneringe beilege",
+	"codereview-subtitle": "Fer $1",
+	"code-stats": "Nummere",
+	"repoadmin-new-button": "Schtaerte",
+	"repoadmin-edit-path": "Paad zum Repository:",
+	"repoadmin-edit-bug": "Paad zu Bugzilla:",
+	"repoadmin-edit-view": "Paad zu ViewVC:",
+	"repoadmin-edit-button": "OK"
+}

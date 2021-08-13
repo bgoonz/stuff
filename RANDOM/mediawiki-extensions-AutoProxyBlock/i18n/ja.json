@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"2nd-player",
+			"Aefgh39622",
+			"Otokoume",
+			"Shirayuki",
+			"Yusuke1109",
+			"青子守歌"
+		]
+	},
+	"autoproxyblock-desc": "オープンプロキシによるWiki内での操作の実行をブロックできるようにする。",
+	"proxy-blocked": "{{GENDER:|あなた}}の IP アドレスはプロキシとしてリストされているため、実行された操作は中止されました。",
+	"abusefilter-edit-builder-vars-is-proxy": "この操作がプロキシを介して実行された場合は true です。",
+	"tag-proxy": "プロキシ経由の操作",
+	"action-proxyunbannable": "プロキシの自動ブロックの回避",
+	"right-proxyunbannable": "プロキシの自動ブロックを回避",
+	"action-notagproxychanges": "プロキシ経由での編集でも「proxy」タグを付与されない",
+	"right-notagproxychanges": "プロキシ経由での編集でも「proxy」タグを付与されない",
+	"action-autoproxyblock-log": "自動プロキシブロック記録の閲覧",
+	"right-autoproxyblock-log": "プロキシ経由の自動ブロックされた変更の記録を閲覧",
+	"proxyblock-log-name": "自動プロキシブロック記録",
+	"proxyblock-log-header": "プロキシ経由の自動ブロックされた変更の一覧",
+	"proxyblock-logentry-blocked": "{{GENDER:$3|利用者}} $3 によるページ「[[$1]]」への操作「$2」は自動的にブロックされました。"
+}

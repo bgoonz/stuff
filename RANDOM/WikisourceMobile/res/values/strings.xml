@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Wikisource</string>
+    <string name="search_description">Article name and text</string>
+    <string name="search_hint_wiki">Search Wikisource</string>
+</resources>

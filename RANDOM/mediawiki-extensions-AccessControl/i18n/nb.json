@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"accesscontrol-desc": "Muliggjør gruppetilgang per side per bruker",
+	"accesscontrol-info": "Dette er en beskyttet side.",
+	"accesscontrol-info-box": "Tilgangsbegrensninger ble slått på for denne siden. Om du ser denne beskjeden har du ikke tilgang til denne siden."
+}

@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Das Schäfchen",
+			"L*E*D"
+		]
+	},
+	"coll-limit_exceeded_title": "Buch zu gross ...",
+	"coll-limit_exceeded_text": "Dein Buch ist zu gross. Es können keine Seiten mehr hinzugefügt werden.",
+	"coll-create_a_book": "Ein Buch erstellen",
+	"coll-download_as": "Als $1 herunterladen"
+}

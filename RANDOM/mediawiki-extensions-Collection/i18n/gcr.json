@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"LeGuyanaisPure",
+			"Léon973"
+		]
+	},
+	"coll-remove": "Anlvé",
+	"coll-show": "Afiché",
+	"coll-move_up": "Roumonté",
+	"coll-move_down": "Désann",
+	"coll-print_export": "Enprimen / èspòrté",
+	"coll-create_a_book": "Kréyé roun liv",
+	"coll-book_creator": "Kréyatò di liv",
+	"coll-download_as": "Téléchajé kou $1",
+	"coll-disable": "dézaktivé",
+	"coll-book_creator_disable": "Dézaktivé kréyatò-a di liv",
+	"coll-book_creator_disable_tooltip": "Sésé di itilizé kréyatò-a di liv",
+	"coll-add_this_page": "Ajouté sa paj annan ou liv",
+	"coll-add_page_tooltip": "Ajouté paj wiki-a ki abitchwèl asou ou liv",
+	"coll-help": "Lèd",
+	"coll-help_tooltip": "Afiché lèd asou kréyasyon-yan di liv",
+	"coll-helppage": "Help:Liv",
+	"coll-n_pages": "$1 paj{{PLURAL:$1|}}",
+	"coll-remove_this_page": "Tiré sa paj di ou liv",
+	"coll-show_collection": "Afiché liv-a",
+	"coll-show_collection_tooltip": "Kliké pou modifyé / téléchajé / koumandé ou liv",
+	"coll-make_suggestions": "Sigjéré tchèk paj",
+	"coll-make_suggestions_tooltip": "Montré sigjèstyon-yan fondé asou paj-ya annan zòt liv",
+	"coll-attribution-anons": "Annonnim : $1",
+	"coll-article-attribution": "<b>$1</b> <i>Sours :</i> $2 <i>Kontribitò :</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>Sours :</i> $2 <i>Lisans :</i> $3 <i>Kontribitò :</i> $4 <i>Artis d’orijin :</i> $5"
+}

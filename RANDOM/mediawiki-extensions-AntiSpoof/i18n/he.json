@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"Guycn2",
+			"Rotem Liss"
+		]
+	},
+	"antispoof-desc": "חסימת יצירה של חשבונות עם סוגי כתב מעורבים, שמות מבלבלים ושמות משתמש דומים",
+	"antispoof-conflict-top": "שם המשתמש \"$1\" דומה מדי {{PLURAL:$2|לשם המשתמש הבא|ל־$2 שמות המשתמש הבאים}}:",
+	"antispoof-conflict-bottom": "נא לבחור שם משתמש אחר.",
+	"antispoof-name-illegal": "שם המשתמש \"$1\" נאסר כדי למנוע שמות משתמש שיש בהם בלבול או התחזות: $2.\nנא לבחור שם משתמש אחר.",
+	"antispoof-badtype": "סוג נתונים בעייתי",
+	"antispoof-empty": "מחרוזת ריקה",
+	"antispoof-prohibited": "מכיל את התו $1, שאסור לשימוש",
+	"antispoof-combining": "מתחיל בסימן $1, שאמור להיות מורכב על אות",
+	"antispoof-unassigned": "מכיל את התו הבלתי־מוקצה או המיושן $1",
+	"antispoof-deprecated": "מכיל את התו המיושן $1",
+	"antispoof-noletters": "לא מכיל אותיות",
+	"antispoof-mixedscripts": "מכיל שיטות כתב מעורבים בלתי־תואמים",
+	"antispoof-tooshort": "השם המנורמל קצר מדי",
+	"antispoof-ignore": "התעלמות מבדיקת ההתחזות",
+	"antispoof-ignore-help": "לאפשר למשתמשים עם הרשאות מתאימות ליצור חשבון אפילו אם השם שלו דומה לחשבון קיים.",
+	"action-override-antispoof": "לעקוף את בדיקות ההתחזות",
+	"right-override-antispoof": "עקיפת בדיקות ההתחזות"
+}

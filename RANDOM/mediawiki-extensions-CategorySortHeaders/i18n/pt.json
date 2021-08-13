@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cainamarques",
+			"Hamilton Abreu"
+		]
+	},
+	"categorysortheaders-desc": "Permite especificar cabeçalhos de ordenação personalizados com vários caracteres para listar páginas em categorias utilizando uma sintaxe como <nowiki>[[category:Foo|^Header^Invisible part of sortkey]]</nowiki>"
+}

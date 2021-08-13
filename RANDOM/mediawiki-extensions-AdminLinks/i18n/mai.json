@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vinitutpal",
+			"बिप्लब आनन्द"
+		]
+	},
+	"adminlinks": "एडमिन लिंक",
+	"adminlinks-desc": "एकटा [[Special:AdminLinks|विशेष पृष्ठ]] जोडी जाहि सँ प्रबन्धकसभके सहायता लिङ्क राखत",
+	"adminlinks_documentation": "$1 प्रलेखन",
+	"adminlinks_general": "सामान्य",
+	"adminlinks_editsidebar": "साइडबार सम्पादित करी",
+	"adminlinks_editcss": "सीएसएस फाइल सम्पादित करी",
+	"adminlinks_editmainpagename": "सम्मुख पन्नाक नाम सम्पादित करी",
+	"adminlinks_users": "प्रयोक्तासभ",
+	"adminlinks_browsesearch": "ब्राउज आर खोजी करी",
+	"adminlinks_importexport": "आयात आर निर्यात",
+	"right-adminlinks": "[[Special:AdminLinks|प्रवन्धक लिंकसभ]] देखी"
+}

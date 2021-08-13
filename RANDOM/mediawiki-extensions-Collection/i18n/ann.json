@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Katelem"
+		]
+	},
+	"coll-remove": "San̄a nan̄a",
+	"coll-show": "San̄a jeen̄",
+	"coll-move_up": "Juuk fo inyọn̄",
+	"coll-move_down": "Juuk fo ijọn̄",
+	"coll-create_a_book": "Gon ikpa",
+	"coll-book_creator": "Ògon ikpa",
+	"coll-download_as": "Bọkọ tap kire $1",
+	"coll-disable": "mîchit",
+	"coll-book_creator_disable_tooltip": "Kayaka ìsa ògon ikpa irọ inu",
+	"coll-add_this_page": "Tap akpọk yi gbaalek ikpa kwun̄",
+	"coll-add_page_tooltip": "Tap akpọk wikì keyi me lek ikpa kwun̄",
+	"coll-help": "Ntap-ubọk",
+	"coll-help_tooltip": "Jeen̄ ntap-ubọk ofolek igogon ikpa",
+	"coll-helppage": "Help:Ebi kè ikpa",
+	"coll-n_pages": "$1 {{PLURAL:$1|Akpọk}}",
+	"coll-remove_this_page": "San̄a akpọk yi nan̄a me lek ikpa kwun̄",
+	"coll-show_collection": "Jeen̄ ikpa",
+	"coll-attribution-anons": "Ebi kpunu erieen̄: $1"
+}

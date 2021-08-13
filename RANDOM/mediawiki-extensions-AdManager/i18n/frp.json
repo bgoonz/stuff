@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"ChrisPtDe"
+		]
+	},
+	"admanager": "Administrator de recllâmes",
+	"admanagerzones": "Zones de l’administrator de recllâmes",
+	"admanager_invalidtargetpage": "Gins de pâge trovâye avouéc lo titro « $1 ».",
+	"admanager_invalidtargetcategory": "Gins de catègorie trovâye avouéc lo titro « $1 ».",
+	"admanager_labelPage": "Titros de pâges",
+	"admanager_labelCategory": "Noms de catègories",
+	"admanager_submit": "Sometre",
+	"admanager_noads": "Fâre vêre gins de recllâma",
+	"admanager_Page": "Pâges",
+	"admanager_Category": "Catègories",
+	"admanager_added": "Voutros changements sont étâs encartâs",
+	"admanager_addedzone": "Zona apondua",
+	"admanager_zonenum": "Numerô de zona : $1",
+	"admanager_zonenotnumber": "Èrror ! $1 est pas un nombro.",
+	"admanager_return": "Retôrn a l’[[Special:AdManager|administrator de recllâmes]]",
+	"admanager_gotoads": "[[Special:AdManager|Changiér lo placement de recllâma]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Changiér les zones de recllâmes]]",
+	"right-admanager": "[[Special:AdManager|Administrar la configuracion de la recllâma]]"
+}

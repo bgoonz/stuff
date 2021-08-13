@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"DavidL",
+			"Gomoko",
+			"Thibaut120094"
+		]
+	},
+	"accesscontrol-desc": "Permet la restriction d’accès de groupe sur une page selon l’utilisateur",
+	"accesscontrol-info": "Il s’agit d’une page protégée.",
+	"accesscontrol-info-box": "Des restrictions d’accès ont été mises en place pour cette page. Si vous voyez ce message, vous n’avez pas accès à cette page."
+}

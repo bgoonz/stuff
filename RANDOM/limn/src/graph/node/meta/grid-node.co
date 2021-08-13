@@ -1,0 +1,95 @@
+_  = require 'underscore'
+ko = require 'knockout'
+d3 = require 'd3'
+
+{ GraphNodeData,
+} = require '../graph-node-data'
+{ GraphNode,
+} = require '../graph-node'
+{ CanvasNode,
+} = require '../canvas-node'
+Trait = require '../graph-node-trait'
+
+
+
+/**
+ * @class
+ * @extends GraphNodeData
+ */
+class exports.GridNodeData extends GraphNodeData
+    @registerType 'grid'
+    
+    defaults: ->
+        dimension : null # x | y
+        options   :
+            ticks : 10
+            stroke :
+                width   : 1
+                color   : '#CACACA'
+    
+    attributeTypes: ->
+        {}
+    
+    -> super ...
+
+
+
+/**
+ * @class
+ * @extends GraphNode
+ */
+class exports.GridNode extends GraphNode
+    @registerType 'grid'
+    traits : [
+        Trait.META_NODE
+        Trait.BG_LAYER
+        Trait.SVG
+        Trait.LEAF
+    ]
+    
+    
+    -> super ...
+    
+    
+    render: ->
+        viewport = @viewport()
+        options = @model().options()
+        return unless viewport.zoomTransform()
+        return unless dim       = options.get('dimension')
+        return unless scale     = viewport[dim+'ZoomScale']()
+        return unless tickCount = options.get('ticks')
+        
+        @sel.classed dim+'-grid', true
+        
+        switch dim
+            case 'x'
+                ticks = if viewport.xScaleType() is 'time' then scale.ticks(tickCount) else scale.domain()
+                size = viewport.height()
+                enter =
+                    y1: -1 * size
+                    y2:  2 * size
+                transition =
+                    x1: scale
+                    x2: scale
+            
+            case 'y'
+                ticks = if viewport.yScaleType() is 'ordinal' then scale.range() else scale.ticks(tickCount)
+                size = viewport.width()
+                enter =
+                    x1: -1 * size
+                    x2:  2 * size
+                transition =
+                    y1: scale
+                    y2: scale
+        
+        gridLinesData = @sel.selectAll 'line'
+            .data ticks
+            # .attr transition
+        gridLinesData.exit().remove()
+        gridLinesData.enter().append 'line'
+            .attr 'vector-effect': 'non-scaling-stroke'
+            .attr enter
+        gridLinesData.transition()
+            .attr transition
+    
+

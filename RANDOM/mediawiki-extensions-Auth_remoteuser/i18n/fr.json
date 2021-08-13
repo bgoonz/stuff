@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gomoko",
+			"Linedwell"
+		]
+	},
+	"auth_remoteuser-desc": "Connecte automatiquement les utilisateurs en utilisant la variable d’environnement <code>REMOTE_USER</code>"
+}

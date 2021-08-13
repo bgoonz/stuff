@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Htt",
+			"Kaustubh",
+			"V.narsikar"
+		]
+	},
+	"authorprotect": "लेखक नसणार्‍यांपासून पान सुरक्षित करा",
+	"authorprotect-desc": "एखाद्या लेखकाला त्याने लिहिलेले पान इतरांपासून सुरक्षित करण्याची अनुमती देतो",
+	"authorprotect-notauthor": "तुम्ही या लेखाचे लेखक नाहीत",
+	"authorprotect-confirm": "सुरक्षा पातळ्या बदला",
+	"authorprotect-edit": "फक्त लेखकांनाच संपादन करू द्या",
+	"authorprotect-move": "फक्त लेखकांनाच स्थानांतरण करू द्या",
+	"authorprotect-intro": "लेखक नसणार्‍यांपासून हे पान सुरक्षित करण्यासाठी हा अर्ज वापरा",
+	"authorprotect-success": "सुरक्षित केले!",
+	"protect-level-author": "लेखक नसणार्‍यांपासून सुरक्षित करा",
+	"restriction-level-author": "लेखक-सुरक्षित",
+	"right-authorprotect": "लेखक असणारी पाने सुरक्षित करा",
+	"right-author": "लेखक सुरक्षित पानांचे संपादन करा"
+}

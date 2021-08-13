@@ -1,0 +1,163 @@
+_      = require 'underscore'
+op     = require 'operator'
+moment = require 'moment'
+
+{ IndexIterator, ZipIterator, PipeIterator,
+} = require './iterator'
+
+
+DEFAULT_OPTIONS =
+    materialize : 'rows'    # shape of the output data -- rows | columns | both -> {rows, columns} | iter -> Iterator representing the transform.
+    columns     : null      # keep only these columns -- null -> all
+    
+    timeStart   : null      # drop rows with date < this -- null -> -Infinity
+    timeEnd     : null      # drop rows with date > this -- null ->  Infinity
+    timeStep    : null      # normalize datapoints -- null -> no normalization
+    timeCol     : 0         # index/id of time column -- null -> first Date column
+    
+    transforms  : null      # list of `ComposableIterator`s to apply to the data after filtering
+    
+    # TODO (maybe): sorted, reversed, negated, fillNulls
+    # sorted      : false   # sort output -- false -> off; true -> natural; fn -> cmp(a,b) -> 1|0|-1
+    # reversed    : false   # reverse output
+    # negated     : false   # negate all filters
+    # fillNulls   : null    # replace nulls with this value
+
+
+class exports.Query
+    /* * * *  Fluent Options  * * * {{{ */
+    
+    /**
+     * Generate fluent accessors for the query object.
+     * @private
+     */
+    @option = (name, key, fn) ->
+        [fn, key] = [key, name] if typeof key is 'function'
+        fn        = op.I    unless typeof fn  is 'function'
+        key      ?= name
+        
+        @::[name] = ->
+            return @options[key] if arguments.length is 0
+            @options[key] = fn ...
+            this
+    
+    @option 'materialize'
+    @option 'columns', (...indexes) -> indexes
+    
+    @option 'timeCol'
+    @option 'step', 'timeStep'
+    timespan: (start, end) ->
+        if arguments.length is 0
+            return [@options.timeStart, @options.timeEnd]
+        @options.timeStart = moment(start).toDate() if start?
+        @options.timeEnd   = moment(end).toDate()   if end?
+        this
+    
+    @option 'transforms', -> it.slice()
+    
+    /**
+     * Adds a single transform.
+     * @returns {this}
+     */
+    transform: (it) ->
+        @options.transforms.push it
+        this
+    
+    # @option 'negated'
+    # @option 'reversed'
+    # @option 'sorted'
+    # @option 'key', 'sorted', (k) ->
+    #     (a, b) -> op.cmp a[k], b[k]
+    
+    # }}}
+    
+    
+    ->
+        return new Query() unless this instanceof Query
+        @options = {} import DEFAULT_OPTIONS import { transforms:[] }
+    
+    
+    
+    /**
+     * Apply this query to the given data in column-major format.
+     */
+    processCols: (...cols) ->
+        @_process new ZipIterator cols
+    
+    
+    /**
+     * Apply this query to the given data in row-major format.
+     */
+    process: (rows) ->
+        @_process new IndexIterator rows
+    
+    
+    /**
+     * Executes the query on an iterator stream.
+     * 
+     * @private
+     * @param {Iterator} iter Data iterator, formatting all items like rows.
+     * @returns {Array<Array>} Processed data.
+     */
+    _process: (iter) ->
+        opts = {} import @options
+        
+        # apply timespan filter
+        # TODO: normalize by timeStep
+        unless opts.timeStart == null == opts.timeEnd
+            timeCol   = opts.timeCol or 0 # ?  _.find( _.items(rows[1]), ([id, v]) -> v instanceof Date )[0]
+            timeStart = opts.timeStart ? -Infinity
+            timeEnd   = opts.timeEnd   ?  Infinity
+            
+            # convert to ms since the epoch
+            timeStart = +timeStart
+            timeEnd   = +timeEnd
+            
+            filterTime = (row) ->
+                v = +(row?[timeCol])
+                timeStart <= v <= timeEnd
+            
+            iter .= pipe filter:filterTime
+        
+        # select out only the desired columns
+        if _.isArray opts.columns
+            pickCols = (row) ->
+                _.reduce do
+                    opts.columns
+                    (acc, col) ->
+                        acc.push(val = row[col])
+                        acc[col] = val if typeof col is 'string'
+                        acc
+                    []
+            
+            iter .= pipe map:pickCols
+        
+        # send data through the transforms
+        for tr of opts.transforms
+            iter .= compose tr.clone()
+        
+        # finally, materialize the transpose of the data if necessary
+        if opts.materialize is not 'rows'
+            columns = []
+            materializeCols = (row) ->
+                for val, idx of row
+                    col = (columns[idx] or= [])
+                    col.push val
+                row
+            
+            iter .= pipe map:materializeCols
+        
+        # return early to avoid advancing the iterator
+        if opts.materialize is 'iter'
+            return iter
+        
+        rows = iter.toArray()
+        switch opts.materialize
+        case 'both'
+            return { rows, columns }
+        case 'columns'
+            return columns
+        default # everything else except "iter" (above) gets the rows
+            return rows
+    
+

@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"GunChleoc"
+		]
+	},
+	"adminlinks": "Ceanglaichean nan rianairean",
+	"adminlinks-desc": "Cuiridh seo [[Special:AdminLinks|duilleag shònraichte]] ris sa bheil ceanglaichean feumail dha rianairean",
+	"adminlinks_documentation": "Docamaideadh $1",
+	"adminlinks_general": "Coitcheann",
+	"adminlinks_editsidebar": "Deasaich am bàr-taoibh",
+	"adminlinks_editcss": "Deasaich faidhle CSS",
+	"adminlinks_editmainpagename": "Deasaich ainm na prìomh-dhuilleige",
+	"adminlinks_users": "Cleachdaichean",
+	"adminlinks_browsesearch": "Brabhsaich is lorg",
+	"adminlinks_importexport": "Ion-phortaich is às-phortaich",
+	"adminlinks_pagenotfound": "Cha deach leinn duilleag shònraichte a lorg air a bheil: $1.",
+	"right-adminlinks": "Seall an ceangal gu [[Special:AdminLinks|Ceanglaichean nan rianairean]]"
+}

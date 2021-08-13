@@ -1,0 +1,24 @@
+{
+	"root": true,
+	"extends": [
+		"wikimedia",
+		"wikimedia/mediawiki"
+	],
+	"env": {
+		"browser": true,
+		"jquery": true
+	},
+	"globals": {
+		"mediaWiki": false
+	},
+	"rules": {
+		"jsdoc/check-tag-names": "off",
+		"jsdoc/no-undefined-types": "off",
+		"mediawiki/class-doc": "off",
+		"mediawiki/msg-doc": "off",
+		"max-len": "off",
+		"no-multi-str": "warn",
+		"no-tabs": "warn",
+		"no-shadow": "warn"
+	}
+}

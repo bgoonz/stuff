@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"CRCHF",
+			"Hello903hello",
+			"Yueman"
+		]
+	},
+	"apihelp-antispoof-description": "正常檢查一個戶口係咪有網絡釣魚嘅嘢。",
+	"apihelp-antispoof-summary": "檢查個用戶名有無違反AntiSpoof嘅標準化檢查。",
+	"apihelp-antispoof-param-username": "要檢查有無違反AntiSpoof嘅用戶名。",
+	"apihelp-antispoof-example-1": "查到“Foo”呢個戶口有網絡釣魚嘅嘢",
+	"apihelp-createaccount-param-ignoreantispoof": "略過欺詐檢查（需要 <code>override-antispoof</code> 權限）。"
+}

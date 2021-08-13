@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fryed-peach",
+			"Shirayuki"
+		]
+	},
+	"biblioplus-desc": "PubMed および ISBN データベースから引用を自動的に取得する",
+	"biblioplus-doi-tooltip": "発行者の記事を閲覧または購入",
+	"biblioplus-pmid-tooltip": "発行者の記事を閲覧または購入 (利用できる場合)",
+	"biblioplus-isbn-tooltip": "isbndb.org の書籍情報",
+	"biblioplus-medline-abstracts": "すべての Medline のアブストラクト:",
+	"biblioplus-pubmed-abstracts": "PubMed の全アブストラクト",
+	"biblioplus-hubmed-abstracts": "HubMed の全アブストラクト",
+	"biblioplus-vkey-title": "書誌データベースへのリンク"
+}

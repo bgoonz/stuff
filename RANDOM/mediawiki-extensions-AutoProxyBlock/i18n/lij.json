@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Giromin Cangiaxo"
+		]
+	},
+	"autoproxyblock-desc": "O consente de impedî a-i proxy averti d'exeguî di açioin inta wiki",
+	"proxy-blocked": "O {{GENDER:|to}} adresso IP o l'è elencou comme proxy, açione eseguia interotta.",
+	"abusefilter-edit-builder-vars-is-proxy": "Veo se st'açion a l'è stæta eseguia trammite un proxy",
+	"tag-proxy": "açion trammite proxy",
+	"right-proxyunbannable": "Ignora i blocchi aotomattichi di proxy",
+	"right-notagproxychanges": "o proteze da l'etichettâ de modiffiche eseguie trammite proxy comme \"proxy\"",
+	"right-autoproxyblock-log": "vixualizza o registro de modiffiche bloccæ aotomaticamente eseguie trammite proxy",
+	"proxyblock-log-name": "Registro blocchi aotomattichi proxy",
+	"proxyblock-log-header": "Lista di cangi trammite proxy bloccæ aotomaticamente",
+	"proxyblock-logentry-blocked": "açion \"$2\" eseguia {{GENDER:$3|da l'utente}} $3 in sciâ paggina [[$1]] bloccâ aotomaticamente."
+}

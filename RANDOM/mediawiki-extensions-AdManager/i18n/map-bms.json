@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"StefanusRA"
+		]
+	},
+	"admanager": "Menejer Iklan",
+	"admanagerzones": "Wilayaeh Menejer Iklan",
+	"admanager-desc": "Nyediakna [[Special:AdManager|kaca khusus]] sing ngijina opsis ngeset wilayaeh nggo kaca utawa kategori",
+	"admanager_docu": "Kanggo nambaih utawa mbuang wilayah iklan sekang kaca utawa kabeh kategori, tambahna utawa buang judhule nang ngisor kiye.",
+	"admanagerzones_docu": "Lebokna saben nomer wilayah iklan nang barise dhewek.",
+	"admanager_invalidtargetpage": "Ora nemokna kaca sing judhule \"$1\".",
+	"admanager_invalidtargetcategory": "Ora nemokna kategori sing judhule \"$1\".",
+	"admanager_notable": "Kasalahan! Tabel basis data sing diperlokna ota ketemu! Lakokna disit update.php.",
+	"admanager_noAdManagerZones": "Kasalahan! Rika kudu nambahna wilayah iklan. Lebokna kuwe nang [[Special:AdManagerZones|Ad Manager Zones]].",
+	"admanager_labelPage": "Judul kaca",
+	"admanager_labelCategory": "Jeneng kategori",
+	"admanager_submit": "Kirimna",
+	"admanager_noads": "Aja nidokna iklan",
+	"admanager_Page": "Kaca",
+	"admanager_Category": "Kategori",
+	"admanager_added": "Owahane Rika wis disimpen",
+	"admanager_addedzone": "Wilayah sing ditambahna",
+	"admanager_zonenum": "Wilayah #: $1",
+	"admanager_zonenotnumber": "Kasalahan! $1 kuwe dudu angka.",
+	"admanager_return": "Mbalik ming [[Special:AdManager|Menejer Iklan]]",
+	"admanager_gotoads": "[[Special:AdManager|Nyunting panggonane iklan]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Nyunting wilayaeh iklan]]",
+	"right-admanager": "[[Special:AdManager|Ngatur konfigurasi iklan]]"
+}

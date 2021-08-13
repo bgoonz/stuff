@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"An13sa",
+			"Kobazulo",
+			"Mikel Ibaiba",
+			"Pi",
+			"Theklan",
+			"Xabier Armendaritz"
+		]
+	},
+	"authorprotect": "Babestu orria egile ez direnetatik",
+	"authorprotect-desc": "Egileari orrialdea beste erabiltzaileez babesteko aukera ematen dio",
+	"authorprotect-notauthor": "Ez {{GENDER:$1|zara}} orrialde honen {{GENDER:$1|egilea}}.",
+	"authorprotect-confirm": "Aldatu babeste mailak",
+	"authorprotect-edit": "Mugatu editatzea egileei",
+	"authorprotect-move": "Mugatu mugitzea egileei",
+	"authorprotect-intro": "Erabili inprimaki hau orrialde hau ez-egileei blokeatzeko",
+	"authorprotect-success": "Behar bezala babestu da!",
+	"protect-level-author": "Babestu ez-egileetatik",
+	"restriction-level-author": "Auto-babesturik",
+	"action-authorprotect": "babestu ez-egileetatik",
+	"right-authorprotect": "Babestu sortu ditudan orriak",
+	"right-author": "Egile-babesdun orrialdeak editatu"
+}

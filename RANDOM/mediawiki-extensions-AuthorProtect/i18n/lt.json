@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eitvys200",
+			"Hugo.arg",
+			"Ignas693",
+			"Manvydasz",
+			"Perkunas"
+		]
+	},
+	"authorprotect": "Apsaugoti puslapį nuo ne autorių",
+	"authorprotect-desc": "Leisti puslapio autoriui apsaugoti puslapį nuo kitų vartotojų",
+	"authorprotect-notauthor": "{{GENDER:$1|Jūs}} nesate šio puslapio {{GENDER:$1|autorius|autorė}}",
+	"authorprotect-confirm": "Keisti apsaugos lygius",
+	"authorprotect-edit": "Apriboti redagavimą autoriams",
+	"authorprotect-move": "Apriboti redagavimą autoriams",
+	"authorprotect-intro": "Naudokite šią formą norėdami užrakinti puslapi nuo ne autorių",
+	"authorprotect-success": "Apsauga nustatyta!",
+	"protect-level-author": "Apsaugoti puslapį nuo ne autorių",
+	"restriction-level-author": "Autorius apsaugotas",
+	"right-authorprotect": "Apsaugoti autorius puslapių",
+	"right-author": "Redaguoti pusiau užrakintus puslapius"
+}

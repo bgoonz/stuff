@@ -1,0 +1,35 @@
+{
+	"name": "Calendar",
+	"version": "1.1",
+	"author": "Roland Unger",
+	"url": "https://www.mediawiki.org/wiki/Extension:Calendar-Wikivoyage",
+	"descriptionmsg": "calendar-desc",
+	"type": "parserhook",
+	"requires": {
+		"MediaWiki": ">= 1.32.0"
+	},
+	"license-name": "GPL-2.0-or-later",
+	"ExtensionMessagesFiles": {
+		"CalendarMagic": "Calendar.i18n.magic.php"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "CalendarHooks::setupParserHooks"
+	},
+	"MessagesDirs": {
+		"Calendar": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"ext.calendar": {
+			"styles": "ext.calendar.css",
+			"localBasePath": "modules",
+			"remoteExtPath": "Calendar/modules"
+		}
+	},
+	"AutoloadClasses": {
+		"CalendarTable": "includes/CalendarTable.php",
+		"CalendarHooks": "includes/CalendarHooks.php"
+	},
+	"manifest_version": 2
+}

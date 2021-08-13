@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"OC Ripper",
+			"Vlad5250"
+		]
+	},
+	"autoproxyblock-desc": "Omogućuje zadavanje zabrane akcija otvorenih proxy-ja na ovom wikiju",
+	"proxy-blocked": "{{GENDER:|Vaša}} IP adresa je navedena kao zastupnik. Stoga se izvršena radnja poništava.",
+	"abusefilter-edit-builder-vars-is-proxy": "Upravo ako se radnja odvija preko zastupnika",
+	"tag-proxy": "radnja preko zastupnika",
+	"action-proxyunbannable": "zaobilaženje automatskih blokada proxy-ja",
+	"right-proxyunbannable": "Zaobilaženje automatskih blokada proxy-ja",
+	"action-notagproxychanges": "zaštita od označavanja izmjena napravljenih preko proksi kao takve",
+	"right-notagproxychanges": "Zaštita od označavanja izmjena napravljenih preko proksi kao takve",
+	"action-autoproxyblock-log": "gledanje Zastupničkog autobloka",
+	"right-autoproxyblock-log": "Pregled dnevnika automatski blokiranih izmjena preko proksija",
+	"proxyblock-log-name": "Dnevnik automatskog blokiranja zastupnika",
+	"proxyblock-log-header": "Popis automatski blokiranih promjena preko zastupnika",
+	"proxyblock-logentry-blocked": "radnja \"$2\" {{GENDER:$3|korisnika|korisnice}} $3 na stranici [[$1]] automatski je blokrana."
+}

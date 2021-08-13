@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Glavkos",
+			"NikosLikomitros",
+			"Nikosgranturismogt",
+			"Protnet",
+			"ZaDiak",
+			"Περίεργος"
+		]
+	},
+	"apihelp-pollsubmitvote-description": "Δομοστοιχείο API AJAXPoll",
+	"apihelp-pollsubmitvote-summary": "Δομοστοιχείο API AJAXPoll",
+	"ajaxpoll-desc": "Επιτρέπει δημοσκοπήσεις βασισμένες σε AJAX με ετικέτα <code>&lt;poll&gt;</code>",
+	"ajaxpoll-tracking-category": "Σελίδες με δημοσκόπηση",
+	"ajaxpoll-vote-update": "Η ψήφος σας έχει ενημερωθεί.",
+	"ajaxpoll-vote-add": "Η ψήφος σας προστέθηκε.",
+	"ajaxpoll-vote-error": "Παρουσιάστηκε πρόβλημα κατά την επεξεργασία της ψήφου σας, παρακαλούμε ξαναπροσπαθήστε.",
+	"ajaxpoll-percent-votes": "$1% επί των συνολικών ψήφων",
+	"ajaxpoll-your-vote": "Έχετε ήδη ψηφίσει για το \"$1\" στο $3 στις $4. Μπορείτε να αλλάξετε τη ψήφο σας πατώντας μια διαφορετική απάντηση παρακάτω.",
+	"ajaxpoll-no-vote": "Παρακαλούμε ψηφίστε παρακάτω.",
+	"ajaxpoll-info": "{{PLURAL:$1|Υπήρξε μια ψήφος|Υπήρξαν $1 ψήφοι}} από την έναρξη της δημοσκόπησης στις $2.",
+	"ajaxpoll-submitting": "Παρακαλούμε περιμένετε, η ψήφος σας υποβάλλεται.",
+	"ajaxpoll-vote-permission": "Δεν έχετε δικαίωμα να ψηφίσετε.",
+	"ajaxpoll-revoke-vote": "Θέλω να ανακαλέσω την ψήφο μου",
+	"ajaxpoll-vote-revoked": "Η ψήφος σας έχει ανακληθεί.",
+	"right-ajaxpoll-vote": "Μπορεί να ψηφίσει σε δημοσκοπήσεις βασισμένες σε AJAX"
+}

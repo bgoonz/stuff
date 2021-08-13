@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Per",
+			"Sertion"
+		]
+	},
+	"commentbox-desc": "Lägger till en kommentarbox till vissa sidor",
+	"commentbox-intro": "== Lägg till en kommentar... ==\nHar du en kommentar till den här sidan? Lägg till den här eller <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} redigera sidan manuellt]</span>.",
+	"commentbox-savebutton": "Spara kommentar",
+	"commentbox-name": "Namn:",
+	"commentbox-name-explanation": "<small>(Tips: När du [[Special:UserLogin|loggar in]] så slipper du att fylla i ditt namn manuellt.)</small>",
+	"commentbox-log": "Nya kommentarer",
+	"commentbox-first-comment-heading": "== Kommentarer ==",
+	"commentbox-regex": "/\\n==\\s*Kommentarer\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Ett fel uppstod när kommentaren skapades",
+	"commentbox-error-page-nonexistent": "Denna sidan existerar inte!",
+	"commentbox-error-namespace": "Kommentarer är inte tillåtna i denna namnrymd!",
+	"commentbox-error-empty-comment": "Tomma kommentarer är inte tillåtna!"
+}

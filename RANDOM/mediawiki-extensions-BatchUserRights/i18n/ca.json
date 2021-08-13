@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Arnaugir",
+			"Fitoschido",
+			"Macofe"
+		]
+	},
+	"batchuserrights-userload-error": "No s’ha pogut carregar {{GENDER:$1|l’usuari|la usuària}} '''$1'''."
+}

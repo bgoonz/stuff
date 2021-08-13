@@ -1,0 +1,44 @@
+{
+	"name": "ArticleIndex",
+	"version": "0.5.1",
+	"author": "[https://www.mediawiki.org/wiki/User:Jossmart Josef Martiňák]",
+	"url": "https://www.mediawiki.org/wiki/Extension:ArticleIndex",
+	"descriptionmsg": "articleindex-desc",
+	"license-name": "GPL-3.0-only",
+	"type": "specialpage",
+	"requires": {
+		"MediaWiki": ">= 1.29.0"
+	},
+	"MessagesDirs": {
+		"ArticleIndex": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"ArticleIndexHooks": "ArticleIndexHooks.php"
+	},
+	"ResourceModules": {
+		"ext.ArticleIndex": {
+			"styles": [
+				"resources/ext.ArticleIndex.css"
+			],
+			"scripts": [
+				"resources/ext.ArticleIndex.js"
+			],
+			"messages": [
+				"articleindex-prev",
+				"articleindex-next",
+				"articleindex-index"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "ArticleIndex"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "ArticleIndexHooks::registerParserHook",
+		"BeforePageDisplay": "ArticleIndexHooks::showIndex"
+	},
+	"manifest_version": 2
+}

@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Abbas dhothar",
+			"Khalid Mahmood"
+		]
+	},
+	"antispoof-desc": "ایدے توں ملے جلے، سر پھرے تے رلدے خط آلے ورتن ناں بنن توں رک جاندے نیں",
+	"antispoof-conflict-top": "اے ناں \"$1\" پہلاں توں بنے ہوۓ {{PLURAL:$2|اس ورتن ناں|ایناں ورتن ناواں}} دے نال بوت رلدا اے:",
+	"antispoof-conflict-bottom": "مہربانی کرکے ہور ناں چنو",
+	"antispoof-name-illegal": "اس ناں \"$1\" توں ورتن ناں نئیں بنایا جا سکدا کیونجے انجان تے مزاحیہ دے اتے روک اے: $2\nمہربانی کر کے کوئی دوجا ناں چنو۔",
+	"antispoof-badtype": "ڈیٹا ٹھیک نیں",
+	"antispoof-empty": "خالی سلسلہ",
+	"antispoof-prohibited": "ایہدے وچ بنا اجازت والیاں چیزاں نیں۔",
+	"antispoof-combining": "جوڑن والے نشان نال ٹردا اے $1",
+	"antispoof-unassigned": "ایہدے کج کیریکٹر فیک نیں $1",
+	"antispoof-noletters": "ایہدے وچ کوئی اکرا نئیں۔",
+	"antispoof-mixedscripts": "ایہدے وچ رلے ملے تے ناں ملن والے کیریکٹر نیں",
+	"antispoof-tooshort": "وڈے ناں بہت نکے نیں",
+	"antispoof-ignore": "بے تکیاں چیزاں ناں چیک کرو",
+	"right-override-antispoof": "بےتکیاں چیزاں نوں چھڈو"
+}

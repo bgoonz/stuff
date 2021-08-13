@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Als-Holder"
+		]
+	},
+	"commentbox-desc": "Fiegt in bstimmti Syte ne Aamerkigsfäld yy",
+	"commentbox-intro": "== Aamerkig zuefiege ... ==\nDu hesch e Aamerkig zue däre Syte? Trag e do yy oder <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} bearbeit d Syte diräkt]</span>.",
+	"commentbox-savebutton": "Aamerkig spychere",
+	"commentbox-name": "Name:",
+	"commentbox-name-explanation": "<small>(Tipp: Wänn Du Di [[Special:UserLogin|aamäldsch]], muesch do nimmi Dyy Name yygee)</small>",
+	"commentbox-log": "Neji Aamerkig",
+	"commentbox-first-comment-heading": "== Aamerkige ==",
+	"commentbox-regex": "/\\n==\\s*Aamerkige\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Fähler bim Aalege vu dr Aamerkig",
+	"commentbox-error-page-nonexistent": "Die Syte git s nit!",
+	"commentbox-error-namespace": "Aamerkige sin in däm Namensruum nit erlaubt!",
+	"commentbox-error-empty-comment": "Lääri Aamerkige sin nit erlaubt!"
+}

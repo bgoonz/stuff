@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dalibor Bosits",
+			"Ex13",
+			"Tivek"
+		]
+	},
+	"authorprotect": "Zaštiti stranicu od ne-autora",
+	"authorprotect-desc": "Omogućava autoru stranice zaštititi istu stranicu od drugih suradnika",
+	"authorprotect-notauthor": "Vi niste autor ove stranice",
+	"authorprotect-confirm": "Promijeni razinu zaštite",
+	"authorprotect-edit": "Samo za autore",
+	"authorprotect-move": "Samo za autore",
+	"authorprotect-intro": "Ovdje možete zaštiti stranicu za sve koji nisu autori",
+	"authorprotect-success": "Zaštićivanje uspješno!",
+	"protect-level-author": "Zaštiti za ne-autore",
+	"restriction-level-author": "Samo za autore",
+	"right-authorprotect": "Zaštićivanje autoriziranih stranica"
+}

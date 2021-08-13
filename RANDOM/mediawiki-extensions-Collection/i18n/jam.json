@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dentonius",
+			"Katxis"
+		]
+	},
+	"coll-remove": "Tek out",
+	"coll-show": "Show",
+	"coll-move_up": "Move up",
+	"coll-move_down": "Move dung",
+	"coll-print_export": "Print/export",
+	"coll-create_a_book": "Mek a book",
+	"coll-book_creator": "Buk krieta",
+	"coll-download_as": "Download inna $1",
+	"coll-disable": "disiebl",
+	"coll-book_creator_disable": "Disiebl buk krieta",
+	"coll-book_creator_disable_tooltip": "Tap yuuz di buk krieta",
+	"coll-add_this_page": "Ad dis piej tu yu buk",
+	"coll-add_page_tooltip": "Ad di korant wiki piej tu yu buk",
+	"coll-help": "Elp",
+	"coll-help_tooltip": "Shuo elp bout ou fi kriet buk",
+	"coll-helppage": "Help:Buk",
+	"coll-n_pages": "$1 {{PLURAL:$1|piej|piejdem}}‎",
+	"coll-remove_this_page": "Tekout dis piej frah yu buk",
+	"coll-show_collection": "Shuo buk",
+	"coll-show_collection_tooltip": "Klik fi edit/dongluod/aada yu buk",
+	"coll-make_suggestions": "Sojes soh piej",
+	"coll-make_suggestions_tooltip": "Shuo sojeshan bies pah di piejdem ina yu buk",
+	"coll-attribution-anons": "Ananimos: $1‎",
+	"coll-article-attribution": "<b>$1</b> <i>Suos:</i> $2 <i>Kanchribiutadem:</i> $3‎",
+	"coll-image-attribution": "<b>$1</b> <i>Suos:</i> $2 <i>Laisn:</i> $3 <i>Kanchribiuta:</i> $4 <i>Orijinal aatis:</i> $5‎"
+}

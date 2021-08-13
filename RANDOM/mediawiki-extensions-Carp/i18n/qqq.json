@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Shirayuki",
+			"Umherirrender"
+		]
+	},
+	"carp-desc": "{{desc|name=Carp|url=https://www.mediawiki.org/wiki/Extension:Carp}}",
+	"carp-function-msg": "{{Optional}}\nParser function error decorator. Parameters:\n* $1 - name of function\n* $2 - the error message\nThis message formats parser function errors. For example,\n    &#123;&#123; $1: $2 &#125;&#125;\nwill generate message like this:\n    <nowiki>{{ function-name: error-message }}</nowiki>\nTranslators can change order (e.g. put function name on the left side of error message for LTR languages) or use another separator instead of colon, etc.",
+	"carp-template-msg": "{{Optional}}\nTemplate error decorator. Parameters:\n* $1 - template name\n* $2 - error message\nSimilar to parser function decorator, but this one formats template errors.",
+	"carp-template": "{{Optional}}\nTemplate decorator. Used in stack backtrace. Parameters:\n* $1 - frame name"
+}

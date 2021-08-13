@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gott wisst",
+			"Heahwrita",
+			"JJohnson1701"
+		]
+	},
+	"coll-remove": "Forniman",
+	"coll-show": "Yw",
+	"coll-move_up": "Do upp",
+	"coll-move_down": "Do adun",
+	"coll-print_export": "Bewrit oþþe forþasend",
+	"coll-create_a_book": "Wyrce boc",
+	"coll-book_creator": "Bocscyppend",
+	"coll-download_as": "Hlad on spearctellend to $1",
+	"coll-disable": "gelettan",
+	"coll-book_creator_disable_tooltip": "Blinn þæt þu bruce þæs bocscyppendes",
+	"coll-add_this_page": "Besete þisne tramet on þine boc",
+	"coll-add_page_tooltip": "Besete þisne wikitramet on þine boc",
+	"coll-help": "Help",
+	"coll-help_tooltip": "Yw helpiendlic gefræge ymbe þære gescapennesse boca",
+	"coll-helppage": "Help:Bec",
+	"coll-n_pages": "$1 {{PLURAL:$1|tramet|trameta}}",
+	"coll-remove_this_page": "Fornim þisne tramet fram þinre bec",
+	"coll-show_collection": "Yw boc",
+	"coll-make_suggestions": "Trametas tyhtan",
+	"coll-attribution-anons": "Uncuð: $1",
+	"coll-image-attribution": "<b>$1</b> <i>Fruma:</i> $2 <i>Leafness:</i> $3 <i>Fyrðrendas:</i> $4 <i>Frumlic wyrhta:</i> $5"
+}

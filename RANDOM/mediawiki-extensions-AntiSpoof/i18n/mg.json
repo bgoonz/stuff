@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jagwar"
+		]
+	},
+	"antispoof-desc": "Manakana ny fanokafana kaonty miaraka amina anaram-pikambana mitovy, mampiasa fomba fanoratana samihafa, na mety azo afangaron.",
+	"antispoof-name-illegal": "Tsy mahazo alalana ny anaram-pikambana \"$1\" noho ny fanakekezany amin'ny anarana \"$2\".\nMisafidia anarana hafa.",
+	"antispoof-badtype": "Tsy izy ny karazana fampahalalàna",
+	"antispoof-empty": "fitohitohizan-tsoratra (string) foàna",
+	"antispoof-prohibited": "Misy tarehintsoratra voarara",
+	"antispoof-combining": "Manomboka amina mari-pitambatambarana (marque combinatoire)",
+	"antispoof-noletters": "Tsy misy tarehintsoratra",
+	"antispoof-mixedscripts": "Misy endri-tsoratra maro samihafa tsy zaka"
+}

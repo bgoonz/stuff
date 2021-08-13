@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kghbln",
+			"Purodha",
+			"Shirayuki",
+			"The Evil IP address",
+			"Umherirrender"
+		]
+	},
+	"breadcrumbs-desc": "{{desc|name=Bread Crumbs|url=https://www.mediawiki.org/wiki/Extension:BreadCrumbs}}",
+	"prefs-breadcrumbs-separator": "This is a user preference option (text field) appearing on [[Special:Preferences#mw-prefsection-rendering|Special:Preferences / Appearance]]. The user may enter the separator to be used between the breadcrumbs.",
+	"prefs-breadcrumbs-separator-max": "This is an information message appearing on [[Special:Preferences#mw-prefsection-rendering|Special:Preferences / Appearance]], explaining how many characters may be entered as {{msg-mw|Prefs-breadcrumbs-separator}}.",
+	"prefs-breadcrumbs": "This is the section header on [[Special:Preferences#mw-prefsection-rendering|Special:Preferences / Appearance]] containing the user preference options for this extension.",
+	"prefs-breadcrumbs-showcrumbs": "This is a user preference option (check box) appearing on [[Special:Preferences#mw-prefsection-rendering|Special:Preferences / Appearance]]. The user may choose whether to use breadcrumbs or not.",
+	"prefs-breadcrumbs-numberofcrumbs": "This is a user preference option (text field) appearing on [[Special:Preferences#mw-prefsection-rendering|Special:Preferences / Appearance]]. The user may enter the number of breadcrumbs to show in the breadcrumbs trail.",
+	"prefs-breadcrumbs-numberofcrumbs-max": "This is an information message appearing on [[Special:Preferences#mw-prefsection-rendering|Special:Preferences / Appearance]], explaining which values may be entered for the option {{msg-mw|Prefs-breadcrumbs-numberofcrumbs}}.",
+	"prefs-breadcrumbs-namespaces": "This is a user preference option (check box) appearing on [[Special:Preferences#mw-prefsection-rendering|Special:Preferences / Appearance]]. The user may choose whether the namespace of the pages within the breadcrumbs trail should be shown or not.",
+	"prefs-breadcrumbs-filter-duplicates": "This is a user preference option (check box) appearing on [[Special:Preferences#mw-prefsection-rendering|Special:Preferences / Appearance]]. The user may choose whether repeatedly-visited pages should be shown in the breadcrumbs trail or not.",
+	"prefs-breadcrumbs-preceding-text": "This is a user preference option (text field) appearing on [[Special:Preferences#mw-prefsection-rendering|Special:Preferences / Appearance]]. The user may enter a text that should be printed in front of the breadcrumbs trail.",
+	"prefs-breadcrumbs-preceding-text-max": "This is an information message appearing on [[Special:Preferences#mw-prefsection-rendering|Special:Preferences / Appearance]], explaining how many characters may be entered as {{msg-mw|Prefs-breadcrumbs-preceding-text}}."
+}

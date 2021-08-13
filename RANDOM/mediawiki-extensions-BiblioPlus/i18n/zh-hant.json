@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Justincheng12345",
+			"Kevinhksouth"
+		]
+	},
+	"biblioplus-desc": "自動從PubMed和ISBN數據庫取得參考",
+	"biblioplus-doi-tooltip": "從發佈者查看或購買條目",
+	"biblioplus-pmid-tooltip": "從發佈者查看或購買條目（如適用）",
+	"biblioplus-isbn-tooltip": "在 isbndb.org 上的書籍資訊",
+	"biblioplus-medline-abstracts": "所有 Medline 摘要：",
+	"biblioplus-pubmed-abstracts": "所有 PubMed 摘要",
+	"biblioplus-hubmed-abstracts": "所有 HubMed 摘要",
+	"biblioplus-vkey-title": "連結到參考書目資料庫"
+}

@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"Veeven"
+		]
+	},
+	"blog-and": ",",
+	"blog-author-comments": "$1 {{PLURAL:$1|వ్యాఖ్య|వ్యాఖ్యలు}}",
+	"blog-author-title": "{{PLURAL:$1|రచయిత|రచయితల}} గురించి",
+	"blog-in-the-news": "వార్తల్లో",
+	"blog-new-articles": "కొత్త వ్యాసాలు",
+	"blog-permission-required": "వ్యాసాలను సృష్టించే అనుమతి మీరు లేదు.",
+	"blog-recent-voters": "ఇతర ఇటీవలి వోటర్లు",
+	"blog-view-archive-link": "అన్నిటినీ చూడండి",
+	"articlelists": "కొత్త బ్లాగు వ్యాసాలు",
+	"blog-ah-no-results": "పేజీలేమీ కనబడలేదు.",
+	"blog-ah-popular-articles": "ప్రాచుర్య వ్యాసాలు",
+	"blog-ah-new-articles": "కొత్త వ్యాసాలు",
+	"blog-ah-write-article": "ఒక వ్యాసం వ్రాయండి",
+	"blog-ah-todays-articles": "నేటి వ్యాసాలు",
+	"blog-ah-most-votes": "ఎక్కువ వోట్లు (72 గంటలు)",
+	"blog-ah-what-talking-about": "ఎక్కువ వ్యాఖ్యలు (72 గంటలు)",
+	"articleshome": "బ్లాగు ముంగిలి",
+	"blog-create-title": "శీర్షిక",
+	"blog-create-text": "పాఠ్యం",
+	"blog-create-categories": "వర్గాలు",
+	"blog-create-button": "సృష్టించు!",
+	"blog-create-summary": "కొత్త బ్లాగు టపా సృష్టించబడింది.",
+	"blog-more": "మరిన్ని",
+	"blog-time-ago": "$1 క్రితం",
+	"blog-time-days": "{{PLURAL:$1|ఒక రోజు|$1 రోజుల}}",
+	"blog-time-hours": "{{PLURAL:$1|ఒక గంట|$1 గంటల}}",
+	"blog-time-minutes": "{{PLURAL:$1|ఒక నిమిషం|$1 నిమిషాల}}",
+	"blog-time-seconds": "{{PLURAL:$1|$1 క్షణం|$1 క్షణాల}}",
+	"blog-user-articles-title": "బ్లాగులు"
+}

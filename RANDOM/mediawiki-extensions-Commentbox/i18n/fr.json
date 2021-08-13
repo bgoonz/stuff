@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"PieRRoMaN"
+		]
+	},
+	"commentbox-desc": "Ajoute une boîte de commentaire dans certaines pages",
+	"commentbox-intro": "== Ajouter un commentaire... ==\n\nVous avez un commentaire sur cette page ? Ajoutez-le ici ou <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} modifiez la page directement]</span>.",
+	"commentbox-savebutton": "Enregistrer le commentaire",
+	"commentbox-name": "Nom :",
+	"commentbox-name-explanation": "<small>(Astuce : si vous [[Special:UserLogin|vous connectez]], vous n'aurez pas à compléter votre nom ici manuellement)</small>",
+	"commentbox-log": "Nouveaux commentaires",
+	"commentbox-first-comment-heading": "== Commentaires ==",
+	"commentbox-regex": "/\\n==\\s*Commentaires\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Erreur lors de la création du commentaire",
+	"commentbox-error-page-nonexistent": "Cette page n'existe pas !",
+	"commentbox-error-namespace": "Les commentaires ne sont pas autorisés dans cet espace de noms !",
+	"commentbox-error-empty-comment": "Les commentaires vides ne sont pas autorisés !"
+}

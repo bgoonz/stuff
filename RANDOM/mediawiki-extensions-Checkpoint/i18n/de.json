@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kghbln"
+		]
+	},
+	"checkpoint": "Speichern und Fortsetzen der Bearbeitung",
+	"checkpoint-desc": "Ermöglicht das Speichern einer Bearbeitung mit anschließender automatischer Rückkehr zum Bearbeitungsfenster",
+	"checkpoint-tooltip": "Speichere den aktuellen Bearbeitungsstand und fahre sogleich mit der Bearbeitung fort",
+	"checkpoint-notice": "([[{{ns:project}}:Checkpoint|Zwischenspeicherung]])"
+}

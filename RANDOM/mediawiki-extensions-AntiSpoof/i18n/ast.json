@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Esbardu",
+			"Xuacu"
+		]
+	},
+	"antispoof-desc": "Bloquea la creación de cuentes con script mistu que tengan nomes d'usuariu asemeyaos o confusos",
+	"antispoof-conflict-top": "El nome «$1» ye demasiao asemeyáu {{PLURAL:$2|al nome siguiente|a los nomes siguientes}}:",
+	"antispoof-conflict-bottom": "Escueye otru nome d'usuariu.",
+	"antispoof-name-illegal": "Nun se permite'l nome «$1» pa evitar nomes d'usuariu que causen tracamundios o suplantaciones: $2.\nPor favor, escueye otru nome.",
+	"antispoof-badtype": "Triba de datos incorreuta",
+	"antispoof-empty": "Testu vaciu",
+	"antispoof-prohibited": "Contien el caráuter non permitíu $1",
+	"antispoof-combining": "Empecipia cola marca de combinación $1",
+	"antispoof-unassigned": "Contien el caráuter non asignáu $1",
+	"antispoof-deprecated": "Contien el caráuter anticuáu $1",
+	"antispoof-noletters": "Nun contien lletra nenguna",
+	"antispoof-mixedscripts": "contien scripts incompatibles entemecíos",
+	"antispoof-tooshort": "Nome normalizáu demasiao curtiu",
+	"antispoof-ignore": "Inorar les comprobaciones d'engañu (spoofing)",
+	"antispoof-ignore-help": "Permite que los usuarios con permisu bastante creen una cuenta anque'l so nome seya asemeyáu al d'una cuenta que yá existe.",
+	"action-override-antispoof": "saltar les comprobaciones d'engañu (spoofing)",
+	"right-override-antispoof": "Saltase les comprobaciones d'engañu (spoofing)"
+}

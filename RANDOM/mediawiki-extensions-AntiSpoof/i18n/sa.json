@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Shreekant Hegde",
+			"Shubha",
+			"Vibhijain"
+		]
+	},
+	"antispoof-desc": "मिश्रितलिपियुक्तानां, भ्रमजनकानां, समानयोजकनामयुक्तानां च प्रयोगाः अवरुद्ध्यन्ताम् ।",
+	"antispoof-conflict-top": "\" $1\" इत्येतत् नाम {{PLURAL:$2|विद्यमानस्य| $2 }}: इत्येतस्य समानं वर्तते ।",
+	"antispoof-conflict-bottom": "कृपया भिन्नं नाम चिनोतु ।",
+	"antispoof-name-illegal": "अवैध नाम",
+	"antispoof-badtype": "स्वस्थाननिर्माणे विपन्नतायाः कारणम् ।",
+	"antispoof-empty": "स्वस्थाननिर्माणे विपन्नतायाः कारणम् ।",
+	"antispoof-prohibited": "$1 अमान्यपदार्थयुक्तः अस्ति",
+	"antispoof-combining": "$1 योजनसङ्केतेन आरभ्यते",
+	"antispoof-unassigned": "$1 अनिर्दिष्टपदार्थयुक्तः अस्ति",
+	"antispoof-deprecated": "$1 विरोधपदार्थयुक्तः अस्ति",
+	"antispoof-noletters": "अस्मिन् किमपि अक्षरं न विद्यते",
+	"antispoof-mixedscripts": "असिन्धुमिश्रलिपियुक्तः अस्ति",
+	"antispoof-tooshort": "अधिकृतं नाम परमलघु वर्तते",
+	"antispoof-ignore": "अनुकरणावलोकनानि निर्लक्ष्यताम्",
+	"right-override-antispoof": "अनुकरणावलोकनं परिष्क्रियताम्"
+}

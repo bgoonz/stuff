@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cedric31"
+		]
+	},
+	"commentbox-desc": "Apond una bóstia de comentari dins d'unas paginas",
+	"commentbox-intro": "== Apondre un comentari... ==\n\nAvètz un comentari sus aquesta pagina ? Apondètz-o aicí o <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} modificatz la pagina dirèctament]</span>.",
+	"commentbox-savebutton": "Enregistrar lo comentari",
+	"commentbox-name": "Nom :",
+	"commentbox-name-explanation": "<small>(Astúcia : se [[Special:UserLogin|vos connectatz]], auretz pas de completar vòstre nom aicí manualament)</small>",
+	"commentbox-log": "Comentaris novèls",
+	"commentbox-first-comment-heading": "== Comentaris ==",
+	"commentbox-regex": "/\\n==\\s*Comentaris\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Error al moment de la creacion del comentari",
+	"commentbox-error-page-nonexistent": "Aquesta pagina existís pas !",
+	"commentbox-error-namespace": "Los comentaris son pas autorizats dins aqueste espaci de noms !",
+	"commentbox-error-empty-comment": "Los comentaris voids son pas autorizats !"
+}

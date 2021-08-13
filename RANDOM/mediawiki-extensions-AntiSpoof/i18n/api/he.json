@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80"
+		]
+	},
+	"apihelp-antispoof-description": "בדיקת שם משתמש אל מול בדיקות נרמול של AntiSpoof.",
+	"apihelp-antispoof-summary": "בדיקת שם משתמש אל מול בדיקות נרמול של AntiSpoof.",
+	"apihelp-antispoof-param-username": "שם משתמש לבדוק אל מול AntiSpoof.",
+	"apihelp-antispoof-example-1": "לבדוק את שם המשתמש Foo אל מול AntiSpoof.",
+	"apihelp-createaccount-param-ignoreantispoof": "להתעלם מבדיקות התחזות (נדרשת הרשאת <code>override-antispoof</code>)."
+}

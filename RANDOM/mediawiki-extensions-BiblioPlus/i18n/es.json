@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Armando-Martin"
+		]
+	},
+	"biblioplus-desc": "Recupera automáticamente las citas de PubMed y la base de datos ISBN",
+	"biblioplus-doi-tooltip": "Ver o comprar el artículo del editor",
+	"biblioplus-pmid-tooltip": "Ver o comprar el artículo del editor (si está disponible)",
+	"biblioplus-isbn-tooltip": "Información del libro en isbndb.org",
+	"biblioplus-medline-abstracts": "Todos los resúmenes de Medline:",
+	"biblioplus-pubmed-abstracts": "Todos los resúmenes de PubMed",
+	"biblioplus-hubmed-abstracts": "Todos los resúmenes de HubMed",
+	"biblioplus-vkey-title": "enlace a la base de datos bibliográfica"
+}

@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"biblioplus-desc": "Automatski dohvaća referencije iz PubMed-a i ISBN baze",
+	"biblioplus-doi-tooltip": "Pročitajte ili kupite članak od izdavača",
+	"biblioplus-pmid-tooltip": "Pročitajte ili kupite članak od izdavača (ako e dostupna)",
+	"biblioplus-isbn-tooltip": "Informacije o knjizi na isbndb.org",
+	"biblioplus-medline-abstracts": "Svi odlomci iz Medline:",
+	"biblioplus-pubmed-abstracts": "Svi odlomci iz PubMed",
+	"biblioplus-hubmed-abstracts": "Svi odlomci iz PubMed",
+	"biblioplus-vkey-title": "Poveznica na bibliografsku bazu podataka"
+}

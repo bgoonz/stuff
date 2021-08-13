@@ -1,0 +1,24 @@
+/**
+ * Styles for Special:GlobalGroupPermissions
+ */
+
+.mw-centralauth-editgroup-readonly .mw-centralauth-editgroup-unchecked {
+	color: #808080;
+}
+
+.mw-centralauth-rights {
+	-webkit-columns: 23em 3;
+	-moz-columns: 23em 3;
+	columns: 23em 3;
+}
+
+/**
+ * Used by the group permissions table
+ */
+table.mw-centralauth-groups-table tr {
+	vertical-align: top;
+}
+
+table.mw-centralauth-groups-table hr {
+	background-color: #d4d4d4;
+}

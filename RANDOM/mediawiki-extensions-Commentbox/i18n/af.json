@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Naudefj"
+		]
+	},
+	"commentbox-name": "Naam:",
+	"commentbox-first-comment-heading": "== Opmerkings ==",
+	"commentbox-regex": "/\\n==\\s*Opmerkings\\s*==\\s*\\n/i"
+}

@@ -1,0 +1,169 @@
+_  = require 'underscore'
+ko = require 'knockout'
+d3 = require 'd3'
+
+{ TimeseriesNode, TimeseriesNodeData,
+} = require './timeseries-node'
+
+Trait = require '../graph-node-trait'
+ProjectColors = require '../../project-colors'
+
+
+
+/**
+ * @class
+ * @extends TimeseriesNodeData
+ */
+class exports.LineNodeData extends TimeseriesNodeData
+    @registerType 'line'
+    
+    defaults: ->
+        # See LineGroupNode for cascaded defaults
+        options :
+            disabled    : false
+            label       : null
+            stroke      : null
+            noLegend    : false
+    
+    attributeTypes: ->
+        {}
+    
+    -> super ...
+
+
+
+/**
+ * @class
+ * @extends TimeseriesNode
+ */
+class exports.LineNode extends TimeseriesNode
+    @registerType 'line'
+    traits : [
+        Trait.VIS_NODE
+        Trait.REQUIRES_METRIC
+        Trait.METRIC_CONTENT_DATA
+        Trait.METRIC_TIMESERIES
+        Trait.SVG
+        Trait.LEAF
+    ]
+    
+    
+    ->
+        super ...
+        @tooManyDataPoints = ko.observable false
+        @trackHover()
+    
+    
+    trackHover: @computed ->
+        viewport = @viewport()
+        return if @tooManyDataPoints()
+        return unless cursor = @root().cursor()
+        return unless metric = @model().metric()
+        return unless metric.data()?.length and @el()
+        return unless zoom   = viewport.zoomTransform()
+        return unless xScale = viewport.xScale()
+        return unless yScale = viewport.yScale()
+        return unless opts   = @model().options()
+        return unless opts.get('hoverPoints.enabled')
+        
+        # Warn and bail if the scale isn't invertible
+        unless typeof xScale.invert is 'function'
+            unless (xScale.warned or= {}).noInvert
+                xScale.warned.noInvert = true
+                console.warn "
+                    [#{@graph}] Invalid Configuration: 
+                    x-scale type '#{@viewport().xScaleType()}' is not compatible 
+                    with 'options.hoverPoints.enabled'!
+                "
+            return
+        
+        rx = opts.get('hoverPoints.radius') / zoom.scale[0]
+        ry = opts.get('hoverPoints.radius') / zoom.scale[1]
+        cx = cy = -1000
+        color = @strokeColor()
+        
+        @trackingCircle ?= @sel.append 'ellipse' .classed 'tracking', true
+        opts.applyShapeStyles @trackingCircle, 'hoverPoints.'
+        @trackingCircle.style do
+            fill   : opts.get('hoverPoints.fill')           or color
+            stroke : opts.get('hoverPoints.stroke.color')   or color
+        
+        if cursor.hovering and not @disabled()
+            date    = xScale.invert cursor.x
+            closest = metric.findClosest date
+            
+            cx = xScale closest.date
+            cy = yScale closest.value
+            unless isFinite cx and isFinite cy
+                cx = cy = -1000
+        
+        @trackingCircle.attr { rx, ry, cx, cy }
+    
+    
+    paletteColor: @computedRequires 'model.options', (options) ->
+        ProjectColors.lookup(@shortLabel(), options.get('palette'))
+    
+    strokeColor: @computedRequires 'model.options', (options) ->
+        options.stroke?()?.color or @paletteColor() or 'black'
+    
+    width: @computedRequires 'model.options', (options) ->
+        stroke = options.get 'stroke'
+        stroke.width?() or 3
+    
+    dasharray: @computedRequires 'model.options', (options) ->
+        stroke = options.get 'stroke'
+        stroke.dashed?() or 'none'
+    
+    disabled: @computedRequires 'model.options', (options) ->
+        options.disabled?() or false
+    
+    shape: @computedRequires 'model.options', (options) ->
+        options.get('shape') or 'line'
+    
+    
+    /**
+     * Update selection representing the SVG path element for the line.
+     * @type ko.computed<d3.selection.update>
+     */
+    render: ->
+        viewport = @viewport()
+        data = if @timeseriesData() then [that] else []
+        
+        return unless data.length
+        return unless model  = @model()
+        return unless xScale = viewport.xScale()
+        
+        color = @strokeColor()
+        line = @selectAll 'path.metric-line' .data data
+        
+        # optimization: if there are more data points than pixels in the range,
+        # set a flag and use it to do things like not show tracking circles
+        xRange = xScale.range()
+        @tooManyDataPoints data[0].length > (2 * Math.abs(xRange[0] - xRange[1]))
+        
+        # always exit() to remove existing nodes if data has changed and become invalid
+        line.exit().remove()
+        
+        @parent().stack()
+        
+        path = line.enter()
+            .append 'path'
+                .classed 'metric-line',     true
+                .attr  'vector-effect',     'non-scaling-stroke'
+                .style 'fill',              'none'
+                .style 'stroke-dasharray',  @dasharray()
+                .style 'stroke-width',      @width()
+                .style 'stroke',            color
+        
+        if @shape() is 'area'
+            path
+                .style 'fill',              color
+                .style 'opacity',           0.4
+        
+        line.style 'visibility', if @disabled() then "hidden" else "visible"
+        line.transition()
+            .attr 'd', viewport.makeScaleShape(@shape())
+        
+        line
+    
+    

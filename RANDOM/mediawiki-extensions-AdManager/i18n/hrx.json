@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Paul Beppler"
+		]
+	},
+	"admanager": "Oonzeicheverwaltung",
+	"admanagerzones": "Oonzeicheverwaltung - Oonzeichebereiche",
+	"admanager_invalidtargetpage": "Do woard ken Seit mit dem Noome \"$1\" gefund.",
+	"admanager_labelPage": "Seitenoome",
+	"admanager_labelCategory": "Kategorienoome",
+	"admanager_submit": "Speichre",
+	"admanager_noads": "Ken Oonzeiche oonzeiche",
+	"admanager_Page": "Seite",
+	"admanager_Category": "Kategorie",
+	"admanager_added": "Die Ännrunge worre gespeichert",
+	"admanager_addedzone": "Oonzeichebereich woard hinzugefücht",
+	"admanager_zonenum": "Oonzeichebereichsnummer: $1"
+}

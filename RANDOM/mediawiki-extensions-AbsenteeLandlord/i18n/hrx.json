@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Paul Beppler"
+		]
+	},
+	"absenteelandlord-reason": "Die Datebank woard automatisch für den Schreibzugriff gesperrt, weil momentan ken Administratoar von der Wikis aktiv ist.",
+	"absenteelandlord-desc": "Ermöchlicht en automatische Sperr von der Datebank für den Schreibzugriff, soweit alle Administratore von en Wikis für ene  bestimmte Zeitraum inaktiv sind"
+}

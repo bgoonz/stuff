@@ -1,0 +1,14 @@
+_ = require 'underscore'
+d3 = require 'd3'
+{ Dataset,
+} = require './dataset'
+
+
+/**
+ * @class
+ * @extends Dataset
+ */
+class exports.GeoJSONDataset extends Dataset
+    @registerType 'geojson'
+    
+    -> super ...

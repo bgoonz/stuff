@@ -1,0 +1,43 @@
+{
+	"@metadata": {
+		"authors": [
+			"A1",
+			"Ahonc",
+			"Andriykopanytsia",
+			"Base",
+			"DDPAT",
+			"Piramidion",
+			"Vlad5250",
+			"Ата"
+		]
+	},
+	"apihelp-pollsubmitvote-description": "API-модуль AJAXPoll",
+	"apihelp-pollsubmitvote-summary": "API-модуль AJAXPoll",
+	"apihelp-pollsubmitvote-param-poll": "Ідентифікатор опитування, такий як 832A5FA2C2583A5732B90CEFF658FE25; ідентифікатори формуються шляхом хешування введених даних (запитання + опції відповідей, тобто текст між тегами <code>&lt;poll&gt;...&lt;/poll&gt;</code> tags) за допомогою алгоритму хешування MD5 та конвертування результату у ВЕРХНІЙ РЕГІСТР за допомогою PHP-функції <code>strtoupper</code>",
+	"apihelp-pollsubmitvote-param-answer": "Цифровий ідентифікатор опції відповіді; використовуйте 0 для відкликання попереднього голосу",
+	"apihelp-pollsubmitvote-example-1": "Надіслати третю (3) відповідь на опитування з ідентифікатором 832A5FA2C2583A5732B90CEFF658FE25",
+	"ajaxpoll-desc": "Дозволяє голосування на основі AJAX з міткою <code>&lt;poll&gt;</code>",
+	"ajaxpoll-tracking-category": "Сторінки з опитуваннями",
+	"ajaxpoll-tracking-category-desc": "На сторінці є <code>&lt;poll&gt;</code>.",
+	"ajaxpoll-vote-update": "Ваш голос був поновлений.",
+	"ajaxpoll-vote-add": "Ваш голос був доданий.",
+	"ajaxpoll-vote-error": "Виникла проблема з обробкою вашого голосу, будь-ласка, спробуйте знову.",
+	"ajaxpoll-percent-votes": "$1% усіх голосів",
+	"ajaxpoll-your-vote": "Ви проголосували за «$1» $3 о $4. Ви можете змінити свій голос, натиснувши на іншу відповідь нижче.",
+	"ajaxpoll-no-vote": "Будь ласка, голосуйте нижче.",
+	"ajaxpoll-no-vote-results-after-voting": "Будь ласка, проголосуйте нижче. Результати будуть показані після того, як ви проголосуєте.",
+	"ajaxpoll-info": "З моменту створення голосування $2 {{PLURAL:$1|надійшов $1 голос|надійшло $1 голоси|надійшло $1 голосів}}.",
+	"ajaxpoll-submitting": "Будь ласка, зачекайте, ваш голос обробляється...",
+	"ajaxpoll-vote-permission": "Ви не можете голосувати",
+	"ajaxpoll-readonly": "Проголосувати в цьому опитуванні не можна, доступ до бази даних закрито з такої причини: $1.",
+	"ajaxpoll-view-results-permission": "Ви не можете переглядати результати цього опитування.",
+	"ajaxpoll-view-results-before-vote-permission": "Ви не можете переглядати результати цього опитування, поки не проголосуєте.",
+	"ajaxpoll-revoke-vote": "Я хочу скасувати свій голос",
+	"ajaxpoll-vote-revoked": "Ваш голос скасовано.",
+	"right-ajaxpoll-vote": "Можливість голосування в опитуваннях на основі AJAX",
+	"right-ajaxpoll-view-results": "Можливість перегляду результатів опитувань на основі AJAX",
+	"right-ajaxpoll-view-results-before-vote": "Можливість перегляду результатів опитувань на основі AJAX до того, як проголосували",
+	"action-ajaxpoll-vote": "голосування в опитуваннях на основі AJAX",
+	"action-ajaxpoll-view-results": "перегляд результатів опитувань на основі AJAX",
+	"action-ajaxpoll-view-results-before-vote": "перегляд результатів опитувань на основі AJAX перед голосуванням"
+}

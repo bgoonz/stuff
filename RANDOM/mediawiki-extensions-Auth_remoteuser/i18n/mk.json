@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"auth_remoteuser-desc": "Автоматски заведува корисници со околинската променлива <code>REMOTE_USER</code>"
+}

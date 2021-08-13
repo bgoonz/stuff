@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu"
+		]
+	},
+	"autoproxyblock-desc": "Permite bloquear operações realizadas na wiki através de ''proxies'' abertos",
+	"proxy-blocked": "{{GENDER:|O seu}} endereço IP está na lista de ''proxies'', a operação que realizou foi cancelada.",
+	"abusefilter-edit-builder-vars-is-proxy": "Verdadeiro, se esta operação foi realizada através de um ''proxy''",
+	"tag-proxy": "operação através de um ''proxy''",
+	"action-proxyunbannable": "contornar bloqueios automáticos de ''proxies''",
+	"right-proxyunbannable": "Contornar bloqueios automáticos de proxies",
+	"action-notagproxychanges": "não ter as edições feitas através de ''proxies'' etiquetadas como \"proxy\"",
+	"right-notagproxychanges": "Não ter as edições feitas através de ''proxies'' etiquetadas como \"proxy\"",
+	"action-autoproxyblock-log": "ver o registo de bloqueio automático de proxies",
+	"right-autoproxyblock-log": "Ver o registo de mudanças feitas através de ''proxies'' que foram bloqueadas automaticamente",
+	"proxyblock-log-name": "Registo de bloqueio automático de ''proxies''",
+	"proxyblock-log-header": "Lista das mudanças feitas através de ''proxies'' que foram bloqueadas automaticamente",
+	"proxyblock-logentry-blocked": "operação \"$2\" {{GENDER:$3|do utilizador|da utilizadora}} $3 na página [[$1]], bloqueada automaticamente."
+}

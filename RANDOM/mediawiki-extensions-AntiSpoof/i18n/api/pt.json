@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu"
+		]
+	},
+	"apihelp-antispoof-description": "Verificar um nome de utilizador contra as verificações de normalização do AntiSpoof.",
+	"apihelp-antispoof-summary": "Verificar um nome de utilizador contra as verificações de normalização do AntiSpoof.",
+	"apihelp-antispoof-param-username": "O nome de utilizador para verificação de semelhança de nome (AntiSpoof).",
+	"apihelp-antispoof-example-1": "Verificar a semelhança de nome (AntiSpoof) do utilizador \"Foo\"",
+	"apihelp-createaccount-param-ignoreantispoof": "Ignorar as verificações de semelhança de nomes (necessita do privilégio <code>override-antispoof</code>)."
+}

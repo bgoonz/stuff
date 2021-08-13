@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hosseinblue"
+		]
+	},
+	"antispoof-desc": "از ایجاد حساب‌های کاربری با حروف مختلط، گیج‌کننده یا مشابه با دیگر حساب‌های کاربری جلوگیری می‌کند",
+	"antispoof-conflict-top": "نام «$1» خیلی به {{PLURAL:$2|این حساب کاربری|این حساب‌های کاربری}} شباهت دارد.",
+	"antispoof-conflict-bottom": "خواهشا نامئ تر انتخاب کةن",
+	"antispoof-name-illegal": "نام «$1» به دلیل جلوگیری از نام‌های کاربری سردرگم‌کننده یا جعلی مجاز نیست: $2. لطفاً نام دیگری انتخاب کنید.",
+	"antispoof-badtype": "داده با نوع نامناسب",
+	"antispoof-empty": "رشتهٔ خالی",
+	"antispoof-prohibited": "حاوی نویسهٔ $1 است که در فهرست سیاه قرار دارد",
+	"antispoof-combining": "با علامت جمع $1 شروع می‌شود",
+	"antispoof-unassigned": "دارای نویسه‌های تعیین‌نشده یا نامناسب است$1",
+	"antispoof-deprecated": "شامل نویسهٔ بد $1",
+	"antispoof-noletters": "دربردارندهٔ هیچ حرفی نیست.",
+	"antispoof-mixedscripts": "حاوی نویسه‌های مختلط ناسازگار است",
+	"antispoof-tooshort": "نام متعارف خیلی کوتاه است",
+	"antispoof-ignore": "نادیده‌گرفتن بررسی عبارات سردرگم‌کننده",
+	"right-override-antispoof": "گذر از بررسی عبارات سردرگم‌کننده"
+}

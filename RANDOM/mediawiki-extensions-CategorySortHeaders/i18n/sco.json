@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"John Reid"
+		]
+	},
+	"categorysortheaders-desc": "Permit tae specify custom multi-chairacter 'first-chairacter' sorting headers tae leet pages unner in categories, uising syntax like <nowiki>[[category:Foo|^Header^Invisible pairt o sortkey]]</nowiki>"
+}

@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras",
+			"Reder"
+		]
+	},
+	"apihelp-pollsubmitvote-description": "Module API de AJAXPoll",
+	"apihelp-pollsubmitvote-summary": "Module API de AJAXPoll",
+	"apihelp-pollsubmitvote-param-poll": "ID d'u sondagge, cumme a 832A5FA2C2583A5732B90CEFF658FE25; le ID avènene fatte ausanne l'hash d'u date mise (dumanne + opziune de resposte; i.e. 'u prosseme 'mbrà tag <code>&lt;poll&gt;...&lt;/poll&gt;</code> ) cu l'algoritme de hash MD5 e convertenne 'u resultate tutte MAIUSCOLE cu 'a funzione de PHP <code>strtoupper</code>",
+	"apihelp-pollsubmitvote-param-answer": "Opzione ca controlle le resposte numereche; ause 0 pe luà 'nu vote d'apprime",
+	"apihelp-pollsubmitvote-example-1": "Conferme 'a terze (3) resposte d'u sondagge ca téne cumme ID 832A5FA2C2583A5732B90CEFF658FE25",
+	"ajaxpoll-desc": "Permette sondagge basate sus a AJAX cu 'u tag <code>&lt;poll&gt;</code>",
+	"ajaxpoll-tracking-category": "Pàgene cu 'nu sondagge",
+	"ajaxpoll-tracking-category-desc": "'A pàgene tène 'nu <code>&lt;poll&gt;</code>.",
+	"ajaxpoll-vote-update": "'U vote tune ha state aggiornate.",
+	"ajaxpoll-vote-add": "'U vote tune ha state aggiunde.",
+	"ajaxpoll-vote-error": "Stave 'nu probbleme cu l'elabborazione d'u vote tune, pe piacere pruève arrète.",
+	"ajaxpoll-percent-votes": "$1% de totte le vote",
+	"ajaxpoll-your-vote": "Tu è ggià vutate pe \"$1\" 'u $3 a le $4. Tu puè cangià 'u vote tune cazzanne 'a resposte aqquà sotte.",
+	"ajaxpoll-no-vote": "Pe' piacere, vote d'abbasce",
+	"ajaxpoll-no-vote-results-after-voting": "Pe piacere vote aqquà sotte. Le resultate avènene fatte vedè quanne tu è vutate.",
+	"ajaxpoll-info": "{{PLURAL:$1|Stè 'nu vote|Stonne $1 vote}} da quanne 'u sondagge ha state ccrejate 'u $2.",
+	"ajaxpoll-submitting": "Pe piacere aspitte, stoche a elabbore 'u vote tune.",
+	"ajaxpoll-vote-permission": "Tu non ge puè votà",
+	"ajaxpoll-readonly": "Stu sondagge non ge pò essere vutate, 'u database jè bloccate pe stu mutive: $1.",
+	"ajaxpoll-view-results-permission": "Non ge puè 'ndrucà le resultate de stu sondagge.",
+	"ajaxpoll-view-results-before-vote-permission": "Non ge puè 'ndrucà le resultate de stu sondagge apprime ca è vutate.",
+	"ajaxpoll-revoke-vote": "Ije vogghie annullà 'u vote mije",
+	"ajaxpoll-vote-revoked": "'U vote tune ha state revocate.",
+	"right-ajaxpoll-vote": "Puè vutà le sondagge in AJAX",
+	"right-ajaxpoll-view-results": "Puè 'ndrucà le resultate de le sondagge fatte cu AJAX",
+	"right-ajaxpoll-view-results-before-vote": "Puè 'ndrucà le resultate de le sondagge basate sus a AJAX apprime de vutà",
+	"action-ajaxpoll-vote": "vuète le sondagge in AJAX",
+	"action-ajaxpoll-view-results": "'ndruche le resultate de le sondagge in AJAX",
+	"action-ajaxpoll-view-results-before-vote": "'ndruche le resultate de le sondagge basate sus a AJAX apprime de vutà"
+}

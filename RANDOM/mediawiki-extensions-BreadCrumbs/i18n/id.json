@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Farras",
+			"William Surya Permana"
+		]
+	},
+	"breadcrumbs-desc": "Menambahkan jejak bread crumb pada halaman",
+	"prefs-breadcrumbs-separator": "Pemisah bread crumb",
+	"prefs-breadcrumbs-separator-max": "Maksimum dua karakter yang dapat dimasukkan.",
+	"prefs-breadcrumbs": "Bread Crumb",
+	"prefs-breadcrumbs-showcrumbs": "Tampilkan bread crumb",
+	"prefs-breadcrumbs-numberofcrumbs": "Jumlah bread crumb",
+	"prefs-breadcrumbs-numberofcrumbs-max": "Maksimum 20 bread crumb yang dapat ditampilkan.",
+	"prefs-breadcrumbs-namespaces": "Sertakan ruang nama pada bread crumb",
+	"prefs-breadcrumbs-filter-duplicates": "Saring halaman yang dikunjungi berkali-kali",
+	"prefs-breadcrumbs-preceding-text": "Teks yang ditampilkan sebelum bread crumb",
+	"prefs-breadcrumbs-preceding-text-max": "Maksimum 30 karakter yang dapat dimasukkan."
+}

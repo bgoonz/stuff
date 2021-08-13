@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Christian List",
+			"Joedalton",
+			"Masz"
+		]
+	},
+	"adminlinks": "Administrationslinks",
+	"adminlinks-desc": "Tilføjer en [[Special:AdminLinks|specialside]], som indeholder nyttige links for administratorer.",
+	"adminlinks_documentation": "dokumentation for $1",
+	"adminlinks_general": "Generelt",
+	"adminlinks_editsidebar": "Redigér sidemenuen",
+	"adminlinks_editcss": "Redigér CSS-fil",
+	"adminlinks_editmainpagename": "Redigér navnet på forsiden",
+	"adminlinks_users": "Brugere",
+	"adminlinks_browsesearch": "Navigering og søgning",
+	"adminlinks_importexport": "Importering og eksportering",
+	"adminlinks_pagenotfound": "Fandt ikke specialside med navnet: $1.",
+	"right-adminlinks": "Se linket til [[Special:AdminLinks|administrationslinkene]]"
+}

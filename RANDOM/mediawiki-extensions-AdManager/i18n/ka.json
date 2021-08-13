@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"David1010"
+		]
+	},
+	"admanager": "რეკლამის მენეჯერი",
+	"admanagerzones": "სარეკლამო ზონების მენეჯერი",
+	"admanagerzones_docu": "თითოეული სარეკლამო ზონის ნომერი შეიყვანეთ თითო ხაზზე.",
+	"admanager_invalidtargetpage": "გვერდი სათაურით „$1“ ვერ მოიძებნა.",
+	"admanager_invalidtargetcategory": "კატეგორია სათაურით „$1“ ვერ მოიძებნა.",
+	"admanager_labelPage": "გვერდის სათაურები",
+	"admanager_labelCategory": "კატეგორიის სახელები",
+	"admanager_submit": "მიღება",
+	"admanager_noads": "არ აჩვენო რეკლამა",
+	"admanager_Page": "გვერდები",
+	"admanager_Category": "კატეგორიები",
+	"admanager_added": "თქვენი ცვლილებები შენახულია",
+	"admanager_addedzone": "დაემატა ზონა $1",
+	"admanager_zonenum": "ზონა №: $1",
+	"admanager_zonenotnumber": "შეცდომა! $1 არ არის რიცხვი.",
+	"admanager_return": "[[Special:AdManager|რეკლამის მენეჯერთან]] დაბრუნება",
+	"admanager_gotoads": "[[Special:AdManager|რეკლამის განთავსების რედაქტირება]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|სარეკლამო ზონების რედაქტირება]]",
+	"right-admanager": "[[Special:AdManager|რეკლამის კონფიგურაციის მართვა]]"
+}

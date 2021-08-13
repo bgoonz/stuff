@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Iohanen",
+			"Midnight Gambler"
+		]
+	},
+	"coll-remove": "Entferne",
+	"coll-show": "Zeiche",
+	"coll-move_up": "hoch",
+	"coll-move_down": "noch unne ferschieve",
+	"coll-print_export": "Drucke/exporteere",
+	"coll-create_a_book": "Buch erstelle",
+	"coll-book_creator": "Buchgenerator",
+	"coll-download_as": "Als $1 herunnerlaade",
+	"coll-help": "Hellef",
+	"coll-helppage": "Help:Bicher",
+	"coll-n_pages": "$1 {{PLURAL:$1|Seit|Seite}}",
+	"coll-remove_this_page": "Dies Seit aus deim Buch entferne",
+	"coll-show_collection": "Buch zeiche",
+	"coll-show_collection_tooltip": "Klicke, um dein Buch zu ëditeere/runnerzulaade/bestelle",
+	"coll-make_suggestions": "Seite forschlaan",
+	"coll-attribution-anons": "Anonymous: $1",
+	"coll-image-attribution": "<b>$1</b> <i>Quelle:</i> $2 <i>Lizenz:</i> $3 <i>Autore:</i> $4 <i>Original kinstler:</i> $5"
+}

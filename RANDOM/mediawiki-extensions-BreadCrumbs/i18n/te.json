@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ravichandra",
+			"Veeven"
+		]
+	},
+	"breadcrumbs-desc": "వాడుకరులకు వికీలో తోవ చూపిస్తుంది",
+	"prefs-breadcrumbs-separator": "జాడల నియంత్రకం",
+	"prefs-breadcrumbs-separator-max": "గరిష్టంగా కేవలం రెండు అక్షరాలు మాత్రమే ఇవ్వగలరు.",
+	"prefs-breadcrumbs": "జాడలు",
+	"prefs-breadcrumbs-showcrumbs": "జాడలు చూపించు",
+	"prefs-breadcrumbs-numberofcrumbs": "జాడల సంఖ్య",
+	"prefs-breadcrumbs-numberofcrumbs-max": "గరిష్టంగా 20 జాడలవరకు చూపించబడును",
+	"prefs-breadcrumbs-filter-duplicates": "తరచూ సందర్శించే పేజీలను వేరుచెయ్యి",
+	"prefs-breadcrumbs-preceding-text-max": "గరిష్టంగా 30 అక్షరాలు ఇవ్వగలరు."
+}

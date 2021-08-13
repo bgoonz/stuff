@@ -1,0 +1,38 @@
+{
+	"@metadata": {
+		"authors": [
+			"DavidL",
+			"Gomoko",
+			"Grondin",
+			"IAlex",
+			"Louperivois",
+			"Mattho69",
+			"PieRRoMaN",
+			"Pols12",
+			"Sherbrooke",
+			"Thibaut120094",
+			"Urhixidur",
+			"Verdy p",
+			"Wladek92",
+			"Yasten"
+		]
+	},
+	"antispoof-desc": "Bloque la création de comptes ayant des noms d’utilisateur similaires, utilisant diverses écritures, ou pouvant prêter à confusion",
+	"antispoof-conflict-top": "Le nom « $1 » ressemble trop {{PLURAL:$2|à l’utilisateur suivant|aux utilisateurs suivants}} :",
+	"antispoof-conflict-bottom": "Veuillez choisir un autre nom d’utilisateur.",
+	"antispoof-name-illegal": "Le nom d’utilisateur « $1 » n’est pas autorisé, afin d’éviter la confusion ou l’usurpation des noms d’utilisateurs : $2. Veuillez choisir un autre nom d’utilisateur.",
+	"antispoof-bad-char": "‹$1› ($2)",
+	"antispoof-badtype": "Mauvais type de données",
+	"antispoof-empty": "Chaîne vide",
+	"antispoof-prohibited": "Contient le caractère interdit $1",
+	"antispoof-combining": "Commence avec une marque combinatoire $1",
+	"antispoof-unassigned": "Contient un caractère non assigné $1",
+	"antispoof-deprecated": "Contient le caractère désuet $1",
+	"antispoof-noletters": "Ne contient aucune lettre",
+	"antispoof-mixedscripts": "Contient plusieurs écritures incompatibles",
+	"antispoof-tooshort": "Nom normalisé trop court",
+	"antispoof-ignore": "Ignorer la vérification de similitude avec les utilisateurs existants",
+	"antispoof-ignore-help": "Permet aux utilisateurs ayant des privilèges suffisants de créer un compte, même si son nom est similaire à celui d’un compte existant.",
+	"action-override-antispoof": "court-circuiter les vérifications d’usurpation",
+	"right-override-antispoof": "Court-circuiter les vérifications de tromperie"
+}

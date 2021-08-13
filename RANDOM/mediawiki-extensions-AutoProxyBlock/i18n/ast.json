@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Esbardu",
+			"Xuacu"
+		]
+	},
+	"autoproxyblock-desc": "Permite bloquiar a los proxies abiertos de facer aiciones na wiki",
+	"proxy-blocked": "La {{GENDER:|to}} dirección IP ta na llista de proxy, atáyase l'aición fecha.",
+	"abusefilter-edit-builder-vars-is-proxy": "Verdaderu si esta aición fízose por aciu d'un proxy",
+	"tag-proxy": "aición por aciu d'un proxy",
+	"action-proxyunbannable": "saltar los bloqueos automáticos de los proxys",
+	"right-proxyunbannable": "Saltar los bloqueos automáticos de los proxys",
+	"action-notagproxychanges": "protexer d'etiquetar les ediciones por aciu de proxies como \"proxy\"",
+	"right-notagproxychanges": "Protexer d'etiquetar les ediciones por aciu de proxies como \"proxy\"",
+	"action-autoproxyblock-log": "ver el rexistru de Bloqueos automáticos de proxy",
+	"right-autoproxyblock-log": "Ver el rexistru de cambeos por aciu de proxies bloquiaos automáticamente",
+	"proxyblock-log-name": "Rexistru de bloquéu automáticu de proxies",
+	"proxyblock-log-header": "Llista de cambeos por aciu de proxies, bloquiaos automáticamente",
+	"proxyblock-logentry-blocked": "l'aición «$2» {{GENDER:$3|del usuariu|de la usuaria}} $3 na páxina [[$1]] bloquióse automáticamente."
+}

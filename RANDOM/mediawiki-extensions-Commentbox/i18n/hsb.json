@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Michawiki"
+		]
+	},
+	"commentbox-desc": "Přidawa komentarowy kašćik do wěstych stronow",
+	"commentbox-intro": "== Komentar přidać... ==\nMaš komentar na tutej stronje? Přidaj jón tu abo <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} wobdźěłaj stronu direktnje]</span>.",
+	"commentbox-savebutton": "Komentar składować",
+	"commentbox-name": "Mjeno:",
+	"commentbox-name-explanation": "<small>(Tip: Jeli [[Special:UserLogin|so přizjewješ]], njetrjebaš swoje mjeno tu manuelnje zapisać)</small>",
+	"commentbox-log": "Nowe komentary",
+	"commentbox-first-comment-heading": "== Komentary ==",
+	"commentbox-regex": "/\\n==\\s*Komentary\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Zmylk při wutworjenju komentara",
+	"commentbox-error-page-nonexistent": "Tuta strona njeeksistuje!",
+	"commentbox-error-namespace": "Komentary njejsu w tutym mjenowym rumje dowolene!",
+	"commentbox-error-empty-comment": "Prózdne komentary njejsu dowolene!"
+}

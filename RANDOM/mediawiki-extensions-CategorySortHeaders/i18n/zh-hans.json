@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"PhiLiP"
+		]
+	},
+	"categorysortheaders-desc": "允许自定义多个字符为分类中排序页面列表的“索引字”，使用语法为<nowiki>[[category:Foo|^索引字^其余部分]]</nowiki>"
+}

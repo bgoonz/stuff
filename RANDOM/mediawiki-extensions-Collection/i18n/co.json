@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jumpy01",
+			"Jun Misugi"
+		]
+	},
+	"coll-show": "Mustrà",
+	"coll-create_a_book": "creà libru",
+	"coll-help": "Aiutu",
+	"coll-helppage": "Help:Libri",
+	"coll-n_pages": "$1 {{PLURAL:$1|pàgina|pàgine}}",
+	"coll-remove_this_page": "Supprimà 'ssa pàgina da u to libru",
+	"coll-show_collection": "Mustrà libru",
+	"coll-article-attribution": "<b>$1</b> <i>Fonte:</i> $2 <i>Cuntributori:</i> $3"
+}

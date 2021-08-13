@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kghbln"
+		]
+	},
+	"batchuserrights-intro": "Auf dieser Seite können Sie mehrere Benutzer gleichzeitig einer Benutzergruppe hinzufügen.\nAus Sicherheitsgründen wurde die Liste der zuordenbaren Benutzergruppen in der Konfigurationsdatei der Programmerweiterung selbst festgelegt und kann daher nicht im Wiki verändert werden.\nSofern weitere Benutzergruppen hinzugefügt werden sollen, wenden Sie sich bitte an einen Systemadministrator.",
+	"batchuserrights-no-groups": "Sie haben keine Benutzergruppe ausgewählt.\nEs wird daher keine Änderung durchgeführt.\nDer Rest der Seite wird nur deshalb geladen, damit Sie einfach feststellen können, ob einer der Benutzernamen nicht geladen werden konnte."
+}

@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"TomášPolonec",
+			"Vlad5250"
+		]
+	},
+	"ajaxpoll-vote-update": "Váš hlas bol aktualizovaný.",
+	"ajaxpoll-percent-votes": "$1% všetkých hlasov",
+	"ajaxpoll-your-vote": "Už ste hlasovali za „$1“ dňa $3 v čase $4. Svoj hlas môžete zmeniť výberom inej odpovede nižšie.",
+	"ajaxpoll-no-vote": "Prosím, hlasujte nižšie.",
+	"ajaxpoll-no-vote-results-after-voting": "Prosím, hlasujte nižšie. Výsledky sa zobrazia, keď odošlete svoj hlas.",
+	"ajaxpoll-info": "{{PLURAL:$1|Odovzdaný bol jeden hlas|Odovzdané boli $1 hlasy|Odovzdaných bolo $1 hlasov}} od spustenia hlasovania dňa $2.",
+	"ajaxpoll-submitting": "Prosím, počkajte, Váš hlas za odosiela.",
+	"ajaxpoll-vote-permission": "Nie ste oprávnený voliť.",
+	"ajaxpoll-readonly": "V tomto prieskume sa nedá hlasovať, databáza bola uzamknutá z nasledujúceho dôvodu: $1.",
+	"ajaxpoll-view-results-permission": "Nie ste oprávnený prezerať si výsledky prieskumu.",
+	"ajaxpoll-view-results-before-vote-permission": "Nie ste oprávnený prezerať si výsledky prieskumu pred tým, ako odošlete svoj hlas.",
+	"ajaxpoll-revoke-vote": "Chcem odvolať svoj hlas",
+	"ajaxpoll-vote-revoked": "Váš hlas bol odvolaný.",
+	"right-ajaxpoll-vote": "Môže hlasovať v prieskumoch v AJAX-e.",
+	"right-ajaxpoll-view-results": "Môže prezerať výsledky prieskumov v AJAX-e.",
+	"right-ajaxpoll-view-results-before-vote": "Môže zobraziť výsledky prieskumu v AJAX-e pred odoslaním svojho hlasu",
+	"action-ajaxpoll-vote": "hlasovať v prieskumoch v AJAX-e",
+	"action-ajaxpoll-view-results": "zobraziť výsledky prieskumov v AJAX-e",
+	"action-ajaxpoll-view-results-before-vote": "zobraziť výsledky prieskumov v AJAX-e pred odoslaním svojho hlasu"
+}

@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"Гусейн"
+		]
+	},
+	"adminlinks": "Бо мудирон линкон",
+	"adminlinks-desc": "Әловә кардејдә [[Special:AdminLinks|хыдмәтә сәһифә]], дыләдә һестыше фәрә лину бо мудирон",
+	"adminlinks_documentation": "Сәнәдон $1",
+	"adminlinks_general": "Умуми",
+	"adminlinks_editsidebar": "Јанә сәку сәрост кардеј",
+	"adminlinks_editcss": "CSS фајли сәрост кардеј",
+	"adminlinks_editmainpagename": "Јолә сәһифә номи сәрост кардеј",
+	"adminlinks_users": "Иштирокәкон",
+	"adminlinks_browsesearch": "Сәкыштә ијән нәве",
+	"adminlinks_importexport": "Идхол ијән ихроҹ",
+	"right-adminlinks": "Виндеј [[Special:AdminLinks|линкон бо мудирон]]"
+}

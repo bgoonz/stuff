@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"Guycn2",
+			"Ronel1"
+		]
+	},
+	"auth_remoteuser-desc": "הכנסת משתמשים לחשבון באופן אוטומטי באמצעות משתנה הסביבה <code>REMOTE_USER</code>"
+}

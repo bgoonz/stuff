@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gunnernett",
+			"Harald Khan",
+			"Nghtwlkr",
+			"Njardarlogar"
+		]
+	},
+	"authorprotect": "Vern sida for andre enn forfattarar av ho",
+	"authorprotect-desc": "Lèt forfattaren av ei sida verna ho mot endringar frå andre brukarar",
+	"authorprotect-notauthor": "Du er ikkje forfattaren av denne sida",
+	"authorprotect-confirm": "Endra vernenivå",
+	"authorprotect-edit": "Avgrens endring til forfattarar",
+	"authorprotect-move": "Avgrens flytting til forfattarar",
+	"authorprotect-intro": "Nytt dette skjemaet for å låsa sida for andre enn forfattarar",
+	"authorprotect-success": "Verna.",
+	"protect-level-author": "Vern for andre enn forfattarar",
+	"restriction-level-author": "Forfattarverna",
+	"right-authorprotect": "Vern forfatta sider"
+}

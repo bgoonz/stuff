@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lovekhmer",
+			"Thearith",
+			"គីមស៊្រុន"
+		]
+	},
+	"authorprotect": "ការពារទំព័រពីអ្នកដែលមិនមែនជាអ្នកនិពន្ធ។",
+	"authorprotect-desc": "អនុញ្ញាតឱ្យអ្នកនិពន្ធទំព័រមួយការពារវាពីអ្នកប្រើប្រាស់ដ៏ទៃ",
+	"authorprotect-notauthor": "{{GENDER:$1|អ្នក}}មិនមែនជា{{GENDER:$1|អ្នកនិពន្ធ}}ទំព័រនេះទេ។",
+	"authorprotect-confirm": "ផ្លាស់ប្តូរកម្រិតការពារ",
+	"authorprotect-edit": "មានតែអ្នកនិពន្ធទេទើបអាចធ្វើការកែប្រែបាន",
+	"authorprotect-move": "មានតែអ្នកនិពន្ធទេទើបអាចធ្វើការប្ដូរទីតាំងបាន",
+	"authorprotect-intro": "សូមប្រើប្រាស់សំណុំបែបបទនេះដើម្បីចាក់សោទំព័រនេះពីអ្នកមិនមែនជាអ្នកនិពន្ធ។",
+	"authorprotect-success": "ការពារហើយ!",
+	"protect-level-author": "ការពារពីអ្នកដែលមិនមែនជាអ្នកនិពន្ធ",
+	"restriction-level-author": "ត្រូវបានការពារដោយអ្នកនិពន្ធ",
+	"action-authorprotect": "ការពារពីអ្នកដែលមិនមែនជាអ្នកនិពន្ធ",
+	"right-authorprotect": "ការពារទំព័រដែលមានអ្នកនិពន្ធ"
+}

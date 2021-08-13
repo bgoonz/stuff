@@ -1,0 +1,34 @@
+{
+	"name": "CategorySortHeaders",
+	"version": "0.4.0",
+	"author": [
+		"Brian Wolff",
+		"Universal Omega"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:CategorySortHeaders",
+	"descriptionmsg": "categorysortheaders-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "other",
+	"callback": "CustomHeaderCollation::onRegistration",
+	"requires": {
+		"MediaWiki": ">= 1.35.0"
+	},
+	"MessagesDirs": {
+		"CategorySortHeaders": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"CustomHeaderCollation": "src/CustomHeaderCollation.php"
+	},
+	"Hooks": {
+		"Collation::factory": "CustomHeaderCollation::onCategorySortHeadersSetup"
+	},
+	"config": {
+		"CategorySortHeaderAppendPageNameToKey": {
+			"value": true,
+			"description": "Control if a sortkey of ^foo^ is considered just ^foo^ or ^foo^{{PAGENAME}}. After changing this option, you should run php updateCollations.php --force"
+		}
+	},
+	"manifest_version": 2
+}

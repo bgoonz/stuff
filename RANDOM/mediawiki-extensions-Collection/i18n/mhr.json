@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Сай",
+			"Санюн Вадик"
+		]
+	},
+	"coll-remove": "Шӧраш",
+	"coll-show": "Ончыкташ",
+	"coll-move_up": "Кӱшкырак кусараш",
+	"coll-move_down": "Ӱлыкрак кусараш",
+	"coll-contents": "Вуйлымаш",
+	"coll-cancel": "Чараш",
+	"coll-print_export": "Печать/экспорт",
+	"coll-create_a_book": "Книгам чоҥаш",
+	"coll-download_as": "$1 семын тулен налаш"
+}

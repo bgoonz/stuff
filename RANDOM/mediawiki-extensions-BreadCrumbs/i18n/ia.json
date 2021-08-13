@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"breadcrumbs-desc": "Adde un tracia de paginas visitate sub le barra de schedas",
+	"prefs-breadcrumbs-separator": "Separator inter paginas visitate",
+	"prefs-breadcrumbs-separator-max": "Un maximo de 2 characteres pote esser entrate.",
+	"prefs-breadcrumbs": "Paginas visitate",
+	"prefs-breadcrumbs-showcrumbs": "Monstrar le paginas que tu ha visitate",
+	"prefs-breadcrumbs-numberofcrumbs": "Numero de paginas visitate",
+	"prefs-breadcrumbs-numberofcrumbs-max": "Un maximo de 20 paginas visitate pote esser monstrate.",
+	"prefs-breadcrumbs-namespaces": "Includer le spatios de nomine in le paginas visitate",
+	"prefs-breadcrumbs-filter-duplicates": "Excluder paginas visitate repetitemente",
+	"prefs-breadcrumbs-preceding-text": "Texto que appare ante le paginas visitate",
+	"prefs-breadcrumbs-preceding-text-max": "Un maximo de 30 characteres pote esser entrate."
+}

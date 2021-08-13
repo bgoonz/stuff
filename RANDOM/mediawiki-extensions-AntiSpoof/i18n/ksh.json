@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Purodha"
+		]
+	},
+	"antispoof-desc": "Dat ongerdröck neu Name für Metmaacher met jemeschte Zeichensätz, neu Name, wo mer jeck von weed, un zo ähnlije Name.",
+	"antispoof-conflict-top": "Dä Name „$1“ eß zoh ähnlesch zoh {{PLURAL:$2|däm Name, dä&32;|dä Name, di_j_|nix wadd_}}et ald jitt:",
+	"antispoof-conflict-bottom": "Nemm ene andere Name.",
+	"antispoof-name-illegal": "Dä Name „$1“ es nit zojelohße, domet mer kein nohjemahte Name krije, un keine Durjenein met Schrefte: $2. Sök Der jet anders als Dinge Name us.",
+	"antispoof-bad-char": "„$1“ ($2)",
+	"antispoof-badtype": "Verkierte Zoot Date",
+	"antispoof-empty": "En dem Feld is nix dren",
+	"antispoof-prohibited": "Do es dat Zeiche „$1“ dren, wat nit zojelohße es",
+	"antispoof-combining": "Dat fängk med däm kombineerende Zeiche „$1“ aan.",
+	"antispoof-unassigned": "Do es dat Zeiche „$1“ dren, wat nit zojedeild es",
+	"antispoof-deprecated": "Do es dat Zeiche „$1“ dren, wat nit jään jesinn es",
+	"antispoof-noletters": "Do es nit eine Bochstabe dren.",
+	"antispoof-mixedscripts": "He sin Zeichesätz jemesch.",
+	"antispoof-tooshort": "Dä vereinheitlechte Name es zo koot.",
+	"antispoof-ignore": "Donn de Prööfonge jäje et Name-Nohmaache övverjonn",
+	"right-override-antispoof": "Prööfonge jäje et Name-Nohmaache (<i lang=\"en\">Anti-Spoofing</i>) övverjonn"
+}

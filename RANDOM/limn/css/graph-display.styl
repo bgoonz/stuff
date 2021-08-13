@@ -1,0 +1,117 @@
+@import 'colors'
+@import 'nib'
+@import 'mixins'
+
+
+section.graph-display.graph
+    position relative
+    max-width 1200px
+    margin 3em auto
+    
+    .graph-name-row
+        margin-bottom 1em
+        clearfix()
+    
+    .inner, .row
+        position relative
+    .row
+        margin 1em 0
+    
+    .graph-metric-defs
+        column-count 2
+        padding 0.5em 3em 0.5em 1em
+        margin 0
+        .graph-metric-def, dd, dt
+            break-inside avoid
+    
+    
+    /* * * *  Subnav & Tabs  * * * {{{ */
+    .graph-settings.tabbable
+        .nav
+            margin-bottom 0
+            
+            li h3
+                line-height 14px
+                margin 2px
+                padding 8px 12px
+                border-radius 5px
+            li
+                margin-right 4px
+        
+        .tab-pane
+            padding 0.5em
+            margin-top 18px
+            
+            &.graph-data-pane
+                margin-top 0
+                padding 0
+    
+    .graph-controls
+        z-index 100
+        margin-top 2px
+        
+        & > .btn, & > .btn-group
+            margin 0 0.5em
+        
+        .btn-group
+            display inline-block
+        
+        input[type="button"]
+            min-width 5em
+            text-align center
+    
+    .graph-permalink
+        display inline-block
+        input
+            cursor auto
+    
+    .ug
+        padding-left 3em
+    
+    /* }}} */
+    
+    
+    /* * * *  Graph Details  * * * {{{ */
+    form.graph-details
+        position relative
+        
+        .name-row
+            font-size 120%
+            line-height 2em
+            input.name
+                font-size 120%
+                line-height 1.2
+                height 1.2em
+                border-color $light
+                width 98%
+        .row-fluid
+            .half.control-group
+                width 50%
+                float left
+                margin-left 0
+                margin-right 0
+            label
+                width 100px
+            .controls
+                margin-left 110px
+        .help-block
+            font-size 11px
+            line-height 1.3
+    /* }}} */
+    
+
+
+@media print
+    section.graph-display.graph
+        // Print each graph on its own page
+        page-break-after always
+        
+        // Ensure the whole graph is visible
+        .legend-node
+            position relative
+        
+        .graph-permalink
+            padding 1em
+    
+
+

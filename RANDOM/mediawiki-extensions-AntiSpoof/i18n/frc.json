@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hangmanwa7id",
+			"JeanVoisin"
+		]
+	},
+	"antispoof-name-illegal": "Le nom \"$1\" est pas permit pour empêcher de confondre ou d'user le nom \"$2\".  Choisissez donc un autre nom.",
+	"antispoof-badtype": "Mauvaise qualité d'information",
+	"antispoof-empty": "Chaîne vide",
+	"antispoof-prohibited": "Contient le caractère pas permit $1",
+	"antispoof-combining": "Commence avec la marque combinée $1",
+	"antispoof-unassigned": "Contient le caractère pas assigné ou désapprouvé $1",
+	"antispoof-deprecated": "Contient le caractère désuet $1",
+	"antispoof-noletters": "Contient pas de lettres",
+	"antispoof-mixedscripts": "Contient plusieurs scripts qui s'adonnont pas",
+	"antispoof-tooshort": "Le nom choisi est trop court"
+}

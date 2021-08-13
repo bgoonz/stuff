@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"Borichèt",
+			"Dragonòt"
+		]
+	},
+	"admanager": "Gestor d'areclam",
+	"admanagerzones": "Zòne ëd gestor d'areclam",
+	"admanager-desc": "A forniss na [[Special:AdManager|pàgina special]] ch'a përmët a j'aministrator d'amposté la zòna për le pàgine o le categorìe",
+	"admanager_docu": "Për gionté o gavé la zòna d'areclam ëd na pàgina o ëd na categorìa antrega, ch'a gionta o ch'a gava sò tìtol sì-sota.",
+	"admanagerzones_docu": "Ch'a anseriss minca nùmer ëd zòna d'areclam dzora soa linia.",
+	"admanager_invalidtargetpage": "pa gnun-e pagine trovà con tìtol \"$1\".",
+	"admanager_invalidtargetcategory": "pa gnun-e categorìe trovà con tìtol \"$1\".",
+	"admanager_notable": "Eror! Na tàula ëd base ëd dàit ciamà a l'é pa stàita trovà! Fé prima marcé update.php.",
+	"admanager_noAdManagerZones": "Eror! A dev gionté dle zòne d'areclam. Ch'A-j buta ant le [[Special:AdManagerZones|Zòne ëd mansé d'areclam]].",
+	"admanager_labelPage": "Tìtoj ëd pàgina",
+	"admanager_labelCategory": "Nòm dla categorìa",
+	"admanager_submit": "Spediss",
+	"admanager_noads": "Mostré pa d'areclam",
+	"admanager_Page": "Pàgine",
+	"admanager_Category": "Categorìe",
+	"admanager_added": "Soe modìfiche a son ëstàite salvà",
+	"admanager_addedzone": "Zòne giontà",
+	"admanager_zonenum": "Zòna #: $1",
+	"admanager_zonenotnumber": "Eror! $1 a l'é pa un nùmer.",
+	"admanager_return": "Torné a [[Special:AdManager|Mansé d'areclam]]",
+	"admanager_gotoads": "[[Special:AdManager|Modifiché ël posissionament ëd n'areclam]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Modifiché le zòne d'areclam]]",
+	"right-admanager": "[[Special:AdManager|Gestì la configurassion dj'areclam]]"
+}

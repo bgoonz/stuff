@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chaduvari",
+			"Kiranmayee",
+			"Veeven",
+			"చక్రవర్తి"
+		]
+	},
+	"commentbox-desc": "కొన్ని పేజీలకు వ్యాఖ్యల పెట్టెని చేరుస్తుంది",
+	"commentbox-intro": "== ఒక వ్యాఖ్యని చేర్చండి... ==\nఈ పుటపై మీరు వ్యాఖ్యానించేది ఏమైనా ఉందా? దాన్ని ఇక్కడ ఇవ్వండి లేదా <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} నేరుగా పుటని మార్చండి]</span>.",
+	"commentbox-savebutton": "వ్యాఖ్యని భద్రపరచు",
+	"commentbox-name": "పేరు:",
+	"commentbox-name-explanation": "<small>(చిట్కా: మీరు [[Special:UserLogin|ప్రవేశిస్తే]], మీ పేరుని ఇక్కడ మానవీయంగా పూరించనవసరం ఉండదు.)</small>",
+	"commentbox-log": "కొత్త వ్యాఖ్యలు",
+	"commentbox-first-comment-heading": "== వ్యాఖ్యలు ==",
+	"commentbox-regex": "/\\n==\\s*వ్యాఖ్యలు\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "వ్యాఖ్యను సృష్టించేటపుడు లోపం జరిగింది",
+	"commentbox-error-page-nonexistent": "ఈ పేజీ లేనే లేదు!",
+	"commentbox-error-namespace": "ఈ పేరుబరిలో వ్యాఖ్యలకు అనుమతి లేదు!",
+	"commentbox-error-empty-comment": "ఖాళీ వ్యాఖ్యలని అనుమతించము!"
+}

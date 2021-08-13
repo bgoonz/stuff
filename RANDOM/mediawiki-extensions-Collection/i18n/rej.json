@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"MFikriansori"
+		]
+	},
+	"coll-remove": "Apus",
+	"coll-show": "Kêmten",
+	"coll-move_up": "Gêrok moi das",
+	"coll-move_down": "Gêrok mimbêak",
+	"coll-print_export": "Citak/kirim",
+	"coll-create_a_book": "Mênêa bukau",
+	"coll-book_creator": "Pêmênêa bukau",
+	"coll-download_as": "Donlod ijai $1",
+	"coll-book_creator_disable": "Têkêp tukang kênêa bukau",
+	"coll-book_creator_disable_tooltip": "Bêdan gmuno alat mênêa bukau",
+	"coll-add_this_page": "Kaik natêt io moi bukau udi",
+	"coll-add_page_tooltip": "Kaik natêt wiki io moi bukau udi",
+	"coll-help": "Tulung",
+	"coll-help_tooltip": "Kêmten tulung têtang mênêa bukau",
+	"coll-helppage": "Help:Bukau",
+	"coll-remove_this_page": "Apus natêt io kundêi bukau udi",
+	"coll-show_collection_tooltip": "Têkên utuk mubêak/dmonlod/mêmêsên bukau udi",
+	"coll-make_suggestions": "Natêt dê snaran",
+	"coll-article-attribution": "<b>$1</b> <i>Sumbêr:</i> $2 <i>Dik milau misai:</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>Sumbêr:</i> $2 <i>Lisensi:</i> $3 <i>Dik milau misai:</i> $4 <i>Tukang kênêa sêbênêa nê:</i> $5"
+}

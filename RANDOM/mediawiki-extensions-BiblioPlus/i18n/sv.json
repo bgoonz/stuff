@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"LittleGun",
+			"WikiPhoenix"
+		]
+	},
+	"biblioplus-desc": "Skapar en referens av en artikel i PubMed eller ISBN:s databas",
+	"biblioplus-doi-tooltip": "Visa eller köpa artikel från utgivaren",
+	"biblioplus-pmid-tooltip": "Visa eller köpa artikel från utgivaren (om den är tillgänglig)",
+	"biblioplus-isbn-tooltip": "Bokinformation på isbndb.org",
+	"biblioplus-medline-abstracts": "Alla Medlines sammanfattningar:",
+	"biblioplus-pubmed-abstracts": "Alla sammanfattningar på PubMed",
+	"biblioplus-hubmed-abstracts": "Alla sammanfattningar på HubMed",
+	"biblioplus-vkey-title": "länk till databasen med bibliografier"
+}

@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Filzstift"
+		]
+	},
+	"articlefeedbackv5-overlay-close": "Schliessen",
+	"articlefeedbackv5-error-throttled": "Dein Beitrag wurde zurückgewiesen, da du in jüngster Vergangenheit mehr als die empfohlene Anzahl an Rückmeldungen, gemäss der Rückmeldungsrichtlinien von {{SITENAME}}, hinterlassen hast. Bitte hinterlasse nicht zu viele Rückmeldungen.",
+	"articlefeedbackv5-form1-header-left-comment": "{{GENDER:$1|$2 hinterliess einen Kommentar.}}",
+	"articlefeedbackv5-form2-header-praise": "{{GENDER:$1|$1}} hinterliess ein Lob:",
+	"articlefeedbackv5-form2-header-question": "{{GENDER:$1|$1}} hinterliess eine Frage:",
+	"articlefeedbackv5-form2-header-suggestion": "{{GENDER:$1|$1}} hinterliess einen Vorschlag:",
+	"articlefeedbackv5-central-header-left-comment": "{{GENDER:$1|$2}} hinterliess eine [[$4|Rückmeldung]] zu $3",
+	"articlefeedbackv5-no-feedback": "Es gibt keine Rückmeldungen, die zum ausgewählten Filter passen. Um den Filter zu ändern, versuchen Sie eine der obenstehenden Optionen (z.&nbsp;B. «Hervorgehoben» oder «Ungeprüfte»).",
+	"articlefeedbackv5-bucket6-question-placeholder-yes": "Bitte gib deinen Verbesserungsvorschlag hier ein (z. B. «es fehlt die Geschichte seit 1989, wie sie in M. Bernasconi (2007) beschrieben ist.»)",
+	"articlefeedbackv5-bucket6-question-placeholder-no": "Bitte gib deinen Verbesserungsvorschlag hier ein (z. B. «es fehlt die Geschichte seit 1989, wie sie in M. Bernasconi (2007) beschrieben ist.»)"
+}

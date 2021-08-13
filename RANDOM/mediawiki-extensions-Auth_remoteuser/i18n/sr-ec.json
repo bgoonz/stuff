@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kizule",
+			"Zoranzoki21"
+		]
+	},
+	"auth_remoteuser-desc": "Аутоматски пријављује кориснике користећи <code>REMOTE_USER</code> промењиву окружења"
+}

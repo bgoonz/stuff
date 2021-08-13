@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Brazal.dang",
+			"Geopoet"
+		]
+	},
+	"authorprotect": "Protektaran an pahina gikan sa bakong mga kagsurat",
+	"authorprotect-desc": "Minatugot sa kagsurat nin pahina na protektaran ini gikan sa ibang mga paragamit",
+	"authorprotect-notauthor": "{{GENDER:$1|Ika}} bako tabi an {{GENDER:$1|kagsurat}} kaining pahina.",
+	"authorprotect-confirm": "Liwaton na mga kad-at nin proteksyon",
+	"authorprotect-edit": "I-restrikto an pagliliwat sa mga kagsurat",
+	"authorprotect-move": "I-restrikto an pagbabalyo sa mga kagsurat",
+	"authorprotect-intro": "Gamita ining porma sa pagkandado kaining pahina gikan sa bakong mga kagsurat.",
+	"authorprotect-success": "Matrayumpo an proteksyon!",
+	"protect-level-author": "Protektaran gikan sa bakong mga kagsurat",
+	"restriction-level-author": "Protektado-nin-Kagsurat",
+	"right-authorprotect": "Protektaran an mga pahina na igwang kagsurat",
+	"right-author": "Liwaton an mga pahina na protektado-nin-kagsurat"
+}

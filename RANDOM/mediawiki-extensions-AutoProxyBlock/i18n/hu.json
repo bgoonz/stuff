@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dani",
+			"Wolf Rex"
+		]
+	},
+	"abusefilter-edit-builder-vars-is-proxy": "Igaz, ha a művelet proxyn keresztül lett végrehajtva",
+	"tag-proxy": "proxyn keresztüli művelet",
+	"right-proxyunbannable": "proxyk automatikus blokkjainak megkerülése"
+}

@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Acamicamacaraca",
+			"Milicevic01",
+			"Rancher",
+			"Сербијана"
+		]
+	},
+	"admanager": "Управљач огласима",
+	"admanagerzones": "Зоне управљача огласа",
+	"admanager_invalidtargetpage": "Не постоји страница под називом „$1“.",
+	"admanager_invalidtargetcategory": "Не постоји категорија под називом „$1“.",
+	"admanager_notable": "Грешка! Не могу да пронађем потребну табелу у бази. Прво покрените update.php.",
+	"admanager_noAdManagerZones": "Грешка! Морате да додате неке огласне зоне. Унесите их у „[[Special:AdManagerZones|Зоне – управљач огласима]]“.",
+	"admanager_labelPage": "Наслови страница",
+	"admanager_labelCategory": "Називи категорија",
+	"admanager_submit": "Пошаљи",
+	"admanager_noads": "Не приказуј рекламе",
+	"admanager_Page": "Странице",
+	"admanager_Category": "Категорије",
+	"admanager_added": "Ваше измене су сачуване.",
+	"admanager_addedzone": "Додата зона $1.",
+	"admanager_removedzone": "Уклоњена зона $1.",
+	"admanager_nozonesadded": "Ниједна зона није додата.",
+	"admanager_nozonesremoved": "Ниједна зона није уклоњена.",
+	"admanager_zonenum": "Зона број: $1",
+	"admanager_zonenotnumber": "Грешка! $1 не представља број.",
+	"admanager_return": "Назад на [[Special:AdManager|управљач огласима]]",
+	"admanager_gotoads": "[[Special:AdManager|Промени положај огласа]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Уреди огласне зоне]]",
+	"right-admanager": "[[Special:AdManager|Подешавања за оглашавање]]"
+}

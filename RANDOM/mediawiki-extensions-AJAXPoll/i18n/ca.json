@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido",
+			"Papapep",
+			"Pgellida",
+			"Pitort",
+			"Qllach"
+		]
+	},
+	"ajaxpoll-desc": "Permet les enquestes basades en AJAX amb l'etiqueta <code>&lt;poll&gt;</code>",
+	"ajaxpoll-tracking-category": "Pàgines amb una enquesta",
+	"ajaxpoll-tracking-category-desc": "La pàgina té una <code>&lt;enquesta&gt;</code>.",
+	"ajaxpoll-vote-update": "S'ha enregistrat el vostre vot.",
+	"ajaxpoll-vote-add": "S'ha afegit el vostre vot.",
+	"ajaxpoll-vote-error": "Hi ha hagut un problema en processar el vostre vot, si us plau torneu a provar una altra vegada.",
+	"ajaxpoll-percent-votes": "$1% del total de vots",
+	"ajaxpoll-your-vote": "Ja vau votar per «$1» el $3 a les $4; podeu canviar el vostre vot fent clic sobre una de les respostes que hi ha més avall.",
+	"ajaxpoll-no-vote": "Voteu a continuació.",
+	"ajaxpoll-no-vote-results-after-voting": "Voteu a continuació, els resultats es mostraran un cop hagueu votat.",
+	"ajaxpoll-info": "Hi ha hagut {{PLURAL:$1|un vot|$1 vots}} des que l'enquesta va ser creada el $2.",
+	"ajaxpoll-submitting": "Espereu si us plau, estem precessant el vostre vot.",
+	"ajaxpoll-vote-permission": "No teniu dret a vot.",
+	"ajaxpoll-view-results-permission": "Vostè no té dret a veure els resultats d'aquesta enquesta.",
+	"ajaxpoll-view-results-before-vote-permission": "No es poden veure els resultats de l'enquesta abans d'haver votat.",
+	"ajaxpoll-revoke-vote": "Vull anul·lar el meu vot",
+	"ajaxpoll-vote-revoked": "S'ha anul·lat el vostre vot.",
+	"right-ajaxpoll-vote": "Podeu votar a les enquestes basades en AJAX",
+	"right-ajaxpoll-view-results": "Podeu veure els resultats de les enquestes basades en AJAX",
+	"right-ajaxpoll-view-results-before-vote": "Podeu veure els resultats de les enquestes basades en AJAX abans d'haver votat",
+	"action-ajaxpoll-vote": "votar en les enquestes basades en AJAX",
+	"action-ajaxpoll-view-results": "veure els resultats en les enquestes basades en AJAX",
+	"action-ajaxpoll-view-results-before-vote": "veure els resultats de les enquestes basades en AJAX abans d'haver votat"
+}

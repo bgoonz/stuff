@@ -1,0 +1,5 @@
+xmlns_workflow: 'uri:oozie:workflow:0.4'
+xmlns_sqoop: 'uri:oozie:sqoop-action:0.2'
+archive: '/user/oozie/share/lib/mysql-connector-java-5.1.22-bin.jar'
+#job-tracker: analytics1001
+#name-node: analytics1001

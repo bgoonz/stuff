@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"BaRaN6161 TURK",
+			"Hedda Gabler",
+			"Incelemeelemani",
+			"Sayginer",
+			"SiLveRLeaD",
+			"Stultiwikia"
+		]
+	},
+	"apihelp-pollsubmitvote-description": "AJAXPoll API modülü",
+	"apihelp-pollsubmitvote-summary": "AJAXPoll API modülü",
+	"apihelp-pollsubmitvote-param-poll": "832A5FA2C2583A5732B90CEFF658FE25 gibi Anket Kimliği; ID'ler, MD5 karma algoritması ile girişe (soru + cevap seçenekleri, yani <code>&lt;poll&gt;...&lt;/poll&gt;</code> etiketleri) metin kodunu, MD5 karma algoritmasıyla ve sonucu PHP'nin <code>strtoupper</code> işlevi UPPERCASE'e dönüştürerek oluşturulur",
+	"apihelp-pollsubmitvote-param-answer": "Sayısal cevap seçeneği tanımlayıcısı; daha önce verilen oyları iptal etmek için 0 kullanın",
+	"apihelp-pollsubmitvote-example-1": "832A5FA2C2583A5732B90CEFF658FE25 kimliğine sahip olan ankete üçüncü (3) cevabını gönder",
+	"ajaxpoll-desc": "<code>&lt;poll&gt;</code> etiketiyle AJAX tabanlı anketlere izin verir",
+	"ajaxpoll-tracking-category": "Anket içeren sayfalar",
+	"ajaxpoll-tracking-category-desc": "Sayfada <code>&lt;poll&gt;</code> var.",
+	"ajaxpoll-vote-update": "Oyunuz güncellendi.",
+	"ajaxpoll-vote-add": "Oyunuz eklendi.",
+	"ajaxpoll-vote-error": "Oyunuz işleme alınırken bir sorun oluştu, lütfen tekrar deneyiniz.",
+	"ajaxpoll-percent-votes": "Tüm oyların %$1",
+	"ajaxpoll-your-vote": "\"$1\" için $3 tarihinde $4 saatinde oy verdiniz. Aşağıda farklı bir cevabı tıklayarak oyunuzu değiştirebilirsiniz.",
+	"ajaxpoll-no-vote": "Lütfen aşağıdan oy kullanın.",
+	"ajaxpoll-no-vote-results-after-voting": "Lütfen aşağıda oyunuzu kullanın. Sonuçlar oy verdikten sonra görüntülenecektir.",
+	"ajaxpoll-info": "Anket $2 oluşturulduğundan beri {{PLURAL:$1|bir oy aldı|$1 oy aldı}}.",
+	"ajaxpoll-submitting": "Lütfen bekleyin, oyunuz kaydediliyor.",
+	"ajaxpoll-vote-permission": "Oy hakkına sahip değilsiniz.",
+	"ajaxpoll-readonly": "Bu anket oylanamaz, veritabanı şu nedenle kilitlenir: $1.",
+	"ajaxpoll-view-results-permission": "Bu anketin sonuçlarını görüntüleme hakkınız yok.",
+	"ajaxpoll-view-results-before-vote-permission": "Siz oylamadan önce bu anketin sonuçlarını görme hakkınız yok.",
+	"ajaxpoll-revoke-vote": "Oyumu iptal etmek istiyorum",
+	"ajaxpoll-vote-revoked": "Oyunuz iptal edildi.",
+	"right-ajaxpoll-vote": "AJAX tabanlı anketlerde oy kullanabilir",
+	"right-ajaxpoll-view-results": "AJAX tabanlı anketlerde sonuçları görüntüleyebilir",
+	"right-ajaxpoll-view-results-before-vote": "Oylamadan önce AJAX tabanlı anketlerde sonuçları görüntüleyebilir",
+	"action-ajaxpoll-vote": "AJAX tabanlı anketlerde oy kullan",
+	"action-ajaxpoll-view-results": "AJAX tabanlı anketlerde sonuçları görüntüle",
+	"action-ajaxpoll-view-results-before-vote": "oylamadan önce AJAX tabanlı anketlerde sonuçları görüntüle"
+}

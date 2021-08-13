@@ -1,0 +1,39 @@
+{
+	"@metadata": {
+		"authors": [
+			"Alirezaaa",
+			"Dalba",
+			"FarsiNevis",
+			"Mjbmr",
+			"Reza1615",
+			"ZxxZxxZ"
+		]
+	},
+	"admanager": "مدیریت آگهی",
+	"admanagerzones": "مناطق مدیریت آگهی",
+	"admanager-desc": "یک [[Special:AdManager|صفحهٔ ویژه]] فراهم می‌کند که به مدیران اجازه می‌دهد برای صفحات یا رده‌ها منطقه تعریف کنند.",
+	"admanager_docu": "برای افزودن یا برداشتن یک منطقهٔ آگهی از یک صفحه یا کل یک رده، عنوان صفحه یا رده را در زیر بیفزایید یا حذف کنید.",
+	"admanagerzones_docu": "شمارهٔ هر منطقهٔ آگهی را در خط خودش بنویسید.",
+	"admanager_invalidtargetpage": "صفحه‌ای با عنوان «$1» یافت نشد.",
+	"admanager_invalidtargetcategory": "رده‌ای با عنوان «$1» یافت نشد.",
+	"admanager_notable": "خطا! جدول پایگاه دادهٔ مورد نیاز پیدا نشد! ابتدا Update.php را اجرا کنید.",
+	"admanager_noAdManagerZones": "خطا! باید چند منطقهٔ آگهی بیفزایید. آنها را در [[Special:AdManagerZones|مناطق مدیریت آگهی]] وارد کنید.",
+	"admanager_labelPage": "عناوین صفحه",
+	"admanager_labelCategory": "نام‌های رده",
+	"admanager_submit": "ثبت",
+	"admanager_noads": "نمایش بدون آگهی",
+	"admanager_Page": "صفحات",
+	"admanager_Category": "رده‌ها",
+	"admanager_added": "تغییرات شما ذخیره شده‌است",
+	"admanager_addedzone": "منطقه $1 افزوده شد",
+	"admanager_removedzone": "ناحیه $1 حذف شد.",
+	"admanager_nozonesadded": "هیچ ناحیه‌ای افزوده نشده‌است.",
+	"admanager_nozonesremoved": "هیچ ناحیه‌ای حذف نشده‌است.",
+	"admanager_zonenum": "شمارهٔ منطقه: $1",
+	"admanager_zonenotnumber": "خطا! $1 عدد نیست.",
+	"admanager_return": "بازگشت به [[Special:AdManager|مدیریت آگهی]]",
+	"admanager_gotoads": "[[Special:AdManager|ویرایش جای‌گیری آگهی]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|ویرایش مناطق آگهی]]",
+	"action-admanager": "مدیریت تنظیمات تبلیغات",
+	"right-admanager": "[[Special:AdManager|مدیریت پیکربندی تبلیغات]]"
+}

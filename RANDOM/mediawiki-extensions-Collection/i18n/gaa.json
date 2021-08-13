@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Flixtey",
+			"JiveJay",
+			"Mybluberet",
+			"Zimosa"
+		]
+	},
+	"coll-remove": "Jiemɔ",
+	"coll-show": "Kɛtsɔɔ",
+	"coll-move_up": "Kɛya ŋwɛi",
+	"coll-move_down": "Kɛya shishi",
+	"coll-print_export": "Mfonirishamɔ/majemɔ",
+	"coll-create_a_book": "Bɔɔ wolo",
+	"coll-book_creator": "Wolo bɔlɔ",
+	"coll-download_as": "Gblamɔ as $1",
+	"coll-disable": "Fitemɔ",
+	"coll-book_creator_disable_tooltip": "Kpa wolobɔlɔ lɛ kɛ nitsumɔ",
+	"coll-add_this_page": "Kɛ baafa nɛɛ afata owolo lɛ he",
+	"coll-add_page_tooltip": "Kɛ amrɔ wiki baafa lɛ afata owolo lɛ",
+	"coll-help": "Wamɔ",
+	"coll-help_tooltip": "Tsɔɔmɔ wamɔ yɛ wolo bɔɔ he",
+	"coll-helppage": "Help:Woji",
+	"coll-remove_this_page": "Jiemɔ baafa nɛɛ kɛjɛ owolo lɛ mli",
+	"coll-show_collection": "Tsɔɔmɔ wolo",
+	"coll-show_collection_tooltip": "Nyɛɛ nɔ kɛtsake /kɛgbla/kɛhe owolo lɛ",
+	"coll-make_suggestions": "Tsii baafai ta",
+	"coll-make_suggestions_tooltip": "Tsɔɔmɔ taitsii ni jɛ owolo baafai lɛ",
+	"coll-attribution-anons": "Aleee :$1",
+	"coll-article-attribution": "<b>$1</b> <i>he ni ejɛ:</i> $2 <i>Fatalɔi:</i> $3",
+	"coll-images-title": "Mfonirii"
+}

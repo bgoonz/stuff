@@ -1,0 +1,40 @@
+{
+	"@metadata": {
+		"authors": [
+			"Asaifm",
+			"Meno25",
+			"Mido",
+			"OsamaK",
+			"Zanatos",
+			"ديفيد"
+		]
+	},
+	"apihelp-pollsubmitvote-description": "وحدة AJAXPoll API",
+	"apihelp-pollsubmitvote-summary": "وحدة AJAXPoll API",
+	"apihelp-pollsubmitvote-param-poll": "معرف الاستطلاع، مثل 832A5FA2C2583A5732B90CEFF658FE25، يتم تكوين المعرفات بواسطة تجزئة  الإدخال (سؤال + خيارات الإجابة: أي النص بين وسوم <code>&lt;poll&gt;...&lt;/poll&gt;</code>) مع خوارزمية تجزئة MD5 وتحويل النتيجة إلى أحرف كبيرة باستخدام وظيفة PHP <code>strtoupper</code>",
+	"apihelp-pollsubmitvote-param-answer": "محدد خيار الإجابة العددي، استخدم 0 لإلغاء تصويت مسبق",
+	"apihelp-pollsubmitvote-example-1": "إرسال الرد الثالث (3) على الاستطلاع الذي يحتوي على المعرف 832A5FA2C2583A5732B90CEFF658FE25",
+	"ajaxpoll-desc": "يسمح بالاستطلاعات المستندة إلى AJAX بالوسم <code>&lt;poll&gt;</code>",
+	"ajaxpoll-tracking-category": "الصفحات مع استطلاع رأي",
+	"ajaxpoll-tracking-category-desc": "تحتوي الصفحة على <code>&lt;poll&gt;</code>.",
+	"ajaxpoll-vote-update": "تم تحديث صوتك.",
+	"ajaxpoll-vote-add": "تم إضافة تصويتك",
+	"ajaxpoll-vote-error": "حدثت مشكلة في معالجة تصويتك; تُرجَى المحاولة مرة أخرى.",
+	"ajaxpoll-percent-votes": "$1% من جميع الأصوات",
+	"ajaxpoll-your-vote": "لقد صوتت ل\"$1\" بشأن $3 في $4. يمكنك تعديل صوتك عن طريق الضغط على إجابة مختلفة من تلك المتوفرة أدناه.",
+	"ajaxpoll-no-vote": "الرجاء التصويت أدناه.",
+	"ajaxpoll-no-vote-results-after-voting": "الرجاء التصويت أدناه. سيتم إظهار النتائج عند إنتهائك من التصويت.",
+	"ajaxpoll-info": "هناك {{PLURAL:$1||تصويتا واحدا|تصويتين|$1 تصويت|$1 تصويتا|$1 تصويت}} منذ بداية التصويت في $2.",
+	"ajaxpoll-submitting": "من فضلك انتظر، يرسل صوتك.",
+	"ajaxpoll-vote-permission": "ليس لك حق التصويت.",
+	"ajaxpoll-view-results-permission": "ليس لديك الصلاحيات اللازمة لعرض نتائج هذا الاستطلاع.",
+	"ajaxpoll-view-results-before-vote-permission": "لا يحق لك عرض نتائج هذا الاستطلاع قبل التصويت.",
+	"ajaxpoll-revoke-vote": "أريد سحب تصويتي",
+	"ajaxpoll-vote-revoked": "تم إلغاء تصويتك بنجاح.",
+	"right-ajaxpoll-vote": "التصويت في الاستطلاعات المستندة إلى AJAX",
+	"right-ajaxpoll-view-results": "عرض النتائج في الاستطلاعات المستندة إلى AJAX",
+	"right-ajaxpoll-view-results-before-vote": "عرض النتائج في الاستطلاعات المستندة إلى AJAX قبل التصويت",
+	"action-ajaxpoll-vote": "التصويت في الاستطلاعات المستندة إلى AJAX",
+	"action-ajaxpoll-view-results": "عرض النتائج في الاستطلاعات المستندة إلى AJAX",
+	"action-ajaxpoll-view-results-before-vote": "عرض النتائج في الاستطلاعات المستندة إلى AJAX قبل التصويت"
+}

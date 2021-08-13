@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Crazymadlover",
+			"Fitoschido",
+			"Macofe",
+			"Tusca"
+		]
+	},
+	"commentbox-desc": "Agrega un cuadro de comentarios a ciertas páginas",
+	"commentbox-intro": "== Agregar un comentario... ==\n¿Tienes un comentario sobre esta página? Agrégalo aquí o <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} edita la página directamente]</span>.",
+	"commentbox-savebutton": "Guardar comentario",
+	"commentbox-name": "Nombre:",
+	"commentbox-name-explanation": "<small>(Consejo: si [[Special:UserLogin|accedes a tu cuenta]] no tendrás que escribir tu nombre manualmente)</small>",
+	"commentbox-log": "Nuevos comentarios",
+	"commentbox-first-comment-heading": "== Comentarios ==",
+	"commentbox-regex": "/\\n==\\s*Comentarios\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Error al crear el comentario",
+	"commentbox-error-page-nonexistent": "¡Esta página no existe!",
+	"commentbox-error-namespace": "¡No se permiten comentarios en este espacio de nombres!",
+	"commentbox-error-empty-comment": "No se permiten comentarios vacíos."
+}

@@ -1,0 +1,1 @@
+ALTER TABLE /*_*/code_authors ADD ca_user int not null;

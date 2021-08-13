@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Shirayuki",
+			"青子守歌"
+		]
+	},
+	"breadcrumbs-desc": "パンくずリストをページに追加する",
+	"prefs-breadcrumbs-separator": "パンくずリストの項目間の区切り",
+	"prefs-breadcrumbs-separator-max": "2 文字まで入力できます。",
+	"prefs-breadcrumbs": "パンくずリスト",
+	"prefs-breadcrumbs-showcrumbs": "パンくずリストを表示",
+	"prefs-breadcrumbs-numberofcrumbs": "パンくずリストの項目数",
+	"prefs-breadcrumbs-numberofcrumbs-max": "パンくずリストの項目数は最大 20 です。",
+	"prefs-breadcrumbs-namespaces": "パンくずリストに名前空間を含める",
+	"prefs-breadcrumbs-filter-duplicates": "繰り返し訪れたページを除外",
+	"prefs-breadcrumbs-preceding-text": "パンくずリストの前に表示する文字列",
+	"prefs-breadcrumbs-preceding-text-max": "30 文字まで入力できます。"
+}

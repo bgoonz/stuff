@@ -1,0 +1,117 @@
+header {
+	background-color: #f5f5f5;
+	margin-bottom: 25px;
+}
+
+.container {
+	max-width: 585px;
+}
+
+header .container {
+	display: flex;
+	align-items: center;
+	/* 585 is the container width set above, and the 85 and 20 are for the logo. */
+	max-width: calc( 585px + ( ( 85px + 20px ) * 2 ) );
+}
+
+header .logo {
+	float: left;
+	margin: 25px 20px 25px 0;
+}
+
+body.rtl header .logo {
+	float: right;
+	margin: 25px 0 25px 20px;
+}
+
+footer {
+	font-size: smaller;
+	border-top: 1px solid #e5e5e5;
+	padding: 25px 0;
+}
+
+footer p {
+	margin: 0;
+	padding: 0;
+}
+
+.back-to-wikisource a {
+	color: inherit;
+	font-weight: bold;
+	line-height: 20px;
+}
+
+.back-to-wikisource img {
+	/* 5px is half of half the line height, in order to center vertically but not around the baseline. */
+	vertical-align: -5px;
+}
+
+.back-to-wikisource a:hover {
+	text-decoration: none;
+}
+
+.back-to-wikisource a:hover span {
+	text-decoration: underline;
+}
+
+h2 {
+	border-bottom: 1px solid #e5e5e5;
+	margin: 25px 0;
+	font-size: 22px;
+}
+
+fieldset legend,
+label {
+	font-size: 14px;
+	font-weight: bold;
+	border: 0;
+	margin: 0;
+}
+
+label {
+	display: block;
+	margin-bottom: 7px;
+}
+
+fieldset.options p {
+	margin: 0;
+	text-indent: -25px;
+	margin-left: 25px;
+}
+
+fieldset.options input {
+	width: 25px;
+	position: relative;
+	top: 2px;
+}
+
+fieldset.options label {
+	font-weight: normal;
+	display: inline;
+}
+
+.submit {
+	margin: 25px 0 50px 0;
+}
+
+div.error {
+	display: flex;
+}
+
+div.error > .icon {
+	flex: 1;
+	font-size: 2em;
+}
+
+div.error > .icon .glyphicon {
+	top: 9px;
+}
+
+div.error > .message {
+	flex: 20;
+	padding-top: 0.4em;
+}
+
+div.error p {
+	margin: 0;
+}

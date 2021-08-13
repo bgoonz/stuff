@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"BukhariSaeed",
+			"Muhammad Shuaib",
+			"Saraiki",
+			"පසිඳු කාවින්ද"
+		]
+	},
+	"antispoof-desc": "گڈمڈ و الجھن پیدا کرنے والے اور ایک جیسی تحریر والے صارف ناموں کی تخلیق پر روک لگاتا ہے۔",
+	"antispoof-conflict-top": "صارف نام «$1» مندرجہ ذیل {{PLURAL:$2|صارف نام|صارف ناموں}} سے کافی مشابہ ہے:",
+	"antispoof-conflict-bottom": "براہ مہربانی دوسرے صارف کا نام منتخب کریں۔",
+	"antispoof-badtype": "ڈیٹا کی غلط قسم",
+	"antispoof-empty": "خالی سطر",
+	"antispoof-prohibited": "بلیک لسٹ علامت $1 پر مشتمل",
+	"antispoof-noletters": "اس ميں کوئی بھی حرف نہیں ہے",
+	"antispoof-mixedscripts": "اس میں ناسازگار مخلوط اسکرپٹ موجود ہیں",
+	"antispoof-ignore": "فریب کاری کی جانچ کو نظر انداز کریں",
+	"right-override-antispoof": "فریب کاری کی جانچ سے تجاوز"
+}

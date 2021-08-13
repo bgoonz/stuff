@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Purodha"
+		]
+	},
+	"adminlinks": "Lengks för Wiki-Köbesse",
+	"adminlinks-desc": "Deiht en [[Special:AdminLinks|{{int:specialpage}}]] en et Wiki met äxtra Lengks för Wikki-Köhbeße.",
+	"adminlinks_documentation": "De Dokkemäntazjuhn vum $1",
+	"adminlinks_general": "Alljemein",
+	"adminlinks_editsidebar": "<code lang=\"en\">sidebar</code> Ändere",
+	"adminlinks_editcss": "\n<i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"Cascading Style Sheet\">CSS</i>-Dattei änndere",
+	"adminlinks_editmainpagename": "Dä Houpsigk iere Nahme ändere",
+	"adminlinks_users": "Metmaacher",
+	"adminlinks_browsesearch": "Bläddere un Söhke",
+	"adminlinks_importexport": "Empoteere un Äxpoteere",
+	"adminlinks_pagenotfound": "Mer kunnte keijn {{int:specialpage}} fenge mem Nahme: $1",
+	"right-adminlinks": "Dä Lengk op de Sigg met [[Special:AdminLinks|Lengks för Köbeße]] jezeijsch krijje"
+}

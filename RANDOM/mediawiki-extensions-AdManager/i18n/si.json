@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Indunil Chamara",
+			"Singhalawap",
+			"පසිඳු කාවින්ද"
+		]
+	},
+	"admanager": "දැන්වීම් කළමනාකරු",
+	"admanagerzones": "දැන්වීම් කළමනාකරුගේ කලාප",
+	"admanager_invalidtargetpage": "\"$1\" ශීර්ෂය සමඟ පිටු කිසිවක් හමු නොවුණි.",
+	"admanager_invalidtargetcategory": "\"$1\" ශීර්ෂය සමඟ ප්‍රවර්ග කිසිවක් හමු නොවුණි.",
+	"admanager_labelPage": "පිටුවේ මාතෘකා",
+	"admanager_labelCategory": "ප්‍රවර්ග නාම",
+	"admanager_submit": "යොමන්න",
+	"admanager_noads": "දැන්වීම් නොපෙන්වන්න",
+	"admanager_Page": "පිටු",
+	"admanager_Category": "ප්‍රවර්ග",
+	"admanager_added": "ඔබ විසින් කරනලද වෙනස්කිරීම් සුරකින ලදී.",
+	"admanager_addedzone": "$1 කලාපය එකතු කලා",
+	"admanager_zonenum": "කලාපය #: $1",
+	"admanager_zonenotnumber": "දෝෂය! $1 යනු අංකයක් නොවේ.",
+	"admanager_return": "[[Special:AdManager|දැන්වීම් කළමනාකරු]] වෙත ආපසු යන්න",
+	"admanager_gotoads": "[[Special:AdManager|දැන්වීම් ස්ථාපනය සංස්කරණය කරන්න]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|දැන්වීම් කලාප සංස්කරණය කරන්න]]",
+	"right-admanager": "[[Special:AdManager|දැන්වීම්කරණ වින්‍යාසගතකිරීම කළමනාකරණය කරන්න]]"
+}

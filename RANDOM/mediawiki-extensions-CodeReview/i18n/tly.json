@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Erdemaslancan",
+			"Patriot Kur"
+		]
+	},
+	"code-comments": "Şərhon",
+	"code-old-status": "Kanə status",
+	"code-field-comments": "Şərhon",
+	"code-status-old": "kanə",
+	"codereview-email-body3": "\"$1\" changed the status of $2 to \"$4\"\nURL: $5\n\nKanə status: $3\nTojə status: $4\n\nCommit summary for $2:\n\n$6",
+	"codereview-email-body4": "\"$1\" changed the status of $2 to \"$4\" and commented it.\nURL: $5\n\nKanə Status: $3\nTojə Status: $4\n\nCommit summary for $2:\n\n$7\n\n$1's comment:\n\n$6"
+}

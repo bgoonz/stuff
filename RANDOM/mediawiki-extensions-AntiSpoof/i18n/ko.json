@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jango",
+			"Klutzy",
+			"Kwj2772",
+			"Revi",
+			"ToePeu",
+			"Ykhwong",
+			"아라"
+		]
+	},
+	"antispoof-desc": "여러 문자 체계를 섞은 이름이나, 혼동될 수 있고 비슷한 이름의 계정 만들기를 차단합니다",
+	"antispoof-conflict-top": "\"$1\" 계정 이름은 다음 {{PLURAL:$2|사용자 이름}}과 너무 비슷합니다:",
+	"antispoof-conflict-bottom": "다른 사용자 이름을 선택하세요.",
+	"antispoof-name-illegal": "\"$1\" 사용자 이름은 사용자 이름의 혼동과 사칭을 방지하기 위해 금지되었습니다: $2.\n다른 사용자 이름을 지정해 주십시오.",
+	"antispoof-badtype": "잘못된 자료형",
+	"antispoof-empty": "빈 문자열",
+	"antispoof-prohibited": "사용이 금지된 $1 문자 포함",
+	"antispoof-combining": "혼합 문자 $1로 시작",
+	"antispoof-unassigned": "코드가 부여되지 않았거나 잘못된 $1 문자를 포함",
+	"antispoof-deprecated": "잘못된 글자 $1이 포함되어 있습니다.",
+	"antispoof-noletters": "어떠한 문자도 포함하고 있지 않습니다",
+	"antispoof-mixedscripts": "여러 문자 체계가 섞여 있습니다.",
+	"antispoof-tooshort": "정규화된 이름이 너무 짧습니다",
+	"antispoof-ignore": "안티스푸프 검사를 무시",
+	"antispoof-ignore-help": "충분한 권한을 가진 사용자가 새 계정이 이미 존재하는 계정과 비슷하더라도 새 계정을 만들 수 있도록 합니다",
+	"action-override-antispoof": "스푸핑 검사를 무시합니다",
+	"right-override-antispoof": "혼란을 줄 수 있는 사용자 이름 금지(안티스푸프)를 무시"
+}

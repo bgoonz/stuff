@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Albertas",
+			"Eitvys200",
+			"Garas",
+			"Homo",
+			"Ignas693",
+			"Manvydasz",
+			"Perkunas"
+		]
+	},
+	"antispoof-desc": "Blokuoja kūrimą paskyrų, turinčių maišyto scenarijaus, klaidinančius ar panašius naudotojų vardus",
+	"antispoof-conflict-top": "Naudotojo vardas \"$1\" yra per daug panašus į {{PLURAL:$2|šį naudotojo vardą|šiuos naudotojo vardus}}:",
+	"antispoof-conflict-bottom": "Prašome pasirinkti kitą vartotojo vardą.",
+	"antispoof-name-illegal": "Vardas \"$1\" neleidžiamas, kad būtų apsisaugota nuo apgaulingų ar parodijuotų naudotojų vardų: $2. Prašome pasirinkti kitą vardą.",
+	"antispoof-badtype": "Blogas duomenų tipas",
+	"antispoof-empty": "Tuščias tekstas",
+	"antispoof-prohibited": "Turi uždraustą simbolį $1",
+	"antispoof-combining": "Prasideda kombinavimo ženklu $1",
+	"antispoof-unassigned": "Yra nepaskirtas simbolis $1",
+	"antispoof-deprecated": "Turi nenaudotiną simbolį $1",
+	"antispoof-noletters": "Nėra nei vienos raidės",
+	"antispoof-mixedscripts": "Turi nepalaikomų įvairių rašmenų",
+	"antispoof-tooshort": "Kanonizuotas vardas per trumpas",
+	"antispoof-ignore": "Nepaisyti „spoofing“ patikrinimų",
+	"antispoof-ignore-help": "Leidžia vartotojams, turintiems pakankamai teisių, sukurti paskyrą, net jei jos vardas yra panašus į kitos paskyros.",
+	"right-override-antispoof": "Nepaisyti „spoofing“ patikrinimų"
+}

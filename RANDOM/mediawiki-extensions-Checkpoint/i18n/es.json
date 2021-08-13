@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Crazymadlover",
+			"Fitoschido",
+			"Locos epraix"
+		]
+	},
+	"checkpoint": "Guardar y continuar editando",
+	"checkpoint-desc": "Permite guardar una edición y seguir editando",
+	"checkpoint-tooltip": "Guardar tu progreso y seguir editando la página",
+	"checkpoint-notice": "([[{{ns:project}}:Checkpoint|guardado como punto de control]])"
+}

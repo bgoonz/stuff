@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"BaRaN6161 TURK",
+			"MuratTheTurkish",
+			"SiLveRLeaD"
+		]
+	},
+	"batchuserrights": "Toplu kullanıcı hakları",
+	"batchuserrights-desc": "Bir eylemde bir veya daha fazla kullanıcının bir gruba veya daha fazla gruba eklenmesine izin verir",
+	"batchuserrights-names": "Bu grubu ekleyen kullanıcı adları (her satıra bir tane):",
+	"batchuserrights-intro": "Bu sayfa, aynı anda birden fazla kullanıcıya grup eklemenize izin verecektir.\nGüvenlik nedenleriyle, eklenebilir grupların listesi uzantı yapılandırmasında ayarlanır ve viki içinden değiştirilemez.\nLütfen başka grupların toplu olarak eklenmesine izin vermek gerekip gerekmediğini sistem hizmetlisine sorun.",
+	"batchuserrights-single-progress-update": "{{PLURAL:$1|Grubu|Grubu}} <strong>$2</strong> kullanıcıya eklendi.",
+	"batchuserrights-add-groups": "{{PLURAL:$1|Bir kullanıcı|$1 kullanıcı}} aşağıdakine {{PLURAL:$2|grup|grup}} ekleyin: <strong>$3</strong>.",
+	"batchuserrights-userload-error": "'''$1''' {{GENDER:$1|kullanıcısı}} yüklenemedi.",
+	"batchuserrights-no-groups": "Hiçbir grup seçmediniz.\nBu hiçbir şeyi başaramaz.\nSayfanın geri kalanının yalnızca kullanıcı adlarından herhangi birinin yüklenip yüklenemediğini kolayca görebilmeniz için yayınlanmasına izin verilecek.",
+	"right-batchuserrights": "Bir gruba bir veya daha fazla kullanıcı veya bir işlemde birden çok gruba ekleyin",
+	"action-batchuserrights": "bir eylemde bir gruba veya birden çok gruba bir veya daha fazla kullanıcı ekleyin"
+}

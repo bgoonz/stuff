@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Macofe",
+			"MarcoAurelio",
+			"Ryo567"
+		]
+	},
+	"apihelp-antispoof-description": "Comprobar un nombre de usuario contra las comprobación de normalización del sistema AntiSpoof",
+	"apihelp-antispoof-summary": "Comprobar un nombre de usuario contra las verificaciones de normalización de AntiSpoof.",
+	"apihelp-antispoof-param-username": "El nombre de usuario a comprobar contra el sistema AntiSpoof.",
+	"apihelp-antispoof-example-1": "Comprobar nombre de usuario \"Foo\" contra el sistema AntiSpoof",
+	"apihelp-createaccount-param-ignoreantispoof": "Ignorar verificación contra la suplantación de identidad (antispoof) (necesita el permiso <code>override-antispoof</code>)."
+}

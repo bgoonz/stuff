@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Elisardojm",
+			"Toliño"
+		]
+	},
+	"auth_remoteuser-desc": "Inicia automaticamente a sesión dos usuarios que utilizan a variable de contorno <code>REMOTE_USER</code>"
+}

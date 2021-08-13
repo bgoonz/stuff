@@ -1,0 +1,20 @@
+( function () {
+	var addBlockForm = require( './blockform.js' ),
+		setupTables = require( './tables.js' ),
+		addCopyFeature = require( './copy.js' );
+
+	if ( $( '.ext-checkuser-investigate-subtitle-block-button' ).length > 0 ) {
+		addBlockForm();
+	}
+
+	setupTables();
+
+	if (
+		$( '.ext-checkuser-investigate-table-compare' ).length > 0 &&
+		mw.config.get( 'wgVisualEditorConfig' ) &&
+		mw.config.get( 'wgVisualEditorConfig' ).fullRestbaseUrl
+	) {
+		addCopyFeature();
+	}
+
+}() );

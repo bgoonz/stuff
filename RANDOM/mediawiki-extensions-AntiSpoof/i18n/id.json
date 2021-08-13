@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"Arifin.wijaya",
+			"Bennylin",
+			"Daud I.F. Argana",
+			"IvanLanin",
+			"Kenrick95",
+			"Meursault2004",
+			"Rachmat04",
+			"Rex"
+		]
+	},
+	"antispoof-desc": "Menghalangi pembuatan akun dengan nama pengguna aksara campuran, membingungkan, dan yang mirip",
+	"antispoof-conflict-top": "Nama pengguna\"$1\" terlalu mirip dengan {{PLURAL:$2|nama pengguna|nama pengguna}} berikut:",
+	"antispoof-conflict-bottom": "Mohon memilih nama pengguna lain.",
+	"antispoof-name-illegal": "Nama pengguna \"$1\" tidak diizinkan untuk mencegah kebingungan atau penipuan nama pengguna: $2. Mohon memilih pilih nama pengguna lain.",
+	"antispoof-badtype": "Tipe data salah",
+	"antispoof-empty": "Data kosong",
+	"antispoof-prohibited": "Mengandung karakter yang tak diizinkan $1",
+	"antispoof-combining": "Dimulai dengan tanda kombinasi $1",
+	"antispoof-unassigned": "Mengandung karakter yang tak diberikan $1",
+	"antispoof-deprecated": "Mengandung karakter yang tak digunakan lagi $1",
+	"antispoof-noletters": "Tidak mengandung huruf apa pun",
+	"antispoof-mixedscripts": "Mengandung huruf campuran yang tak kompatibel",
+	"antispoof-tooshort": "Nama normalisasi terlalu pendek",
+	"antispoof-ignore": "Abaikan pemeriksaan penipuan akun",
+	"antispoof-ignore-help": "Izinkan pengguna dengan hak memadai untuk membuat sebuah akun walaupun namanya mirip dengan akun yang telah ada.",
+	"action-override-antispoof": "mengabaikan pemeriksaan penipuan",
+	"right-override-antispoof": "Mengabaikan pengecekan penipuan nama pengguna"
+}

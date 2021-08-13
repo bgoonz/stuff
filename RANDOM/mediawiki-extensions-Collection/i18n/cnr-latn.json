@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bellatrix10",
+			"Ookuninusi"
+		]
+	},
+	"coll-remove": "Ukloniti",
+	"coll-show": "Prikaži",
+	"coll-move_up": "Premjesti gore",
+	"coll-move_down": "Premjesti dolje",
+	"coll-print_export": "Štampanje/izvoz",
+	"coll-create_a_book": "Kreiraj zbirku",
+	"coll-book_creator": "Alat za stvaranje knjige",
+	"coll-download_as": "Preuzmi kao $1",
+	"coll-disable": "onemogući",
+	"coll-book_creator_disable": "Onemogući kreatora knjige",
+	"coll-add_this_page": "Dodajte ovu stranicu u svoju zbirku",
+	"coll-add_page_tooltip": "Dodaj ovu stranicu u svoju zbirku",
+	"coll-help": "Pomoć",
+	"coll-help_tooltip": "Prikaži pomoć za kreiranje zbirke",
+	"coll-helppage": "Help:Zbirke",
+	"coll-remove_this_page": "Ukloni ovu stranicu iz svoje zbirke",
+	"coll-show_collection": "Prikaži zbirku",
+	"coll-make_suggestions": "Predloži stranice",
+	"coll-make_suggestions_tooltip": "Pokaži prijedloge na osnovu stranica u mojoj knjizi",
+	"coll-attribution-anons": "Anoniman: $1",
+	"coll-image-attribution": "<b>$1</b> <i>Izvor:</i> $2 <i>Licenca:</i> $3 <i>Doprinjeli:</i> $4 <i>Originalni umjetnik:</i> $5"
+}

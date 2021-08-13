@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Умар"
+		]
+	},
+	"commentbox-name": "ЦӀе:",
+	"commentbox-log": "Керла къамелаш",
+	"commentbox-first-comment-heading": "== Къамелаш ==",
+	"commentbox-regex": "/\\n==\\s*Къамелаш\\s*==\\s*\\n/i"
+}

@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aefgh39622"
+		]
+	},
+	"admanager": "ตัวจัดการโฆษณา",
+	"admanagerzones": "โซนของตัวจัดการโฆษณา",
+	"admanager-desc": "จัดเตรียม[[Special:AdManager|หน้าพิเศษ]]ซึ่งอนุญาตให้ผู้ดูแลระบบกำหนดโซนสำหรับหน้าหรือหมวดหมู่ได้",
+	"admanager_docu": "หากต้องการเพิ่มหรือเอาโซนโฆษณาของหน้าหรือทั้งหมวดหมู่ออก ให้เพิ่มหรือเอาชื่อเรื่องของหน้าหรือของหมวดหมู่ออกด้านล่าง",
+	"admanagerzones_docu": "ใส่หมายเลขโซนโฆษณาแต่ละหมายเลขในแต่ละบรรทัด",
+	"admanager_invalidtargetpage": "ไม่พบหน้าชื่อ \"$1\"",
+	"admanager_invalidtargetcategory": "ไม่พบหมวดหมู่ชื่อ \"$1\"",
+	"admanager_notable": "ผิดพลาด! ไม่พบตารางฐานข้อมูลที่ต้องการ! เรียกใช้ update.php ก่อน",
+	"admanager_noAdManagerZones": "ผิดพลาด! คุณต้องเพิ่มโซนโฆษณา ป้อนที่ [[Special:AdManagerZones|โซนของตัวจัดการโฆษณา]]",
+	"admanager_labelPage": "ชื่อหน้า",
+	"admanager_labelCategory": "ชื่อหมวดหมู่",
+	"admanager_submit": "ส่ง",
+	"admanager_noads": "ไม่แสดงโฆษณาใด",
+	"admanager_Page": "หน้า",
+	"admanager_Category": "หมวดหมู่",
+	"admanager_added": "การเปลี่ยนแปลงของคุณได้ถูกบันทึกแล้ว",
+	"admanager_addedzone": "เพิ่มโซน $1 แล้ว",
+	"admanager_removedzone": "เอาโซน $1 ออกแล้ว",
+	"admanager_nozonesadded": "ไม่ได้เพิ่มโซนใด",
+	"admanager_nozonesremoved": "ไม่ได้เอาโซนใดออก",
+	"admanager_zonenum": "โซน #: $1",
+	"admanager_zonenotnumber": "ผิดพลาด! $1 ไม่ใช่ตัวเลข",
+	"admanager_return": "กลับไปยัง [[Special:AdManager|ตัวจัดการโฆษณา]]",
+	"admanager_gotoads": "[[Special:AdManager|แก้ไขตำแหน่งการวางของโฆษณา]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|แก้ไขโซนโฆษณา]]",
+	"right-admanager": "[[Special:AdManager|จัดการการกำหนดค่าการโฆษณา]]"
+}

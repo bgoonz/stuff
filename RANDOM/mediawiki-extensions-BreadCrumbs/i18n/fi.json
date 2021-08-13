@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nike",
+			"Stryn",
+			"VezonThunder"
+		]
+	},
+	"breadcrumbs-desc": "Näyttää wikissä kuljetun reitin.",
+	"prefs-breadcrumbs-separator": "Navigaatioreitin sivujen erotin",
+	"prefs-breadcrumbs-separator-max": "Voidaan syöttää enintään 2 merkkiä.",
+	"prefs-breadcrumbs": "Navigaatioreitti",
+	"prefs-breadcrumbs-showcrumbs": "Näytä navigaatioreitti",
+	"prefs-breadcrumbs-numberofcrumbs": "Navigaatioreitin pituus (sivua)",
+	"prefs-breadcrumbs-numberofcrumbs-max": "Enintään 20 sivun pituinen navigaatioreitti voidaan näyttää.",
+	"prefs-breadcrumbs-namespaces": "Näytä nimiavaruudet navigaatioreitissä",
+	"prefs-breadcrumbs-filter-duplicates": "Älä näytä toistuvasti vierailtuja sivuja",
+	"prefs-breadcrumbs-preceding-text": "Ennen navigaatioreittiä näytettävä teksti",
+	"prefs-breadcrumbs-preceding-text-max": "Voit syöttää enintään 30 merkkiä."
+}

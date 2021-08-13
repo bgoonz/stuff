@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Manuae"
+		]
+	},
+	"antispoof-desc": "Vahinad's Easchdelle vun Benudzakonde mid gmischde Zaische, vawirrende un ähnlische Benudzanoame",
+	"antispoof-conflict-top": "De Noame „$1“ {{PLURAL:$2|ischm oanare Benudzakondo|ischde oanere $2 Benudzakondene}} zu ähnlisch:",
+	"antispoof-conflict-bottom": "Nemm bidde än onere Nome.",
+	"antispoof-name-illegal": "De Noame „$1“ derfma ned nemme wesche: $2\nNemmän onare Noame.",
+	"antispoof-badtype": "Uugildische Aad vun Daade",
+	"antispoof-empty": "Leares Feld",
+	"antispoof-prohibited": "Do hods ä uugildisches Zaische $1.",
+	"antispoof-combining": "S'fongd midm Vabindungszaische $1 oa.",
+	"antispoof-unassigned": "S'hod ned zug'ordnedi Zaische $1",
+	"antispoof-deprecated": "S'hod va'aldedi Zaische $1",
+	"antispoof-noletters": "Do hods kä Buchschdawe",
+	"antispoof-mixedscripts": "Do hods Zaische vun unaschiedlische Schrifde.",
+	"antispoof-tooshort": "De kanonisierde Noame isch zu korz",
+	"antispoof-ignore": "Fälschungsiwabriefung iwageje",
+	"right-override-antispoof": "Fälschungsiwabriefung iwschraiwe"
+}

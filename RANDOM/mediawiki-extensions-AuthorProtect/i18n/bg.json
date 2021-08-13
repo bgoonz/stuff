@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"DCLXVI",
+			"StanProg",
+			"Vlad5250",
+			"Vodnokon4e"
+		]
+	},
+	"authorprotect": "Защита на страницата от неавтори",
+	"authorprotect-desc": "Позволява на автора на страница да я защити от другите потребители",
+	"authorprotect-notauthor": "{{GENDER:$1|Не сте}} {{GENDER:$1|автор}} на тази страница.",
+	"authorprotect-confirm": "Промяна степента на защита",
+	"authorprotect-edit": "Само автори могат да редактират",
+	"authorprotect-move": "Само автори могат да преместват",
+	"authorprotect-intro": "Използвайте този формуляр за да заключите страницата от неавтори",
+	"authorprotect-success": "Защитата е установена!",
+	"protect-level-author": "Защита от неавтори",
+	"restriction-level-author": "Авторска защита",
+	"action-authorprotect": "защита от неавтори",
+	"right-authorprotect": "Защитаване на авторски страници",
+	"action-author": "редактиране на страници защитени от автора",
+	"right-author": "Редактиране на страници, защитени от автора"
+}

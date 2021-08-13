@@ -1,0 +1,117 @@
+{ EventEmitter,
+} = require 'emitters'
+
+_ = require '../util/underscore'
+{ guidFor, generateId, compareIds,
+} = require '../util/guid'
+
+
+
+/**
+ * Propagates class properties and methods from super- to sub- class. Usually
+ * invoked as via the Coco metaprogramming hook `extended` on the class object.
+ * 
+ * @param {Class} SubClass
+ * @param {Class} SuperClass
+ * @returns {Class} The Subclass.
+ */
+extended = exports.extended = (SubClass, SuperClass) ->
+    SubClass.__id__ = guidFor this
+    
+    for own k, v in SuperClass
+        SubClass[k] = v unless SubClass[k]
+    
+    SubClass.__class__      = SubClass
+    SubClass.__super__      = SuperClass::
+    SubClass.__superclass__ = SuperClass
+    
+    SuperClass.trigger? 'extended', SubClass, SuperClass
+    SubClass
+
+
+
+/**
+ * @class Root-class for classes.
+ * @extends EventEmitter
+ */
+class exports.Base extends EventEmitter
+    /**
+     * Function used by `ko.modeledObservable` as the equality comparator.
+     * 
+     * @type Function
+     */
+    @comparator = compareIds
+    
+    
+    /**
+     * Unique identifier for this object. Uniqueness is only guaranteed for this
+     * pageload session; this value is safe to use in circumstances requiring numeric identity
+     * (such as calculating a hashkey for a Map, or for DOM id attributes) but not when
+     * global uniqueness is required.
+     * 
+     * @protected
+     * @type String
+     */
+    __id__ : null
+    
+    
+    /**
+     * A list of method-names to bind on `initialize`; set this on a subclass to override.
+     * @type Array<String>
+     */
+    __bind__ : []
+    
+    
+    /**
+     * Applies the contents of `__bind__`.
+     */
+    __apply_bind__: ->
+        names = _ this .chain().pluckSuperAndSelf '__bind__' .flatten().compact().unique().value()
+        _.bindAll this, ...names if names.length
+    
+    
+    
+    
+    /**
+     * @constructor
+     */
+    ->
+        @__id__ or= guidFor this
+        @__apply_bind__()
+        Class = @constructor
+        Class.trigger? 'new', this, Class
+    
+    
+    
+    /**
+     * The class-object itself is an event emitter, allowing it to publish global
+     * notifications when extended. Note that sub-classes inherit these class-methods.
+     * 
+     * @borrows EventEmitter.prototype
+     */
+    this import EventEmitter::
+    
+    
+    /**
+     * @returns {String} Name of this object's Class.
+     */
+    getClassName: ->
+        with @constructor then "#{ &displayName or &name }"
+    
+    
+    /**
+     * Invoked when Base is extended; copies over all class methods to the Subclass (including this).
+     * @protected
+     * @static
+     */
+    @extended = (SubClass) ->
+        extended SubClass, this
+    
+    
+    # Base is the root of the tree, so fill in its class metadata manually.
+    # NOTE: This should always be after everything else in this file.
+    extended this, EventEmitter
+    
+    
+
+

@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Songhay"
+		]
+	},
+	"coll-remove": "Kaa",
+	"coll-show": "Cebe",
+	"coll-move_up": "Zijandi",
+	"coll-move_down": "Zumandi",
+	"coll-print_export": "Kay/kaataray",
+	"coll-create_a_book": "Citaabu tee",
+	"coll-book_creator": "Citaabu teekaw",
+	"coll-download_as": "Zumandi sanda $1",
+	"coll-disable": "wii",
+	"coll-book_creator_disable": "Citaaku teekaa wii",
+	"coll-book_creator_disable_tooltip": "Fenda goyyan nda citaabu teekaa",
+	"coll-add_this_page": "Moɲoo woo tonton war citaaboo ga",
+	"coll-add_page_tooltip": "Wiki moo dirantaa tonton war citaaboo ga",
+	"coll-help": "Faaba",
+	"coll-help_tooltip": "Faaba cebe citaabu teeyan ga",
+	"coll-helppage": "Help:Citaabey",
+	"coll-n_pages": "$1 {{PLURAL:$1|moo}}",
+	"coll-remove_this_page": "Moɲoo woo kaa war citaaboo ra",
+	"coll-show_collection": "Citaaboo cebe",
+	"coll-show_collection_tooltip": "Naagu ka war citaaboo fasal/zumandi/ceeci",
+	"coll-make_suggestions": "Moɲey honnandi",
+	"coll-make_suggestions_tooltip": "Honnandiyaney cebe war citaaboo moɲey alhaaley bande",
+	"coll-attribution-anons": "Šii nda maa: $1",
+	"coll-article-attribution": "<b>$1</b> <i>Aššil:</i> $2 <i>Kanbuzaakey:</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>Ašsil:</i> $2 <i>Duɲetiira:</i> $3 <i>Kanbuzaakey:</i> $4 <i>Ašsil teekaw:</i> $5"
+}

@@ -1,0 +1,103 @@
+@import 'mediawiki.ui/variables.less';
+
+@media print {
+	html,
+	body,
+	.mw-body,
+	.mw-body-content,
+	#mw-content-text,
+	.cover-page {
+		height: 100%;
+		padding: 0;
+		margin: 0;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		break-after: avoid;
+
+		&[ data-mw-sectionnumber ]:before {
+			content: attr( data-mw-sectionnumber ) ' ';
+		}
+	}
+
+	.cover-page {
+		border-width: 0;
+		display: table;
+		text-align: center;
+		vertical-align: middle;
+		width: 100%;
+
+		& header {
+			vertical-align: middle;
+			display: table-cell;
+
+			& h1,
+			& h2 {
+				border-width: 0;
+				margin: auto 0;
+			}
+		}
+	}
+
+	// FIXME: Is there any reason images, license and contributors cannot be type chapter ?
+	.mw-book-tocitem-type-images,
+	.mw-book-tocitem-type-license,
+	.mw-book-tocitem-type-contributors,
+	.mw-book-tocitem-type-chapter {
+		font-size: 140%;
+	}
+
+	.mw-book-toc {
+		page-break-after: always;
+
+		& li {
+			list-style: none;
+		}
+	}
+
+	.mw-book-tocitem-type-chapter,
+	.mw-book-tocitem-type-article,
+	.mw-book-tocitem-type-section,
+	.mw-book-tocitem-type-contributors,
+	.mw-book-tocitem-type-images,
+	.mw-book-tocitem-type-license {
+		break-inside: avoid;
+
+		a {
+			break-inside: avoid;
+			// overriding the rule from core
+			text-decoration: none !important; /* stylelint-disable-line declaration-no-important */
+
+			&:before {
+				content: attr( data-mw-sectionnumber ) '\00a0'; // nbsp
+			}
+		}
+	}
+
+	// Standard way of adding page numbers. See comment above.
+	//@page :left {
+	//	@bottom-left {
+	//		content: counter(page);
+	//	}
+	//}
+	//@page :right {
+	//	@bottom-right {
+	//		content: counter(page);
+	//	}
+	//}
+
+	.mw-book-chapter {
+		break-before: page;
+	}
+
+	// Hide "Retrieved from..." footer. Books are printed via a one-time URL
+	// so it's not really useful.
+	.printfooter {
+		display: none;
+	}
+}

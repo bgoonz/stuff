@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Borichèt",
+			"Dragonòt",
+			"Macofe"
+		]
+	},
+	"batchuserrights": "Drit ëd j'utent për partìe",
+	"batchuserrights-desc": "A përmët ëd gionté un o pi utent a na partìa o a pi partìe con n'assion sola",
+	"batchuserrights-names": "Stranòm d'utent da gionté a costa partìa (un për linia):",
+	"batchuserrights-intro": "Sta pàgina a-j përmëttrà ëd gionté na partìa a vàire utent ant un colp.\nPër rason ëd sicurëssa, la lista ëd partìe giontàbij a l'é ampostà ant la configurassion ëd l'estension e a peul pa esse cangià d'andrinta a la wiki.\nPër piasì, ch'a ciama a n'aministrator ëd sistema s'a l'ha dabzògn ëd gionté a mucc d'àutre partìe.",
+	"batchuserrights-single-progress-update": "Giontà {{PLURAL:$1|partìa|partìe}} a <strong>$2</strong>.",
+	"batchuserrights-add-groups": "Gionté {{PLURAL:$1|n'utent|$1 utent}} a {{PLURAL:$2|la partìa|le partìe}}  sì-dapress: <strong>$3</strong>.",
+	"batchuserrights-userload-error": "As peul pa carié l'{{GENDER:$1|utent}} '''$1'''.",
+	"batchuserrights-no-groups": "A l'ha sernù gnun-e partìe.\nA sarà fàit gnente.\nËl rest ëd la pàgina a podrà giré mach an manera ch'a vëdda facilment se quaidun djë stranòm d'utent a peulo pa esse carià.",
+	"right-batchuserrights": "Gionté un o pi utent a na partìa o a partìe mùltiple con n'assion sola",
+	"action-batchuserrights": "gionté un o pi utent a na partìa o a partìe mùltiple con n'assion sola"
+}

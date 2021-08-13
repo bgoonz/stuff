@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xqt"
+		]
+	},
+	"commentbox-first-comment-heading": "== Aamaerickinge ==",
+	"commentbox-regex": "/\\n==\\s*Aamaerickinge\\s*==\\s*\\n/i"
+}

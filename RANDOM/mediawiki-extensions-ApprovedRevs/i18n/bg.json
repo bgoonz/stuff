@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"DCLXVI",
+			"StanProg",
+			"Vlad5250",
+			"පසිඳු කාවින්ද"
+		]
+	},
+	"approvedrevs-logname": "Дневник на одобрени версии",
+	"approvedrevs-logdesc": "Това е дневникът на одобрени версии.",
+	"approvedrevs-approve": "одобряване",
+	"approvedrevs-approver": "Тази версия е одобрена от $1.",
+	"approvedrevs-unapprove": "отмяна на одобряване",
+	"approvedrevs-approvesuccess": "Тази версия на страницата е отбелязана като одобрена.",
+	"approvedrevs": "Одобрени редакции",
+	"approvedrevs-approvedpages": "Всички страници с одобрена версия",
+	"approvedrevs-unapprovedpages": "Неодобрени страници",
+	"approvedrevs-invalidpages": "Страници с невалидни одобрявания",
+	"approvedrevs-view": "Преглед на списък на:",
+	"approvedrevs-revisionnumber": "версия $1",
+	"approvedrevs-uploaddate": "качване от $1",
+	"approvedrevs-difffromlatest": "разл. от последната",
+	"approvedrevs-approvelatest": "одобряване на най-новата",
+	"approvedrevs-approvethisrev": "Одобряване на версията.",
+	"approvedrevs-viewlatestrev": "Преглед на най-новата версия.",
+	"approvedrevs-approvedrevision": "Одобрена редакция",
+	"approvedrevs-invalidfiles": "Файлове с невалидни одобрявания",
+	"approvedrevs-approvedfiles": "Всички файлове с одобрена версия",
+	"approvedrevs-unapprovedfiles": "Неодобрени файлове",
+	"approvedrevs-approvedfile": "Одобрен файл",
+	"approvedrevs-latestfile": "Най-нов файл",
+	"apihelp-approve-param-unapprove": "Ако е зададено, редакцията ще бъде неодобрена вместо одобрена.",
+	"apihelp-approve-example-1": "Одобряване на редакцията 12345"
+}

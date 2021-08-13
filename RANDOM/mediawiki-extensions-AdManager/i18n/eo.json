@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"Blahma",
+			"Mirin",
+			"Yekrats"
+		]
+	},
+	"admanager": "Reklammastrumilo",
+	"admanagerzones": "Reklammastrumilaj zonoj",
+	"admanager-desc": "Provizas [[Special:AdManager|spacialan paĝon]] per kiu administranto povas agordi la zonon por paĝoj aŭ kategorioj",
+	"admanager_docu": "Por aldoni aŭ forigi la reklamzonon de paĝo aŭ tuta kategorio, aldonu aŭ forigu sube titolon de la paĝo aŭ kategorio.",
+	"admanagerzones_docu": "Enskribu ĉiun reklamzonan numeron sur apartan linion.",
+	"admanager_invalidtargetpage": "Neniu paĝo trovita laŭ titolo \"$1\".",
+	"admanager_invalidtargetcategory": "Neniu kategorio trovita laŭ titolo \"$1\".",
+	"admanager_notable": "Eraro! Necesa datumbaza tabelo ne trovita! Unue rulu update.php.",
+	"admanager_noAdManagerZones": "Eraro! Vi devas aldoni iun reklamzonon. Faru tion en la paĝo pri [[Special:AdManagerZones|reklammastrumilaj zonoj]].",
+	"admanager_labelPage": "Titoloj de paĝoj",
+	"admanager_labelCategory": "Nomoj de kategorioj",
+	"admanager_submit": "Submeti",
+	"admanager_noads": "Montri neniujn reklamojn",
+	"admanager_Page": "Paĝoj",
+	"admanager_Category": "Kategorioj",
+	"admanager_added": "Viaj ŝanĝoj konserviĝis",
+	"admanager_addedzone": "Aldonis zonon $1.",
+	"admanager_removedzone": "Forigis zonon $1.",
+	"admanager_nozonesadded": "Aldonis neniun zonon.",
+	"admanager_nozonesremoved": "Forigis neniun zonon.",
+	"admanager_zonenum": "Zono n-ro $1",
+	"admanager_zonenotnumber": "Eraro! $1 ne estas numero.",
+	"admanager_return": "Reveni al [[Special:AdManager|reklammastrumilo]]",
+	"admanager_gotoads": "[[Special:AdManager|Redakti aperon de reklamo]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Redakti reklamajn zonojn]]",
+	"action-admanager": "mastrumi agordadon de reklamoj",
+	"right-admanager": "[[Special:AdManager|Mastrumi la agordon de reklamado]]"
+}

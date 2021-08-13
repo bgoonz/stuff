@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fúlvio",
+			"Giro720",
+			"Hamilton Abreu",
+			"Luckas",
+			"Malafaya",
+			"Vitorvicentevalente",
+			555
+		]
+	},
+	"authorprotect": "Proteger a página de edições por utilizadores que não são autores",
+	"authorprotect-desc": "Permite ao autor de uma página protegê-la de outros utilizadores",
+	"authorprotect-notauthor": "Não é {{GENDER:$1|o autor|a autora}} desta página.",
+	"authorprotect-confirm": "Alterar níveis de proteção",
+	"authorprotect-edit": "Restringir edição a autores",
+	"authorprotect-move": "Restringir a movimentação da página a autores",
+	"authorprotect-intro": "Use este formulário para bloquear a página contra edições por utilizadores que não são autores",
+	"authorprotect-success": "Proteção definida!",
+	"protect-level-author": "Proteger de edições por utilizadores que não são autores",
+	"restriction-level-author": "Protegida pelo autor",
+	"action-authorprotect": "proteger contra não autores",
+	"right-authorprotect": "Proteger páginas com autor",
+	"action-author": "editar páginas protegidas pelo autor",
+	"right-author": "Editar páginas protegidas pelo autor"
+}

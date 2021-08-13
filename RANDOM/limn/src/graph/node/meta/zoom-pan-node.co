@@ -1,0 +1,93 @@
+_  = require 'underscore'
+ko = require 'knockout'
+d3 = require 'd3'
+
+{ GraphNodeData,
+} = require '../graph-node-data'
+{ GraphNode,
+} = require '../graph-node'
+
+Trait = require '../graph-node-trait'
+
+
+
+/**
+ * @class
+ * @extends GraphNodeData
+ */
+export class ZoomPanNodeData extends GraphNodeData
+    @registerType 'zoom-pan'
+    
+    defaults: ->
+        options :
+            zoom :
+                min : 1
+                max : 10
+    
+    attributeTypes: -> {}
+    
+    -> super ...
+
+
+
+/**
+ * @class
+ * @extends GraphNode
+ */
+export class ZoomPanNode extends GraphNode
+    __bind__ : <[ onZoom ]>
+    @registerType 'zoom-pan'
+    traits : [
+        Trait.VIS_NODE
+        Trait.SVG
+        Trait.LEAF
+        Trait.BG_LAYER
+    ]
+    tagName : 'svg:rect'
+    
+    -> super ...
+    
+    
+    buildElement: ->
+        el = super ...
+        @sel
+            .attr { width:'100%', height:'100%' }
+            .style 'fill-opacity', 0
+        el
+    
+    
+    render: ->
+        viewport = @viewport()
+        return unless xZoomScale = viewport.xZoomScale()
+        return unless yZoomScale = viewport.yZoomScale()
+        return unless frame      = viewport.contentFrameEl()
+        return unless options    = @model().options()
+        
+        @behavior ?= d3.behavior.zoom().on 'zoom', @onZoom
+        @behavior
+            .x xZoomScale
+            .y yZoomScale
+            .scaleExtent [ options.get('zoom.min'), options.get('zoom.max') ]
+        frame.call @behavior
+    
+    
+    onZoom: ->
+        b        = @behavior
+        viewport = @viewport()
+        return unless viewport.contentViewportEl()
+        return unless options = @model().options()
+        minZoom  = options.get('zoom.min')
+        maxZoom  = options.get('zoom.max')
+        scale    = b.scale()
+        
+        if scale > maxZoom
+            b.scale maxZoom
+        
+        # special case, if they zoom all the way out, bring them back to normal
+        if scale <= minZoom
+            b.scale minZoom
+            b.translate [0,0]
+        
+        viewport.zoom b.scale(), b.translate()
+    
+    

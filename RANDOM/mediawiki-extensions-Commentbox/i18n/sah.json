@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"HalanTul"
+		]
+	},
+	"commentbox-savebutton": "Быһаарыыны бигэргэтэргэ",
+	"commentbox-name": "Аата:",
+	"commentbox-first-comment-heading": "== Быһаарыылар ==",
+	"commentbox-regex": "/\\n==\\s*Быһаарыылар\\s*==\\s*\\n/i"
+}

@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Avjoska",
+			"Pikne"
+		]
+	},
+	"commentbox-savebutton": "Salvesta kommentaar",
+	"commentbox-name": "Nimi:",
+	"commentbox-log": "Uued kommentaarid",
+	"commentbox-first-comment-heading": "== Kommentaarid ==",
+	"commentbox-error-page-nonexistent": "Seda lehekülge ei ole!",
+	"commentbox-error-namespace": "Siin nimeruumis ei ole kommentaarid lubatud.",
+	"commentbox-error-empty-comment": "Tühikommentaarid pole lubatud!"
+}

@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Assele",
+			"Sagan"
+		]
+	},
+	"authorprotect": "Битте автор булмаған ҡатнашыусыларҙан һаҡлау",
+	"authorprotect-desc": "Биттең авторына уны башҡа ҡатнашыусылар үҙгәртеүенән һаҡларға мөмкинлек бирә",
+	"authorprotect-notauthor": "Һеҙ был биттең авторы түгел",
+	"authorprotect-confirm": "Һаҡлау дәрәжәләрен үҙгәртергә",
+	"authorprotect-edit": "Авторҙар ғына үҙгәртә ала",
+	"authorprotect-move": "Авторҙар ғына исемен үҙгәртә ала",
+	"authorprotect-intro": "Был форманы битте автор булмаған ҡатнашыусыларҙан һаҡлар өсөн ҡулланығыҙ.",
+	"authorprotect-success": "Уңышлы һаҡланды!",
+	"protect-level-author": "Автор булмаған ҡатнашыусыларҙан һаҡлау",
+	"restriction-level-author": "Автор тарафынан һаҡланған",
+	"right-authorprotect": "Автор биттәрен һаҡлау",
+	"right-author": "Автор һаҡлаған биттәрҙе үҙгәртеү"
+}

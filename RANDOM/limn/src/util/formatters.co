@@ -1,0 +1,66 @@
+moment = require 'moment'
+_ = require './underscore'
+
+
+_fmt =
+    
+    /**
+     * @param {String} pattern Date formatting pattern.
+     * @returns {Function} Function that formats a date into the supplied pattern.
+     */
+    dateFormatterFor: (pattern) ->
+        -> moment(it).format(pattern)
+    
+    
+    /**
+     * Formats a number for display, first dividing by the greatest suffix
+     *  of {B = Billions, M = Millions, K = Thousands} that results in a
+     *  absolute value greater than 0, and then rounding to `digits` using
+     *  `result.toFixed(digits)`.
+     * 
+     * @param {Number} n Number to format.
+     * @param {Number} [digits=2] Number of digits after the decimal to always display.
+     * @param {Boolean} [abbrev=true] Expand number suffixes if false.
+     * @returns {Object} Formatted number parts.
+     */
+    numberFormatter: (n, digits=2, abbrev=true) ->
+        suffixes = do
+            if abbrev
+                [['B', 1000000000], ['M', 1000000], ['K', 1000], ['', NaN]]
+            else
+                [['Billion', 1000000000], ['Million', 1000000], ['', NaN]]
+        
+        for [suffix, d] of suffixes
+            break if isNaN d
+            if n >= d
+                n = n / d
+                break
+        s = n.toFixed(digits)
+        parts = s.split '.'
+        whole = _.rchop parts[0], 3 .join ','
+        fraction = parts[1]
+        { n, digits, whole, fraction, suffix, toString: ->
+            fractionString = if @fraction and parseInt(@fraction) is not 0 then ".#{@fraction}" else ''
+            "#{@whole}#{fractionString}#{if abbrev then '' else ' '}#{@suffix}"
+        }
+    
+    
+    numberFormatterHTML: (n, digits=2, addWrapper=true) ->
+        { whole, fraction, suffix } = @numberFormatter n, digits
+        value  = "<span class='whole'>#whole</span>"
+        value += ".<span class='fraction'>#fraction</span>"     if fraction
+        value += "<span class='suffix'>#suffix</span>"
+        value  = "<span class='value'>#value</span>"            if addWrapper
+        value
+    
+    
+    numberFormatterFor: (digits, abbrev) ->
+        ~> @numberFormatter it, digits, abbrev
+    
+    
+    numberFormatterHTMLFor: (digits, abbrev, addWrapper) ->
+        ~> @numberFormatterHTML it, digits, abbrev, addWrapper
+    
+
+
+module.exports = exports = _fmt

@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lejonel",
+			"M.M.S.",
+			"Najami",
+			"Sertion",
+			"Sturban",
+			"WikiPhoenix"
+		]
+	},
+	"authorprotect": "Skydda sidan från andra än författaren",
+	"authorprotect-desc": "Låter författaren av en sida skydda den från andra användare",
+	"authorprotect-notauthor": "{{GENDER:$1|Du}} är inte {{GENDER:$1|författaren}} av denna sida.",
+	"authorprotect-confirm": "Ändra beskyddningsnivåer",
+	"authorprotect-edit": "Låt endast författaren redigera sidan",
+	"authorprotect-move": "Låt endast författaren flytta sidan",
+	"authorprotect-intro": "Använd detta formulär för att låsa sidan för andra än författaren",
+	"authorprotect-success": "Skyddad!",
+	"protect-level-author": "Skydda från andra än författaren",
+	"restriction-level-author": "författarskyddad",
+	"action-authorprotect": "skydda mot icke-författare",
+	"right-authorprotect": "Skydda författade sidor",
+	"action-author": "redigera författarskyddade sidor",
+	"right-author": "Redigera författarlåsta sidor"
+}

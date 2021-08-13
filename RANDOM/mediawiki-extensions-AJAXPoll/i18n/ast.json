@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie",
+			"Xuacu"
+		]
+	},
+	"apihelp-pollsubmitvote-description": "Módulu de la API de AJAXPoll",
+	"apihelp-pollsubmitvote-summary": "Módulu de la API de AJAXPoll",
+	"apihelp-pollsubmitvote-param-poll": "ID de la encuesta, como 832A5FA2C2583A5732B90CEFF658FE25; los ID fórmense col hash de la entrada (entruga + opciones de respuesta, i.e. el testu ente les etiquetes <code>&lt;poll&gt;...&lt;/poll&gt;</code>) col algoritmu de hash MD5 y convirtiendo'l resultáu a MAYÚSCULES cola función <code>strtoupper</code> de PHP",
+	"apihelp-pollsubmitvote-param-answer": "Númberu identificador d'opción de respuesta; usa 0 p'anular un votu emitíu anteriormente",
+	"apihelp-pollsubmitvote-example-1": "Unviar la tercer (3) respuesta a la encuesta que tien la ID 832A5FA2C2583A5732B90CEFF658FE25",
+	"ajaxpoll-desc": "Permite les encuestes basaes n'AJAX con <code>&lt;poll&gt;</code>",
+	"ajaxpoll-tracking-category": "Páxines con una encuesta",
+	"ajaxpoll-tracking-category-desc": "La páxina tien una (<code>&lt;encuesta&gt;</code>).",
+	"ajaxpoll-vote-update": "El to votu s'anovó.",
+	"ajaxpoll-vote-add": "Amestóse'l to votu.",
+	"ajaxpoll-vote-error": "Hebo un problema al procesar el to votu; tentalo otra vuelta, por favor.",
+	"ajaxpoll-percent-votes": "$1% de tolos votos",
+	"ajaxpoll-your-vote": "Ya votasti por «$1» el $3 a les $4. Pues cambiar el votu faciendo clic nuna rempuesta distinta más abaxo.",
+	"ajaxpoll-no-vote": "Por favor, vota abaxo.",
+	"ajaxpoll-no-vote-results-after-voting": "Por favor, vote más abaxo. Los resultaos apaecerán cuando vote.",
+	"ajaxpoll-info": "Hebo {{PLURAL:$1|un votu|$1 votos}} dende que se creó la encuesta el $2.",
+	"ajaxpoll-submitting": "Aguarda, por favor, ta unviandose'l to votu.",
+	"ajaxpoll-vote-permission": "Nun tienes drechu al votu.",
+	"ajaxpoll-readonly": "Nun pue votase nesta encuesta, la base de datos ta bloquiada pol siguiente motivu: $1.",
+	"ajaxpoll-view-results-permission": "Nun tien permisu pa ver los resultaos d'esta encuesta.",
+	"ajaxpoll-view-results-before-vote-permission": "Nun tien permisu pa ver los resultaos d'esta encuesta antes de votar.",
+	"ajaxpoll-revoke-vote": "Quiero anular el mio votu",
+	"ajaxpoll-vote-revoked": "El to votu s'anuló.",
+	"right-ajaxpoll-vote": "Puede votar nes encuestes basaes n'AJAX",
+	"right-ajaxpoll-view-results": "Pue ver los resultaos de les encuestes basaes n'AJAX",
+	"right-ajaxpoll-view-results-before-vote": "Pue ver los resultaos de les encuestes basaes n'AJAX enantes de votar",
+	"action-ajaxpoll-vote": "votar nes encuestes basaes n'AJAX",
+	"action-ajaxpoll-view-results": "ver los resultaos de les encuestes basaes n'AJAX",
+	"action-ajaxpoll-view-results-before-vote": "ver los resultaos de les encuestes basaes n'AJAX enantes de votar"
+}

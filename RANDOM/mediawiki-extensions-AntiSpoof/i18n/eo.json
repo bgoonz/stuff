@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"KuboF",
+			"Mirin",
+			"Robin van der Vliet",
+			"Tlustulimu",
+			"Yekrats"
+		]
+	},
+	"antispoof-desc": "Blokas la kreadon de kontoj kun miksitaj alfabetaj, konfuzemaj, kaj similaj uzantnomoj",
+	"antispoof-conflict-top": "La uzantnomo \"$1\" tro similas al la {{PLURAL:$2|jenan konton|jenajn $2 kontojn}}:",
+	"antispoof-conflict-bottom": "Bonvolu elekti alian uzantnomon.",
+	"antispoof-name-illegal": "La uzantnomo \"$1\" ne estas permesita por preventi konfuzigemajn aŭ trompajn uzantnomojn: $2. Bonvolu elekti alian uzantnomon.",
+	"antispoof-badtype": "Nevalida datumtipo",
+	"antispoof-empty": "Malplena bitĉeno",
+	"antispoof-prohibited": "Enhavas malpermesitan literon $1",
+	"antispoof-combining": "Komencas kun kuniga marko $1",
+	"antispoof-unassigned": "Enhavas neatribuitan signon $1",
+	"antispoof-deprecated": "Enhavas evitindan signon $1",
+	"antispoof-noletters": "Enhavas neniujn literojn",
+	"antispoof-mixedscripts": "Enhavas nekompatibilajn miksajn skriptojn",
+	"antispoof-tooshort": "Personecigita nomo estas tro mallonga",
+	"antispoof-ignore": "Ignori kontroladon de trompado",
+	"antispoof-ignore-help": "Permesi uzanton kun sufiĉo da rajtoj krei konton, kies nomo similas la nomon de alia konto.",
+	"action-override-antispoof": "ignori kontroladon de trompado",
+	"right-override-antispoof": "Superebligi la artifikajn kontrolojn."
+}

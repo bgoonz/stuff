@@ -1,0 +1,27 @@
+ko = require 'knockout'
+
+{ _, Query, ParsingMixin,
+} = require '../../util'
+{ DataSource,
+} = require '../datasource'
+{ Metric,
+} = require './metric'
+
+
+
+/**
+ * @class 
+ */
+class exports.GeoFeatureMetric extends Metric
+    -> super ...
+    
+    defaults : ->
+        xColumn: 'id' # In place of x at col 0, feature data is required to provide an `id` property in every row.
+    
+    /**
+     * Reindexes the tabular data by row ID.
+     */
+    dataById: @computed ->
+        return unless (data = @data())?
+        _.generate data
+    

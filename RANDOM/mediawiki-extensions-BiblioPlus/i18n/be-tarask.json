@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Red Winged Duck"
+		]
+	},
+	"biblioplus-desc": "Аўтаматычна здабывае цытаты з PubMed і базы зьвестак ISBN",
+	"biblioplus-doi-tooltip": "Праглядзець або набыць артыкул у выдаўца",
+	"biblioplus-pmid-tooltip": "Праглядзець або набыць артыкул у выдаўца (калі даступны)",
+	"biblioplus-isbn-tooltip": "Зьвесткі пра кнігу на isbndb.org",
+	"biblioplus-medline-abstracts": "Усе тэзісы з Medline:",
+	"biblioplus-pubmed-abstracts": "Усе тэзісы ў PubMed",
+	"biblioplus-hubmed-abstracts": "Усе тэзісы ў HubMed",
+	"biblioplus-vkey-title": "спасылка на бібліяграфічную базу зьвестак"
+}

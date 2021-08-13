@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"BeginaFelicysym",
+			"Chrumps"
+		]
+	},
+	"categorysortheaders-desc": "Pozwala określić niestandardowe wieloznakowe sortowanie nagłówków „według pierwszego znaku” do listowania stron w kategoriach, przy użyciu składni w stylu <nowiki>[[category:Foo|^Nagłówek^Niewidoczna część klucza sortowania]]</nowiki>"
+}

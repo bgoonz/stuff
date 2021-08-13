@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"Arystanbek",
+			"BaRaN6161 TURK",
+			"By erdo can",
+			"Hedda",
+			"Incelemeelemani",
+			"Joseph",
+			"SaldırganSincap",
+			"Srhat"
+		]
+	},
+	"antispoof-desc": "Karışık-betikli, kafa karıştırıcı ve benzer kullanıcı adlarıyla hesap oluşturulmasını engeller",
+	"antispoof-conflict-top": "\"$1\" kullanıcı adı, şu {{PLURAL:$2|kullanıcı adına|kullanıcı adlarına}} çok benziyor:",
+	"antispoof-conflict-bottom": "Lütfen başka bir kullanıcı adı seçin.",
+	"antispoof-name-illegal": "$2 hesabıyla karışmaması için \"$1\" kullanıcı adına izin verilmemektedir. Lütfen başka bir kullanıcı adı seçiniz.",
+	"antispoof-badtype": "Bozuk veri türü",
+	"antispoof-empty": "Boş dizi",
+	"antispoof-prohibited": "$1 yasaklı karakter içeriyor",
+	"antispoof-combining": "$1 kaynaştırma işaretiyle başlıyor",
+	"antispoof-unassigned": "$1 atanmamış ya da onaylanmamış karakter içeriyor",
+	"antispoof-deprecated": "$1 eski karakterini içeriyor",
+	"antispoof-noletters": "Hiç harf içermez",
+	"antispoof-mixedscripts": "Uyumsuz karışık betikler içeriyor",
+	"antispoof-tooshort": "Normalleştirilmiş ad çok kısa",
+	"antispoof-ignore": "Kimlik sahtekarlığı denetimlerini yoksay",
+	"antispoof-ignore-help": "Adı, mevcut bir hesabınkine benzese bile bir hesap oluşturmak için yeterli ayrıcalıklara sahip olan kullanıcılara izin verir.",
+	"action-override-antispoof": "aldatıcı kontrolleri gerçersiz kıl",
+	"right-override-antispoof": "Aldatıcı kontrolleri gerçersiz kıl"
+}

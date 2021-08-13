@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Giromin Cangiaxo"
+		]
+	},
+	"commentbox-desc": "O l'azonze 'na casella de commenti a çerte paggine",
+	"commentbox-intro": "== Azonzi un comento ... ==\nTi g'hæ 'n comento a sta paggina? Azonzilo chì ò <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} modiffica direttamente a paggina]</span>.",
+	"commentbox-savebutton": "Sarva o commento",
+	"commentbox-name": "Nomme:",
+	"commentbox-name-explanation": "<small>(Suggerimento: Se ti [[Special:UserLogin|intri]], no ti g'hæ da insei o to nomme chì manoalmente)</small>",
+	"commentbox-log": "Noeuvi comenti",
+	"commentbox-first-comment-heading": "== Commenti ==",
+	"commentbox-regex": "/\\n==\\s*Commenti\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Errô inta creaçion do commento",
+	"commentbox-error-page-nonexistent": "Questa paggina a no l'existe!",
+	"commentbox-error-namespace": "I commenti no son amissi inte sto namespace!",
+	"commentbox-error-empty-comment": "I commenti voeui no son amissi!"
+}

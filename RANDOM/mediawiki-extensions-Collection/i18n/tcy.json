@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"BHARATHESHA ALASANDEMAJALU",
+			"Bharathesha Alasandemajalu",
+			"Kiranpoojary",
+			"VASANTH S.N.",
+			"Vishwanatha Badikana",
+			"రహ్మానుద్దీన్"
+		]
+	},
+	"coll-remove": "ದೆಪ್ಪುಲೆ",
+	"coll-show": "ತೋಜಾವು",
+	"coll-move_up": "ಮಿತ್ತ್ ಪೋಲೆ",
+	"coll-move_down": "ತಿರ್ತ್ ಬಲೆ",
+	"coll-print_export": "ಮುದ್ರಿಸಾಲೆ/ಪಿದಯಿ ಕಡಪುಡುಲೆ",
+	"coll-create_a_book": "ಬೂಕುನು ಉಂಡುಮಲ್ಪುಲೆ",
+	"coll-book_creator": "ಬೂಕು ಉಂಡುಮಲ್ತಿನಾರ್",
+	"coll-download_as": "$1 ಫಾರ್ಮ್ಯಾಟ್‌ಡ್ ಡೌನ್‌ಲೋಡ್ ಮಲ್ಪುಲೆ",
+	"coll-disable": "ನಿಷ್ಕ್ರಿಯ ಮಲ್ಪುಲೆ",
+	"coll-book_creator_disable": "ಬೂಕು ಸ್ರಿಸ್ಟಿಕಾರೆನ್ ನಿಷ್ಕ್ರಿಯ ಮಲ್ಪುಲೆ",
+	"coll-book_creator_disable_tooltip": "ಬೂಕು ಸ್ರಿಸ್ಟಿಕಾರೆನ್ ಗಲಸುನೇನ್ ಉಂತಾಲೆ",
+	"coll-add_this_page": "ಈ ಪುಟೊನು ಈರೆನ ಪುಸ್ತಕೊಗು ಸೇರಲೆ",
+	"coll-add_page_tooltip": "ಈರೆನ ಬೂಕುಗು ಇತ್ತೆದ ವಿಕಿ ಪುಟೊನು ಸೇರಾಲೆ",
+	"coll-help": "ಸಹಾಯೊ",
+	"coll-help_tooltip": "ಈ ಬೂಕುಲೆನ್ ಉಂಡುಮಲ್ಪೆರೆ ಸಹಾಯ ತೋಜಾಲೆ",
+	"coll-helppage": "Help:ಬೂಕುಲು",
+	"coll-n_pages": "$1 {{PLURAL:$1|ಪುಟೊ|ಪುಟೊಕುಲು}}",
+	"coll-remove_this_page": "ಈರೆನ ಬೂಕುಡ್ ಈ ಪುಟೊನು ದೆಪ್ಪುಲೆ",
+	"coll-show_collection": "ಬೂಕುನು ತೋಜಾಲೆ",
+	"coll-show_collection_tooltip": "ಇರೆನ ಬೂಕುನು ಸಂಪೊಲಿಪೆರೆ/ಡೌನ್‍ಲೋಡ್ ಮಲ್ಪೆರೆ/ಆರ್ಡರ್ ಮಲ್ಪೆರೆ ಒತ್ತುಲೆ",
+	"coll-make_suggestions": "ಪುಟೊಕ್ಲೆನ್ ಸಲಹೆ ಮಲ್ಪು",
+	"coll-make_suggestions_tooltip": "ಇರೆನ ಬೂಕುದ ಪುಟೊಕ್ಲೆನ ಆದಾರೊಡು ಸಲಹೆಲೆನ್ ಕೊರ್ಲೆ",
+	"coll-attribution-anons": "ಪುದರ್ ದಾಂತಿನ: $1",
+	"coll-article-attribution": "<b>$1</b> <i>ಮೂಲ:</i> $2 <i>ಸಹಾಯೊ ಮಲ್ತಿನಕುಲು:</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>ಮೂಲೊ:</i> $2 <i>ಲೈಸನ್ಸ್:</i> $3 <i>ದಾನಿಲು:</i> $4 <i>ಮೂಲೊ ಕಲಾವಿದೆರ್:</i> $5"
+}

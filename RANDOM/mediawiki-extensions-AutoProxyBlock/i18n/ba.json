@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Assele",
+			"Sagan"
+		]
+	},
+	"autoproxyblock-desc": "Викила асыҡ проксинан ғәмәл эшләүҙе тыя",
+	"proxy-blocked": "{{GENDER:|Һеҙҙеү}} IP-адрес  прокси итсемлегендә, ғәмәл үтәлмәне.",
+	"abusefilter-edit-builder-vars-is-proxy": "Ғәләм прокси аша үтәлгән булһа, хәҡиҡәт.",
+	"tag-proxy": "прокси аша эшләнде",
+	"right-proxyunbannable": "Прокси серверҙарҙы авто-бикләүҙе урап үтеү",
+	"right-notagproxychanges": "прокси аша эшләнгән төҙәтеүҙәр тамға менән билдәләнмәй",
+	"right-autoproxyblock-log": "прокси аша эшләнгән бикләү журналын ҡарау",
+	"proxyblock-log-name": "Автоматик рәүештә прокси бикләү журналы",
+	"proxyblock-log-header": "прокси аша эшләнгән бикләү журналында исемлек",
+	"proxyblock-logentry-blocked": " «$2» ғәмәлен {{GENDER:$3|ҡатнашыусы}} $3  [[$1]] битендә автоматик рәүештә бикләне."
+}

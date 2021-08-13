@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Abdullahi"
+		]
+	},
+	"coll-remove": "ka saar",
+	"coll-show": "Muuji",
+	"coll-move_up": "Kor u soco",
+	"coll-move_down": "Hoos u soco",
+	"coll-print_export": "Daabac/dhoofin",
+	"coll-create_a_book": "sameey buug",
+	"coll-download_as": "Soo dejiso sida $1",
+	"coll-helppage": "Help:Buug",
+	"coll-n_pages": "$1 {{PLURAL:$1|bog|bogag}}",
+	"coll-remove_this_page": "Boggaan ka saar book kaaga",
+	"coll-image-attribution": "<b>$1</b> <i>Xigasho</i> $2 <i>Laysinka:</i> $3 <i>Wax ku darsayaasha:</i> $4 <i>Farshaxakii asalka ahaa:</i> $5"
+}

@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"01miki10",
+			"Jaakonam",
+			"Nike",
+			"Olli",
+			"Pyscowicz",
+			"Str4nd",
+			"VezonThunder",
+			"Vililikku"
+		]
+	},
+	"authorprotect": "Suojaa sivu muilta kuin tekijöiltä",
+	"authorprotect-desc": "Mahdollistaa sivun tekijän suojata se muilta käyttäjiltä.",
+	"authorprotect-notauthor": "{{GENDER:$1|Et}} ole tämän sivun {{GENDER:$1|luoja}}.",
+	"authorprotect-confirm": "Vaihda suojauksen tasoa",
+	"authorprotect-edit": "Rajoita muokkaus tekijöille",
+	"authorprotect-move": "Rajoita siirtäminen tekijöille",
+	"authorprotect-intro": "Käytä tätä lomaketta lukitaksesi sivun niiltä, jotka eivät ole tekijöitä",
+	"authorprotect-success": "Suojaus asetettu!",
+	"protect-level-author": "Suojaa muilta kuin tekijöiltä",
+	"restriction-level-author": "Tekijä-suojattu",
+	"action-authorprotect": "suojata sivua muilta kuin tekijöiltä",
+	"right-authorprotect": "Tekijäsivujen suojaus",
+	"action-author": "muokata tekijän suojaamia sivuja",
+	"right-author": "Muokata tekijän suojaamia sivuja"
+}

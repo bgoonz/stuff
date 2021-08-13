@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Marinari"
+		]
+	},
+	"absenteelandlord-reason": "Regjistri është bllokuar automatikisht për shkak të pasivitetit nga administratorët.",
+	"absenteelandlord-desc": "Auto-Bllokon wiki regjistrin nëse të gjithë operatorët e sistemit janë jo-aktiv për një kohë"
+}

@@ -1,0 +1,17 @@
+{
+	"name": "codereview",
+	"version": "0.0.0",
+	"private": true,
+	"description": "Build tools for the CodeReview extension.",
+	"scripts": {
+		"test": "grunt test"
+	},
+	"devDependencies": {
+		"eslint-config-wikimedia": "0.20.0",
+		"grunt": "1.4.0",
+		"grunt-banana-checker": "0.9.0",
+		"grunt-eslint": "23.0.0",
+		"grunt-stylelint": "0.16.0",
+		"stylelint-config-wikimedia": "0.10.3"
+	}
+}

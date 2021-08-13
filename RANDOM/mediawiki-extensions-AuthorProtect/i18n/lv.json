@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"GreenZeb",
+			"Papuass"
+		]
+	},
+	"authorprotect": "Aizsargāt lapu no tiem, kas nav autori",
+	"authorprotect-desc": "Atļaut lapas autoram aizsargāt lapu no citiem lietotājiem",
+	"authorprotect-notauthor": "Tu neesi šīs lapas autors",
+	"authorprotect-confirm": "Mainīt aizsardzības līmeņus",
+	"authorprotect-success": "Aizsardzība uzstādīta!"
+}

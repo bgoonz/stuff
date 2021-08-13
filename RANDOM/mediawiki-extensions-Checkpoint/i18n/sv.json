@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Per"
+		]
+	},
+	"checkpoint": "Spara och fortsätt redigeringen",
+	"checkpoint-desc": "Möjligör att spara och fortsätta redigera",
+	"checkpoint-tooltip": "Spara ditt arbete och fortsätt redigera sidan",
+	"checkpoint-notice": "([[{{ns:project}}:Checkpoint|spara checkpoint]])"
+}

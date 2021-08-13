@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Danny B.",
+			"Dvorapa",
+			"Li-sung",
+			"Mormegil"
+		]
+	},
+	"antispoof-desc": "Brání vytváření účtů, jejichž jména jsou matoucí, podobná jiným uživatelům, nebo kombinují několik druhů písem",
+	"antispoof-conflict-top": "Uživatelské jméno „$1“ je příliš podobné {{PLURAL:$2|následujícímu uživatelskému jménu|následujícím uživatelským jménům}}:",
+	"antispoof-conflict-bottom": "Zvolte si prosím jiné uživatelské jméno.",
+	"antispoof-name-illegal": "Abychom předešli matoucím nebo napodobujícím uživatelským jménům, uživatelské jméno „$1“ není povoleno: $2.\nZvolte si prosím jiné uživatelské jméno.",
+	"antispoof-bad-char": "„$1“ ($2)",
+	"antispoof-badtype": "Špatný datový typ",
+	"antispoof-empty": "Prázdný řetězec",
+	"antispoof-prohibited": "Obsahuje zakázaný znak $1",
+	"antispoof-combining": "Začíná kombinujícím diakritickým znakem $1",
+	"antispoof-unassigned": "Obsahuje nepřiřazený nebo zavržený znak",
+	"antispoof-deprecated": "Obsahuje zavržený znak $1",
+	"antispoof-noletters": "Neobsahuje žádné písmeno",
+	"antispoof-mixedscripts": "Obsahuje nepřípustnou kombinaci druhů písem",
+	"antispoof-tooshort": "Příliš krátké jméno po normalizaci",
+	"antispoof-ignore": "Neprovádět kontrolu matoucích jmen",
+	"right-override-antispoof": "Potlačení kontroly podobnosti uživatelských jmen"
+}

@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"01miki10"
+		]
+	},
+	"auth_remoteuser-desc": "Automaattisesti kirjaa sisään käyttäjiä <code>REMOTE_USER</code>-ympäristömuuttujaa käyttäen"
+}

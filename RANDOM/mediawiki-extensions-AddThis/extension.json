@@ -1,0 +1,112 @@
+{
+	"name": "AddThis",
+	"version": "1.2.0",
+	"author": [
+		"[https://www.mediawiki.org/wiki/User:Varnent Gregory Varnum]",
+		"[https://www.mediawiki.org/wiki/User:Johnduhart John Du Hart]"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:AddThis",
+	"descriptionmsg": "addthis-desc",
+	"license-name": "GPL-2.0-only",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.29.0"
+	},
+	"MessagesDirs": {
+		"AddThis": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"AddThis": "AddThis.php"
+	},
+	"ResourceModules": {
+		"ext.addThis": {
+			"styles": "addThis.css"
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "AddThis"
+	},
+	"Hooks": {
+		"ArticleViewHeader": "AddThis::AddThisHeader",
+		"ParserFirstCallInit": "AddThis::AddThisHeaderTag",
+		"SkinBuildSidebar": "AddThis::AddThisSidebar"
+	},
+	"config": {
+		"AddThispubid": {
+			"value": ""
+		},
+		"AddThisBackground": {
+			"value": "#f6f6f6"
+		},
+		"AddThisBorder": {
+			"value": "#a7d7f9"
+		},
+		"AddThisSidebar": {
+			"value": true
+		},
+		"AddThisHeader": {
+			"value": true
+		},
+		"AddThisMain": {
+			"value": true
+		},
+		"AddThis": {
+			"value": {
+				"addressbarsharing": false
+			}
+		},
+		"AddThisSBServ": {
+			"value": [
+				{
+					"service": "compact"
+				},
+				{
+					"service": "facebook"
+				},
+				{
+					"service": "twitter"
+				},
+				{
+					"service": "google_plusone",
+					"attribs": "g:plusone:count=\"false\" style=\"margin-top:1px;\""
+				},
+				{
+					"service": "email"
+				}
+			]
+		},
+		"AddThisHServ": {
+			"value": [
+				{
+					"service": "facebook"
+				},
+				{
+					"service": "twitter"
+				},
+				{
+					"service": "google_plusone",
+					"attribs": "g:plusone:count=\"false\" style=\"margin-top:1px;\""
+				},
+				{
+					"service": "linkedin"
+				},
+				{
+					"service": "tumblr"
+				},
+				{
+					"service": "stumbleupon"
+				},
+				{
+					"service": "reddit"
+				},
+				{
+					"service": "email"
+				}
+			]
+		}
+	},
+	"manifest_version": 2
+}

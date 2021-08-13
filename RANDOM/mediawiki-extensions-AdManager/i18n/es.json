@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amitie 10g",
+			"Armando-Martin",
+			"Fitoschido",
+			"Macofe"
+		]
+	},
+	"admanager": "Administrador de publicidad",
+	"admanagerzones": "Zonas del administrador de publicidad",
+	"admanager-desc": "Proporciona una [[Special:AdManager|página especial]] que permite a los sysops (operadores de sistema) establecer la zona de páginas o categorías",
+	"admanager_docu": "Para agregar o quitar la zona de publicidad de una página o de toda la categoría, agrega o elimina el título de la página o de la categoría a continuación.",
+	"admanagerzones_docu": "Escribe cada número de zona de publicidad en su propia línea.",
+	"admanager_invalidtargetpage": "Ninguna página encontrada con el título \"$1\".",
+	"admanager_invalidtargetcategory": "Ninguna categoría encontrada con el título \"$1\".",
+	"admanager_notable": "¡Error! ¡No se encontró una tabla de base de datos requerida! Ejecuta primero update.php.",
+	"admanager_noAdManagerZones": "¡Error! Debes agregar algunas zonas de publicidad. Escríbelas en [[Special:AdManagerZones|las zonas del administrador de publicidad]].",
+	"admanager_labelPage": "Títulos de página",
+	"admanager_labelCategory": "Nombres de categoría",
+	"admanager_submit": "Enviar",
+	"admanager_noads": "No mostrar publicidad",
+	"admanager_Page": "Páginas",
+	"admanager_Category": "Categorías",
+	"admanager_added": "Tus cambios se han guardado.",
+	"admanager_addedzone": "Se agregó la zona $1",
+	"admanager_removedzone": "Zona $1 eliminada.",
+	"admanager_nozonesadded": "No se agregó ninguna zona.",
+	"admanager_nozonesremoved": "No se eliminó ninguna zona.",
+	"admanager_zonenum": "N.º de zona: $1",
+	"admanager_zonenotnumber": "¡Error!  $1 no es un número.",
+	"admanager_return": "Volver al [[Special:AdManager|Administrador de publicidad]]",
+	"admanager_gotoads": "[[Special:AdManager|Editar ubicación de publicidad]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Editar zonas de publicidad]]",
+	"action-admanager": "gestionar configuración de publicidad",
+	"right-admanager": "[[Special:AdManager|Administrar configuración de publicidad]]"
+}

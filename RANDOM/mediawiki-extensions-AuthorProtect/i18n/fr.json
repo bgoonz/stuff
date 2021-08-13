@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Crochet.david",
+			"Gomoko",
+			"Grondin",
+			"Peter17",
+			"Pols12",
+			"Sherbrooke",
+			"Thibaut120094",
+			"Urhixidur",
+			"Verdy p",
+			"Wladek92"
+		]
+	},
+	"authorprotect": "Protéger la page des non-auteurs",
+	"authorprotect-desc": "Permet à l’auteur d’une page de la protéger des autres utilisateurs",
+	"authorprotect-notauthor": "Vous n’êtes pas l’auteur{{GENDER:$1||e}} de cette page.",
+	"authorprotect-confirm": "Modifier les niveaux de protection",
+	"authorprotect-edit": "Restreindre la modification aux auteurs",
+	"authorprotect-move": "Restreindre le renommage aux auteurs",
+	"authorprotect-intro": "Utilisez ce formulaire pour verrouiller cette page des non-auteurs.",
+	"authorprotect-success": "Protection mise en place !",
+	"protect-level-author": "Protéger des non-auteurs",
+	"restriction-level-author": "Protégé pour l’auteur",
+	"action-authorprotect": "protéger des non-auteurs",
+	"right-authorprotect": "Protéger des pages pour leurs auteurs",
+	"action-author": "modifier les pages protégées par leur auteur",
+	"right-author": "Modifier des pages protégées pour leurs auteurs"
+}

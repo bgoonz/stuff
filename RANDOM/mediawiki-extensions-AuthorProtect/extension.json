@@ -1,0 +1,50 @@
+{
+	"name": "AuthorProtect",
+	"version": "1.4.0",
+	"author": [
+		"[https://www.mediawiki.org/wiki/User:Skizzerz Ryan Schmidt]"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:AuthorProtect",
+	"descriptionmsg": "authorprotect-desc",
+	"license-name": "GPL-2.0-or-later",
+	"requires": {
+		"MediaWiki": ">= 1.31.0"
+	},
+	"AutoloadClasses": {
+		"AuthorProtect": "includes/AuthorProtect.php",
+		"AuthorProtectAction": "includes/AuthorProtectAction.php"
+	},
+	"MessagesDirs": {
+		"AuthorProtect": [
+			"i18n"
+		]
+	},
+	"Hooks": {
+		"SkinTemplateNavigation::Universal": "AuthorProtect::makeContentAction",
+		"UserGetRights": "AuthorProtect::assignAuthor"
+	},
+	"Actions": {
+		"authorprotect": "AuthorProtectAction"
+	},
+	"config": {
+		"RestrictionLevels": {
+			"value": [
+				"author"
+			],
+			"merge_strategy": "array_merge"
+		}
+	},
+	"AvailableRights": [
+		"author",
+		"authorprotect"
+	],
+	"GroupPermissions": {
+		"sysop": {
+			"author": true
+		},
+		"user": {
+			"authorprotect": true
+		}
+	},
+	"manifest_version": 2
+}

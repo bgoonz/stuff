@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"breadcrumbs-desc": "Става траги од трошки под лентата со јазичиња",
+	"prefs-breadcrumbs-separator": "Одделувач на прегелдничката патека",
+	"prefs-breadcrumbs-separator-max": "Можете да внесете највеќе 2 знака.",
+	"prefs-breadcrumbs": "Трошки",
+	"prefs-breadcrumbs-showcrumbs": "Прикажувај трошки",
+	"prefs-breadcrumbs-numberofcrumbs": "Број на трошки",
+	"prefs-breadcrumbs-numberofcrumbs-max": "Се прикажуваат највеќе 20 трошки.",
+	"prefs-breadcrumbs-namespaces": "Вклучи именски простори во патишта на посета",
+	"prefs-breadcrumbs-filter-duplicates": "Филтрирање (изземање) на често посетувани страници",
+	"prefs-breadcrumbs-preceding-text": "Текст што ќе стои пред прегледничката патека",
+	"prefs-breadcrumbs-preceding-text-max": "Можете да внесете највеќе 30 знаци."
+}

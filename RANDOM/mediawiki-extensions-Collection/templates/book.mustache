@@ -1,0 +1,20 @@
+{{#toc}}
+{{>toc}}
+{{/toc}}
+{{{html}}}
+{{#contributors}}
+<h1 id="mw-book-contributors" data-mw-sectionnumber="{{level}}">{{headingMsg}}</h1>
+<div class="contributors">
+	<ul>
+	{{#names}}
+		<li>{{.}}</li>
+	{{/names}}
+	</ul>
+</div>
+{{/contributors}}
+{{#images}}
+{{>images}}
+{{/images}}
+{{#license}}
+{{>license}}
+{{/license}}

@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hindustanilanguage",
+			"Innocentbunny",
+			"Jayprakash12345",
+			"Kannankumar",
+			"Kaustubh",
+			"Knight Samar",
+			"Pooja.srivastava",
+			"Sfic",
+			"Shyam123.ckp",
+			"Siddhartha Ghai"
+		]
+	},
+	"antispoof-desc": "मिश्रित लिपि और संभ्रम पैदा करने वाले तथा मिलते-जुलते सदस्यनामों के प्रयोग पर रोक लगाता है।",
+	"antispoof-conflict-top": "\"$1\" नाम निम्न {{PLURAL:$2|सदस्यनाम|सदस्यनामों}} से बहुत मिलता-जुलता है:",
+	"antispoof-conflict-bottom": "कृपया कोई अन्य नाम चुनिये।",
+	"antispoof-name-illegal": "भ्रामक नामों को रोकने के लिए नाम \"$1\" रखना मना है: $2\nकृपया कोई अन्य नाम चुनिये।",
+	"antispoof-badtype": "गलत डाटा प्रकार",
+	"antispoof-empty": "खाली स्ट्रिंग",
+	"antispoof-prohibited": "इसमें ब्लैकलिस्टेड कैरैक्टर $1 हैं",
+	"antispoof-combining": "एकत्रिकरण चिन्ह $1 से शुरु होता है",
+	"antispoof-unassigned": "इसमें गलत अक्षर $1 है",
+	"antispoof-deprecated": "पदावनत कैरेक्टर $1 शामिल है",
+	"antispoof-noletters": "इसमें कोई भी अक्षर नहीं हैं",
+	"antispoof-mixedscripts": "इसमें असंगत मिश्र लिपियाँ हैं",
+	"antispoof-tooshort": "अधिकारयुक्त नाम बहुत छोटा हैं",
+	"antispoof-ignore": "स्पूफिंग जाँच नज़रंदाज़ करें",
+	"antispoof-ignore-help": "कुछ पर्याप्त अधिकार प्राप्त सदस्य ऐसे खाते भी खोल सकते हैं, जिसके समान नाम वाले खाते पहले से ही बने हुए हों।",
+	"right-override-antispoof": "स्पूफिंग चेक्स को नजर अंदाज करें"
+}

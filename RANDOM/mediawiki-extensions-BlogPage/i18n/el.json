@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Norhorn"
+		]
+	},
+	"blog-user-articles-votes": "{{PLURAL:$1|ψήφος|ψήφοι}}"
+}

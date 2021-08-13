@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Academo",
+			"Crazymadlover",
+			"Dferg",
+			"Drini",
+			"Fitoschido",
+			"Imre",
+			"Macofe",
+			"MarcoAurelio",
+			"Sanbec"
+		]
+	},
+	"authorprotect": "Proteger página de quienes no sean autores",
+	"authorprotect-desc": "Permite al autor de una página protegerla de otros usuarios",
+	"authorprotect-notauthor": "No eres {{GENDER:$1|el autor|la autora}} de esta página.",
+	"authorprotect-confirm": "Cambiar niveles de protección",
+	"authorprotect-edit": "Restringir edición a autores",
+	"authorprotect-move": "Restringir traslado a autores",
+	"authorprotect-intro": "Usar este formulario para bloquear la página a no-autores.",
+	"authorprotect-success": "¡Protección aplicada!",
+	"protect-level-author": "Proteger de no autores",
+	"restriction-level-author": "Protegido por autor",
+	"action-authorprotect": "proteger contra no autores",
+	"right-authorprotect": "Proteger las páginas que he creado",
+	"action-author": "editar páginas protegidas por su autor",
+	"right-author": "Editar páginas protegidas por el autor"
+}

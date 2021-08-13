@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Albertas"
+		]
+	},
+	"apihelp-antispoof-description": "Patikrinti, ar naudotojo vardas atitinka AntiSpoof's normalizavimo patikras.",
+	"apihelp-antispoof-param-username": "Naudotojo vardas, kuriam atlikti AntiSpoof patikrą.",
+	"apihelp-antispoof-example-1": "Patikrinti naudotojo vardą \"Foo\" su AntiSpoof",
+	"apihelp-createaccount-param-ignoreantispoof": "Ignoruoti pokštavimo patikras (reikalingos <code>override-antispoof</code> teisės)."
+}

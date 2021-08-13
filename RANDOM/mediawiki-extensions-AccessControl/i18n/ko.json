@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jonghaya",
+			"Revi",
+			"Ykhwong"
+		]
+	},
+	"accesscontrol-desc": "문서에 대한 사용자 단위의 그룹 접근 제한을 활성화",
+	"accesscontrol-info": "보호된 문서입니다.",
+	"accesscontrol-info-box": "이 페이지에 대해 접근 제한이 설정되었습니다. 이 메시지가 보이면, 이 페이지에 접근할 권한이 없습니다."
+}

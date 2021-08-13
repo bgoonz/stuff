@@ -1,0 +1,1 @@
+ALTER TABLE /*_*/ajaxpoll_vote ADD COLUMN poll_vote_id int unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT FIRST;

@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Beta16"
+		]
+	},
+	"categorysortheaders-desc": "Consente di specificare un'intestazione multi-carattere con chiave di ordinamento personalizzata per l'elenco delle pagine nelle categorie, utilizzando la sintassi <nowiki>[[Categoria:Foo|^intestazione^parte invisibile della chiave di ordinamento]]</nowiki>"
+}

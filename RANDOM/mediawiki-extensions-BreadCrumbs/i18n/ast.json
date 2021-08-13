@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"breadcrumbs-desc": "Amuesa el percorríu del usuariu pela wiki",
+	"prefs-breadcrumbs-separator": "Separador de los enllaces de navegación",
+	"prefs-breadcrumbs-separator-max": "Pue escribir un máximu de 2 carácteres.",
+	"prefs-breadcrumbs": "Enllaces de navegación",
+	"prefs-breadcrumbs-showcrumbs": "Amosar los enllaces de navegación",
+	"prefs-breadcrumbs-numberofcrumbs": "Númberu d'enllaces de navegación",
+	"prefs-breadcrumbs-numberofcrumbs-max": "Puen amosase un máximu de 20 enllaces de navegación.",
+	"prefs-breadcrumbs-namespaces": "Incluir los espacios de nomes nos enllaces de navegación",
+	"prefs-breadcrumbs-filter-duplicates": "Filtriar les páxines visitaes de vezu",
+	"prefs-breadcrumbs-preceding-text": "Textu qu'apaez enantes de los enllaces de navegación",
+	"prefs-breadcrumbs-preceding-text-max": "Pueden escribise un máximu de 30 carácteres."
+}

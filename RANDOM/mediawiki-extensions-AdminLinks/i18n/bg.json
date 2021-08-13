@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"DCLXVI",
+			"StanProg",
+			"Stanqo",
+			"Vodnokon4e"
+		]
+	},
+	"adminlinks": "Административни препратки",
+	"adminlinks-desc": "Добавя [[Special:AdminLinks|специална страница]], която съдържа полезни препратки за администраторите",
+	"adminlinks_documentation": "Документация на $1",
+	"adminlinks_general": "Основни",
+	"adminlinks_editsidebar": "Редактиране на страничната лента",
+	"adminlinks_editcss": "Редактиране на CSS файл",
+	"adminlinks_editmainpagename": "Редактиране името на началната страница",
+	"adminlinks_users": "Потребители",
+	"adminlinks_browsesearch": "Преглеждане и търсене",
+	"adminlinks_importexport": "Внасяне и изнасяне",
+	"adminlinks_pagenotfound": "Не беше намерена специална страница с име: $1.",
+	"right-adminlinks": "Показване на препратката към [[Special:AdminLinks|Административни препратки]]"
+}

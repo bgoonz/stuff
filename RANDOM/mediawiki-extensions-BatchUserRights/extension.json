@@ -1,0 +1,40 @@
+{
+	"name": "BatchUserRights",
+	"version": "1.2.0",
+	"author": "[http://www.seancolombo.com Sean Colombo]",
+	"url": "https://www.mediawiki.org/wiki/Extension:BatchUserRights",
+	"descriptionmsg": "batchuserrights-desc",
+	"license-name": "GPL-3.0-or-later",
+	"type": "specialpage",
+	"requires": {
+		"MediaWiki": ">= 1.29.0"
+	},
+	"AvailableRights": [
+		"batchuserrights"
+	],
+	"GroupPermissions": {
+		"bureaucrat": {
+			"batchuserrights": true
+		}
+	},
+	"SpecialPages": {
+		"BatchUserRights": "SpecialBatchUserRights"
+	},
+	"MessagesDirs": {
+		"BatchUserRights": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"BatchUserRightsAliases": "BatchUserRights.alias.php"
+	},
+	"AutoloadClasses": {
+		"SpecialBatchUserRights": "src/SpecialBatchUserRights.php"
+	},
+	"config": {
+		"BatchUserRightsGrantableGroups": {
+			"value": []
+		}
+	},
+	"manifest_version": 2
+}

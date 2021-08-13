@@ -1,0 +1,104 @@
+ko = require 'knockout'
+d3 = require 'd3'
+
+{ TimeseriesNode, TimeseriesNodeData,
+} = require './timeseries-node'
+
+Trait = require '../graph-node-trait'
+ProjectColors = require '../../project-colors'
+
+
+validOr = (v, def) -> if isFinite(v) then v else def
+
+
+/**
+ * @class
+ * @extends TimeseriesNodeData
+ */
+class exports.BarNodeData extends TimeseriesNodeData
+    @registerType 'bar'
+    
+    defaults: ->
+        options :
+            disabled    : false
+            label       : null
+            color       : null
+            stroke      : null
+            noLegend    : false
+    
+    attributeTypes: ->
+        {}
+    
+    -> super ...
+
+
+/**
+ * @class
+ * @extends TimeseriesNode
+ */
+class exports.BarNode extends TimeseriesNode
+    @registerType 'bar'
+    traits : [
+        Trait.VIS_NODE
+        Trait.REQUIRES_METRIC
+        Trait.METRIC_CONTENT_DATA
+        Trait.SVG
+        Trait.LEAF
+    ]
+    
+    -> super ...
+    
+    
+    paletteColor: @computedRequires 'model.options', (options) ->
+        ProjectColors.lookup(@shortLabel(), options.get('palette'))
+    
+    strokeColor: @computed -> @fillColor()
+    
+    fillColor: @computedRequires 'model.options', (options) ->
+        options.fill?() or @paletteColor() or 'black'
+    
+    color: @computed -> @fillColor()
+    
+    disabled: @computedRequires 'model.options', (options) ->
+        options.disabled?() or false
+    
+    /**
+     * Represent the data as the bar (SVG rectangle) height
+     * @type ko.computed<d3.selection.update>
+     */
+    render: ->
+        data     = @timeseriesData()
+        viewport = @viewport()
+        return unless xScale  = viewport.xScale()
+        return unless yScale  = viewport.yScale()
+        return unless options = @model().options()
+        disabled = @disabled()
+        
+        # instruct BarGroupNode to recalculate the stacks, if necessary
+        @parent().stack()
+        
+        bar = @selectAll 'rect.metric-bar' .data data
+        
+        barWidth = @parent().xBands().rangeBand()
+        
+        # always exit() to remove existing nodes if data has changed and become invalid
+        bar.exit().remove()
+        
+        rect = bar.enter()
+            .append 'rect'
+                .classed    'metric-bar',           true
+                .attr       'vector-effect',        'non-scaling-stroke'
+                .style      'stroke',               @strokeColor()
+                .style      'fill',                 @fillColor()
+                .style      'visibility',           if disabled then 'hidden' else 'visible'
+                .attr       'width',                barWidth
+        
+        options.applyStyles rect, <[ fillOpacity stroke.width stroke.opacity stroke.dashed ]>
+        
+        bar.transition()
+            .attr 'x',      ([x,y])         -> xScale(x) - barWidth/2
+            .attr 'y',      ([x,y,y0 or 0]) -> yScale(y0 + validOr(y, 0))
+            .attr 'height', ([x,y,y0 or 0]) -> if disabled then 0 else yScale(y0) - yScale(y0 + validOr(y, 0))
+        
+        bar
+    

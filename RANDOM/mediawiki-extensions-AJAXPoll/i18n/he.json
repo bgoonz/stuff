@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"Guycn2",
+			"Matanya",
+			"MojoMann",
+			"Steeve815",
+			"אור שפירא"
+		]
+	},
+	"apihelp-pollsubmitvote-description": "מודול API של AJAXPoll",
+	"apihelp-pollsubmitvote-summary": "מודול API של AJAXPoll",
+	"apihelp-pollsubmitvote-param-poll": "מזהה ההצבעה, למשל 832A5FA2C2583A5732B90CEFF658FE25; המזהים נוצרים באמצעות גיבוב של הקלט (אפשרויות השאלה והתשובה, כלומר הטקסט שבין התגים <code>&lt;poll&gt;...&lt;/poll&gt;</code>) עם אלגוריתם גיבוב מסוג MD5 והמרת התוצאה לאותיות רישיות באמצעות הפונקציה <code>strtoupper</code> של PHP",
+	"apihelp-pollsubmitvote-param-answer": "המזהה המספרי של אפשרות התשובה; יש להשתמש ב־0 כדי לבטל הצבעה מוקדמת יותר",
+	"apihelp-pollsubmitvote-example-1": "שליחת התשובה השלישית (3) להצבעה עם המזהה 832A5FA2C2583A5732B90CEFF658FE25",
+	"ajaxpoll-desc": "אפשרות להוסיף הצבעות בטכנולוגיית AJAX באמצעות התג <code>&lt;poll&gt;</code>",
+	"ajaxpoll-tracking-category": "דפים עם סקר",
+	"ajaxpoll-tracking-category-desc": "לדף יש <code>&lt;poll&gt;</code> .",
+	"ajaxpoll-vote-update": "הקול שלך עודכן.",
+	"ajaxpoll-vote-add": "הקול שלך נוסף.",
+	"ajaxpoll-vote-error": "הייתה בעיה בעיבוד הקול שלך, נא לנסות שוב.",
+	"ajaxpoll-percent-votes": "$1% מכל הקולות.",
+	"ajaxpoll-your-vote": "הצבעת עבור \"$1\" בתאריך $3 שב-$4. ניתן לשנות את ההצבעה שלך ע\"י הקלקה על תשובה שונה.",
+	"ajaxpoll-no-vote": "נא להצביע להלן.",
+	"ajaxpoll-no-vote-results-after-voting": "נא להצביע למטה. התוצאות יוצגו אחרי הצבעתך.",
+	"ajaxpoll-info": "{{PLURAL:$1|נקלט קול אחד|נקלטו $1 קולות}} מאז שההצבעה נוצרה ב־$2.",
+	"ajaxpoll-submitting": "נא להמתין בזמן שליחת הצבעתך.",
+	"ajaxpoll-vote-permission": "אין לך זכות הצבעה.",
+	"ajaxpoll-readonly": "לא ניתן להצביע בסקר הזה, בסיס הנתונים נעול מהסיבה הבאה: $1.",
+	"ajaxpoll-view-results-permission": "אינך רשאי לצפות בתוצאות סקר זה.",
+	"ajaxpoll-view-results-before-vote-permission": "אינך רשאי לצפות בתוצאות הסקר לפני הצבעה",
+	"ajaxpoll-revoke-vote": "אני רוצה לבטל את הקול שלי",
+	"ajaxpoll-vote-revoked": "קולך נפסל.",
+	"right-ajaxpoll-vote": "הצבעה בסקרים מבוססי AJAX",
+	"right-ajaxpoll-view-results": "צפייה בתוצאות של סקרים מבוססי AJAX",
+	"right-ajaxpoll-view-results-before-vote": "צפייה בתוצאות של סקרים מבוססי AJAX לפני הצבעה",
+	"action-ajaxpoll-vote": "להצביע בסקרים מבוססי AJAX",
+	"action-ajaxpoll-view-results": "לצפות בתוצאות של סקרים מבוססי AJAX",
+	"action-ajaxpoll-view-results-before-vote": "לצפות בתוצאות של סקרים מבוססי AJAX לפני הצבעה"
+}

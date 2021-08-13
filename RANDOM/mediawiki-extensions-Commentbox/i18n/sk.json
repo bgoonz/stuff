@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Helix84"
+		]
+	},
+	"commentbox-desc": "Pridáva na určité stránky pole na komentár",
+	"commentbox-intro": "== Pridať komentár... ==\nChcete túto stránku okomentovať? Napíšte to sem alebo <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} priamo stránku upravte]</span>.",
+	"commentbox-savebutton": "Uložiť komentár",
+	"commentbox-name": "Meno:",
+	"commentbox-name-explanation": "<small>(Tip: Ak sa [[Special:UserLogin|prihlásite]], nebudete sem musieť vypĺňať svoje meno ručne)</small>",
+	"commentbox-log": "Nové komentáre",
+	"commentbox-first-comment-heading": "== Komentáre ==",
+	"commentbox-regex": "/\\n==\\s*Komentáre\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Chyba pri vytváraní komentára",
+	"commentbox-error-page-nonexistent": "Táto stránka neexistuje!",
+	"commentbox-error-namespace": "Komentáre nie sú v tomto mennom priestore povolené!",
+	"commentbox-error-empty-comment": "Prázdne komentáre nie sú povolené!"
+}

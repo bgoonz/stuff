@@ -1,0 +1,39 @@
+{
+	"@metadata": {
+		"authors": [
+			"ArmenBakkalian",
+			"Azniv Stepanian",
+			"Kareyac",
+			"Rajemian"
+		]
+	},
+	"coll-remove": "Հեռացնել",
+	"coll-show": "Ցուցնել",
+	"coll-move_up": "Վեր տեղափոխել",
+	"coll-move_down": "Վար տեղափոխել",
+	"coll-yes": "Այո",
+	"coll-cancel": "Չեղարկել",
+	"coll-update": "Թարմացնել",
+	"coll-print_export": "Տպել/արտածել",
+	"coll-create_a_book": "Գիրք ստեղծել",
+	"coll-book_creator": "Ստեղծել գիրք",
+	"coll-download_as": "Ներբեռնել որպէս $1",
+	"coll-disable": "անջատել",
+	"coll-book_creator_disable": "Անջատել գիրք ստեղծողը",
+	"coll-book_creator_disable_tooltip": "Դադրեցնել Գիրք ստեղծողի օգտագործումը",
+	"coll-add_this_page": "Աւելցնել այս էջը ձեր գիրքին",
+	"coll-add_page_tooltip": "Ընթացիկ ուիքի էջը աւելցնել ձեր գիրքին",
+	"coll-help": "Օգնութիւն",
+	"coll-help_tooltip": "Ցոյց տալ գիրք ստեղծելու մասին օգնութեան ցուցմունքները։",
+	"coll-helppage": "Help:Գիրքեր",
+	"coll-n_pages": "$1 {{PLURAL:$1|էջ|էջեր}}",
+	"coll-remove_this_page": "Հանել այս էջը ձեր գիրքէն",
+	"coll-show_collection": "Ցուցնել գիրքը",
+	"coll-show_collection_tooltip": "Սեղմել խմբագրել/ներբեռնել/ապսպրել ձեր գիրքը",
+	"coll-make_suggestions": "Առաջարկել էջեր",
+	"coll-make_suggestions_tooltip": "Ցուցնել ձեր գիրքի էջերուն վրայ հիմնուած առաջարկներ",
+	"coll-setting-toc-yes": "Այո",
+	"coll-attribution-anons": "Անանուն՝ $1",
+	"coll-article-attribution": "<b>$1</b> <i>Յղում`</i> $2 <i>Աշխատակիցներ`</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>Աղբիւր՝</i> $2 <i>Արտօնագիր՝</i> $3 <i>Համահեղինակներ՝</i> $4 <i>Բուն հեղինակ՝</i> $5"
+}

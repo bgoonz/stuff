@@ -1,0 +1,41 @@
+{
+	"name": "Blackout",
+	"version": "1.2",
+	"author": [
+		"[https://www.mediawiki.org/wiki/User:Johnduhart John Du Hart]",
+		"[https://www.mediawiki.org/wiki/User:Varnent Gregory Varnum]"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:Blackout",
+	"descriptionmsg": "blackout-desc",
+	"license-name": "GPL-3.0-or-later",
+	"requires": {
+		"MediaWiki": ">= 1.29.0"
+	},
+	"type": "other",
+	"MessagesDirs": {
+		"Blackout": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"Blackout": "Blackout.body.php",
+		"SkinProtestSopa": "skins/ProtestSopa.php",
+		"SkinStopSopa": "skins/StopSopa.php",
+		"SkinSopaStrike": "skins/SopaStrike.php"
+	},
+	"Hooks": {
+		"MediaWikiPerformAction": "Blackout::overrideAction"
+	},
+	"config": {
+		"Blackout": {
+			"value": {
+				"Enable": true,
+				"Skin": "ProtestSopa",
+				"Whitelist": [
+					"Special:Version"
+				]
+			}
+		}
+	},
+	"manifest_version": 2
+}

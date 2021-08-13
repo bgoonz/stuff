@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jan Myšák",
+			"Matěj Grabovský",
+			"Mormegil",
+			"MrJaroslavik",
+			"Reaperman"
+		]
+	},
+	"authorprotect": "Zabránit neautorským úpravám",
+	"authorprotect-desc": "Umožní autorovi stránky zabránit ostatním uživatelům upravovat ji",
+	"authorprotect-notauthor": "Nejste {{GENDER:$1|autorem|autorkou}} této stránky.",
+	"authorprotect-confirm": "Změnit úroveň ochrany",
+	"authorprotect-edit": "Umožnit úpravy pouze autorům",
+	"authorprotect-move": "Umožnit přesouvání jen autorům",
+	"authorprotect-intro": "Tento formulář slouží k zamknutí této stránky všem uživatelům kromě autorů.",
+	"authorprotect-success": "Zamknutí proběhlo úspěšně!",
+	"protect-level-author": "Ochránit před neautorskými úpravami",
+	"restriction-level-author": "Jen pro autory",
+	"action-authorprotect": "Ochránit před neautorskými úpravami",
+	"right-authorprotect": "Zamykání autorských stránek",
+	"action-author": "Editace autorsky zamčených stránek",
+	"right-author": "Editace autorsky zamčených stránek"
+}

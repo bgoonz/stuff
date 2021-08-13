@@ -1,0 +1,38 @@
+{
+	"@metadata": {
+		"authors": [
+			"Arifin.wijaya",
+			"Daud I.F. Argana",
+			"Farras",
+			"Kenrick95",
+			"Rv77ax"
+		]
+	},
+	"admanager": "Ad Manager",
+	"admanagerzones": "Ad Manager Zones",
+	"admanager-desc": "Menyediakan [[Special:AdManager|halaman istimewa]] yang memungkinkan pengurus mengatur zona untuk halaman atau kategori.",
+	"admanager_docu": "Untuk menambah atau menghapus zona iklan dari sebuah halaman atau keseluruhan kategori, tambah atau hapus judul halaman atau kategori di bawah ini.",
+	"admanagerzones_docu": "Masukkan setiap nomor zona iklan di barisnya sendiri.",
+	"admanager_invalidtargetpage": "Halaman dengan judul \"$1\" tidak ditemukan.",
+	"admanager_invalidtargetcategory": "Kategori dengan judul \"$1\" tidak ditemukan.",
+	"admanager_notable": "Kesalahan! Tabel basis data yang diperlukan tidak ditemukan! Jalankan dulu update.php.",
+	"admanager_noAdManagerZones": "Kesalahan! Anda harus menambahkan beberapa zona iklan. Tambahkan di [[Special:AdManagerZones|Zona Manajer Iklan]].",
+	"admanager_labelPage": "Judul halaman",
+	"admanager_labelCategory": "Nama kategori",
+	"admanager_submit": "Kirim",
+	"admanager_noads": "Jangan tampilkan iklan",
+	"admanager_Page": "Halaman",
+	"admanager_Category": "Kategori",
+	"admanager_added": "Perubahan Anda telah disimpan",
+	"admanager_addedzone": "Zona $1 ditambahkan.",
+	"admanager_removedzone": "Zona $1 dihapus.",
+	"admanager_nozonesadded": "Tidak ada zona yang ditambahkan.",
+	"admanager_nozonesremoved": "Tidak ada zona yang dihapus.",
+	"admanager_zonenum": "Zona #: $1",
+	"admanager_zonenotnumber": "Kesalahan! $1 bukanlah angka.",
+	"admanager_return": "Kembali ke [[Special:AdManager|Ad Manager]]",
+	"admanager_gotoads": "[[Special:AdManager|Sunting penempatan iklan]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Sunting zona iklan]]",
+	"action-admanager": "mengelola konfigurasi periklanan",
+	"right-admanager": "[[Special:AdManager|Kelola konfigurasi iklan]]"
+}

@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Event",
+			"Jon Harald Søby"
+		]
+	},
+	"categorysortheaders-desc": "Gjør det mulig å angi egendefinerte flertegns sorteringsoverskrifter for å liste sidene med i kategorier ved bruk av syntaks som <nowiki>[[Kategori:Foo|^Overskrift^Usynlig del av sorteringsnøkkel]]</nowiki>"
+}

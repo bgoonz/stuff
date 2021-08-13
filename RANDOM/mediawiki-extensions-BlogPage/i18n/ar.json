@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Michel Bakni",
+			"محمد أحمد عبد الفتاح"
+		]
+	},
+	"blog-by": "بواسطة",
+	"blog-by-user-category": "المقالات بواسطة المستخدم $1",
+	"blog-comments-of-day": "تعليقات اليوم",
+	"blog-created": "أُنشئت في $1",
+	"blog-in-the-news": "في الأخبار",
+	"blog-last-edited": "عُدِّلت للمرة الأخيرة في $1",
+	"blog-new-articles": "مقالات جديدة",
+	"blog-recent-editors": "مساهمات حديثة أخرى",
+	"blog-view-archive-link": "عرض الكل",
+	"articlelists": "تدوينات جديدة",
+	"blog-ah-no-results": "لم يُعثَر على أي صفحة.",
+	"blog-ah-popular-articles": "المقالات الرائجة",
+	"blog-ah-new-articles": "مقالات جديدة",
+	"blog-ah-write-article": "اكتب مقالة",
+	"blog-ah-todays-articles": "مقالات اليوم",
+	"articleshome": "الصفحة الرئيسية للمدونة",
+	"blog-create-title": "العنوان",
+	"blog-create-text": "النص",
+	"blog-create-categories": "التصنيفات",
+	"blog-create-button": "أنشئ!",
+	"blog-more": "المزيد",
+	"blog-time-ago": "قبل $1",
+	"action-createblogpost": "إنشاء تدوينات جديدة",
+	"blog-user-articles-title": "مدونات"
+}

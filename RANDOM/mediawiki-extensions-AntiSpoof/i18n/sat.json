@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"Dulal Kisku",
+			"Fagunkoyel Hansdah",
+			"Manik Soren",
+			"Ramjit Tudu",
+			"Salvator"
+		]
+	},
+	"antispoof-conflict-top": "ᱵᱮᱵᱷᱟᱨᱤᱭᱹ ᱧᱩᱛᱩᱢ \"$1\" ᱫᱚ ᱞᱟᱛᱟᱨ ᱨᱮᱱᱟᱜ  {{PLURAL:$2|ᱵᱮᱵᱦᱟᱨᱤᱭᱟᱹ ᱧᱩᱛᱩᱢ|ᱵᱮᱵᱷᱟᱨᱤᱭᱟ ᱧᱩᱛᱩᱢᱠᱚ}} ᱥᱟᱶ ᱢᱤᱫ ᱜᱮᱭᱟ:",
+	"antispoof-conflict-bottom": "ᱮᱴᱟᱜ ᱵᱮᱵᱷᱟᱨᱤᱭᱟᱹ ᱧᱩᱛᱩᱢ ᱵᱟᱪᱷᱟᱣᱢᱮ ᱾",
+	"antispoof-name-illegal": "ᱵᱮᱵᱷᱟᱨᱤᱭᱟᱹ ᱧᱩᱛᱩᱢ \"$1\" ᱫᱚ ᱫᱚᱦᱟᱵᱚᱦᱟ ᱟᱨᱵᱟᱝ ᱰᱤᱸᱜᱚᱨ ᱵᱮᱵᱷᱟᱨᱤᱭᱟᱹ ᱧᱩᱛᱩᱢ: $2 ᱵᱟᱭ ᱚᱪᱚᱜ ᱚᱪᱚᱣᱟᱜᱼᱟ ᱾\nᱫᱟᱭᱟᱠᱟᱛᱮ ᱮᱴᱟᱜ ᱵᱮᱵᱷᱟᱨᱤᱭᱟᱹ ᱧᱩᱛᱩᱢ ᱵᱟᱪᱷᱟᱣᱢᱮ ᱾",
+	"antispoof-badtype": "ᱵᱟᱹᱲᱤᱪ ᱰᱟᱴᱟ ᱞᱮᱠᱟᱱ",
+	"antispoof-empty": "ᱮᱠᱮᱱ ᱜᱷᱩᱨᱟᱹ",
+	"antispoof-prohibited": "$1 ᱵᱮᱜᱚᱨ ᱥᱟᱹᱢᱩᱱ ᱠᱮᱨᱮᱠᱴᱟᱨ ᱢᱮᱱᱟᱜ",
+	"antispoof-combining": "ᱡᱚᱲᱟ ᱪᱤᱱᱦᱟᱹ $1 ᱥᱟᱶ ᱮᱦᱚᱵᱚᱜᱼᱟ",
+	"antispoof-unassigned": "$1 ᱵᱟᱝ ᱜᱟᱱᱚᱜ ᱠᱮᱨᱮᱠᱴᱟᱨ ᱢᱮᱱᱟᱜ",
+	"antispoof-deprecated": "ᱵᱟᱝ ᱜᱟᱱᱚᱜ ᱠᱟᱨᱮᱠᱴᱟᱨ $1 ᱢᱮᱱᱟᱜᱼᱟ",
+	"antispoof-noletters": "ᱪᱮᱛ ᱟᱠᱷᱚᱨ ᱦᱚ ᱵᱟᱱᱩ ᱟᱱᱟ",
+	"antispoof-mixedscripts": "ᱵᱮᱜᱚᱨ ᱡᱩᱛᱥᱚᱭ ᱚᱞᱠᱩ ᱢᱮᱱᱟᱜ-ᱟ",
+	"antispoof-tooshort": "ᱟᱹᱰᱤ ᱠᱷᱟᱴᱚ ᱧᱩᱛᱩᱢ",
+	"antispoof-ignore": "ᱵᱮᱜᱟᱱᱚᱜ ᱵᱟᱪᱷᱟᱣ ᱯᱟᱨᱚᱢ ᱢᱮ",
+	"right-override-antispoof": "ᱵᱮᱜᱟᱱᱚᱜ ᱠᱚᱭᱚᱜ ᱯᱟᱨᱚᱢ ᱵᱟᱪᱷᱟᱣᱢᱮ"
+}

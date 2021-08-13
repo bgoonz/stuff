@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"auth_remoteuser-desc": "Anicia sesión pa los usuarios automáticamente usando la variable d'entornu <code>REMOTE_USER</code>"
+}

@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrisportelli",
+			"Umherirrender"
+		]
+	},
+	"antispoof-desc": "Jimblokka l-ħolqien ta' kontijiet b'karattri mħawwda, ismijiet tal-utent li joħolqu konfużjoni jew huma wisq simili ma' xulxin.",
+	"antispoof-conflict-top": "L-isem \"$1\" huwa wisq simili {{PLURAL:$2|għall-kont eżistenti|għal $2 kontijiet segwenti}}:",
+	"antispoof-conflict-bottom": "Jekk jogħġbok agħżel isem ieħor.",
+	"antispoof-name-illegal": "L-isem \"$1\" mhuwiex permess sabiex jiġi evitat kwalunkwe konfużjoni jew użu qarrieq: $2. Agħżel isem ieħor.",
+	"antispoof-badtype": "Tip ta' dejta ħażina",
+	"antispoof-empty": "Stringa vojta",
+	"antispoof-prohibited": "Jinkludi l-karattru li mhuwiex permess $1",
+	"antispoof-combining": "Jibda bil-kombinazzjoni ta' karattri $1",
+	"antispoof-unassigned": "Jinkludi l-karattru mhux assenjat $1",
+	"antispoof-noletters": "Ma jinkludix ittri",
+	"antispoof-mixedscripts": "Jinkludi skripts imħallta li mhumiex kompatibbli",
+	"antispoof-tooshort": "L-isem fil-forma kanonika huwa wisq qasir",
+	"antispoof-ignore": "Injora l-kontroll għall-ispoofing",
+	"right-override-antispoof": "Jinjora l-kontrolli għall-''ispoofing''"
+}

@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Akamycoco",
+			"Vickylin77s"
+		]
+	},
+	"coll-remove": "falah",
+	"coll-show": "pahapinang",
+	"coll-move_up": "Milinah patalafaled/patalafafaw",
+	"coll-move_down": "Milinah patalaeno/patalararem",
+	"coll-contents": "tanenengan",
+	"coll-cancel": "Sawaden miforic",
+	"coll-suggest_show": "pahapinang",
+	"coll-print_export": "lye-in/pasadak",
+	"coll-create_a_book": "misanga’ to codad",
+	"coll-book_creator": "codad misanga’ cen-se",
+	"coll-download_as": "Pala- $1 a mi’anang",
+	"coll-disable": "materepay",
+	"coll-book_creator_disable": " materepay codad misanga’ cen-se",
+	"coll-book_creator_disable_tooltip": "materepay codad misanga’ cen-se",
+	"coll-add_this_page": "Mikapot a micomod tonini a feliha tayra i codad no miso",
+	"coll-add_page_tooltip": " mitongal to aniniay a Wiki felih i codad no miso",
+	"coll-help": "o pakafana’",
+	"coll-help_tooltip": "pahapinangen kora sapakafana’ to pisanga’ to codad",
+	"coll-helppage": "Help:codad",
+	"coll-n_pages": "$1{{PLURAL:$1|ko felih}}",
+	"coll-remove_this_page": "falahen kona felih nani codad no miso",
+	"coll-show_collection": "pahapinang to codad",
+	"coll-show_collection_tooltip": " pili’en a mimi^mi konini a misinanot, miterek ano eca pali’ayaw micakay to codad no miso",
+	"coll-make_suggestions": "paini to felih",
+	"coll-make_suggestions_tooltip": "pahapinang to nipainian, do^doen ko felih no codad no miso",
+	"coll-attribution-anons": " caay ko so’elinay a ngangan  ：$1",
+	"coll-article-attribution": "<b>$1</b> <i> kasadakan/lalengatan：</i> $2 <i> painiay/pafeliay：</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i> kasadakan/lalengatan：</i> $2 <i> o sapatorod a tilid：</i> $3 <i> painiay/pafeliay：</i> $4 <i> satapang misoritay：</i> $5",
+	"coll-images-source": "lalengatan"
+}

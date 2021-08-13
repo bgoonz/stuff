@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby",
+			"Nghtwlkr"
+		]
+	},
+	"authorprotect": "Beskytt siden for andre enn forfatteren",
+	"authorprotect-desc": "Lar forfatteren av en side beskytte den mot endringer fra andre brukere",
+	"authorprotect-notauthor": "{{GENDER:$1|Du}} er ikke forfatteren av denne siden",
+	"authorprotect-confirm": "Endre beskyttelsesnivåer",
+	"authorprotect-edit": "Begrens redigering til forfattere",
+	"authorprotect-move": "Begrens flytting til forfattere",
+	"authorprotect-intro": "Bruk dette skjemaet for å låse denne siden for andre enn forfattere",
+	"authorprotect-success": "Beskytting lyktes!",
+	"protect-level-author": "Beskytt for andre enn forfattere",
+	"restriction-level-author": "Beskyttet for forfattere",
+	"action-authorprotect": "beskytte fra ikke-forfattere",
+	"right-authorprotect": "Beskytt forfattede sider",
+	"action-author": "redigere forfatterbeskyttede sider",
+	"right-author": "Rediger forfatter-beskyttede sider"
+}

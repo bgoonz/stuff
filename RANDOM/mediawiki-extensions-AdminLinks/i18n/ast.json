@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"adminlinks": "Enllaces d'alministrador",
+	"adminlinks-desc": "Amiesta una [[Special:AdminLinks|páxina especial]] que contien enllaces útiles para los alministradores",
+	"adminlinks_documentation": "Documentación de $1",
+	"adminlinks_general": "Xeneral",
+	"adminlinks_editsidebar": "Editar la barra llateral",
+	"adminlinks_editcss": "Editar el ficheru CSS",
+	"adminlinks_editmainpagename": "Editar el nome de la páxina principal",
+	"adminlinks_users": "Usuarios",
+	"adminlinks_browsesearch": "Navegación y gueta",
+	"adminlinks_importexport": "Importación y esportación",
+	"adminlinks_pagenotfound": "Nun pudo alcontrase la páxina especial col nome: $1.",
+	"action-adminlinks": "ver enllaces alministrativos",
+	"right-adminlinks": "Ver l'enllaz a [[Special:AdminLinks|enllaces d'alministrador]]"
+}

@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ajeje Brazorf",
+			"Alexmar983",
+			"Beta16"
+		]
+	},
+	"autoproxyblock-desc": "Consente di bloccare i proxy aperti da eseguire azioni nel wiki",
+	"proxy-blocked": "Il {{GENDER:|tuo}} indirizzo IP è elencato come proxy, azione eseguita interrotta.",
+	"abusefilter-edit-builder-vars-is-proxy": "Vero se questa azione è stata eseguita attraverso un proxy",
+	"tag-proxy": "azione tramite proxy",
+	"action-proxyunbannable": "ignorare i blocchi automatici dei proxy",
+	"right-proxyunbannable": "Ignora i blocchi automatici dei proxy",
+	"right-notagproxychanges": "Protegge dall'etichettare modifiche eseguite tramite proxy come \"proxy\"",
+	"action-autoproxyblock-log": "visualizzare il registro AutoProxyBlock",
+	"right-autoproxyblock-log": "Visualizza registro delle modifiche bloccate automaticamente eseguite attraverso proxy",
+	"proxyblock-log-name": "Blocchi automatici proxy",
+	"proxyblock-log-header": "Elenco delle modifiche bloccate automaticamente poiché eseguite attraverso proxy",
+	"proxyblock-logentry-blocked": "azione \"$2\" eseguita {{GENDER:$3|dall'utente}} $3 sulla pagina [[$1]] bloccata automaticamente."
+}

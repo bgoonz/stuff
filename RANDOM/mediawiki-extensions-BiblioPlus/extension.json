@@ -1,0 +1,59 @@
+{
+	"name": "BiblioPlus",
+	"version": "1.3.0",
+	"author": [
+		"Karen Eddy",
+		"..."
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:BiblioPlus",
+	"descriptionmsg": "biblioplus-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "parserhook",
+	"requires": {
+		"MediaWiki": ">= 1.32.0"
+	},
+	"MessagesDirs": {
+		"BiblioPlus": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"BiblioXml": "BiblioXml.php",
+		"BiblioPlus": "BiblioPlus.body.php",
+		"BiblioPlusHooks": "BiblioPlus.hooks.php"
+	},
+	"ResourceModules": {
+		"ext.biblioPlus.qtip": {
+			"scripts": [
+				"ext.biblioPlus.qtip/ext.biblioPlus.qtip.min.js"
+			],
+			"styles": "ext.biblioPlus.qtip/ext.biblioPlus.qtip.min.css"
+		},
+		"ext.biblioPlus.qtip.config": {
+			"scripts": [
+				"ext.biblioPlus.qtip.config.js"
+			],
+			"dependencies": [
+				"ext.biblioPlus.qtip"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources/",
+		"remoteExtPath": "BiblioPlus/resources/"
+	},
+	"Hooks": {
+		"BeforePageDisplay": "BiblioPlusHooks::onBeforePageDisplay",
+		"ParserFirstCallInit": "BiblioPlusHooks::biblioPlusSetup"
+	},
+	"config": {
+		"BiblioPlusForce": {
+			"value": true
+		},
+		"BiblioPlusVersion": {
+			"value": "1.3.0"
+		}
+	},
+	"callback": "BiblioPlusHooks::onRegistration",
+	"manifest_version": 2
+}

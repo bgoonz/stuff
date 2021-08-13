@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Centerlink",
+			"Str4nd"
+		]
+	},
+	"checkpoint": "Tallenna ja jatka muokkaamista",
+	"checkpoint-desc": "Mahdollistaa tallennuksen ja muokkauksen jatkamisen.",
+	"checkpoint-tooltip": "Tallenna työsi ja jatka sivun muokkaamista",
+	"checkpoint-notice": "([[{{ns:project}}:Tarkistuspiste|tarkistuspistetallennus]])"
+}

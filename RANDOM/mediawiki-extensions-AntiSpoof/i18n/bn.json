@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aftab1995",
+			"Aftabuzzaman",
+			"Bellayet",
+			"Elias Ahmmad",
+			"Nasir8891",
+			"Zaheen",
+			"আফতাবুজ্জামান"
+		]
+	},
+	"antispoof-desc": "মিশ্র-লিপিতে লেখা, কিংবা অস্পষ্ট ও একই রকম ব্যবহারকারী নাম দিয়ে অ্যাকাউন্ট সৃষ্টিতে বাধা দেবে",
+	"antispoof-conflict-top": "\"$1\" ব্যবহারকারী নামটি নিম্নলিখিত {{PLURAL:$2|ব্যবহারকারী নামের|ব্যবহারকারী নামগুলোর}} সাথে বেশ মিলে যায়:",
+	"antispoof-conflict-bottom": "অনুগ্রহ করে অন্য ব্যবহারকারী নাম বাছাই করুন।",
+	"antispoof-name-illegal": "বিভ্রান্তিকর বা ধাপ্পাবাজ ব্যবহারকারী নাম রোধ করতে \"$1\" ব্যবহারকারী নাম অনুমোদিত নয়: $2। দয়া করে অন্য ব্যবহারকারী নাম পছন্দ করুন।",
+	"antispoof-badtype": "তথ্যের ধরন ঠিক নেই",
+	"antispoof-empty": "খালি স্ট্রিং",
+	"antispoof-prohibited": "নিষিদ্ধ বর্ণ বা অক্ষর $1 রয়েছে",
+	"antispoof-combining": "$1 সংযোগসূচক চিহ্ন দিয়ে শুরু হয়েছে",
+	"antispoof-unassigned": "$1 অপ্রযুক্ত বা অননুমোদিত ক্যারেক্টার ধারণ করে",
+	"antispoof-deprecated": "$1 অবচিত অক্ষর রয়েছে",
+	"antispoof-noletters": "কোন অক্ষর বা বর্ণ নাই",
+	"antispoof-mixedscripts": "বেমানান স্ক্রিপ্টের মিশ্রণ ধারণ করে",
+	"antispoof-tooshort": "স্বাভাবিককৃত নামটি খুবই ছোট",
+	"antispoof-ignore": "স্পুফিং চেক অগ্রাহ্য করো",
+	"right-override-antispoof": "স্পুফিং পরীক্ষা ওভাররাইড করো"
+}

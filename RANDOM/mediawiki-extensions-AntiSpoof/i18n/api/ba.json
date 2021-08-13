@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Янмурза Баки"
+		]
+	},
+	"apihelp-antispoof-description": "Чек-бокс AntiSpoof's normalisation ҡаршыһында ҡулланыусы исемен тикшерегеҙ.",
+	"apihelp-antispoof-param-username": "AntiSpoof ярҙамында тикшерә торған ҡатнашыусының исеме.",
+	"apihelp-antispoof-example-1": "AntiSpoof ярҙамында «Foo» ҡатнашыусы исемен тикшерергә",
+	"apihelp-createaccount-param-ignoreantispoof": "(Хоҡуҡ һораған <code>override-antispoof</code>) оҡшаш исемдәрҙе иҫәпкә алмаҫҡа."
+}

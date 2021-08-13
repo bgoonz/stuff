@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Andibing"
+		]
+	},
+	"carp-desc": "Provides error reporting and stack unwinding to other extensions"
+}

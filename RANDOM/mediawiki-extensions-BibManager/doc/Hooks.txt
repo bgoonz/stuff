@@ -1,0 +1,48 @@
+Hooks.txt
+  This file describes the available hooks of the BibManager extension.
+
+'BibManagerBibTagBeforeTooltip': Use this to modify the tooltip of the 
+<bib /> tag
+&$entry: The bib entry array from the repository. It holds all fields that are 
+displayed in the tooltip.
+
+'BibManagerCreateBeforeTypeSelectFormCreate': Use this to change the select form
+on the BibManagerCreate special page.
+$specialpage: The BibManagerCreate (subclass of SpecialPage) object.
+&$formDescriptor: The form descriptor array for the HTMLForm on the page.
+
+'BibManagerEditBeforeFormCreate': Use this to change the edit/create form
+on the BibManagerEdit special page.
+$specialpage: The BibManagerCreate (subclass of SpecialPage) object
+&$formDescriptor: The form descriptor array for the HTMLForm on the page.
+
+'BibManagerGetFieldDefinitions': Use this to add, remove or modify fields. 
+If you add fields make sure that they are part of the database table!
+&$fieldDefinitions: An array of HTMLFormField descriptor arrays.
+
+'BibManagerGetTypeDefinitions': Use this to modify the bibtex type definitions. 
+You may change required and optional fields or apply a new lable.
+&$typeDefinitions: An array of entry type describing arrays.
+
+'BibManagerValidateCitation': Use this to make a custom validation of the 
+citaion format.
+$value: The submitted value (string)
+$allData: An array with all submitted fields. You may use this context 
+information for your validation (i.e. different validation for different 
+entry types).
+&$result: The result of the validation. May be true un success or a string with 
+the error message.
+
+'BibManagerGetIcons': Use this hook to modify the icons in the tooltip and biblist
+$entry: The current entry as an array
+&$icons: The icons to display
+
+'BibManagerFormatEntry': Use this hook to modify the already formated string representation of an entry
+$entry: The current entry as an array
+$prefixedKeys: Wether of not the keys of the $entry array are prefixed with 'bm_'
+&$format: The string to alter
+
+'BibManagerPagerBeforeSearch' : Use this hook to modify the search values
+$sSearchType: The searchtype selected by the user
+$sSearchTerm: The searchterm entered by the user
+&$sCond: The condition passed tBibManagerChangeSearchValueso the SQL-String

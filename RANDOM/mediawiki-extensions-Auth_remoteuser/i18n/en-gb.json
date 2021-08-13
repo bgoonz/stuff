@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chase me ladies, I'm the Cavalry"
+		]
+	},
+	"auth_remoteuser-desc": "Automatically logs users in by using the <code>REMOTE_USER</code> environment variable"
+}

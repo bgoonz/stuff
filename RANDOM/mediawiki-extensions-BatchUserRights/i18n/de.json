@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kghbln",
+			"LWChris",
+			"Metalhead64",
+			"SVG",
+			"The Evil IP address"
+		]
+	},
+	"batchuserrights": "Sammelbenutzerrechtevergabe",
+	"batchuserrights-desc": "Ermöglicht das gesammelte Hinzufügen eines oder mehrerer Benutzer zu einer oder mehreren Benutzergruppen",
+	"batchuserrights-names": "Folgende Benutzer dieser Benutzergruppe hinzufügen (einer pro Zeile):",
+	"batchuserrights-intro": "Auf dieser Seite kannst du mehrere Benutzer gleichzeitig einer Benutzergruppe hinzufügen.\nAus Sicherheitsgründen wurde die Liste der zuordenbaren Benutzergruppen in der Konfigurationsdatei der Programmerweiterung selbst festgelegt und kann daher nicht im Wiki verändert werden.\nSofern weitere Benutzergruppen hinzugefügt werden sollen, wende dich bitte an einen Systemadministrator.",
+	"batchuserrights-single-progress-update": "{{PLURAL:$1|Benutzergruppe wurde|Benutzergruppen wurden}} <strong>$2</strong> hinzugefügt.",
+	"batchuserrights-add-groups": "{{PLURAL:$1|Ein Benutzer wird|$1 Benutzer werden}} {{PLURAL:$2|der folgenden Benutzergruppe|den folgenden Benutzergruppen}} hinzugefügt: <strong>$3</strong>",
+	"batchuserrights-userload-error": "{{GENDER:$1|Der Benutzer|Die Benutzerin}} '''$1''' konnte nicht geladen werden.",
+	"batchuserrights-no-groups": "Du hast keine Benutzergruppe ausgewählt.\nEs wird daher keine Änderung durchgeführt.\nDer Rest der Seite wird nur deshalb geladen, damit du einfach feststellen kannst, ob einer der Benutzernamen nicht geladen werden konnte.",
+	"right-batchuserrights": "Mehrere Benutzer gesammelt einer oder mehreren Benutzergruppen hinzufügen",
+	"action-batchuserrights": "mehrere Benutzer gesammelt einer oder mehreren Benutzergruppen hinzuzufügen"
+}

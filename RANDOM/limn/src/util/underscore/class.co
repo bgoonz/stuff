@@ -1,0 +1,229 @@
+_    = require 'underscore'
+_arr = require './array'
+
+root = do -> this or eval('this')
+
+# FuncProto = Function::
+{
+    toString       : objToString
+    hasOwnProperty : hasOwn
+} = {}
+{   getPrototypeOf : getProto
+} = Object
+
+with <[ Boolean Number String Function Array Date RegExp Object ]>
+    STR_TO_TYPENAME = _arr.synthesize &, -> [ "[object #it]", it ]
+    STR_TO_TYPE     = _arr.synthesize &, -> [ it, root[it] ]
+    NATIVE_TYPES    = _.map           &, -> root[it]
+TRICKY_TYPES = { +Object, +Function }
+
+
+_cls =
+    
+    /**
+     * @returns {Boolean} Whether the given function is a class constructor.
+     */
+    isClass: (fn) ->
+        return true if fn of NATIVE_TYPES
+        typeof fn is 'function'     and
+        _.isObject( proto = fn:: )  and do
+            fn.__class__ is fn   or
+            not _.isEmpty(proto) or
+            not _.isPlainObject(proto)
+    
+    
+    /**
+     * @param {Object} o An object.
+     * @returns {String} Name of the type given object, one of:
+     *  null, undefined, Boolean, Number, String, Function, Array, Date, RegExp, Object.
+     */
+    nativeTypeName: (o) ->
+        return String o unless o?
+        STR_TO_TYPENAME[ objToString.call o ] or 'Object'
+    
+    
+    /**
+     * @returns {String} The name of the type of the thing you passed me.
+     */
+    typeName : (o) ->
+        # null, undefined
+        return String(o) unless o?
+        
+        # Primitives &co are easy ...Except the tricky ones
+        return name unless TRICKY_TYPES[ name = _.nativeTypeName o ]
+        
+        # If it's a limn type, it'll help us out
+        return o.getClassName?() or 'Class' if _.isClass o
+        
+        # Functions are complicated?
+        # if typeof o is 'function' and getProto.call(null, o) is FuncProto
+        return 'Function' if typeof o is 'function'
+        
+        # Only trust .constructor if it belongs to the prototype
+        return (o.constructor |> &displayName or &name) unless hasOwn.call o, 'constructor'
+        
+        return 'Object'
+    
+    
+    /**
+     * Creates a new instance of the given class without running its constructor.
+     * 
+     * @param {Class<T>} Class Class to instantiate.
+     * @returns {T} New instance of the given class, created without running
+     *  its constructor.
+     */
+    fabricate: (Class) ->
+        AnonymousInnerClass = ->
+        AnonymousInnerClass:: = Class::
+        instance = new AnonymousInnerClass()
+        instance.constructor = Class
+        instance
+    
+    
+    /**
+     * Creates a new instance of the given class, applying the given arguments
+     * array to the constructor.
+     * 
+     * @param {Class<T>} Class Class to instantiate.
+     * @param {Array} [args=[]] Arguments to pass to the class constructor.
+     * @returns {T} New instance of the given class.
+     */
+    instantiate: (Class, args=[]) ->
+        instance = _.fabricate Class
+        Class.apply instance, args
+        instance
+    
+    
+    /**
+     * Create an instance of an anonymous subclass of the given class, allowing
+     * you to provide prototype overrides prior to the invocation of the constructor.
+     * 
+     * Note that this process triggers Coco's `@extended()` hook.
+     * 
+     * @param {Class<T>} Class Class to subclass.
+     * @param {Array} [args] Partial constructor arguments which will be prepended
+     *  to whatever is actually supplied to the constructor. if omitted, prototype
+     *  overrides may still be supplied.
+     * @param {Object} [overrides={}] Prototype overrides.
+     * @returns {? extends T>} An instance of the new anonymous subclass of this class.
+     */
+    subclass: (Class, args=[], overrides={}) ->
+        [overrides, args] = [args, []] unless _.isArray args
+        
+        class AnonymousInnerClass extends Class implements overrides
+            (..._args) -> super ...args.concat(_args)
+        
+        AnonymousInnerClass
+    
+    
+    /**
+     * Create an instance of an anonymous subclass of the given class, allowing
+     * you to provide prototype overrides prior to the invocation of the constructor.
+     * 
+     * Note that this process triggers Coco's `@extended()` hook.
+     * 
+     * @param {Class<T>} Class Class to subclass.
+     * @param {Array} [args] Constructor arguments; if omitted, overrides may still be supplied.
+     * @param {Object} [overrides={}] Prototype overrides.
+     * @returns {? extends T>} An instance of the new anonymous subclass of this class.
+     */
+    subclassInstance: (Class, args=[], overrides={}) ->
+        AnonymousInnerClass = _.subclass Class, args, overrides
+        new AnonymousInnerClass()
+    
+    
+    /**
+     * Determines the superclass for the given class/object, and `undefined`
+     * otherwise.
+     * 
+     * Note this typically will not return `Object` or `Function` due to
+     * the prototype's constructor being set by the subclass.
+     * 
+     * @param {Class|Object} obj Class constructor or object to reflect upon.
+     * @returns {Class} Superclass for the given class/object.
+     */
+    getSuperClass: function getSuperClass(obj)
+        return unless obj
+        if obj.__superclass__ or obj.superclass or obj.__super__?.constructor
+            return that unless that is obj
+        if typeof obj is not 'function'
+            return getSuperClass obj.constructor
+    
+    
+    /**
+     * @param {Class|Object} obj Class constructor or object to reflect upon.
+     * @returns {Array<Class>} The list of all superclasses for this class
+     *  or object. Typically does not include Object or Function due to
+     *  the prototype's constructor being set by the subclass.
+     */
+    getSuperClasses: function getSuperClasses(Cls)
+        # return [] unless Cls
+        # 
+        # if Cls.__superclass__ or Cls.superclass or Cls.__super__?.constructor
+        #     superclass = that unless that is Cls
+        # unless superclass
+        #     Cls = Cls.constructor if typeof Cls is not 'function'
+        #     if Cls.__superclass__ or Cls.superclass or Cls.__super__?.constructor
+        #         superclass = that unless that is Cls
+        return [] unless superclass = _.getSuperClass Cls
+        [superclass].concat getSuperClasses superclass
+    
+    
+    /**
+     * Looks up an attribute on the prototype of each class in the class
+     * hierarchy. Values from Object or Function are not typically included --
+     * see the note at `getSuperClass()`.
+     * 
+     * @param {Object} obj Object on which to reflect.
+     * @param {String} prop Property to nab.
+     * @returns {Array} List of the values, from closest parent to furthest.
+     */
+    pluckSuper: (obj, prop) ->
+        return [] unless obj
+        _ _.getSuperClasses(obj) .chain()
+            .pluck 'prototype'
+            .pluck prop
+            .value()
+    
+    
+    /**
+     * As `.pluckSuper()` but includes value of `prop` on passed `obj`. Values
+     *  from Object or Function are not typically included -- see the note
+     *  at `getSuperClasses()`.
+     * 
+     * @returns {Array} List of the values, starting with the object's own
+     *  value, and then moving from closest parent to furthest.
+     */
+    pluckSuperAndSelf: (obj, prop) ->
+        return [] unless obj
+        [ obj[prop] ].concat _.pluckSuper(obj, prop)
+    
+    
+    /**
+     * Invokes the method found at `methodName` on the given object and each
+     * of its superclasses. The resulting objects' properties are collapsed
+     * into a single object, such that the properties from the most-super class
+     * are overridden by each newer result. Any non-methods at `methodName`
+     * are skipped, and non-object return values are not collapsed into the
+     * resulting object.
+     * 
+     * @param {Object} obj Object on which to perform the method-collapse.
+     * @param {String} methodName Name of the method to invoke.
+     * @param {*} ...args Arguments to pass to the method.
+     * @returns {Object} Results collapsed into a single object.
+     */
+    collapseAllSuper: (obj, methodName, ...args) ->
+        return {} unless obj and methodName
+        _.reduceRight do
+            _.pluckSuperAndSelf obj, methodName
+            (acc, method) ->
+                if typeof method is 'function'
+                    res = method.apply obj, args
+                    _.merge acc, res if _.isObject res
+                acc
+            {}
+        
+    
+
+
+_.mixin exports import _cls

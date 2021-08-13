@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Erdemaslancan",
+			"Gırd",
+			"Mirzali"
+		]
+	},
+	"commentbox-savebutton": "Vatışi qeyd ke",
+	"commentbox-name": "Name:",
+	"commentbox-log": "Vatışê newey",
+	"commentbox-first-comment-heading": "== Mışewreyi ==",
+	"commentbox-regex": "/\\n==\\s*Mışewreyi\\s*==\\s*\\n/i",
+	"commentbox-error-page-nonexistent": "Ena pele çıniya!"
+}

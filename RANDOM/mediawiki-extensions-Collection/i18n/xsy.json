@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lalotahes"
+		]
+	},
+	"coll-remove": "tilkoraeh",
+	"coll-show": " pinakita’",
+	"coll-move_up": "tilkoraeh babaw",
+	"coll-move_down": "tilkoraeh wahoer",
+	"coll-contents": "raro:o’ noka kina:at",
+	"coll-cancel": "kayni’",
+	"coll-suggest_show": "pinakita’",
+	"coll-print_export": " mal’oehaez ka kina:at",
+	"coll-create_a_book": " paskayzaeh ka kina:at",
+	"coll-book_creator": " kina:at paskayzaeh ka chengSe’",
+	"coll-download_as": " maray tiyanaw mari’ ka kina:at ka $1",
+	"coll-disable": "’inlet",
+	"coll-book_creator_disable": "’inlet pinatawaw kina:at paskayzaeh ka chengshe’",
+	"coll-book_creator_disable_tooltip": "’emlet kapatawaw kina:at paskayzaeh ka chengshe’",
+	"coll-add_this_page": " ropa: ka hini ye:myen kanSo’ ray kina:at",
+	"coll-add_page_tooltip": "baba:aw rinpa: ’isahini ka Wiki yemien kanSo’ ray kina:at",
+	"coll-help": " kapakSekla’an",
+	"coll-help_tooltip": " pinakita’ ka ’inakhini’an pinaskayzaeh kina:at kapakSekla’an",
+	"coll-helppage": "Help: kina:at",
+	"coll-n_pages": "$1 ka ye:myen",
+	"coll-remove_this_page": "’inay kanSo’ kina:at ’izo’ boloe’ ka hini ye:myen",
+	"coll-show_collection": " pinakita’ ka kina:at",
+	"coll-show_collection_tooltip": "pawhi:il rini noka pienji: 、 maray tiyanaw mari’ ka kina:at a bae:iw ka kina:at niSo’",
+	"coll-make_suggestions": "pinapapnabih ka ye:myen",
+	"coll-make_suggestions_tooltip": " pinakita’ ka pinapapnabih, tani niSo’ kina:at ’izo’ ray ye:myen pakhayza’",
+	"coll-attribution-anons": "raro:o’ Sina:il：$1",
+	"coll-article-attribution": "<b>$1</b> <i> kawa:i’an ：</i> $2 <i> kama mobay ：</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i> kawa:i’an ：</i> $2 <i> kinSiwa’ kina:at ：</i> $3 <i> kama mobay ：</i> $4 <i> ’ima paskayzaeh：</i> $5",
+	"coll-images-source": " kawa:i’an"
+}

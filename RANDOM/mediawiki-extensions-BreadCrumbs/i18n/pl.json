@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"BeginaFelicysym",
+			"Sp5uhe",
+			"Woytecr"
+		]
+	},
+	"breadcrumbs-desc": "Dodaje szlak nawigacyjny poniżej paska zakładek",
+	"prefs-breadcrumbs-separator": "Separator linków",
+	"prefs-breadcrumbs-separator-max": "Można wpisać maksymalnie 2 znaki.",
+	"prefs-breadcrumbs": "Ścieżka hiperłączy",
+	"prefs-breadcrumbs-showcrumbs": "Wyświetl ścieżkę hiperłączy",
+	"prefs-breadcrumbs-numberofcrumbs": "Liczba hiperłączy w ścieżce",
+	"prefs-breadcrumbs-numberofcrumbs-max": "Maksymalnie 20 hiperłączy w ścieżce.",
+	"prefs-breadcrumbs-namespaces": "Dołącz przestrzenie nazw w ścieżce",
+	"prefs-breadcrumbs-filter-duplicates": "Odfiltruj kilkukrotnie odwiedzone strony",
+	"prefs-breadcrumbs-preceding-text": "Tekst pojawiający się przed ścieżką",
+	"prefs-breadcrumbs-preceding-text-max": "Można wpisać maksymalnie 30 znaków."
+}

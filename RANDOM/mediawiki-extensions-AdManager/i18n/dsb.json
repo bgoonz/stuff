@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Michawiki"
+		]
+	},
+	"admanager": "Ad Manager",
+	"admanagerzones": "Wobcerki zastojnika anonsow",
+	"admanager-desc": "Dodawa [[Special:AdManager|specialny bok]], kótaryž dowólujo administratoram, aby nastajili wobcerk anonsow za boki abo kategorije",
+	"admanager_docu": "Aby wobcerk anonsow boka abo cełeje kategorije pśidał abo wótpórał, pśidaj abo wótpóraj jogo slědujucy titel.",
+	"admanagerzones_docu": "Zapódaj numer kuždego wobcerka anonsow we swójskej smužce.",
+	"admanager_invalidtargetpage": "Žeden bok z titelom \"$1\" namakany.",
+	"admanager_invalidtargetcategory": "Žedna kategorija z titelom \"$1\" namakana.",
+	"admanager_notable": "Zmólka! Trěbna tabela datoweje banki njejo se namakała! Wuwjeź njepjerwjej update.php.",
+	"admanager_noAdManagerZones": "Zmólka! Musyš wobcerki anonsow pśidaś. Zapódaj je na boku [[Special:AdManagerZones|wobcerki zastojnika anonsow]]",
+	"admanager_labelPage": "Bokowe titele",
+	"admanager_labelCategory": "Kategorijowe mjenja",
+	"admanager_submit": "Wótpósłaś",
+	"admanager_noads": "Žedne anonse zwobrazniś",
+	"admanager_Page": "Boki",
+	"admanager_Category": "Kategorije",
+	"admanager_added": "Twóje změny su se składowali",
+	"admanager_addedzone": "Wobcerk pśidany",
+	"admanager_zonenum": "Numer wobcerka: $1",
+	"admanager_zonenotnumber": "Zmólka! $1 njejo licba.",
+	"admanager_return": "Slědk k [[Special:AdManager|zastojnikoju anonsow]]",
+	"admanager_gotoads": "[[Special:AdManager|Anonse wobźěłaś]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Wobcerki anonsow wobźěłaś]]",
+	"right-admanager": "[[Special:AdManager|Anonse konfigurěrowaś]]"
+}

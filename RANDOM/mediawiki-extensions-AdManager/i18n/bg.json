@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"DCLXVI",
+			"StanProg",
+			"Ted Masters",
+			"Vodnokon4e",
+			"පසිඳු කාවින්ද"
+		]
+	},
+	"admanager_invalidtargetpage": "Не е намерена страница с името „$1“.",
+	"admanager_invalidtargetcategory": "Не е намерена категория с името „$1“.",
+	"admanager_labelPage": "Заглавия на страницата",
+	"admanager_labelCategory": "Имена на категории",
+	"admanager_submit": "Изпращане",
+	"admanager_noads": "Без показване на реклами",
+	"admanager_Page": "Страници",
+	"admanager_Category": "Категории",
+	"admanager_added": "Промените бяха съхранени.",
+	"admanager_addedzone": "Добавена зона $1.",
+	"admanager_removedzone": "Премахната зона $1.",
+	"admanager_nozonesadded": "Не са добавени зони.",
+	"admanager_nozonesremoved": "Не са премахнати зони.",
+	"admanager_zonenum": "Зона №: $1",
+	"admanager_zonenotnumber": "Грешка! $1 не е число."
+}

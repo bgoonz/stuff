@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Piramidion",
+			"Ата"
+		]
+	},
+	"apihelp-antispoof-description": "Перевірите ім'я користувача через перевірку нормалізації AntiSpoof.",
+	"apihelp-antispoof-summary": "Перевірите ім'я користувача через перевірку нормалізації AntiSpoof.",
+	"apihelp-antispoof-param-username": "Ім'я користувача для перевірки через AntiSpoof.",
+	"apihelp-antispoof-example-1": "Перевірити ім'я користувача «Foo» через AntiSpoof",
+	"apihelp-createaccount-param-ignoreantispoof": "Ігнорувати перевірки підмін (вимагає права <code>override-antispoof</code>)."
+}

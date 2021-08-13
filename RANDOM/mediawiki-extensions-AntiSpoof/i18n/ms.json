@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Anakmalaysia",
+			"Aurora",
+			"Aviator",
+			"CyberTroopers"
+		]
+	},
+	"antispoof-desc": "Menyekat pembukaan akaun dengan nama pengguna yang mengelirukan, menyerupai orang lain, atau terdiri daripada campuran sistem-sistem tulisan yang berlainan",
+	"antispoof-conflict-top": "Nama pengguna \"$1\" menyerupai {{PLURAL:$2|nama pengguna|nama pengguna}} berikut:",
+	"antispoof-conflict-bottom": "Sila pilih nama pengguna lain.",
+	"antispoof-name-illegal": "Nama pengguna \"$1\" tidak dibenarkan kerana mengelirukan atau menipu: $2. Sila pilih nama pengguna lain.",
+	"antispoof-badtype": "Jenis data salah",
+	"antispoof-empty": "Rentetan kosong",
+	"antispoof-prohibited": "Mengandungi aksara $1 yang telah disenaraihitamkan",
+	"antispoof-combining": "Bermula dengan tanda penggabung $1",
+	"antispoof-unassigned": "Mengandungi aksara yang tidak diuntukkan atau yang lapuk",
+	"antispoof-deprecated": "Mengandungi aksara $1 yang lapuk",
+	"antispoof-noletters": "Tidak mengandungi huruf",
+	"antispoof-mixedscripts": "Mengandungi campuran sistem-sistem tulisan yang tidak bersesuaian",
+	"antispoof-tooshort": "Nama berkanun terlalu pendek",
+	"antispoof-ignore": "Abaikan pemeriksaan penipuan",
+	"antispoof-ignore-help": "Membenarkan pengguna dengan hak mencukupi untuk mencipta sebuah akaun walaupun namanya mirip dengan akaun sedia ada.",
+	"action-override-antispoof": "pembatalan pemeriksaan penipuan",
+	"right-override-antispoof": "Mengatasi pemeriksaan penipuan"
+}

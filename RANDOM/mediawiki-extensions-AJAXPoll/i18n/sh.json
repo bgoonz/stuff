@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"ajaxpoll-desc": "Ankete temeljene na AJAX-u s oznakom <code>&lt;poll&gt;</code>",
+	"ajaxpoll-tracking-category": "Stranice s anketom",
+	"ajaxpoll-tracking-category-desc": "Stranica ima <code>&lt;poll&gt;</code>.",
+	"ajaxpoll-vote-update": "Vaš glas je ažuriran.",
+	"ajaxpoll-vote-add": "Vaš glas je dodan.",
+	"ajaxpoll-vote-error": "Došlo je do greške pri beleženju vašeg glasa. Pokušajte ponovo.",
+	"ajaxpoll-percent-votes": "$1% od svih glasova",
+	"ajaxpoll-your-vote": "Već ste glasali za \"$1\" na $3 u $4; možete promijeniti glas klikom na jedan od dolje navedenih odgovora.",
+	"ajaxpoll-no-vote": "Molimo da glasate ispod.",
+	"ajaxpoll-no-vote-results-after-voting": "Molimo dajte Vaš glas ispod. Rezultat će biti prikazan nakon glasovanja.",
+	"ajaxpoll-info": "Otkad je napravljena anketa ($2) {{PLURAL:$1|dan jedan glas|dano je $1 glasa}}.",
+	"ajaxpoll-submitting": "Čekajte, zavodim vaš glas.",
+	"ajaxpoll-vote-permission": "Ne možete da glasate.",
+	"ajaxpoll-view-results-permission": "Nemate pravo gleadti ishod od ove ankete.",
+	"ajaxpoll-view-results-before-vote-permission": "Nemate pravo gleadti ishod od ove ankete prije da glasate.",
+	"ajaxpoll-revoke-vote": "Želim poništiti glas",
+	"ajaxpoll-vote-revoked": "Vaš glas je poništen."
+}

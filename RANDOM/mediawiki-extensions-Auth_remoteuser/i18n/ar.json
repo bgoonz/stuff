@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"ديفيد"
+		]
+	},
+	"auth_remoteuser-desc": "سجيل دخول المستخدمين تلقائيًا باستخدام متغير بيئة <code>REMOTE_USER</code>"
+}

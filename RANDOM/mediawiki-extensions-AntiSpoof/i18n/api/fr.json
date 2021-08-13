@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gomoko",
+			"Thibaut120094",
+			"Verdy p",
+			"Wladek92"
+		]
+	},
+	"apihelp-antispoof-description": "Vérifier un nom d’utilisateur d’après les contrôles de normalisation d’AntiSpoof.",
+	"apihelp-antispoof-summary": "Contrôler un nom d’utilisateur d’après les règles de normalisation d’AntiSpoof.",
+	"apihelp-antispoof-param-username": "Le nom d’utilisateur à vérifier d’après AntiSpoof.",
+	"apihelp-antispoof-example-1": "Vérifier le nom d’utilisateur « Foo » d’après AntiSpoof",
+	"apihelp-createaccount-param-ignoreantispoof": "Ignorer les contrôles d’usurpation (nécessite le droit <code>override-antispoof</code>)."
+}

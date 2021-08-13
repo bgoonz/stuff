@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Michawiki"
+		]
+	},
+	"antispoof-desc": "Blokuje wutworjenje kontow z měšanymi pismami, skonfuznjacymi a podobnymi wužiwarskimi mjenami",
+	"antispoof-conflict-top": "Mjeno \"$1\" je přepodobny {{PLURAL:$2|slědowacemu wužiwarskemu mjenu|slědowacymaj wužiwarskimaj mjenomaj|slědowacym wužiwarskim mjenam}}:",
+	"antispoof-conflict-bottom": "Prošu wubjer druhe mjeno.",
+	"antispoof-name-illegal": "Požadane wužiwarske mjeno „$1” njeje dowolene. Přičina: $2<br />Prošu wubjer druhe wužiwarske mjeno.",
+	"antispoof-badtype": "Njepłaćiwy datowy typ",
+	"antispoof-empty": "Prózdne polo",
+	"antispoof-prohibited": "Wobsahuje njedowolene znamješko $1",
+	"antispoof-combining": "Započina so ze znamješkowej kombinaciju $1",
+	"antispoof-unassigned": "Wobsahuje njepřirjadowane abo njewitane znamješko",
+	"antispoof-deprecated": "Wobsahuje zestarjene znamješko $1",
+	"antispoof-noletters": "Njejsu pismiki wobsahowane.",
+	"antispoof-mixedscripts": "Su znamješka rozdźělnych njekompatibelnych pismow wobsahowane",
+	"antispoof-tooshort": "Kanonizowane mjeno je překrótke.",
+	"antispoof-ignore": "Zamylensku kontrolu ignorować",
+	"right-override-antispoof": "Kontrole podobnosće wužiwarskich mjenow potłóčić"
+}

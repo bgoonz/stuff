@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mainframe98",
+			"Mar(c)",
+			"Siebrand",
+			"Sjoerddebruin"
+		]
+	},
+	"autoproxyblock-desc": "Staat het automatisch blokkeren van handelingen via open proxy's op deze wiki toe",
+	"proxy-blocked": "{{GENDER:|Uw}} IP-adres staat op een lijst van proxy's. De uitgevoerde handeling is geannuleerd.",
+	"abusefilter-edit-builder-vars-is-proxy": "True als de handeling is uitgevoerd via een proxy",
+	"tag-proxy": "handeling via proxy",
+	"action-proxyunbannable": "uitgezonderd te zijn van automatische blokkades van proxy's",
+	"right-proxyunbannable": "Uitgezonderd van automatische blokkades van proxy's",
+	"action-notagproxychanges": "te voorkomen dat bewerkingen via proxy's als \"proxy\" gelabeld worden",
+	"right-notagproxychanges": "Voorkom dat bewerkingen via proxy's als \"proxy\" gelabeld worden",
+	"action-autoproxyblock-log": "het AutoProxyBlokkade logboek te bekijken",
+	"right-autoproxyblock-log": "Het logboek met automatisch geblokkeerde wijzigingen via proxy's bekijken",
+	"proxyblock-log-name": "Logboek met automatische proxyblokkades",
+	"proxyblock-log-header": "Lijst van automatisch geblokkeerde wijzigingen via proxy's",
+	"proxyblock-logentry-blocked": "handeling \"$2\" door {{GENDER:$3|gebruiker}} $3 op pagina [[$1]] automatisch geblokkeerd."
+}

@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cwlin0416",
+			"Justincheng12345",
+			"Kly",
+			"LNDDYL",
+			"Macofe",
+			"Shirayuki",
+			"Simon Shek"
+		]
+	},
+	"batchuserrights": "分批處理的使用者權限",
+	"batchuserrights-desc": "允許一次將一個或多個用戶添加到一個組或多個組",
+	"batchuserrights-names": "新增至該組的使用者（每行一個）：",
+	"batchuserrights-intro": "本頁讓您能一次將數名使用者增加至一個使用者權限群組。\n出於安全原因，可供添加的使用者權限群組由擴展中設定，而且無法於維基內作出更改。\n如果您要批量添加其他使用者權限群組，請詢問系統管理員。",
+	"batchuserrights-single-progress-update": "已新增{{PLURAL:$1|群組}}至 <strong>$2</strong> 。",
+	"batchuserrights-add-groups": "添加$1位使用者至以下{{PLURAL:$2|使用者群組}}：<strong>$3</strong>。",
+	"batchuserrights-userload-error": "無法載入{{GENDER:$1|使用者}} '''$1'''。",
+	"batchuserrights-no-groups": "您沒有選擇任何群組。\n這將會使什麼也不會做。\n頁面的剩餘部分將繼續執行，以便讓您看到是否有任何使用者無法載入。",
+	"right-batchuserrights": "一次過將一個或多個使用者增加到一個或多個使用者權限群組",
+	"action-batchuserrights": "一次過將一個或多個使用者增加到一個或多個使用者權限群組"
+}

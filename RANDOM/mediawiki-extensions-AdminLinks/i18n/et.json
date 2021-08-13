@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Avjoska",
+			"Pikne",
+			"Roland"
+		]
+	},
+	"adminlinks": "Administraatori lingid",
+	"adminlinks-desc": "Lisab [[Special:AdminLinks|erilehekülje]] administraatoritele kasulike linkidega.",
+	"adminlinks_documentation": "Lisa $1 dokumentatsioon",
+	"adminlinks_general": "Üldine",
+	"adminlinks_editsidebar": "Muuda külgriba",
+	"adminlinks_editcss": "Muuda CSS-faili",
+	"adminlinks_editmainpagename": "Muuda esilehe pealkirja",
+	"adminlinks_users": "Kasutajad",
+	"adminlinks_browsesearch": "Lehitsemine ja otsimine",
+	"adminlinks_importexport": "Import ja eksport",
+	"right-adminlinks": "Näha linki leheküljele [[Special:AdminLinks|administraatori lingid]]"
+}

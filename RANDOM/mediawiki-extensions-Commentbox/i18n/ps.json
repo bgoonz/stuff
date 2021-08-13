@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ahmed-Najib-Biabani-Ibrahimkhel"
+		]
+	},
+	"commentbox-savebutton": "تبصره خوندي کول",
+	"commentbox-name": "نوم:",
+	"commentbox-log": "نوې انګېرنې",
+	"commentbox-first-comment-heading": "== انګېرنې ==",
+	"commentbox-regex": "/\\n==\\s*تبصرې\\s*==\\s*\\n/i",
+	"commentbox-error-page-nonexistent": "پدې نوم مخ نشته!",
+	"commentbox-error-namespace": "په دې نوم-تشيال کې د انګېرنو اجازه نشته!"
+}

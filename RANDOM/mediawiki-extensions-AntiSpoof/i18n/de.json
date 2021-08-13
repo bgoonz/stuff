@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Crazy1880",
+			"Geitost",
+			"Kghbln",
+			"Metalhead64",
+			"Raimond Spekking",
+			"Umherirrender"
+		]
+	},
+	"antispoof-desc": "Verhindert die Erstellung von Benutzerkonten mit gemischten Zeichensätzen, verwirrenden und ähnlichen Benutzernamen",
+	"antispoof-conflict-top": "Der Benutzername „$1“ ist {{PLURAL:$2|dem|den}} folgenden Benutzernamen zu ähnlich:",
+	"antispoof-conflict-bottom": "Bitte wähle einen anderen Benutzernamen.",
+	"antispoof-name-illegal": "Der gewünschte Benutzername „$1“ ist nicht möglich. Grund: $2<br />Bitte wähle einen anderen Benutzernamen.",
+	"antispoof-bad-char": "„$1“ ($2)",
+	"antispoof-badtype": "Ungültiger Datentyp",
+	"antispoof-empty": "Leeres Feld",
+	"antispoof-prohibited": "Das nicht zulässige Zeichen $1 ist enthalten.",
+	"antispoof-combining": "Er fängt mit einem Verbindungszeichen $1 an.",
+	"antispoof-unassigned": "Er enthält das nicht zugeordnete Zeichen $1.",
+	"antispoof-deprecated": "Er enthält das unzulässige Zeichen $1.",
+	"antispoof-noletters": "Er enthält keine Buchstaben.",
+	"antispoof-mixedscripts": "Er enthält Zeichen unterschiedlicher Schriftsysteme.",
+	"antispoof-tooshort": "Der normalisierte Benutzername ist zu kurz.",
+	"antispoof-ignore": "Ähnlichkeitsprüfung ignorieren",
+	"antispoof-ignore-help": "Ermöglicht Benutzern mit ausreichenden Rechten, ein Benutzerkonto zu erstellen, auch wenn sein Name mit einem vorhandenen Benutzerkonto ähnlich ist.",
+	"action-override-antispoof": "die Benutzernamens-Ähnlichkeitsprüfung außer Kraft zu setzen",
+	"right-override-antispoof": "Die Benutzernamens-Ähnlichkeitsprüfung außer Kraft setzen"
+}

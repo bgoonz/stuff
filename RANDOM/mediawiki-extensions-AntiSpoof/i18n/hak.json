@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"EagerLin",
+			"Hakka"
+		]
+	},
+	"antispoof-name-illegal": "Yung-fu-miàng \"$1\" yi-lâu Yung-fu-miàng \"$2\" fun-chha̍p, yí-kîn pûn kim-chṳ́ sṳ́-yung. Chhiáng sṳ́-yung khì-thâ ke yung-fu-miàng.",
+	"antispoof-badtype": "Chho-ngu ke chṳ̂-liau lui-hìn/錯誤个數據類型",
+	"antispoof-empty": "Khûng-pha̍k sṳ-chhon/空白字串",
+	"antispoof-prohibited": "Pâu-hàm chhai het-miàng-tân song ke sṳ-ngièn",
+	"antispoof-combining": "Chhut-yì kiet-ha̍p phêu-ki khôi-sṳ́",
+	"antispoof-unassigned": "Pâu-hàm mò chṳ́-thin fe̍t-he put-chai sṳ́-yung ke sṳ-ngièn",
+	"antispoof-noletters": "Mò pâu-hàm ngim-hò sṳ-ngièn/沒包含任何字元",
+	"antispoof-mixedscripts": "Pâu-hàm mò siong-yùng fun-ha̍p ke chṳ́-lin",
+	"antispoof-tooshort": "Ha̍p-fù phêu-chún ke miàng-chhṳ̂n thai-tón"
+}

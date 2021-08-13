@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nghtwlkr",
+			"Simny"
+		]
+	},
+	"commentbox-desc": "Legger til en kommentarboks til enkelte sider",
+	"commentbox-intro": "== Legg til en kommentar... ==\nHar du en kommentar til denne siden? Legg den til her eller <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} endre siden direkte]</span>.",
+	"commentbox-savebutton": "Lagre kommentar",
+	"commentbox-name": "Navn:",
+	"commentbox-name-explanation": "<small>(Tips: Du slipper å skrive inn navnet ditt manuelt her dersom du [[Special:UserLogin|logger inn]].)</small>",
+	"commentbox-log": "Nye kommentarer",
+	"commentbox-first-comment-heading": "== Kommentarer ==",
+	"commentbox-regex": "/\\n==\\s*Kommentarer\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Det oppsto en feil under oppretting av kommentaren",
+	"commentbox-error-page-nonexistent": "Denne siden finnes ikke!",
+	"commentbox-error-namespace": "Kommentarer er ikke tillatt i dette navnerommet!",
+	"commentbox-error-empty-comment": "Tomme kommentarer er ikke tillatt!"
+}

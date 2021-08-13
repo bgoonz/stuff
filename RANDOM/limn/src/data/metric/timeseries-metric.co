@@ -1,0 +1,71 @@
+_  = require 'underscore'
+ko = require 'knockout'
+
+{ Query,
+} = require '../../util'
+{ DataSource,
+} = require '../datasource'
+{ Metric,
+} = require './metric'
+
+
+class exports.TimeseriesMetric extends Metric
+    -> super ...
+    
+    
+    defaults : ->
+        source_id  : null       # String
+        source_col : null       # String|Number
+        timespan   :
+            start  : null       # String -> Date
+            end    : null       # String -> Date
+            step   : null       # String -> moment.Duration
+    
+    
+    /**
+     * Query object for the parameters of this Metric.
+     * @type ko.computed<Query>
+     * @depends source_col, timespan
+     */
+    query : @computed ->
+        source_col = @get 'source_col'
+        timespan   = @get 'timespan'
+        return unless source_col? and timespan
+        Query()
+            .step       timespan.step()
+            .timespan   timespan.start(), timespan.end()
+            .columns 0, source_col
+    
+    
+    /**
+     * The reified dates for the dataset associated with this Metric.
+     * @type ko.computed<Array<Date>>
+     * @depends materialized
+     */
+    dates : @computed ->
+        @materialized()?.columns[0]
+    
+    
+    /**
+     * The reified dataset values associated with this Metric.
+     * @type ko.computed<Array<Value>>
+     * @depends materialized
+     */
+    values : @computed ->
+        @materialized()?.columns[1]
+    
+    
+    /**
+     * Find the entry with a date closest to the date specified
+     * @param {Date} closestTo
+     * @returns {numeric} the closest entry
+     */
+    findClosest : (closestTo) ->
+        closest = null
+        closestDateDifference = 9007199254740992
+        for [date, value] of @data()
+            dateDifference = Math.abs closestTo.getTime() - date.getTime()
+            if dateDifference < closestDateDifference
+                closestDateDifference = dateDifference
+                closest = {date, value or NaN}
+        closest

@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dalibor Bosits",
+			"Ex13"
+		]
+	},
+	"absenteelandlord-reason": "Baza je automatski zaključana uslijed neaktivnosti administratora.",
+	"absenteelandlord-desc": "Automatski zaključava wiki bazu ukoliko su svi administratori neaktivni neko vrijeme"
+}

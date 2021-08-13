@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"John Reid"
+		]
+	},
+	"admanager": "Ad Manager",
+	"admanagerzones": "Ad Manager Zones",
+	"admanager-desc": "Provides ae [[Special:AdManager|speecial page]] that permits sysops tae set the zone fer pages or categories",
+	"admanager_docu": "Tae eik or remuiv the ad zone o ae page or entire categerie, eik or remuiv its title ablo.",
+	"admanagerzones_docu": "Enter ilka ad zone nummer oan its ain line.",
+	"admanager_invalidtargetpage": "Naw page foond wi title \"$1\".",
+	"admanager_invalidtargetcategory": "Naw categerie foond wi title \"$1\".",
+	"admanager_notable": "Mistak! Ae required database buird wisna foond! Rin update.php first.",
+	"admanager_noAdManagerZones": "Mistak! Ye maun eik some ad zones. Enter thaim at [[Special:AdManagerZones|Ad Manager Zones]].",
+	"admanager_labelPage": "Page titles",
+	"admanager_labelCategory": "Categorie names",
+	"admanager_submit": "Haun-in",
+	"admanager_noads": "Displey nae ads",
+	"admanager_Page": "Pages",
+	"admanager_Category": "Categories",
+	"admanager_added": "Yer chynges hae been hain'd",
+	"admanager_addedzone": "Eikit zone $1",
+	"admanager_zonenum": "Zone #: $1",
+	"admanager_zonenotnumber": "Mistak! $1 isna ae nummer.",
+	"admanager_return": "Return til [[Special:AdManager|Ad Manager]]",
+	"admanager_gotoads": "[[Special:AdManager|Eidit ad placement]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Eidit ad zones]]",
+	"right-admanager": "[[Special:AdManager|Manage advertising confeeguration]]"
+}

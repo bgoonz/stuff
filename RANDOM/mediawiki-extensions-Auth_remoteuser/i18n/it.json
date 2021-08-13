@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Beta16"
+		]
+	},
+	"auth_remoteuser-desc": "Registra automaticamente gli utenti utilizzando la variabile di ambiente <code>REMOTE_USER</code>"
+}

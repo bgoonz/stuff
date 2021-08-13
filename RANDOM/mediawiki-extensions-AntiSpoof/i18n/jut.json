@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Huslåke",
+			"Jyllanj"
+		]
+	},
+	"antispoof-desc": "Blokiire for oprettels å konti mä blanjen tejnsätt, forwirrenje elle liiknenje brugenaun",
+	"antispoof-name-illegal": "Naun \"$1\" ä ett tillæt for å forhinja forwirrenje elle etteliiknen brugenaun: $2. Wälg wenlist e ånj naun.",
+	"antispoof-badtype": "Udjylji datatyp",
+	"antispoof-empty": "Tomm streng",
+	"antispoof-prohibited": "Indeholder sortlistet tegn",
+	"antispoof-combining": "Begynder ve et kombinationsbogstav",
+	"antispoof-unassigned": "Indeholder ubrugte bogstaver",
+	"antispoof-noletters": "Inneholje ien buegstawe",
+	"antispoof-mixedscripts": "Inneholje inkompatibel, blanjen tejnsätt",
+	"antispoof-tooshort": "Naun ä for kort"
+}

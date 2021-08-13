@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"commentbox-desc": "Adde un quadro pro commentos a certe paginas",
+	"commentbox-intro": "== Adde un commento... ==\nHa tu un commento sur iste pagina? Adde lo hic o <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} modifica le pagina directemente]</span>.",
+	"commentbox-savebutton": "Publicar commento",
+	"commentbox-name": "Nomine:",
+	"commentbox-name-explanation": "<small>(Aviso: Si tu [[Special:UserLogin|aperi un session]], il non essera necessari completar tu nomine hic manualmente)</small>",
+	"commentbox-log": "Nove commentos",
+	"commentbox-first-comment-heading": "== Commentos ==",
+	"commentbox-regex": "/\\n==\\s*Commentos\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Error durante le creation del commento",
+	"commentbox-error-page-nonexistent": "Iste pagina non existe!",
+	"commentbox-error-namespace": "Commentos non es permittite in iste spatio de nomines!",
+	"commentbox-error-empty-comment": "Commentos vacue non es permittite!"
+}

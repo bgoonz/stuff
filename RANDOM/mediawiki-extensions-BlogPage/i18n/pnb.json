@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Abbas dhothar"
+		]
+	},
+	"blog-and": "تے",
+	"blog-in-the-news": "خبراں وچ",
+	"blog-new-articles": "نویں لیکھ",
+	"blog-permission-required": "توانوں لیکھ  بنانے دی اجازت نئیں۔",
+	"blog-view-archive-link": "سب دیکھو",
+	"blog-ah-no-results": "کوئی صفحہ نئیں لبھیا۔",
+	"blog-ah-new-articles": "نویں لیکھ",
+	"blog-ah-todays-articles": "اج دا لیکھ",
+	"blog-create-title": "عنوان",
+	"blog-create-text": "متن",
+	"blog-create-categories": "گٹھاں",
+	"blog-create-button": "تخلیق کرو!",
+	"blog-more": "ہور",
+	"blog-time-days": "{{PLURAL:$1|اک دن|$1 دناں}}",
+	"blog-time-seconds": "$1 {{PLURAL:$1|سکنٹ}}",
+	"blog-user-articles-votes": "{{PLURAL:$1|ووٹ|ووٹاں}}"
+}

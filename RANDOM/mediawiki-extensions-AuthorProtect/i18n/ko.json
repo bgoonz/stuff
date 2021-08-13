@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"HDNua",
+			"Klutzy",
+			"Kwj2772",
+			"Revi",
+			"Ykhwong",
+			"Yknok29",
+			"아라"
+		]
+	},
+	"authorprotect": "저자가 아닌 이의 편집을 보호",
+	"authorprotect-desc": "문서의 저자가 다른 사용자로부터 보호할 수 있습니다",
+	"authorprotect-notauthor": "{{GENDER:$1|당신은}} 이 문서의 {{GENDER:$1|저자}}가 아닙니다.",
+	"authorprotect-confirm": "보호 수준 바꾸기",
+	"authorprotect-edit": "저자의 편집 제한하기",
+	"authorprotect-move": "저자의 이동 제한하기",
+	"authorprotect-intro": "이 양식을 사용하여 이 문서를 저자가 아닌 이로부터 잠급니다.",
+	"authorprotect-success": "보호를 설정했습니다!",
+	"protect-level-author": "저자가 아닌 이로부터 보호",
+	"restriction-level-author": "저자가 보호함",
+	"action-authorprotect": "저자가 아닌 이로부터 보호",
+	"right-authorprotect": "작성한 문서를 보호하기",
+	"action-author": "저자가 보호한 문서를 편집하기",
+	"right-author": "저자가 보호한 문서를 편집하기"
+}

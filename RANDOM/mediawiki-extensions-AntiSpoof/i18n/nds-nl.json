@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Servien"
+		]
+	},
+	"antispoof-desc": "Blokkeert t anmaken van gebrukers mit meerdere schriften, verwarrende en soortgelieke gebrukersnamen",
+	"antispoof-conflict-top": "De naam \"$1\" lik te veule op de volgende bestaonde {{PLURAL:$2|gebruker|$2 gebrukers}}:",
+	"antispoof-conflict-bottom": "Kies n aandere naam.",
+	"antispoof-name-illegal": "De naam \"$1\" is niet toe-estaon, um verwarring of lelike gebrukersnamen te veurkoemen: $2. Kies n aandere naam.",
+	"antispoof-badtype": "Ongeldig datatype",
+	"antispoof-empty": "Leeg veld",
+	"antispoof-prohibited": "Hierin steet t verbeujen teken $1",
+	"antispoof-combining": "Begint mit t kombinasieteken $1",
+	"antispoof-unassigned": "Bevat n niet toe-ewezen of ongewunst teken",
+	"antispoof-deprecated": "Hierin steet t verbeujen teken $1",
+	"antispoof-noletters": "Bevat gien letters",
+	"antispoof-mixedscripts": "Bevat onverenigbaore schriftsystemen",
+	"antispoof-tooshort": "De naam die'j in-evoerd hebben is te kort.",
+	"antispoof-ignore": "Kontrole op soortgelieke gebrukersnamen negeren",
+	"right-override-antispoof": "Fopkontroles negeren"
+}

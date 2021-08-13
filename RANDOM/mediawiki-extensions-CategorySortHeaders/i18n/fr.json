@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gomoko",
+			"Thibaut120094",
+			"Verdy p"
+		]
+	},
+	"categorysortheaders-desc": "Permet de spécifier des entêtes de tri par « premier caractère » avec plusieurs caractères pour classer les pages dans les catégories, en utilisant une syntaxe comme <nowiki>[[Category:Foo|^Entête^Partie invisible de la clé de tri]]</nowiki>"
+}

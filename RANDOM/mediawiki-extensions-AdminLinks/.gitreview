@@ -1,0 +1,5 @@
+[gerrit]
+host=gerrit.wikimedia.org
+port=29418
+project=mediawiki/extensions/AdminLinks.git
+track=1

@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"MF-Warburg"
+		]
+	},
+	"code-author-link": "ligasaun?",
+	"code-field-id": "Versaun",
+	"code-field-author": "Autór",
+	"code-field-timestamp": "Tempu",
+	"code-rev-author": "Autór",
+	"code-rev-date": "Tempu:",
+	"code-rev-message": "Komentáriu:",
+	"code-rev-rev": "Versaun:",
+	"code-rev-rev-viewvc": "iha ViewVC",
+	"code-rev-comment-by": "Komentáriu $1 nian",
+	"code-rev-diff": "Diferensa",
+	"code-rev-diff-link": "dif",
+	"code-status-new": "foun",
+	"code-status-ok": "ok",
+	"code-revfilter-cr_author": "Autór = $1",
+	"repoadmin-new-button": "Kria",
+	"repoadmin-edit-button": "OK"
+}

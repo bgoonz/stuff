@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Muotâ",
+			"Trondtr",
+			"Yupik"
+		]
+	},
+	"coll-download_title": "Luođii",
+	"coll-download": "Luođii",
+	"coll-remove": "Siho",
+	"coll-show": "Čääiti",
+	"coll-move_up": "Sirde pajas",
+	"coll-move_down": "Sirde vuálás",
+	"coll-suggest_show": "čääiti",
+	"coll-print_export": "Printtii teikâ tuálvu",
+	"coll-create_a_book": "Räähti kirje",
+	"coll-book_creator": "Kirje huksimsaje",
+	"coll-download_as": "Luođii $1-tiätuvuárkkán",
+	"coll-disable": "Meddâlist kiävtust",
+	"coll-book_creator_disable": "Meddâlist kirje rähtimtile kiävtust",
+	"coll-book_creator_disable_tooltip": "Loopât kirje hammimtile",
+	"coll-add_this_page": "Laaseet taam siijđo kirjásâd",
+	"coll-add_page_tooltip": "Lasseet tááláá wikisiijđo kirjásâd",
+	"coll-help": "Iše",
+	"coll-help_tooltip": "Čääiti ravvuu kirjij rähtimist",
+	"coll-helppage": "Help:Kirjeh",
+	"coll-n_pages": "$1 {{PLURAL:$1|siijđo|sijđod}}",
+	"coll-remove_this_page": "Meddâlist taam siijđo kirjestâd",
+	"coll-show_collection": "Čääiti kirje",
+	"coll-show_collection_tooltip": "Colkkâl vâi peesah hammiđ, luođiđ teikâ tiiláđ kirje.",
+	"coll-make_suggestions": "Iävtuttum siijđoh",
+	"coll-make_suggestions_tooltip": "Čääiti iävtuttâsâid, moh vuáđuduveh kirje sijđoid",
+	"coll-attribution-anons": "Nomâttem: $1",
+	"coll-article-attribution": "<b>$1</b> <i>Käldee:</i> $2 <i>Uásálisteeh:</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>Käldee:</i> $2 <i>Liiseens:</i> $3 <i>Uásálisteeh:</i> $4 <i>Originaal artist:</i> $5"
+}

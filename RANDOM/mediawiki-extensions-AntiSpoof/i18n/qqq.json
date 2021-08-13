@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Beau",
+			"Kghbln",
+			"Mormegil",
+			"Shirayuki",
+			"Siebrand",
+			"Titoxd",
+			"Umherirrender"
+		]
+	},
+	"antispoof-desc": "{{desc|name=AntiSpoof|url=https://www.mediawiki.org/wiki/Extension:AntiSpoof}}",
+	"antispoof-conflict-top": "Account creation error message because attempted username is too similar to existing username(s).\n\nParameters:\n* $1 - the username that someone wanted to create\n* $2 - number of usernames that triggered the error",
+	"antispoof-conflict-item": "{{notranslate}}\nParameters:\n* $1 - username",
+	"antispoof-conflict-bottom": "Suggestion for user that tried to create a user with a name that was not accepted.",
+	"antispoof-name-illegal": "Account creation error message because a user account creation rule was violated. Parameters:\n* $1 is the username that someone wanted to create\n* $2 is the error message. One of {{msg-mw|antispoof-badtype}}, {{msg-mw|antispoof-empty}}, {{msg-mw|antispoof-prohibited}} and others.",
+	"antispoof-bad-char": "{{Optional}}\nIt is not a complete message, but a template for designator of a bad character, so localization can format it properly. Parameters:\n* $1 is the bad character itself.\n* $2 is the Unicode code point of bad character (\"U+\" followed by hex number).",
+	"antispoof-bad-char-non-printable": "{{notranslate}}\nThe same as antispooof-bad-char, but for non-printable characters. Since non-printable characters do not have visual representation, template has only one parameter:\n* $1 is the Unicode code point of bad character (\"U+\" followed by hex number).",
+	"antispoof-badtype": "Reason for failed account creation.",
+	"antispoof-empty": "Reason for failed account creation.",
+	"antispoof-prohibited": "Reason for failed account creation. Parameters:\n* $1 — bad character designator (built with either {{msg-mw|antispoof-bad-char}} or {{msg-mw|antispoof-bad-char-non-printable}}).",
+	"antispoof-combining": "Reason for failed account creation. Parameters:\n* $1 — bad character designator (built with either {{msg-mw|antispoof-bad-char}} or {{msg-mw|antispoof-bad-char-non-printable}}).",
+	"antispoof-unassigned": "Reason for failed account creation. Parameters:\n* $1 — bad character designator (built with either antispoof-bad-char or …-non-printable).",
+	"antispoof-deprecated": "Reason for failed account creation. Parameters:\n* $1 — bad character designator (built with either {{msg-mw|antispoof-bad-char}} or {{msg-mw|antispoof-bad-char-non-printable}}).\n{{doc-important|\"Deprecate\" does '''not''' mean \"out of date\" or \"old\"}}",
+	"antispoof-noletters": "Reason for failed account creation.",
+	"antispoof-mixedscripts": "Reason for failed account creation.",
+	"antispoof-tooshort": "Reason for failed account creation.",
+	"antispoof-ignore": "This is a checkbox shown on [[Special:UserLogin|a signup page]] when a user with both [[MediaWiki:Right-createaccount/qqq|createaccount]] and [[MediaWiki:Right-override-antispoof/qqq|override-antispoof]] rights tries to register a new user account. It allows to register a username that would otherwise be blocked by the [[mw:Extension:AntiSpoof|AntiSpoof extension]].",
+	"antispoof-ignore-help": "API help message describing {{msg-mw|antispoof-ignore}}.",
+	"action-override-antispoof": "{{doc-action|override-antispoof}}",
+	"right-override-antispoof": "{{doc-right|override-antispoof}}"
+}

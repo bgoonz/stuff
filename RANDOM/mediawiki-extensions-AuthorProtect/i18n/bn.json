@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aftabuzzaman",
+			"MdsShakil",
+			"Wikitanvir"
+		]
+	},
+	"authorprotect": "প্রণেতা ছাড়া বাকিদের কাছ থেক পাতা সুরক্ষা করুন",
+	"authorprotect-desc": "প্রণেতাকে অপর ব্যবহারকারীদের থেকে পাতাটি সুরক্ষার অধিকার দিন",
+	"authorprotect-notauthor": "{{GENDER:$1|আপনি}} এই পাতাটির {{GENDER:$1|প্রণেতা}} নন",
+	"authorprotect-confirm": "সুরক্ষার মাত্রা পরিবর্তন করুন",
+	"authorprotect-edit": "শুধুমাত্র প্রণেতাদের জন্য সম্পাদনা সীমাবদ্ধ করুন",
+	"authorprotect-move": "শুধুমাত্র প্রণেতাদের জন্য স্থানান্তর সীমাবদ্ধ করুন",
+	"authorprotect-intro": "এই ফর্মটি ব্যবহার করে অ-প্রণেতাদের কাছে এই পাতাটি সুরক্ষিত করুন",
+	"authorprotect-success": "সুরক্ষা সফল!",
+	"protect-level-author": "প্রণেতা ছাড়া সবার কাছে সুরক্ষিত করুন",
+	"restriction-level-author": "প্রণেতা-সুরক্ষিত",
+	"right-authorprotect": "প্রণেতার পাতা সুরক্ষা করুন"
+}

@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"BeginaFelicysym"
+		]
+	},
+	"biblioplus-desc": "Automatycznie pobiera cytaty z baz danych PubMed i ISBN",
+	"biblioplus-doi-tooltip": "Przejrzyj lub kup artykuł od wydawcy",
+	"biblioplus-pmid-tooltip": "Przejrzyj lub kup artykuł od wydawcy (jeśli jest dostępny)",
+	"biblioplus-isbn-tooltip": "Informacje o książce w isbndb.org",
+	"biblioplus-medline-abstracts": "Wszystkie streszczenia z Medline:",
+	"biblioplus-pubmed-abstracts": "Wszystkie streszczenia z PubMed",
+	"biblioplus-hubmed-abstracts": "Wszystkie streszczenia z HubMed",
+	"biblioplus-vkey-title": "łącze do bazy danych bibliografii"
+}

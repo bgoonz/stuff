@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"BadDog",
+			"Obsuser",
+			"Жељко Тодоровић",
+			"Михајло Анђелковић",
+			"Сербијана"
+		]
+	},
+	"authorprotect": "Заштита страница од неаутора",
+	"authorprotect-desc": "Омогућава аутору неке странице да је заштити од других корисника",
+	"authorprotect-notauthor": "Нисте {{GENDER:$1|аутор|ауторка}} странице.",
+	"authorprotect-confirm": "Промени нивое заштите",
+	"authorprotect-edit": "Само аутори могу да уређују",
+	"authorprotect-move": "Само аутори могу да премештају",
+	"authorprotect-intro": "Користите овај образац да бисте закључали страницу неауторима.",
+	"authorprotect-success": "Заштита је постављена.",
+	"protect-level-author": "Заштити од неаутора",
+	"restriction-level-author": "Ауторска заштита",
+	"action-authorprotect": "заштитите од не-аутора",
+	"right-authorprotect": "заштита ауторских страница",
+	"action-author": "уређујете странице које је заштитио аутор",
+	"right-author": "уређивање страница које је заштитио аутор"
+}

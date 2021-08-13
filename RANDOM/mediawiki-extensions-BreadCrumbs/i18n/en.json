@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"AABoyles",
+			"Kghbln",
+			"Ryan Lane"
+		]
+	},
+	"breadcrumbs-desc": "Adds a trail of bread crumbs to the page",
+	"prefs-breadcrumbs-separator": "Bread crumb separator",
+	"prefs-breadcrumbs-separator-max": "A maximum 2 characters may be entered.",
+	"prefs-breadcrumbs": "Bread Crumbs",
+	"prefs-breadcrumbs-showcrumbs": "Display bread crumbs",
+	"prefs-breadcrumbs-numberofcrumbs": "Number of bread crumbs",
+	"prefs-breadcrumbs-numberofcrumbs-max": "A maximum 20 bread crumbs may be shown.",
+	"prefs-breadcrumbs-namespaces": "Include Namespaces in bread crumbs",
+	"prefs-breadcrumbs-filter-duplicates": "Filter out repeatedly-visited pages",
+	"prefs-breadcrumbs-preceding-text": "Text to appear before bread crumbs",
+	"prefs-breadcrumbs-preceding-text-max": "A maximum 30 characters may be entered."
+}

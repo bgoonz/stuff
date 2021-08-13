@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bennylin",
+			"EugeneZelenko",
+			"Fryed-peach",
+			"Kghbln",
+			"Purodha",
+			"Shirayuki",
+			"Umherirrender"
+		]
+	},
+	"adminlinks": "{{doc-special|AdminLinks}}",
+	"adminlinks-desc": "{{desc|name=Admin Links|url=https://www.mediawiki.org/wiki/Extension:Admin_Links}}",
+	"adminlinks_documentation": "The label of a link to the documentation for a certain extension. This message is not used by \"Admin Links\" itself but provided for usage by other extensions. Currently (June 2016) \"Semantic MediaWiki\", \"Semantic Forms\" and \"Semantic Drilldown\" are using this message.\n\nParameter:\n* $1 - extension name, thus the <code><nowiki>{{GRAMMAR:}}</nowiki></code> parser function may be used. If unsure an alternate approach may be to translate like \"Documentation for $1\".\n\n{{Identical|Documentation}}",
+	"adminlinks_general": "Section name for general links for administrators.\n{{Identical|General}}",
+	"adminlinks_editsidebar": "Link description that will lead to the page where the site's sidebar can be edited.",
+	"adminlinks_editcss": "Link description that will lead to the page where a CSS page can be edited.",
+	"adminlinks_editmainpagename": "Link description that will lead to the page where the name of the main page can be edited.",
+	"adminlinks_users": "Section name for links for administrators.\n{{Identical|User}}",
+	"adminlinks_browsesearch": "Section name for links for administrators related to browsing and searching.",
+	"adminlinks_importexport": "Section name for links for administrators related to import and export of pages and data.",
+	"adminlinks_pagenotfound": "Error message when $1 is not a special page object. Parameters: \n* $1 - special page",
+	"action-adminlinks": "{{doc-action|adminlinks}}",
+	"right-adminlinks": "{{doc-right|adminlinks}}"
+}

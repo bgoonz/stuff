@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Artsiom91",
+			"Тест"
+		]
+	},
+	"code-field-author": "Аўтар",
+	"code-field-timestamp": "Дата",
+	"code-rev-author": "Аўтар:",
+	"code-rev-date": "Дата",
+	"code-signoff-field-date": "Дата",
+	"code-revfilter-cr_author": "Аўтар = $1",
+	"code-stats": "статыстыка"
+}

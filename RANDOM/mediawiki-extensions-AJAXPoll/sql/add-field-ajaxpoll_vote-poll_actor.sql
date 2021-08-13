@@ -1,0 +1,1 @@
+ALTER TABLE /*_*/ajaxpoll_vote ADD COLUMN poll_actor bigint unsigned NOT NULL AFTER poll_id;

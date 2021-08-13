@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chameleon222",
+			"EvenT",
+			"Event",
+			"Jon Harald Søby"
+		]
+	},
+	"admanager": "Annonsebehandler",
+	"admanagerzones": "Soner for annonsebehandler",
+	"admanager-desc": "Gir en [[Special:AdManager|spesialside]] som lar administratorer sette sonen for sider eller kategorier",
+	"admanager_docu": "For å legge inn eller fjerne annonsesonen av en side eller hele kategorien er det bare å legge inn eller fjerne sidens eller kategoriens tittel under.",
+	"admanagerzones_docu": "Legg inn hvert annonsesonenummer på egen linje.",
+	"admanager_invalidtargetpage": "Ingen side funnet med tittelen «$1».",
+	"admanager_invalidtargetcategory": "Ingen kategori funnet med tittelen «$1».",
+	"admanager_notable": "Feil! En nødvendig databasetabell ble ikke funnet! Kjør update.php først.",
+	"admanager_noAdManagerZones": "Feil! Du må legge til noen reklamesoner. Legg dem i [[Special:AdManagerZones|Ad Manager Zones]].",
+	"admanager_labelPage": "Sidetitler",
+	"admanager_labelCategory": "Kategorinavn",
+	"admanager_submit": "Send",
+	"admanager_noads": "Vis ingen annonser",
+	"admanager_Page": "Sider",
+	"admanager_Category": "Kategorier",
+	"admanager_added": "Endringene dine har blitt lagret.",
+	"admanager_addedzone": "La til sone $1.",
+	"admanager_removedzone": "Fjernet sone $1.",
+	"admanager_nozonesadded": "Ingen soner ble lagt til.",
+	"admanager_nozonesremoved": "Ingen soner ble fjernet.",
+	"admanager_zonenum": "Sone #: $1",
+	"admanager_zonenotnumber": "Feil! $1 er ikke et tall.",
+	"admanager_return": "Gå tilbake til [[Special:AdManager|Ad Manager]]",
+	"admanager_gotoads": "[[Special:AdManager|Rediger annonseplassering]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Rediger annonsesoner]]",
+	"action-admanager": "behandle reklamekonfigurasjon",
+	"right-admanager": "[[Special:AdManager|Håndter annonsekonfigurering]]"
+}

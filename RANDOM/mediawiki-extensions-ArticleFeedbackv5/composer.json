@@ -1,0 +1,31 @@
+{
+	"name": "mediawiki/article-feedbackv5",
+	"type": "mediawiki-extension",
+	"description": "The Article Feedback Tool, Version 5 is a MediaWiki extension designed to engage readers in the assessment of article quality.",
+	"homepage": "https://www.mediawiki.org/wiki/Extension:ArticleFeedbackv5",
+	"license": "GPL-2.0-or-later",
+	"require": {
+		"composer/installers": "*"
+	},
+	"suggest": {
+		"mediawiki/abuse-filter": "dev-master"
+	},
+	"require-dev": {
+		"mediawiki/mediawiki-codesniffer": "37.0.0",
+		"mediawiki/minus-x": "1.1.1",
+		"php-parallel-lint/php-console-highlighter": "0.5.0",
+		"php-parallel-lint/php-parallel-lint": "1.3.0"
+	},
+	"scripts": {
+		"test": [
+			"parallel-lint . --exclude node_modules --exclude vendor",
+			"minus-x check .",
+			"phpcs -sp"
+		],
+		"fix": [
+			"phpcbf",
+			"minus-x fix .",
+			"phpcbf"
+		]
+	}
+}

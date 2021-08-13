@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Siebrand"
+		]
+	},
+	"checkpoint": "Opslaan en doorgaan met bewerken",
+	"checkpoint-desc": "Maakt het mogelijk om een bewerking op te slaan en door te gaan met bewerken",
+	"checkpoint-tooltip": "Uw voortgang opslaan en doorgaan met het bewerken van de pagina",
+	"checkpoint-notice": "([[{{ns:project}}:Tussenstappen|tussenstap opslaan]])"
+}

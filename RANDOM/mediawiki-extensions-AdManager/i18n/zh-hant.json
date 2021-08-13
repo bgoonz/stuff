@@ -1,0 +1,40 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cwlin0416",
+			"Justincheng12345",
+			"Kly",
+			"LNDDYL",
+			"Liuxinyu970226",
+			"Oapbtommy",
+			"Simon Shek"
+		]
+	},
+	"admanager": "廣告管理員",
+	"admanagerzones": "廣告管理員區域",
+	"admanager-desc": "提供一個[[Special:AdManager|特殊頁面]]以供管理員設置頁面或分類的區域",
+	"admanager_docu": "要添加或移除一個頁面或分類的廣告區域，在下面添加或移除頁面或分類的標題。",
+	"admanagerzones_docu": "在其行上輸入每個廣告區域編號。",
+	"admanager_invalidtargetpage": "找不到標題名為“$1”的頁面",
+	"admanager_invalidtargetcategory": "找不到標題名為“$1”的分類",
+	"admanager_notable": "錯誤！找不到某數據庫資料表！請先運行update.php。",
+	"admanager_noAdManagerZones": "錯誤！您必須添加廣告區。在[[Special:AdManagerZones|管理廣告區]]內輸入它。",
+	"admanager_labelPage": "頁面標題",
+	"admanager_labelCategory": "類別名稱",
+	"admanager_submit": "送出",
+	"admanager_noads": "不顯示廣告",
+	"admanager_Page": "頁面",
+	"admanager_Category": "類別",
+	"admanager_added": "已儲存變更。",
+	"admanager_addedzone": "已新增區域 $1",
+	"admanager_removedzone": "已移除區域 $1。",
+	"admanager_nozonesadded": "未新增任何區域。",
+	"admanager_nozonesremoved": "未移除任何區域。",
+	"admanager_zonenum": "區＃：$1",
+	"admanager_zonenotnumber": "錯誤！$1 不是一個數字。",
+	"admanager_return": "回到[[Special:AdManager|廣告管理器]]",
+	"admanager_gotoads": "[[Special:AdManager|編輯廣告位置]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|編輯廣告區域]]",
+	"action-admanager": "管理廣告配置",
+	"right-admanager": "[[Special:AdManager|管理廣告配置]]"
+}

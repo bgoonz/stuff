@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Boukman",
+			"LeGuyanaisPure",
+			"Masterches"
+		]
+	},
+	"antispoof-desc": "Bloke kreyasyon kont ki genyen diferan alfabèt, ki ka mennen nan konfizyon oubyen ki genyen non itilizatè ki sanble trop",
+	"antispoof-name-illegal": "Non itilizatè \"$1\" pa otorize pou anpeche li konfonn ak non itilizatè: \"$2\"\nTanpri chwazi yon lòt non.",
+	"antispoof-badtype": "Tip done sa yo move",
+	"antispoof-empty": "Chèn vid",
+	"antispoof-prohibited": "Kontni yon karaktè ki pa otorize",
+	"antispoof-combining": "Ap koumanse avèk yon mak konbine",
+	"antispoof-unassigned": "Kontni yon karaktè ki pa asiyen oubyen ki pa itilize ankò",
+	"antispoof-noletters": "Ka kontni pyès lèt",
+	"antispoof-mixedscripts": "Kontni plizyè alfabèt ki pa konpatib",
+	"antispoof-tooshort": "Non kanonik an two kout"
+}

@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Acamicamacaraca",
+			"BadDog",
+			"Charmed94",
+			"Obsuser",
+			"Rancher",
+			"Михајло Анђелковић"
+		]
+	},
+	"adminlinks": "Административне везе",
+	"adminlinks-desc": "Додаје [[Special:AdminLinks|посебну страницу]] која садржи корисне везе за администраторе",
+	"adminlinks_documentation": "$1 документација",
+	"adminlinks_general": "Опште",
+	"adminlinks_editsidebar": "Уреди бочну траку",
+	"adminlinks_editcss": "Уреди CSS датотеку",
+	"adminlinks_editmainpagename": "Уреди назив главне стране",
+	"adminlinks_users": "Корисници",
+	"adminlinks_browsesearch": "Претраживање",
+	"adminlinks_importexport": "Увоз и извоз",
+	"adminlinks_pagenotfound": "Није пронађена посебна страница са називом: $1.",
+	"action-adminlinks": "погледате административне везе",
+	"right-adminlinks": "прегледање везе до [[Special:AdminLinks|администраторских веза]]"
+}

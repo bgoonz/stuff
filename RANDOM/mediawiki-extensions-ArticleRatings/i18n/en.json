@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Adam Carter",
+			"MarcoAurelio"
+		]
+	},
+	"changerating": "Change rating",
+	"changerating-back": "< Back to [[$1]].",
+	"changerating-intro-text": "What would you like to change ''$1'''s rating to?",
+	"changerating-missing-parameter": "No page name was given. The page should be specified in the URL.",
+	"changerating-no-such-page": "Sorry, the page \"$1\" does not exist.",
+	"changerating-reason": "Reason:",
+	"changerating-success": "Rating changed successfully.",
+	"changerating-submit": "Submit",
+	"massratings": "Mass ratings",
+	"massratings-legend": "List pages by rating",
+	"log-name-ratings": "Rating change log",
+	"log-description-ratings": "This log shows all the recent changes to pages' ratings.",
+	"logentry-ratings-change": "$1 changed the rating of $3 from $5 to $4",
+	"ratings-desc": "A complex interface for rating pages",
+	"right-change-rating": "Change the ratings of pages",
+	"are-disallowed": "Ratings have been disallowed for this namespace",
+	"are-no-such-page": "The page \"$1\" does not exist.",
+	"are-rating-for-page": "<span class=\"mw-rating-rating-for\">Rating for \"$1\"</span>:",
+	"are-change-rating": "Change rating",
+	"are-ratings": "{}",
+	"group-reviewer": "Reviewer",
+	"group-reviewer-member": "Reviewers",
+	"action-change-rating": "change article ratings",
+	"changerating-log-text": "Past rating changes on this article:",
+	"changerating-nolog-text": "There are no past rating changes on this article."
+}

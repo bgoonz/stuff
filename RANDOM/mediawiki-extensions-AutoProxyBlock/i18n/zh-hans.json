@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Liuxinyu970226",
+			"Xiaomingyan",
+			"佛壁灯"
+		]
+	},
+	"autoproxyblock-desc": "允许在wiki上执行操作以封禁开放代理",
+	"proxy-blocked": "{{GENDER:|您}}的IP地址被列为代理，操作执行失败。",
+	"abusefilter-edit-builder-vars-is-proxy": "如果此操作通过代理执行的话为真",
+	"tag-proxy": "通过代理的操作",
+	"action-proxyunbannable": "绕过对代理服务器的自动封禁",
+	"right-proxyunbannable": "避开代理服务器的自动封禁",
+	"action-notagproxychanges": "通过标记通过代理的编辑为“proxy”保护",
+	"right-notagproxychanges": "通过标记通过代理的编辑为“proxy”保护",
+	"action-autoproxyblock-log": "查看自动代理封禁日志",
+	"right-autoproxyblock-log": "查看自动封禁的通过代理的更改日志",
+	"proxyblock-log-name": "自动代理封禁日志",
+	"proxyblock-log-header": "被自动封禁的通过代理的操作列表",
+	"proxyblock-logentry-blocked": "在页面[[$1]]上由{{GENDER:$3|用户}}$3做出的操作“$2”被自动封禁。"
+}

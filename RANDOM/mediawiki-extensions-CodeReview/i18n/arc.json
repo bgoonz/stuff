@@ -1,0 +1,43 @@
+{
+	"@metadata": {
+		"authors": [
+			"Basharh",
+			"Michaelovic"
+		]
+	},
+	"code-comments": "ܥܘܩܒ̈ܐ",
+	"code-old-status": "ܐܝܟܢܝܘܬܐ ܥܬܝܩܬܐ",
+	"code-new-status": "ܐܝܟܢܝܘܬܐ ܚܕܬܐ",
+	"code-authors": "ܣܝܘܡ̈ܐ",
+	"code-author-name": "ܐܥܠ ܫܡܐ ܕܡܦܠܚܢܐ:",
+	"code-field-id": "ܬܢܝܬܐ",
+	"code-field-author": "ܣܝܘܡܐ",
+	"code-field-status": "ܐܝܟܢܝܘܬܐ",
+	"code-field-timestamp": "ܣܝܩܘܡܐ",
+	"code-field-path": "ܫܒܝܠܐ",
+	"code-rev-author": "ܣܝܘܡܐ:",
+	"code-rev-date": "ܣܝܩܘܡܐ:",
+	"code-rev-rev": "ܬܢܝܬܐ:",
+	"code-rev-modified-a": "ܐܘܣܦܬ",
+	"code-rev-modified-d": "ܫܝܦܬ",
+	"code-rev-status": "ܐܝܟܢܝܘܬܐ:",
+	"code-rev-comment-preview": "ܚܝܪܐ ܩܕܡܝܐ",
+	"code-rev-inline-preview": "ܚܝܪܐ ܩܕܡܝܐ:",
+	"code-rev-diff": "ܦܘܪܫܐ",
+	"code-rev-diff-link": "ܦܘܪܫܐ",
+	"code-rev-purge-link": "ܚܣܝ",
+	"code-rev-history-link": "ܬܫܥܝܬܐ",
+	"code-status-new": "ܚܕܬܐ",
+	"code-status-ok": "ܛܒ",
+	"code-status-old": "ܥܬܝܩܐ",
+	"code-signoff-field-user": "ܡܦܠܚܢܐ",
+	"code-pathsearch-path": "ܫܒܝܠܐ:",
+	"code-revfilter-cr_status": "ܐܝܟܢܝܘܬܐ = $1",
+	"code-revfilter-cr_author": "ܣܝܘܡܐ = $1",
+	"code-rev-submit": "ܠܒܘܟ ܫܘܚܠܦ̈ܐ",
+	"code-batch-status": "ܫܚܠܦ ܐܝܟܢܝܘܬܐ:",
+	"codereview-batch-submit": "ܫܕܪ",
+	"code-stats-count": "ܡܢܝܢܐ ܕܬܢܝܬ̈ܐ",
+	"repoadmin-new-button": "ܒܪܝ",
+	"repoadmin-edit-button": "ܛܒ"
+}

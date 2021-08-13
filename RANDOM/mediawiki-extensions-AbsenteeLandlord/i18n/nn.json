@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Harald Khan",
+			"Njardarlogar"
+		]
+	},
+	"absenteelandlord-reason": "Databasen har blitt låst automatisk grunna inaktivitet frå administratorane.",
+	"absenteelandlord-desc": "Låser databasen til wikien om alle administratorane er inaktive over eit visst tidsrom"
+}

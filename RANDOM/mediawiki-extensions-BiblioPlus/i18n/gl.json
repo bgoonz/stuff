@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"biblioplus-desc": "Obtén automaticamente citas de PubMed e da base de datos de ISBN",
+	"biblioplus-doi-tooltip": "Consultar ou mercar un artigo do editor",
+	"biblioplus-pmid-tooltip": "Consultar ou mercar un artigo do editor (se está dispoñible)",
+	"biblioplus-isbn-tooltip": "Información do libro en isbndb.org",
+	"biblioplus-medline-abstracts": "Todos os resumos de Medline:",
+	"biblioplus-pubmed-abstracts": "Todos os resumos en PubMed",
+	"biblioplus-hubmed-abstracts": "Todos os resumos en HubMed",
+	"biblioplus-vkey-title": "ligazón cara á base de datos bibliográfica"
+}

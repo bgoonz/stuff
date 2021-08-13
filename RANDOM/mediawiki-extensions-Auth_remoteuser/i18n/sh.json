@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"auth_remoteuser-desc": "Automatski zapisuje korisnike okolinskom promenljivom <code>REMOTE_USER</code>"
+}

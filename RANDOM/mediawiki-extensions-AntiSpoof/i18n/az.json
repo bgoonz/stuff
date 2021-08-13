@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"NMW03",
+			"Vugar 1981",
+			"Wertuose"
+		]
+	},
+	"antispoof-desc": "Digər hesablarla qarışmamamq üçün fərqli yazı sistemindən ibarət olan simvollarla yaradılmış hesabların açılması qadağandır",
+	"antispoof-conflict-top": "\"$1\" istifadəçi adı bu {{PLURAL:$2|istifadəçi adına|istifadəçi adlarına}} çox bənzəyir:",
+	"antispoof-conflict-bottom": "Zəhmət olmasa başqa istifadəçi adı seçin.",
+	"antispoof-name-illegal": "$2 hesabıyla qarışmaması üçün \"$1\" istifadəçi adına icazə verilmir. Zəhmət olmasa başqa istifadəçi adı seçin.",
+	"antispoof-bad-char": "\"$1\" ($2)",
+	"antispoof-badtype": "Yanlış məlumat",
+	"antispoof-empty": "Boş sətir",
+	"antispoof-prohibited": "Qadağan olunmuş simvol istifadə edilib: $1",
+	"antispoof-combining": "$1 birləşdirmə işarəsi ilə başlayır",
+	"antispoof-unassigned": "Dəstəklənməyən simvol istifadə edilib: $1",
+	"antispoof-noletters": "Heç bir hərf yoxdur",
+	"antispoof-mixedscripts": "Qəbul edilməz yazı sistemi işlədilir",
+	"antispoof-tooshort": "Normallaşdırılmış ad çox qısadır",
+	"antispoof-ignore": "Oxşar adlar yoxlanmasına məhəl qoymamaq",
+	"right-override-antispoof": "Oxşar adlar yoxlanmasına məhəl qoymamaq"
+}

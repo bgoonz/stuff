@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"LNDDYL",
+			"Mark85296341"
+		]
+	},
+	"checkpoint": "儲存並繼續編輯",
+	"checkpoint-desc": "允許使用者儲存正在進行的編輯並恢復編輯",
+	"checkpoint-tooltip": "儲存你的進度並繼續編輯",
+	"checkpoint-notice": "([[{{ns:project}}:Checkpoint|檢查點儲存]])"
+}

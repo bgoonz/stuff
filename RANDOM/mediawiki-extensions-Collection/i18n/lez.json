@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Migraghvi",
+			"Namik",
+			"Soul Train"
+		]
+	},
+	"coll-remove": "Алудун",
+	"coll-show": "Къалурун",
+	"coll-move_up": "Виниз тухун",
+	"coll-move_down": "Агъуз тухун.",
+	"coll-cancel": "Гьич авун",
+	"coll-print_export": "Басма авун/экспорт",
+	"coll-create_a_book": "Ктаб туькlуьрун",
+	"coll-download_as": "$1 хьиз ацӀура",
+	"coll-bookscategory": "Ктаб",
+	"coll-clear_collection": "Ктаб ичӀи авун",
+	"coll-help": "Куьмек",
+	"coll-helppage": "Help:Ктабар"
+}

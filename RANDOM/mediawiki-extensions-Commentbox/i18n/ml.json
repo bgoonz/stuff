@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Praveenp"
+		]
+	},
+	"commentbox-desc": "ചില താളുകളിൽ ഒരു അഭിപ്രായപെട്ടി ചേർക്കുന്നു",
+	"commentbox-intro": "== അഭിപ്രായം ചേർക്കുക... ==\nഈ താളിനെക്കുറിച്ച് താങ്കൾക്ക് ഒരഭിപ്രായമുണ്ടോ? ഇവിടെ ചേർക്കുക അല്ലെങ്കിൽ <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} താൾ നേരിട്ട് തിരുത്തുക]</span>.",
+	"commentbox-savebutton": "അഭിപ്രായം സേവ് ചെയ്യുക",
+	"commentbox-name": "പേര്:",
+	"commentbox-name-explanation": "<small>(സഹായം: താങ്കൾ [[Special:UserLogin|ലോഗിൻ]] ചെയ്തിട്ടുണ്ടെങ്കിൽ, ഫോമിൽ താങ്കളുടെ പേര് നൽകേണ്ടി വരില്ല)</small>",
+	"commentbox-log": "പുതിയ അഭിപ്രായങ്ങൾ",
+	"commentbox-first-comment-heading": "== അഭിപ്രായങ്ങൾ ==",
+	"commentbox-regex": "/\\n==\\s*അഭിപ്രായങ്ങൾ\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "അഭിപ്രായം സൃഷ്ടിക്കുന്നതിനിടയിൽ പിഴവുണ്ടായി",
+	"commentbox-error-page-nonexistent": "ഈ താൾ നിലവിലില്ല",
+	"commentbox-error-namespace": "ഈ നാമമേഖലയിൽ അഭിപ്രായങ്ങൾ അനുവദിച്ചിട്ടില്ല!",
+	"commentbox-error-empty-comment": "ശൂന്യമായ അഭിപ്രായങ്ങൾ അനുവദിച്ചിട്ടില്ല!"
+}

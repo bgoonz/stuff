@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"admanager": "Gestor de annuncios",
+	"admanagerzones": "Zonas del gestor de annuncios",
+	"admanager-desc": "Forni un [[Special:AdManager|pagina special]] que permitte al administratores de definir le zona pro paginas o categorias",
+	"admanager_docu": "Pro adder o remover le zona de annuncios de un pagina o de un tote categoria, adde o remove le titulo del pagina o categoria hic infra.",
+	"admanagerzones_docu": "Entra le numero de cata zona de annuncios in su proprie linea.",
+	"admanager_invalidtargetpage": "Nulle pagina trovate con titulo \"$1\".",
+	"admanager_invalidtargetcategory": "Nulle categoria trovate con titulo \"$1\".",
+	"admanager_notable": "Error! Un tabella requisite non esseva trovate in le base de datos! Executa update.php primo.",
+	"admanager_noAdManagerZones": "Error! Es necessari adder alcun zonas de annuncios. Entra los in le pagina [[Special:AdManagerZones|Zonas del gestor de annuncios]].",
+	"admanager_labelPage": "Titulos de pagina",
+	"admanager_labelCategory": "Nomines de categoria",
+	"admanager_submit": "Submitter",
+	"admanager_noads": "Non monstrar annuncios",
+	"admanager_Page": "Paginas",
+	"admanager_Category": "Categorias",
+	"admanager_added": "Le cambiamentos ha essite salveguardate.",
+	"admanager_addedzone": "Zona $1 addite",
+	"admanager_removedzone": "Zona $1 removite.",
+	"admanager_nozonesadded": "Nulle zona ha essite addite.",
+	"admanager_nozonesremoved": "Nulle zona ha essite removite.",
+	"admanager_zonenum": "№ de zona: $1",
+	"admanager_zonenotnumber": "Error! $1 non es un numero.",
+	"admanager_return": "Retornar al [[Special:AdManager|gestor de annuncios]]",
+	"admanager_gotoads": "[[Special:AdManager|Modificar placiamento de annuncio]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Modificar zonas de annuncios]]",
+	"action-admanager": "gerer le configuration de publicitate",
+	"right-admanager": "[[Special:AdManager|Gerer configuration de publicitate]]"
+}

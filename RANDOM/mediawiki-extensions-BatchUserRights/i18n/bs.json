@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"CERminator",
+			"Macofe",
+			"Srdjan m",
+			"Srđan"
+		]
+	},
+	"batchuserrights-desc": "Omogućava dodavanje jednog ili više korisnika u jednu ili više grupa putem jedne radnje",
+	"batchuserrights-userload-error": "Nisam mogao učitati korisnika '''$1'''."
+}

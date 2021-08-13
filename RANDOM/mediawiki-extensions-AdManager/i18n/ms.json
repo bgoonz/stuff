@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Anakmalaysia",
+			"Diagramma Della Verita",
+			"Pizza1016",
+			"Tofeiku"
+		]
+	},
+	"admanager": "Pengurus Iklan",
+	"admanagerzones": "Zon Pengurus Iklan",
+	"admanager-desc": "Menyediakan sebuah [[Special:AdManager|laman khas]] yang membolehkan penyelia menetapkan zon untuk laman-laman atau kategori-kategori",
+	"admanager_docu": "Untuk menambahkan atau menggugurkan zon iklan sesuatu halaman atau seluruh kategori, tambahkan atau gugurkan tajuknya di bawah.",
+	"admanagerzones_docu": "Satu nombor zon iklan sahaja untuk setiap baris.",
+	"admanager_invalidtargetpage": "Tiada halaman yang bertajuk \"$1\".",
+	"admanager_invalidtargetcategory": "Tiada kategori yang bertajuk \"$1\".",
+	"admanager_notable": "Perhatian! Jadual pangkalan data yang diperlukan tidak dijumpai! Jalankan update.php terlebih dahulu.",
+	"admanager_noAdManagerZones": "Perhatian! Anda mesti menambahkan zon iklan. Masukkannya di [[Special:AdManagerZones|Zon Pengurus Iklan]].",
+	"admanager_labelPage": "Tajuk laman",
+	"admanager_labelCategory": "Nama kategori",
+	"admanager_submit": "Hantar",
+	"admanager_noads": "Jangan paparkan iklan",
+	"admanager_Page": "Halaman",
+	"admanager_Category": "Kategori-kategori",
+	"admanager_added": "Perubahan anda telah disimpan",
+	"admanager_addedzone": "Zon $1 ditambahkan",
+	"admanager_nozonesadded": "Tiada zon telah ditambahkan.",
+	"admanager_zonenum": "Bil. Zon: $1",
+	"admanager_zonenotnumber": "Ralat! $1 bukan bilangan.",
+	"admanager_return": "Kembali ke [[Special:AdManager|Ad Manager]]",
+	"admanager_gotoads": "[[Special:AdManager|Ubah kedudukan iklan]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Ubah zon iklan]]",
+	"right-admanager": "[[Special:AdManager|Menguruskan tataletak pengiklanan]]"
+}

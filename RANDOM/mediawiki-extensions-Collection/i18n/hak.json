@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hakka"
+		]
+	},
+	"coll-remove": "Yì-chhù",
+	"coll-show": "Chán-sṳ",
+	"coll-print_export": "Yin-chho/fi-chhut",
+	"coll-create_a_book": "Kien-li̍p sû-sit",
+	"coll-book_creator": "Sû-sit kien-li̍p chhàng-sṳt",
+	"coll-download_as": "Hâ-chai vì $1",
+	"coll-disable": "thìn-yung",
+	"coll-book_creator_disable": "Thìn-yung sû-sit kien-li̍p chhàng-sṳt",
+	"coll-book_creator_disable_tooltip": "Thìn-chṳ́ sṳ́-yung sû-sit kien-li̍p chhàng-sṳt",
+	"coll-add_this_page": "Kâ-ngi̍p liá-ya̍p to Ngì-ke sû-sit",
+	"coll-add_page_tooltip": "Sîn-chen muk-chhièn ke Wiki ya̍p-mien chṳ ngì-ke sû-sit",
+	"coll-help": "Pông-sú",
+	"coll-help_tooltip": "Hién-sṳ kôan-yî kien-li̍p sû-sit ke sot-mìn",
+	"coll-helppage": "Help:Sû-sit",
+	"coll-n_pages": "$1-ke ya̍p-mien",
+	"coll-remove_this_page": "Chhiùng Ngì ke sû-sit tú yì-chhù liá-ya̍p",
+	"coll-show_collection": "Chán-sṳ sû-sit",
+	"coll-make_suggestions": "Kien-ngi ya̍p-mien",
+	"coll-make_suggestions_tooltip": "Hién-sṳ kien ngi, kîn-kí ngì sû-sit chûng ke ya̍p-mien sán-sâng",
+	"coll-attribution-anons": "Nit-miàng: $1",
+	"coll-article-attribution": "<b>$1</b> <i>Lòi-ngièn: </i> $2 <i>Kung-hien-chá:</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>Lòi-ngièn : </i> $2 <i>Su-khièn thiàu-khóan : </i> $3 <i>Kung-hien chá : </i> $4 <i>Ngièn-sṳ́ chok-chá : </i> $5"
+}

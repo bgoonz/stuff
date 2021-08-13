@@ -1,0 +1,180 @@
+_ = require 'underscore'
+
+{ Model,
+} = require '../../base'
+{ ParsingMixin, Query,
+} = require '../../util'
+{ DataSource,
+} = require '../datasource'
+
+
+/**
+ * @class Specifies the coordinates for a column of data in a DataSource,
+ * and provides accessors to materialize that data within its bounds.
+ */
+class exports.Metric extends Model
+    ParsingMixin.mix this
+    -> super ...
+    
+    
+    defaults : ->
+        source_id   : null      # String
+        source_col  : null      # Number (index) | String (id)
+        xColumn     : 0         # Number (index) | String (id)
+    
+    
+    canonicalize: (data) ->
+        # Apply compatibility fixes for the world where we deprecate the awful
+        # snake_case attributes for being inconsistent (as all other attributes
+        # are camelCase).
+        data.source_id  ?= data.sourceId
+        data.source_col ?= data.sourceCol
+        
+        # Forwards-compatibility with yColumn replacing source_col.
+        # XXX: This will reverse once source_col is deprecated, and source_col
+        # is used as canonical.
+        data.source_col ?= data.yColumn
+        
+        data
+    
+    
+    /**
+     * Array of data-transformation functions.
+     * @type ko.observableArray<Function>
+     */
+    transforms : ko.observableArray []
+    
+    
+    /**
+     * Data source of the Metric.
+     * @type ko.computed<DataSource>
+     * @depends source_id
+     */
+    source : @asyncComputed ->
+        DataSource.lookup id if id = @get 'source_id'
+    
+    
+    /**
+     * Query object for the parameters of this Metric.
+     * @type ko.computed<Query>
+     * @depends source_col
+     */
+    query : @computed ->
+        source_col = @get 'source_col'
+        xColumn    = @get 'xColumn'
+        return unless source_col? and xColumn?
+        Query()
+            .columns xColumn, source_col
+    
+    
+    /**
+     * The reified dataset (as (date, value) pairs) associated with this Metric.
+     * @protected
+     * @type ko.computed<{rows, columns}>
+     * @depends source, query, transforms
+     */
+    materialized: @computed ->
+        source     = @source()
+        source_col = @get 'source_col'
+        return unless source and source_col?
+        return unless query = @query()
+        return unless csv   = source.data()
+        {rows, columns} = query
+            .materialize 'both'
+            .transforms @transforms()
+            .process csv.getData()
+        {rows, columns}
+    
+    
+    /**
+     * The reified dataset (as [x, y] pairs) associated with this Metric.
+     * @type ko.computed<[xType, yType]>
+     * @depends materialized
+     */
+    data: @computed ->
+        @materialized()?.rows
+    
+    
+    /**
+     * The reified dataset X-values associated with this Metric.
+     * @type ko.computed<Array<xType>>
+     * @depends materialized
+     */
+    xValues: @computed ->
+        @materialized()?.columns[0]
+    
+    
+    /**
+     * The reified dataset Y-values associated with this Metric.
+     * @type ko.computed<Array<yType>>
+     * @depends materialized
+     */
+    yValues: @computed ->
+        @materialized()?.columns[1]
+    
+    
+    /**
+     * The column definition for the X-dimension of this Metric.
+     * @type ko.computed<ColumnDef>
+     * @depends source, xColumn
+     */
+    xColumnDef: @computed ->
+        source  = @source()
+        xColumn = @get 'xColumn'
+        return unless source and xColumn?
+        source.getColumnDef xColumn
+    
+    
+    /**
+     * The column definition for the Y-dimension of this Metric.
+     * @type ko.computed<ColumnDef>
+     * @depends source, source_col
+     */
+    yColumnDef: @computed ->
+        source     = @source()
+        source_col = @get 'source_col'
+        return unless source and source_col?
+        source.getColumnDef source_col
+    
+    
+    /**
+     * Type of the X-values.
+     * @type ko.computed<String>
+     * @depends xColumnDef
+     */
+    xType: @computed ->
+        @xColumnDef()?.type()
+    
+    
+    /**
+     * Type of the Y-values.
+     * @type ko.computed<String>
+     * @depends xColumnDef
+     */
+    yType: @computed ->
+         @yColumnDef()?.type()
+    
+    
+    /**
+     * A short label of just the column name
+     * @type ko.computed<String>
+     * @depends yColumnDef
+     */
+    defaultLabel : @computedRequires 'yColumnDef', (col) ->
+        col.label()
+    
+    
+    /**
+     * A long label including the datasource name
+     * @type ko.computed<String>
+     * @depends defaultLabel
+     */
+    defaultLongLabel : @computedRequires 'defaultLabel', (defaultLabel) ->
+        "#{@source().name()}, #defaultLabel"
+    
+    
+    toString: ->
+        id  = @source_id.peek()
+        col = @source_col.peek()
+        "#{@getClassName()}(source_id=#id, source_col=#col)"
+    

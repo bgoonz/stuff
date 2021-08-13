@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"පසිඳු කාවින්ද"
+		]
+	},
+	"commentbox-desc": "කිසියම් පිටු කිහිපයකට පරිකථනකොටු එක් කරයි",
+	"commentbox-savebutton": "පරිකථනය සුරකින්න",
+	"commentbox-name": "නම:",
+	"commentbox-log": "නව පරිකථන",
+	"commentbox-first-comment-heading": "== පරිකථන ==",
+	"commentbox-regex": "/\\n==\\s*පරිකථන\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "පරිකථනය තනන අතරතුර දෝෂය",
+	"commentbox-error-page-nonexistent": "මෙම පිටුව නොපවතියි!",
+	"commentbox-error-empty-comment": "හිස් පරිකථන වලට ඉඩ ලබා නොදේ!"
+}

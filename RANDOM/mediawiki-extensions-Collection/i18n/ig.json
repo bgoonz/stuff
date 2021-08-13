@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Oby Ezeilo",
+			"Ukabia",
+			"Uzoma Ozurumba"
+		]
+	},
+	"coll-remove": "Wepụ",
+	"coll-show": "Zi",
+	"coll-move_up": "Gaa elu",
+	"coll-move_down": "Gbadaa",
+	"coll-title": "Íshí:",
+	"coll-yes": "Eeh",
+	"coll-no": "Mbà",
+	"coll-cancel": "Hapụ̀",
+	"coll-about_pp": "Maka $1",
+	"coll-suggest_show": "zi",
+	"coll-suggest_undo": "me la àzụ",
+	"coll-print_export": "Bipụ̀/zìla",
+	"coll-create_a_book": "Mmepụta akwukwọ",
+	"coll-book_creator": "Onye kere akwụkwọ",
+	"coll-download_as": "Tinye ya dika $1",
+	"coll-disable": "mmenyụọ",
+	"coll-book_creator_disable_tooltip": "Kwụsị iji ihe okike akwụkwọ",
+	"coll-add_this_page": "Tinye ihuakwụkwọ a na akwụkwọ gi",
+	"coll-help": "Nkwádo",
+	"coll-help_tooltip": "Zi ihe nyemaka maka ikepụta akwụkwọ",
+	"coll-helppage": "Help:Akwụkwọ",
+	"coll-remove_this_page": "Wepụ ihu akwukwọ a na akwukwọ gi",
+	"coll-show_collection": "Zi akwụkwọ",
+	"coll-show_collection_tooltip": "pia ka idezia/nwete/nata akwụkwọ gi",
+	"coll-make_suggestions": "Tụọ aro ihuakụkwọ",
+	"coll-image-attribution": "<b>$1</b> <i>nsi nweta:</i> $2 <i>ikike:</i> $3 <i>ndị enyemaka:</i> $4 <i>onye chepụtara ihe:</i> $5"
+}

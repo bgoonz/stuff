@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sagan",
+			"З. ӘЙЛЕ"
+		]
+	},
+	"biblioplus-desc": "ISBN мәғлүмәт базаһы өсөн PubMed цитаталарын автоматик рәүештә ала",
+	"biblioplus-doi-tooltip": "Мәҡәләне ҡарарға йәки нәшерсенән һатып алырға.",
+	"biblioplus-pmid-tooltip": "Мәҡәләне ҡарарға йәки нәшерсенән һатып алырға (мөмкин булһа).",
+	"biblioplus-isbn-tooltip": "Китап тураһында мәғлүмәт isbndb.org",
+	"biblioplus-medline-abstracts": "Medline-дың барлыҡ тезистары",
+	"biblioplus-pubmed-abstracts": "PubMed-тың барлыҡ тезистары",
+	"biblioplus-hubmed-abstracts": "HubMed-тың барлыҡ тезистары",
+	"biblioplus-vkey-title": "Библиографик мәғлүмәт базаһына һылтанма"
+}

@@ -1,0 +1,159 @@
+ko = require 'knockout'
+{ unwrapObservable, peekObservable,
+} = ko.utils
+
+{ _,
+} = require '../util'
+{ AttributesBase,
+} = require './attributes-base'
+
+
+
+/**
+ * @class Root-class for all Models.
+ * @extends AttributesBase
+ */
+class exports.Model extends AttributesBase
+    -> super ...
+    
+    
+    
+    /* * * *  Knockout-Aware Accessors (with Nesting)  * * * {{{ */
+    
+    
+    /**
+     * Retrieves the attribute value at `key`, also accepting a dotted keypath
+     * to perform a nested lookup.
+     * 
+     * If called by a computed observable, this function creates a dependency
+     * on the accessed attribute (provided it exists) unless `peek=true`
+     * is passed.
+     * 
+     * @protected
+     * @param {String} key Key to get (including dotted keypaths).
+     * @param {Boolean} [peek=false] If true, use `ko.utils.peekObservable()`
+     *  to access the value, circumventing dependency tracking.
+     * @returns {*} Value at `key`.
+     */
+    _get: (key, peek=false) ->
+        return unless key and @attributes?
+        getterKey = if peek then 'peek' else 'get'
+        unwrapper = if peek then peekObservable else unwrapObservable
+        
+        val = @attributes
+        parts = key.split('.')
+        while parts.length
+            # Models recursively handle their own gets (as we're doing now), so
+            # defer to our sub-model.
+            return val[getterKey] parts.join('.') if val instanceof Model
+            
+            val = unwrapper val[ parts.shift() ]
+            return unless val?
+        
+        val
+    
+    
+    /**
+     * Retrieves the attribute value at `key`, also accepting a dotted
+     * keypath to perform a nested lookup.
+     * 
+     * If called by a computed observable, this function creates a dependency
+     * on the accessed attribute (provided it exists).
+     * 
+     * @param {String} key Key to get (including dotted keypaths).
+     * @returns {*} Value at `key`.
+     */
+    get: (key) ->
+        @_get key, false
+    
+    
+    /**
+     * Retrieves the attribute value at `key`, also accepting a dotted
+     * keypath to perform a nested lookup.
+     * 
+     * Even if called by a computed observable, this function does **not**
+     * create a dependency on the accessed attribute.
+     * 
+     * @param {String} key Key to peek (including dotted keypaths).
+     * @returns {*} Value at `key`.
+     */
+    peek: (key) ->
+        @_get key, true
+    
+    
+    /**
+     * Puts a single attribute value to `key`.
+     * 
+     * If the current value is a Model and the value to set is an object, a
+     * recursive set is instead performed on the current value; a recursive
+     * set in this way does not create a dependency on the observable at `key`.
+     * This behavior is disabled by setting `force`.
+     * 
+     * @protected
+     * @param {String} key Key to set.
+     * @param {*} val Value to set at `key`.
+     * @param {Boolean} [force=false] Whether to force-put the key.
+     * @returns {this}
+     */
+    _set: (key, val, force=false) ->
+        return this unless key?
+        throw new Error "Attributes hash does not exist!" unless @attributes?
+        
+        unless ko.isObservable obs = @attributes[key]
+            obs = @attributes[key] = @_generateAttribute val, @attributeTypes[key], key
+            @[key] ?= obs
+        
+        if not force and (current = obs.peek()) instanceof Model and _.isPlainObject(val)
+            current.set val
+        else
+            obs val
+        
+        this
+    
+    
+    /**
+     * Sets attribute values, taking either a single (key, value)-pair, or
+     * a map of them. Unlike `set()`, existing sub-Models will not have values
+     * merged into them.
+     * 
+     * @param {String|Object} key The key to set. If an object is supplied here,
+     *  each key will be set with its value on the target object.
+     * @param {*} [value] Value to set at `key`. Omit this if an object of
+     *  KV-pairs was passed as `key`.
+     * @returns {this}
+     */
+    put: (key, val) ->
+        return this unless key?
+        if key and _.isObject(key)
+            values = key
+        else
+            values = { "#key": val }
+        for key, value in values
+            @_set key, value, true
+        this
+    
+    
+    
+    # }}}
+    /* * * *  Class Methods  * * * */
+    
+    
+    /**
+     * @static
+     * @returns {Function} Factory function that creates new instances of this Model.
+     */
+    @factory = ->
+        ClassType = this
+        return (attributes) -> new ClassType attributes
+    
+    
+    /**
+     * Class used to create "plain" object containers via `@plainSubclass()`.
+     * @type Class<Model>
+     * @see AttributesBase#plainSubclass
+     */
+    @PlainObjectClass = Model
+    
+    # }}}
+    
+

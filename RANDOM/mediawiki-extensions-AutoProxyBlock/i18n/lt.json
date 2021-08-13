@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eitvys200",
+			"Hugo.arg"
+		]
+	},
+	"right-proxyunbannable": "Apeiti automatinius proxy serverių blokavimus",
+	"proxyblock-logentry-blocked": "veiksmas „$2“, atliktas {{GENDER:$3|vartotojo|vartotojos}} $3, puslapyje [[$1]] buvo automatiškai užblokuotas."
+}

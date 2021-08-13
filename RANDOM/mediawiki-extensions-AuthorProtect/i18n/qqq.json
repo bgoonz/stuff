@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Beta16",
+			"Darth Kule",
+			"Purodha",
+			"Raymond",
+			"Ryan Schmidt",
+			"Shirayuki",
+			"Umherirrender"
+		]
+	},
+	"authorprotect": "Used as page title.",
+	"authorprotect-desc": "{{desc|name=AuthorProtect|url=https://www.mediawiki.org/wiki/Extension:AuthorProtect}}",
+	"authorprotect-notauthor": "Used as error message.\n\nThe page title for this message is {{msg-mw|errorpagetitle}}.\n\nParameters:\n* $1 - user name for GENDER support",
+	"authorprotect-confirm": "Used as Submit button text in the Author Protect form.",
+	"authorprotect-edit": "Used as checkbox label in the Author Protect form.\n\nSee also:\n* {{msg-mw|Authorprotect-move}}",
+	"authorprotect-move": "Used as checkbox label in the Author Protect form.\n\nSee also:\n* {{msg-mw|Authorprotect-edit}}",
+	"authorprotect-intro": "Used as intro text for the Author Protect form.\n\nThis message is followed by the Author Protect form.",
+	"authorprotect-success": "Used as success message when Author Protecting.",
+	"protect-level-author": "Used as protect level.\n\nSee also:\n* {{msg-mw|Protect-level-sysop}}\n* {{msg-mw|Restriction-level-author}}",
+	"restriction-level-author": "See also:\n* {{msg-mw|Protect-level-author}}",
+	"action-authorprotect": "{{doc-action|authorprotect}}",
+	"right-authorprotect": "{{doc-right|authorprotect}}",
+	"action-author": "{{doc-action|author}}",
+	"right-author": "{{doc-right|author}}"
+}

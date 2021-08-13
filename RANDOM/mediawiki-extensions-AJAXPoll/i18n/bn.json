@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aftabuzzaman",
+			"Nirupam",
+			"আফতাবুজ্জামান"
+		]
+	},
+	"apihelp-pollsubmitvote-description": "AJAXPoll API মডিউল",
+	"ajaxpoll-tracking-category": "জরিপসহ পাতা",
+	"ajaxpoll-vote-update": "আপনার ভোট হালনাগাদ করা হয়েছে।",
+	"ajaxpoll-vote-add": "আপনার ভোট যোগ করা হয়েছে।",
+	"ajaxpoll-percent-votes": "সব ভোটের $1%",
+	"ajaxpoll-no-vote": "দয়া করে নিচে ভোট প্রদান করুন।",
+	"ajaxpoll-no-vote-results-after-voting": "নিচে ভোট প্রদান করুন। আপনার ভোট দেয়া হলে ফলাফল দেখানো হবে।",
+	"ajaxpoll-submitting": "দয়া করে অপেক্ষা করুন, আপনার ভোট জমা দেয়া হচ্ছে।",
+	"ajaxpoll-vote-permission": "আপনার ভোট দেয়ার অধিকার নেই।",
+	"ajaxpoll-revoke-vote": "আমি আমার ভোট প্রত্যাহার করতে চাই",
+	"ajaxpoll-vote-revoked": "আপনার ভোট প্রত্যাহার করা হয়েছে।"
+}

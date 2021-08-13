@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ерней",
+			"Ильнар"
+		]
+	},
+	"ajaxpoll-desc": "AJAX нигезендә, <code>&lt;poll&gt;</code> тегы ярдәмендә, тавыш алу мөмкинлеген бирә",
+	"ajaxpoll-tracking-category": "Тавыш алу битләре",
+	"ajaxpoll-tracking-category-desc": "Биттә <code>&lt;сораштыру&gt;</code> бар.",
+	"ajaxpoll-vote-update": "Сезнең тавыш бирүегез яңартылды.",
+	"ajaxpoll-vote-add": "Сезнең тавыш исәпкә алынды.",
+	"ajaxpoll-vote-error": "Сезнең тавышны исәпкә алганда хата китте, зинһар өчен кабатлап карагыз.",
+	"ajaxpoll-percent-votes": "Барлык тавышның $1%",
+	"ajaxpoll-your-vote": "Сез, $3 $4, «$1» өчен тавыш биргәнсез инде. Кирәк булса, Сез үзегезнең сайлавыгызны үзгәртә алаласыз.",
+	"ajaxpoll-no-vote": "Түбәндә тавыш бирегез әле.",
+	"ajaxpoll-no-vote-results-after-voting": "Түбәндә тавыш бирегез әле. Нәтиҗәләр тавыш биргәчтән соң күрсәтелер.",
+	"ajaxpoll-info": "Тавыш бирүне оештырган вакыттан $2 {{PLURAL:$1|$1 тавыш килде}}.",
+	"ajaxpoll-submitting": "Тавышыгыз җибәрелә, көтегез әле.",
+	"ajaxpoll-vote-permission": "Сез тавыш бирә алмыйсыз.",
+	"ajaxpoll-view-results-permission": "Сез бу тавыш бирүнең нәтиҗәсен карый алмыйсыз.",
+	"ajaxpoll-view-results-before-vote-permission": "Тавыш бирмичә сез бу сораулыкның нәтиҗәсен карый алмыйсыз.",
+	"ajaxpoll-revoke-vote": "Мин тавышымны кире алырга телим",
+	"ajaxpoll-vote-revoked": "Сезнең тавыш кире алынды.",
+	"right-ajaxpoll-vote": "AJAX нигезендәге сорау алуда катнаша аласыз",
+	"right-ajaxpoll-view-results": "AJAX нигезендәге сорау алуларның нәтиҗәсен карага мөмкин",
+	"right-ajaxpoll-view-results-before-vote": "AJAX нигезендәге сорау алуларның нәтиҗәсен тавыш биргәнче карага мөмкин",
+	"action-ajaxpoll-vote": "AJAX нигезендәге сорау алу",
+	"action-ajaxpoll-view-results": "AJAX нигезендәге сорау алуларның нәтиҗәсен карау",
+	"action-ajaxpoll-view-results-before-vote": "AJAX нигезендәге сорау алуларның нәтиҗәсен тавыш биргәнче карау"
+}

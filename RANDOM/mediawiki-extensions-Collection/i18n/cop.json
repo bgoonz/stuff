@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bloomaround",
+			"ⲁϩⲙⲉⲧ"
+		]
+	},
+	"coll-remove": "ⲥⲱϩⲓ",
+	"coll-show": "ⲟⲩⲱⲛϩ",
+	"coll-move_up": "ⲕⲓⲙ ⲉϩⲣⲏⲓ",
+	"coll-move_down": "ⲕⲓⲙ ⲉϦⲣⲏⲓ",
+	"coll-print_export": "ⲧⲱⲃ/ϥⲓ ⲉⲃⲟⲗ",
+	"coll-create_a_book": "ⲑⲁⲙⲓⲉ ⲟⲩϫⲱⲙ",
+	"coll-book_creator": "ⲣⲉϥⲑⲁⲙⲓⲟ ⲛ̀ϫⲱⲙ",
+	"coll-download_as": "ⲟⲡⲧⲥ ⲉⲡⲉⲥⲏⲧ ϩⲱⲥ $1",
+	"coll-add_page_tooltip": "ⲧⲟⲩϩⲟ ⲡⲓϩⲟ ⲛ̀ⲃⲓⲕⲓ ⲙ̀ⲡⲁⲓⲥⲟⲡ ⲉⲡⲉⲕϫⲱⲙ",
+	"coll-help": "ⲥⲁϩⲛⲓ",
+	"coll-help_tooltip": "ⲟⲩⲱⲛϩ ϯⲙⲉⲧⲣⲉϥϯⲧⲟⲟⲧ ϧⲁ ⲡⲓϫⲓⲛⲥⲱⲛⲧ ⲛ̀ⲛⲓϫⲱⲙ",
+	"coll-helppage": "Help:ϫⲱⲙ",
+	"coll-n_pages": "$1 {{PLURAL:$1|ⲛ̀ϩⲟ}}",
+	"coll-remove_this_page": "ⲥⲱϩⲓ ⲡⲁⲓϩⲟ ⲉⲃⲟⲗ ⲙ̀ⲡⲉⲧⲉⲛϫⲱⲙ",
+	"coll-show_collection": "ⲟⲩⲱⲛϩ ⲟⲩϫⲱⲙ",
+	"coll-show_collection_tooltip": "ⲁⲣⲓⲱϥⲓ ⲉ ⲫⲱⲛϩ/ⲟⲡⲧⲥ ⲉⲡⲉⲥⲏⲧ/ϯϣⲁⲣⲟ ⲡⲉⲧⲉⲛϫⲱⲙ",
+	"coll-make_suggestions": "ϯⲙⲉⲩⲓ ⲛⲓϩⲟ",
+	"coll-make_suggestions_tooltip": "ⲟⲩⲱⲛϩ ⲛⲓϫⲓⲛϯⲙⲉⲩⲓ ⲉⲧⲁⲩϫⲉⲙⲣⲁⲧ ⲉ ⲛⲓϩⲟ ϧⲉⲛ ⲡⲉⲧⲉⲛϫⲱⲙ.",
+	"coll-attribution-anons": "ⲛ̀ⲁⲑⲣⲁⲛ: $1",
+	"coll-image-attribution": "<b>$1</b> <i>ⲁⲣⲭⲏ:</i> $2 <i>ϫⲓⲛϯⲙⲁ:</i> $3 <i>ϩⲁⲛⲣⲉϥϯ:</i> $4 <i>ⲣⲉϥⲫⲟⲛⲕ ⲛ̀ⲁⲣⲭⲉⲟⲥ:</i> $5"
+}

@@ -1,0 +1,39 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"blog-and": "e",
+	"blog-anonymous-name": "Fanateche anonime",
+	"blog-author-comments": "$1 {{PLURAL:$1|commende}}",
+	"blog-author-more-by": "De cchiù de $1",
+	"blog-author-votes": "$1 {{PLURAL:$1|vote}}",
+	"blog-by": "da",
+	"blog-by-user-category": "ôsce de l'utende $1",
+	"blog-comments-of-day": "Commende d'u sciurne",
+	"blog-created": "ccrejate $1",
+	"blog-created-ago": "ccrejate $1 fà",
+	"blog-in-the-news": "Jndr'à le notizie",
+	"blog-last-edited": "urteme cangiamende $1",
+	"blog-new-articles": "Vôsce nuève",
+	"blog-permission-required": "Non ge tìne le permesse pe ccrejà pàggene.",
+	"blog-popular-articles": "No tu sce scurdanne",
+	"blog-view-archive-link": "'Ndruche tutte",
+	"blog-ah-no-results": "Nisciuna pàgene acchiate.",
+	"blog-ah-new-articles": "Vôsce nuève",
+	"blog-ah-write-article": "Scrive 'na vôsce",
+	"blog-create-title": "Titole",
+	"blog-create-text": "Teste",
+	"blog-create-categories": "Categorije",
+	"blog-create-button": "Ccreje!",
+	"blog-more": "de cchiù",
+	"blog-time-ago": "$1 fà",
+	"blog-time-days": "{{PLURAL:$1|'nu sciurne|$1 sciurne}}",
+	"blog-time-hours": "{{PLURAL:$1|'n'ore|$1 ore}}",
+	"blog-time-minutes": "{{PLURAL:$1|'nu menute|$1 menute}}",
+	"blog-time-seconds": "{{PLURAL:$1|'nu seconde|$1 seconde}}",
+	"blog-user-articles-title": "Blog",
+	"blog-user-articles-votes": "$1 {{PLURAL:$1|vote}}",
+	"blog-user-article-comment": "{{PLURAL:$1|nu commende|$1 commende}}"
+}

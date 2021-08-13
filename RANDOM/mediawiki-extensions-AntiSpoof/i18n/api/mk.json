@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"apihelp-antispoof-description": "Проверете корисничко име со нормализациската проверка на AntiSpoof.",
+	"apihelp-antispoof-summary": "Проверете го корисничко име со нормализациската проверка на AntiSpoof.",
+	"apihelp-antispoof-param-username": "Корисничко име за проверка со AntiSpoof.",
+	"apihelp-antispoof-example-1": "Провери го корисничкото име „Foo“ со AntiSpoof",
+	"apihelp-createaccount-param-ignoreantispoof": "Занемари ги проверките за забуна на имињата (го бара правото <code>override-antispoof</code>)."
+}

@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Athena in Wonderland",
+			"Macofe",
+			"Toliño"
+		]
+	},
+	"batchuserrights": "Dereitos de usuario en feixe",
+	"batchuserrights-desc": "Permite engadir un ou máis usuarios a un ou máis grupos cunha soa acción",
+	"batchuserrights-names": "Nomes de usuario a engadir a este grupo (un por liña):",
+	"batchuserrights-intro": "Esta páxina permitirá engadir usuarios a un grupo ao mesmo tempo.\nPor razóns de seguridade, a lista dos grupos que se poden engadir está definida na configuración da extensión e non se pode cambiar dentro do wiki.\nPor favor, pregunte a un administrador do sistema se necesita engadir outros grupos.",
+	"batchuserrights-single-progress-update": "Engadiu {{PLURAL:$1|un grupo|grupos}} a <strong>$2</strong>.",
+	"batchuserrights-add-groups": "Engadiu {{PLURAL:$1|un usuario|$1 usuarios}} {{PLURAL:$2|ao seguinte grupo|aos seguintes grupos}}: <strong>$3</strong>.",
+	"batchuserrights-userload-error": "Non se puido cargar {{GENDER:$1|o usuario|a usuaria}} '''$1'''.",
+	"batchuserrights-no-groups": "Non elixiu ningún grupo.\nDeste modo, non ocorrerá nada.\nQue apareza o resto da páxina só serve para que poida ollar facilmente se non se puido cargar algún dos nomes de usuario.",
+	"right-batchuserrights": "Engadir un ou máis usuarios a un ou varios grupos cunha soa acción",
+	"action-batchuserrights": "engadir un ou máis usuarios a un ou varios grupos cunha soa acción"
+}

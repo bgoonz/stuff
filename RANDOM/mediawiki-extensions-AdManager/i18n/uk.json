@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ahonc",
+			"Andriykopanytsia",
+			"DDPAT",
+			"Olion",
+			"Olvin",
+			"Piramidion",
+			"Sodmy",
+			"Vlad5250"
+		]
+	},
+	"admanager": "Менеджер оголошень",
+	"admanagerzones": "Менеджер оголошень по зонам",
+	"admanager-desc": "Забезпечує [[Special:AdManager|спеціальну сторінку]], яка дозволяє адміністраторам встановлювати зони для сторінок або категорій",
+	"admanager_docu": "Щоб додати або видалити зону оголошення у сторінці або в усій категорії, додайте або видаліть назву сторінки або категорії нижче.",
+	"admanagerzones_docu": "Введіть номер кожної зони оголошень в окремому рядку.",
+	"admanager_invalidtargetpage": "Не знайдено сторінки з назвою \"$1\".",
+	"admanager_invalidtargetcategory": "Не знайдено категорії з назвою \"$1\".",
+	"admanager_notable": "Помилка! Не знайдено необхідної таблиці бази даних! Спочатку запустіть update.php.",
+	"admanager_noAdManagerZones": "Помилка! Ви повинні додати деякі зони оголошень. Введіть їх у [[Special:AdManagerZones|Менеджер зон оголошень]].",
+	"admanager_labelPage": "Назви сторінок",
+	"admanager_labelCategory": "Імена категорій",
+	"admanager_submit": "Відправити",
+	"admanager_noads": "Не показувати рекламу",
+	"admanager_Page": "Сторінки",
+	"admanager_Category": "Категорії",
+	"admanager_added": "Ваші зміни збережено",
+	"admanager_addedzone": "Додана зона $1",
+	"admanager_removedzone": "Вилучено зону $1.",
+	"admanager_nozonesadded": "Не було додано жодної зони.",
+	"admanager_nozonesremoved": "Не було вилучено жодної зони.",
+	"admanager_zonenum": "Зона №: $1",
+	"admanager_zonenotnumber": "Помилка! $1 не є числом.",
+	"admanager_return": "Повернутися до [[Special:AdManager|менеджеру оголошень]]",
+	"admanager_gotoads": "[[Special:AdManager|Редагувати розміщення оголошень]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Редагувати зони оголошень]]",
+	"action-admanager": "керування конфігурацією реклами",
+	"right-admanager": "[[Special:AdManager|Керування конфігурацією реклами]]"
+}

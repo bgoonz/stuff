@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Itsmine",
+			"SolidBlock",
+			"StephDC"
+		]
+	},
+	"coll-remove": "刪",
+	"coll-show": "示",
+	"coll-move_up": "上移",
+	"coll-move_down": "下移",
+	"coll-print_export": "付梓",
+	"coll-create_a_book": "建冊",
+	"coll-download_as": "下載為 $1",
+	"coll-disable": "禁",
+	"coll-help": "助",
+	"coll-remove_this_page": "移頁自子書",
+	"coll-show_collection": "示書",
+	"coll-setting-toc-yes": "是",
+	"coll-setting-toc-no": "否"
+}

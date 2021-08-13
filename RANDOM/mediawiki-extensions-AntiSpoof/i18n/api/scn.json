@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pippinu",
+			"Sarvaturi"
+		]
+	},
+	"apihelp-antispoof-description": "Suttaponi un nomu utenti ê virìfichi di nurmalizzazzioni di l'AntiSpoof",
+	"apihelp-antispoof-param-username": "Lu nomu utenti di cuntrullari cu l'AntiSpoof",
+	"apihelp-antispoof-example-1": "Cuntrullari lu nomu utenti \"Cicciu\" cu l'AntiSpoof",
+	"apihelp-createaccount-param-ignoreantispoof": "Sautari li cuntrolli AntiSpoof (havi bisognu dû drittu <code>override-antispoof</code>)."
+}

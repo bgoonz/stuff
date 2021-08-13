@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Anugrahgori",
+			"Slaia"
+		]
+	},
+	"coll-remove": "Fawu'a",
+	"coll-show": "Oroma'ö",
+	"coll-move_up": "Sösögö miyaŵa",
+	"coll-move_down": "Sösögö mitou",
+	"coll-print_export": "Raka/Ekspor",
+	"coll-create_a_book": "Fazökhi sambua buku",
+	"coll-book_creator": "Sama'anö buku",
+	"coll-download_as": "Failo $1",
+	"coll-disable": "batogö",
+	"coll-book_creator_disable": "Batogö book creator",
+	"coll-book_creator_disable_tooltip": "Batogö wangoguna'ö book creator",
+	"coll-add_this_page": "Nönö nga'örö andre ba mbukumö",
+	"coll-add_page_tooltip": "Nönögö nga'örö wiki andre ba mbukumö",
+	"coll-help": "Fanolo",
+	"coll-help_tooltip": "Oroma'ö wanolo ba wamazökhi buku",
+	"coll-helppage": "Help:Buku",
+	"coll-n_pages": "$1 {{PLURAL:$1|nga'örö}}",
+	"coll-remove_this_page": "Heta nga'örö andre moroi ba mbukumö",
+	"coll-show_collection": "Oroma'ö mbuku",
+	"coll-show_collection_tooltip": "Höndrögö ba wamulö'ö/wamailo/wowöli buku",
+	"coll-make_suggestions": "Tötöi nga'örö somasi ndra'ugö",
+	"coll-make_suggestions_tooltip": "Oroma'ö nga'örö tanö bö'ö si fakhili ba nga'örö si so bakha ba mbukumö",
+	"coll-attribution-anons": "Sangoguna si lö töi: $1",
+	"coll-article-attribution": "<b>$1</b> <i>Umbu:</i> $2 <i>Kontributor:</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>Umbu:</i> $2 <i>Lisensi:</i> $3 <i>Kontributor:</i> $4 <i>Artis asli:</i> $5"
+}

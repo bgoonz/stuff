@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Александр Сигачёв"
+		]
+	},
+	"commentbox-desc": "Добавляет к определённым страницам поле комментария",
+	"commentbox-intro": "== Добавление комментария… ==\nУ вас есть замечание к этой странице?\nЗапишите его здесь или <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} непосредственно отредактируйте страницу]</span>.",
+	"commentbox-savebutton": "Сохранить комментарий",
+	"commentbox-name": "Имя:",
+	"commentbox-name-explanation": "<small>(Подсказка. Если вы [[Special:UserLogin|представитесь системе]], вам не придётся указывать ваше имя вручную)</small>",
+	"commentbox-log": "Новые комментарии",
+	"commentbox-first-comment-heading": "== Комментарии ==",
+	"commentbox-regex": "/\\n==\\s*Комментарии\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Ошибка при создании комментария",
+	"commentbox-error-page-nonexistent": "Этой страницы не существует!",
+	"commentbox-error-namespace": "В данном пространстве имён комментарии не разрешены!",
+	"commentbox-error-empty-comment": "Пустые комментарии не допускаются!"
+}

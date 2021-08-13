@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amir a57",
+			"Koroğlu",
+			"Mousa"
+		]
+	},
+	"admanager": "رئکلام ایداره‌چی‌سی",
+	"admanagerzones": "رئکلام ایداره‌چی‌سی بؤلگه‌لری",
+	"admanager_invalidtargetpage": "«$1» آدلا صحیفه تاپیلمادی.",
+	"admanager_labelPage": "صحیفه باش‌لیق‌لاری",
+	"admanager_labelCategory": "بولمه آدلاری",
+	"admanager_submit": "گؤندر",
+	"admanager_noads": "رئکلام لاری گورستمه",
+	"admanager_Page": "صفحه‌لر",
+	"admanager_Category": "بؤلمه‌لر",
+	"admanager_added": "ائدیگینیز دیشیک لیک لر ساخلانیب دیر",
+	"admanager_addedzone": "ائکلئنئن بؤلگه",
+	"admanager_zonenum": "بؤلگه نومره‌سی: $1",
+	"admanager_zonenotnumber": "خطا! $1 بیر سایی دئییل.",
+	"admanager_return": "[[Special:AdManager|Reklam Yöneticisine]] قاییت",
+	"admanager_gotoads": "[[Special:AdManager|رئکلامی دیشدیر]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|بؤلگه‌یه دیشدیر]]",
+	"right-admanager": "[[Special:AdManager|رئکلام ایداره‌چی‌سی نیظام‌لاری]]"
+}

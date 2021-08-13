@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"batchuserrights": "Grupna korisnička prava",
+	"batchuserrights-desc": "Omogućava dodavanje jednog ili više korisnika u grupu/e odjednom",
+	"batchuserrights-names": "Imena korisnika kojima se ova grupa dodaje (po jedan u svaki red):",
+	"batchuserrights-intro": "Ova vam stranica omogućuje dodavanje grupe na više korisnika odjednom.\nIz sigurnosnih razloga, popis grupa koje se mogu dodati smijestena je u postavkama dodatka i ne može se promijeniti s wikija.\nPitajte administratora sustava trebate li dopustiti grupno dodavanje drugih grupa.",
+	"batchuserrights-single-progress-update": "Dodano {{PLURAL:$1|grupa|grupe}} uz <strong>$2</strong>.",
+	"batchuserrights-add-groups": "{{PLURAL:$1|Dodava se jedan korisnik|Dodaju se $1 korisnika}} u {{PLURAL:$2|sljedeću grupu|sljedeće grupe}}: <strong>$3</strong>.",
+	"batchuserrights-userload-error": "Nisam mogao učitati {{GENDER:$1|korisnika|korisnicu}} '''$1'''.",
+	"batchuserrights-no-groups": "Niste odabrali nijednu grupu.\nOvim nećete postići ništa.\nOstatak stranice nastavit će raditi tako da možete lako vidjeti može li se bilo koje korisničko ime učitati.",
+	"right-batchuserrights": "Dodavanje jednog ili više korisnika u grupu više grupa odjednom",
+	"action-batchuserrights": "dodavanje jednog ili više korisnika u grupu ili više grupa odjednom"
+}

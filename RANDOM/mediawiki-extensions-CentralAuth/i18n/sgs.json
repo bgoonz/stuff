@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hugo.arg"
+		]
+	},
+	"centralauth-admin-blocklog": "ožgīnėmu sārašos",
+	"centralauth-foreign-contributions": "$1 {{PLURAL:$1|pakeitėms|pakeitėmā|pakeitėmu}} wiki svetainie $2",
+	"centralauth-foreign-link": "Nauduotuos $1 wiki svetainie $2",
+	"centralauth-logout-progress": "Tamsta daba atjongts nug vėsū {{int:Centralauth-groupname}} wiki tėnklopiu:",
+	"centralauth-merge-method-login": "padėrbt prėsėjongiant",
+	"centralauth-merge-step3-title": "Sokortė bendra paskīra",
+	"centralauth-prefs-count-attached": "Tamstas paskīra vēk $1 pruojėkta {{PLURAL:$1|svetainie|svetainė|svatainėsė|svėtainiu}}.",
+	"centralauth-prefs-status": "Bendruosės regėsracėjės būvis:",
+	"globalusers": "Vėsoutėnis nauduotuoju sārašos",
+	"mergeaccount": "Prisėregėstravėma unifikacėjės statosos"
+}

@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"autoproxyblock-desc": "Permitte blocar le actiones sur le wiki proveniente de proxies aperte",
+	"proxy-blocked": "{{GENDER:|Tu}} adresse IP es listate como proxy. Action abortate.",
+	"abusefilter-edit-builder-vars-is-proxy": "Ver si iste action esseva exequite per un proxy",
+	"tag-proxy": "action per proxy",
+	"action-proxyunbannable": "contornar le blocadas automatic de proxy",
+	"right-proxyunbannable": "Contornar le blocadas automatic de proxy",
+	"action-notagproxychanges": "impedir de mitter le etiquetta \"proxy\" sur modificationes per proxy",
+	"right-notagproxychanges": "Impedir de mitter le etiquetta \"proxy\" sur modificationes per proxy",
+	"action-autoproxyblock-log": "vider le registro AutoProxyBlock",
+	"right-autoproxyblock-log": "Vider un registro de modificationes exequite per proxy e automaticamente blocate",
+	"proxyblock-log-name": "Registro de blocadas automatic de proxies",
+	"proxyblock-log-header": "Lista de modificationes exequite per proxy e automaticamente blocate",
+	"proxyblock-logentry-blocked": "action \"$2\" per le {{GENDER:$3|usator}} $3 sur le pagina [[$1]] automaticamente blocate."
+}

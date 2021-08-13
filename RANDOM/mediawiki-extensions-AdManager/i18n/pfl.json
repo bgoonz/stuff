@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Manuae"
+		]
+	},
+	"admanager": "Oazaischevawaldung",
+	"admanagerzones": "Oazaischevawaldung B'raische",
+	"admanager-desc": "Ä [[Special:AdManager|Schbezialsaid]], wu Adminischradore än Oazaischeb'raisch fa Saide und Kadegorije feschdleesche kennen",
+	"admanager_docu": "Umän Oazaischeb'raisch baina Said dzuzufiesche oda wegzunemme, fiesch oda nemm unne soin Titl dzu oda weg.",
+	"admanagerzones_docu": "Geb die Numma vun alle Oazaischeb'raisch ina aischeni Zail oa.",
+	"admanager_invalidtargetpage": "S'hod kä Said midm Titl \"$1\".",
+	"admanager_invalidtargetcategory": "S'hod kä Kadegorije midm Titl \"$1\".",
+	"admanager_notable": "Fehla: Die nedisch Daadebong'gtabell isch ned gfunne worre. Loß update.php laafe.",
+	"admanager_noAdManagerZones": "Fehla: Erschd mol missen Oazaischeb'raisch dzug'fieschd werre. Des konschd uffde Schbezialsaid [[Special:AdManagerZones|Oazaischevawaldung B'raische]] mache.",
+	"admanager_labelPage": "Tidl vunde Said:",
+	"admanager_labelCategory": "Kadegorijenoame",
+	"admanager_submit": "Schbaischere",
+	"admanager_noads": "Kä Oazaische ausgewe",
+	"admanager_Page": "Saide",
+	"admanager_Category": "Sachgrubbe",
+	"admanager_added": "Doi Änarunge sin gschbaischad worre",
+	"admanager_addedzone": "Oazaischeb'raisch isch dzugfieschd worre",
+	"admanager_zonenum": "Numma vum Oazaischeb'raisch: $1",
+	"admanager_zonenotnumber": "Fehla! $1 isch kä Numma.",
+	"admanager_return": "Zrigg zude [[Special:AdManager|Oazaischevawaldung]]",
+	"admanager_gotoads": "[[Special:AdManager|Oande Oazaisch schaffe]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Oam Oazaischeb'raisch schaffe]]",
+	"right-admanager": "[[Special:AdManager|Oazaische gschdalde]]"
+}

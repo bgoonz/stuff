@@ -1,0 +1,551 @@
+_  = require 'underscore'
+d3 = require 'd3'
+ko = require 'knockout'
+
+{ _, formatters, TypeCache,
+} = require '../../util'
+{ AttributesBase,
+} = require '../../base/attributes-base'
+{ NodeMixin,
+} = require './node-mixin'
+
+
+Trait = require './graph-node-trait'
+
+
+
+/**
+ * @class Handles the presentation of a specific type of visualization element in a Graph.
+ * @extends AttributesBase
+ * @mixes NodeMixin
+ * @mixes TypeCache .hasType, .registerType, .lookupType, .invalidateType, .purgeCache
+ */
+class exports.GraphNode extends AttributesBase implements formatters
+    NodeMixin.mix this
+    
+    
+    /**
+     * @section Class Properties
+     * Properties shared across all instances by virtue of the prototype;
+     * it is expected instances will not [need to] modify these values.
+     */
+    
+    /**
+     * Unique id for this GraphNode type, as referenced by `GraphNodeData::nodeType`.
+     * 
+     * Required to be set by all subclasses; afterward, notify the GraphNode registry
+     * to provide the type for rendering:
+     * 
+     *  class AnotherGraphNode extends GraphNode
+     *      @registerType('another')
+     *      -> ...
+     * 
+     * @type String
+     */
+    nodeType : 'graph'
+    
+    
+    /**
+     * Characteristics of this node-type; utilized by the Graph's Display and Edit views
+     * to customize default behavior of nodes, as well as filter, group, and order their
+     * DOM nodes.
+     * 
+     * @see limn.graph.NodeTraits
+     * @type Array<String>
+     */
+    traits : <[  ]>
+    
+    /**
+     * HTML or SVG tag name for the DOM node that represents this GraphNode.
+     * @type String
+     */
+    tagName : 'svg:g'
+    
+    /**
+     * Calculates the CSS class for the DOM node that represents this GraphNode.
+     * @returns {String}
+     */
+    cssClass : ->
+        _ this .chain()
+            .pluckSuperAndSelf 'nodeType'
+            .compact()
+            .map -> "#{it}-node"
+            .value()
+            .join ' '
+    
+    
+    
+    /* * * *  Instance Properties  * * * {{{ */
+    
+    /**
+     * The GraphView for this node tree.
+     * @type GraphView
+     */
+    graph : null
+    
+    
+    /**
+     * Observable properties and their defaults.
+     * 
+     * Recall these properties are attached directly to the instance so long
+     * as there is no conflict; the fact that they are also stored
+     * in `@attributes` is not important to GraphNode.
+     */
+    defaults: ->
+        model       : null
+        parent      : null
+        children    : []
+        isDisposed  : false
+        isRendered  : false
+    
+    
+    attributeTypes: ->
+        parent   : (nodeData) -> @graph.lookupNode nodeData
+        children : (nodeData) -> @graph.lookupNode nodeData
+    
+    
+    /**
+     * @returns {GraphNode} Node at the root of the GraphNode tree.
+     */
+    root : -> @graph.rootNode()
+    
+    
+    /**
+     * @returns {GraphNode} Viewport for this node (i.e., the closest
+     * parent-node that is a viewport).
+     */
+    viewport : -> @findUpTraits Trait.VIEWPORT
+    
+    
+    /**
+     * DOM Element at the root of this Node. jQuery objects and d3 Selections
+     * will be automatically stripped of their wrappers.
+     * @type ko.observable<Element>
+     */
+    el : @eagerCoerciveObservable (el) ->
+        @$el = @sel = null
+        el   = _.toElement el
+        return el unless _.isElement el
+        @$el = $ el
+        @sel = d3.select el
+        el
+    
+    
+    /**
+     * jQuery-wrapped root element.
+     * @type jQuery
+     */
+    $el : null
+    
+    
+    /**
+     * Selection of the element for this view, used by @select() and @selectAll().
+     * Defaults to `d3.select(this.el)`.
+     * @type d3.selection
+     */
+    sel : null
+    
+    
+    # }}}
+    
+    
+    
+    
+    /**
+     * @constructor
+     * @param {GraphView} graph
+     * @param {GraphNodeData} model
+     */
+    (@graph, model) ->
+        super()
+        @initMixin() # Notify NodeMixin to initialize this instance.
+        
+        # Useful for providing IDs to things that care, like text-inputs
+        # so you can use label(for=id).
+        @graphId = 'graph-' + @graph.__id__
+        @nodeId  = 'graph-node-' + @__id__
+        
+        # Add the model's attributes to this node (where they don't overlap)
+        _.defaults this, model.attributes if model?.attributes
+        
+        # Set initial attributes now that we've wrapped observers.
+        # Caller still needs to call `.watching()` once we return so we can begin
+        # observing updates without causing a loop.
+        @set { model }
+        
+        # Trigger the grid computed to auto-update
+        # once we build for the first time.
+        if typeof @render is 'function'
+            @render .= bind this
+            @renderWrap = ko.computed do
+                owner: this
+                deferEvaluation: true
+                read: ->
+                    return unless @el() and @sel
+                    return unless @model().options()
+                    return if _.contains(@traits, Trait.REQUIRES_METRIC) and not @model().metric()?.data()
+                    @trigger 'before-render', this
+                    @render()
+                    @isRendered true
+                    @trigger 'render', this
+            
+            @once 'watch-build', @renderWrap
+        
+        # console.log "new #this"
+    
+    
+    
+    /* * * *  Tree Traversal Methods  * * * {{{ */
+    
+    /**
+     * @param {String} trait Trait to test for membership.
+     * @returns {Boolean} Whether this node possesses the trait.
+     */
+    hasTrait: (trait) ->
+        _.contains @traits, trait
+    
+    
+    /**
+     * Walk the GraphNode tree and filter out all nodes that do not have
+     * all the given traits.
+     * 
+     * @param {Trait|Array<Trait>} traits List of trait(s) which must
+     *  be present to keep a node.
+     * @returns {Array<GraphNode>} List of matching nodes.
+     */
+    filterTraits: (traits) ->
+        traits = [traits] unless _.isArray traits
+        @filter (node) -> _.all traits, node.hasTrait, node
+    
+    
+    /**
+     * Walk the GraphNode tree and return the first node matching all the given
+     * traits.
+     * 
+     * @param {Trait|Array<Trait>} traits List of trait(s) to match.
+     * @returns {GraphNode|null} First matching node, or null if none match.
+     */
+    findTraits: (traits) ->
+        traits = [traits] unless _.isArray traits
+        @find (node) -> _.all traits, node.hasTrait, node
+    
+    
+    /**
+     * Walk up the tree through this node's parents (NOT including this node),
+     * returning the first node matching all the given traits.
+     * 
+     * @param {Trait|Array<Trait>} traits List of trait(s) to match.
+     * @returns {GraphNode|null} First matching node, or null if none match.
+     */
+    findUpTraits: (traits) ->
+        traits = [traits] unless _.isArray traits
+        @findUp (node) ~> node is not this and _.all traits, node.hasTrait, node
+    
+    
+    
+    # }}}
+    /* * * *  Rendering API  * * * {{{ */
+    
+    
+    /**
+     * Implement to completely customize the process of building and attaching
+     * the DOM nodes for the presentation of this GraphNode.
+     * 
+     * Note that overrides to this method in a subclass should be decorated
+     * with `@ignoreDeps`, or else you will probably end up crying later.
+     * 
+     * @param {Element} parentElement Parent DOM element (and can be either
+     *  an HTML or an SVG element).
+     * @returns {Element} Newly constructed root element for this GraphNode.
+     */
+    build: @ignoreDeps (parentElement) ->
+        parentElement = _.toElement(parentElement)
+        origEl = el = @el.peek()
+        # console.log "#this.build! el:", el, 'parent:', parentElement
+        
+        # Do we lack a DOM element?
+        unless _.isElement origEl
+            el = _.toElement @buildElement parentElement
+            # Publish an event so most consumers can avoid overriding this or @buildElement
+            if _.isElement el
+                @trigger 'build', el, parentElement, this   # for normal event handlers
+                @trigger 'watch-build'                      # for readonly `ko.computed()`, which will die if we pass args
+        
+        # Ensure we save the element if it's valid
+        return el unless _.isElement el
+        @el el unless origEl is el
+        
+        # Ensure the element is in the DOM
+        @el parentElement.appendChild el unless _.isElement el.parentNode
+        
+        # Build our child nodes
+        for node of @children()
+            nodeParentEl = @determineDOMParentForChildNode(node)
+            continue unless node.build nodeParentEl
+            @trigger 'child-built', node, this
+        el
+    
+    
+    /**
+     * Override to customize the creation of this node's root DOM element.
+     * 
+     * @protected
+     * @param {Element} parentElement
+     * @returns {Element}
+     */
+    buildElement: (parentElement) ->
+        tagName  = _.result this, 'tagName'
+        cssClass = _.result this, 'cssClass'
+        @el el = _.createElement tagName, cssClass
+        el
+    
+    
+    /**
+     * Override to choose the DOM node to act as the parent the given node.
+     * 
+     * @abstract
+     * @protected
+     * @param {GraphNode} node
+     * @returns {Element}
+     */
+    determineDOMParentForChildNode: (node) ->
+        elementType = if _.contains(node.traits, Trait.SVG) then Trait.SVG else Trait.HTML
+        return @el() if _.contains @traits, elementType
+        unless parent = @parent()
+            throw new Error "Unable to determine DOM parent for child node! #node"
+        parent.determineDOMParentForChildNode node
+    
+    
+    /**
+     * Create a template binding on `targetEl` and render it using `view`.
+     * 
+     * @protected
+     * @param {Element} targetEl Container element for the rendered template.
+     * @param {Object} [view=this] View instance (with a `template` property).
+     * @returns {Element} The target element.
+     */
+    renderView: (targetEl, view=this) ->
+        el = _.toElement targetEl
+        $ el .attr 'data-bind', 'template: { name:template, data:$data }'
+        ko.applyBindings view, el
+        targetEl
+    
+    
+    
+    # }}}
+    /* * * *  Watchers  * * * {{{ */
+    
+    
+    /**
+     * Starts watching relevant properties and informs sub-objects its safe to
+     * begin their watchers.
+     * 
+     * Note that this function **must** be invoked by the object creator once
+     * construction is finished. It cannot be called automatically by the
+     * constructor without causing a loop, potentially triggering updates
+     * before anyone else can get a reference to the object.
+     * 
+     * This method must be idempotent; it should always be safe to call
+     * it multiple times. (Using a `@computed` ensures this.)
+     * @protected
+     */
+    watching: @computed ->
+        # console.log "#this.watching!"
+        @isWatching = true
+        
+        # Create dependencies
+        @children()
+        # @parent()
+        @watchDeps()
+        
+        # ...But ignores whatever other watchers do
+        ko.dependencyDetection.ignore ~>
+            _parent      = @watchParent()
+            _children    = @watchChildren()
+            _childModels = @watchModelChildren()
+            _others      = @watchOthers()
+            
+            # Recursively activate watching() on models and children
+            @model().watching()
+            _.invoke @children(), 'watching'
+            
+            [ _parent, _children, _childModels, _others ]
+    
+    
+    /**
+     * Stub to allow you to hook into @watching() without overriding everything.
+     * Called to generate dependencies prior to `watching` recursion.
+     * 
+     * @abstract
+     * @protected
+     */
+    watchDeps: ->
+    
+    
+    /**
+     * Stub to allow you to hook into @watching() without overriding everything.
+     * Called to recursively notify of deps.
+     * 
+     * @abstract
+     * @protected
+     */
+    watchOthers: ->
+    
+    
+    /**
+     * Update parent GraphNode to match when model's parent GraphNodeData
+     * changes.
+     */
+    parentFromModel : @eagerComputed ->
+        return null unless parentModel = @model()?.parent()
+        @parent parentModel
+        @parent.peek()
+    
+    
+    /**
+     * Ensure children Arrays are properly updated when parent changes.
+     * 
+     * Note: Knockout ignores cycles in deps, so the circular modification
+     * trigger between `parent` and `children` is benign.
+     */
+    watchParent : @computed ->
+        oldParent = @parent.prev()
+        oldParent?.children.remove this
+        
+        newParent = @parent()
+        if newSiblings = newParent?.children()
+            newParent.children.push this unless _.contains newSiblings, this
+        
+        newParent
+    
+    
+    /**
+     * Ensure parents are properly set when child-nodes are added or removed.
+     * 
+     * Note: Knockout ignores cycles in deps, so the circular modification
+     * trigger between `parent` and `children` is benign.
+     */
+    watchChildren : @computed ->
+        oldNodes    = @children.prev()
+        childNodes  = @children()
+        
+        # unparent removed nodes that correspond to our children
+        _.each oldNodes, (node) ~>
+            node.parent(null) if node.parent.peek() is this and not _.contains childNodes, node
+        
+        # Set the parent of objects that are children
+        _.invoke childNodes, 'parent', this
+        
+        childNodes
+    
+    
+    watchModelChildren : @computed ->
+        oldNodes   = @children.prev()
+        newModels  = @model().children().slice()
+        
+        # unparent removed nodes that correspond to our children
+        _.each oldNodes, (node) ~>
+            data = node.model.peek()
+            node.parent(null) if node.parent.peek() is this and not _.contains newModels, data
+        
+        # Replace @children with new nodes, letting attribute type coercion
+        # ensure the models become nodes.
+        @children newModels
+        
+        newModels
+    
+    
+    # }}}
+    /* * * *  Property Cascading  * * * {{{ */
+    
+    # TODO
+    
+    
+    # }}}
+    ### DOM Helpers {{{
+    
+    /**
+     * `jQuery(el).find(...)`, using the element for this node.
+     */
+    $: ->
+        @$el?.find.apply @$el, arguments
+    
+    
+    /**
+     * `d3.select(el).select(...)`, using the element for this node.
+     */
+    select: (selector) ->
+        @sel?.select selector
+    
+    
+    /**
+     * `d3.select(el).selectAll(...)`, using the element for this node.
+     */
+    selectAll: (selector) ->
+        @sel?.selectAll selector
+    
+    
+    # }}}
+    
+    
+    toString: ->
+        model     = @model?.peek()
+        nChildren = @children?.peek()?.length or 0
+        "#{@getClassName()}(model=#model, \#children=#nChildren)"
+    
+    
+    
+    /* * * *  Class Methods  * * * {{{ */
+    
+    
+    /**
+     * Constructs a new `GraphNode` of this class's type without regard
+     * for the `nodeType` specified by the `GraphNodeData`.
+     * 
+     * If omitted, the `GraphView` for the new node will be inherited
+     * from the parent node.
+     * 
+     * @static
+     * @param {GraphView} graph
+     * @param {GraphNodeData} model
+     * @returns {? extends GraphNode} A new GraphNode instance.
+     */
+    @create = (graph, model) ->
+        GraphNodeType = this
+        new GraphNodeType graph, model
+    
+    
+    /**
+     * Constructs a new `GraphNode` of the appropriate type for the
+     * given `GraphNodeData`; the `GraphView` for the new node will
+     * be inherited from the parent node.
+     * 
+     * @static
+     * @param {GraphView} graph
+     * @param {GraphNodeData} model
+     * @returns {? extends GraphNode} The GraphNode instance.
+     */
+    @fromNodeData = (graph, model) ->
+        return null  unless model?
+        return model if model instanceof GraphNode
+        GraphNodeType = GraphNode.lookupType model
+        new GraphNodeType graph, model
+    
+    
+    /**
+     * Map of known sub-types, keyed by type-name. Decorates this class to
+     * provide static methods for interacting with the cache:
+     *  - hasType
+     *  - lookupType
+     *  - registerType
+     *  - invalidateType
+     *  - purgeCache
+     * 
+     * @static
+     * @type TypeCache
+     */
+    @__cache__ = TypeCache.createFor this, 'nodeType'
+    
+    # }}}
+    
+

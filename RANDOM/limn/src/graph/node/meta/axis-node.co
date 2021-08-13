@@ -1,0 +1,164 @@
+_  = require 'underscore'
+ko = require 'knockout'
+d3 = require 'd3'
+moment = require 'moment'
+
+{ GraphNodeData,
+} = require '../graph-node-data'
+{ GraphNode,
+} = require '../graph-node'
+{ CanvasNode,
+} = require '../canvas-node'
+
+Trait = require '../graph-node-trait'
+
+
+timeFormat = (formats) ->
+  (date) ->
+    i = formats.length - 1
+    f = formats[i]
+    while !f[1](date)
+        f = formats[--i]
+    f[0] date
+
+multiTimeFormatter = timeFormat [
+    [ d3.time.format("%Y"),    -> true ],
+    [ (-> moment(it).format('MMM')), -> it.getMonth() ],
+    [ d3.time.format("%b %d"), -> it.getDate() != 1 ],
+    [ d3.time.format("%a %d"), -> it.getDay() && it.getDate() != 1 ],
+    [ d3.time.format("%I %p"), -> it.getHours() ],
+    [ d3.time.format("%I:%M"), -> it.getMinutes() ],
+    [ d3.time.format(":%S"),   -> it.getSeconds() ],
+    [ d3.time.format(".%L"),   -> it.getMilliseconds() ]
+]
+
+log10 = (x) ->
+    v = Math.log(x) / Math.LN10
+    if Math.abs((r = Math.round(v)) - v) < 1e-6 then r else v
+
+
+
+/**
+ * @class
+ * @extends GraphNodeData
+ */
+class exports.AxisNodeData extends GraphNodeData
+    @registerType 'axis'
+    
+    defaults: ->
+        dimension : null # x | y
+        orient    : null # top|bottom | left|right
+        options   :
+            ticks      : null
+            tickFormat : 'MMM YY'
+            
+            label      : null
+            labelSize  : 10
+            labelColor : '#666666'
+            
+            stroke :
+                width   : 2
+                color   : '#CACACA'
+    
+    attributeTypes: ->
+        {}
+    
+    -> super ...
+
+
+
+/**
+ * @class
+ * @extends GraphNode
+ */
+class exports.AxisNode extends GraphNode
+    @registerType 'axis'
+    traits : [
+        Trait.META_NODE
+        Trait.FG_LAYER
+        Trait.SVG
+        Trait.LEAF
+    ]
+    
+    
+    -> super ...
+    
+    
+    render: ->
+        viewport = @viewport()
+        options = @model().options()
+        return unless viewport.zoomTransform()
+        return unless dim   = options.get('dimension')
+        return unless scale = viewport[dim+'ZoomScale']()
+        
+        @sel.classed dim+'-axis axis', true
+        
+        orient = options.get('orient')
+        ticks  = options.get('ticks')
+        label  = options.get('label')
+        axis   = d3.svg.axis().scale scale
+        
+        # clear any previous labels (TODO: fix this ubiquitous multiple execution problem once and for all)
+        @$el.find('text.label').remove()
+        if label
+            labelElement = @sel.append('text')
+                .classed('label', true)
+                .attr('text-anchor', 'end')
+                .attr('dy', '.75em')
+                .text(label)
+        
+        switch dim
+            case 'x'
+                axis.orient(orient or= 'bottom')
+                ticks ?= 10
+                if viewport.xScaleType() is 'time'
+                    axis.tickFormat multiTimeFormatter # @dateFormatterFor 'MMM YY'
+                        .ticks ticks
+                else
+                    axis.ticks scale.domain()
+                
+                labelElement?
+                    .attr('x', viewport.viewportWidth() - 6)
+                    .attr('y', -18)
+            
+            case 'y'
+                axis.tickFormat @numberFormatterFor 2
+                    .orient(orient or= 'left')
+                
+                # TODO: GridNode to apply the same scale calculations
+                ticks ?= 10
+                if viewport.yScaleType() is 'ordinal'
+                    tickValues = scale.range()
+                else if viewport.yScaleType() is 'log'
+                    tickValues = scale.ticks()
+                    while 5 < tickValues.length > ticks + 2
+                        tickValues .= filter (v, i) ->
+                            L = tickValues.length
+                            # return true if log10(v) % 1 == 0
+                            mod = Math.max 2, Math.round((L - 2) / (L - 2 - ticks))
+                            i == 0 or i == (L - 1) or i % mod != 0
+                else
+                    tickValues = scale.ticks(ticks)
+                axis.tickValues tickValues
+                
+                labelElement?
+                    .attr('transform', 'rotate(-90)')
+                    .attr('y', 6)
+        
+        @sel.call axis
+        @moveAxis()
+        
+        axis
+    
+    
+    moveAxis: @computed ->
+        return unless el = @el() and @sel
+        @sel.attr 'transform', ''
+        
+        # TODO: handle other orientations
+        return unless @model().get('options.dimension') is 'x'
+        height = @viewport().viewportHeight()
+        @sel.attr 'transform', "translate(0, #height)"
+        height
+    
+

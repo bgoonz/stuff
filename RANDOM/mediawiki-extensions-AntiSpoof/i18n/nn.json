@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dittaeva",
+			"Harald Khan",
+			"Njardarlogar"
+		]
+	},
+	"antispoof-desc": "Blokkerer for oppretting av konti med liknande eller forvirrande brukarnamn, eller brukarnamn som inneheld forskjellige alfabettypar",
+	"antispoof-conflict-top": "Namnet «$1» er for likt følgjande {{PLURAL:$2|konto|kontoar}}:",
+	"antispoof-conflict-bottom": "Vel eit anna namn.",
+	"antispoof-name-illegal": "Namnet «$1» er ikkje tillate for å hindra samanblanding: $2.\nVer venleg og vel eit anna namn.",
+	"antispoof-badtype": "Ugyldig datatype",
+	"antispoof-empty": "Tom streng",
+	"antispoof-prohibited": "Inneheld det svartelista teiknet $1",
+	"antispoof-combining": "Byrjar med kombinasjonsteiknet «$1»",
+	"antispoof-unassigned": "Inneheld ugyldig eller forelda teikn",
+	"antispoof-deprecated": "Inneheld det eldre teiknet $1",
+	"antispoof-noletters": "Inneheld ingen bokstavar",
+	"antispoof-mixedscripts": "Inneheld blanding av ikkje-kompatible skriftsystem",
+	"antispoof-tooshort": "Namnet er for kort",
+	"antispoof-ignore": "Ignorer misbrukssjekk",
+	"right-override-antispoof": "Overkøyra sjekk av brukarnamn"
+}

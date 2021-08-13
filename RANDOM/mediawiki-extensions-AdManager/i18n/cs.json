@@ -1,0 +1,42 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cvanca",
+			"Draceane",
+			"Frettie",
+			"Gaj777",
+			"Lahwaacz",
+			"Michaelbrabec",
+			"Mormegil",
+			"Paxt",
+			"Slepi"
+		]
+	},
+	"admanager": "Správce reklam",
+	"admanagerzones": "Správce reklamních zón",
+	"admanager-desc": "Poskytuje [[Special:AdManager|speciální stránku]], která umožňuje správcům nastavit zóny stránek nebo kategorií",
+	"admanager_docu": "Chcete-li přidat nebo odstranit reklamní zónu stránky nebo celé kategorie, přidejte nebo odeberte název dané stránky či kategorie níže.",
+	"admanagerzones_docu": "Zadejte číslo každé reklamní zóny na samostatném řádku.",
+	"admanager_invalidtargetpage": "Stránka s názvem \"$1\" nebyla nalezena.",
+	"admanager_invalidtargetcategory": "Žádná kategorie s názvem \"$1\" nebyla nalezena.",
+	"admanager_notable": "Chyba! Požadovaná tabulka databáze nebyla nalezena! Nejprve spusťte update.php.",
+	"admanager_noAdManagerZones": "Chyba! Musíte přidat nějaké reklamní zóny. Je to možné ve [[Special:AdManagerZones|Správci reklamních zón]].",
+	"admanager_labelPage": "Názvy stránek",
+	"admanager_labelCategory": "Názvy kategorií",
+	"admanager_submit": "Odeslat",
+	"admanager_noads": "Nezobrazovat reklamy",
+	"admanager_Page": "Stránky",
+	"admanager_Category": "Kategorie",
+	"admanager_added": "Vaše úpravy byly uloženy",
+	"admanager_addedzone": "Přidána zóna $1",
+	"admanager_removedzone": "Odstraněna zóna $1.",
+	"admanager_nozonesadded": "Žádné zóny nebyly přidány.",
+	"admanager_nozonesremoved": "Žádné zóny nebyly odebrány.",
+	"admanager_zonenum": "Zóna č. $1",
+	"admanager_zonenotnumber": "Chyba! $1 není čislem.",
+	"admanager_return": "Návrat do [[Special:AdManager|správce reklam]]",
+	"admanager_gotoads": "[[Special:AdManager|Upravit umístění reklamy]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Editovat zóny reklam]]",
+	"action-admanager": "spravovat nastavení reklam",
+	"right-admanager": "[[Special:AdManager|Upravit konfiguraci inzerce]]"
+}

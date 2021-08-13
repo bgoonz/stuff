@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Haqmar",
+			"Sagan",
+			"З. ӘЙЛЕ"
+		]
+	},
+	"admanager": "Реклама идаралаусыһы",
+	"admanagerzones": "Реклама зоналары идаралаусыһы",
+	"admanager-desc": "Хакимдәргә бит һәм категория заналарын өҫтәү өсөн[[Special:AdManager|ярҙамсы бит]] өҫтәргә",
+	"admanager_docu": "Биттең йәки бөтә категорияның реклама зонаһын ҡуйыу йәки ҡуймау өсөн, уның исемен ҡуйығыҙ йәки алып ташлағыҙ.",
+	"admanagerzones_docu": "Һәр реклама зонаһы номерын айырым юлда яҙығыҙ.",
+	"admanager_invalidtargetpage": "\" $1 \" бите табылманы.",
+	"admanager_invalidtargetcategory": "\" $1 \" категорияһы табылманы.",
+	"admanager_notable": "Хата! Һоралған мәғлүмәт таблицаһы табылманы. Эшләрегеҙ update.php.",
+	"admanager_noAdManagerZones": "Хата! Бер нисә реклама зонаһын өҫтәргә кәрәк. Уларҙы  [[Special:AdManagerZones|Реклама менеджеры зонаһына]] өҫтәгеҙ.",
+	"admanager_labelPage": "Бит исемдәре",
+	"admanager_labelCategory": "Категория исемдәре",
+	"admanager_submit": "Ебәрергә",
+	"admanager_noads": "Реклама күрһәтмәҫкә",
+	"admanager_Page": "Биттәр",
+	"admanager_Category": "Категориялар",
+	"admanager_added": "Үҙгәртеүҙәрегеҙ һаҡланды",
+	"admanager_addedzone": " $1 зонаһы өҫтәлгән",
+	"admanager_removedzone": " $1 зонаһы юйылған",
+	"admanager_nozonesadded": "Өҫтәү өсөн зона юҡ.",
+	"admanager_nozonesremoved": "Юйыу өсөн зона юҡ.",
+	"admanager_zonenum": "Зона #:$1",
+	"admanager_zonenotnumber": "Хата!  $1 һан түгел.",
+	"admanager_return": "Киренән  [[Special:AdManager|Реклама менеджерына]]",
+	"admanager_gotoads": "[[Special:AdManager|Реклама урынлаштырыуҙы үҙгәртергә]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Реклама зонаһын үҙгәртергә]]",
+	"right-admanager": "[[Special:AdManager|Реклама көйләүен идаралау]]"
+}

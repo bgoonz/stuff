@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Laurentianus",
+			"Rafaelgarcia",
+			"SPQRobin",
+			"UV"
+		]
+	},
+	"action-centralauth-rename": "rationes globales renominare",
+	"centralauth-admin-blocklog": "acta obstructionum",
+	"centralauth-admin-username": "Nomen usoris:",
+	"centralauth-finish-password": "Tessera:",
+	"centralauth-login-progress": "Simul nomen das in his {{grammar:genitive|{{int:Centralauth-groupname}}}} inceptis:",
+	"centralauth-logout-progress": "Pariter a ceteris tuis inceptis dimitteris:",
+	"centralauth-prefs-manage": "Curare personam tuam universalem",
+	"centralauth-prefs-not-managed": "Ratio unificata non adhibita",
+	"centralauth-prefs-status": "Status rationis globalis:",
+	"globalrenameuser": "Usorem globalem renominare",
+	"right-centralauth-rename": "Rationes globales renominare"
+}

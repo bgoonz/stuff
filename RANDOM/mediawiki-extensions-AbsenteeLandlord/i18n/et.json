@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Oop"
+		]
+	},
+	"absenteelandlord-reason": "Administraatorite tegevusetuse tõttu on see andmebaas automaatselt lukustatud.",
+	"absenteelandlord-desc": "Lukustab automaatselt viki andmebaasi, kui kõik süsopid on mõnda aega tegevusetud olnud"
+}

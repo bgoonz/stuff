@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cryptocoryne",
+			"MarcoAurelio"
+		]
+	},
+	"autoproxyblock-desc": "Allows to block open proxies from performing actions in wiki",
+	"proxy-blocked": "{{GENDER:|Your}} IP address is listed as proxy, performed action aborted.",
+	"abusefilter-edit-builder-vars-is-proxy": "True if this action was performed through a proxy",
+	"tag-proxy": "action through proxy",
+	"action-proxyunbannable": "bypass automatic blocks of proxies",
+	"right-proxyunbannable": "Bypass automatic blocks of proxies",
+	"action-notagproxychanges": "protect from tagging edits through proxies as \"proxy\"",
+	"right-notagproxychanges": "Protect from tagging edits through proxies as \"proxy\"",
+	"action-autoproxyblock-log": "view the AutoProxyBlock log",
+	"right-autoproxyblock-log": "View log of automatically blocked changes through proxies",
+	"proxyblock-log-name": "AutoProxyBlock log",
+	"proxyblock-log-header": "List of automatically blocked changes through proxies",
+	"proxyblock-logentry": "",
+	"proxyblock-logentry-blocked": "action \"$2\" by {{GENDER:$3|user}} $3 on page [[$1]] automatically blocked."
+}

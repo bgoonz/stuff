@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"Awangba Mangang"
+		]
+	},
+	"antispoof-conflict-bottom": "ꯆꯥꯟꯕꯤꯗꯨꯅꯥ ꯑꯇꯣꯞꯄꯥ ꯁꯤꯖꯤꯟꯅꯔꯤꯕꯥ ꯃꯃꯤꯡ ꯱ ꯈꯟꯂꯨ",
+	"antispoof-badtype": "ꯑꯐꯠꯇꯕꯥ ꯈꯣꯝꯖꯤꯟꯕꯥ ꯃꯈꯜ",
+	"antispoof-empty": "ꯑꯍꯥꯡꯕꯥ ꯃꯔꯤ",
+	"antispoof-combining": " $1 ꯄꯨꯟꯁꯤꯟꯗꯨꯅꯥ ꯍꯧꯔꯣ",
+	"antispoof-unassigned": "$1 ꯌꯥꯗꯕꯥ ꯃꯌꯦꯛ ꯌꯥꯎꯔꯦ",
+	"antispoof-noletters": "ꯃꯌꯦꯛ ꯑꯃꯇꯥ ꯌꯥꯎꯍꯟꯒꯅꯨ",
+	"antispoof-mixedscripts": "ꯃꯄꯨꯡ ꯐꯥꯗꯕꯥ ꯌꯥꯟꯁꯤꯟꯅꯕꯥ ꯃꯌꯦꯛ ꯌꯥꯎꯔꯦ",
+	"antispoof-tooshort": "ꯃꯤꯡꯁꯤ ꯌꯥꯝ ꯇꯦꯟꯂꯦ ꯆꯥꯡ ꯱ꯗꯥ ꯏꯌꯨ"
+}

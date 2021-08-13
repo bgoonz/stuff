@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Salvemm el lombard"
+		]
+	},
+	"antispoof-desc": "El bloca la creazzion de nom de utent con di carater mist e di nom de utent che ingeneren confusion o  vun trop compagn de l'alter.",
+	"antispoof-conflict-top": "El nom de l'utent \"$1\" l'è trop compagn de {{PLURAL:$2|chesschì|questi chì}}:",
+	"antispoof-conflict-bottom": "Per piesé, cata foeura un alter nom de utent",
+	"antispoof-name-illegal": "El nom de utent \"$1\" l'è minga permetud per fà minga casot o per minga fall drovà in manera de baloss: $2. Cata foeura un'alter nom.",
+	"antispoof-badtype": "Tipo de dati sbagliad",
+	"antispoof-empty": "Stringa voeuja",
+	"antispoof-prohibited": "El gh'hà denter el carater $1 minga permetud",
+	"antispoof-combining": "El comenza con la combinazzion de carater $1",
+	"antispoof-unassigned": "El gh'hà dent el carater minga assegnad $1",
+	"antispoof-deprecated": "El gh'hà dent el carater $1 che l'è sconsgiurad",
+	"antispoof-noletters": "El gh'hà dent nissuna letera",
+	"antispoof-mixedscripts": "Combinazzion de sistema de scritura minga compatibil",
+	"antispoof-tooshort": "Nom normalizzad trop curt",
+	"antispoof-ignore": "Ignora i controi contra di fregadure",
+	"antispoof-ignore-help": "El permet de creà un cunt ai utent che gh'hann di permess assee, anca se 'l so nom l'è compagn de quell d'un'alter cunt che 'l gh'è sgiamò.",
+	"action-override-antispoof": "l'ignora i controi contra di fregadure",
+	"right-override-antispoof": "Ignora i controi contra di fregadure"
+}

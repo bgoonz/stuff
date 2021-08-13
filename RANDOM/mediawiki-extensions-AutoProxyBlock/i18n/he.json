@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Erelon",
+			"Guycn2",
+			"Steeve815"
+		]
+	},
+	"autoproxyblock-desc": "מתן אפשרות לחסימת שרתי פרוקסי פתוחים מביצוע פעולות באתר הוויקי",
+	"proxy-blocked": "כתובת ה־IP שלך רשומה כפרוקסי, ולכן הפעולה בוטלה.",
+	"abusefilter-edit-builder-vars-is-proxy": "נכון אם הפעולה הזאת בוצעה דרך פרוקסי",
+	"tag-proxy": "פעולה דרך פרוקסי",
+	"action-proxyunbannable": "עקיפת חסימות אוטומטיות של שרתי פרוקסי",
+	"right-proxyunbannable": "עקיפת חסימות אוטומטיות של שרתי פרוקסי",
+	"action-notagproxychanges": "חסינות מתיוג עריכות בתגית \"פרוקסי\" כשהן נעשות משרתי פרוקסי",
+	"right-notagproxychanges": "חסינות מתיוגים של עריכות שנעשו משרתי פרוקסי",
+	"action-autoproxyblock-log": "צפיה ביומן חסימות פרוקסי אוטומטיות",
+	"right-autoproxyblock-log": "הצגת יומן של שינויים מכתובות פרוקסי שנחסמו באופן אוטומטי",
+	"proxyblock-log-name": "יומן חסימות אוטומטיות של פרוקסי",
+	"proxyblock-log-header": "רשימה של שינויים מכתובות פרוקסי שנחסמו באופן אוטומטי",
+	"proxyblock-logentry-blocked": "הפעולה \"$2\" שבוצעה על־ידי $3 בדף [[$1]] נחסמה באופן אוטומטי."
+}

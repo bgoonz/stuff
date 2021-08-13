@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Brazal.dang",
+			"Geopoet",
+			"Macofe"
+		]
+	},
+	"batchuserrights": "Mga katanosan kan grupo nin paragamit",
+	"batchuserrights-desc": "Minatugot na magdudugang nin saro o dakol na mga paragamit sa sarong grupo o dakol na mga grupo sa laog nin sarong aksyon",
+	"batchuserrights-names": "Mga pangaran nin paragamit tanganing idugang ining grupo sa (saro kada linya):",
+	"batchuserrights-intro": "Ining pahina minatugot saimo na magdugang nin sarong grupo sa kadakulon na mga paragamit na sararoan.\nPara sa rason nin seguridad, an lista kan maidudugang na mga grupo ibinugtak sa laog kan konpigurasyon nin ekstensyon asin dae maliliwat gikan sa laog kan wiki.\nTabi man maghapot sa sarong administrador nin sistema kun ika kaipuhan na magtutugot na magdudugang kan ibang mga grupo.",
+	"batchuserrights-single-progress-update": "Nagdugang nin {{PLURAL:$1|grupo|mga grupo}} sa <strong>$2</strong>.",
+	"batchuserrights-add-groups": "Nagdudugang nin {{PLURAL:$1|sarong paragamit|$1 mga paragamit}} sa minasunod na {{PLURAL:$2|grupo|mga grupo}}: <strong>$3</strong>.",
+	"batchuserrights-userload-error": "Dae maikakarga an {{GENDER:$1|paragamit}} na si '''$1'''.",
+	"batchuserrights-no-groups": "Ika dae tabi nagpili nin arinman na mga grupo.\nIni dae nanggad makakapagtapos nin anuman na bagay.\nAn tada kan pahina pagtutugutan na magdalagan na tangani baya na saimong sayon na mahiling kun arin sa mga pangaran nin paragamit an dae maipagkakarga.",
+	"right-batchuserrights": "Magdugang in saro o dakol na mga paragamit sa sarong grupo o dagmang na mga grupo sa laog nin sarong aksyon",
+	"action-batchuserrights": "Magdugang in saro o dakol na mga paragamit sa sarong grupo o dagmang na mga grupo sa laog nin sarong aksyon"
+}

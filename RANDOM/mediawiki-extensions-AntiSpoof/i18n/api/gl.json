@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Banjo",
+			"Elisardojm"
+		]
+	},
+	"apihelp-antispoof-description": "Comprobar un nome de usuario coas comprobacións de normalización de AntiSpoof",
+	"apihelp-antispoof-summary": "Comprobar un nome de usuario coas comprobacións de normalización de AntiSpoof",
+	"apihelp-antispoof-param-username": "Nome de usuario a comprobar có AntiSpoof",
+	"apihelp-antispoof-example-1": "Comprobar nome de usuario \"Foo\" có AntiSpoof",
+	"apihelp-createaccount-param-ignoreantispoof": "Ignorar comprobación de enganos (spoofing) (require o permiso <code>override-antispoof</code>)"
+}

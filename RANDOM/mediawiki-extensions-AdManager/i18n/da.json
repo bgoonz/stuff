@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joedalton",
+			"Thomsen",
+			"Tjernobyl"
+		]
+	},
+	"admanager": "Annoncehåndtering",
+	"admanagerzones": "Annoncehåndteringsområder",
+	"admanager-desc": "Giver en [[Special:AdManager|specialside]] som tillader sysops at angive området for sider eller kategorier",
+	"admanager_docu": "For at tilføje eller fjerne en sides eller en hel kategoris annonceområde, så tilføj eller fjern sidens eller kategoriens titel nedenfor.",
+	"admanagerzones_docu": "Angiv hver annonceområdes nummer på dens egen linje.",
+	"admanager_invalidtargetpage": "Ingen side fundet ved navn »$1«.",
+	"admanager_invalidtargetcategory": "Ingen kategori fundet ved navn »$1«.",
+	"admanager_notable": "Fejl! En påkrævet databasetabel blev ikke fundet! Kør update.php først.",
+	"admanager_noAdManagerZones": "Fejl! Du skal tilføje nogle annonceområder. Angiv dem i [[Special:AdManagerZones|annoncehåndteringsområder]].",
+	"admanager_labelPage": "Sidetitler",
+	"admanager_labelCategory": "Kategorinavne",
+	"admanager_submit": "Gem",
+	"admanager_noads": "Vis ingen annoncer",
+	"admanager_Page": "Sider",
+	"admanager_Category": "Kategorier",
+	"admanager_added": "Dine ændringer er blevet gemt",
+	"admanager_addedzone": "Tilføjet område $1",
+	"admanager_removedzone": "Fjernede område $1.",
+	"admanager_nozonesadded": "Ingen områder blev tilføjet.",
+	"admanager_nozonesremoved": "Ingen områder blev fjernet.",
+	"admanager_zonenum": "Område #: $1",
+	"admanager_zonenotnumber": "Fejl! $1 er ikke et tal.",
+	"admanager_return": "Gå tilbage til [[Special:AdManager|Annoncehåndtering]]",
+	"admanager_gotoads": "[[Special:AdManager|Rediger annonceplacering]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Rediger annonceområder]]",
+	"right-admanager": "[[Special:AdManager|Håndter annoncekonfiguration]]"
+}

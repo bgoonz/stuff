@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"SPQRobin",
+			"Siebrand"
+		]
+	},
+	"breadcrumbs-desc": "Voegt een spoor toe van de navigatiegeschiedenis onder de menubalk",
+	"prefs-breadcrumbs-separator": "Scheidingsteken voor navigatiegeschiedenis",
+	"prefs-breadcrumbs-separator-max": "Er kunnen maximaal 2 tekens worden ingevoerd.",
+	"prefs-breadcrumbs": "Navigatiegeschiedenis",
+	"prefs-breadcrumbs-showcrumbs": "Navigatiegeschiedenis weergeven",
+	"prefs-breadcrumbs-numberofcrumbs": "Aantal weer te geven pagina's in navigatiegeschiedenis",
+	"prefs-breadcrumbs-numberofcrumbs-max": "Er worden maximaal 20 pagina's weergeven.",
+	"prefs-breadcrumbs-namespaces": "Naamruimten opnemen in navigatiegeschiedenis",
+	"prefs-breadcrumbs-filter-duplicates": "Herhaaldelijk bezochte pagina's niet opnemen",
+	"prefs-breadcrumbs-preceding-text": "Weer te geven tekst voor navigatiegeschiedenis",
+	"prefs-breadcrumbs-preceding-text-max": "Er kunnen maximum 30 tekens worden ingevoerd."
+}

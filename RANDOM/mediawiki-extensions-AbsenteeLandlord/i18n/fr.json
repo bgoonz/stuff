@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Grondin",
+			"IAlex",
+			"Wladek92"
+		]
+	},
+	"absenteelandlord-reason": "La base de données a été verrouillée automatiquement à cause de l’inactivité des administrateurs.",
+	"absenteelandlord-desc": "Verrouille automatiquement la base de données si tous les administrateurs sont inactifs depuis un certain temps"
+}

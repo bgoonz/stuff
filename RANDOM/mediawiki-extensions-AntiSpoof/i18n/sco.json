@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"AmaryllisGardener",
+			"John Reid",
+			"Sator"
+		]
+	},
+	"antispoof-desc": "Blocks the creaution o accoonts wi mixt-screept, confusin n siclik uisernames",
+	"antispoof-conflict-top": "The name \"$1\" is ower siclik tae the follaein {{PLURAL:$2|uisername|uisernames}}:",
+	"antispoof-conflict-bottom": "Please chuise anither uisername.",
+	"antispoof-name-illegal": "The name \"$1\" is no alloued fer tae hinder confusin or spoofed uisernames: $2.\nPlease choose another name.",
+	"antispoof-badtype": "Bad data type",
+	"antispoof-empty": "Tuim string",
+	"antispoof-prohibited": "Haes blaickleetit chairacter $1",
+	"antispoof-combining": "Begins wi combinin maurk $1",
+	"antispoof-unassigned": "Haes onassigned chairacter $1",
+	"antispoof-deprecated": "Haes depreecatit chairacter $1",
+	"antispoof-noletters": "Disna contain onie letters",
+	"antispoof-mixedscripts": "Contains oncompatible mixt screepts",
+	"antispoof-tooshort": "Canoneecalised name is ower short",
+	"antispoof-ignore": "Ignore spuifin checks",
+	"right-override-antispoof": "Owerride the spuifin checks"
+}

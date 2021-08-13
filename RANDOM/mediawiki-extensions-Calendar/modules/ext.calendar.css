@@ -1,0 +1,60 @@
+/*
+ * Stylesheet for the Calendar extension
+ *
+ * @package MediaWiki
+ * @subpackage Extensions
+ * @author Roland Unger
+ * @copyright © 2007 Roland Unger
+ * @licence GNU General Public Licence 2.0 or later
+*/
+
+.calendar {
+	text-align: center;
+	background-color: #f5faff;
+	border: 2px solid #cedff2;
+}
+
+.calWidth {
+	width: 20em;
+}
+
+.calLeft {
+	clear: left;
+	float: left;
+	margin: 0 1em 1em 0;
+}
+
+.calRight {
+	clear: right;
+	float: right;
+	margin: 0 0 1em 1em;
+}
+
+.calCenter {
+	margin: 0 auto;
+}
+
+.calendar .prevNext {
+	background-color: #cedff2;
+}
+
+.calendar .calTitle {
+	background-color: #cedff2;
+	font-weight: bold;
+}
+
+.calendar td {
+	color: #000;
+}
+
+.calendar .sundays {
+	color: #f00;
+}
+
+.calendar .today {
+	color: #7cfc00;
+}
+
+.calendar .highlighted {
+	color: #ffa500;
+}

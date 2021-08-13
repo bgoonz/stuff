@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ahonc",
+			"NickK",
+			"Piramidion",
+			"Prima klasy4na",
+			"Vlad5250",
+			"VolodymyrF"
+		]
+	},
+	"adminlinks": "Посилання для адміністраторів",
+	"adminlinks-desc": "Додає [[Special:AdminLinks|спеціальну сторінку]], яка містить корисні посилання для адміністраторів",
+	"adminlinks_documentation": "документація $1",
+	"adminlinks_general": "Загальні",
+	"adminlinks_editsidebar": "Редагувати бічну панель",
+	"adminlinks_editcss": "Редагувати CSS-файл",
+	"adminlinks_editmainpagename": "Змінити назву головної сторінки",
+	"adminlinks_users": "Користувачі",
+	"adminlinks_browsesearch": "Перегляд і пошук",
+	"adminlinks_importexport": "Імпорт та експорт",
+	"adminlinks_pagenotfound": "Не вдалося знайти спеціальну сторінку з назвою: $1.",
+	"action-adminlinks": "перегляд посилань для адміністраторів",
+	"right-adminlinks": "Перегляд [[Special:AdminLinks|посилань для адміністраторів]]"
+}

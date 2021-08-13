@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Arnobarnard",
+			"Naudefj"
+		]
+	},
+	"authorprotect": "Beskerm bladsy teen nie-outeurs",
+	"authorprotect-desc": "Laat die outeur van 'n bladsy toe om dit te beskerm teen ander gebruikers",
+	"authorprotect-notauthor": "U is nie die outeur van die bladsy nie",
+	"authorprotect-confirm": "Verander beskermingsvlak",
+	"authorprotect-edit": "Beperk wysigings tot outeurs",
+	"authorprotect-move": "Beperk skuif (hernoem) tot outeur",
+	"authorprotect-intro": "Gebruik die vorm om die blad te beskerm teen ander gebruikers",
+	"authorprotect-success": "Beskerming suksesvol!",
+	"protect-level-author": "Beskerm teen nie-outeurs",
+	"restriction-level-author": "Kan slegs deur outeurs gewysig word",
+	"right-authorprotect": "Beveilig self opgedateerde bladsye"
+}

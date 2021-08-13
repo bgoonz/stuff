@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"GunChleoc"
+		]
+	},
+	"antispoof-desc": "Bacaidh seo cruthachadh chunntasan le ainm-cleachdaiche sa bheil sgriobt measgaichte, a tha breisleachail no ro choltach air ainm eile",
+	"antispoof-conflict-top": "Tha an t-ainm \"$1\" ro coltach ris {{PLURAL:$2|an ainm|na h-ainmean}} seo:",
+	"antispoof-conflict-bottom": "Feuch an tagh thu ainm eile.",
+	"antispoof-name-illegal": "Chan eil an t-ainm \"$1\" ceadaichte a chum dìona o ainmean-cleachdaiche a tha ro choltach ri chèile no a bheir an car à ainm eile: $2.\nFeuch an tagh thu ainm eile.",
+	"antispoof-bad-char": "\"$1\" ($2)",
+	"antispoof-badtype": "Droch sheòrsa dàta",
+	"antispoof-empty": "Sreang falamh",
+	"antispoof-prohibited": "Tha caractar ann a tha air an dubh-liosta: $1",
+	"antispoof-combining": "Tha e a' tòiseachadh le comharra nasgach: $1",
+	"antispoof-unassigned": "Tha caractar gun sònrachadh ann: $1",
+	"antispoof-deprecated": "Tha caractar ann nach molar tuilleadh: $1",
+	"antispoof-noletters": "Chan eil litir ann",
+	"antispoof-mixedscripts": "Tha sgriobtaichean measgaichte neo-chòrdail ann",
+	"antispoof-ignore": "Leig seachad an dearbhadh nach dèid car a thoirt às",
+	"right-override-antispoof": "Tar-àithn an dearbhadh nach dèid car a thoirt às"
+}

@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cedric31"
+		]
+	},
+	"admanager": "Gestionari de publicitat",
+	"admanagerzones": "Zònas de gestionari de publicitat",
+	"admanagerzones_docu": "Entratz cada numèro de zòna de publicitat sus sa pròpria linha.",
+	"admanager_invalidtargetpage": "Cap de pagina pas trobada amb lo títol « $1 ».",
+	"admanager_invalidtargetcategory": "Cap de categoria pas trobada amb lo títol \"$1\".",
+	"admanager_notable": "Error ! Una taula de basa de donadas requesida es pas estada trobada ! Aviatz primièr update.php.",
+	"admanager_labelPage": "Títols de pagina",
+	"admanager_labelCategory": "Noms de categoria",
+	"admanager_submit": "Sometre",
+	"admanager_noads": "Afichar pas de publicitat",
+	"admanager_Page": "Paginas",
+	"admanager_Category": "Categorias",
+	"admanager_added": "Vòstres cambiaments son estats enregistrats",
+	"admanager_addedzone": "Zòna $1 aponduda",
+	"admanager_zonenum": "Zòna #: $1",
+	"admanager_zonenotnumber": "Error ! « $1 » es pas un nombre.",
+	"admanager_return": "Tornar al [[Special:AdManager|Gestionari de publicitat]]",
+	"admanager_gotoads": "[[Special:AdManager|Modificar l’emplaçament d'una publicitat]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Modificar las zònas de publicitat]]",
+	"right-admanager": "[[Special:AdManager|Gerir la configuracion de las publicitats]]"
+}

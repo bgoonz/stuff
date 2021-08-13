@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"1917 Ekim Devrimi",
+			"Mirzali"
+		]
+	},
+	"blog-and": "u",
+	"blog-anonymous-name": "Fanatiko anonim",
+	"blog-by": "ra",
+	"blog-more": "zêde",
+	"blog-time-ago": "$1 raver",
+	"blog-time-days": "{{PLURAL:$1|yew roce|$1 roci}}",
+	"blog-time-hours": "{{PLURAL:$1|yew saete|$1 saeti}}",
+	"blog-time-minutes": "{{PLURAL:$1|$1 deqiqa|$1 deqiqeyi}}",
+	"blog-time-seconds": "{{PLURAL:$1|saniya|saniyeyi}}",
+	"blog-user-articles-title": "Blogi",
+	"blog-user-articles-votes": "{{PLURAL:$1|rey|reyi}}"
+}

@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Abanima",
+			"Avocato",
+			"DRIHEM",
+			"Meno25",
+			"Mido",
+			"Mimouni",
+			"Moud hosny",
+			"ديفيد",
+			"محمد الجداوي"
+		]
+	},
+	"antispoof-desc": "يمنع إنشاء الحسابات بسكريبت مختلط، وبأسماء مشابهة ومربكة",
+	"antispoof-conflict-top": "اسم المستخدم \"$1\" شديد الشبه ب{{PLURAL:$2|حساب موجود هو|حسابين موجودين هما|$2 حسابات موجودة هي|$2 حساباً موجوداً هي|$2 حساب موجود هي}}:",
+	"antispoof-conflict-bottom": "من فضلك اختر اسم مستخدم آخر.",
+	"antispoof-name-illegal": "اسم المستخدم \"$1\" غير مسموح به لمنع الخلط وانتحال أسماء المستخدمين: $2.\nمن فضلك اختر اسم مستخدم آخر.",
+	"antispoof-badtype": "نوع بيانات خاطئ",
+	"antispoof-empty": "سطر محارف فارغ",
+	"antispoof-prohibited": "يحتوي على المحرف $1 من القائمة السوداء",
+	"antispoof-combining": "يبدأ بالعلامة المختلطة $1",
+	"antispoof-unassigned": "يحتوي على محرف غير معين $1",
+	"antispoof-deprecated": "يحتوي على المحرف المستنكر $1",
+	"antispoof-noletters": "لا يحتوي على أية حروف",
+	"antispoof-mixedscripts": "يحتوي على سكريبتات غير متوافقة مختلطة",
+	"antispoof-tooshort": "الاسم المستخدم قصير جدًا",
+	"antispoof-ignore": "تجاهل التحقق من التشابه",
+	"antispoof-ignore-help": "يسمح للمستخدمين بحقوق كافية لإنشاء حساب مستخدم، حتى إذا كان الاسم مشابه لاسم حساب مستخدم موجود.",
+	"action-override-antispoof": "تجاوز التحقق من سبوفينج",
+	"right-override-antispoof": "تجاوز التحقق من سبوفينج"
+}

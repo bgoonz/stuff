@@ -1,0 +1,38 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hzy980512",
+			"Liuxinyu970226",
+			"Papapasan",
+			"Yfdyh000",
+			"佛壁灯"
+		]
+	},
+	"admanager": "广告管理器",
+	"admanagerzones": "广告管理器区域",
+	"admanager-desc": "提供了一个[[Special:AdManager|特殊页面]]，它允许管理员设置页面或分类的区域",
+	"admanager_docu": "要添加或移除一个页面或分类的广告区域，在下方添加或移除页面或分类的标题。",
+	"admanagerzones_docu": "在其行上输入每个广告区域的编号。",
+	"admanager_invalidtargetpage": "找不到标题名为“$1”的页面",
+	"admanager_invalidtargetcategory": "找不到标题名为“$1”的分类",
+	"admanager_notable": "错误！找不到一个必须的数据库资料表！请先运行update.php。",
+	"admanager_noAdManagerZones": "错误！您必须添加一些广告区域，在[[Special:AdManagerZones|广告区域管理器]]中输入它们。",
+	"admanager_labelPage": "页面标题",
+	"admanager_labelCategory": "分类名称",
+	"admanager_submit": "提交",
+	"admanager_noads": "不显示广告",
+	"admanager_Page": "页面",
+	"admanager_Category": "分类",
+	"admanager_added": "更改已保存",
+	"admanager_addedzone": "已添加区域$1",
+	"admanager_removedzone": "移除区域$1。",
+	"admanager_nozonesadded": "没有任何区域被添加了。",
+	"admanager_nozonesremoved": "没有任何区被移除了。",
+	"admanager_zonenum": "区域 #: $1",
+	"admanager_zonenotnumber": "错误！$1不是数字。",
+	"admanager_return": "回到[[Special:AdManager|广告管理器]]",
+	"admanager_gotoads": "[[Special:AdManager|编辑广告位置]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|编辑广告区域]]",
+	"action-admanager": "管理广告配置",
+	"right-admanager": "[[Special:AdManager|管理广告配置]]"
+}

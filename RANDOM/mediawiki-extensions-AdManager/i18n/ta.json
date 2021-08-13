@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"ElangoRamanujam",
+			"Karthi.dr",
+			"Shanmugamp7"
+		]
+	},
+	"admanager": "விளம்பர மேலாளர்",
+	"admanagerzones": "விளம்பர மேலாளர் பகுதிகள்",
+	"admanager_invalidtargetpage": "\"$1\" தலைப்புள்ள எந்தப் பக்கமும் காணப்படவில்லை.",
+	"admanager_invalidtargetcategory": "\"$1\" தலைப்புள்ள எந்தப் பகுப்பும் காணப்படவில்லை.",
+	"admanager_labelPage": "பக்கத் தலைப்புகள்",
+	"admanager_labelCategory": "பகுப்புப் பெயர்கள்",
+	"admanager_submit": "சமர்ப்பி",
+	"admanager_noads": "விளம்பரங்களை காண்பிக்க வேண்டாம்",
+	"admanager_Page": "பக்கங்கள்",
+	"admanager_Category": "பகுப்புகள்",
+	"admanager_added": "உங்கள் மாற்றங்கள் சேமிக்கப்பட்டது.",
+	"admanager_addedzone": "சேர்க்கப்பட்ட பகுதி $1",
+	"admanager_zonenotnumber": "பிழை! $1 ஓர் எண் அன்று."
+}
