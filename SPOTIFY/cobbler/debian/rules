@@ -1,0 +1,38 @@
+#!/usr/bin/make -f
+
+# Verbose mode
+# export DH_VERBOSE=1
+
+RELEASE_VERSION := 2005
+
+%:
+	dh $@ --with python2
+
+override_dh_auto_build:
+	[ -d excluded_files/cobbler ] || mkdir -p excluded_files/cobbler
+	[ -d excluded_files/koan ] || mkdir -p excluded_files/koan
+	mv -f cobbler/sub_process.py excluded_files/cobbler
+	mv -f koan/sub_process.py excluded_files/koan
+	mv -f koan/opt_parse.py excluded_files/koan
+	mv -f koan/text_wrap.py excluded_files/koan
+	python setup.py build
+
+override_dh_auto_clean:
+	dh_auto_clean
+	if [ -d excluded_files/cobbler ] ; then \
+      mv excluded_files/cobbler/* cobbler ;\
+    fi
+	if [ -d excluded_files/koan ] ; then \
+      mv excluded_files/koan/* koan ;\
+    fi
+	if [ -d excluded_files ] ; then \
+      rm -rf excluded_files ;\
+    fi
+
+override_dh_auto_test:
+	# Disabled since it expects a running cobbler instance.
+	true
+	#nosetests cobbler/*.py || true
+
+override_dh_auto_install:
+	python setup.py install -f --install-layout=deb --root=$(CURDIR)/debian/tmp

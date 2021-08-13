@@ -37,9 +37,7 @@
         "prometheus.io/scrape": "true",
         "seccomp.security.alpha.kubernetes.io/pod": "localhost/workspace_default_gpl-headless-log-wsman.25.json"
       },
-      "finalizers": [
-        "gitpod.io/finalizer"
-      ]
+      "finalizers": ["gitpod.io/finalizer"]
     },
     "spec": {
       "volumes": [
@@ -62,10 +60,7 @@
         {
           "name": "workspace",
           "image": "reg.gpl-headless-log-wsman.staging.gitpod-dev.com:30570/remote/dbc45dce-611a-49a8-bd76-7afda76a1e24",
-          "command": [
-            "/.supervisor/workspacekit",
-            "ring0"
-          ],
+          "command": ["/.supervisor/workspacekit", "ring0"],
           "ports": [
             {
               "containerPort": 23000,
@@ -245,9 +240,7 @@
       "automountServiceAccountToken": false,
       "nodeName": "gke-dev-workload-1-49d27f81-3xfh",
       "securityContext": {
-        "supplementalGroups": [
-          1
-        ],
+        "supplementalGroups": [1],
         "fsGroup": 1
       },
       "imagePullSecrets": [
@@ -304,10 +297,7 @@
       ],
       "priority": 0,
       "dnsConfig": {
-        "nameservers": [
-          "1.1.1.1",
-          "8.8.8.8"
-        ]
+        "nameservers": ["1.1.1.1", "8.8.8.8"]
       },
       "enableServiceLinks": false
     },

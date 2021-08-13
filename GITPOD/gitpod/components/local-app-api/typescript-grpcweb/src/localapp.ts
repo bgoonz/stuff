@@ -7,6 +7,9 @@
 /**
  * Public API for the single umd module.
  */
-export { TunnelVisiblity, TunnelVisiblityMap } from '@gitpod/supervisor-api-grpcweb/lib/port_pb';
-export * from '../lib/localapp_pb';
-export * from '../lib/localapp_pb_service';
+export {
+  TunnelVisiblity,
+  TunnelVisiblityMap,
+} from "@gitpod/supervisor-api-grpcweb/lib/port_pb";
+export * from "../lib/localapp_pb";
+export * from "../lib/localapp_pb_service";

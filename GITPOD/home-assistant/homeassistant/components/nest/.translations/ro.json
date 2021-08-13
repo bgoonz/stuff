@@ -1,13 +1,13 @@
 {
-    "config": {
-        "step": {
-            "link": {
-                "data": {
-                    "code": "Cod PIN"
-                },
-                "title": "Leg\u0103tur\u0103 cont Nest"
-            }
+  "config": {
+    "step": {
+      "link": {
+        "data": {
+          "code": "Cod PIN"
         },
-        "title": "Nest"
-    }
+        "title": "Leg\u0103tur\u0103 cont Nest"
+      }
+    },
+    "title": "Nest"
+  }
 }

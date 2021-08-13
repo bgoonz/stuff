@@ -17,14 +17,14 @@ securityContext:
   runAsUser: 1000
 
 imagePullSecrets:
-- name: workspace-registry-pull-secret
+  - name: workspace-registry-pull-secret
 
 affinity:
   nodeAffinity:
     requiredDuringSchedulingIgnoredDuringExecution:
       nodeSelectorTerms:
-      - matchExpressions:
-        - key: dev/workload
-          operator: In
-          values:
-          - "workload"
+        - matchExpressions:
+            - key: dev/workload
+              operator: In
+              values:
+                - "workload"

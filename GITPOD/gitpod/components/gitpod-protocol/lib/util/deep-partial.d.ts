@@ -7,6 +7,6 @@
  * Takes the idea of Partial<T> and applies that recursively to all child objects
  */
 export declare type DeepPartial<T> = {
-    [P in keyof T]?: DeepPartial<T[P]>;
+  [P in keyof T]?: DeepPartial<T[P]>;
 };
 //# sourceMappingURL=deep-partial.d.ts.map

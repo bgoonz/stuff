@@ -10,14 +10,13 @@ import { AuthProviderParams } from "./auth-provider";
 export const HostContextProvider = Symbol("HostContextProvider");
 
 export interface HostContextProvider {
-    init(): Promise<void>;
-    getAll(): HostContext[];
-    get(hostname: string): HostContext | undefined;
+  init(): Promise<void>;
+  getAll(): HostContext[];
+  get(hostname: string): HostContext | undefined;
 }
-
 
 export const HostContextProviderFactory = Symbol("HostContextProviderFactory");
 
 export interface HostContextProviderFactory {
-    createHostContext: (config: AuthProviderParams) => HostContext | undefined;
+  createHostContext: (config: AuthProviderParams) => HostContext | undefined;
 }

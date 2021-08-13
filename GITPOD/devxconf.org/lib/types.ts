@@ -115,4 +115,4 @@ export type Project = {
   logo: string;
   github: string;
   website?: string;
-}
+};

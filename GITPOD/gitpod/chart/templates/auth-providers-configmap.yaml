@@ -6,9 +6,9 @@ kind: ConfigMap
 metadata:
   name: auth-providers-config
   labels:
-    app: {{ template "gitpod.fullname" . }}
+    app: { { template "gitpod.fullname" . } }
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
 data:
-  auth-providers.json: {{ .Values.authProviders | toJson | quote }}
+  auth-providers.json: { { .Values.authProviders | toJson | quote } }

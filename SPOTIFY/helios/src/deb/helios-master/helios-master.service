@@ -1,0 +1,13 @@
+[Unit]
+Description=Helios master daemon
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/helios-master-wrapper
+ExecStopPost=/bin/sleep 5
+User=helios
+
+[Install]
+WantedBy=multi-user.target

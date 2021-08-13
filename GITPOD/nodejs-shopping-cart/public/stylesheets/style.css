@@ -1,16 +1,16 @@
 body {
   padding: 50px;
-  font: 16px 'Lato', sans-serif;
+  font: 16px "Lato", sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
 }
 
 * {
   -webkit-border-radius: 0 !important;
-     -moz-border-radius: 0 !important;
-          border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
 }
 
 .dropdown-menu .cart {
@@ -22,7 +22,7 @@ a {
   padding: 0 0 10px 0;
 }
 
-.dropdown-menu .cart .totalPrice{
+.dropdown-menu .cart .totalPrice {
   font-size: 120%;
   font-weight: bold;
   padding: 15px 0;

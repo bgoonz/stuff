@@ -1,10 +1,10 @@
 {
-    "config": {
-        "step": {
-            "confirm": {
-                "title": "Sonos"
-            }
-        },
+  "config": {
+    "step": {
+      "confirm": {
         "title": "Sonos"
-    }
+      }
+    },
+    "title": "Sonos"
+  }
 }

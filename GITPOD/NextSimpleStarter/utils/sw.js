@@ -17,7 +17,7 @@ workbox.precaching.suppressWarnings()
 
 workbox.precaching.precacheAndRoute(
 	self.__precacheManifest.filter(
-		m =>
+		(m) =>
 			!m.url.startsWith('bundles/') &&
 			!m.url.startsWith('static/commons') &&
 			m.url !== 'build-manifest.json'
@@ -30,8 +30,8 @@ workbox.routing.registerRoute(
 	workbox.strategies.cacheFirst({
 		cacheName: 'assets-cache',
 		cacheableResponse: {
-			statuses: [0, 200]
-		}
+			statuses: [0, 200],
+		},
 	}),
 	'GET'
 )
@@ -39,7 +39,7 @@ workbox.routing.registerRoute(
 workbox.routing.registerRoute(
 	/^https:\/\/code\.getmdl\.io.*/,
 	workbox.strategies.cacheFirst({
-		cacheName: 'lib-cache'
+		cacheName: 'lib-cache',
 	}),
 	'GET'
 )
@@ -48,7 +48,7 @@ workbox.routing.registerRoute(
 workbox.routing.registerRoute(
 	'/',
 	workbox.strategies.staleWhileRevalidate({
-		cacheName: 'root'
+		cacheName: 'root',
 	}),
 	'GET'
 )
@@ -56,7 +56,7 @@ workbox.routing.registerRoute(
 workbox.routing.registerRoute(
 	/^http.*/,
 	workbox.strategies.networkFirst({
-		cacheName: 'http-cache'
+		cacheName: 'http-cache',
 	}),
 	'GET'
 )

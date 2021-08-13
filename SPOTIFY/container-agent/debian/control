@@ -1,0 +1,16 @@
+Source: container-agent
+Section: admin
+Priority: optional
+Maintainer: Rohan Singh <rohan@spotify.com>
+Build-Depends: python (>= 2.7), python-dev (>= 2.7), debhelper (>= 8), dh-virtualenv, libyaml-dev
+Standards-Version: 3.9.4
+X-Python-Version: >= 2.6
+Homepage: https://github.com/spotify/container-agent
+Vcs-Git: git://github.com/spotify/container-agent.git
+
+Package: container-agent
+Architecture: any
+Depends: ${python:Depends}, libyaml-dev, lxc-docker
+Description: Simple agent for running containers based on a declarative manifest
+ container-agent is a small python agent designed to manage a group of Docker containers
+ according to a YAML manifest.

@@ -24,11 +24,15 @@
  */
 
 import { Metadata } from "@improbable-eng/grpc-web/dist/typings/metadata";
-import { Transport, TransportFactory, TransportOptions } from "@improbable-eng/grpc-web/dist/typings/transports/Transport";
-import * as WebSocket from 'ws';
+import {
+  Transport,
+  TransportFactory,
+  TransportOptions,
+} from "@improbable-eng/grpc-web/dist/typings/transports/Transport";
+import * as WebSocket from "ws";
 
 enum WebsocketSignal {
-  FINISH_SEND = 1
+  FINISH_SEND = 1,
 }
 
 const finishSendFrame = new Uint8Array([1]);
@@ -36,7 +40,7 @@ const finishSendFrame = new Uint8Array([1]);
 export function WebsocketTransport(): TransportFactory {
   return (opts: TransportOptions) => {
     return websocketRequest(opts);
-  }
+  };
 }
 
 function websocketRequest(options: TransportOptions): Transport {
@@ -57,7 +61,7 @@ function websocketRequest(options: TransportOptions): Transport {
 
       c.set(byteArray as any as ArrayLike<number>, 1);
 
-      ws.send(c)
+      ws.send(c);
     }
   }
 
@@ -79,7 +83,7 @@ function websocketRequest(options: TransportOptions): Transport {
     start: (metadata: Metadata) => {
       // Send headers both with request and the HTTP request itself
       const headers: { [key: string]: string } = {};
-      metadata.forEach((key, values) => headers[key] = values.join(","));
+      metadata.forEach((key, values) => (headers[key] = values.join(",")));
 
       ws = new WebSocket(webSocketAddress, ["grpc-websockets"], {
         headers,
@@ -90,7 +94,7 @@ function websocketRequest(options: TransportOptions): Transport {
         ws.send(headersToBytes(metadata));
 
         // send any messages that were passed to sendMessage before the connection was ready
-        sendQueue.forEach(toSend => {
+        sendQueue.forEach((toSend) => {
           sendToWebsocket(toSend);
         });
       };
@@ -107,12 +111,11 @@ function websocketRequest(options: TransportOptions): Transport {
       ws.onmessage = function (e) {
         options.onChunk(new Uint8Array(Buffer.from(e.data)));
       };
-
     },
     cancel: () => {
       options.debug && debug("websocket.abort");
       ws.close();
-    }
+    },
   };
 }
 
@@ -122,7 +125,9 @@ function constructWebSocketAddress(url: string) {
   } else if (url.substr(0, 7) === "http://") {
     return `ws://${url.substr(7)}`;
   }
-  throw new Error("Websocket transport constructed with non-https:// or http:// host.");
+  throw new Error(
+    "Websocket transport constructed with non-https:// or http:// host."
+  );
 }
 
 function headersToBytes(headers: Metadata): Uint8Array {
@@ -141,7 +146,8 @@ export function debug(...args: any[]) {
   }
 }
 
-const isAllowedControlChars = (char: number) => char === 0x9 || char === 0xa || char === 0xd;
+const isAllowedControlChars = (char: number) =>
+  char === 0x9 || char === 0xa || char === 0xd;
 
 function isValidHeaderAscii(val: number): boolean {
   return isAllowedControlChars(val) || (val >= 0x20 && val <= 0x7e);

@@ -4,11 +4,11 @@
  * See License-AGPL.txt in the project root for license information.
  */
 export declare enum WorkspaceInitSource {
-    WorkspaceInitFromBackup = "from-backup",
-    WorkspaceInitFromPrebuild = "from-prebuild",
-    WorkspaceInitFromOther = "from-other"
+  WorkspaceInitFromBackup = "from-backup",
+  WorkspaceInitFromPrebuild = "from-prebuild",
+  WorkspaceInitFromOther = "from-other",
 }
 export interface WorkspaceReadyMessage {
-    source: WorkspaceInitSource;
+  source: WorkspaceInitSource;
 }
 //# sourceMappingURL=wsready.d.ts.map

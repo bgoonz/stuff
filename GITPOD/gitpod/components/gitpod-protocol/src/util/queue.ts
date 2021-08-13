@@ -10,18 +10,18 @@ import { Deferred } from "./deferred";
  * Queues asynchronous operations in a synchronous context
  */
 export class Queue {
-    protected queue: Promise<any> = Promise.resolve();
+  protected queue: Promise<any> = Promise.resolve();
 
-    enqueue<T>(operation: () => Promise<T>): Promise<T> {
-        const enqueue = new Deferred<T>();
-        this.queue = this.queue.then(async () => {
-            try {
-                const result = await operation();
-                enqueue.resolve(result);
-            } catch (err) {
-                enqueue.reject(err);
-            }
-        });
-        return enqueue.promise;
-    }
+  enqueue<T>(operation: () => Promise<T>): Promise<T> {
+    const enqueue = new Deferred<T>();
+    this.queue = this.queue.then(async () => {
+      try {
+        const result = await operation();
+        enqueue.resolve(result);
+      } catch (err) {
+        enqueue.reject(err);
+      }
+    });
+    return enqueue.promise;
+  }
 }

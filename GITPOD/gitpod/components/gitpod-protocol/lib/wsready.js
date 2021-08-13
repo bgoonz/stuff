@@ -10,8 +10,11 @@ exports.WorkspaceInitSource = void 0;
 // DO NOT MODIFY
 var WorkspaceInitSource;
 (function (WorkspaceInitSource) {
-    WorkspaceInitSource["WorkspaceInitFromBackup"] = "from-backup";
-    WorkspaceInitSource["WorkspaceInitFromPrebuild"] = "from-prebuild";
-    WorkspaceInitSource["WorkspaceInitFromOther"] = "from-other";
-})(WorkspaceInitSource = exports.WorkspaceInitSource || (exports.WorkspaceInitSource = {}));
+  WorkspaceInitSource["WorkspaceInitFromBackup"] = "from-backup";
+  WorkspaceInitSource["WorkspaceInitFromPrebuild"] = "from-prebuild";
+  WorkspaceInitSource["WorkspaceInitFromOther"] = "from-other";
+})(
+  (WorkspaceInitSource =
+    exports.WorkspaceInitSource || (exports.WorkspaceInitSource = {}))
+);
 //# sourceMappingURL=wsready.js.map

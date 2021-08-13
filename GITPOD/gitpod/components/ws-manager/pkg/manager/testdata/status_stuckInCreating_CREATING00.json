@@ -137,9 +137,7 @@
       "automountServiceAccountToken": false,
       "nodeName": "gke-production--gitp-workspace-pool-2-a3afc0b4-tmz8",
       "securityContext": {
-        "supplementalGroups": [
-          1
-        ],
+        "supplementalGroups": [1],
         "fsGroup": 1
       },
       "imagePullSecrets": [
@@ -164,9 +162,7 @@
                   {
                     "key": "gitpod.io/workload_workspace",
                     "operator": "In",
-                    "values": [
-                      "true"
-                    ]
+                    "values": ["true"]
                   }
                 ]
               }
@@ -209,10 +205,7 @@
       ],
       "priority": 0,
       "dnsConfig": {
-        "nameservers": [
-          "1.1.1.1",
-          "8.8.8.8"
-        ]
+        "nameservers": ["1.1.1.1", "8.8.8.8"]
       },
       "enableServiceLinks": false
     },

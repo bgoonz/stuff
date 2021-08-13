@@ -7,18 +7,18 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.makeLink = void 0;
 function isOpenNewTab(event) {
-    return event.metaKey || (event.ctrlKey);
+  return event.metaKey || event.ctrlKey;
 }
 function makeLink(node, url, hover) {
-    node.onclick = function (event) {
-        var target = '_self';
-        if (isOpenNewTab(event)) {
-            target = '_blank';
-        }
-        window.open(url, target);
-    };
-    node.style.cursor = 'pointer';
-    node.title = hover;
+  node.onclick = function (event) {
+    var target = "_self";
+    if (isOpenNewTab(event)) {
+      target = "_blank";
+    }
+    window.open(url, target);
+  };
+  node.style.cursor = "pointer";
+  node.title = hover;
 }
 exports.makeLink = makeLink;
 //# sourceMappingURL=make-link.js.map

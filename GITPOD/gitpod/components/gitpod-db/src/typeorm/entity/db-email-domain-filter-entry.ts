@@ -10,9 +10,9 @@ import { EmailDomainFilterEntry } from "@gitpod/gitpod-protocol";
 @Entity("d_b_email_domain_filter")
 // on DB but not Typeorm: @Index("ind_lastModified", ["_lastModified"])   // DBSync
 export class DBEmailDomainFilterEntry implements EmailDomainFilterEntry {
-    @PrimaryColumn()
-    domain: string;
+  @PrimaryColumn()
+  domain: string;
 
-    @Column()
-    negative: boolean;
+  @Column()
+  negative: boolean;
 }

@@ -8,6 +8,8 @@ import { ContainerModule } from "inversify";
 import { RepositoryService } from "../../../src/repohost/repo-service";
 import { GitHubService } from "../prebuilds/github-service";
 
-export const gitHubContainerModuleEE = new ContainerModule((_bind, _unbind, _isBound, rebind) => {
+export const gitHubContainerModuleEE = new ContainerModule(
+  (_bind, _unbind, _isBound, rebind) => {
     rebind(RepositoryService).to(GitHubService).inSingletonScope();
-});
+  }
+);

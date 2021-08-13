@@ -28,7 +28,6 @@ Please update the `ami` field in the [eks-cluster.yaml](eks-cluster.yaml) file w
 | us-east-1    | ami-01ac2c5dbcc82fd41 |
 | us-east-2    | ami-01a4fa78b79360b9d |
 
-
 **To start the installation, execute:**
 
 ```shell
@@ -41,6 +40,7 @@ The whole process takes around forty minutes. In the end, the following resource
 
 - an EKS cluster running Kubernetes v1.20
 - Kubernetes nodes using a custom [AMI image](https://github.com/gitpod-io/amazon-eks-custom-amis/tree/gitpod):
+
   - Ubuntu 20.04
   - Linux kernel v5.13
   - containerd v1.5.4
@@ -104,7 +104,7 @@ It should display the gitpod login page similar to the next image.
 
 ![Gitpod login page](./images/gitpod-login.png "Gitpod Login Page")
 
-----
+---
 
 ## Update Gitpod auth providers
 

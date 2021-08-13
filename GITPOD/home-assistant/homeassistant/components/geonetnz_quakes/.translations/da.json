@@ -1,17 +1,17 @@
 {
-    "config": {
-        "error": {
-            "identifier_exists": "Placering allerede registreret"
+  "config": {
+    "error": {
+      "identifier_exists": "Placering allerede registreret"
+    },
+    "step": {
+      "user": {
+        "data": {
+          "mmi": "MMI",
+          "radius": "Radius"
         },
-        "step": {
-            "user": {
-                "data": {
-                    "mmi": "MMI",
-                    "radius": "Radius"
-                },
-                "title": "Udfyld dine filteroplysninger."
-            }
-        },
-        "title": "GeoNet NZ Quakes"
-    }
+        "title": "Udfyld dine filteroplysninger."
+      }
+    },
+    "title": "GeoNet NZ Quakes"
+  }
 }

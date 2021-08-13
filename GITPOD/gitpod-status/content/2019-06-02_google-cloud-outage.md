@@ -1,6 +1,6 @@
 ---
 title: Google Cloud Outage
-date: '2019-06-02T21:25:21.574Z'
+date: "2019-06-02T21:25:21.574Z"
 severity: major-outage
 affectedsystems:
   - dashboard
@@ -8,6 +8,7 @@ affectedsystems:
   - imagebuilds
 resolved: true
 ---
+
 All systems are currently affected by the Google Cloud Outage.
 
 <!--- language code: en -->

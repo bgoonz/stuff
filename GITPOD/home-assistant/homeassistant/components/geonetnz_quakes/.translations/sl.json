@@ -1,17 +1,17 @@
 {
-    "config": {
-        "error": {
-            "identifier_exists": "Lokacija je \u017ee registrirana"
+  "config": {
+    "error": {
+      "identifier_exists": "Lokacija je \u017ee registrirana"
+    },
+    "step": {
+      "user": {
+        "data": {
+          "mmi": "MMI",
+          "radius": "Radij"
         },
-        "step": {
-            "user": {
-                "data": {
-                    "mmi": "MMI",
-                    "radius": "Radij"
-                },
-                "title": "Izpolnite podrobnosti filtra."
-            }
-        },
-        "title": "GeoNet NZ Potresi"
-    }
+        "title": "Izpolnite podrobnosti filtra."
+      }
+    },
+    "title": "GeoNet NZ Potresi"
+  }
 }

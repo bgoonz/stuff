@@ -1,0 +1,80 @@
+<html>
+<head>
+    <title>$i18n.getText("lkk-brige.config")</title>
+    <meta name="admin.active.section" content="admin_plugins_menu/integrations_section">
+</head>
+<body>
+<form action="${req.contextPath}/secure/admin/LkkBridgeConfiguration.jspa" method="post" class="aui">
+    <div class="form-body">
+        <h2>$i18n.getText("lkk-bridge.admin.title")</h2>
+
+        #if($success)
+            <div class="aui-message success"><span class="aui-icon icon-success"></span>
+                <p>$i18n.getText("lkk-bridge.admin.savedsuccessfully")</p>
+            </div>
+        #end
+        #if($invalidInput)
+            <div class="aui-message error"><span class="aui-icon icon-error"></span>
+                <p class="title">$i18n.getText('common.words.error')</p>
+                #foreach ($error in $action.getErrorMessages())
+                    $textutils.htmlEncode(${error})
+                #end
+            </div>
+        #end
+
+        <p>
+            $i18n.getText("lkk-bridge.admin.intro")
+        </p>
+
+        <div class="field-group">
+            <label for="project">$i18n.getText("lkk-bridge.admin.project")<span
+                    class="content"> $i18n.getText("admin.common.words.required")</span></label>
+            <input id="project" class="text" name="project"
+                   value="$project">
+        </div>
+        <div class="field-group">
+            <label for="boardId">$i18n.getText("lkk-bridge.admin.board-id")<span
+                    class="aui-icon icon-required"></span><span
+                    class="content"> $i18n.getText("admin.common.words.required")</span></label>
+            <input id="boardId" class="text" name="boardId"
+                   value="$boardId">
+        </div>
+        <div class="field-group">
+            <label for="server">$i18n.getText("lkk-bridge.admin.server")<span
+                    class="aui-icon icon-required"></span><span
+                    class="content"> $i18n.getText("admin.common.words.required")</span></label>
+            <input id="server" class="text" name="server"
+                   value="$server">
+        </div>
+        <div class="field-group">
+            <label for="port">$i18n.getText("lkk-bridge.admin.port")<span
+                    class="aui-icon icon-required"></span><span
+                    class="content"> $i18n.getText("admin.common.words.required")</span></label>
+            <input id="port" class="text" name="port"
+                   value="$port">
+        </div>
+        <div class="field-group">
+            <label for="username">$i18n.getText("lkk-bridge.admin.username")<span
+                    class="aui-icon icon-required"></span><span
+                    class="content"> $i18n.getText("admin.common.words.required")</span></label>
+            <input id="username" class="text" name="username"
+                   value="$username">
+        </div>
+        <div class="field-group">
+            <label for="password">$i18n.getText("lkk-bridge.admin.password")<span
+                    class="aui-icon icon-required"></span><span
+                    class="content"> $i18n.getText("admin.common.words.required")</span></label>
+            <input id="password" class="text" name="password"
+                   value="$password">
+        </div>
+        <input type="hidden" name="atl_token" value="$atl_token">
+
+        <div class="buttons-container">
+            <div class="buttons">
+                <input class="button submit" type="submit" value="Save"/>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+</html>

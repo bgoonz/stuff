@@ -4,15 +4,15 @@
  * See License-AGPL.txt in the project root for license information.
  */
 export declare namespace PaymentProtocol {
-    const UPDATE_GITPOD_SUBSCRIPTION_PATH = "/payment/chargebee";
+  const UPDATE_GITPOD_SUBSCRIPTION_PATH = "/payment/chargebee";
 }
 export interface PlanCoupon {
-    chargebeePlanID: string;
-    newPrice: number;
-    description: string;
+  chargebeePlanID: string;
+  newPrice: number;
+  description: string;
 }
 export interface GithubUpgradeURL {
-    url: string;
-    planID: number;
+  url: string;
+  planID: number;
 }
 //# sourceMappingURL=payment-protocol.d.ts.map

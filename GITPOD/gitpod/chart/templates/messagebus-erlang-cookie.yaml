@@ -6,10 +6,10 @@ kind: Secret
 metadata:
   name: messagebus-erlang-cookie
   labels:
-    app: {{ template "gitpod.fullname" . }}
+    app: { { template "gitpod.fullname" . } }
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
 type: Opaque
 stringData:
-  rabbitmq-erlang-cookie: {{ (randAlphaNum 20) }}
+  rabbitmq-erlang-cookie: { { (randAlphaNum 20) } }

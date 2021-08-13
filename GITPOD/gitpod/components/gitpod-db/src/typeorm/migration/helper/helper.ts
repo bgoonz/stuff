@@ -6,46 +6,63 @@
 
 import { QueryRunner } from "typeorm";
 
-export async function createIndexIfNotExist(queryRunner: QueryRunner, tableName: string, indexName: string, columns: string[]): Promise<void> {
-    if (columns.length === 0) {
-        throw new Error("createIndexIfNotExist: Columns must not be empty!");
-    }
+export async function createIndexIfNotExist(
+  queryRunner: QueryRunner,
+  tableName: string,
+  indexName: string,
+  columns: string[]
+): Promise<void> {
+  if (columns.length === 0) {
+    throw new Error("createIndexIfNotExist: Columns must not be empty!");
+  }
 
-    if (!indexExists(queryRunner, tableName, indexName)) {
-        const columnsStr = columns.map(cn => `\`${cn}\``).join(", ");
-        await queryRunner.query(`CREATE INDEX ${indexName} ON ${tableName} (${columnsStr})`);
-    }
-};
+  if (!indexExists(queryRunner, tableName, indexName)) {
+    const columnsStr = columns.map((cn) => `\`${cn}\``).join(", ");
+    await queryRunner.query(
+      `CREATE INDEX ${indexName} ON ${tableName} (${columnsStr})`
+    );
+  }
+}
 
-export async function indexExists(queryRunner: QueryRunner, tableName: string, indexName: string): Promise<boolean> {
-    const database = queryRunner.connection.options.database;
-    const countResult = await queryRunner.query(
-        `SELECT COUNT(1) AS cnt FROM INFORMATION_SCHEMA.STATISTICS
+export async function indexExists(
+  queryRunner: QueryRunner,
+  tableName: string,
+  indexName: string
+): Promise<boolean> {
+  const database = queryRunner.connection.options.database;
+  const countResult = await queryRunner.query(
+    `SELECT COUNT(1) AS cnt FROM INFORMATION_SCHEMA.STATISTICS
             WHERE   table_schema = '${database}'
                 AND table_name = '${tableName}'
                 AND index_name = '${indexName}'`
-    );
-    return countResult[0].cnt === 1;
-};
+  );
+  return countResult[0].cnt === 1;
+}
 
-export async function columnExists(queryRunner: QueryRunner, tableName: string, columnName: string): Promise<boolean> {
-    const database = queryRunner.connection.options.database;
-    const countResult = await queryRunner.query(
-        `SELECT COUNT(1) AS cnt FROM INFORMATION_SCHEMA.COLUMNS
+export async function columnExists(
+  queryRunner: QueryRunner,
+  tableName: string,
+  columnName: string
+): Promise<boolean> {
+  const database = queryRunner.connection.options.database;
+  const countResult = await queryRunner.query(
+    `SELECT COUNT(1) AS cnt FROM INFORMATION_SCHEMA.COLUMNS
             WHERE   table_schema = '${database}'
                 AND table_name = '${tableName}'
                 AND column_name = '${columnName}'`
-    );
-    return countResult[0].cnt === 1;
-};
+  );
+  return countResult[0].cnt === 1;
+}
 
-export async function tableExists(queryRunner: QueryRunner, tableName: string): Promise<boolean> {
-    const database = queryRunner.connection.options.database;
-    const countResult = await queryRunner.query(
-        `SELECT COUNT(1) AS cnt FROM INFORMATION_SCHEMA.TABLES
+export async function tableExists(
+  queryRunner: QueryRunner,
+  tableName: string
+): Promise<boolean> {
+  const database = queryRunner.connection.options.database;
+  const countResult = await queryRunner.query(
+    `SELECT COUNT(1) AS cnt FROM INFORMATION_SCHEMA.TABLES
             WHERE table_schema = '${database}'
                 AND table_name = '${tableName}'`
-    );
-    return countResult[0].cnt === 1;
-};
-
+  );
+  return countResult[0].cnt === 1;
+}

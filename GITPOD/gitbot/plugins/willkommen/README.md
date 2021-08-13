@@ -32,4 +32,3 @@ orgsRepos:
     label: "community-contribution"
     message: "{{.Greeting}} @{{.AuthorLogin}}! It looks like this is your first {{.Type}} to {{.Org}}/{{.Repo}} 🎉"
 ```
-

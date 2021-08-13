@@ -6,7 +6,6 @@
   "scripts": {
     "start": "node ./dist/src/index.js",
     "start-ee": "node ./dist/ee/src/index.js",
-
     "prepare": "yarn clean && yarn build",
     "build": "npx tsc",
     "build:clean": "yarn clean && yarn build",

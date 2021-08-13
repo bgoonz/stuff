@@ -1,0 +1,4 @@
+#! /usr/bin/env python
+import spotify_batty.batty as batty
+
+batty.main()

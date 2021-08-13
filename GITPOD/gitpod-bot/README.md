@@ -27,15 +27,15 @@ A `.github/gitpod.yml` file is required to enable the plugin. The file can be em
 
 ```yml
 pulls:
-# Enable for pull requests
+  # Enable for pull requests
   perform: true
 # Customize a comment to post on a pull request. Comment out to use the default
 #  comment:
 
 issues:
-# enable for issues
+  # enable for issues
   perform: true
-# issues with these labels will be considered. Set to `[]` to disable for issues
+  # issues with these labels will be considered. Set to `[]` to disable for issues
   labels:
     - help wanted
     - good first issue

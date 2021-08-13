@@ -1,0 +1,1 @@
+{"version":3,"sources":["../browser/src/decorator/options/ColumnEmbeddedOptions.ts"],"names":[],"mappings":"","file":"ColumnEmbeddedOptions.js","sourcesContent":["/**\n * Column options specific to all column types.\n */\nexport interface ColumnEmbeddedOptions {\n\n    /**\n     * Embedded column prefix.\n     */\n    prefix?: string;\n\n}\n"],"sourceRoot":"../.."}

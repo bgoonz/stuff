@@ -3,25 +3,25 @@ title: Reaction Comments
 description: Deletes +1 comments and encourages the use of GitHub reactions.
 slug: reaction
 screenshots:
-- https://raw.githubusercontent.com/dessant/reaction-comments/master/assets/screenshot.png
+  - https://raw.githubusercontent.com/dessant/reaction-comments/master/assets/screenshot.png
 authors:
-- dessant
+  - dessant
 repository: dessant/reaction-comments
 host: https://probot-reaction-comments.glitch.me
 stars: 7
 updated: 2018-07-23 17:50:31 UTC
 installations: 30
 organizations:
-- kivy
-- invertase
-- Mottie
-- concourse
-- CellularPrivacy
-- Radarr
-- sethvargo
-- chefspec
-- buschtoens
-- agrc
+  - kivy
+  - invertase
+  - Mottie
+  - concourse
+  - CellularPrivacy
+  - Radarr
+  - sethvargo
+  - chefspec
+  - buschtoens
+  - agrc
 ---
 
 A GitHub App that deletes reaction comments, such as +1,

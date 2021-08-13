@@ -1,0 +1,62 @@
+java_binary(
+    name = "watchman",
+    deps = [
+        ":watchman-lib",
+    ],
+)
+
+zip_file(
+    name = "watchman-lib.src",
+    srcs = glob(["src/**/*.java"]),
+    licenses = [
+        "LICENSE",
+    ],
+    visibility = [
+        "PUBLIC",
+    ],
+)
+
+java_library(
+    name = "watchman-lib",
+    srcs = [
+        ":watchman-lib.src",
+    ],
+    annotation_processor_deps = [
+        "//third-party/guava:guava",
+        "//third-party/immutables:generator",
+        "//third-party/immutables:value-processor",
+    ],
+    annotation_processors = [
+        "org.immutables.value.processor.Processor",
+    ],
+    source = "7",
+    target = "7",
+    tests = [
+        ":watchman-tests",
+    ],
+    visibility = [
+        "PUBLIC",
+    ],
+    deps = [
+        "//third-party/guava:guava",
+        "//third-party/immutables:value",
+        "//third-party/jna:jna",
+        "//third-party/jna:jna-platform",
+        "//third-party/jsr-305:jsr-305",
+        "//third-party/nuprocess:nuprocess",
+    ],
+)
+
+java_test(
+    name = "watchman-tests",
+    srcs = glob(["test/**/*.java"]),
+    source = "7",
+    target = "7",
+    deps = [
+        ":watchman-lib",
+        "//third-party/guava:guava",
+        "//third-party/hamcrest:hamcrest-2",
+        "//third-party/junit:junit",
+        "//third-party/mockito:mockito",
+    ],
+)

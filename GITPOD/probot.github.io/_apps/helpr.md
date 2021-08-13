@@ -1,28 +1,29 @@
 ---
 title: helPR
-description: Assigns labels to issues based on the status of the PR associated with
+description:
+  Assigns labels to issues based on the status of the PR associated with
   it.
 slug: helpr
 screenshots:
-- https://raw.githubusercontent.com/rsarky/helpr/master/screenshots/usage-img1.jpg
+  - https://raw.githubusercontent.com/rsarky/helpr/master/screenshots/usage-img1.jpg
 authors:
-- rsarky
+  - rsarky
 repository: rsarky/helpr
 host: https://evening-depths-50399.herokuapp.com
 stars: 4
 updated: 2018-04-20 09:11:34 UTC
 installations: 17
 organizations:
-- Glavin001
-- tox-dev
-- infection
-- Unibeautify
-- DarkPacks
-- JPry
-- quintype
-- Polystream
-- SpotswoodCollege
-- philoserf
+  - Glavin001
+  - tox-dev
+  - infection
+  - Unibeautify
+  - DarkPacks
+  - JPry
+  - quintype
+  - Polystream
+  - SpotswoodCollege
+  - philoserf
 ---
 
 <p align="center">
@@ -32,13 +33,11 @@ organizations:
   <img src="https://codecov.io/gh/rsarky/helpr/branch/master/graph/badge.svg" />
 </a></p>
 
-
 </div>
 
 ## Usage
 
-Using helpr is pretty straightforward. Just [install](https://github.com/apps/helpr) the app on your repository and you are ready to go. :100: 
-
+Using helpr is pretty straightforward. Just [install](https://github.com/apps/helpr) the app on your repository and you are ready to go. :100:
 
 Consider this open issue :
 
@@ -50,11 +49,11 @@ Now when someone references this issue in a pull request helpr will automaticall
 ![labelled](https://raw.githubusercontent.com/rsarky/helpr/master/screenshots/usage-img1.jpg)
 <br><br>
 
-
 **helpr** supports 3 labels :
-* `pr-available` when  a new PR referencing an issue is opened.
-* `pr-merged` when a PR referencing an issue is merged.
-* `pr-rejected` when a PR referencing an issue is rejected.
+
+- `pr-available` when a new PR referencing an issue is opened.
+- `pr-merged` when a PR referencing an issue is merged.
+- `pr-rejected` when a PR referencing an issue is rejected.
 
 When a PR for an issue is merged or rejected **helpr** will remove the `pr-available` label and add the respective merged or rejected label.
 
@@ -66,16 +65,17 @@ Add a `helpr` object in your `.github/config.yml` file (and make the file if you
 
 ```yaml
 helpr:
-  opened: 'insert-label-for-pr-opened-here'
-  merged: 'insert-label-for-pr-merged-here'
-  rejected: 'insert-label-for-pr-rejected-here'
-```  
+  opened: "insert-label-for-pr-opened-here"
+  merged: "insert-label-for-pr-merged-here"
+  rejected: "insert-label-for-pr-rejected-here"
+```
 
 Only override the ones that you want to change!
 
 The defaults are:
+
 ```yaml
-opened: 'pr-available'
-merged: 'pr-merged'
-rejected: 'pr-rejected'
+opened: "pr-available"
+merged: "pr-merged"
+rejected: "pr-rejected"
 ```

@@ -3,33 +3,33 @@ title: First Timers
 description: Create starter issues to help onboard new open source contributors
 slug: first-timers
 screenshots:
-- https://raw.githubusercontent.com/hoodiehq/first-timers-bot/master/assets/Issue-Done.png
+  - https://raw.githubusercontent.com/hoodiehq/first-timers-bot/master/assets/Issue-Done.png
 authors:
-- agonzalez0515
-- Techforchange
+  - agonzalez0515
+  - Techforchange
 stars: 146
 repository: hoodiehq/first-timers-bot
 updated: 2018-05-19 22:26:12 UTC
 host: https://first-timers-bot.now.sh
 installations: 238
 organizations:
-- jekyll
-- videojs
-- processing
-- Moya
-- semantic-release
-- hoodiehq
-- skywinder
-- mikaelbr
-- terkelg
-- gr2m
+  - jekyll
+  - videojs
+  - processing
+  - Moya
+  - semantic-release
+  - hoodiehq
+  - skywinder
+  - mikaelbr
+  - terkelg
+  - gr2m
 ---
 
 # first-timers-bot
 
 ### 🐶🎯⛳ The Motivation
 
-From our own experiences, we know the process of creating a pull request is the biggest barrier for new contributors.  We wanted to streamline the process to create very simple contributor-friendly issues to help onboard more people to become Open Source contributors for the first time.
+From our own experiences, we know the process of creating a pull request is the biggest barrier for new contributors. We wanted to streamline the process to create very simple contributor-friendly issues to help onboard more people to become Open Source contributors for the first time.
 
 At Hoodie, we aim to become the most [welcoming Open Source community possible](http://hood.ie/blog/welcoming-communities.html). We joined forces with initiatives like [First Timers Only](http://www.firsttimersonly.com/) and [Your First PR](http://yourfirstpr.github.io/) to actively reach out to new contributors and create an environment where they feel encouraged and supported.
 
@@ -38,7 +38,6 @@ Creating what we call [starter issues](http://hood.ie/blog/starter-issues.html) 
 ### 💡💥❓ How things work
 
 Say I’m a Hoodie contributor and find a typo somewhere. Instead of fixing the issue directly in the master branch or creating a pull request which is time-consuming, I can simply create a new branch that is called something like _first-timers-typo-in-title._ GitHub will then notify the **First Timers Bot** about the new branch using Webhooks. The bot is listening to any new branch starting with **first-timers** and it will create a new issue on your repo. The commit body can be used to add some context information and if left empty, the 🤔 **What you will need to know** section of the issue will simply say "Nothing :)".
-
 
 ### 😮🙌👀🎉 Use Our Bot!
 
@@ -72,6 +71,7 @@ Say I’m a Hoodie contributor and find a typo somewhere. Instead of fixing the 
 <p align="center"><img src="https://raw.githubusercontent.com/hoodiehq/first-timers-bot/master/assets/Issue-Done.png" alt="Issue Done"></p>
 
 ### 👩‍💻💕About Us
+
 <table>
     <col width="200">
     <th>
@@ -84,7 +84,7 @@ Say I’m a Hoodie contributor and find a typo somewhere. Instead of fixing the 
     </th>
 </table>
 
-Angie and Arlene are LA natives that met while attending Dev Bootcamp in San Francisco.  After bootcamp was over and they were back in LA, they wanted to once again be part of an amazing, welcoming community like DBC was. They found Hoodie through [Rails Girls Summer of Code](https://railsgirlssummerofcode.org/)! This project is extra special for them as it is their first contribution to open source.
+Angie and Arlene are LA natives that met while attending Dev Bootcamp in San Francisco. After bootcamp was over and they were back in LA, they wanted to once again be part of an amazing, welcoming community like DBC was. They found Hoodie through [Rails Girls Summer of Code](https://railsgirlssummerofcode.org/)! This project is extra special for them as it is their first contribution to open source.
 
 ### Contributors
 

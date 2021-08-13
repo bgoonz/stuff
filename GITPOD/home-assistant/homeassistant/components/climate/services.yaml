@@ -5,7 +5,7 @@ set_aux_heat:
   fields:
     entity_id:
       description: Name(s) of entities to change.
-      example: 'climate.kitchen'
+      example: "climate.kitchen"
     aux_heat:
       description: New value of axillary heater.
       example: true
@@ -14,16 +14,16 @@ set_preset_mode:
   fields:
     entity_id:
       description: Name(s) of entities to change.
-      example: 'climate.kitchen'
+      example: "climate.kitchen"
     preset_mode:
       description: New value of preset mode
-      example: 'away'
+      example: "away"
 set_temperature:
   description: Set target temperature of climate device.
   fields:
     entity_id:
       description: Name(s) of entities to change.
-      example: 'climate.kitchen'
+      example: "climate.kitchen"
     temperature:
       description: New target temperature for HVAC.
       example: 25
@@ -35,13 +35,13 @@ set_temperature:
       example: 20
     hvac_mode:
       description: HVAC operation mode to set temperature to.
-      example: 'heat'
+      example: "heat"
 set_humidity:
   description: Set target humidity of climate device.
   fields:
     entity_id:
       description: Name(s) of entities to change.
-      example: 'climate.kitchen'
+      example: "climate.kitchen"
     humidity:
       description: New target humidity for climate device.
       example: 60
@@ -50,7 +50,7 @@ set_fan_mode:
   fields:
     entity_id:
       description: Name(s) of entities to change.
-      example: 'climate.nest'
+      example: "climate.nest"
     fan_mode:
       description: New value of fan mode.
       example: On Low
@@ -59,7 +59,7 @@ set_hvac_mode:
   fields:
     entity_id:
       description: Name(s) of entities to change.
-      example: 'climate.nest'
+      example: "climate.nest"
     hvac_mode:
       description: New value of operation mode.
       example: heat
@@ -68,7 +68,7 @@ set_swing_mode:
   fields:
     entity_id:
       description: Name(s) of entities to change.
-      example: 'climate.nest'
+      example: "climate.nest"
     swing_mode:
       description: New value of swing mode.
 
@@ -77,7 +77,7 @@ ecobee_set_fan_min_on_time:
   fields:
     entity_id:
       description: Name(s) of entities to change.
-      example: 'climate.kitchen'
+      example: "climate.kitchen"
     fan_min_on_time:
       description: New value of fan min on time.
       example: 5
@@ -87,7 +87,7 @@ ecobee_resume_program:
   fields:
     entity_id:
       description: Name(s) of entities to change.
-      example: 'climate.kitchen'
+      example: "climate.kitchen"
     resume_all:
       description: Resume all events and return to the scheduled program. This default to false which removes only the top event.
       example: true
@@ -97,7 +97,7 @@ mill_set_room_temperature:
   fields:
     room_name:
       description: Name of room to change.
-      example: 'kitchen'
+      example: "kitchen"
     away_temp:
       description: Away temp.
       example: 12
@@ -113,18 +113,18 @@ nuheat_resume_program:
   fields:
     entity_id:
       description: Name(s) of entities to change.
-      example: 'climate.kitchen'
+      example: "climate.kitchen"
 
 turn_on:
   description: Turn climate device on.
   fields:
     entity_id:
       description: Name(s) of entities to change.
-      example: 'climate.kitchen'
+      example: "climate.kitchen"
 
 turn_off:
   description: Turn climate device off.
   fields:
     entity_id:
       description: Name(s) of entities to change.
-      example: 'climate.kitchen'
+      example: "climate.kitchen"

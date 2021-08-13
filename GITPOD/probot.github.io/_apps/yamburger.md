@@ -3,8 +3,8 @@ title: YAMBURGER
 description: Finds YAML syntax errors (or YAMBURGERS) on files changed in GitHub Pull Requests.
 slug: yamburger
 screenshots:
-- https://urcomputeringpal.com/assets/yamburger.gif
-authors: [ jnewland, urcomputeringpal ]
+  - https://urcomputeringpal.com/assets/yamburger.gif
+authors: [jnewland, urcomputeringpal]
 repository: urcomputeringpal/yamburger
 host: https://yamburger.now.sh
 ---
@@ -19,12 +19,12 @@ YAMBURGER supports validating YAML containing custom tags (like `!tag`). To conf
 
 ```yaml
 tags:
-- name: tag1
-  kind: scalar # strings / numbers
-- name: tag2
-  kind: sequence # arrays / lists
-- name: tag3
-  kind: mapping # hashes / dictionaries
+  - name: tag1
+    kind: scalar # strings / numbers
+  - name: tag2
+    kind: sequence # arrays / lists
+  - name: tag3
+    kind: mapping # hashes / dictionaries
 ```
 
 An example configuration that adds support for [Home Assistant](https://home-assistant.io)'s [custom YAML tags](https://www.home-assistant.io/docs/configuration/yaml/#using-environment-variables) is available [here](https://github.com/jnewland/ha-config/blob/master/.github/yamburger.yaml).

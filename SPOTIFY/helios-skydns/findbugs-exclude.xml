@@ -1,0 +1,14 @@
+<FindBugsFilter>
+  <Match>
+    <Bug pattern="SIC_INNER_SHOULD_BE_STATIC_ANON"/>
+    <!-- We have a few non-static anonymous inner classes that could be static non-anonymous,
+         but whose lifetimes are not problematic -->
+    <And>
+      <Or>
+        <Class name="com.spotify.helios.serviceregistration.skydns.MiniEtcdClient$1"/>
+        <Class name="com.spotify.helios.serviceregistration.skydns.MiniEtcdClient$2"/>
+        <Class name="com.spotify.helios.serviceregistration.skydns.MiniEtcdClient$3"/>
+      </Or>
+    </And>
+  </Match>
+</FindBugsFilter>

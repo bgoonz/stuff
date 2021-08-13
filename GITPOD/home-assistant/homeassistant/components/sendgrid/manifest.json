@@ -2,9 +2,7 @@
   "domain": "sendgrid",
   "name": "Sendgrid",
   "documentation": "https://www.home-assistant.io/components/sendgrid",
-  "requirements": [
-    "sendgrid==6.0.5"
-  ],
+  "requirements": ["sendgrid==6.0.5"],
   "dependencies": [],
   "codeowners": []
 }

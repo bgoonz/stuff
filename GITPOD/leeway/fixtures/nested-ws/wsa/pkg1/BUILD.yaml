@@ -1,10 +1,10 @@
 packages:
-- name: app
-  type: generic
-  config:
-    commands:
-    - ["echo"]
+  - name: app
+    type: generic
+    config:
+      commands:
+        - ["echo"]
 scripts:
-- name: echo
-  script: |
-    echo ${message}
+  - name: echo
+    script: |
+      echo ${message}

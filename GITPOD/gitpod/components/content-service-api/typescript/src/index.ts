@@ -4,4 +4,4 @@
  * See License-AGPL.txt in the project root for license information.
  */
 
-export * from './initializer_pb';
+export * from "./initializer_pb";

@@ -3,26 +3,26 @@ title: Dep
 description: A dependency manager for your Pull Requests.
 slug: dep
 screenshots:
-- https://github.com/z0al/dep/raw/master/docs/assets/comment.png
-- https://github.com/z0al/dep/raw/master/docs/assets/status.png
+  - https://github.com/z0al/dep/raw/master/docs/assets/comment.png
+  - https://github.com/z0al/dep/raw/master/docs/assets/status.png
 authors:
-- z0al
+  - z0al
 repository: z0al/dep
 host: https://probot-dep.now.sh
 stars: 40
 updated: 2018-08-12 07:47:54 UTC
 installations: 77
 organizations:
-- AvaloniaUI
-- verdaccio
-- Laravel-Backpack
-- JabRef
-- thefrontside
-- timvideos
-- tunnckoCoreLabs
-- gaocegege
-- TECLIB
-- cmfcmf
+  - AvaloniaUI
+  - verdaccio
+  - Laravel-Backpack
+  - JabRef
+  - thefrontside
+  - timvideos
+  - tunnckoCoreLabs
+  - gaocegege
+  - TECLIB
+  - cmfcmf
 ---
 
 <p align="center">

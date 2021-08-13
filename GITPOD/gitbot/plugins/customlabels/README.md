@@ -9,7 +9,7 @@ It works on the following GitHub event payloads:
 - Body of new issue
 - Edit of issue body
 - Body of new PR
-- Edit of PR body 
+- Edit of PR body
 - Issue comment
 - Edit of issue comment
 - PR comment
@@ -21,13 +21,13 @@ As any other external Prow plugin:
 
 ```yaml
 external_plugins:
-    "org/repo":
+  "org/repo":
     - name: customlabels
       endpoint: ...
       events:
-      - issues
-      - issue_comment
-      - pull_request
+        - issues
+        - issue_comment
+        - pull_request
 ```
 
 ## Config
@@ -49,7 +49,6 @@ orgsRepos:
           - two
           - "with spaces in the between"
 ```
-
 
 ## Usage
 

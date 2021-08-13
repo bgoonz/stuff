@@ -57,10 +57,7 @@
         {
           "name": "workspace",
           "image": "reg.cw-no-plis.staging.gitpod-dev.com:30780/remote/60a694b3-ac7d-4a24-8ad9-2d8d5eb56de0",
-          "command": [
-            "/.supervisor/supervisor",
-            "run"
-          ],
+          "command": ["/.supervisor/supervisor", "run"],
           "ports": [
             {
               "containerPort": 23000,
@@ -227,9 +224,7 @@
       "automountServiceAccountToken": false,
       "nodeName": "gke-dev-workload-1-49d27f81-n6zr",
       "securityContext": {
-        "supplementalGroups": [
-          1
-        ],
+        "supplementalGroups": [1],
         "fsGroup": 1
       },
       "imagePullSecrets": [
@@ -286,10 +281,7 @@
       ],
       "priority": 0,
       "dnsConfig": {
-        "nameservers": [
-          "1.1.1.1",
-          "8.8.8.8"
-        ]
+        "nameservers": ["1.1.1.1", "8.8.8.8"]
       },
       "enableServiceLinks": false
     },

@@ -20,17 +20,17 @@ ports:
     visibility: private
   - port: 9229
     onOpen: ignore
-# Go proxy
+  # Go proxy
   - port: 9999
     onOpen: ignore
   - port: 13001
     onOpen: ignore
-# Werft
+  # Werft
   - port: 7777
     onOpen: ignore
-# Dev Theia
+  # Dev Theia
   - port: 13444
-# qemu
+  # qemu
   - port: 2222
     onOpen: ignore
   - port: 1234

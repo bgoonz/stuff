@@ -3,18 +3,18 @@ title: Tap Release
 description: Update Homebrew taps when you publish new GitHub releases.
 slug: tap-release
 screenshots:
-- https://raw.githubusercontent.com/toolmantim/tap-release/master/design/screenshot.png
+  - https://raw.githubusercontent.com/toolmantim/tap-release/master/design/screenshot.png
 authors:
-- toolmantim
+  - toolmantim
 repository: toolmantim/tap-release
 host: https://tap-release.now.sh
 stars: 14
 updated: 2018-09-10 22:40:07 UTC
 installations: 3
 organizations:
-- infection
-- kentaro-m
-- toolmantim
+  - infection
+  - kentaro-m
+  - toolmantim
 ---
 
 ## Usage
@@ -93,36 +93,36 @@ end
 
 You can use any of the following variables in your formula template, and they'll be substituted when the tap is regenerated:
 
-|Variable|Description|
-|-|-|
-|`$REPO_DESCRIPTION`|GitHub repository description.|
-|`$REPO_WEBSITE`|GitHub repository website, or URL if there isn't one.|
-|`$STABLE_VERSION`|Tag name of the latest stable release.|
-|`$STABLE_ASSET_URL`|Download URL of the asset from the latest stable release.|
-|`$STABLE_ASSET_SHA256`|SHA256 of the asset from the latest stable release.|
-|`$DEVEL_VERSION`|Tag name of the latest pre-release.|
-|`$DEVEL_ASSET_URL`|Wownload URL of the asset from the latest pre-release.|
-|`$DEVEL_ASSET_SHA256`|SHA256 of the asset from the latest pre-release.|
+| Variable               | Description                                               |
+| ---------------------- | --------------------------------------------------------- |
+| `$REPO_DESCRIPTION`    | GitHub repository description.                            |
+| `$REPO_WEBSITE`        | GitHub repository website, or URL if there isn't one.     |
+| `$STABLE_VERSION`      | Tag name of the latest stable release.                    |
+| `$STABLE_ASSET_URL`    | Download URL of the asset from the latest stable release. |
+| `$STABLE_ASSET_SHA256` | SHA256 of the asset from the latest stable release.       |
+| `$DEVEL_VERSION`       | Tag name of the latest pre-release.                       |
+| `$DEVEL_ASSET_URL`     | Wownload URL of the asset from the latest pre-release.    |
+| `$DEVEL_ASSET_SHA256`  | SHA256 of the asset from the latest pre-release.          |
 
 ## URL variables
 
 You can use any of the following variables in your URL template, and they'll be substituted for each stable and development release when the tap is regenerated:
 
-|Variable|Description|
-|-|-|
-|`$VERSION`|The version (e.g. `v1.0.2`.|
-|`$VERSION_NUMBER`|The version without the preceding `v` (e.g. `1.0.2`).|
+| Variable          | Description                                           |
+| ----------------- | ----------------------------------------------------- |
+| `$VERSION`        | The version (e.g. `v1.0.2`.                           |
+| `$VERSION_NUMBER` | The version without the preceding `v` (e.g. `1.0.2`). |
 
 ## Configuration options
 
 You can configure Tap Release using the following key in your `.github/tap-release.yml` file:
 
-|Key|Required|Description|
-|-|-|-|
-|`tap`|Required|The path to the Homebrew tap repository that should be updated.|
-|`template`|Required|The template string to use to generate the tap. Use [template variables](#template-variables) to insert the values from the releases.|
-|`asset`|Optional|Filename of the asset to use from the release.|
-|`url`|Optional|URL pattern to generate the download URLs. Use [URL variables](#url-variables) to insert the values from the release.|
-|`branches`|Optional|A list of branches that trigger the tap to be updated when the `.github/tap-release.yml` file is modified. Useful if you want to test the app on a pull request branch. Default is `"master"`.|
+| Key        | Required | Description                                                                                                                                                                                    |
+| ---------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `tap`      | Required | The path to the Homebrew tap repository that should be updated.                                                                                                                                |
+| `template` | Required | The template string to use to generate the tap. Use [template variables](#template-variables) to insert the values from the releases.                                                          |
+| `asset`    | Optional | Filename of the asset to use from the release.                                                                                                                                                 |
+| `url`      | Optional | URL pattern to generate the download URLs. Use [URL variables](#url-variables) to insert the values from the release.                                                                          |
+| `branches` | Optional | A list of branches that trigger the tap to be updated when the `.github/tap-release.yml` file is modified. Useful if you want to test the app on a pull request branch. Default is `"master"`. |
 
 Tap Release also supports [Probot Config](https://github.com/probot/probot-config), if you want to store your configuration files in a central repository.

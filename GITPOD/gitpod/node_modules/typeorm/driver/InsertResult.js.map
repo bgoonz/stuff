@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/driver/InsertResult.ts"],"names":[],"mappings":"","file":"InsertResult.js","sourcesContent":["import {ObjectLiteral} from \"../common/ObjectLiteral\";\n\nexport interface InsertResult {\n    result: ObjectLiteral[]|undefined;\n    generatedMap: ObjectLiteral|undefined;\n}"],"sourceRoot":".."}

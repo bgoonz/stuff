@@ -8,7 +8,6 @@ Agent smith makes use of eBPF to audit kernel events. In particular, it uses
 the [Falco BPF driver](https://github.com/falcosecurity/libs/tree/master/driver/bpf)
 as its BPF program to extract syscall information at runtime.
 
-
 ## State of the project
 
 - [x] Loading of the Falco BPF probe using `cilium/ebpf`
@@ -21,6 +20,7 @@ as its BPF program to extract syscall information at runtime.
 ## eBPF development inside the Gitpod workspace
 
 ### Environment preparation
+
 Prepare the environment (it should've been already prepared when you started your Gitpod wrokspace)
 
 ```bash
@@ -68,14 +68,12 @@ cd driver/bpf
 make CLANG=clang-7 LLC=llc-7 -j16
 ```
 
-
 ## Debugging the Linux kernel
 
 In case you need to debug the kernel while working on it.
 
 First, you need to compile the ubuntu kernel yourself, the default one
 does not come with debugging symbols unfortunately.
-
 
 ### Step zero: obtain build dependencies
 
@@ -85,7 +83,6 @@ sudo apt install flex bison gcc make libelf-dev liblz4-tool -y
 ```
 
 ### First step: Obtain kernel sources
-
 
 You can either obtain Ubuntu's sources (**slower**)
 
@@ -108,7 +105,7 @@ Now you can compile it, make sure to create the proper config.
 
 Remember to:
 
-- Enable debugging sysmbols under Kernel Hacking -> compile options  OR set : `CONFIG_DEBUG_INFO=y` in `.config`j
+- Enable debugging sysmbols under Kernel Hacking -> compile options OR set : `CONFIG_DEBUG_INFO=y` in `.config`j
 
 ```shell
 cd /workspace/kernel
@@ -129,7 +126,6 @@ VMLINUX_PATH=$PWD/vmlinux leeway run components/ee/agent-smith:qemu
 ```
 
 Now that you have the qemu machine in debugging mode, you can connect via gdb.
-
 
 ```shell
 gdb vmlinux

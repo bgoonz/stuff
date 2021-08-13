@@ -1,0 +1,9 @@
+cobbler for Debian
+------------------
+
+Packaging based on Ubuntu work at https://launchpad.net/ubuntu/+source/cobbler and
+adapted for Debian squeeze.
+Removed cobbler4j package.
+
+ -- Ramom van Alteren <ramon@spotify.com> Wed, 04 Jul 2012 15:40:59 +0200
+ -- root <jasper@fedoraproject.org>  Wed, 11 Feb 2009 22:50:37 +0100

@@ -3,20 +3,20 @@ title: Profanity
 description: Marks/Censors Issues and Pull Requests containing offensive content.
 slug: profanity
 screenshots:
-- https://user-images.githubusercontent.com/25513006/38316149-bc43b3c0-3832-11e8-8b13-53216b342027.png
-- https://user-images.githubusercontent.com/25513006/38316166-c48f9eb8-3832-11e8-95a3-78773c7120a4.png
+  - https://user-images.githubusercontent.com/25513006/38316149-bc43b3c0-3832-11e8-8b13-53216b342027.png
+  - https://user-images.githubusercontent.com/25513006/38316166-c48f9eb8-3832-11e8-95a3-78773c7120a4.png
 authors:
-- nickgarlis
+  - nickgarlis
 repository: nickgarlis/probot-profanity
 host: https://probot-profanity.now.sh
 stars: 7
 updated: 2018-08-27 17:02:44 UTC
 installations: 7
 organizations:
-- tipeio
-- micalevisk
-- emeraldsci
-- philoserf
+  - tipeio
+  - micalevisk
+  - emeraldsci
+  - philoserf
 ---
 
 ## Usage
@@ -32,13 +32,13 @@ A `.github/profanity.yml` file is required to enable the plugin. The file can be
 
 # Language to detect profanity in.
 # Choose one of the following: 'de', en', 'es', 'fr', 'it', 'nl', 'pt', 'ru'
-language: 'en'
+language: "en"
 
 # Set to true to censor issues (defaults to false)
 censor: false
 
 # Placeholder to replace the letters of a forbidden word
-placeholder: '*'
+placeholder: "*"
 
 # A list of extra forbidden words. Set to `[]` to disable
 extraWords: []
@@ -74,11 +74,10 @@ markComment: >
 
 # Comment to post when closing an inappropriate Issue or Pull Request.
 # closeComment: >
-#   Your comment here.  
+#   Your comment here.
 
 # Limit the number of actions per hour, from 1-30. Default is 30
 limitPerRun: 30
-
 # Limit to only `issues` or `pulls`
 # only: issues
 

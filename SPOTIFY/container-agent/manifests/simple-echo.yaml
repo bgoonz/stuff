@@ -1,0 +1,15 @@
+containers:
+  - name: trusty-echo
+    image: ubuntu:14.04
+    command: ['sh', '-c', 'echo hello world | nc -p 4711 -l -k']
+    ports:
+      - name: nc-echo
+        hostPort: 14711
+        containerPort: 4711
+  - name: busybox-echo2
+    image: busybox
+    command: ['nc', '-p', '4711', '-l', '-l', '-e', 'echo', 'hello world!']
+    ports:
+      - name: nc-echo
+        hostPort: 14712
+        containerPort: 4711

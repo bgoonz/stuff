@@ -5,79 +5,99 @@
  */
 
 import { injectable, inject } from "inversify";
-import * as express from 'express';
+import * as express from "express";
 import { log } from "@gitpod/gitpod-protocol/lib/util/logging";
 import { Env } from "./env";
-import { OneTimeSecretDB, DBWithTracing, TracedOneTimeSecretDB } from "@gitpod/gitpod-db/lib";
+import {
+  OneTimeSecretDB,
+  DBWithTracing,
+  TracedOneTimeSecretDB,
+} from "@gitpod/gitpod-db/lib";
 import { Disposable } from "@gitpod/gitpod-protocol";
-import * as opentracing from 'opentracing';
+import * as opentracing from "opentracing";
 import { TraceContext } from "@gitpod/gitpod-protocol/lib/util/tracing";
 
 @injectable()
 export class OneTimeSecretServer implements Disposable {
-    @inject(Env) protected readonly env: Env;
-    @inject(TracedOneTimeSecretDB) protected readonly oneTimeSecretDB: DBWithTracing<OneTimeSecretDB>;
+  @inject(Env) protected readonly env: Env;
+  @inject(TracedOneTimeSecretDB)
+  protected readonly oneTimeSecretDB: DBWithTracing<OneTimeSecretDB>;
 
-    protected pruneTimeout: NodeJS.Timeout | undefined;
+  protected pruneTimeout: NodeJS.Timeout | undefined;
 
-    public startPruningExpiredSecrets() {
-        this.pruneTimeout = setInterval(() => this.oneTimeSecretDB.trace({}).pruneExpired(), 5*60*1000);
+  public startPruningExpiredSecrets() {
+    this.pruneTimeout = setInterval(
+      () => this.oneTimeSecretDB.trace({}).pruneExpired(),
+      5 * 60 * 1000
+    );
+  }
+
+  dispose(): void {
+    if (!this.pruneTimeout) {
+      return;
     }
 
-    dispose(): void {
-        if (!this.pruneTimeout) {
-            return;
+    clearInterval(this.pruneTimeout);
+    this.pruneTimeout = undefined;
+  }
+
+  get apiRouter(): express.Router {
+    const router = express.Router();
+    this.addHandler(router);
+    return router;
+  }
+
+  protected addHandler(router: express.Router) {
+    router.get("/ots/get/:id", async (req, res, next) => {
+      const spanCtx =
+        opentracing
+          .globalTracer()
+          .extract(opentracing.FORMAT_HTTP_HEADERS, req.headers) || undefined;
+      const span = opentracing
+        .globalTracer()
+        .startSpan("getOneTimeSecret", { childOf: spanCtx });
+
+      try {
+        const key = req.params.id;
+        const secret = await this.oneTimeSecretDB.trace({ span }).get(key);
+        if (!secret) {
+          res.sendStatus(404);
+          return;
         }
 
-        clearInterval(this.pruneTimeout);
-        this.pruneTimeout = undefined;
-    }
+        log.info(`provided secret ${key}`);
+        res.status(200).send(secret);
+      } catch (err) {
+        log.error("cannot provide one-time secret", err);
+        res.sendStatus(500);
+        TraceContext.logError({ span }, err);
+      } finally {
+        span.finish();
+      }
+    });
+  }
 
-    get apiRouter(): express.Router {
-        const router = express.Router();
-        this.addHandler(router);
-        return router;
-    }
-
-    protected addHandler(router: express.Router) {
-        router.get("/ots/get/:id", async (req, res, next) => {
-            const spanCtx = opentracing.globalTracer().extract(opentracing.FORMAT_HTTP_HEADERS, req.headers) || undefined;
-            const span = opentracing.globalTracer().startSpan("getOneTimeSecret", {childOf: spanCtx});
-
-            try {
-                const key = req.params.id;
-                const secret = await this.oneTimeSecretDB.trace({span}).get(key);
-                if (!secret) {
-                    res.sendStatus(404);
-                    return;
-                }
-
-                log.info(`provided secret ${key}`);
-                res.status(200).send(secret);
-            } catch (err) {
-                log.error("cannot provide one-time secret", err);
-                res.sendStatus(500);
-                TraceContext.logError({ span }, err);
-            } finally {
-                span.finish();
-            }
-        });
-    }
-
-    /**
-     * serve registers a secret for one-time servance.
-     *
-     * @param secret the secret to serve once
-     * @param expirationTime time until which the secret is available
-     * @returns the URL under which the secret is available
-     */
-    public async serve(ctx: TraceContext, secret: string, expirationTime: Date): Promise<{token: string, disposable: Disposable}> {
-        const key = await this.oneTimeSecretDB.trace(ctx).register(secret, expirationTime);
-        const token = this.env.hostUrl.withApi({ pathname: `/ots/get/${key}` }).toString();
-        const disposable: Disposable = {
-            dispose: () => this.oneTimeSecretDB.trace({}).remove(key)
-        };
-        return { token, disposable };
-    }
-
+  /**
+   * serve registers a secret for one-time servance.
+   *
+   * @param secret the secret to serve once
+   * @param expirationTime time until which the secret is available
+   * @returns the URL under which the secret is available
+   */
+  public async serve(
+    ctx: TraceContext,
+    secret: string,
+    expirationTime: Date
+  ): Promise<{ token: string; disposable: Disposable }> {
+    const key = await this.oneTimeSecretDB
+      .trace(ctx)
+      .register(secret, expirationTime);
+    const token = this.env.hostUrl
+      .withApi({ pathname: `/ots/get/${key}` })
+      .toString();
+    const disposable: Disposable = {
+      dispose: () => this.oneTimeSecretDB.trace({}).remove(key),
+    };
+    return { token, disposable };
+  }
 }

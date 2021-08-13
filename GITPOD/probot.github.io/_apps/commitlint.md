@@ -1,28 +1,29 @@
 ---
 title: commitlint
-description: Lints all commits of new or edited pull requests and sets an appropriate
+description:
+  Lints all commits of new or edited pull requests and sets an appropriate
   status check.
 slug: commitlint
 screenshots:
-- https://github.com/z0al/commitlint-bot/raw/master/docs/status.png
+  - https://github.com/z0al/commitlint-bot/raw/master/docs/status.png
 authors:
-- z0al
+  - z0al
 repository: z0al/commitlint-bot
 host: https://probot-commitlint.now.sh
 stars: 84
 updated: 2018-07-08 20:02:14 UTC
 installations: 74
 organizations:
-- skylot
-- caarlos0
-- TECLIB
-- ajsb85
-- flyve-mdm
-- algolia
-- z0al
-- u3u
-- angular-klingon
-- theo4u
+  - skylot
+  - caarlos0
+  - TECLIB
+  - ajsb85
+  - flyve-mdm
+  - algolia
+  - z0al
+  - u3u
+  - angular-klingon
+  - theo4u
 ---
 
 <p align="center">

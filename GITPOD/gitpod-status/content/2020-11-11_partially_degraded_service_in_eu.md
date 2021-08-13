@@ -7,6 +7,7 @@ affectedsystems:
   - imagebuilds
 resolved: true
 ---
+
 Some workspaces are taking a longer time to start up.
 
 <!--- language code: en -->

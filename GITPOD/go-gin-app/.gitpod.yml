@@ -9,8 +9,8 @@ tasks:
     command: >
       ./app
 github:
-    prebuilds:
-        pullRequestsFromForks: true
+  prebuilds:
+    pullRequestsFromForks: true
 vscode:
   extensions:
     - golang.go

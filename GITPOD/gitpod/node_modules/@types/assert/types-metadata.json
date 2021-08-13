@@ -1,0 +1,23 @@
+{
+    "authors": "vvakame <https://github.com/vvakame>",
+    "definitionFilename": "index.d.ts",
+    "libraryDependencies": [],
+    "moduleDependencies": [],
+    "libraryMajorVersion": 0,
+    "libraryMinorVersion": 0,
+    "libraryName": "assert and power-assert",
+    "typingsPackageName": "assert",
+    "projectName": "https://github.com/Jxck/assert, https://github.com/twada/power-assert",
+    "sourceRepoURL": "https://www.github.com/DefinitelyTyped/DefinitelyTyped",
+    "sourceBranch": "types-2.0",
+    "kind": "Global",
+    "globals": [
+        "assert"
+    ],
+    "declaredModules": [],
+    "files": [
+        "index.d.ts"
+    ],
+    "hasPackageJson": false,
+    "contentHash": "759710078193010b99dc99e7ba8a100e251198a9098988d5579808a57a8fc7c5"
+}

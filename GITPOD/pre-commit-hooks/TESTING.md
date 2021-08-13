@@ -2,10 +2,9 @@
 
 ## Dependencies
 
-* [`bash`](https://www.gnu.org/software/bash/bash.html)
-* [`git`](https://github.com/git/git)
-* [`pip`](http://www.pip-installer.org) command
-
+- [`bash`](https://www.gnu.org/software/bash/bash.html)
+- [`git`](https://github.com/git/git)
+- [`pip`](http://www.pip-installer.org) command
 
 ## How-to
 

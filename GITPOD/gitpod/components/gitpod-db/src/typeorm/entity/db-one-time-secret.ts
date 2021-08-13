@@ -13,25 +13,25 @@ import { encryptionService } from "../user-db-impl";
 @Entity()
 // on DB but not Typeorm: @Index("ind_lastModified", ["_lastModified"])   // DBSync
 export class DBOneTimeSecret implements OneTimeSecret {
-    @PrimaryColumn(TypeORM.UUID_COLUMN_TYPE)
-    id: string;
+  @PrimaryColumn(TypeORM.UUID_COLUMN_TYPE)
+  id: string;
 
-    @Column({
-        type: "simple-json",
-        // Relies on the initialization of the var in OneTimeSecretDbImpl
-        transformer: Transformer.compose(
-            Transformer.SIMPLE_JSON([]),
-            Transformer.encrypted(() => encryptionService)
-        )
-    })
-    value: string;
+  @Column({
+    type: "simple-json",
+    // Relies on the initialization of the var in OneTimeSecretDbImpl
+    transformer: Transformer.compose(
+      Transformer.SIMPLE_JSON([]),
+      Transformer.encrypted(() => encryptionService)
+    ),
+  })
+  value: string;
 
-    @Column({
-        type: 'timestamp',
-        precision: 6
-    })
-    expirationTime: string;
+  @Column({
+    type: "timestamp",
+    precision: 6,
+  })
+  expirationTime: string;
 
-    @Column()
-    deleted: boolean;
+  @Column()
+  deleted: boolean;
 }

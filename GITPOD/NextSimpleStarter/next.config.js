@@ -11,7 +11,7 @@ module.exports = {
 		const oldEntry = config.entry
 
 		config.entry = () =>
-			oldEntry().then(entry => {
+			oldEntry().then((entry) => {
 				entry['main.js'] &&
 					entry['main.js'].push(path.resolve('./utils/offline'))
 				return entry
@@ -27,12 +27,12 @@ module.exports = {
 					swDest: path.join(__dirname, '.next', 'sw.js'),
 					globDirectory: __dirname,
 					globPatterns: [
-						'static/**/*.{png,jpg,ico}' // Precache all static assets by default
-					]
+						'static/**/*.{png,jpg,ico}', // Precache all static assets by default
+					],
 				})
 			)
 		}
 
 		return config
-	}
+	},
 }

@@ -1,7 +1,7 @@
 # Workflow to associate labels automatically
 name: Label management
 
-on: 
+on:
   pull_request:
     types: [synchronize, opened, reopened, ready_for_review]
 

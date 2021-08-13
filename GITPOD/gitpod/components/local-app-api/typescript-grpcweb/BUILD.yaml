@@ -39,4 +39,8 @@ packages:
       - components/supervisor-api/typescript-grpcweb:publish
     config:
       commands:
-        - ["node", "components-local-app-api-typescript-grpcweb--scripts/publish.js", "${version}"]
+        - [
+            "node",
+            "components-local-app-api-typescript-grpcweb--scripts/publish.js",
+            "${version}",
+          ]

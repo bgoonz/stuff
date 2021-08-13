@@ -16,22 +16,22 @@
   name: Detect if an email address needs to be added to mailmap
   language: script
   entry: pre_commit_hooks/check-mailmap
-  always_run: true  # Run on every commit.
-  exclude: .*       # Otherwise runs once per file.
+  always_run: true # Run on every commit.
+  exclude: .* # Otherwise runs once per file.
 
 - id: fasterer
   name: Suggest speed improvements in Ruby
   description: Use fasterer to suggest speed improvements in Ruby
   entry: run-fasterer
   language: ruby
-  types: ['ruby']
+  types: ["ruby"]
 
 - id: forbid-binary
   name: Forbid binaries
   description: Forbid binary files from being committed
   entry: pre_commit_hooks/forbid-binary
   language: script
-  types: ['binary']
+  types: ["binary"]
 
 - id: forbid-space-in-indent
   name: Forbid spaces in indentation
@@ -57,7 +57,7 @@
   description: Check markdown files and flag style issues
   entry: run-mdl
   language: ruby
-  types: ['markdown']
+  types: ["markdown"]
 
 - id: protect-first-parent
   name: Protect first parent
@@ -72,7 +72,7 @@
   description: Use reek to find ruby code smells
   entry: run-reek
   language: ruby
-  types: ['ruby']
+  types: ["ruby"]
 
 - id: require-ascii
   name: Check file encoding
@@ -86,7 +86,7 @@
   description: Enforce Ruby style guide with rubocop and rubocop-rspec
   entry: run-rubocop
   language: ruby
-  types: ['ruby']
+  types: ["ruby"]
 
 - id: shellcheck
   name: Test shell scripts with shellcheck

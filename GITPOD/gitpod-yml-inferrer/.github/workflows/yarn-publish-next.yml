@@ -2,14 +2,14 @@ name: CI
 on:
   push:
     branches:
-      - '**'      # matches every branch
-      - '!main'   # excludes main
+      - "**" # matches every branch
+      - "!main" # excludes main
 jobs:
   build:
     name: Build & Publish Next
     runs-on: ubuntu-latest
     env:
-      NPM_TOKEN:  ${{ secrets.NPM_AUTH_TOKEN }}
+      NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
     steps:
       - uses: actions/checkout@v2.0.0
       - run: |

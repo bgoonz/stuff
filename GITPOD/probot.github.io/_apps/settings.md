@@ -4,24 +4,24 @@ description: Pull Requests for repository settings
 slug: settings
 stars: 238
 authors:
-- bkeepers
+  - bkeepers
 repository: probot/settings
 screenshots:
-- https://user-images.githubusercontent.com/173/29472917-3fad9db0-841b-11e7-8f6d-a6c63052122b.png
+  - https://user-images.githubusercontent.com/173/29472917-3fad9db0-841b-11e7-8f6d-a6c63052122b.png
 updated: 2018-09-07 19:56:34 UTC
 host: https://github-configurer.herokuapp.com
 installations: 187
 organizations:
-- apollographql
-- denysdovhan
-- bkeepers
-- chaijs
-- wp-cli
-- probot
-- benbalter
-- tweag
-- Anahkiasen
-- arguiot
+  - apollographql
+  - denysdovhan
+  - bkeepers
+  - chaijs
+  - wp-cli
+  - probot
+  - benbalter
+  - tweag
+  - Anahkiasen
+  - arguiot
 ---
 
 This GitHub App syncs repository settings defined in `.github/settings.yml` to GitHub, enabling Pull Requests for repository settings.
@@ -98,7 +98,6 @@ collaborators:
 
   - username:
     permission: pull
-
 ```
 
 **WARNING:** Note that this app inherently _escalates anyone with `push` permissions to the **admin** role_, since they can push config settings to the `master` branch, which will be synced. In the future, we may add restrictions to allow changes to the config file to be merged only by specific people/teams, or those with **admin** access _(via a combination of protected branches, required statuses, and branch restrictions)_. Until then, use caution when merging PRs and adding collaborators.

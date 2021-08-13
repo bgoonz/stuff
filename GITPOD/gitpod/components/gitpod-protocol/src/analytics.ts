@@ -4,36 +4,38 @@
  * See License-AGPL.txt in the project root for license information.
  */
 
-
 export const IAnalyticsWriter = Symbol("IAnalyticsWriter");
 
 type Identity =
-    | { userId: string | number }
-    | { userId?: string | number; anonymousId: string | number };
+  | { userId: string | number }
+  | { userId?: string | number; anonymousId: string | number };
 
 interface Message {
-    messageId?: string;
+  messageId?: string;
 }
 
-export type IdentifyMessage = Message & Identity & {
+export type IdentifyMessage = Message &
+  Identity & {
     traits?: any;
     timestamp?: Date;
     context?: any;
-};
+  };
 
-export type TrackMessage = Message & Identity & {
+export type TrackMessage = Message &
+  Identity & {
     event: string;
     properties?: any;
     timestamp?: Date;
     context?: any;
-};
+  };
 
-export type RemoteTrackMessage = Omit<TrackMessage, "timestamp" | "userId" | "anonymousId">;
+export type RemoteTrackMessage = Omit<
+  TrackMessage,
+  "timestamp" | "userId" | "anonymousId"
+>;
 
 export interface IAnalyticsWriter {
+  identify(msg: IdentifyMessage): void;
 
-    identify(msg: IdentifyMessage): void;
-
-    track(msg: TrackMessage): void;
-
+  track(msg: TrackMessage): void;
 }

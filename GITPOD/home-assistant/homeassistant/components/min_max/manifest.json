@@ -4,7 +4,5 @@
   "documentation": "https://www.home-assistant.io/components/min_max",
   "requirements": [],
   "dependencies": [],
-  "codeowners": [
-    "@fabaff"
-  ]
+  "codeowners": ["@fabaff"]
 }

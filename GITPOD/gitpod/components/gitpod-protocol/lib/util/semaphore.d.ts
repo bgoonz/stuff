@@ -4,11 +4,11 @@
  * See License-AGPL.txt in the project root for license information.
  */
 export declare class Semaphore {
-    protected readonly capacity: number;
-    protected queue: (() => void)[];
-    protected used: number;
-    constructor(capacity: number);
-    release(): void;
-    acquire(): Promise<void>;
+  protected readonly capacity: number;
+  protected queue: (() => void)[];
+  protected used: number;
+  constructor(capacity: number);
+  release(): void;
+  acquire(): Promise<void>;
 }
 //# sourceMappingURL=semaphore.d.ts.map

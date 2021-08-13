@@ -4,9 +4,9 @@
  * See License-AGPL.txt in the project root for license information.
  */
 interface Window {
-    gitpod: {
-        service: import('../gitpod-service').GitpodService;
-        ideService?: import('../ide-frontend-service').IDEFrontendService;
-    };
+  gitpod: {
+    service: import("../gitpod-service").GitpodService;
+    ideService?: import("../ide-frontend-service").IDEFrontendService;
+  };
 }
 //# sourceMappingURL=globals.d.ts.map

@@ -4,8 +4,8 @@
  * See License-AGPL.txt in the project root for license information.
  */
 declare class TestEncryptionEngineImpl {
-    protected get testkey(): string;
-    basicSymmetry(): void;
+  protected get testkey(): string;
+  basicSymmetry(): void;
 }
 export declare const t: TestEncryptionEngineImpl;
 export {};

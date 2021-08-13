@@ -1,21 +1,21 @@
 {
-    "config": {
-        "error": {
-            "name_exists": "Nama sudah ada"
+  "config": {
+    "error": {
+      "name_exists": "Nama sudah ada"
+    },
+    "step": {
+      "init": {
+        "data": {
+          "icon": "Ikon",
+          "latitude": "Lintang",
+          "longitude": "Garis bujur",
+          "name": "Nama",
+          "passive": "Pasif",
+          "radius": "Radius"
         },
-        "step": {
-            "init": {
-                "data": {
-                    "icon": "Ikon",
-                    "latitude": "Lintang",
-                    "longitude": "Garis bujur",
-                    "name": "Nama",
-                    "passive": "Pasif",
-                    "radius": "Radius"
-                },
-                "title": "Tentukan parameter zona"
-            }
-        },
-        "title": "Zona"
-    }
+        "title": "Tentukan parameter zona"
+      }
+    },
+    "title": "Zona"
+  }
 }

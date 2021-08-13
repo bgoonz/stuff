@@ -6,33 +6,32 @@ kind: Pod
 metadata:
   name: gitpod-helm-installer
 spec:
-    containers:
-      - name: gitpod-helm-installer
-        image: $HELMIMAGE
-        volumeMounts:
-          - name: kubeconfig
-            mountPath: /root/.kube/config
-          - name: installfiles
-            mountPath: /root/install
-          - name: chart
-            mountPath: /root/chart
-        command: ["sh", "/root/install/command.sh"]
-    volumes:
-      - name: kubeconfig
-        hostPath:
-          path: /etc/rancher/k3s/k3s_.yaml
-      - name: installfiles
-        configMap:
-          name: gitpod-helm-installer
-      - name: chart
-        hostPath:
-          path: /chart
-    restartPolicy: OnFailure
-    nodeSelector:
-      gitpod.io/main-node: "true"
+  containers:
+    - name: gitpod-helm-installer
+      image: $HELMIMAGE
+      volumeMounts:
+        - name: kubeconfig
+          mountPath: /root/.kube/config
+        - name: installfiles
+          mountPath: /root/install
+        - name: chart
+          mountPath: /root/chart
+      command: ["sh", "/root/install/command.sh"]
+  volumes:
+    - name: kubeconfig
+      hostPath:
+        path: /etc/rancher/k3s/k3s_.yaml
+    - name: installfiles
+      configMap:
+        name: gitpod-helm-installer
+    - name: chart
+      hostPath:
+        path: /chart
+  restartPolicy: OnFailure
+  nodeSelector:
+    gitpod.io/main-node: "true"
 
 ---
-
 apiVersion: v1
 kind: ConfigMap
 metadata:

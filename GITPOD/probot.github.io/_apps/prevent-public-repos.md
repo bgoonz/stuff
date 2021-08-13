@@ -3,33 +3,33 @@ title: Prevent Public Repos
 description: Prevent Repos from being made public in an organization
 slug: prevent-public-repos
 screenshots:
-- https://user-images.githubusercontent.com/6920330/33576380-9a90cc92-d90d-11e7-9e61-6512240cdbf6.png
+  - https://user-images.githubusercontent.com/6920330/33576380-9a90cc92-d90d-11e7-9e61-6512240cdbf6.png
 authors:
-- issc29
+  - issc29
 repository: issc29/probot-prevent-public-repos
 host: https://probot-prevent-public-repos.herokuapp.com
 stars: 13
 updated: 2018-05-31 19:56:19 UTC
 installations: 58
 organizations:
-- bkeepers
-- telus
-- pivotal
-- logrhythm
-- Alliander
-- eVisionSoftware
-- dunamu
-- itriage
-- engineersmy
-- ZEFR-INC
+  - bkeepers
+  - telus
+  - pivotal
+  - logrhythm
+  - Alliander
+  - eVisionSoftware
+  - dunamu
+  - itriage
+  - engineersmy
+  - ZEFR-INC
 ---
 
 # Prevent-Public-Repos Probot App
 
 A GitHub Probot App that monitors and prevents Public Repositories from being created in an organization.
 
-
 ## Features
+
 - Can convert newly created Public Repos to Private
 - Can also be enabled for repos that switch visibility from private to public
   - Not enabled by default it is possible to restrict visibility changes to org owners [directly in GitHub](https://help.github.com/articles/repository-permission-levels-for-an-organization/#changing-the-visibility-of-repositories).
@@ -61,17 +61,16 @@ monitorOnly: true
 enablePrivateToPublic: false
 
 # Issue Title when repo is privatized
-privatizedIssueTitle: '[CRITICAL] Public Repositories are Disabled for this Org'
+privatizedIssueTitle: "[CRITICAL] Public Repositories are Disabled for this Org"
 
 # Issue Body when repo is privatized
-privatizedIssueBody: 'NOTE: Public Repos are disabled for this organization! Repository was automatically converted to a Private Repo. Please contact an admin to override.'
+privatizedIssueBody: "NOTE: Public Repos are disabled for this organization! Repository was automatically converted to a Private Repo. Please contact an admin to override."
 
 # Issue Title when monitor mode is enabled
-monitorIssueTitle: '[CRITICAL] Public Repository Created'
+monitorIssueTitle: "[CRITICAL] Public Repository Created"
 
 # Issue Body when monitor mode is enable
-monitorIssueBody: 'Please note that this repository is publicly visible to the internet!'
-
+monitorIssueBody: "Please note that this repository is publicly visible to the internet!"
 # Users/Groups that should be cc'ed on the issue. Should be users/groups separated by a space.
 # ccList: '@user123 @user456'
 
@@ -86,5 +85,6 @@ When setting up this Probot App you can also set a number of Environment Variabl
 See [docs/deploy.md](https://github.com/issc29/probot-prevent-public-repos/blob/master/docs/deploy.md) if you would like to run your own instance of this app.
 
 Possible Environment Variables:
+
 - FILE_NAME [default: '.github/prevent-public-repos.yml'] - Sets the location/file name of the config yml file
 - ORG_WIDE_REPO_NAME [default: 'org-settings'] - Set the repo where to find the config yml file

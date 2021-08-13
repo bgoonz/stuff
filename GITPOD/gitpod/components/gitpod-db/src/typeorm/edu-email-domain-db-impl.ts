@@ -14,26 +14,26 @@ import { DBEduEmailDomain } from "./entity/db-edu-email-domain";
 
 @injectable()
 export class EduEmailDomainDBImpl implements EduEmailDomainDB {
+  @inject(TypeORM) typeorm: TypeORM;
 
-    @inject(TypeORM) typeorm: TypeORM;
+  protected async getManager(): Promise<EntityManager> {
+    return (await this.typeorm.getConnection()).manager;
+  }
 
-    protected async getManager(): Promise<EntityManager> {
-        return (await this.typeorm.getConnection()).manager;
-    }
+  protected async getRepo(): Promise<Repository<EduEmailDomain>> {
+    return await (
+      await this.getManager()
+    ).getRepository<DBEduEmailDomain>(DBEduEmailDomain);
+  }
 
-    protected async getRepo(): Promise<Repository<EduEmailDomain>> {
-        return await (await this.getManager()).getRepository<DBEduEmailDomain>(DBEduEmailDomain);
-    }
+  async storeDomainEntry(entry: EduEmailDomain): Promise<void> {
+    const repo = await this.getRepo();
+    await repo.save(entry);
+  }
 
-    async storeDomainEntry(entry: EduEmailDomain): Promise<void> {
-        const repo = await this.getRepo();
-        await repo.save(entry);
-    }
-
-    async readEducationalInstitutionDomains(): Promise<EduEmailDomain[]> {
-        const repo = await this.getRepo();
-        const result = await repo.createQueryBuilder("entry")
-            .getMany();
-        return result;
-    }
+  async readEducationalInstitutionDomains(): Promise<EduEmailDomain[]> {
+    const repo = await this.getRepo();
+    const result = await repo.createQueryBuilder("entry").getMany();
+    return result;
+  }
 }

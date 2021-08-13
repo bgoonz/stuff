@@ -2,11 +2,7 @@
   "domain": "arduino",
   "name": "Arduino",
   "documentation": "https://www.home-assistant.io/components/arduino",
-  "requirements": [
-    "PyMata==2.14"
-  ],
+  "requirements": ["PyMata==2.14"],
   "dependencies": [],
-  "codeowners": [
-    "@fabaff"
-  ]
+  "codeowners": ["@fabaff"]
 }

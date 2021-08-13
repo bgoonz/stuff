@@ -5,20 +5,20 @@
  */
 /// <reference types="node" />
 export interface KeyParams {
-    iv: string;
+  iv: string;
 }
 export interface EncryptedData {
-    /** utf8 encoded string */
-    data: string;
-    keyParams: KeyParams;
+  /** utf8 encoded string */
+  data: string;
+  keyParams: KeyParams;
 }
 export declare const EncryptionEngine: unique symbol;
 export interface EncryptionEngine {
-    /**
-     * @param data utf8 encoded string
-     */
-    encrypt(data: string, key: Buffer): EncryptedData;
-    decrypt(encryptedData: EncryptedData, key: Buffer): string;
+  /**
+   * @param data utf8 encoded string
+   */
+  encrypt(data: string, key: Buffer): EncryptedData;
+  decrypt(encryptedData: EncryptedData, key: Buffer): string;
 }
 /**
  * For starters, let's use aes-cbc-256 with:
@@ -27,9 +27,9 @@ export interface EncryptionEngine {
  * The implementation closely follows the exampes in https://nodejs.org/api/crypto.html.
  */
 export declare class EncryptionEngineImpl {
-    readonly algorithm = "aes-256-cbc";
-    readonly enc = "base64";
-    encrypt(data: string, key: Buffer): EncryptedData;
-    decrypt(encryptedData: EncryptedData, key: Buffer): string;
+  readonly algorithm = "aes-256-cbc";
+  readonly enc = "base64";
+  encrypt(data: string, key: Buffer): EncryptedData;
+  decrypt(encryptedData: EncryptedData, key: Buffer): string;
 }
 //# sourceMappingURL=encryption-engine.d.ts.map

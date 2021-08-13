@@ -8,6 +8,7 @@ App Review Process: https://github.com/probot/probot.github.io/blob/master/.gith
 -->
 
 ##### Checklist
+
 <!-- Be sure to replace yourURLhere for relevant links. Additionally, update anything in {braces}. For completed items, change [ ] to [x]. -->
 
 - [ ] If you're adding a listing for your app, be sure your app is in the `/_apps/` folder before opening this Pull Request.

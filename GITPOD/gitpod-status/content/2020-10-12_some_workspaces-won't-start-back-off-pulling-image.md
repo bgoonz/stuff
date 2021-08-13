@@ -7,6 +7,7 @@ affectedsystems:
   - imagebuilds
 resolved: true
 ---
+
 Some workspaces won't start and show the error message "cannot pull image: Back-off pulling image": https://github.com/gitpod-io/gitpod/issues/1979
 
 <!--- language code: en -->

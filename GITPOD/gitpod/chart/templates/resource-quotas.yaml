@@ -6,13 +6,13 @@ apiVersion: v1
 kind: ResourceQuota
 metadata:
   name: gitpod-resource-quota
-  namespace: {{ .Release.Namespace }}
+  namespace: { { .Release.Namespace } }
 spec:
   hard:
     pods: 10k
   scopeSelector:
     matchExpressions:
-    - operator: In
-      scopeName: PriorityClass
-      values:
-      - system-node-critical
+      - operator: In
+        scopeName: PriorityClass
+        values:
+          - system-node-critical

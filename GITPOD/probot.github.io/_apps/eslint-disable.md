@@ -3,24 +3,25 @@ title: ESLint Disable Watcher
 description: Comments on pull requests that try to disable eslint rules.
 slug: eslint-disable-watcher
 screenshots:
-- https://user-images.githubusercontent.com/318208/36699828-d1a92b82-1b45-11e8-9a4d-91da0852d7da.png
+  - https://user-images.githubusercontent.com/318208/36699828-d1a92b82-1b45-11e8-9a4d-91da0852d7da.png
 authors:
-- koddsson
+  - koddsson
 repository: koddsson/eslint-disable-probot
 host: https://eslint-disable-probot.herokuapp.com
 stars: 14
 updated: 2018-04-17 09:00:30 UTC
 installations: 16
 organizations:
-- thibmaek
-- ember-intl
-- buschtoens
-- levibostian
-- odykyi
-- Favna
-- Spudnik-Group
-- Berkmann18
+  - thibmaek
+  - ember-intl
+  - buschtoens
+  - levibostian
+  - odykyi
+  - Favna
+  - Spudnik-Group
+  - Berkmann18
 ---
+
 ## Usage
 
 Simply [install the app](https://github.com/apps/eslint-disable-watcher) and the bot will keep 👀 on PRs that have `eslint-disable` comments.

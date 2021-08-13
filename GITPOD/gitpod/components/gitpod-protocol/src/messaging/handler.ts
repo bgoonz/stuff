@@ -7,9 +7,9 @@
 
 import { MessageConnection } from "vscode-jsonrpc";
 
-export const ConnectionHandler = Symbol('ConnectionHandler');
+export const ConnectionHandler = Symbol("ConnectionHandler");
 
 export interface ConnectionHandler {
-    readonly path: string;
-    onConnection(connection: MessageConnection, session?: object): void;
+  readonly path: string;
+  onConnection(connection: MessageConnection, session?: object): void;
 }

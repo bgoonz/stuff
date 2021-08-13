@@ -5,6 +5,6 @@
  */
 
 module.exports = {
-    root: true,
-    extends: ['react-app'],
-}
+  root: true,
+  extends: ["react-app"],
+};

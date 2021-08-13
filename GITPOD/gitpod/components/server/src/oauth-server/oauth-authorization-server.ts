@@ -4,16 +4,28 @@
  * See License-AGPL.txt in the project root for license information.
  */
 
-import { AuthorizationServer, DateInterval, JwtService, OAuthAuthCodeRepository, OAuthTokenRepository, OAuthUserRepository } from "@jmondi/oauth2-server";
+import {
+  AuthorizationServer,
+  DateInterval,
+  JwtService,
+  OAuthAuthCodeRepository,
+  OAuthTokenRepository,
+  OAuthUserRepository,
+} from "@jmondi/oauth2-server";
 import {
   inMemoryClientRepository,
-  inMemoryScopeRepository
+  inMemoryScopeRepository,
 } from "./repository";
 
 export const clientRepository = inMemoryClientRepository;
 const scopeRepository = inMemoryScopeRepository;
 
-export function createAuthorizationServer(authCodeRepository: OAuthAuthCodeRepository, userRepository: OAuthUserRepository, tokenRepository: OAuthTokenRepository, jwtSecret: string): AuthorizationServer {
+export function createAuthorizationServer(
+  authCodeRepository: OAuthAuthCodeRepository,
+  userRepository: OAuthUserRepository,
+  tokenRepository: OAuthTokenRepository,
+  jwtSecret: string
+): AuthorizationServer {
   const authorizationServer = new AuthorizationServer(
     authCodeRepository,
     clientRepository,
@@ -27,6 +39,9 @@ export function createAuthorizationServer(authCodeRepository: OAuthAuthCodeRepos
     }
   );
 
-  authorizationServer.enableGrantType("authorization_code", new DateInterval('5m'));
+  authorizationServer.enableGrantType(
+    "authorization_code",
+    new DateInterval("5m")
+  );
   return authorizationServer;
 }

@@ -53,9 +53,17 @@ packages:
       commands:
         - ["mv", "components-docker-up--bin-docker-up/docker-up", "docker-up"]
         - ["rm", "-r", "components-docker-up--bin-docker-up"]
-        - ["mv", "components-docker-up--bin-runc-facade/docker-up", "runc-facade"]
+        - [
+            "mv",
+            "components-docker-up--bin-runc-facade/docker-up",
+            "runc-facade",
+          ]
         - ["rm", "-r", "components-docker-up--bin-runc-facade"]
-        - ["mv", "components-docker-up--bin-slirp-docker-proxy/docker-up", "slirp-docker-proxy"]
+        - [
+            "mv",
+            "components-docker-up--bin-slirp-docker-proxy/docker-up",
+            "slirp-docker-proxy",
+          ]
         - ["rm", "-r", "components-docker-up--bin-slirp-docker-proxy"]
   - name: docker
     type: docker

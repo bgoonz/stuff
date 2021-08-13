@@ -8,6 +8,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.PaymentProtocol = void 0;
 var PaymentProtocol;
 (function (PaymentProtocol) {
-    PaymentProtocol.UPDATE_GITPOD_SUBSCRIPTION_PATH = '/payment/chargebee';
-})(PaymentProtocol = exports.PaymentProtocol || (exports.PaymentProtocol = {}));
+  PaymentProtocol.UPDATE_GITPOD_SUBSCRIPTION_PATH = "/payment/chargebee";
+})(
+  (PaymentProtocol = exports.PaymentProtocol || (exports.PaymentProtocol = {}))
+);
 //# sourceMappingURL=payment-protocol.js.map

@@ -1,9 +1,9 @@
 ## Context URLs
 
- * [GitHub Project Context](#github-project-context)
- * [GitHub File Context](#github-file-context)
- * [GitHub Issue Context](#github-issue-context)
- * [GitHub Pull Request Context](#github-pull-request-context)
+- [GitHub Project Context](#github-project-context)
+- [GitHub File Context](#github-file-context)
+- [GitHub Issue Context](#github-issue-context)
+- [GitHub Pull Request Context](#github-pull-request-context)
 
 Gitpod derives the workspace context from the URL of the repository page from which it was
 started. Different issues, pull requests, or branches will result in different workspaces, allowing

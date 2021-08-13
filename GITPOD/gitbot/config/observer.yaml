@@ -5,7 +5,7 @@ bigquery:
 orgsRepos:
   "gitpod-io":
     fromRepos:
-    - gitpod-io/gitpod
+      - gitpod-io/gitpod
     projects:
       3:
         excludeColumns:

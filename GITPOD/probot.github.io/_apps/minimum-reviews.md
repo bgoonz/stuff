@@ -3,17 +3,17 @@ title: Minimum reviews
 description: Enforce a minimum number of reviews on Pull Requests
 slug: minimum-reviews
 screenshots:
-- https://user-images.githubusercontent.com/24159/38566574-0015d8b6-3cb2-11e8-872f-e9495192581e.png
+  - https://user-images.githubusercontent.com/24159/38566574-0015d8b6-3cb2-11e8-872f-e9495192581e.png
 authors:
-- raulriera
+  - raulriera
 repository: raulriera/probot-minimum-reviews
 host: https://horn-produce.glitch.me/
 stars: 6
 updated: 2018-07-06 02:19:39 UTC
 installations: 8
 organizations:
-- divyenduz
-- aidminutes
+  - divyenduz
+  - aidminutes
 ---
 
 # Probot: Minimum Reviews
@@ -36,12 +36,12 @@ reviewsUntilReady: 2
 changesThreshold: 100
 
 # Message to display when the commit status passes
-readyMessage: 'No pending reviews'
+readyMessage: "No pending reviews"
 
 # Message to display when the commit status fails
-notReadyMessage: 'Pending review approvals'
+notReadyMessage: "Pending review approvals"
 
 # Status to set the commit to when waiting for reviews
 # 'failure, error, and pending' are the suggested options
-notReadyState: 'pending'
+notReadyState: "pending"
 ```

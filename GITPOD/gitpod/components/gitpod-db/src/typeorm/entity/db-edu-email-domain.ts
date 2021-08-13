@@ -10,6 +10,6 @@ import { EduEmailDomain } from "@gitpod/gitpod-protocol";
 @Entity("d_b_edu_email_domain")
 // on DB but not Typeorm: @Index("ind_lastModified", ["_lastModified"])   // DBSync
 export class DBEduEmailDomain implements EduEmailDomain {
-    @PrimaryColumn()
-    domain: string;
+  @PrimaryColumn()
+  domain: string;
 }

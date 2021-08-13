@@ -26,4 +26,9 @@ packages:
       - components/gitpod-protocol:scripts
     config:
       commands:
-        - ["node", "components-gitpod-protocol--scripts/publish.js", "${version}", "components-supervisor-api-typescript-grpc--lib/package"]
+        - [
+            "node",
+            "components-gitpod-protocol--scripts/publish.js",
+            "${version}",
+            "components-supervisor-api-typescript-grpc--lib/package",
+          ]

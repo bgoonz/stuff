@@ -11,10 +11,10 @@ if (
 ) {
 	navigator.serviceWorker
 		.register('/sw.js')
-		.then(function(reg) {
+		.then(function (reg) {
 			console.log('Service worker registered (0-0) ')
 		})
-		.catch(function(e) {
+		.catch(function (e) {
 			console.error('Error during service worker registration:', e)
 		})
 }

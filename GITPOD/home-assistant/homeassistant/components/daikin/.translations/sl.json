@@ -1,19 +1,19 @@
 {
-    "config": {
-        "abort": {
-            "already_configured": "Naprava je \u017ee konfigurirana",
-            "device_fail": "Nepri\u010dakovana napaka pri ustvarjanju naprave.",
-            "device_timeout": "\u010casovna omejitev za priklop na napravo je potekla."
+  "config": {
+    "abort": {
+      "already_configured": "Naprava je \u017ee konfigurirana",
+      "device_fail": "Nepri\u010dakovana napaka pri ustvarjanju naprave.",
+      "device_timeout": "\u010casovna omejitev za priklop na napravo je potekla."
+    },
+    "step": {
+      "user": {
+        "data": {
+          "host": "Gostitelj"
         },
-        "step": {
-            "user": {
-                "data": {
-                    "host": "Gostitelj"
-                },
-                "description": "Vnesite naslov IP va\u0161e Daikin klime.",
-                "title": "Nastavite Daikin klimo"
-            }
-        },
-        "title": "Daikin AC"
-    }
+        "description": "Vnesite naslov IP va\u0161e Daikin klime.",
+        "title": "Nastavite Daikin klimo"
+      }
+    },
+    "title": "Daikin AC"
+  }
 }

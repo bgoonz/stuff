@@ -1,0 +1,97 @@
+#!/usr/bin/python
+
+"""
+Wrapper for cobbler's remote syslog watching daemon.
+
+Copyright 2006-2009, Red Hat, Inc and Others
+Michael DeHaan <michael.dehaan AT gmail>
+
+This software may be freely redistributed under the terms of the GNU
+general public license.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+"""
+
+import sys
+import os
+import cobbler.cobblerd as app
+import logging
+import cobbler.utils as utils
+import traceback
+import optparse
+import cobbler.api as cobbler_api
+
+def daemonize_self():
+    # daemonizing code:  http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/66012
+    # logger.info("cobblerd started")
+    try: 
+        pid = os.fork() 
+        if pid > 0:
+            # exit first parent
+            sys.exit(0) 
+    except OSError, e: 
+        print >>sys.stderr, "fork #1 failed: %d (%s)" % (e.errno, e.strerror) 
+        sys.exit(1)
+
+    # decouple from parent environment
+    os.chdir("/") 
+    os.setsid() 
+    os.umask(022) 
+
+    # do second fork
+    try: 
+        pid = os.fork() 
+        if pid > 0:
+            # print "Daemon PID %d" % pid 
+            sys.exit(0) 
+    except OSError, e: 
+        print >>sys.stderr, "fork #2 failed: %d (%s)" % (e.errno, e.strerror) 
+        sys.exit(1) 
+
+    dev_null = file('/dev/null','rw') 
+    os.dup2(dev_null.fileno(), sys.stdin.fileno()) 
+    os.dup2(dev_null.fileno(), sys.stdout.fileno()) 
+    os.dup2(dev_null.fileno(), sys.stderr.fileno()) 
+
+def main():
+    op = optparse.OptionParser()
+    op.set_defaults(daemonize=True, log_level=None)
+    op.add_option('-B', '--daemonize', dest='daemonize', action='store_true',
+        help='run in background (default)')
+    op.add_option('-F', '--no-daemonize', dest='daemonize', action='store_false',
+        help='run in foreground (do not daemonize)')
+    op.add_option('-f', '--log-file', dest='log_file', metavar='NAME',
+        help='file to log to')
+    op.add_option('-l', '--log-level', dest='log_level', metavar='LEVEL',
+        help='log level (ie. INFO, WARNING, ERROR, CRITICAL)')
+
+    options, args = op.parse_args()
+
+    # load the API now rather than later, to ensure cobblerd
+    # startup time is done before the service returns
+    api = None
+    try:
+        api = cobbler_api.BootAPI(is_cobblerd=True)
+    except Exception, exc:
+        if sys.exc_type==SystemExit:
+            return exc.code
+        else:
+            # FIXME: log this too
+            traceback.print_exc()
+            return 1
+
+    logger = api.logger
+
+    if options.daemonize:
+        daemonize_self()
+
+    try:
+        app.core(api)
+    except:
+        # FIXME: logging also?
+        traceback.print_exc()
+
+if __name__ == "__main__":
+    main()

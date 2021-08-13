@@ -12,4 +12,4 @@ jaeger:
               - key: gitpod.io/workload_meta
                 operator: In
                 values:
-                  - 'true'
+                  - "true"

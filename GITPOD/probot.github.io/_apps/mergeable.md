@@ -3,25 +3,25 @@ title: Mergeable
 description: Prevent merging of Pull Requests based on configurations.
 slug: mergeable
 screenshots:
-- https://raw.githubusercontent.com/jusx/mergeable/5d9c9cab357b12b84af62044ac46648d9fca84c4/screenshot.gif
+  - https://raw.githubusercontent.com/jusx/mergeable/5d9c9cab357b12b84af62044ac46648d9fca84c4/screenshot.gif
 authors:
-- jusx
+  - jusx
 repository: jusx/mergeable
 host: https://mergeable-bot.herokuapp.com
 stars: 69
 updated: 2018-09-07 03:48:56 UTC
 installations: 22
 organizations:
-- grpc
-- rundeck
-- Radarr
-- audiohacked
-- denis-sokolov
-- jusx
-- JayKan
-- grumpycoders
-- testcontainers
-- philoserf
+  - grpc
+  - rundeck
+  - Radarr
+  - audiohacked
+  - denis-sokolov
+  - jusx
+  - JayKan
+  - grumpycoders
+  - testcontainers
+  - philoserf
 ---
 
 A GitHub App that prevents merging of Pull Requests based on [configurations](https://github.com/jusx/mergeable#configuration). Make your Pull Requests mergeable only when:

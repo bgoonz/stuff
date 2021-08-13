@@ -3,25 +3,25 @@ title: Linter Alex
 description: Ensure sensitive, considerate writing before you merge your Pull Requests
 slug: linter-alex
 screenshots:
-- https://user-images.githubusercontent.com/27806/40088811-47f2c860-586e-11e8-9c4b-0f5b569a034c.png
+  - https://user-images.githubusercontent.com/27806/40088811-47f2c860-586e-11e8-9c4b-0f5b569a034c.png
 authors:
-- swinton
+  - swinton
 repository: swinton/linter-alex
 host: https://linter-alex.herokuapp.com
 stars: 59
 updated: 2018-09-07 20:56:51 UTC
 installations: 23
 organizations:
-- probot
-- git-for-windows
-- adriancarriger
-- PennyDreadfulMTG
-- l0s
-- 4cm4k1
-- AjayPoshak
-- santi6291
-- swinton
-- silasary
+  - probot
+  - git-for-windows
+  - adriancarriger
+  - PennyDreadfulMTG
+  - l0s
+  - 4cm4k1
+  - AjayPoshak
+  - santi6291
+  - swinton
+  - silasary
 ---
 
 # Probot: Linter Alex

@@ -3,5 +3,3 @@ ports:
 
 tasks:
   - command: "cd client && yarn && yarn examples:build && cd ../server && ./gradlew jettyRun"
-
-

@@ -3,18 +3,17 @@ title: Auto-comment
 description: Comments on new issues and pull requests based on your configuration.
 slug: auto-comment
 screenshots:
-- https://avatars3.githubusercontent.com/in/14394?s=88&amp;v=4
+  - https://avatars3.githubusercontent.com/in/14394?s=88&amp;v=4
 authors:
-- boyney123
+  - boyney123
 repository: boyney123/auto-comment
 host: https://auto-comment.now.sh
 stars: 0
 updated: 2018-08-14 07:36:52 UTC
 installations: 4
 organizations:
-- IntellectualSites
+  - IntellectualSites
 ---
-
 
 ## Usage
 

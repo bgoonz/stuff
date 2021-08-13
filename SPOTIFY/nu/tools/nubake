@@ -1,0 +1,137 @@
+#!/usr/bin/env nush
+#
+# @file nubake
+# Bake Nu scripts into Objective-C.
+# When run with the "-s" option, standalone programs are created.  Compile them with:
+#   gcc myprogram.m -o myprogram -framework Foundation -framework Nu
+# Compiled programs require Nu.framework in /Library/Frameworks or another standard path.
+#
+# @copyright Copyright (c) 2007 Tim Burks, Radtastical Inc.
+#
+#   Licensed under the Apache License, Version 2.0 (the "License");
+#   you may not use this file except in compliance with the License.
+#   You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+#   Unless required by applicable law or agreed to in writing, software
+#   distributed under the License is distributed on an "AS IS" BASIS,
+#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#   See the License for the specific language governing permissions and
+#   limitations under the License.
+
+(class NSData
+     (- byteArray is
+        (set result "(const unsigned char[]){")
+        ((self length) times:
+         (do (i) (result appendString:(+ "" (self byteAtIndex:i) ","))))
+        (result appendString:"0}")
+        result))
+
+;; @abstract A Nu code "baker".
+;; @discussion This class is used by nubake, the standalone Nu code "baker", to automatically convert Nu code into equivalent Objective-C functions.
+(class NuBake is NSObject
+     
+     ;; Convert a Nu expression into an equivalent C expression.
+     ;; Used internally.
+     ;; Upon reading it, you might ask, "is this really all it takes?"  It is.
+     (+ (id) expandNuExpression:(id) node is
+        (set result "")
+        (cond ((eq node nil)
+               (result appendString:"_nunull()"))
+              ((node isKindOfClass:NuCell)
+               (result appendString:(+ "_nucell("
+                                       (self expandNuExpression:(node car)) ",\n"
+                                       (self expandNuExpression:(node cdr)) ")")))
+              ((node isKindOfClass:NuSymbol)
+               (set data ((node stringValue) dataUsingEncoding:NSUTF8StringEncoding))
+               (result appendString:"_nusymbol_with_length(#{(data byteArray)}, #{(data length)})"))
+              ((node isKindOfClass:NSString)
+               (set data (node dataUsingEncoding:NSUTF8StringEncoding))
+               (result appendString:"_nustring_with_length(#{(data byteArray)}, #{(data length)})"))
+              ((node isKindOfClass:NSNumber)
+               (result appendString:"_nunumberd(#{node})"))
+              ((node isKindOfClass:NuRegex)
+               (set data ((node pattern) dataUsingEncoding:NSUTF8StringEncoding))
+               (result appendString:"_nuregex_with_length(#{(data byteArray)}, #{(data length)}, #{(node options)})"))
+              (else (result appendString:"[ERROR]")))
+        result)
+     
+     ;; Generate an Objective-C source file from parsed Nu source code.
+     ;; The file will a function named 'functionName' that when called,
+     ;; will construct a code tree that is identical to the specified program.
+     ;; If 'standalone' is true, a 'main()' function will be included to allow
+     ;; the file to be compiled, linked, and run standalone.
+     (+ (id) bakeNuCode:(id)program intoFunction:(id)functionName standalone:(int)standalone is
+        (set result <<-END
+#import <Foundation/Foundation.h>
+#import <Nu/Nu.h>
+
+id #{functionName}() {
+	return END)
+        (result appendString:(self expandNuExpression:program))
+        (result appendString:<<-END
+;
+}
+END)
+        (if (standalone)
+            (result appendString:<<-END
+	
+int main(int argc, char *argv[]) {
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	id nu = [Nu parser];
+	[nu eval:#{functionName}()];
+	[pool release];
+	return 0;
+}
+END))
+        result))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;; main program
+;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(set argv ((NSProcessInfo processInfo) arguments))
+(set argi 0)
+
+;; if we're running as a nush script, skip the nush path
+(if (/(.*)nush$/ findInString:(argv 0))
+    (set argi (+ argi 1)))
+
+;; skip the program name
+(set argi (+ argi 1))
+
+;; the options we need to set
+(set sourceFileName nil)
+(set functionName nil)
+(set outputFileName nil)
+(set standalone nil)
+
+;; process the remaining arguments
+(while (< argi (argv count))
+       (case (argv argi)
+             ("-n" (set argi (+ argi 1)) (set functionName (argv argi)))
+             ("-o" (set argi (+ argi 1)) (set outputFileName (argv argi)))
+             ("-s" (set standalone t))
+             (else (set sourceFileName (argv argi))))
+       (set argi (+ argi 1)))
+
+(if sourceFileName
+    (then
+         (unless functionName
+                 (set functionName ((sourceFileName stringByDeletingPathExtension) lastPathComponent)))
+         (unless outputFileName
+                 (set outputFileName (+ (sourceFileName stringByDeletingPathExtension) ".m")))
+         (try
+             ((NuBake bakeNuCode:(parse (NSString stringWithContentsOfFile:sourceFileName
+                                             encoding:NSUTF8StringEncoding error:nil))
+                      intoFunction:functionName
+                      standalone:standalone)
+              writeToFile:outputFileName atomically:NO)
+             (catch (exception)
+                    (puts "error: #{(exception reason)}")
+                    (set exit (NuBridgedFunction functionWithName:"exit" signature:"vi"))
+                    (exit -1))))
+    (else
+         (puts "usage: nubake <sourcefile> [-n <functionname>] [-o <outputfilename>] [-s]")))
+

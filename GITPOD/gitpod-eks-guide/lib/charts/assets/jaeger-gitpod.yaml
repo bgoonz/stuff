@@ -9,10 +9,10 @@ spec:
       requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
           - matchExpressions:
-            - key: gitpod.io/workload_services
-              operator: In
-              values:
-              - "true"
+              - key: gitpod.io/workload_services
+                operator: In
+                values:
+                  - "true"
   strategy: allInOne
   storage:
     options:

@@ -1,6 +1,5 @@
-version: '3'
+version: "3"
 services:
-
   gitpod:
     image: gcr.io/gitpod-io/self-hosted/gitpod-k3s:${VERSION:-latest}
     command: --flannel-backend=none --disable-network-policy

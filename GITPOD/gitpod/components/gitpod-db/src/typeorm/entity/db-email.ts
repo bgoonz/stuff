@@ -9,40 +9,39 @@ import { EMail, EMailParameters } from "@gitpod/gitpod-protocol";
 import { TypeORM } from "../../typeorm/typeorm";
 import { Transformer } from "../../typeorm/transformer";
 
-@Entity('d_b_email')
+@Entity("d_b_email")
 // on DB but not Typeorm: @Index("ind_lastModified", ["_lastModified"])   // DBSync
 @Index("ind_campaignId_userId", ["campaignId", "userId"])
 export class DBEmail implements EMail {
+  @PrimaryColumn(TypeORM.UUID_COLUMN_TYPE)
+  uid: string;
 
-    @PrimaryColumn(TypeORM.UUID_COLUMN_TYPE)
-    uid: string;
+  @Column({
+    length: 30,
+  })
+  campaignId: string;
 
-    @Column({
-        length: 30
-    })
-    campaignId: string;
+  @Column(TypeORM.UUID_COLUMN_TYPE)
+  userId: string;
 
-    @Column(TypeORM.UUID_COLUMN_TYPE)
-    userId: string;
+  @Column()
+  recipientAddress: string;
 
-    @Column()
-    recipientAddress: string;
+  @Column("json")
+  params: EMailParameters;
 
-    @Column('json')
-    params: EMailParameters;
+  @Column()
+  scheduledInternalTime: string;
 
-    @Column()
-    scheduledInternalTime: string;
+  @Column({
+    default: "",
+    transformer: Transformer.MAP_EMPTY_STR_TO_UNDEFINED,
+  })
+  scheduledSendgridTime?: string;
 
-    @Column({
-        default: '',
-        transformer: Transformer.MAP_EMPTY_STR_TO_UNDEFINED
-    })
-    scheduledSendgridTime?: string;
-
-    @Column({
-        default: '',
-        transformer: Transformer.MAP_EMPTY_STR_TO_UNDEFINED
-    })
-    error?: string;
+  @Column({
+    default: "",
+    transformer: Transformer.MAP_EMPTY_STR_TO_UNDEFINED,
+  })
+  error?: string;
 }

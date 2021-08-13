@@ -3,8 +3,6 @@
   "name": "Google assistant",
   "documentation": "https://www.home-assistant.io/components/google_assistant",
   "requirements": [],
-  "dependencies": [
-    "http"
-  ],
+  "dependencies": ["http"],
   "codeowners": []
 }

@@ -1,0 +1,80 @@
+{
+  "name": "countries-list",
+  "version": "2.6.1",
+  "description": "Continents & countries: ISO 3166-1 alpha-2 code, name, ISO 639-1 languages, capital, currency, native name, phone. JSON, CSV and SQL.",
+  "main": "./dist/index.es5.min.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/annexare/Countries"
+  },
+  "keywords": [
+    "country",
+    "countries",
+    "continent",
+    "emoji",
+    "languages",
+    "capital",
+    "currency",
+    "data",
+    "csv",
+    "json",
+    "sql",
+    "typings",
+    "ISO 3166-1",
+    "ISO 639-1",
+    "node"
+  ],
+  "author": {
+    "name": "Dmytro",
+    "email": "z@annexare.com",
+    "url": "https://github.com/z-ax"
+  },
+  "scripts": {
+    "build": "gulp && npm run test",
+    "build-js": "gulp es5.min",
+    "test": "jest",
+    "lint": "eslint"
+  },
+  "typings": "./dist/index.d.ts",
+  "devDependencies": {
+    "@rollup/plugin-babel": "~5.2.2",
+    "@rollup/plugin-commonjs": "~17.0.0",
+    "@rollup/plugin-json": "~4.1.0",
+    "@rollup/plugin-node-resolve": "~11.0.1",
+    "eslint": "~7.17.0",
+    "gulp": "~4.0.2",
+    "husky": "~4.3.7",
+    "jest": "~26.6.3",
+    "lint-staged": "~10.5.3",
+    "prettier": "2.2.1",
+    "punycode": "2.1.1",
+    "rollup": "~2.36.1",
+    "rollup-plugin-terser": "~7.0.2"
+  },
+  "devEngines": {
+    "node": ">=8.14.1"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      ".*\\.min\\.js"
+    ],
+    "testEnvironment": "jsdom",
+    "verbose": true
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/annexare/Countries/issues"
+  },
+  "homepage": "http://annexare.github.io/Countries/",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
+  }
+}

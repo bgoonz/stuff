@@ -1,0 +1,67 @@
+#!/bin/sh
+
+REQUIREMENTS="/sbin/ip /usr/bin/slirp-fullbolt"
+for R in $REQUIREMENTS
+do
+	[ -x $R ] || {
+		echo "Requirement $R not found. Aborting."
+		exit 1
+	}
+done
+
+if [ "$2" ]
+then
+	shift
+	echo "Extraneous arguments: $*"
+	echo "Try to enclose them within quotes?"
+	exit 255
+fi
+
+if [ -n "$SLIRP_PORTS" ] && [ -z "$HOST_IP" ]
+then
+    echo "The HOST_IP must be defined to setup redirects with SLIRP_PORTS."
+    exit 255
+fi
+
+LOGDIR=/tmp/log.$$
+mkdir $LOGDIR
+
+if [ "$1" ] 
+then
+	CMD="$1"
+	STDIN=/dev/null
+	STDOUT=/dev/null
+	STDERR=/dev/null
+	touch $LOGDIR/output
+	if [ "$VERBOSE" = 1 ]; then
+		tail -f $LOGDIR/output &
+	fi
+	TAILPID=$!
+	trap '' TERM
+else
+	CMD=/bin/bash
+	STDIN=/dev/stdin
+	STDOUT=/dev/stdout
+	STDERR=/dev/stderr
+	TAILPID=""
+fi
+
+cat /etc/resolv.conf > $LOGDIR/resolv.conf
+
+echo "$CMD" > $LOGDIR/cmd
+INITDIR="$(readlink --canonicalize $(dirname "$0"))"
+$INITDIR/uml quiet mem=512m rootfstype=hostfs rootflags=/ ro \
+	eth0=slirp,,$INITDIR/slirp-wrapper \
+	init=$INITDIR/init LOGDIR="$LOGDIR" \
+	<$STDIN >$STDOUT 2>$STDERR
+
+# Due to a weird behavior of usermodelinux, sometimes it will kill the
+# whole process group, and we won't have to kill tail. Duh.
+[ "$TAILPID" ] && [ -d /proc/$TAILPID ] && 
+	/bin/kill $TAILPID >/dev/null 2>/dev/null
+
+STATUS=""
+[ -f "$LOGDIR/status" ] && STATUS="$(cat $LOGDIR/status)"
+[ "$DEBUG" ] || rm -rf "$LOGDIR"
+[ "$STATUS" ] && exit $STATUS
+exit 255

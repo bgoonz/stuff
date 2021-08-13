@@ -8,7 +8,9 @@ import { ContainerModule } from "inversify";
 import { AuthProvider } from "../auth/auth-provider";
 import { GenericAuthProvider } from "./generic-auth-provider";
 
-export const genericAuthContainerModule = new ContainerModule((bind, _unbind, _isBound, _rebind) => {
+export const genericAuthContainerModule = new ContainerModule(
+  (bind, _unbind, _isBound, _rebind) => {
     bind(GenericAuthProvider).toSelf().inSingletonScope();
     bind(AuthProvider).toService(GenericAuthProvider);
-});
+  }
+);

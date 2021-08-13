@@ -3,9 +3,6 @@
   "name": "Logbook",
   "documentation": "https://www.home-assistant.io/components/logbook",
   "requirements": [],
-  "dependencies": [
-    "frontend",
-    "recorder"
-  ],
+  "dependencies": ["frontend", "recorder"],
   "codeowners": []
 }

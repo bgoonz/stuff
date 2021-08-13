@@ -1,12 +1,12 @@
 {
-    "config": {
-        "step": {
-            "user": {
-                "data": {
-                    "access_token": "Servidor"
-                }
-            }
-        },
-        "title": "Heos"
-    }
+  "config": {
+    "step": {
+      "user": {
+        "data": {
+          "access_token": "Servidor"
+        }
+      }
+    },
+    "title": "Heos"
+  }
 }

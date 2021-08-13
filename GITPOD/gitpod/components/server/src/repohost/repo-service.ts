@@ -9,16 +9,21 @@ import { injectable } from "inversify";
 
 @injectable()
 export class RepositoryService {
+  async canInstallAutomatedPrebuilds(
+    user: User,
+    cloneUrl: string
+  ): Promise<boolean> {
+    return false;
+  }
 
-    async canInstallAutomatedPrebuilds(user: User, cloneUrl: string): Promise<boolean> {
-        return false;
-    }
+  async installAutomatedPrebuilds(user: User, cloneUrl: string): Promise<void> {
+    throw new Error("unsupported");
+  }
 
-    async installAutomatedPrebuilds(user: User, cloneUrl: string): Promise<void> {
-        throw new Error('unsupported');
-    }
-
-    async canAccessHeadlessLogs(user: User, context: WorkspaceContext): Promise<boolean> {
-        return false;
-    }
+  async canAccessHeadlessLogs(
+    user: User,
+    context: WorkspaceContext
+  ): Promise<boolean> {
+    return false;
+  }
 }

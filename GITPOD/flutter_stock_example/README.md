@@ -10,9 +10,9 @@ Clicking the button above will open this repository in Gitpod, a fully-featured 
 
 ### Building and installing the stocks demo app
 
-* `cd $FLUTTER_ROOT/examples/stocks`
-* `flutter pub get`
-* `flutter run --release`
+- `cd $FLUTTER_ROOT/examples/stocks`
+- `flutter pub get`
+- `flutter run --release`
 
 The `flutter run --release` command both builds and installs the Flutter app.
 

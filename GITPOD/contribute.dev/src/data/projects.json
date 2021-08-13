@@ -106,7 +106,7 @@
       "repo": "https://github.com/gatsbyjs/gatsby",
       "logo": "gatsby.svg"
     },
-     {
+    {
       "title": "Prometheus",
       "description": "The Prometheus monitoring system and time series database.",
       "language": "Go",

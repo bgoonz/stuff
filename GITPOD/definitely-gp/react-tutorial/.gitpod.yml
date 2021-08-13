@@ -1,8 +1,7 @@
-
 ports:
   - port: 3000
 
 tasks:
   - command: >
-        npm install &&
-        node server.js
+      npm install &&
+      node server.js

@@ -9,7 +9,7 @@ create_task:
   fields:
     name:
       description: name of the new task, you can use the smart syntax here
-      example: 'do this ^today #from_hass'
+      example: "do this ^today #from_hass"
 
     id:
       description: (optional) identifier for the task you're creating, can be used to update or complete the task later on

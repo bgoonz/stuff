@@ -41,7 +41,6 @@ to GitHub.
 
 ![](images/cr-finish-review.png)
 
-If you have approved the PR, you can merge the changes by pushing the `Merge` button in the `Pull
-Request` view or conventionally on the GitHub website.
+If you have approved the PR, you can merge the changes by pushing the `Merge` button in the `Pull Request` view or conventionally on the GitHub website.
 
 ![](images/cr-GitHub-pr-finished.png)

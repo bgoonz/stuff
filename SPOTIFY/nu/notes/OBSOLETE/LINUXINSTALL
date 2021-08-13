@@ -1,0 +1,48 @@
+
+The DEBIANINSTALL file contains a script that can be used to install
+all necessary dependencies and to build Nu on Debian. We have not yet
+tested on other versions of Linux, but FreeBSD and OpenSolaris ports
+have been made and documented in FREEBSDINSTALL and OPENSOLARISINSTALL.
+
+Once the dependencies have been built and/or installed, the Nu-specific
+installation process is as follows:
+
+1. From the main Nu directory, use make to build mininush, a minimal version of the 
+   Nu shell:
+   
+% make
+
+2. From the main Nu directory, use mininush to run nuke to complete the Nu build
+   process:
+   
+% ./mininush tools/nuke
+
+INSTALL AND TEST NU
+-------------------
+
+3. Use mininush again to install Nu, nush, and the Nu tools.
+
+% ./mininush tools/nuke install
+
+Since the copying step uses "sudo", you will be prompted for your password.
+
+4. Test your installation.
+
+% nuke test
+
+If you modify your version of Nu, either by making your own changes, or by
+pulling in a new version of Nu, you should build the new version using the
+command:
+
+./mininush tools/nuke install
+
+N.B.: This is different from the procedure on Mac OS X, where you use "nuke install".
+
+ADDITIONAL NOTES
+----------------
+On Darwin, Nu is installed as a framework in /Library/Frameworks. On Linux, it is built
+as a dynamic library and installed in /usr/local/lib (or the lib dir of whatever is your 
+desired installation prefix). Because nush is linked against libNu.so,
+running "nuke install" will crash on Linux when the libNu.so is overwritten. So be sure to 
+install with "mininush tools/nuke install".
+

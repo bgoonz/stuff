@@ -8,7 +8,7 @@ const handle = app.getRequestHandler()
 
 const PORT = process.env.PORT || 3000
 
-app.prepare().then(_ => {
+app.prepare().then((_) => {
 	const server = createServer((req, res) => {
 		if (req.url === '/sw.js' || req.url.startsWith('/precache-manifest')) {
 			app.serveStatic(req, res, path.join(__dirname, '.next', req.url))
@@ -17,7 +17,7 @@ app.prepare().then(_ => {
 		}
 	})
 
-	server.listen(PORT, err => {
+	server.listen(PORT, (err) => {
 		if (err) throw err
 
 		console.log(`> App running on port ${PORT}`)

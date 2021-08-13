@@ -1,0 +1,37 @@
+syslog-redirector (0.0.6) unstable; urgency=low
+
+  * Move build system to docker
+  * fix for crash for things being nil that should not be.
+
+ -- Drew Csillag <drewc@spotify.com>  Thu, 17 Nov 2014 13:22:34 +0000
+
+syslog-redirector (0.0.5) unstable; urgency=low
+
+  * Just a version number bump since internal verison # and external were off
+
+ -- Drew Csillag <drewc@spotify.com>  Thu, 16 Oct 2014 13:22:34 +0000
+
+syslog-redirector (0.0.4) unstable; urgency=low
+
+  * Forward signals to child process
+
+ -- Drew Csillag <drewc@spotify.com>  Thu, 16 Oct 2014 13:22:34 +0000
+
+syslog-redirector (0.0.3) unstable; urgency=low
+
+  * Now include go submodule so in theory this might work
+
+ -- Drew Csillag <drewc@spotify.com>  Wed, 31 Jan 2014 13:22:34 +0000
+
+syslog-redirector (0.0.2) unstable; urgency=low
+
+  * now really statically linked
+
+ -- Drew Csillag <drewc@spotify.com>  Wed, 29 Jan 2014 13:22:34 +0000
+
+syslog-redirector (0.0.1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Drew Csillag <drewc@spotify.com>  Mon, 16 Dec 2013 13:22:34 +0000
+

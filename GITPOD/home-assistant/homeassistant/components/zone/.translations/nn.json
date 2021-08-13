@@ -1,21 +1,21 @@
 {
-    "config": {
-        "error": {
-            "name_exists": "Namnet eksisterar allereie"
+  "config": {
+    "error": {
+      "name_exists": "Namnet eksisterar allereie"
+    },
+    "step": {
+      "init": {
+        "data": {
+          "icon": "Ikon",
+          "latitude": "Breiddegrad",
+          "longitude": "Lengdegrad",
+          "name": "Namn",
+          "passive": "Passiv",
+          "radius": "Radius"
         },
-        "step": {
-            "init": {
-                "data": {
-                    "icon": "Ikon",
-                    "latitude": "Breiddegrad",
-                    "longitude": "Lengdegrad",
-                    "name": "Namn",
-                    "passive": "Passiv",
-                    "radius": "Radius"
-                },
-                "title": "Definer soneparameterar"
-            }
-        },
-        "title": "Sone"
-    }
+        "title": "Definer soneparameterar"
+      }
+    },
+    "title": "Sone"
+  }
 }

@@ -18,13 +18,23 @@ export declare const addMillis: (d1: string, millis: number) => string;
 export declare const durationInHours: (d1: string, d2: string) => number;
 export declare const durationInMillis: (d1: string, d2: string) => number;
 export declare const isDateGreaterOrEqual: (d1: string, d2: string) => boolean;
-export declare const isDateSmallerOrEqual: (d1: string, d2: string | undefined) => boolean;
-export declare const isDateSmaller: (d1: string, d2: string | undefined) => boolean;
+export declare const isDateSmallerOrEqual: (
+  d1: string,
+  d2: string | undefined
+) => boolean;
+export declare const isDateSmaller: (
+  d1: string,
+  d2: string | undefined
+) => boolean;
 export declare const oldest: (d1: string, d2: string) => string;
 export declare const earliest: (d1: string, d2: string) => string;
 export declare const orderAsc: (d1: string, d2: string) => number;
 export declare const liftDate1: <T>(d1: string, f: (d1: Date) => T) => T;
-export declare const liftDate: <T>(d1: string, d2: string, f: (d1: Date, d2: Date) => T) => T;
+export declare const liftDate: <T>(
+  d1: string,
+  d2: string,
+  f: (d1: Date, d2: Date) => T
+) => T;
 export declare function hoursLater(date: string, hours: number): string;
 export declare function secondsBefore(date: string, seconds: number): string;
 export declare function rightAfter(date: string): string;

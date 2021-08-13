@@ -1,23 +1,24 @@
 ---
 title: Untrivializer
-description: An app that asks if you're really sure something is trivial when you
+description:
+  An app that asks if you're really sure something is trivial when you
   make a comment in Github issues.
 slug: https://github.com/apps/untrivializer
 screenshots:
-- https://raw.githubusercontent.com/entendu/untrivializer/master/docs/ss.png
+  - https://raw.githubusercontent.com/entendu/untrivializer/master/docs/ss.png
 authors:
-- entendu
+  - entendu
 repository: entendu/untrivializer
 host: https://puffy-aftermath.glitch.me
 stars: 5
 updated: 2017-12-15 23:13:31 UTC
 installations: 9
 organizations:
-- red-eclipse
-- BlueBayTravel
-- OpenApprenticeFoundation
-- Kristinita
-- entendu
+  - red-eclipse
+  - BlueBayTravel
+  - OpenApprenticeFoundation
+  - Kristinita
+  - entendu
 ---
 
 # untrivializer
@@ -38,9 +39,9 @@ A lot of times we'll write up an issue without really thinking it through:
 
 Doing those things (almost without fail) takes way, way more time than we think it will. Why? A couple reasons:
 
-* If we're making a comment like that we're probably not thinking through all the little details anyway,
-* We're all just [terrible at estimating, _even when we know we're terrible at estimating_](https://en.wikipedia.org/wiki/Planning_fallacy) (it's truly incredible),
-* We often forget the downstream repercussions of "simple" changes -- one line of code for you might mean 3 hours or more of code review, testing, etc.
+- If we're making a comment like that we're probably not thinking through all the little details anyway,
+- We're all just [terrible at estimating, _even when we know we're terrible at estimating_](https://en.wikipedia.org/wiki/Planning_fallacy) (it's truly incredible),
+- We often forget the downstream repercussions of "simple" changes -- one line of code for you might mean 3 hours or more of code review, testing, etc.
 
 So this little robot tries to detect when you've said something "should be simple" and asks if that's really the case. The default reply is:
 

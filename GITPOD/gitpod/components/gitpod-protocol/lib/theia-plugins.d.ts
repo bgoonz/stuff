@@ -4,8 +4,8 @@
  * See License-AGPL.txt in the project root for license information.
  */
 export interface PluginIndexEntry {
-    loc: string;
-    name: string;
-    url: string;
+  loc: string;
+  name: string;
+  url: string;
 }
 //# sourceMappingURL=theia-plugins.d.ts.map

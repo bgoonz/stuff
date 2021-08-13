@@ -9,14 +9,14 @@ metadata:
     heritage: "{{ .Release.Service }}"
 spec:
   ports:
-  - name: jaeger-collector-http
-    port: 14268
-    protocol: TCP
-    targetPort: 14268
-  - name: jaeger-collector-grpc
-    port: 14250
-    protocol: TCP
-    targetPort: 14250
+    - name: jaeger-collector-http
+      port: 14268
+      protocol: TCP
+      targetPort: 14268
+    - name: jaeger-collector-grpc
+      port: 14250
+      protocol: TCP
+      targetPort: 14250
   selector:
     app: jaeger
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"

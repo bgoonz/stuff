@@ -1,10 +1,10 @@
 {
-    "config": {
-        "step": {
-            "confirm": {
-                "title": "Mobilapp"
-            }
-        },
+  "config": {
+    "step": {
+      "confirm": {
         "title": "Mobilapp"
-    }
+      }
+    },
+    "title": "Mobilapp"
+  }
 }

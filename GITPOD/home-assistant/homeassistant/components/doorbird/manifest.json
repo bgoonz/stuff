@@ -2,11 +2,7 @@
   "domain": "doorbird",
   "name": "Doorbird",
   "documentation": "https://www.home-assistant.io/components/doorbird",
-  "requirements": [
-    "doorbirdpy==2.0.8"
-  ],
+  "requirements": ["doorbirdpy==2.0.8"],
   "dependencies": [],
-  "codeowners": [
-    "@oblogic7"
-  ]
+  "codeowners": ["@oblogic7"]
 }

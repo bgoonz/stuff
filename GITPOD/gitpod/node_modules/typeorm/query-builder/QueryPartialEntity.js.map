@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/query-builder/QueryPartialEntity.ts"],"names":[],"mappings":"","file":"QueryPartialEntity.js","sourcesContent":["\n/**\n * Make all properties in T optional\n */\nexport type QueryPartialEntity<T> = {\n    [P in keyof T]?: T[P]|(() => string);\n};\n"],"sourceRoot":".."}

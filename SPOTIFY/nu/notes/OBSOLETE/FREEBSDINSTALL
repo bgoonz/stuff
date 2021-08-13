@@ -1,0 +1,116 @@
+# Installing Nu on FreeBSD 8.
+
+# If you're installing in (in? on? into? onto?) a fresh copy of FreeBSD, 
+# there are a few packages you'll need first.
+# And even if your FreeBSD is not fresh, the following should do no harm.
+
+pkg_add -r wget bash perl git libxml2 libxslt gnutls sudo gmake libxslt gnutls
+
+
+# In order to get the environment right, it's helpful to have bash as your shell.
+
+chsh -s bash
+
+
+# Install libffi.
+# You'll need to do this and other 'make install' steps with sudo if you don't
+# have permissions to write into the /usr/local tree.
+wget ftp://sourceware.org:/pub/libffi/libffi-3.0.8.tar.gz
+gunzip libffi-3.0.8.tar.gz
+tar -xvf libffi-3.0.8.tar
+cd libffi-3.0.8
+
+./configure
+make
+make install
+cd ..
+
+# libffi puts its include files under its lib directory
+ln -s /usr/local/lib/libffi-3.0.8/include/ffi.h /usr/local/include/ffi.h
+ln -s /usr/local/lib/libffi-3.0.8/include/ffitarget.h /usr/local/include/ffitarget.h
+
+# gnustep-make
+
+wget ftp://ftp.gnustep.org/pub/gnustep/core/gnustep-make-2.2.0.tar.gz
+gunzip gnustep-make-2.2.0.tar.gz
+tar -xvf gnustep-make-2.2.0.tar
+cd gnustep-make-2.2.0
+
+./configure --enable-native-objc-exceptions
+gmake
+gmake install
+cd ..
+
+# gnustep-base
+wget ftp://ftp.gnustep.org/pub/gnustep/core/gnustep-base-1.19.2.tar.gz
+gunzip gnustep-base-1.19.2.tar.gz
+tar -xvf gnustep-base-1.19.2.tar
+cd gnustep-base-1.19.2
+
+
+# Fix up environment variables for GNUstep.  You will need to do this separately
+# for each user who will be using Nu.
+# These are the default GNUstep install paths. If you want, you can change 
+# them in the configure steps above.
+echo >> ~/.bashrc "export GNUSTEP_MAKEFILES=/usr/GNUstep/System/Makefiles"
+echo >> ~/.bashrc "export GNUSTEP_SYSTEM_ROOT=/usr/GNUstep/System"
+echo >> ~/.bashrc ". $GNUSTEP_SYSTEM_ROOT/Library/Makefiles/GNUstep.sh"
+
+# Start a new bash to make use of those environment variables.
+bash
+
+
+./configure --enable-libffi --enable-fake-main
+gmake
+gmake install
+cd ..
+
+# 'gnustep-config --objc-flags' should look something like this on FreeBSD:
+#
+# -MMD -MP -DGNUSTEP -DGNUSTEP_BASE_LIBRARY=1 -DGNU_RUNTIME=1 -DGNUSTEP_BASE_LIBRARY=1 
+# -D_REENTRANT -pthread -fPIC -g -Wall -DDEBUG -fno-omit-frame-pointer -DGSWARN 
+# -DGSDIAGNOSE -Wno-import -g -fno-strict-aliasing -fexceptions -fobjc-exceptions 
+# -D_NATIVE_OBJC_EXCEPTIONS -fgnu-runtime -fconstant-string-class=NSConstantString 
+# -I. -I/usr/local/include -I/usr/GNUstep/Local/Library/Headers 
+# -I/usr/GNUstep/System/Library/Headers
+
+# 'gnustep-config --base-libs' should look something like this on FreeBSD:
+# -rdynamic -pthread -shared-libgcc -fexceptions -fgnu-runtime 
+# -L/usr/GNUstep/Local/Library/Libraries -L/usr/GNUstep/System/Library/Libraries 
+# -L/usr/local/lib -lgnustep-base -pthread -lobjc -lm
+
+
+# pcre
+wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-7.9.tar.gz
+gunzip pcre-7.9.tar.gz
+tar -xvf pcre-7.9.tar
+cd pcre-7.9
+
+./configure --disable-dependency-tracking --enable-utf8
+make
+make install
+cd ..
+
+
+# Now build Nu
+git clone git://github.com/timburks/nu.git
+cd nu
+
+rm -rf /usr/local/share/libNu
+mkdir -p /usr/local/share/libNu
+cp -rp nu /usr/local/share/libNu
+
+gmake
+./mininush tools/nuke
+./mininush tools/nuke install
+
+nuke clean
+nuke
+nuke install
+
+# On Unix environments, you'll get a "text file busy" error when nuke is running
+cp libNu.so /usr/local/lib
+cp nush /usr/local/bin
+
+# Now (optionally!) you can run 'nuke test' now to test your installation.
+nuke test

@@ -2,11 +2,7 @@
   "domain": "ssdp",
   "name": "SSDP",
   "documentation": "https://www.home-assistant.io/components/ssdp",
-  "requirements": [
-    "netdisco==2.6.0"
-  ],
-  "dependencies": [
-  ],
-  "codeowners": [
-  ]
+  "requirements": ["netdisco==2.6.0"],
+  "dependencies": [],
+  "codeowners": []
 }

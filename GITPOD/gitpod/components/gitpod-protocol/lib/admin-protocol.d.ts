@@ -4,68 +4,85 @@
  * See License-AGPL.txt in the project root for license information.
  */
 import { User, Workspace, NamedWorkspaceFeatureFlag } from "./protocol";
-import { WorkspaceInstance, WorkspaceInstancePhase } from "./workspace-instance";
+import {
+  WorkspaceInstance,
+  WorkspaceInstancePhase,
+} from "./workspace-instance";
 import { RoleOrPermission } from "./permission";
 import { AccountStatement } from "./accounting-protocol";
 export interface AdminServer {
-    adminGetUsers(req: AdminGetListRequest<User>): Promise<AdminGetListResult<User>>;
-    adminGetUser(id: string): Promise<User>;
-    adminBlockUser(req: AdminBlockUserRequest): Promise<User>;
-    adminDeleteUser(id: string): Promise<void>;
-    adminModifyRoleOrPermission(req: AdminModifyRoleOrPermissionRequest): Promise<User>;
-    adminModifyPermanentWorkspaceFeatureFlag(req: AdminModifyPermanentWorkspaceFeatureFlagRequest): Promise<User>;
-    adminGetWorkspaces(req: AdminGetWorkspacesRequest): Promise<AdminGetListResult<WorkspaceAndInstance>>;
-    adminGetWorkspace(id: string): Promise<WorkspaceAndInstance>;
-    adminForceStopWorkspace(id: string): Promise<void>;
-    adminRestoreSoftDeletedWorkspace(id: string): Promise<void>;
-    adminSetLicense(key: string): Promise<void>;
-    adminGetAccountStatement(userId: string): Promise<AccountStatement>;
-    adminSetProfessionalOpenSource(userId: string, shouldGetProfOSS: boolean): Promise<void>;
-    adminIsStudent(userId: string): Promise<boolean>;
-    adminAddStudentEmailDomain(userId: string, domain: string): Promise<void>;
-    adminGrantExtraHours(userId: string, extraHours: number): Promise<void>;
+  adminGetUsers(
+    req: AdminGetListRequest<User>
+  ): Promise<AdminGetListResult<User>>;
+  adminGetUser(id: string): Promise<User>;
+  adminBlockUser(req: AdminBlockUserRequest): Promise<User>;
+  adminDeleteUser(id: string): Promise<void>;
+  adminModifyRoleOrPermission(
+    req: AdminModifyRoleOrPermissionRequest
+  ): Promise<User>;
+  adminModifyPermanentWorkspaceFeatureFlag(
+    req: AdminModifyPermanentWorkspaceFeatureFlagRequest
+  ): Promise<User>;
+  adminGetWorkspaces(
+    req: AdminGetWorkspacesRequest
+  ): Promise<AdminGetListResult<WorkspaceAndInstance>>;
+  adminGetWorkspace(id: string): Promise<WorkspaceAndInstance>;
+  adminForceStopWorkspace(id: string): Promise<void>;
+  adminRestoreSoftDeletedWorkspace(id: string): Promise<void>;
+  adminSetLicense(key: string): Promise<void>;
+  adminGetAccountStatement(userId: string): Promise<AccountStatement>;
+  adminSetProfessionalOpenSource(
+    userId: string,
+    shouldGetProfOSS: boolean
+  ): Promise<void>;
+  adminIsStudent(userId: string): Promise<boolean>;
+  adminAddStudentEmailDomain(userId: string, domain: string): Promise<void>;
+  adminGrantExtraHours(userId: string, extraHours: number): Promise<void>;
 }
 export interface AdminGetListRequest<T> {
-    offset: number;
-    limit: number;
-    orderBy: keyof T;
-    orderDir: "asc" | "desc";
-    searchTerm?: string;
+  offset: number;
+  limit: number;
+  orderBy: keyof T;
+  orderDir: "asc" | "desc";
+  searchTerm?: string;
 }
 export interface AdminGetListResult<T> {
-    total: number;
-    rows: T[];
+  total: number;
+  rows: T[];
 }
 export interface AdminBlockUserRequest {
-    id: string;
-    blocked: boolean;
+  id: string;
+  blocked: boolean;
 }
 export interface AdminModifyRoleOrPermissionRequest {
-    id: string;
-    rpp: {
-        r: RoleOrPermission;
-        add: boolean;
-    }[];
+  id: string;
+  rpp: {
+    r: RoleOrPermission;
+    add: boolean;
+  }[];
 }
 export interface AdminModifyPermanentWorkspaceFeatureFlagRequest {
-    id: string;
-    changes: {
-        featureFlag: NamedWorkspaceFeatureFlag;
-        add: boolean;
-    }[];
+  id: string;
+  changes: {
+    featureFlag: NamedWorkspaceFeatureFlag;
+    add: boolean;
+  }[];
 }
-export interface WorkspaceAndInstance extends Omit<Workspace, "id" | "creationTime">, Omit<WorkspaceInstance, "id" | "creationTime"> {
-    workspaceId: string;
-    workspaceCreationTime: string;
-    instanceId: string;
-    instanceCreationTime: string;
-    phase: WorkspaceInstancePhase;
+export interface WorkspaceAndInstance
+  extends Omit<Workspace, "id" | "creationTime">,
+    Omit<WorkspaceInstance, "id" | "creationTime"> {
+  workspaceId: string;
+  workspaceCreationTime: string;
+  instanceId: string;
+  instanceCreationTime: string;
+  phase: WorkspaceInstancePhase;
 }
 export declare namespace WorkspaceAndInstance {
-    function toWorkspace(wai: WorkspaceAndInstance): Workspace;
-    function toInstance(wai: WorkspaceAndInstance): WorkspaceInstance | undefined;
+  function toWorkspace(wai: WorkspaceAndInstance): Workspace;
+  function toInstance(wai: WorkspaceAndInstance): WorkspaceInstance | undefined;
 }
-export interface AdminGetWorkspacesRequest extends AdminGetListRequest<WorkspaceAndInstance> {
-    ownerId?: string;
+export interface AdminGetWorkspacesRequest
+  extends AdminGetListRequest<WorkspaceAndInstance> {
+  ownerId?: string;
 }
 //# sourceMappingURL=admin-protocol.d.ts.map

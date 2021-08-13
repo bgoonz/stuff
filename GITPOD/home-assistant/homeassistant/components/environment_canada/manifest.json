@@ -2,11 +2,7 @@
   "domain": "environment_canada",
   "name": "Environment Canada",
   "documentation": "https://www.home-assistant.io/components/environment_canada",
-  "requirements": [
-    "env_canada==0.0.24"
-  ],
+  "requirements": ["env_canada==0.0.24"],
   "dependencies": [],
-  "codeowners": [
-    "@michaeldavie"
-  ]
+  "codeowners": ["@michaeldavie"]
 }

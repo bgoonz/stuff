@@ -2,11 +2,7 @@
   "domain": "sytadin",
   "name": "Sytadin",
   "documentation": "https://www.home-assistant.io/components/sytadin",
-  "requirements": [
-    "beautifulsoup4==4.8.0"
-  ],
+  "requirements": ["beautifulsoup4==4.8.0"],
   "dependencies": [],
-  "codeowners": [
-    "@gautric"
-  ]
+  "codeowners": ["@gautric"]
 }

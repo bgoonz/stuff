@@ -1,19 +1,19 @@
 {
-    "config": {
-        "error": {
-            "identifier_exists": "Aquest compte ja est\u00e0 registrat",
-            "invalid_credentials": "Credencials inv\u00e0lides"
+  "config": {
+    "error": {
+      "identifier_exists": "Aquest compte ja est\u00e0 registrat",
+      "invalid_credentials": "Credencials inv\u00e0lides"
+    },
+    "step": {
+      "user": {
+        "data": {
+          "code": "Codi (pel Home Assistant)",
+          "password": "Contrasenya",
+          "username": "Correu electr\u00f2nic"
         },
-        "step": {
-            "user": {
-                "data": {
-                    "code": "Codi (pel Home Assistant)",
-                    "password": "Contrasenya",
-                    "username": "Correu electr\u00f2nic"
-                },
-                "title": "Introdueix la teva informaci\u00f3"
-            }
-        },
-        "title": "SimpliSafe"
-    }
+        "title": "Introdueix la teva informaci\u00f3"
+      }
+    },
+    "title": "SimpliSafe"
+  }
 }

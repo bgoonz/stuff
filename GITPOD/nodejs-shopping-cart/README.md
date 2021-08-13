@@ -7,21 +7,25 @@
 ### Scripts
 
 Install dependencies
-``` shell
+
+```shell
 npm install
 ```
 
 Start Node.JS server on the port 3000
-``` shell
+
+```shell
 npm start
 ```
 
 For Nodemon usage
-``` shell
+
+```shell
 nodemon ./bin/www
 ```
 
 ### Technologies
+
 Node.js, Express, Express-Session, Nodemon, hbs - Express.js view engine for handlebars.js
 npm install
 npm start

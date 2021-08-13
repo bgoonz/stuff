@@ -3,26 +3,27 @@ title: Support Requests
 description: Comments on and closes issues labeled as support requests.
 slug: support
 screenshots:
-- https://raw.githubusercontent.com/dessant/support-requests/master/assets/screenshot.png
+  - https://raw.githubusercontent.com/dessant/support-requests/master/assets/screenshot.png
 authors:
-- dessant
+  - dessant
 repository: dessant/support-requests
 host: https://probot-support-requests.glitch.me
 stars: 11
 updated: 2018-07-23 18:27:34 UTC
 installations: 37
 organizations:
-- Homebrew
-- mui-org
-- kivy
-- wix
-- CachetHQ
-- nozzle
-- PHPOffice
-- MinecraftForge
-- Laravel-Backpack
-- crate
+  - Homebrew
+  - mui-org
+  - kivy
+  - wix
+  - CachetHQ
+  - nozzle
+  - PHPOffice
+  - MinecraftForge
+  - Laravel-Backpack
+  - crate
 ---
+
 A GitHub App that comments on and closes issues labeled as support requests.
 
 ## Usage
@@ -58,7 +59,6 @@ lock: false
 
 # Assign `off-topic` as the reason for locking. Set to `false` to disable
 setLockReason: true
-
 # Repository to extend settings from
 # _extends: repo
 ```

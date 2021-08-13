@@ -1,0 +1,28 @@
+---
+lockfile: /tmp/certcheck.lock
+warn_treshold: 30
+critical_treshold: 15
+riemann_hosts:
+  static:
+    - 192.168.122.16:5555:udp
+    - 192.168.122.16:5555:tcp
+  by_srv:
+    - _riemann._tcp
+    - _riemann._udp
+riemann_tags:
+  - production
+  - class::certcheck
+repo_host: git.example.com
+repo_port: 22
+repo_url: /sample-repo
+repo_masterbranch: refs/heads/production
+repo_localdir: /tmp/certcheck-temprepo
+repo_user: certcheck
+repo_pubkey: /home/vespian/work/tmp_tickets/cert_check/certcheck_id_rsa
+# sha1sum ./certificate_to_be_ignored
+# format - dict, hash as a key, and value as a comment
+ignored_certs:
+  208a4ffc0bb0aa9ce6ccf6ed8fe3aa289a24f4dc: "dh2048.pem - openvpn DH params"
+  418b085d32a2dd0777c53fb5eedf1a92b0f4d112: "storage_resolve - rsa key"
+  99753a302f50fb085cae06ac4176c8bdf7d96016: "uits_priv_key.pem - rsa key"
+  b82e55a5a2eb8b9dec81cbe55ba4d90809509a16: "uits_pub_key.pem - rsa key"

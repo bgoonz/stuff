@@ -1,28 +1,29 @@
 ---
 title: No Response
-description: Closes Issues where the author hasn't responded to a request for more
+description:
+  Closes Issues where the author hasn't responded to a request for more
   information.
 slug: no-response
 screenshots:
-- https://raw.githubusercontent.com/probot/no-response/master/docs/no-response-test.png
+  - https://raw.githubusercontent.com/probot/no-response/master/docs/no-response-test.png
 authors:
-- lee-dohm
+  - lee-dohm
 repository: probot/no-response
 host: https://probot-no-response.herokuapp.com
 stars: 39
 updated: 2018-04-13 15:51:35 UTC
 installations: 118
 organizations:
-- Homebrew
-- facebook
-- flutter
-- prettier
-- webtorrent
-- ethereum
-- standard
-- kivy
-- eggjs
-- aws
+  - Homebrew
+  - facebook
+  - flutter
+  - prettier
+  - webtorrent
+  - ethereum
+  - standard
+  - kivy
+  - eggjs
+  - aws
 ---
 
 Automatically closes Issues where the author hasn't responded to a request for more information.
@@ -35,9 +36,9 @@ The intent of this app is to close issues that have not received a response to a
 
 Once per hour, it searches for issues that:
 
-* Are open
-* Have a label named the same as the `responseRequiredLabel` value in the configuration
-* The `responseRequiredLabel` was applied more than `daysUntilClose` ago
+- Are open
+- Have a label named the same as the `responseRequiredLabel` value in the configuration
+- The `responseRequiredLabel` was applied more than `daysUntilClose` ago
 
 For each issue found, it:
 
@@ -48,8 +49,8 @@ For each issue found, it:
 
 When an `issue_comment` event is received, if all of the following are true:
 
-* The author of the comment is the original author of the issue
-* The issue has a label named the same as the `responseRequiredLabel` value in the configuration
+- The author of the comment is the original author of the issue
+- The issue has a label named the same as the `responseRequiredLabel` value in the configuration
 
 It will:
 

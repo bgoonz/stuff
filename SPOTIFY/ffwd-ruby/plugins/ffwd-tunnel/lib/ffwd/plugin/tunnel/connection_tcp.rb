@@ -1,0 +1,66 @@
+# $LICENSE
+# Copyright 2013-2014 Spotify AB. All rights reserved.
+#
+# The contents of this file are licensed under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with the
+# License. You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+# WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+# License for the specific language governing permissions and limitations under
+# the License.
+
+require 'ffwd/connection'
+
+require_relative 'binary_protocol'
+
+module FFWD::Plugin::Tunnel
+  class ConnectionTCP < FFWD::Connection
+    include FFWD::Logging
+    include EM::Protocols::LineText2
+
+    def self.plugin_type
+      "tunnel_in_tcp"
+    end
+
+    def initialize bind, core, config
+      @bind = bind
+      @core = core
+      @tunnel_protocol = BinaryProtocol
+      @protocol_instance = nil
+    end
+
+    def receive_line line
+      @protocol_instance.receive_line line
+    end
+
+    def receive_binary_data data
+      @protocol_instance.receive_binary_data data
+    end
+
+    def get_peer
+      peer = get_peername
+      port, ip = Socket.unpack_sockaddr_in(peer)
+      "#{ip}:#{port}"
+    rescue
+      nil
+    end
+
+    def post_init
+      @protocol_instance = @tunnel_protocol.new @core, self
+    end
+
+    def unbind
+      log.info "Shutting down tunnel connection"
+      @protocol_instance.stop
+      @protocol_instance = nil
+    end
+
+    def metadata?
+      not @metadata.nil?
+    end
+  end
+end

@@ -5,11 +5,11 @@
  */
 /// <reference types="node" />
 export declare class Deferred<T> {
-    resolve: (value?: T) => void;
-    reject: (err?: any) => void;
-    isResolved: boolean;
-    timer: NodeJS.Timer;
-    constructor(timeout?: number);
-    promise: Promise<T>;
+  resolve: (value?: T) => void;
+  reject: (err?: any) => void;
+  isResolved: boolean;
+  timer: NodeJS.Timer;
+  constructor(timeout?: number);
+  promise: Promise<T>;
 }
 //# sourceMappingURL=deferred.d.ts.map

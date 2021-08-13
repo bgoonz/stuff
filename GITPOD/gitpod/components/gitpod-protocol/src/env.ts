@@ -7,46 +7,54 @@
 import { injectable } from "inversify";
 
 const legacyStagenameTranslation: { [key: string]: KubeStage } = {
-    "production": "production",
-    "staging": "prodcopy",
-    "devstaging": "dev",
-    "dev": "dev"
-}
+  production: "production",
+  staging: "prodcopy",
+  devstaging: "dev",
+  dev: "dev",
+};
 
 @injectable()
 export abstract class AbstractComponentEnv {
-    readonly kubeStage: KubeStage = getEnvVarParsed('KUBE_STAGE', (kubeStage) => {
-        const stage = legacyStagenameTranslation[kubeStage];
-        if (!stage) {
-            throw new Error(`Environment variable invalid: KUBE_STAGE=${kubeStage}`);
-        }
+  readonly kubeStage: KubeStage = getEnvVarParsed("KUBE_STAGE", (kubeStage) => {
+    const stage = legacyStagenameTranslation[kubeStage];
+    if (!stage) {
+      throw new Error(`Environment variable invalid: KUBE_STAGE=${kubeStage}`);
+    }
 
-        return stage;
-    });
-    readonly kubeNamespace: string = getEnvVar('KUBE_NAMESPACE');
-    readonly version: string = getEnvVar('VERSION');
+    return stage;
+  });
+  readonly kubeNamespace: string = getEnvVar("KUBE_NAMESPACE");
+  readonly version: string = getEnvVar("VERSION");
 
-    readonly installationLongname: string = getEnvVar("GITPOD_INSTALLATION_LONGNAME")
-    readonly installationShortname: string = getEnvVar("GITPOD_INSTALLATION_SHORTNAME")
+  readonly installationLongname: string = getEnvVar(
+    "GITPOD_INSTALLATION_LONGNAME"
+  );
+  readonly installationShortname: string = getEnvVar(
+    "GITPOD_INSTALLATION_SHORTNAME"
+  );
 }
 
-export type KubeStage = 'production' | 'prodcopy' | 'staging' | 'dev';
+export type KubeStage = "production" | "prodcopy" | "staging" | "dev";
 
 export function getEnvVar(name: string, defaultValue?: string): string {
-    const value = process.env[name] || defaultValue;
-    if (!value) {
-        throw new Error(`Environment variable undefined or empty: ${name}`);
-    }
-    return value;
+  const value = process.env[name] || defaultValue;
+  if (!value) {
+    throw new Error(`Environment variable undefined or empty: ${name}`);
+  }
+  return value;
 }
 
 export function filePathTelepresenceAware(filePath: string): string {
-    if (filePath && process.env.TELEPRESENCE_ROOT) {
-        filePath = process.env.TELEPRESENCE_ROOT + filePath;
-    }
-    return filePath;
+  if (filePath && process.env.TELEPRESENCE_ROOT) {
+    filePath = process.env.TELEPRESENCE_ROOT + filePath;
+  }
+  return filePath;
 }
 
-export function getEnvVarParsed<T>(name: string, parser: (value: string) => T, defaultValue?: string): T {
-    return parser(getEnvVar(name, defaultValue));
+export function getEnvVarParsed<T>(
+  name: string,
+  parser: (value: string) => T,
+  defaultValue?: string
+): T {
+  return parser(getEnvVar(name, defaultValue));
 }

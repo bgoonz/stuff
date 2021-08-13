@@ -15,24 +15,33 @@
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/gitpod-io/NextSimpleStarter)
 
 ### Development Workflow
+
 Start a live-reload development server:
+
 ```sh
 yarn dev
 ```
+
 or
+
 ```sh
 npm run dev
 ```
 
 Generate a production build:
+
 ```sh
 yarn build
 ```
+
 or
+
 ```sh
 npm run build
 ```
+
 ### Deployment
+
 [![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/ooade/NextSimpleStarter)
 
 <details>
@@ -41,7 +50,9 @@ npm run build
 </details>
 
 ### Contribution
+
 I'm open to contributions & suggestions in making this a lot better :hand:
 
 ### License
+
 MIT

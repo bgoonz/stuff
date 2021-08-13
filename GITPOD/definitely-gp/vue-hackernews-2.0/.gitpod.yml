@@ -1,5 +1,5 @@
 ports:
-- port: 8080
+  - port: 8080
 tasks:
-- init: npm install
-  command: npm run dev --hostname 0.0.0.0
+  - init: npm install
+    command: npm run dev --hostname 0.0.0.0

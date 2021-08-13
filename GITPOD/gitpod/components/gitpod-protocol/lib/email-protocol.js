@@ -9,20 +9,20 @@ exports.EMail = exports.EMailStatus = void 0;
 var uuidv4 = require("uuid/v4");
 var EMailStatus;
 (function (EMailStatus) {
-    function getState(status) {
-        if (status.scheduledSendgridTime) {
-            return "scheduledSendgrid";
-        }
-        return "scheduledInternal";
+  function getState(status) {
+    if (status.scheduledSendgridTime) {
+      return "scheduledSendgrid";
     }
-    EMailStatus.getState = getState;
-})(EMailStatus = exports.EMailStatus || (exports.EMailStatus = {}));
+    return "scheduledInternal";
+  }
+  EMailStatus.getState = getState;
+})((EMailStatus = exports.EMailStatus || (exports.EMailStatus = {})));
 var EMail;
 (function (EMail) {
-    EMail.create = function (ts) {
-        var withId = ts;
-        withId.uid = uuidv4();
-        return withId;
-    };
-})(EMail = exports.EMail || (exports.EMail = {}));
+  EMail.create = function (ts) {
+    var withId = ts;
+    withId.uid = uuidv4();
+    return withId;
+  };
+})((EMail = exports.EMail || (exports.EMail = {})));
 //# sourceMappingURL=email-protocol.js.map

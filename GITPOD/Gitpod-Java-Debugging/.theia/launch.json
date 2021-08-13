@@ -3,11 +3,11 @@
   // Hover to view descriptions of existing attributes.
   "version": "0.2.0",
   "configurations": [
-      {
-          "type": "java",
-          "name": "Debug (Launch) - Current File",
-          "request": "launch",
-          "mainClass": "${file}"
-      },
+    {
+      "type": "java",
+      "name": "Debug (Launch) - Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    }
   ]
 }

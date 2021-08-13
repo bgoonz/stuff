@@ -12,4 +12,4 @@ packages:
       - components/ws-daemon-api/go:lib
     config:
       packaging: app
-      buildCommand: ["go", "build", "-ldflags", "-w -extldflags \"-static\""]
+      buildCommand: ["go", "build", "-ldflags", '-w -extldflags "-static"']

@@ -12,27 +12,34 @@ import { GitHubGraphQlEndpoint } from "../../../src/github/api";
 
 @injectable()
 export class GitHubService extends RepositoryService {
-    @inject(Env) protected env: Env;
-    @inject(GitHubGraphQlEndpoint) protected readonly githubQueryApi: GitHubGraphQlEndpoint;
+  @inject(Env) protected env: Env;
+  @inject(GitHubGraphQlEndpoint)
+  protected readonly githubQueryApi: GitHubGraphQlEndpoint;
 
-    async canAccessHeadlessLogs(user: User, context: WorkspaceContext): Promise<boolean> {
-        if (!CommitContext.is(context)) {
-            return false;
-        }
+  async canAccessHeadlessLogs(
+    user: User,
+    context: WorkspaceContext
+  ): Promise<boolean> {
+    if (!CommitContext.is(context)) {
+      return false;
+    }
 
-        try {
-            // If you have no "viewerPermission" on a repository you may not access it's headless logs
-            // Ref: https://docs.github.com/en/graphql/reference/enums#repositorypermission
-            const result: any = await this.githubQueryApi.runQuery(user, `
+    try {
+      // If you have no "viewerPermission" on a repository you may not access it's headless logs
+      // Ref: https://docs.github.com/en/graphql/reference/enums#repositorypermission
+      const result: any = await this.githubQueryApi.runQuery(
+        user,
+        `
                 query {
                     repository(name: "${context.repository.name}", owner: "${context.repository.owner}") {
                         viewerPermission
                     }
                 }
-            `);
-            return result.data.repository !== null;
-        } catch (err) {
-            return false;
-        }
+            `
+      );
+      return result.data.repository !== null;
+    } catch (err) {
+      return false;
     }
+  }
 }

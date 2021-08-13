@@ -14,11 +14,11 @@ affinity:
   nodeAffinity:
     requiredDuringSchedulingIgnoredDuringExecution:
       nodeSelectorTerms:
-      - matchExpressions:
-        - key: gitpod.io/workload_meta
-          operator: In
-          values:
-          - "true"
+        - matchExpressions:
+            - key: gitpod.io/workload_meta
+              operator: In
+              values:
+                - "true"
 authProviders: []
 tracing:
   endoint: http://jaeger-collector:14268/api/traces
@@ -38,7 +38,6 @@ resources:
     memory: 350Mi
 
 components:
-
   agentSmith:
     name: "agent-smith"
     disabled: false
@@ -55,7 +54,7 @@ components:
     enableOAuthServer: true
     blockNewUsers: true
     blockNewUsersPasslist:
-    - "gitpod.io"
+      - "gitpod.io"
 
   registryFacade:
     daemonSet: true
@@ -79,34 +78,34 @@ components:
         spec:
           dnsConfig:
             nameservers:
-            - 1.1.1.1
-            - 8.8.8.8
-          dnsPolicy: None   # do NOT query against K8s DNS (https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/)
+              - 1.1.1.1
+              - 8.8.8.8
+          dnsPolicy: None # do NOT query against K8s DNS (https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/)
           env:
-          - name: THEIA_PREVENT_METADATA_ACCESS
-            value: true
+            - name: THEIA_PREVENT_METADATA_ACCESS
+              value: true
       regular:
         spec:
           containers:
-          - name: "workspace"
-            env:
-            - name: THEIA_RATELIMIT_LOG
-              value: "50"
-            - name: SUPERVISOR_DEBUG_ENABLE
-              value: "true"
+            - name: "workspace"
+              env:
+                - name: THEIA_RATELIMIT_LOG
+                  value: "50"
+                - name: SUPERVISOR_DEBUG_ENABLE
+                  value: "true"
       prebuild:
         spec:
           containers:
-          - name: workspace
-            # Intended to reduce the density for prebuilds
-            resources:
-              limits:
-                cpu: "5"
-                memory: 12Gi
-              requests:
-                cpu: 1m
-                ephemeral-storage: 5Gi
-                memory: 4608Mi  # = 2 * 2304Mi
+            - name: workspace
+              # Intended to reduce the density for prebuilds
+              resources:
+                limits:
+                  cpu: "5"
+                  memory: 12Gi
+                requests:
+                  cpu: 1m
+                  ephemeral-storage: 5Gi
+                  memory: 4608Mi # = 2 * 2304Mi
 
   # Allow per-branch ingress from another, in-cluster proxy
   proxy:
@@ -144,13 +143,13 @@ components:
   wsDaemon:
     hostWorkspaceArea: /mnt/disks/ssd0/workspaces
     volumes:
-    - name: gcloud-tmp
-      hostPath:
-        path: /mnt/disks/ssd0/sync-tmp
-        type: DirectoryOrCreate
+      - name: gcloud-tmp
+        hostPath:
+          path: /mnt/disks/ssd0/sync-tmp
+          type: DirectoryOrCreate
     volumeMounts:
-    - mountPath: /mnt/sync-tmp
-      name: gcloud-tmp
+      - mountPath: /mnt/sync-tmp
+        name: gcloud-tmp
     userNamespaces:
       fsShift: shiftfs
       shiftfsModuleLoader:
@@ -200,11 +199,11 @@ minio:
     nodeAffinity:
       requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
-        - matchExpressions:
-          - key: dev/workload
-            operator: In
-            values:
-            - "workload"
+          - matchExpressions:
+              - key: dev/workload
+                operator: In
+                values:
+                  - "workload"
 
 mysql:
   primary:
@@ -213,11 +212,11 @@ mysql:
       nodeAffinity:
         requiredDuringSchedulingIgnoredDuringExecution:
           nodeSelectorTerms:
-          - matchExpressions:
-            - key: dev/workload
-              operator: In
-              values:
-              - "workload"
+            - matchExpressions:
+                - key: dev/workload
+                  operator: In
+                  values:
+                    - "workload"
 
 rabbitmq:
   # ensure shovels are configured on boot
@@ -232,11 +231,11 @@ rabbitmq:
     nodeAffinity:
       requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
-        - matchExpressions:
-          - key: dev/workload
-            operator: In
-            values:
-            - "workload"
+          - matchExpressions:
+              - key: dev/workload
+                operator: In
+                values:
+                  - "workload"
 
 cert-manager:
   enabled: true

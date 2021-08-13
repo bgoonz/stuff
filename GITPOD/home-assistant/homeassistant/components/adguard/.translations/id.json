@@ -1,15 +1,15 @@
 {
-    "config": {
-        "error": {
-            "connection_error": "Gagal terhubung."
-        },
-        "step": {
-            "user": {
-                "data": {
-                    "password": "Kata sandi",
-                    "port": "Port"
-                }
-            }
+  "config": {
+    "error": {
+      "connection_error": "Gagal terhubung."
+    },
+    "step": {
+      "user": {
+        "data": {
+          "password": "Kata sandi",
+          "port": "Port"
         }
+      }
     }
+  }
 }

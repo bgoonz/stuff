@@ -3,5 +3,5 @@ ports:
 
 tasks:
   - command: >
-        npm install &&
-        npm run dev
+      npm install &&
+      npm run dev

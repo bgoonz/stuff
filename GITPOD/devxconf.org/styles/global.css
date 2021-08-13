@@ -537,7 +537,7 @@ input:focus {
 /* ----- Stage Specfic Stuff ----- */
 /* -------------------------------------- */
 
-@media(min-width: 1032px) {
+@media (min-width: 1032px) {
   body.full {
     max-height: 100vh;
     overflow-y: hidden;
@@ -547,7 +547,7 @@ input:focus {
     margin-top: 100px;
   }
 
-  .stage-footer.stage-footer { 
+  .stage-footer.stage-footer {
     margin: -100px 0;
   }
-} 
+}

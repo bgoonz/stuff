@@ -3,25 +3,25 @@ title: Lock Threads
 description: Locks closed issues and pull requests after a period of inactivity.
 slug: lock
 screenshots:
-- https://raw.githubusercontent.com/dessant/lock-threads/master/assets/screenshot.png
+  - https://raw.githubusercontent.com/dessant/lock-threads/master/assets/screenshot.png
 authors:
-- dessant
+  - dessant
 repository: dessant/lock-threads
 host: https://probot-lock-threads.glitch.me
 stars: 47
 updated: 2018-07-23 18:15:31 UTC
 installations: 102
 organizations:
-- facebook
-- Microsoft
-- ReactiveX
-- zeit
-- jquery
-- ethereum
-- Homebrew
-- atom
-- babel
-- Semantic-Org
+  - facebook
+  - Microsoft
+  - ReactiveX
+  - zeit
+  - jquery
+  - ethereum
+  - Homebrew
+  - atom
+  - babel
+  - Semantic-Org
 ---
 
 A GitHub App that locks closed issues and pull requests after
@@ -59,7 +59,6 @@ lockComment: >
 
 # Assign `resolved` as the reason for locking. Set to `false` to disable
 setLockReason: true
-
 # Limit to only `issues` or `pulls`
 # only: issues
 

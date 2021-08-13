@@ -10,18 +10,18 @@ import { TypeORM } from "../typeorm";
 
 @Entity()
 export class DBPendingGithubEvent implements PendingGithubEvent {
-    @PrimaryColumn(TypeORM.UUID_COLUMN_TYPE)
-    id: string;
+  @PrimaryColumn(TypeORM.UUID_COLUMN_TYPE)
+  id: string;
 
-    @Column()
-    githubUserId: string;
+  @Column()
+  githubUserId: string;
 
-    @Column({type: 'timestamp', precision: 6})
-    creationDate: Date;
+  @Column({ type: "timestamp", precision: 6 })
+  creationDate: Date;
 
-    @Column()
-    type: string;
+  @Column()
+  type: string;
 
-    @Column()
-    event: string;
+  @Column()
+  event: string;
 }

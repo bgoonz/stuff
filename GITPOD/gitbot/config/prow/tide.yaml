@@ -19,42 +19,42 @@ spec:
     spec:
       serviceAccountName: "tide"
       containers:
-      - name: tide
-        image: gcr.io/k8s-prow/tide:v20210707-32dc49e04b
-        args:
-        - --dry-run=false
-        - --config-path=/etc/config/config.yaml
-        - --github-token-path=/etc/github/token
-        - --github-endpoint=http://ghproxy
-        - --github-endpoint=https://api.github.com
-        - --github-graphql-endpoint=http://ghproxy/graphql
-        - --gcs-credentials-file=/etc/gcs-credentials/service-account.json
-        - --status-path=gs://gitpod-prow-tide/tide-status
-        - --history-uri=gs://gitpod-prow-tide/tide-history.json
-        - --deck-url=http://deck
-        ports:
-          - name: http
-            containerPort: 8888
-        volumeMounts:
-        - name: github-token
-          mountPath: /etc/github
-          readOnly: true
-        - name: config
-          mountPath: /etc/config
-          readOnly: true
-        - name: gcs-credentials
-          mountPath: /etc/gcs-credentials
-          readOnly: true
+        - name: tide
+          image: gcr.io/k8s-prow/tide:v20210707-32dc49e04b
+          args:
+            - --dry-run=false
+            - --config-path=/etc/config/config.yaml
+            - --github-token-path=/etc/github/token
+            - --github-endpoint=http://ghproxy
+            - --github-endpoint=https://api.github.com
+            - --github-graphql-endpoint=http://ghproxy/graphql
+            - --gcs-credentials-file=/etc/gcs-credentials/service-account.json
+            - --status-path=gs://gitpod-prow-tide/tide-status
+            - --history-uri=gs://gitpod-prow-tide/tide-history.json
+            - --deck-url=http://deck
+          ports:
+            - name: http
+              containerPort: 8888
+          volumeMounts:
+            - name: github-token
+              mountPath: /etc/github
+              readOnly: true
+            - name: config
+              mountPath: /etc/config
+              readOnly: true
+            - name: gcs-credentials
+              mountPath: /etc/gcs-credentials
+              readOnly: true
       volumes:
-      - name: github-token
-        secret:
-          secretName: github-token
-      - name: config
-        configMap:
-          name: config
-      - name: gcs-credentials
-        secret:
-          secretName: gcs-credentials
+        - name: github-token
+          secret:
+            secretName: github-token
+        - name: config
+          configMap:
+            name: config
+        - name: gcs-credentials
+          secret:
+            secretName: gcs-credentials
 ---
 apiVersion: v1
 kind: Service
@@ -65,8 +65,8 @@ spec:
   selector:
     app: tide
   ports:
-  - port: 80
-    targetPort: 8888
+    - port: 80
+      targetPort: 8888
   type: NodePort
 ---
 apiVersion: v1
@@ -101,5 +101,5 @@ roleRef:
   kind: Role
   name: "tide"
 subjects:
-- kind: ServiceAccount
-  name: "tide"
+  - kind: ServiceAccount
+    name: "tide"

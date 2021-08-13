@@ -1,12 +1,12 @@
 name: Bash
 
 # Relevant to events - https://help.github.com/en/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows
-on: 
+on:
   pull_request:
     types: [synchronize, opened, reopened, ready_for_review]
     paths:
-    - '**.bash'
-    - "tools/dockerfreeze"
+      - "**.bash"
+      - "tools/dockerfreeze"
 
 jobs:
   # Linting
@@ -50,7 +50,7 @@ jobs:
             true
           else
             exit 255
-          fi 
+          fi
       - name: Pulling git dir..
         uses: actions/checkout@v2
       - name: Processing files..

@@ -15,7 +15,7 @@ const Index = ({ stars }) => (
 	</div>
 )
 
-Index.getInitialProps = async({ store }) => {
+Index.getInitialProps = async ({ store }) => {
 	// Adding a default/initialState can be done as follows:
 	// store.dispatch({ type: 'ADD_TODO', text: 'It works!' });
 	const res = await fetch(

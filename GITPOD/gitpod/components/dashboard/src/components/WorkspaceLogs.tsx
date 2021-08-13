@@ -4,12 +4,12 @@
  * See License-AGPL.txt in the project root for license information.
  */
 
-import EventEmitter from 'events';
-import React from 'react';
-import { Terminal, ITerminalOptions, ITheme } from 'xterm';
-import { FitAddon } from 'xterm-addon-fit'
-import 'xterm/css/xterm.css';
-import { DisposableCollection } from '@gitpod/gitpod-protocol';
+import EventEmitter from "events";
+import React from "react";
+import { Terminal, ITerminalOptions, ITheme } from "xterm";
+import { FitAddon } from "xterm-addon-fit";
+import "xterm/css/xterm.css";
+import { DisposableCollection } from "@gitpod/gitpod-protocol";
 
 export interface WorkspaceLogsProps {
   logsEmitter: EventEmitter;
@@ -17,10 +17,12 @@ export interface WorkspaceLogsProps {
   classes?: string;
 }
 
-export interface WorkspaceLogsState {
-}
+export interface WorkspaceLogsState {}
 
-export default class WorkspaceLogs extends React.Component<WorkspaceLogsProps, WorkspaceLogsState> {
+export default class WorkspaceLogs extends React.Component<
+  WorkspaceLogsProps,
+  WorkspaceLogsState
+> {
   protected xTermParentRef: React.RefObject<HTMLDivElement>;
   protected terminal: Terminal | undefined;
   protected fitAddon: FitAddon | undefined;
@@ -48,7 +50,7 @@ export default class WorkspaceLogs extends React.Component<WorkspaceLogsProps, W
     this.fitAddon = new FitAddon();
     this.terminal.loadAddon(this.fitAddon);
     this.terminal.open(element);
-    this.props.logsEmitter.on('logs', logs => {
+    this.props.logsEmitter.on("logs", (logs) => {
       if (this.fitAddon && this.terminal && logs) {
         this.terminal.write(logs);
       }
@@ -62,18 +64,20 @@ export default class WorkspaceLogs extends React.Component<WorkspaceLogsProps, W
       clearTimeout(timeout!);
       timeout = setTimeout(() => this.fitAddon!.fit(), 20);
     };
-    window.addEventListener('resize', onWindowResize);
+    window.addEventListener("resize", onWindowResize);
     this.toDispose.push({
       dispose: () => {
         clearTimeout(timeout!);
-        window.removeEventListener('resize', onWindowResize);
-      }
+        window.removeEventListener("resize", onWindowResize);
+      },
     });
   }
 
   componentDidUpdate() {
     if (this.terminal && this.props.errorMessage) {
-      this.terminal.write(`\n\u001b[38;5;196m${this.props.errorMessage}\u001b[0m`);
+      this.terminal.write(
+        `\n\u001b[38;5;196m${this.props.errorMessage}\u001b[0m`
+      );
     }
   }
 
@@ -82,8 +86,17 @@ export default class WorkspaceLogs extends React.Component<WorkspaceLogsProps, W
   }
 
   render() {
-    return <div className={`mt-6 ${this.props.classes || 'h-72 w-11/12 lg:w-3/5'} rounded-xl bg-black relative`}>
-      <div className="absolute top-0 left-0 bottom-0 right-0 m-6" ref={this.xTermParentRef}></div>
-    </div>;
+    return (
+      <div
+        className={`mt-6 ${
+          this.props.classes || "h-72 w-11/12 lg:w-3/5"
+        } rounded-xl bg-black relative`}
+      >
+        <div
+          className="absolute top-0 left-0 bottom-0 right-0 m-6"
+          ref={this.xTermParentRef}
+        ></div>
+      </div>
+    );
   }
 }

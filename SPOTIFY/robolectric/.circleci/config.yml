@@ -1,0 +1,234 @@
+job_config: &job_config
+  working_directory: ~/code
+  docker:
+    - image: circleci/android:api-28
+  resource_class: xlarge
+  environment:
+    JVM_OPTS: -Xmx4096m
+    GRADLE_MAX_PARALLEL_FORKS: 2
+
+
+version: 2
+jobs:
+  build:
+    << : *job_config
+    steps:
+      - checkout
+      - run:
+          name: Calculate Cache Hash
+          command: |
+            find . \( -name \*.gradle -or -name \*.groovy -or -name \*.sh -or -name \*.rb -or -name circle.yml \) -exec shasum {} \; | sort > .cache-hash
+            cat .cache-hash
+      - run:
+          name: Install Maven
+          command: sudo apt-get update; sudo apt-get install maven
+      - restore_cache:
+          key: cache-{{ checksum ".cache-hash" }}
+      - run:
+          name: Download Dependencies
+          command: |
+            yes | sudo sdkmanager --licenses || true
+            sdkmanager --install 'platforms;android-28' > /dev/null
+            ./gradlew prefetchDependencies prefetchSdks
+      - save_cache:
+          paths:
+            - ~/.gradle
+            - ~/.m2
+            - /opt/android/sdk/platforms/android-28
+          key: cache-{{ checksum ".cache-hash" }}
+      - run:
+          name: Build
+          command: SKIP_JAVADOC=true ./gradlew clean assemble testClasses --parallel --stacktrace
+      - persist_to_workspace:
+          root: ~/code
+          paths:
+            - ".cache-hash"
+            - "[a-zA-Z]*" # not .git
+
+  test_16_17_18:
+    << : *job_config
+    steps:
+      - attach_workspace:
+          at: ~/code
+      - restore_cache:
+          key: cache-{{ checksum ".cache-hash" }}
+      - run:
+          name: Test 16 17 18
+          command: |
+            GRADLE_MAX_PARALLEL_FORKS=2 \
+                SKIP_JAVADOC=true \
+                ./gradlew test --info --stacktrace --continue \
+                --parallel \
+                -Drobolectric.enabledSdks=16,17,18 \
+                -Drobolectric.alwaysIncludeVariantMarkersInTestName=true \
+                -Dorg.gradle.workers.max=2
+      - run:
+          name: Collect Test Results
+          command: |
+            mkdir -p ~/junit/
+            find . -type f -regex ".*/build/test-results/.*xml" -exec cp {} ~/junit/ \;
+          when: always
+      - store_test_results:
+          path: ~/junit
+      - store_artifacts:
+          path: build/reports
+          destination: reports
+
+  test_19_21_22:
+    << : *job_config
+    steps:
+      - attach_workspace:
+          at: ~/code
+      - restore_cache:
+          key: cache-{{ checksum ".cache-hash" }}
+      - run:
+          name: Test 19 21 22
+          command: |
+            GRADLE_MAX_PARALLEL_FORKS=2 \
+                SKIP_JAVADOC=true \
+                ./gradlew test --info --stacktrace --continue \
+                --parallel \
+                -Drobolectric.enabledSdks=19,21,22 \
+                -Drobolectric.alwaysIncludeVariantMarkersInTestName=true \
+                -Dorg.gradle.workers.max=2
+      - run:
+          name: Collect Test Results
+          command: |
+            mkdir -p ~/junit/
+            find . -type f -regex ".*/build/test-results/.*xml" -exec cp {} ~/junit/ \;
+          when: always
+      - store_test_results:
+          path: ~/junit
+      - store_artifacts:
+          path: build/reports
+          destination: reports
+
+  test_23_24:
+    << : *job_config
+    steps:
+      - attach_workspace:
+          at: ~/code
+      - restore_cache:
+          key: cache-{{ checksum ".cache-hash" }}
+      - run:
+          name: Test 23 24
+          command: |
+            GRADLE_MAX_PARALLEL_FORKS=2 \
+                SKIP_JAVADOC=true \
+                ./gradlew test --info --stacktrace --continue \
+                --parallel \
+                -Drobolectric.enabledSdks=23,24 \
+                -Drobolectric.alwaysIncludeVariantMarkersInTestName=true \
+                -Dorg.gradle.workers.max=2
+      - run:
+          name: Collect Test Results
+          command: |
+            mkdir -p ~/junit/
+            find . -type f -regex ".*/build/test-results/.*xml" -exec cp {} ~/junit/ \;
+          when: always
+      - store_test_results:
+          path: ~/junit
+      - store_artifacts:
+          path: build/reports
+          destination: reports
+
+  test_25_26:
+    << : *job_config
+    steps:
+      - attach_workspace:
+          at: ~/code
+      - restore_cache:
+          key: cache-{{ checksum ".cache-hash" }}
+      - run:
+          name: Test 25 26
+          command: |
+            GRADLE_MAX_PARALLEL_FORKS=2 \
+                SKIP_JAVADOC=true \
+                ./gradlew test --info --stacktrace --continue \
+                --parallel \
+                -Drobolectric.enabledSdks=25,26 \
+                -Drobolectric.alwaysIncludeVariantMarkersInTestName=true \
+                -Dorg.gradle.workers.max=2
+      - run:
+          name: Collect Test Results
+          command: |
+            mkdir -p ~/junit/
+            find . -type f -regex ".*/build/test-results/.*xml" -exec cp {} ~/junit/ \;
+          when: always
+      - store_test_results:
+          path: ~/junit
+      - store_artifacts:
+          path: build/reports
+          destination: reports
+
+  test_27_28:
+    << : *job_config
+    steps:
+      - attach_workspace:
+          at: ~/code
+      - restore_cache:
+          key: cache-{{ checksum ".cache-hash" }}
+      - run:
+          name: Test 27 28
+          command: |
+            GRADLE_MAX_PARALLEL_FORKS=2 \
+                SKIP_JAVADOC=true \
+                ./gradlew test --info --stacktrace --continue \
+                --parallel \
+                -Drobolectric.enabledSdks=27,28 \
+                -Drobolectric.alwaysIncludeVariantMarkersInTestName=true \
+                -Dorg.gradle.workers.max=2
+      - run:
+          name: Collect Test Results
+          command: |
+            mkdir -p ~/junit/
+            find . -type f -regex ".*/build/test-results/.*xml" -exec cp {} ~/junit/ \;
+          when: always
+      - store_test_results:
+          path: ~/junit
+      - store_artifacts:
+          path: build/reports
+          destination: reports
+
+
+  finish:
+    << : *job_config
+    steps:
+      - attach_workspace:
+          at: ~/code
+      - restore_cache:
+          key: cache-{{ checksum ".cache-hash" }}
+      - run:
+          name: Upload Snapshot
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              ./gradlew upload --no-rebuild
+            fi
+
+workflows:
+  version: 2
+  build-and-test:
+    jobs:
+      - build
+      - test_16_17_18:
+          requires:
+            - build
+      - test_19_21_22:
+          requires:
+            - build
+      - test_23_24:
+          requires:
+            - build
+      - test_25_26:
+          requires:
+            - build
+      - test_27_28:
+          requires:
+            - build
+      - finish:
+          requires:
+            - test_16_17_18
+            - test_19_21_22
+            - test_23_24
+            - test_25_26
+            - test_27_28

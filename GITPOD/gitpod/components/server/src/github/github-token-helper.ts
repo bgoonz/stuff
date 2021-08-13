@@ -13,39 +13,44 @@ import { TokenProvider } from "../user/token-provider";
 
 @injectable()
 export class GitHubTokenHelper {
-    @inject(AuthProviderParams) readonly config: AuthProviderParams;
-    @inject(TokenProvider) protected readonly tokenProvider: TokenProvider;
+  @inject(AuthProviderParams) readonly config: AuthProviderParams;
+  @inject(TokenProvider) protected readonly tokenProvider: TokenProvider;
 
-    async getCurrentToken(user: User) {
-        try {
-            return await this.getTokenWithScopes(user, [/* any scopes */]);
-        } catch {
-            // no token
-        }
+  async getCurrentToken(user: User) {
+    try {
+      return await this.getTokenWithScopes(user, [
+        /* any scopes */
+      ]);
+    } catch {
+      // no token
     }
+  }
 
-    async getTokenWithScopes(user: User, requiredScopes: string[]) {
-        const { host } = this.config;
-        try {
-            const token = await this.tokenProvider.getTokenForHost(user, host);
-            if (this.containsScopes(token, requiredScopes)) {
-                return token;
-            }
-        } catch {
-            // no token
-        }
-        if (requiredScopes.length === 0) {
-            requiredScopes = GitHubScope.Requirements.DEFAULT
-        }
-        throw UnauthorizedError.create(host, requiredScopes, "missing-identity");
+  async getTokenWithScopes(user: User, requiredScopes: string[]) {
+    const { host } = this.config;
+    try {
+      const token = await this.tokenProvider.getTokenForHost(user, host);
+      if (this.containsScopes(token, requiredScopes)) {
+        return token;
+      }
+    } catch {
+      // no token
     }
-    protected containsScopes(token: Token, wantedScopes: string[] | undefined): boolean {
-        const wantedSet = new Set(wantedScopes);
-        const currentScopes = [...token.scopes];
-        if (currentScopes.some(s => s === GitHubScope.PRIVATE)) {
-            currentScopes.push(GitHubScope.PUBLIC); // normalize private_repo, which includes public_repo
-        }
-        currentScopes.forEach(s => wantedSet.delete(s));
-        return wantedSet.size === 0;
+    if (requiredScopes.length === 0) {
+      requiredScopes = GitHubScope.Requirements.DEFAULT;
     }
+    throw UnauthorizedError.create(host, requiredScopes, "missing-identity");
+  }
+  protected containsScopes(
+    token: Token,
+    wantedScopes: string[] | undefined
+  ): boolean {
+    const wantedSet = new Set(wantedScopes);
+    const currentScopes = [...token.scopes];
+    if (currentScopes.some((s) => s === GitHubScope.PRIVATE)) {
+      currentScopes.push(GitHubScope.PUBLIC); // normalize private_repo, which includes public_repo
+    }
+    currentScopes.forEach((s) => wantedSet.delete(s));
+    return wantedSet.size === 0;
+  }
 }

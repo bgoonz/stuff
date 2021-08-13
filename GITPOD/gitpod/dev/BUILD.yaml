@@ -7,4 +7,8 @@ packages:
       - dev/sweeper:docker
     config:
       commands:
-        - ["sh", "-c", "tail -n1 dev-sweeper--docker/imgnames.txt > sweeper.txt"]
+        - [
+            "sh",
+            "-c",
+            "tail -n1 dev-sweeper--docker/imgnames.txt > sweeper.txt",
+          ]

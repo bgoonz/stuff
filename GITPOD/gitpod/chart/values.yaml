@@ -135,7 +135,6 @@ serverProxyApiKey: "fF7+aCPvF9Pa0AEjmoZ+yWVh6PqBjM5VEA0wyQs3FH4="
 previewFeatureFlags: []
 
 components:
-
   agentSmith:
     name: "agent-smith"
     disabled: true
@@ -204,7 +203,7 @@ components:
   imageBuilder:
     name: "image-builder"
     dependsOn:
-    - "image-builder-configmap.yaml"
+      - "image-builder-configmap.yaml"
     hostDindData: /var/gitpod/docker
     registry:
       name: builtin
@@ -237,7 +236,7 @@ components:
   imageBuilderMk3:
     name: "image-builder-mk3"
     dependsOn:
-    - "image-builder-mk3-configmap.yaml"
+      - "image-builder-mk3-configmap.yaml"
     alpineImage: alpine:3.13
     builderImage:
       imageName: "image-builder-mk3/bob"
@@ -261,7 +260,7 @@ components:
     name: "registry-facade"
     disabled: false
     dependsOn:
-    - "registry-facade-configmap.yaml"
+      - "registry-facade-configmap.yaml"
     certificatesSecret: {}
     resources:
       cpu: 100m
@@ -278,21 +277,21 @@ components:
   # enabled cronjob to restart the proxy deployment
   restarter:
     enabled: false
-    schedule: '0 0 * * 0'
+    schedule: "0 0 * * 0"
     image: bitnami/kubectl:latest
     targets:
-    - name: proxy
-      kind: deployment
-    - name: registry-facade
-      kind: daemonset
-    - name: ws-proxy
-      kind: deployment
+      - name: proxy
+        kind: deployment
+      - name: registry-facade
+        kind: daemonset
+      - name: ws-proxy
+        kind: deployment
 
   server:
     name: "server"
     dependsOn:
-    - "server-proxy-apikey-secret.yaml"
-    - "auth-providers-configmap.yaml"
+      - "server-proxy-apikey-secret.yaml"
+      - "auth-providers-configmap.yaml"
     sessionSecret: Important!Really-Change-This-Key!
     resources:
       cpu: "200m"
@@ -362,19 +361,19 @@ components:
     template:
       default:
         spec:
-            enableServiceLinks: false
-            dnsConfig:
-            nameservers:
+          enableServiceLinks: false
+          dnsConfig:
+          nameservers:
             - 1.1.1.1
             - 8.8.8.8
-            dnsPolicy: None
+          dnsPolicy: None
 
   proxy:
     name: "proxy"
     svcName: "proxy"
     dependsOn:
-    - "proxy-configmap.yaml"
-    - "server-proxy-apikey-secret.yaml"
+      - "proxy-configmap.yaml"
+      - "server-proxy-apikey-secret.yaml"
     ports:
       http:
         containerPort: 80
@@ -428,8 +427,8 @@ components:
       containerd:
         socket: /run/containerd/containerd.sock
       nodeRoots:
-      - /var/lib
-      - /run/containerd/io.containerd.runtime.v2.task/k8s.io
+        - /var/lib
+        - /run/containerd/io.containerd.runtime.v2.task/k8s.io
       # On some hosts systems containerd uses different paths to store it's containers in, for example:
       # Find out by ssh onto a node and "mount | grep rootfs" and have a look at the paths
       # - /run/containerd/io.containerd.runtime.v1.linux/k8s.io
@@ -524,8 +523,8 @@ mysql:
     extraEnvVars:
       # We rely on this in our DB implementations: NULL (re-)sets configured columns to be initialized with CURRENT_TIMESTAMP.
       # OFF is the default as documented [here](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_explicit_defaults_for_timestamp) (we also see this in GCP), but not for this chart.
-    - name: MYSQL_EXTRA_FLAGS
-      value: --explicit-defaults-for-timestamp=OFF
+      - name: MYSQL_EXTRA_FLAGS
+        value: --explicit-defaults-for-timestamp=OFF
     resources:
       requests:
         memory: 128Mi

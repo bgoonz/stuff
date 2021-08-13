@@ -2,7 +2,6 @@
 
 Git hooks to integrate with [pre-commit](http://pre-commit.com).
 
-
 <!--TOC-->
 
 - [Configure pre-commit](#configure-pre-commit)
@@ -30,7 +29,6 @@ Git hooks to integrate with [pre-commit](http://pre-commit.com).
 
 <!--TOC-->
 
-
 ## Configure pre-commit
 
 :warning: These hooks now require Python3.
@@ -56,7 +54,6 @@ Add to `.pre-commit-config.yaml` in your git repo:
         - id: shellcheck
         - id: shfmt
 
-
 ## Two ways to invoke pre-commit
 
 If you want to invoke the checks as a git pre-commit hook, run:
@@ -70,22 +67,20 @@ If you want to run the checks on-demand (outside of git hooks), run:
 The [test harness](TESTING.md) of this git repo uses the second approach
 to run the checks on-demand.
 
-
 ## Available hooks
 
 ### `bundler-audit`
 
 **What it does**
 
-* Checks for vulnerable versions of gems in `Gemfile.lock`.
-* Checks for insecure gem sources (`http://`).
-* Allows ignoring certain advisories that have been manually worked around.
-* Prints advisory information.
+- Checks for vulnerable versions of gems in `Gemfile.lock`.
+- Checks for insecure gem sources (`http://`).
+- Allows ignoring certain advisories that have been manually worked around.
+- Prints advisory information.
 
 **More info**
 
 See https://github.com/rubysec/bundler-audit for details.
-
 
 ### `check-mailmap`
 
@@ -98,9 +93,9 @@ Detect botched name/email translations in git history.
 However, it gets muddy when an email address is associated with multiple names.<br/>
 Reasons include:
 
-* the author's full name was messed up
-* not always written the same way
-* the author has multiple email addresses
+- the author's full name was messed up
+- not always written the same way
+- the author has multiple email addresses
 
 **More info**
 
@@ -108,7 +103,6 @@ Sample output for good condition:
 
     $ pre-commit run check-mailmap --all-files --verbose
     [check-mailmap] Detect if an email address needs to be added to mailmap.......................Passed
-
 
 Sample output for bad condition:
 
@@ -129,7 +123,6 @@ Sample output for bad condition:
          13 John Doe <jdoe@example.com>
           4 jdoe <jdoe@example.com>
 
-
 ### `fasterer`
 
 **What it does**
@@ -144,7 +137,6 @@ suggests speed improvements that you can check in detail at the
 
 **Note:** You should not follow the suggestions blindly.
 
-
 ### `forbid-binary`
 
 **What it does**
@@ -157,7 +149,6 @@ Fail if a file appears to be a [binary filetype](https://pre-commit.com/#filteri
 Override with an `exclude` regular expression,
 such as the example [**here**](.pre-commit-config.yaml).
 
-
 ### `forbid-space-in-indent`
 
 **What it does**
@@ -169,7 +160,6 @@ Prevent files with spaces within indentation from being committed.
 Fail if a file contains spaces within indentation.
 Override with an `exclude` regular expression,
 such as the example [**here**](.pre-commit-config.yaml).
-
 
 ### `git-check`
 
@@ -188,17 +178,17 @@ that there are six `core.whitespace` checks.
 
 Enabled by default:
 
-* `blank-at-eol`, which looks for spaces at the end of a line
-* `blank-at-eof`, which looks for blank lines at the end of a file
-* `space-before-tab`, which looks for spaces before tabs at the beginning of a line
+- `blank-at-eol`, which looks for spaces at the end of a line
+- `blank-at-eof`, which looks for blank lines at the end of a file
+- `space-before-tab`, which looks for spaces before tabs at the beginning of a line
 
 Disabled by default:
 
-* `indent-with-non-tab`, which
+- `indent-with-non-tab`, which
   looks for lines that begin with spaces instead of tabs
   (and is controlled by the `tabwidth` option)
-* `tab-in-indent`, which looks for tabs in the indentation portion of a line
-* `cr-at-eol`, which looks for carriage returns at the end of a line
+- `tab-in-indent`, which looks for tabs in the indentation portion of a line
+- `cr-at-eol`, which looks for carriage returns at the end of a line
 
 **Custom configuration (overrides)**
 
@@ -213,8 +203,7 @@ It provides fine control over configuration per file path for both
 
 Real-world examples of `.gitattributes` file to configure overrides per path:
 
-* https://github.com/jumanjihouse/devenv/blob/master/.gitattributes
-
+- https://github.com/jumanjihouse/devenv/blob/master/.gitattributes
 
 ### `git-dirty`
 
@@ -232,7 +221,6 @@ see if a build step has modified the git tree in unexpected ways.
 
 The recommended place to persist the configuration is the `.gitignore` file,
 described [**here**](https://git-scm.com/docs/gitignore).
-
 
 ### `markdownlint`
 
@@ -252,9 +240,8 @@ Provide `.mdlrc` in the top-level of your project git repo.
 
 For an annotated example of overrides, see in this project:
 
-* [`.mdlrc`](.mdlrc)
-* [`ci/jumanjistyle.rb`](ci/jumanjistyle.rb)
-
+- [`.mdlrc`](.mdlrc)
+- [`ci/jumanjistyle.rb`](ci/jumanjistyle.rb)
 
 ### `protect-first-parent`
 
@@ -276,7 +263,6 @@ This client-side hook fills the gap to help prevent foxtrot merges.
 - https://devblog.nestoria.com/post/98892582763/maintaining-a-consistent-linear-history-for-git
 - https://dev.to/etcwilde/merge-trees-visualizing-git-repositories
 - https://pdfs.semanticscholar.org/a0e2/e630fc7b5bcf9e86c424a2551d0b76aec53a.pdf
-
 
 ### `reek`
 
@@ -312,7 +298,6 @@ described [**here**](https://github.com/troessner/reek#configuration-options).
 You can also create [in-line comments](https://github.com/troessner/reek#source-code-comments)
 in the source code for individual overrides.
 
-
 ### `require-ascii`
 
 **What it does**
@@ -325,7 +310,6 @@ This is useful to detect files that have unicode characters.
 
 Use the [built-in overrides](https://pre-commit.com/#pre-commit-configyaml---hooks)
 from the pre-commit framework.
-
 
 ### `rubocop`
 
@@ -351,7 +335,6 @@ Rubocop-performance is documented
 
 Rubocop-rspec is documented
 [here](https://github.com/rubocop-rspec/rubocop-rspec).
-
 
 ### `script-must-have-extension`
 
@@ -385,7 +368,6 @@ Put this in your `.pre-commit-config.yaml`:
 
 Note the use of "name" to override the hook's default name and
 provide context for the override.
-
 
 ### `script-must-not-have-extension`
 
@@ -423,7 +405,6 @@ Put something like this in your `.pre-commit-config.yaml`:
 Note the use of "name" to override the hook's default name and
 provide context for the override.
 
-
 ### `shellcheck`
 
 **What it does**
@@ -441,7 +422,6 @@ Override locally with the `args` parameter in `.pre-commit-config.yaml`.
 :warning: The `shellcheck` hook requires
 [shellcheck](https://github.com/koalaman/shellcheck).
 
-
 ### `shfmt`
 
 **What it does**
@@ -458,16 +438,13 @@ Override locally with `.editorconfig`.
 :warning: The `shfmt` hook requires a recent version of
 [shfmt](https://github.com/mvdan/sh/releases).
 
-
 ## Contributing
 
 Please see [CONTRIBUTING.md](CONTRIBUTING.md).
 
-
 ## Testing
 
 Please see [TESTING.md](TESTING.md).
-
 
 ## License
 

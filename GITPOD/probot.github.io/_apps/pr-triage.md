@@ -3,25 +3,25 @@ title: PR Triage
 description: Triage pull request
 slug: pr-triage
 screenshots:
-- https://user-images.githubusercontent.com/1587053/35917561-f4928e02-0c51-11e8-95d3-81b4f44ed6d2.png
+  - https://user-images.githubusercontent.com/1587053/35917561-f4928e02-0c51-11e8-95d3-81b4f44ed6d2.png
 authors:
-- sotayamashita
+  - sotayamashita
 repository: pr-triage/pr-triage
 host: https://pr-triage.glitch.me
 stars: 9
 updated: 2018-09-11 07:59:00 UTC
 installations: 28
 organizations:
-- kazupon
-- HcySunYang
-- awesome-css-group
-- vuejs
-- LinioIT
-- vuejs-jp
-- muan
-- kotamat
-- GoBike
-- Innovatube
+  - kazupon
+  - HcySunYang
+  - awesome-css-group
+  - vuejs
+  - LinioIT
+  - vuejs-jp
+  - muan
+  - kotamat
+  - GoBike
+  - Innovatube
 ---
 
 ## Install
@@ -33,7 +33,6 @@ PRTriage does **"NOT"** have permission to `Read & Write` your code :see_no_evil
 1. :mag: Please choose a repository
 1. :sparkles: That's it.
 
-
 ## How it works
 
 <p>
@@ -44,7 +43,6 @@ PRTriage does **"NOT"** have permission to `Read & Write` your code :see_no_evil
 - Add a `PR: unreviewed` label if your PR does not have any reviews for latest commit.
 - Add a `PR: reviewed-changes-requested` label if your PR have reviewed and got **Change request** for latest commit.
 - Add a `PR: review-approved` label if your PR have reviewed and got **Approve** for latest commit.
-
 
 ## Permission & Subscribe event
 

@@ -6,11 +6,7 @@
   "type": "array",
   "definitions": {
     "Spec": {
-      "required": [
-        "desc",
-        "command",
-        "assert"
-      ],
+      "required": ["desc", "command", "assert"],
       "properties": {
         "desc": {
           "type": "string"

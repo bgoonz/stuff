@@ -6,16 +6,24 @@
 
 import EventEmitter from "events";
 import React, { Suspense, useEffect, useState } from "react";
-import { Workspace, WorkspaceInstance, DisposableCollection, WorkspaceImageBuild, HEADLESS_LOG_STREAM_STATUS_CODE_REGEX } from "@gitpod/gitpod-protocol";
+import {
+  Workspace,
+  WorkspaceInstance,
+  DisposableCollection,
+  WorkspaceImageBuild,
+  HEADLESS_LOG_STREAM_STATUS_CODE_REGEX,
+} from "@gitpod/gitpod-protocol";
 import { getGitpodService } from "../service/service";
 
-const WorkspaceLogs = React.lazy(() => import('./WorkspaceLogs'));
+const WorkspaceLogs = React.lazy(() => import("./WorkspaceLogs"));
 
 export default function PrebuildLogs(props: { workspaceId?: string }) {
-  const [ workspace, setWorkspace ] = useState<Workspace | undefined>();
-  const [ workspaceInstance, setWorkspaceInstance ] = useState<WorkspaceInstance | undefined>();
-  const [ error, setError ] = useState<Error | undefined>();
-  const [ logsEmitter ] = useState(new EventEmitter());
+  const [workspace, setWorkspace] = useState<Workspace | undefined>();
+  const [workspaceInstance, setWorkspaceInstance] = useState<
+    WorkspaceInstance | undefined
+  >();
+  const [error, setError] = useState<Error | undefined>();
+  const [logsEmitter] = useState(new EventEmitter());
 
   useEffect(() => {
     const disposables = new DisposableCollection();
@@ -24,24 +32,37 @@ export default function PrebuildLogs(props: { workspaceId?: string }) {
         return;
       }
       try {
-        const info = await getGitpodService().server.getWorkspace(props.workspaceId);
+        const info = await getGitpodService().server.getWorkspace(
+          props.workspaceId
+        );
         if (info.latestInstance) {
           setWorkspace(info.workspace);
           setWorkspaceInstance(info.latestInstance);
         }
-        disposables.push(getGitpodService().registerClient({
-          onInstanceUpdate: setWorkspaceInstance,
-          onWorkspaceImageBuildLogs: (info: WorkspaceImageBuild.StateInfo, content?: WorkspaceImageBuild.LogContent) => {
-            if (!content) {
-              return;
-            }
-            logsEmitter.emit('logs', content.text);
-          },
-        }));
+        disposables.push(
+          getGitpodService().registerClient({
+            onInstanceUpdate: setWorkspaceInstance,
+            onWorkspaceImageBuildLogs: (
+              info: WorkspaceImageBuild.StateInfo,
+              content?: WorkspaceImageBuild.LogContent
+            ) => {
+              if (!content) {
+                return;
+              }
+              logsEmitter.emit("logs", content.text);
+            },
+          })
+        );
         if (info.latestInstance) {
-          disposables.push(watchHeadlessLogs(info.latestInstance.id, chunk => {
-            logsEmitter.emit('logs', chunk);
-          }, async () => workspaceInstance?.status.phase === 'stopped'));
+          disposables.push(
+            watchHeadlessLogs(
+              info.latestInstance.id,
+              (chunk) => {
+                logsEmitter.emit("logs", chunk);
+              },
+              async () => workspaceInstance?.status.phase === "stopped"
+            )
+          );
         }
       } catch (err) {
         console.error(err);
@@ -50,8 +71,8 @@ export default function PrebuildLogs(props: { workspaceId?: string }) {
     })();
     return function cleanUp() {
       disposables.dispose();
-    }
-  }, [ props.workspaceId ]);
+    };
+  }, [props.workspaceId]);
 
   useEffect(() => {
     switch (workspaceInstance?.status.phase) {
@@ -60,66 +81,88 @@ export default function PrebuildLogs(props: { workspaceId?: string }) {
       case "unknown":
         break;
 
-        // Preparing means that we haven't actually started the workspace instance just yet, but rather
-        // are still preparing for launch. This means we're building the Docker image for the workspace.
-        case "preparing":
-          getGitpodService().server.watchWorkspaceImageBuildLogs(workspace!.id);
-          break;
+      // Preparing means that we haven't actually started the workspace instance just yet, but rather
+      // are still preparing for launch. This means we're building the Docker image for the workspace.
+      case "preparing":
+        getGitpodService().server.watchWorkspaceImageBuildLogs(workspace!.id);
+        break;
 
-        // Pending means the workspace does not yet consume resources in the cluster, but rather is looking for
-        // some space within the cluster. If for example the cluster needs to scale up to accomodate the
-        // workspace, the workspace will be in Pending state until that happened.
-        case "pending":
-          break;
+      // Pending means the workspace does not yet consume resources in the cluster, but rather is looking for
+      // some space within the cluster. If for example the cluster needs to scale up to accomodate the
+      // workspace, the workspace will be in Pending state until that happened.
+      case "pending":
+        break;
 
-        // Creating means the workspace is currently being created. That includes downloading the images required
-        // to run the workspace over the network. The time spent in this phase varies widely and depends on the current
-        // network speed, image size and cache states.
-        case "creating":
-          break;
+      // Creating means the workspace is currently being created. That includes downloading the images required
+      // to run the workspace over the network. The time spent in this phase varies widely and depends on the current
+      // network speed, image size and cache states.
+      case "creating":
+        break;
 
-        // Initializing is the phase in which the workspace is executing the appropriate workspace initializer (e.g. Git
-        // clone or backup download). After this phase one can expect the workspace to either be Running or Failed.
-        case "initializing":
-          break;
+      // Initializing is the phase in which the workspace is executing the appropriate workspace initializer (e.g. Git
+      // clone or backup download). After this phase one can expect the workspace to either be Running or Failed.
+      case "initializing":
+        break;
 
-        // Running means the workspace is able to actively perform work, either by serving a user through Theia,
-        // or as a headless workspace.
-        case "running":
-          break;
+      // Running means the workspace is able to actively perform work, either by serving a user through Theia,
+      // or as a headless workspace.
+      case "running":
+        break;
 
-        // Interrupted is an exceptional state where the container should be running but is temporarily unavailable.
-        // When in this state, we expect it to become running or stopping anytime soon.
-        case "interrupted":
-          break;
+      // Interrupted is an exceptional state where the container should be running but is temporarily unavailable.
+      // When in this state, we expect it to become running or stopping anytime soon.
+      case "interrupted":
+        break;
 
-        // Stopping means that the workspace is currently shutting down. It could go to stopped every moment.
-        case "stopping":
-          break;
+      // Stopping means that the workspace is currently shutting down. It could go to stopped every moment.
+      case "stopping":
+        break;
 
-        // Stopped means the workspace ended regularly because it was shut down.
-        case "stopped":
-          getGitpodService().server.watchWorkspaceImageBuildLogs(workspace!.id);
-          break;
+      // Stopped means the workspace ended regularly because it was shut down.
+      case "stopped":
+        getGitpodService().server.watchWorkspaceImageBuildLogs(workspace!.id);
+        break;
     }
     if (workspaceInstance?.status.conditions.failed) {
       setError(new Error(workspaceInstance.status.conditions.failed));
     }
-  }, [ workspaceInstance?.status.phase ]);
+  }, [workspaceInstance?.status.phase]);
 
-  return <>
-    <Suspense fallback={<div />}>
-      <WorkspaceLogs classes="h-64 w-full" logsEmitter={logsEmitter} errorMessage={error?.message} />
-    </Suspense>
-    <div className="mt-2 flex justify-center space-x-2">
-      {workspaceInstance?.status.phase === 'stopped'
-        ? <a href={workspace?.contextURL ? '/#' + workspace.contextURL.replace(/^prebuild/, '') : undefined}><button>Open Workspace</button></a>
-        : <button className="secondary disabled" disabled={true}>Open Workspace</button> }
-    </div>
-  </>;
+  return (
+    <>
+      <Suspense fallback={<div />}>
+        <WorkspaceLogs
+          classes="h-64 w-full"
+          logsEmitter={logsEmitter}
+          errorMessage={error?.message}
+        />
+      </Suspense>
+      <div className="mt-2 flex justify-center space-x-2">
+        {workspaceInstance?.status.phase === "stopped" ? (
+          <a
+            href={
+              workspace?.contextURL
+                ? "/#" + workspace.contextURL.replace(/^prebuild/, "")
+                : undefined
+            }
+          >
+            <button>Open Workspace</button>
+          </a>
+        ) : (
+          <button className="secondary disabled" disabled={true}>
+            Open Workspace
+          </button>
+        )}
+      </div>
+    </>
+  );
 }
 
-export function watchHeadlessLogs(instanceId: string, onLog: (chunk: string) => void, checkIsDone: () => Promise<boolean>): DisposableCollection {
+export function watchHeadlessLogs(
+  instanceId: string,
+  onLog: (chunk: string) => void,
+  checkIsDone: () => Promise<boolean>
+): DisposableCollection {
   const disposables = new DisposableCollection();
 
   const startWatchingLogs = async () => {
@@ -138,7 +181,9 @@ export function watchHeadlessLogs(instanceId: string, onLog: (chunk: string) => 
     let response: Response | undefined = undefined;
     let reader: ReadableStreamDefaultReader<Uint8Array> | undefined = undefined;
     try {
-      const logSources = await getGitpodService().server.getHeadlessLog(instanceId);
+      const logSources = await getGitpodService().server.getHeadlessLog(
+        instanceId
+      );
       // TODO(gpl) Only listening on first stream for now
       const streamIds = Object.keys(logSources.streams);
       if (streamIds.length < 1) {
@@ -149,12 +194,12 @@ export function watchHeadlessLogs(instanceId: string, onLog: (chunk: string) => 
       const streamUrl = logSources.streams[streamIds[0]];
       console.log("fetching from streamUrl: " + streamUrl);
       response = await fetch(streamUrl, {
-        method: 'GET',
-        cache: 'no-cache',
-        credentials: 'include',
+        method: "GET",
+        cache: "no-cache",
+        credentials: "include",
         keepalive: true,
         headers: {
-          'TE': 'trailers', // necessary to receive stream status code
+          TE: "trailers", // necessary to receive stream status code
         },
       });
       reader = response.body?.getReader();
@@ -164,7 +209,7 @@ export function watchHeadlessLogs(instanceId: string, onLog: (chunk: string) => 
       }
       disposables.push({ dispose: () => reader?.cancel() });
 
-      const decoder = new TextDecoder('utf-8');
+      const decoder = new TextDecoder("utf-8");
       let chunk = await reader.read();
       while (!chunk.done) {
         const msg = decoder.decode(chunk.value, { stream: true });
@@ -187,12 +232,12 @@ export function watchHeadlessLogs(instanceId: string, onLog: (chunk: string) => 
 
         chunk = await reader.read();
       }
-      reader.cancel()
+      reader.cancel();
 
       if (await checkIsDone()) {
         return;
       }
-    } catch(err) {
+    } catch (err) {
       reader?.cancel().catch(console.debug);
       await retry("error while listening to stream", err);
     }

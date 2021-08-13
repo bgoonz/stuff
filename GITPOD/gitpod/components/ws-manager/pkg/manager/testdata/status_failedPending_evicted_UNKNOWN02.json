@@ -36,9 +36,7 @@
         "prometheus.io/scrape": "true",
         "seccomp.security.alpha.kubernetes.io/pod": "runtime/default"
       },
-      "finalizers": [
-        "foregroundDeletion"
-      ]
+      "finalizers": ["foregroundDeletion"]
     },
     "spec": {
       "volumes": [
@@ -140,9 +138,7 @@
       "automountServiceAccountToken": false,
       "nodeName": "gke-production--gitp-workspace-pool-2-a3afc0b4-nmbw",
       "securityContext": {
-        "supplementalGroups": [
-          1
-        ],
+        "supplementalGroups": [1],
         "fsGroup": 1
       },
       "imagePullSecrets": [
@@ -167,9 +163,7 @@
                   {
                     "key": "gitpod.io/workload_workspace",
                     "operator": "In",
-                    "values": [
-                      "true"
-                    ]
+                    "values": ["true"]
                   }
                 ]
               }
@@ -194,10 +188,7 @@
       ],
       "priority": 0,
       "dnsConfig": {
-        "nameservers": [
-          "1.1.1.1",
-          "8.8.8.8"
-        ]
+        "nameservers": ["1.1.1.1", "8.8.8.8"]
       },
       "enableServiceLinks": false
     },
@@ -228,9 +219,7 @@
         "workspaceID": "cecf2a75-7225-4056-a125-fa3144b9c012",
         "workspaceType": "regular"
       },
-      "finalizers": [
-        "foregroundDeletion"
-      ]
+      "finalizers": ["foregroundDeletion"]
     },
     "spec": {
       "ports": [

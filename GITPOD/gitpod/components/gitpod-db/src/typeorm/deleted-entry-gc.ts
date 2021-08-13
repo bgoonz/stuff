@@ -8,49 +8,56 @@ import { injectable, inject } from "inversify";
 import { TypeORM } from "./typeorm";
 import { Config } from "../config";
 
-
 @injectable()
 export class DeletedEntryGC {
-    @inject(TypeORM) protected readonly typeORM: TypeORM;
-    @inject(Config) protected readonly config: Config;
+  @inject(TypeORM) protected readonly typeORM: TypeORM;
+  @inject(Config) protected readonly config: Config;
 
-    public start() {
-        const cfg = this.config.deletedEntryGCConfig;
-        if (!cfg.enabled) {
-            console.info("Deleted Entries GC disabled")
-            return;
-        }
-
-        console.info(`Deleted Entries GC enabled (running every ${cfg.intervalMS/(60*1000)} minutes)`);
-        setInterval(() => {
-            this.gc().catch(e => console.error("error while removing deleted entries", e));
-        }, cfg.intervalMS);
+  public start() {
+    const cfg = this.config.deletedEntryGCConfig;
+    if (!cfg.enabled) {
+      console.info("Deleted Entries GC disabled");
+      return;
     }
 
-    protected async gc() {
-        const conn = await this.typeORM.getConnection();
-        await Promise.all(tables.map(t => conn.query(`DELETE FROM ${t.name} WHERE ${t.deletionColumn} = 1`)));
-    }
+    console.info(
+      `Deleted Entries GC enabled (running every ${
+        cfg.intervalMS / (60 * 1000)
+      } minutes)`
+    );
+    setInterval(() => {
+      this.gc().catch((e) =>
+        console.error("error while removing deleted entries", e)
+      );
+    }, cfg.intervalMS);
+  }
 
+  protected async gc() {
+    const conn = await this.typeORM.getConnection();
+    await Promise.all(
+      tables.map((t) =>
+        conn.query(`DELETE FROM ${t.name} WHERE ${t.deletionColumn} = 1`)
+      )
+    );
+  }
 }
 
 const tables: TableWithDeletion[] = [
-    { deletionColumn: "deleted", name: "d_b_identity" },
-    { deletionColumn: "deleted", name: "d_b_user_storage_resource" },
-    { deletionColumn: "deleted", name: "d_b_workspace" },
-    { deletionColumn: "deleted", name: "d_b_workspace_instance" },
-    { deletionColumn: "deleted", name: "d_b_token_entry" },
-    { deletionColumn: "deleted", name: "d_b_gitpod_token" },
-    { deletionColumn: "deleted", name: "d_b_one_time_secret" },
-    { deletionColumn: "deleted", name: "d_b_auth_provider_entry" },
-    { deletionColumn: "deleted", name: "d_b_code_sync_resource" },
-    { deletionColumn: "deleted", name: "d_b_team" },
-    { deletionColumn: "deleted", name: "d_b_team_membership" },
-    { deletionColumn: "deleted", name: "d_b_project" }
+  { deletionColumn: "deleted", name: "d_b_identity" },
+  { deletionColumn: "deleted", name: "d_b_user_storage_resource" },
+  { deletionColumn: "deleted", name: "d_b_workspace" },
+  { deletionColumn: "deleted", name: "d_b_workspace_instance" },
+  { deletionColumn: "deleted", name: "d_b_token_entry" },
+  { deletionColumn: "deleted", name: "d_b_gitpod_token" },
+  { deletionColumn: "deleted", name: "d_b_one_time_secret" },
+  { deletionColumn: "deleted", name: "d_b_auth_provider_entry" },
+  { deletionColumn: "deleted", name: "d_b_code_sync_resource" },
+  { deletionColumn: "deleted", name: "d_b_team" },
+  { deletionColumn: "deleted", name: "d_b_team_membership" },
+  { deletionColumn: "deleted", name: "d_b_project" },
 ];
 
 interface TableWithDeletion {
-    name: string;
-    deletionColumn: string;
+  name: string;
+  deletionColumn: string;
 }
-

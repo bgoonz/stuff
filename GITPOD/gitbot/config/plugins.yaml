@@ -22,88 +22,88 @@ lgtm:
 plugins:
   gitpod-io/gitbot:
     plugins:
-    - config-updater
-    - approve
-    - assign
-    - blunderbuss
-    - cat
-    - dog
-    - help
-    - heart
-    - hold
-    - label
-    - lgtm
-    - size
-    - verify-owners
-    - wip
-    - yuks
+      - config-updater
+      - approve
+      - assign
+      - blunderbuss
+      - cat
+      - dog
+      - help
+      - heart
+      - hold
+      - label
+      - lgtm
+      - size
+      - verify-owners
+      - wip
+      - yuks
   gitpod-io/gitpod:
     plugins:
-    - approve
-    - assign
-    - blunderbuss
-    - cat
-    - dog
-    - help
-    - heart
-    - hold
-    - label
-    - lgtm
-    - size
-    - verify-owners
-    - wip
-    - yuks
+      - approve
+      - assign
+      - blunderbuss
+      - cat
+      - dog
+      - help
+      - heart
+      - hold
+      - label
+      - lgtm
+      - size
+      - verify-owners
+      - wip
+      - yuks
   gitpod-io/gitpod-test-repo:
     plugins:
-    - approve
-    - assign
-    - blunderbuss
-    - cat
-    - dog
-    - goose
-    - help
-    - heart
-    - hold
-    - lgtm
-    - size
-    - verify-owners
-    - wip
-    - yuks
+      - approve
+      - assign
+      - blunderbuss
+      - cat
+      - dog
+      - goose
+      - help
+      - heart
+      - hold
+      - lgtm
+      - size
+      - verify-owners
+      - wip
+      - yuks
 
 external_plugins:
   "gitpod-io/gitpod":
-  - name: groundwork
-    endpoint: http://groundwork.prow.svc.cluster.local:8787
-    events:
-    - issues
-    - issue_comment
-    - pull_request
-  - name: projectmanager
-    endpoint: http://projectmanager.prow.svc.cluster.local:8787
-    events:
-    - issues
+    - name: groundwork
+      endpoint: http://groundwork.prow.svc.cluster.local:8787
+      events:
+        - issues
+        - issue_comment
+        - pull_request
+    - name: projectmanager
+      endpoint: http://projectmanager.prow.svc.cluster.local:8787
+      events:
+        - issues
   "gitpod-io/gitpod-test-repo":
-  - name: groundwork
-    endpoint: http://groundwork.prow.svc.cluster.local:8787
-    events:
-    - issues
-    - pull_request
-    - issue_comment
-  - name: projectmanager
-    endpoint: http://projectmanager.prow.svc.cluster.local:8787
-    events:
-    - issues
-  - name: customlabels
-    endpoint: http://customlabels.prow.svc.cluster.local:8787
-    events:
-    - issues
-    - issue_comment
-    - pull_request
-  - name: willkommen
-    endpoint: http://willkommen.prow.svc.cluster.local:8787
-    events:
-    - pull_request
-    - issue_comment
+    - name: groundwork
+      endpoint: http://groundwork.prow.svc.cluster.local:8787
+      events:
+        - issues
+        - pull_request
+        - issue_comment
+    - name: projectmanager
+      endpoint: http://projectmanager.prow.svc.cluster.local:8787
+      events:
+        - issues
+    - name: customlabels
+      endpoint: http://customlabels.prow.svc.cluster.local:8787
+      events:
+        - issues
+        - issue_comment
+        - pull_request
+    - name: willkommen
+      endpoint: http://willkommen.prow.svc.cluster.local:8787
+      events:
+        - pull_request
+        - issue_comment
 
 config_updater:
   maps:

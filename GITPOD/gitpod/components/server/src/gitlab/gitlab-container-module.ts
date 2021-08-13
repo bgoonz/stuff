@@ -6,7 +6,12 @@
 
 import { ContainerModule } from "inversify";
 import { AuthProvider } from "../auth/auth-provider";
-import { FileProvider, LanguagesProvider, RepositoryProvider, RepositoryHost } from "../repohost";
+import {
+  FileProvider,
+  LanguagesProvider,
+  RepositoryProvider,
+  RepositoryHost,
+} from "../repohost";
 import { IContextParser } from "../workspace/context-parser";
 import { IGitTokenValidator } from "../workspace/git-token-validator";
 import { GitLabApi } from "./api";
@@ -18,12 +23,13 @@ import { GitLabTokenHelper } from "./gitlab-token-helper";
 import { GitLabTokenValidator } from "./gitlab-token-validator";
 import { GitlabLanguagesProvider } from "./languages-provider";
 
-export const gitlabContainerModule = new ContainerModule((bind, _unbind, _isBound, _rebind) => {
+export const gitlabContainerModule = new ContainerModule(
+  (bind, _unbind, _isBound, _rebind) => {
     bind(RepositoryHost).toSelf().inSingletonScope();
     bind(GitLabApi).toSelf().inSingletonScope();
     bind(GitlabContextParser).toSelf().inSingletonScope();
     bind(GitLabAuthProvider).toSelf().inSingletonScope();
-    bind(AuthProvider).toService(GitLabAuthProvider)
+    bind(AuthProvider).toService(GitLabAuthProvider);
     bind(GitlabFileProvider).toSelf().inSingletonScope();
     bind(FileProvider).toService(GitlabFileProvider);
     bind(GitlabLanguagesProvider).toSelf().inSingletonScope();
@@ -34,4 +40,5 @@ export const gitlabContainerModule = new ContainerModule((bind, _unbind, _isBoun
     bind(GitLabTokenHelper).toSelf().inSingletonScope();
     bind(GitLabTokenValidator).toSelf().inSingletonScope();
     bind(IGitTokenValidator).toService(GitLabTokenValidator);
-});
+  }
+);

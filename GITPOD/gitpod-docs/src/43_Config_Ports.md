@@ -2,10 +2,11 @@
 
 If you want to access services running in your workspace, e.g. a development HTTP server on port `8080`,
 you need to expose that port first. Gitpod has two means of doing that:
-  1. On-the-fly: when you start a process which listens on a port in your workspace, Gitpod will ask you
-     if you want to expose that port to the internet.
-  2. In your configuration: if you already know that you want a particular port exposed, you can configure
-     it in the `.gitpod.yml` file and skip the extra click later on. For example:
+
+1. On-the-fly: when you start a process which listens on a port in your workspace, Gitpod will ask you
+   if you want to expose that port to the internet.
+2. In your configuration: if you already know that you want a particular port exposed, you can configure
+   it in the `.gitpod.yml` file and skip the extra click later on. For example:
 
 ```yaml
 ports:
@@ -27,12 +28,11 @@ whether and how to open it.
 To change this behavior you can provide the property `onOpen`.
 It has four possible values:
 
- - `notify` (default) - Show the notification.
- - `open-preview` - Open in the preview on the right.
- - `open-browser` - Open in a browser tab.
- - `ignore` - Don't do anything.
+- `notify` (default) - Show the notification.
+- `open-preview` - Open in the preview on the right.
+- `open-browser` - Open in a browser tab.
+- `ignore` - Don't do anything.
 
 Any changes to the `.gitpod.yml` will have effect immediately.
 
- ![Ports Notification](./images/ports-onOpen.png)
-
+![Ports Notification](./images/ports-onOpen.png)

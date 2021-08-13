@@ -1,34 +1,34 @@
 ---
 title: Triage New Issues
-description: Adds `triage` label to newly-created issues and then removes it when
+description:
+  Adds `triage` label to newly-created issues and then removes it when
   other label(s) are added
 slug: triage-new-issues
 screenshots:
-- https://i.imgur.com/bdbDaPz.png
-- https://i.imgur.com/HMndYuP.png
-- https://i.imgur.com/fOp0Est.png
-- https://i.imgur.com/ldrHDzZ.png
+  - https://i.imgur.com/bdbDaPz.png
+  - https://i.imgur.com/HMndYuP.png
+  - https://i.imgur.com/fOp0Est.png
+  - https://i.imgur.com/ldrHDzZ.png
 authors:
-- tunnckoCore
-- olstenlarck
+  - tunnckoCore
+  - olstenlarck
 repository: tunnckoCore/triage-new-issues
 host: https://triage-new-issues.now.sh
 stars: 11
 updated: 2018-09-07 11:31:12 UTC
 installations: 55
 organizations:
-- CachetHQ
-- Semantic-Org
-- Laravel-Backpack
-- Robdel12
-- GameServerManagers
-- microstates
-- thefrontside
-- tunnckoCoreLabs
-- eXist-db
-- pymedusa
+  - CachetHQ
+  - Semantic-Org
+  - Laravel-Backpack
+  - Robdel12
+  - GameServerManagers
+  - microstates
+  - thefrontside
+  - tunnckoCoreLabs
+  - eXist-db
+  - pymedusa
 ---
-
 
 ## Use programmatically
 

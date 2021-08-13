@@ -1,30 +1,30 @@
 ---
 title: Update Docs
-description: Replies to newly opened pull requests that do no update a file in the
+description:
+  Replies to newly opened pull requests that do no update a file in the
   `/docs` folder or the `README`
 slug: update-docs
 screenshots:
-- https://user-images.githubusercontent.com/13410355/28179044-97207bee-67b5-11e7-80d0-0c8ede4a325f.png
+  - https://user-images.githubusercontent.com/13410355/28179044-97207bee-67b5-11e7-80d0-0c8ede4a325f.png
 stars: 12
 authors:
-- hiimbex
+  - hiimbex
 repository: behaviorbot/update-docs
 updated: 2018-02-19 01:59:35 UTC
 host: https://probot-update-docs.herokuapp.com
 installations: 33
 organizations:
-- adonisjs
-- u3u
-- KengoTODA
-- behaviorbot
-- splash-cli
-- ilovecode1
-- PHPMap
-- varunsridharan
-- marclop
-- cms-gem-daq-project
+  - adonisjs
+  - u3u
+  - KengoTODA
+  - behaviorbot
+  - splash-cli
+  - ilovecode1
+  - PHPMap
+  - varunsridharan
+  - marclop
+  - cms-gem-daq-project
 ---
-
 
 Update Docs comments on newly opened Pull Requests that do not update either the README or a file in the `/docs` folder.
 

@@ -1,8 +1,8 @@
 ports:
-- port: 4000
-  onOpen: open-preview
+  - port: 4000
+    onOpen: open-preview
 tasks:
-- init: >
-    script/bootstrap
-  command: >
-    bundle exec jekyll serve --watch --incremental --trace --host 0.0.0.0
+  - init: >
+      script/bootstrap
+    command: >
+      bundle exec jekyll serve --watch --incremental --trace --host 0.0.0.0

@@ -11,28 +11,26 @@ import { TypeORM } from "../typeorm";
 import { Transformer } from "../transformer";
 
 @Entity()
-@Index("ind_dbsync", ["creationTime"])   // DBSync
+@Index("ind_dbsync", ["creationTime"]) // DBSync
 export class DBSnapshot implements Snapshot {
+  @PrimaryColumn(TypeORM.UUID_COLUMN_TYPE)
+  id: string;
 
-    @PrimaryColumn(TypeORM.UUID_COLUMN_TYPE)
-    id: string;
+  @Column({
+    type: "timestamp",
+    precision: 6,
+    default: () => "CURRENT_TIMESTAMP(6)",
+    transformer: Transformer.MAP_ISO_STRING_TO_TIMESTAMP_DROP,
+  })
+  creationTime: string;
 
-    @Column({
-        type: 'timestamp',
-        precision: 6,
-        default: () => 'CURRENT_TIMESTAMP(6)',
-        transformer: Transformer.MAP_ISO_STRING_TO_TIMESTAMP_DROP
-    })
-    creationTime: string;
+  @Column(TypeORM.WORKSPACE_ID_COLUMN_TYPE)
+  @Index("ind_originalWorkspaceId")
+  originalWorkspaceId: string;
 
-    @Column(TypeORM.WORKSPACE_ID_COLUMN_TYPE)
-    @Index("ind_originalWorkspaceId")
-    originalWorkspaceId: string;
+  @Column()
+  bucketId: string;
 
-    @Column()
-    bucketId: string;
-
-    @Column({ nullable: true })
-    layoutData?: string;
-
+  @Column({ nullable: true })
+  layoutData?: string;
 }

@@ -1,0 +1,9 @@
+/* Custom styles */
+
+body {
+    color: black;
+}
+
+blockquote.epigraph {
+    transform: skew(-15deg, 0deg);
+}

@@ -8,7 +8,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.LicenseFeature = void 0;
 var LicenseFeature;
 (function (LicenseFeature) {
-    LicenseFeature["CreateSnapshot"] = "create-snapshot";
-    // room for more
-})(LicenseFeature = exports.LicenseFeature || (exports.LicenseFeature = {}));
+  LicenseFeature["CreateSnapshot"] = "create-snapshot";
+  // room for more
+})((LicenseFeature = exports.LicenseFeature || (exports.LicenseFeature = {})));
 //# sourceMappingURL=license-protocol.js.map

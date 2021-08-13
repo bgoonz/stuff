@@ -3,21 +3,13 @@
   "name": "Wemo",
   "config_flow": true,
   "documentation": "https://www.home-assistant.io/components/wemo",
-  "requirements": [
-    "pywemo==0.4.34"
-  ],
+  "requirements": ["pywemo==0.4.34"],
   "ssdp": {
-    "manufacturer": [
-      "Belkin International Inc."
-    ]
+    "manufacturer": ["Belkin International Inc."]
   },
   "homekit": {
-    "models": [
-      "Wemo"
-    ]
+    "models": ["Wemo"]
   },
   "dependencies": [],
-  "codeowners": [
-    "@sqldiablo"
-  ]
+  "codeowners": ["@sqldiablo"]
 }

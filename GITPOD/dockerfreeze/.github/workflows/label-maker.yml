@@ -1,11 +1,11 @@
 name: ConaIsa
 
 # Relevant to events - https://help.github.com/en/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows
-on: 
+on:
   pull_request:
     types: [synchronize, opened, reopened, ready_for_review]
     paths:
-    - '.github/labels.yml'
+      - ".github/labels.yml"
 
 jobs:
   labeler:

@@ -7,7 +7,7 @@
  * Queues asynchronous operations in a synchronous context
  */
 export declare class Queue {
-    protected queue: Promise<any>;
-    enqueue<T>(operation: () => Promise<T>): Promise<T>;
+  protected queue: Promise<any>;
+  enqueue<T>(operation: () => Promise<T>): Promise<T>;
 }
 //# sourceMappingURL=queue.d.ts.map

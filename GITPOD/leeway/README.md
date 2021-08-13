@@ -2,6 +2,7 @@
 
 Leeway is a heavily caching build system for Go, Yarn and Docker projects.
 Its features are:
+
 - **source dependent versions**: leeway computes the version of a package based on the sources, dependencies and configuration that make up this package. There's no need (or means) to manually version packages.
 - **two-level package cache**: leeway caches its build results locally and remotely. The remote cache (a Google Cloud Storage bucket) means builds can share their results and thus become drastically faster.
 - **parallel builds**: because leeway understands the dependencies of your packages it can build them as parallel as possible.
@@ -10,25 +11,30 @@ Its features are:
 - **rich CLI**: leeways CLI supports deep inspection of the workspace and its structure. Its output is easy to understand and looks good.
 
 Leeway structures a repository in three levels:
+
 - The **workspace** is the root of all operations. All component names are relative to this path. No relevant file must be placed outside the workspace. The workspace root is marked with a `WORKSPACE.yaml` file.
 - A **components** is single piece of standalone software. Every folder in the workspace which contains a `BUILD.yaml` file is a component. Components are identifed by their path relative to the workspace root.
 - **Packages** are the buildable unit in leeway. Every component can define multiple packages in its build file. Packages are identified by their name prefixed with the component name, e.g. some-component:pkg.
 
 # Installation
+
 Leeway assumes its running on Linux or macOS. It is very very unlikely that this runs on Windows out-of-the-box.
 To install, just download and unpack a [release](https://github.com/gitpod/leeway/releases).
 
 # Build setup
 
 ## Workspace
+
 Place a file named `WORKSPACE.yaml` in the root of your workspace. For convenience sake you should set the `LEEWAY_WORKSPACE_ROOT` env var to the path of that workspace.
 For example:
+
 ```
 touch WORKSPACE.yaml
 export LEEWAY_WORKSPACE_ROOT=$PWD
 ```
 
 The `WORKSPACE.yaml` may contain some default settings for the workspace:
+
 ```YAML
 # defaultTarget is package we build when just running `leeway build`
 defaultTarget: some/package:name
@@ -38,7 +44,9 @@ defaultArgs:
 ```
 
 ## Component
+
 Place a `BUILD.yaml` in a folder somewhere in the workspace to make that folder a component. A `BUILD.yaml` primarily contains the packages of that components, but can also contain constant values (think of them as metadata). For example:
+
 ```YAML
 # const defines component-wide constants which can be used much like build arguments. Only string keys and values are supported.
 const:
@@ -51,7 +59,9 @@ scripts:
 ```
 
 ## Package
+
 A package is an entry in a `BUILD.yaml` in the `packages` section. All packages share the following fields:
+
 ```YAML
 # name is the component-wide unique name of this package
 name: must-not-contain-spaces
@@ -78,11 +88,13 @@ config:
 ```
 
 ## Script
+
 Scripts are a great way to automate tasks during development time (think [`yarn scripts`](https://classic.yarnpkg.com/en/docs/package-json#toc-scripts)).
 Unlike packages they do not run in isolation by default, but have access to the original workspace.
 What makes scripts special is that they can dependent on packages which become available to a script in the PATH and as environment variables.
 
 Under the `scripts` key in the component's `BUILD.yaml` add:
+
 ```YAML
 # name is the component-wide unique name of script. Packages and scripts do NOT share a namespace.
 # You can have a package called foo and a script called foo within the same component.
@@ -119,9 +131,11 @@ In a package definition one can use _build arguments_. Build args have the form 
 **It's advisable to use build args only within the `config` section of packages**. Constants and built-in build args do not even work outside of the config section.
 
 Leeway supports built-in build arguments:
+
 - `__pkg_version` resolves to the leeway version hash of a component.
 
 ### Go packages
+
 ```YAML
 config:
   # Packaging method. See https://godoc.org/github.com/gitpod/leeway/pkg/leeway#GoPackaging for details. Defaults to library.
@@ -143,6 +157,7 @@ config:
 ```
 
 ### Yarn packages
+
 ```YAML
 config:
   # yarnlock is the path to the yarn.lock used to build this package. Defaults to `yarn.lock`. Useful when building packages in a Yarn workspace setup.
@@ -164,10 +179,12 @@ config:
 ```
 
 ### Docker packages
+
 Docker packages have a default "retagging" behaviour: even when a Docker package is built already, i.e. it's leeway version didn't change,
 leeway will ensure that an image exists with the names specified in the package config. For example, if a Docker package has `leeway/some-package:${version}` specified,
 and `${version}` changes, but otherwise the package has been built before, leeway will "re-tag" the previously built image to be available under `leeway/some-package:${version}`.
 This behaviour can be disabled using `--dont-retag`.
+
 ```YAML
 config:
   # Dockerfile is the name of the Dockerfile to build. Automatically added to the package sources.
@@ -186,6 +203,7 @@ config:
 ```
 
 ### Generic packages
+
 ```YAML
 config:
   # A list of commands to execute. Beware that the commands are not executed in a shell. If you need shell features (e.g. wildcards or pipes),
@@ -196,8 +214,10 @@ config:
 ```
 
 ## Package Variants
+
 Leeway supports build-time variance through "package variants". Those variants are defined on the workspace level and can modify the list of sources, environment variables and config of packages.
 For example consider a `WORKSPACE.YAML` with this variants section:
+
 ```YAML
 variants:
 - name: nogo
@@ -215,6 +235,7 @@ It also changes the config of all Go packages to include the `-tags foo` flag. Y
 You can list all variants in a workspace using `leeway collect variants`.
 
 ## Environment Manifest
+
 Leeway does not control the environment in which it builds the packages, but assumes that all required tools are available already (e.g. `go` or `yarn`).
 This however can lead to subtle failure modes where a package built in one enviroment ends up being used in another, because no matter of the environment they were built in, they get the same version.
 
@@ -223,6 +244,7 @@ The entries in that manifest depend on the package types used by that workspace,
 You can inspect a workspace's environment manifest using `leeway describe environment-manifest`.
 
 You can add your own entries to a workspace's environment manifest in the `WORKSPACE.yaml` like so:
+
 ```YAML
 environmentManifest:
   - name: gcc
@@ -232,7 +254,9 @@ environmentManifest:
 Using this mechanism you can also overwrite the default manifest entries, e.g. "go" or "yarn".
 
 ## Nested Workspaces
+
 Leeway has some experimental support for nested workspaces, e.g. a structure like this one:
+
 ```
 /workspace
 /workspace/WORKSPACE.yaml
@@ -242,6 +266,7 @@ Leeway has some experimental support for nested workspaces, e.g. a structure lik
 ```
 
 By default leeway would just ignore the nested `otherWorkspace/` folder and everything below, because of `otherWorkspace/WORKSPACE.yaml`. When nested workspace support is enabled though, the `otherWorkspace/` would be loaded as if it stood alone and merged into `/workspace`. For example:
+
 ```
 $ export LEEWAY_NESTED_WORKSPACE=true
 $ leeway collect
@@ -253,6 +278,7 @@ otherWorkspace/comp2:lib
 - **inner workspaces are loaded as if they stood alone**: when leeway loads any nested workspace it does so as if that workspace stood for itself, i.e. were not nested. This means that all components are relative to that workspace root. In particular, dependencies remain stable no matter if a workspace is nested or not. E.g. `comp2:app` depending on `comp2:lib` works irregardless of workspace nesting.
 - **nested dependencies**: dependencies from an oter workspace into a nested one are possible and behave as if all packages were in the same workspace, e.g. `comp1:app` could depend on `otherWorkspace/comp2:app`. Dependencies out of a nested workspace are not allowed, e.g. `otherWorkspace/comp2:app` cannot depend on `comp1:app`.
 - **default arguments**: there is one exception to the "standalone", that is `defaultArgs`. The `defaultArgs` of the root workspace override the defaults of the nested workspaces. This is demonstrated by leeways test fixtures, where the message changes depending on the workspace that's loaded:
+
   ```
   $ export LEEWAY_NESTED_WORKSPACE=true
   $ leeway run fixtures/nested-ws/wsa/pkg1:echo
@@ -261,11 +287,14 @@ otherWorkspace/comp2:lib
   $ leeway run -w fixtures/nested-ws wsa/pkg1:echo
   hello root
   ```
+
 - **variants**: only the root workspace's variants matter. Even if the nested workspace defined any, they'd simply be ignored.
 
 # Configuration
+
 Leeway is configured exclusively through the WORKSPACE.yaml/BUILD.yaml files and environment variables. The following environment
 variables have an effect on leeway:
+
 - `LEEWAY_WORKSPACE_ROOT`: Contains the path where to look for a WORKSPACE file. Can also be set using --workspace.
 - `LEEWAY_REMOTE_CACHE_BUCKET`: Enables remote caching using GCP buckets. Set this variable to the bucket name used for caching. When this variable is set, leeway expects "gsutil" in the path configured and authenticated so that it can work with the bucket.
 - `LEEWAY_CACHE_DIR`: Location of the local build cache. The directory does not have to exist yet.
@@ -275,19 +304,23 @@ variables have an effect on leeway:
 - `LEEWAY_NESTED_WORKSPACE`: Enables nested workspaces. By default leeway ignores everything below another `WORKSPACE.yaml`, but if this env var is set leeway will try and link packages from the other workspace as if they were part of the parent one. This does not work for scripts yet.
 
 # Debugging
+
 When a build fails, or to get an idea of how leeway assembles dependencies, run your build with `leeway build -c local` (local cache only) and inspect your `$LEEWAY_BUILD_DIR`.
 
 # CLI tips
 
 ### How can I build a package in the current component/folder?
+
 ```bash
 leeway build .:package-name
 ```
 
 ### Is there bash autocompletion?
+
 Yes, run `. <(leeway bash-completion)` to enable it. If you place this line in `.bashrc` you'll have autocompletion every time.
 
 ### How can I find all packages in a workspace?
+
 ```bash
 # list all packages in the workspace
 leeway collect
@@ -298,6 +331,7 @@ leeway collect -o json | jq -r '.[].metadata.name'
 ```
 
 ### How can I find out more about a package?
+
 ```bash
 # print package description on the console
 leeway describe some/components:package
@@ -306,6 +340,7 @@ leeway describe some/components:package -o json
 ```
 
 ### How can I inspect a packages depdencies?
+
 ```bash
 # print the dependency tree on the console
 leeway describe dependencies some/components:package
@@ -316,6 +351,7 @@ leeway describe dependencies --serve=:8080 some/components:package
 ```
 
 ### How can I print a component constant?
+
 ```bash
 # print all constants of the component in the current working directory
 leeway describe const .
@@ -326,11 +362,13 @@ leeway describe const some/component/name -o json | jq -r '.[] | select(.name=="
 ```
 
 ### How can I find all components with a particular constant?
+
 ```bash
 leeway collect components -l someConstant
 ```
 
 ### How can I export only a workspace the way leeway sees it, i.e. based on the packages?
+
 ```bash
 LEEWAY_EXPERIMENTAL=true leeway export --strict /some/destination
 ```

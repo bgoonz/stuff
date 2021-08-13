@@ -63,8 +63,7 @@
               "protocol": "TCP"
             }
           ],
-          "env": [
-          ],
+          "env": [],
           "resources": {
             "limits": {
               "cpu": "5",
@@ -161,9 +160,7 @@
                   {
                     "key": "gitpod.io/workload_workspace",
                     "operator": "In",
-                    "values": [
-                      "true"
-                    ]
+                    "values": ["true"]
                   }
                 ]
               }
@@ -206,10 +203,7 @@
       ],
       "priority": 0,
       "dnsConfig": {
-        "nameservers": [
-          "1.1.1.1",
-          "8.8.8.8"
-        ]
+        "nameservers": ["1.1.1.1", "8.8.8.8"]
       },
       "enableServiceLinks": false
     },

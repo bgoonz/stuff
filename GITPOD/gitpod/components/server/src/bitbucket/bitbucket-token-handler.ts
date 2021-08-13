@@ -13,36 +13,40 @@ import { BitbucketOAuthScopes } from "./bitbucket-oauth-scopes";
 
 @injectable()
 export class BitbucketTokenHelper {
+  @inject(AuthProviderParams) readonly config: AuthProviderParams;
+  @inject(TokenProvider) protected readonly tokenProvider: TokenProvider;
 
-    @inject(AuthProviderParams) readonly config: AuthProviderParams;
-    @inject(TokenProvider) protected readonly tokenProvider: TokenProvider;
+  async getCurrentToken(user: User) {
+    try {
+      return await this.getTokenWithScopes(user, [
+        /* any scopes */
+      ]);
+    } catch {
+      // no token
+    }
+  }
 
-    async getCurrentToken(user: User) {
-        try {
-            return await this.getTokenWithScopes(user, [/* any scopes */]);
-        } catch {
-            // no token
-        }
+  async getTokenWithScopes(user: User, requiredScopes: string[]) {
+    const { host } = this.config;
+    try {
+      const token = await this.tokenProvider.getTokenForHost(user, host);
+      if (this.containsScopes(token, requiredScopes)) {
+        return token;
+      }
+    } catch {
+      // no token
     }
-
-    async getTokenWithScopes(user: User, requiredScopes: string[]) {
-        const { host } = this.config;
-        try {
-            const token = await this.tokenProvider.getTokenForHost(user, host);
-            if (this.containsScopes(token, requiredScopes)) {
-                return token;
-            }
-        } catch {
-            // no token
-        }
-        if (requiredScopes.length === 0) {
-            requiredScopes = BitbucketOAuthScopes.Requirements.DEFAULT
-        }
-        throw UnauthorizedError.create(host, requiredScopes, "missing-identity");
+    if (requiredScopes.length === 0) {
+      requiredScopes = BitbucketOAuthScopes.Requirements.DEFAULT;
     }
-    protected containsScopes(token: Token, wantedScopes: string[] | undefined): boolean {
-        const set = new Set(wantedScopes);
-        token.scopes.forEach(s => set.delete(s));
-        return set.size === 0;
-    }
+    throw UnauthorizedError.create(host, requiredScopes, "missing-identity");
+  }
+  protected containsScopes(
+    token: Token,
+    wantedScopes: string[] | undefined
+  ): boolean {
+    const set = new Set(wantedScopes);
+    token.scopes.forEach((s) => set.delete(s));
+    return set.size === 0;
+  }
 }

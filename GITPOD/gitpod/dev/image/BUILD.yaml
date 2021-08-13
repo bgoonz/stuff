@@ -16,5 +16,5 @@ packages:
       image:
         - ${imageRepoBase}/dev-environment:${version}
 scripts:
-- name: prepare-environment
-  script: prepare-bpf-dev-environment.sh
+  - name: prepare-environment
+    script: prepare-bpf-dev-environment.sh

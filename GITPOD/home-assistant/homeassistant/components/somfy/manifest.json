@@ -4,10 +4,6 @@
   "config_flow": true,
   "documentation": "https://www.home-assistant.io/components/somfy",
   "dependencies": [],
-  "codeowners": [
-    "@tetienne"
-  ],
-  "requirements": [
-    "pymfy==0.5.2"
-  ]
+  "codeowners": ["@tetienne"],
+  "requirements": ["pymfy==0.5.2"]
 }

@@ -7,5 +7,5 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ConnectionHandler = void 0;
-exports.ConnectionHandler = Symbol('ConnectionHandler');
+exports.ConnectionHandler = Symbol("ConnectionHandler");
 //# sourceMappingURL=handler.js.map

@@ -1,15 +1,15 @@
 {
-    "config": {
-        "step": {
-            "init": {
-                "title": ""
-            },
-            "user": {
-                "data": {
-                    "igd": ""
-                }
-            }
-        },
+  "config": {
+    "step": {
+      "init": {
         "title": ""
-    }
+      },
+      "user": {
+        "data": {
+          "igd": ""
+        }
+      }
+    },
+    "title": ""
+  }
 }

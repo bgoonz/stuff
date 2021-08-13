@@ -7,14 +7,14 @@ import TodoItem from './TodoItem'
 const Todo = ({ todos, addTodo, removeTodo }) => {
 	const [text, changeText] = useState('')
 
-	const handleAddTodo = e => {
+	const handleAddTodo = (e) => {
 		e.preventDefault()
 
 		addTodo(text)
 		changeText('')
 	}
 
-	const handleTextChange = e => {
+	const handleTextChange = (e) => {
 		changeText(e.target.value)
 	}
 
@@ -73,7 +73,6 @@ const Todo = ({ todos, addTodo, removeTodo }) => {
 	)
 }
 
-export default connect(
-	({ todos }) => ({ todos }),
-	{ addTodo, removeTodo }
-)(Todo)
+export default connect(({ todos }) => ({ todos }), { addTodo, removeTodo })(
+	Todo
+)

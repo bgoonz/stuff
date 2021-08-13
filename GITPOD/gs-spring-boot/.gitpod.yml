@@ -8,4 +8,4 @@ tasks:
     command: ./gradlew bootRun
 github:
   prebuilds:
-      pullRequestsFromForks: true
+    pullRequestsFromForks: true

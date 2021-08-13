@@ -3,27 +3,27 @@ title: Polls
 description: Create polls in GitHub issues.
 slug: polls
 screenshots:
-- https://raw.githubusercontent.com/evenchange4/gh-polls-bot/master/docs/screenshot.png
-- https://raw.githubusercontent.com/evenchange4/gh-polls-bot/master/docs/demo.gif
-- https://raw.githubusercontent.com/evenchange4/gh-polls-bot/master/docs/logo.png
+  - https://raw.githubusercontent.com/evenchange4/gh-polls-bot/master/docs/screenshot.png
+  - https://raw.githubusercontent.com/evenchange4/gh-polls-bot/master/docs/demo.gif
+  - https://raw.githubusercontent.com/evenchange4/gh-polls-bot/master/docs/logo.png
 authors:
-- evenchange4
+  - evenchange4
 repository: evenchange4/gh-polls-bot
 host: https://gh-polls-bot.now.sh
 stars: 141
 updated: 2018-01-15 01:35:10 UTC
 installations: 170
 organizations:
-- apex
-- Automattic
-- dawnlabs
-- RxSwiftCommunity
-- chaijs
-- jaegertracing
-- ahmetb
-- detailyang
-- RasaHQ
-- probot
+  - apex
+  - Automattic
+  - dawnlabs
+  - RxSwiftCommunity
+  - chaijs
+  - jaegertracing
+  - ahmetb
+  - detailyang
+  - RasaHQ
+  - probot
 ---
 
 # GitHub Polls Bot
@@ -41,6 +41,7 @@ organizations:
 /polls Option1 'Option 2' "Option 3"
 
 # Automatically replace with the following markdown =>
+
 [![](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BXZMATAZ5BXF8RVRAMRSSANA/Option1)](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BXZMATAZ5BXF8RVRAMRSSANA/Option1/vote)
 [![](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BXZMATAZ5BXF8RVRAMRSSANA/Option%202)](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BXZMATAZ5BXF8RVRAMRSSANA/Option%202/vote)
 [![](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BXZMATAZ5BXF8RVRAMRSSANA/Option%203)](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BXZMATAZ5BXF8RVRAMRSSANA/Option%203/vote)

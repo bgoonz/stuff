@@ -2,9 +2,7 @@
   "domain": "lutron",
   "name": "Lutron",
   "documentation": "https://www.home-assistant.io/components/lutron",
-  "requirements": [
-    "pylutron==0.2.2"
-  ],
+  "requirements": ["pylutron==0.2.2"],
   "dependencies": [],
   "codeowners": []
 }

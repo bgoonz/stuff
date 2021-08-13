@@ -6,7 +6,12 @@
 
 import { ContainerModule } from "inversify";
 import { AuthProvider } from "../auth/auth-provider";
-import { FileProvider, LanguagesProvider, RepositoryProvider, RepositoryHost } from "../repohost";
+import {
+  FileProvider,
+  LanguagesProvider,
+  RepositoryProvider,
+  RepositoryHost,
+} from "../repohost";
 import { IContextParser } from "../workspace/context-parser";
 import { GitHubGraphQlEndpoint, GitHubRestApi } from "./api";
 import { GithubFileProvider } from "./file-provider";
@@ -18,7 +23,8 @@ import { GithubLanguagesProvider } from "./languages-provider";
 import { IGitTokenValidator } from "../workspace/git-token-validator";
 import { GitHubTokenValidator } from "./github-token-validator";
 
-export const githubContainerModule = new ContainerModule((bind, _unbind, _isBound, _rebind) => {
+export const githubContainerModule = new ContainerModule(
+  (bind, _unbind, _isBound, _rebind) => {
     bind(RepositoryHost).toSelf().inSingletonScope();
     bind(GitHubRestApi).toSelf().inSingletonScope();
     bind(GitHubGraphQlEndpoint).toSelf().inSingletonScope();
@@ -35,4 +41,5 @@ export const githubContainerModule = new ContainerModule((bind, _unbind, _isBoun
     bind(GitHubTokenHelper).toSelf().inSingletonScope();
     bind(GitHubTokenValidator).toSelf().inSingletonScope();
     bind(IGitTokenValidator).toService(GitHubTokenValidator);
-});
+  }
+);

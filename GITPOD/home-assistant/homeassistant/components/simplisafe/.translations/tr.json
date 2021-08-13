@@ -1,12 +1,12 @@
 {
-    "config": {
-        "step": {
-            "user": {
-                "data": {
-                    "password": "Parola",
-                    "username": "E-posta adresi"
-                }
-            }
+  "config": {
+    "step": {
+      "user": {
+        "data": {
+          "password": "Parola",
+          "username": "E-posta adresi"
         }
+      }
     }
+  }
 }

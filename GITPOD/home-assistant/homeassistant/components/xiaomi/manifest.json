@@ -3,8 +3,6 @@
   "name": "Xiaomi",
   "documentation": "https://www.home-assistant.io/components/xiaomi",
   "requirements": [],
-  "dependencies": [
-    "ffmpeg"
-  ],
+  "dependencies": ["ffmpeg"],
   "codeowners": []
 }

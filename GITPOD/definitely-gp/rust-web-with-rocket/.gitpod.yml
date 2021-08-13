@@ -11,4 +11,3 @@ tasks:
       cargo run
 ports:
   - port: 8000
-

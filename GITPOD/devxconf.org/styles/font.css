@@ -1,15 +1,15 @@
 @font-face {
-    font-family: 'ABCDiatype';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/font/ABCDiatype-Regular.woff') format('woff');
+  font-family: 'ABCDiatype';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/font/ABCDiatype-Regular.woff') format('woff');
 }
 
 @font-face {
-    font-family: 'ABCDiatype';
-    font-style: bold;
-    font-weight: 600;
-    src: url('/font/ABCDiatype-Bold.woff') format('woff');
+  font-family: 'ABCDiatype';
+  font-style: bold;
+  font-weight: 600;
+  src: url('/font/ABCDiatype-Bold.woff') format('woff');
 }
 
 /* @font-face {
@@ -25,5 +25,3 @@
     font-weight: 600;
     src: url('/font/ABCDiatype-BoldItalic.woff') format('woff');
 } */
-
-

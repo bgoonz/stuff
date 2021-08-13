@@ -81,7 +81,6 @@ export async function getAllStages(): Promise<Stage[]> {
     }
   `);
 
-
   return data.allStages;
 }
 

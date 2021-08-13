@@ -12,20 +12,18 @@ import { gitHubContainerModuleEE } from "../github/container-module";
 
 @injectable()
 export class HostContainerMappingEE extends HostContainerMapping {
+  public get(type: string): interfaces.ContainerModule[] | undefined {
+    let modules = super.get(type) || [];
 
-    public get(type: string): interfaces.ContainerModule[] | undefined {
-        let modules = super.get(type) || [];
-
-        switch (type) {
-        case "GitLab":
-            return (modules || []).concat([gitlabContainerModuleEE]);
-        case "Bitbucket":
-            return (modules || []).concat([bitbucketContainerModuleEE]);
-        case "GitHub":
-            return (modules || []).concat([gitHubContainerModuleEE]);
-        default:
-            return modules;
-        }
+    switch (type) {
+      case "GitLab":
+        return (modules || []).concat([gitlabContainerModuleEE]);
+      case "Bitbucket":
+        return (modules || []).concat([bitbucketContainerModuleEE]);
+      case "GitHub":
+        return (modules || []).concat([gitHubContainerModuleEE]);
+      default:
+        return modules;
     }
-
+  }
 }

@@ -5,10 +5,10 @@ import rootReducer from '../reducers'
 const enhancers = compose(
 	typeof window !== 'undefined' && process.env.NODE_ENV !== 'production'
 		? window.devToolsExtension && window.devToolsExtension()
-		: f => f
+		: (f) => f
 )
 
 const createStoreWithMiddleware = applyMiddleware()(createStore)
 
-export default initialState =>
+export default (initialState) =>
 	createStoreWithMiddleware(rootReducer, initialState, enhancers)

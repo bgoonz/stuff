@@ -7,6 +7,7 @@ affectedsystems:
   - imagebuilds
 resolved: true
 ---
+
 Some workspaces fail to start in Europe.
 
 <!--- language code: en -->

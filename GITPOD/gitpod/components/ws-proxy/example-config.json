@@ -34,8 +34,8 @@
   "wsManagerProxy": {
     "listenAddress": ":8081",
     "rateLimiter": {
-        "refillInterval": "10m",
-        "bucketSize": "10"
+      "refillInterval": "10m",
+      "bucketSize": "10"
     }
   }
 }

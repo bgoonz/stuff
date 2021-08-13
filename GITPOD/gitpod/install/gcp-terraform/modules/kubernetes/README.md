@@ -2,7 +2,6 @@
 
 This module installs the kubernetes cluster using the Google Kubernetes Engin (GKE).
 
-
 ## Input Variables
 
 - `project`
@@ -10,8 +9,6 @@ This module installs the kubernetes cluster using the Google Kubernetes Engin (G
 - `name`: the name of the kubernetes cluster, default: gitpod-cluster
 - `network`: the name of the network the cluster is created in, the value is taken from the `network` module
 - `subnets`: a list of the subnets created in the `network` module
-
-
 
 ## Output Variables
 

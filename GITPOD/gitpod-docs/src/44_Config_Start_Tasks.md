@@ -10,15 +10,17 @@ For instance, the start script for the Gitpod documentation repository is define
 
 ```yaml
 tasks:
-- command: mdbook serve --hostname 0.0.0.0
+  - command: mdbook serve --hostname 0.0.0.0
 ```
 
 You can have multiple tasks, which are opened on separated terminals.
+
 ```yaml
 tasks:
-- command: echo Terminal1
-- command: echo Terminal2
+  - command: echo Terminal1
+  - command: echo Terminal2
 ```
+
 They are started in parallel. See [belows options](#openin) on configuring where and how the terminals are placed in the workbench.
 
 ## Defining Commands
@@ -61,11 +63,11 @@ tasks:
 
 Check the table below for an overview of the different starting scenarios.
 
-| Start Mode | Execution |
-| ---------  | -------   |
-| Fresh Workspace | `before && init && command` |
-| Restart Workspace | `before && command` |
-| Snapshot | `before && command` |
+| Start Mode        | Execution                   |
+| ----------------- | --------------------------- |
+| Fresh Workspace   | `before && init && command` |
+| Restart Workspace | `before && command`         |
+| Snapshot          | `before && command`         |
 
 ### Configuring the Terminal
 
@@ -77,22 +79,22 @@ Snapshots will first try to reuse existing terminals in the layout, before openi
 
 You can configure where in the IDE the terminal should be opened:
 
-| openIn       | Where |
-| ---------------|---------------------------|
-| `openIn:bottom`| the bottom panel (default)|
-| `openIn:left`  | the left panel|
-| `openIn:right` | the right panel|
-| `openIn:main`  | the main editor area|
+| openIn          | Where                      |
+| --------------- | -------------------------- |
+| `openIn:bottom` | the bottom panel (default) |
+| `openIn:left`   | the left panel             |
+| `openIn:right`  | the right panel            |
+| `openIn:main`   | the main editor area       |
 
 ## openMode
 
 You can configure how the terminal should be opened relative to the previous task.
 
-| openMode        | Description |
-| --------------- | ----------- |
-| `openMode:tab-after`     | Opens in the same tab group right after the previous tab |
-| `openMode:tab-before`    | Opens in the same tab group left before the previous tab |
-| `openMode:split-right`   | Splits and adds the terminal to the right |
-| `openMode:split-left`    | Splits and adds the terminal to the left |
-| `openMode:split-top`     | Splits and adds the terminal to the top |
-| `openMode:split-bottom`  | Splits and adds the terminal to the bottom |
+| openMode                | Description                                              |
+| ----------------------- | -------------------------------------------------------- |
+| `openMode:tab-after`    | Opens in the same tab group right after the previous tab |
+| `openMode:tab-before`   | Opens in the same tab group left before the previous tab |
+| `openMode:split-right`  | Splits and adds the terminal to the right                |
+| `openMode:split-left`   | Splits and adds the terminal to the left                 |
+| `openMode:split-top`    | Splits and adds the terminal to the top                  |
+| `openMode:split-bottom` | Splits and adds the terminal to the bottom               |

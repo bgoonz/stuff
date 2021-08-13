@@ -5,11 +5,11 @@
  */
 import { Disposable } from "./disposable";
 export declare class Cancelable<T> implements Disposable {
-    protected readonly activity: (cancel: boolean) => Promise<T> | undefined;
-    protected canceled: boolean;
-    constructor(activity: (cancel: boolean) => Promise<T> | undefined);
-    run(): Promise<T | undefined>;
-    cancel(): void;
-    dispose(): void;
+  protected readonly activity: (cancel: boolean) => Promise<T> | undefined;
+  protected canceled: boolean;
+  constructor(activity: (cancel: boolean) => Promise<T> | undefined);
+  run(): Promise<T | undefined>;
+  cancel(): void;
+  dispose(): void;
 }
 //# sourceMappingURL=cancelable.d.ts.map

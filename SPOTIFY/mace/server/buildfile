@@ -1,0 +1,6 @@
+define 'mace-server' do
+  project.version = '0.0.1'
+  compile.with transitive('org.apache.zookeeper:zookeeper:jar:3.3.3')
+  package :jar
+end
+

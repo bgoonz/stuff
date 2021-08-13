@@ -1,133 +1,139 @@
-@-moz-document url("https://www.gitpod.io/"), url("https://www.gitpod.io/features/") {
-/* Core color: #2c2956 */
-/* FIXME: Replace gitpod's logo with https://linx.li/s/6tfjktk9.png */
+@-moz-document url("https://www.gitpod.io/"), url("https://www.gitpod.io/features/")
+{
+  /* Core color: #2c2956 */
+  /* FIXME: Replace gitpod's logo with https://linx.li/s/6tfjktk9.png */
 
-:root {
+  :root {
     --font-color1: #fff;
-    --font-color2: #FF0;
-    --font-color3: #9F9F9F;
-    --font-color-hover: #FF0;
-    --brand-color1: #0087BE;
-    --brand-color2: #1AA6E4;
+    --font-color2: #ff0;
+    --font-color3: #9f9f9f;
+    --font-color-hover: #ff0;
+    --brand-color1: #0087be;
+    --brand-color2: #1aa6e4;
     --background-color1: #2c2956;
     --background-color2: #1a1935;
     --background-color3: #141228;
-    --button-background1: #FF0;
+    --button-background1: #ff0;
     --lilac-color: #9d7cbf;
     --accent-color: #ffb238;
     --success-color: #37b635;
     --warning-color: #ec1818;
     color: var(--font-color1);
-    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
-}
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", Arial, sans-serif;
+  }
 
-h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     color: var(--font-color1);
-}
+  }
 
-body {
+  body {
     font: 400 1.6rem/1.6 "Montserrat", sans-serif;
     color: var(--font-color1);
     background: var(--background-color1);
-}
+  }
 
-button {
+  button {
     color: var(--font-color1);
+  }
 }
 
+@-moz-document url("https://www.gitpod.io/"), url("")
+{
+  /* Index page */
 
-}
-
-@-moz-document url("https://www.gitpod.io/"), url("") {
-/* Index page */
-
-/* Buttons */
-.btn {
+  /* Buttons */
+  .btn {
     color: rgb(41, 41, 41);
     background: var(--button-background1) none repeat scroll 0% 0%;
     border: 2px solid rgb(77, 77, 77);
-}
+  }
 
-/* Navbar */
-/** left and right borders **/
-.grey-container {
+  /* Navbar */
+  /** left and right borders **/
+  .grey-container {
     background: var(--background-color3) none repeat scroll 0% 0%;
-}
+  }
 
-/** Center **/
-.css-1scpx3 {
+  /** Center **/
+  .css-1scpx3 {
     /* FIXME: Disable this */
     background: var(--background-color3);
-}
-/** Menu text **/
-.link {
+  }
+  /** Menu text **/
+  .link {
     color: var(--font-color1);
-}
+  }
 
-/* Color in 'Are You Ready-To-Code?' background */
-.css-1xel2yt .banner-container {
+  /* Color in 'Are You Ready-To-Code?' background */
+  .css-1xel2yt .banner-container {
     background: var(--background-color2);
     /* text above buttons */
     color: var(--font-color1);
-}
+  }
 
-/* The flexing below projects that use gitpod */
-.css-h1ulbk .intro {
+  /* The flexing below projects that use gitpod */
+  .css-h1ulbk .intro {
     background: var(--background-color2);
     color: var(--font-color1);
-}
-/** Arrow to show more people using gitpod **/
-.css-1sewipr .arrow {
+  }
+  /** Arrow to show more people using gitpod **/
+  .css-1sewipr .arrow {
     background: var(--background-color1);
-}
+  }
 
-/* Why gitpod */
-.css-1jx9hpn .why-gitpod__box-container > div:nth-child(2) {
+  /* Why gitpod */
+  .css-1jx9hpn .why-gitpod__box-container > div:nth-child(2) {
     background: var(--background-color3);
-}
+  }
 
-/* Get Started */
-/** Prefix **/
-.css-1x4kh1v .get-started__prefix-text-container {
+  /* Get Started */
+  /** Prefix **/
+  .css-1x4kh1v .get-started__prefix-text-container {
     background: var(--background-color3);
-}
-/*** Text 'Gitpod.io/#'***/
-.text-with-galaxy-bg {
+  }
+  /*** Text 'Gitpod.io/#'***/
+  .text-with-galaxy-bg {
     color: var(--font-color2);
     font-weight: 600;
-    background: rgba(0, 0, 0, 0) url("/galaxy.jpg") repeat scroll center bottom padding-box text;
-}
+    background: rgba(0, 0, 0, 0) url("/galaxy.jpg") repeat scroll center bottom
+      padding-box text;
+  }
 
-/** URL and around **/
-.css-1x4kh1v .get-started__prefix {
+  /** URL and around **/
+  .css-1x4kh1v .get-started__prefix {
     box-shadow: 0px 3px 6px #00000029;
-    border: 1px solid rgba(0,0,0,.08);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     background: var(--background-color2);
-}
+  }
 
-/** 'Or Select a Project' items **/
-.css-muotoh {
+  /** 'Or Select a Project' items **/
+  .css-muotoh {
     background: var(--background-color2);
-}
+  }
 
-/* Footer */
-.css-q8uqd5 {
+  /* Footer */
+  .css-q8uqd5 {
     color: var(--font-color1);
     background: var(--background-color3);
-}
+  }
 
-/** Titles **/
-.css-q8uqd5 .links {
+  /** Titles **/
+  .css-q8uqd5 .links {
     color: var(--font-color2);
-}
-/** Links **/
-.css-q8uqd5 a {
+  }
+  /** Links **/
+  .css-q8uqd5 a {
     color: var(--font-color1);
-}
-.css-q8uqd5 a:hover, .css-q8uqd5 a:focus {
+  }
+  .css-q8uqd5 a:hover,
+  .css-q8uqd5 a:focus {
     color: var(--font-color-hover);
-}
+  }
 
-/* FIXME: Annoying privacy notice (uses style in html) */
-
+  /* FIXME: Annoying privacy notice (uses style in html) */
 }

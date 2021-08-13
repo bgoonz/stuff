@@ -1,12 +1,13 @@
 ---
 title: Gitpod outage in EU
-date: '2021-01-18T16:00:46.575Z'
+date: "2021-01-18T16:00:46.575Z"
 severity: partial-outage
 affectedsystems:
   - workspaces
   - imagebuilds
 resolved: true
 ---
+
 Gitpod outage in EU due to a node failure
 
 ::: update Update | 2021-01-18T16:20:46.693Z

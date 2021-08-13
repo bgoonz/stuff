@@ -1,8 +1,8 @@
-const GA_TRACKING_ID: string = process.env.GA_TRACKING_ID || "";
+const GA_TRACKING_ID: string = process.env.GA_TRACKING_ID || '';
 
 export const pageview = (url: URL): void => {
-  (window as any).gtag("config", GA_TRACKING_ID, {
-    page_path: url,
+  (window as any).gtag('config', GA_TRACKING_ID, {
+    page_path: url
   });
 };
 
@@ -14,9 +14,9 @@ type GTagEvent = {
 };
 
 export const event = ({ action, category, label, value }: GTagEvent): void => {
-  (window as any).gtag("event", action, {
+  (window as any).gtag('event', action, {
     event_category: category,
     event_label: label,
-    value,
+    value
   });
 };

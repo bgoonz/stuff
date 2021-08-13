@@ -6,11 +6,15 @@
 import { WorkspaceConfig } from "./protocol";
 export declare type MaybeConfig = WorkspaceConfig | undefined;
 export interface ParseResult {
-    config: WorkspaceConfig;
-    parsedConfig?: WorkspaceConfig;
-    validationErrors?: string[];
+  config: WorkspaceConfig;
+  parsedConfig?: WorkspaceConfig;
+  validationErrors?: string[];
 }
 export declare class GitpodFileParser {
-    parse(content: string, parseOptions?: {}, defaultConfig?: WorkspaceConfig): ParseResult;
+  parse(
+    content: string,
+    parseOptions?: {},
+    defaultConfig?: WorkspaceConfig
+  ): ParseResult;
 }
 //# sourceMappingURL=gitpod-file-parser.d.ts.map

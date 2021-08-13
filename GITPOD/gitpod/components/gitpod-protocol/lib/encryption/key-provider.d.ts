@@ -5,34 +5,34 @@
  */
 /// <reference types="node" />
 export interface KeyMetadata {
-    name: string;
-    version: number;
+  name: string;
+  version: number;
 }
 export interface Key {
-    metadata: KeyMetadata;
-    material: Buffer;
+  metadata: KeyMetadata;
+  material: Buffer;
 }
 export declare const KeyProvider: unique symbol;
 export interface KeyProvider {
-    getPrimaryKey(): Key;
-    getKeyFor(metadata: KeyMetadata): Key;
+  getPrimaryKey(): Key;
+  getKeyFor(metadata: KeyMetadata): Key;
 }
 export declare type KeyConfig = KeyMetadata & {
-    /** base64 encoded */
-    material: string;
-    primary?: boolean;
+  /** base64 encoded */
+  material: string;
+  primary?: boolean;
 };
 export declare const KeyProviderConfig: unique symbol;
 export interface KeyProviderConfig {
-    keys: KeyConfig[];
+  keys: KeyConfig[];
 }
 export declare class KeyProviderImpl implements KeyProvider {
-    protected readonly config: KeyProviderConfig;
-    static loadKeyConfigFromJsonString(configStr: string): KeyConfig[];
-    constructor(config: KeyProviderConfig);
-    protected get keys(): KeyConfig[];
-    getPrimaryKey(): Key;
-    getKeyFor(metadata: KeyMetadata): Key;
-    protected configToKey(config: KeyConfig): Key;
+  protected readonly config: KeyProviderConfig;
+  static loadKeyConfigFromJsonString(configStr: string): KeyConfig[];
+  constructor(config: KeyProviderConfig);
+  protected get keys(): KeyConfig[];
+  getPrimaryKey(): Key;
+  getKeyFor(metadata: KeyMetadata): Key;
+  protected configToKey(config: KeyConfig): Key;
 }
 //# sourceMappingURL=key-provider.d.ts.map

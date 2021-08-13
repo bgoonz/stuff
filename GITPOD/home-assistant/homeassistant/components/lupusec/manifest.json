@@ -2,9 +2,7 @@
   "domain": "lupusec",
   "name": "Lupusec",
   "documentation": "https://www.home-assistant.io/components/lupusec",
-  "requirements": [
-    "lupupy==0.0.17"
-  ],
+  "requirements": ["lupupy==0.0.17"],
   "dependencies": [],
   "codeowners": []
 }

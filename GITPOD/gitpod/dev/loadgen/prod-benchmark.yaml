@@ -24,15 +24,15 @@ repos:
     cloneTarget: master
     # image: gitpod/workspace-full:latest
     workspaceImage: eu.gcr.io/gitpod-dev/workspace-images:63bf2cbae693a7ecf60a40fb1eadc90b83a99919a2a010019a336a81b0c54b84
-#  - cloneURL: https://github.com/gitpod-io/template-php-drupal-ddev
-    # image: (dockerfile)
-#    workspaceImage:
-#  - cloneURL: https://github.com/gitpod-io/template-php-laravel-mysql
-    # image: (dockerfile)
-    #workspaceImage:
-#  - cloneURL: https://github.com/gitpod-io/template-ruby-on-rails-postgres/
-    # image: (dockerfile)
-    #workspaceImage:
+  #  - cloneURL: https://github.com/gitpod-io/template-php-drupal-ddev
+  # image: (dockerfile)
+  #    workspaceImage:
+  #  - cloneURL: https://github.com/gitpod-io/template-php-laravel-mysql
+  # image: (dockerfile)
+  #workspaceImage:
+  #  - cloneURL: https://github.com/gitpod-io/template-ruby-on-rails-postgres/
+  # image: (dockerfile)
+  #workspaceImage:
   - cloneURL: https://github.com/gitpod-io/template-golang-cli/
     cloneTarget: main
     # image: gitpod/workspace-full:latest

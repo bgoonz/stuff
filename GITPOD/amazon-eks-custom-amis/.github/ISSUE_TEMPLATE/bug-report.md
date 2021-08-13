@@ -1,7 +1,6 @@
 ---
 name: Bug Report
 about: Report a bug encountered using the EKS Custom AMIs
-
 ---
 
 <!-- Please use this template while reporting a bug and provide as much info as possible. Please also search for existing open and closed issues that may answer your question. Thanks!-->
@@ -15,6 +14,7 @@ about: Report a bug encountered using the EKS Custom AMIs
 **Anything else we need to know?**:
 
 **Environment**:
+
 - OS:
 - OS Version:
 - EKS Version:

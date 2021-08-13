@@ -1,23 +1,24 @@
 ---
 title: Remove Outside Collaborators
-description: Monitors and instantly removes any outside collaborators added to your
+description:
+  Monitors and instantly removes any outside collaborators added to your
   Organization.
 slug: remove-outside-collaborators
 screenshots:
-- https://user-images.githubusercontent.com/7875028/44161210-a17c2980-a08a-11e8-8adc-3ef69031d67c.png
+  - https://user-images.githubusercontent.com/7875028/44161210-a17c2980-a08a-11e8-8adc-3ef69031d67c.png
 authors:
-- hollywood
+  - hollywood
 repository: hollywood/remove-outside-collaborators
 host: https://remove-outside-collaborators.herokuapp.com
 stars: 5
 updated: 2018-08-08 15:57:39 UTC
 installations: 13
 organizations:
-- times
-- telus
-- pivotal
-- Hollywood
-- acrlewis
+  - times
+  - telus
+  - pivotal
+  - Hollywood
+  - acrlewis
 ---
 
 # Remove Outside Collaborators
@@ -55,17 +56,16 @@ monitorOnly: true
 enableCollaboratorRemoval: true
 
 # Issue Title when an Outside Collaborator is added
-removedIssueTitle: '[CRITICAL] An Outside Collaborator has been added to this Repository!'
+removedIssueTitle: "[CRITICAL] An Outside Collaborator has been added to this Repository!"
 
 # Issue Body when an Outside Collaborator is added
-removedIssueBody: 'NOTE: Outside Collaborators are disabled for this organization! <br/> This member has been removed. Please contact an admin to override.'
+removedIssueBody: "NOTE: Outside Collaborators are disabled for this organization! <br/> This member has been removed. Please contact an admin to override."
 
 # Issue Title when monitor mode is enabled
-monitorIssueTitle: '[CRITICAL] Outside Collaborator Added'
+monitorIssueTitle: "[CRITICAL] Outside Collaborator Added"
 
 # Issue Body when monitor mode is enable
-monitorIssueBody: 'Please note that the adding of Outside Collaborators is prohibited!'
-
+monitorIssueBody: "Please note that the adding of Outside Collaborators is prohibited!"
 # Users/Groups that should be cc'ed on the issue. Should be users/groups separated by a space.
 # ccList: '@user123 @user456'
 

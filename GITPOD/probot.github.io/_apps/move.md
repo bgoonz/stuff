@@ -3,26 +3,26 @@ title: Move Issues
 description: Moves issues between repositories.
 slug: move
 screenshots:
-- https://raw.githubusercontent.com/dessant/move-issues/master/assets/source-issue.png
-- https://raw.githubusercontent.com/dessant/move-issues/master/assets/target-issue.png
+  - https://raw.githubusercontent.com/dessant/move-issues/master/assets/source-issue.png
+  - https://raw.githubusercontent.com/dessant/move-issues/master/assets/target-issue.png
 authors:
-- dessant
+  - dessant
 repository: dessant/move-issues
 host: https://probot-move-issues.glitch.me
 stars: 25
 updated: 2018-07-23 18:25:00 UTC
 installations: 82
 organizations:
-- ethereum
-- Homebrew
-- atom
-- flutter
-- adobe
-- videojs
-- yiisoft
-- home-assistant
-- kivy
-- tidyverse
+  - ethereum
+  - Homebrew
+  - atom
+  - flutter
+  - adobe
+  - videojs
+  - yiisoft
+  - home-assistant
+  - kivy
+  - tidyverse
 ---
 
 A GitHub App that moves issues between repositories.
@@ -36,8 +36,8 @@ A GitHub App that moves issues between repositories.
 
 Users must have the following permissions in order to move issues:
 
-* Write access to the source repository
-* Write access to the target repository (when the source or target repository
+- Write access to the source repository
+- Write access to the target repository (when the source or target repository
   is private, or when they have different owners)
 
 #### Configuration
@@ -63,7 +63,6 @@ mentionAuthors: true
 
 # Preserve mentions in the issue content
 keepContentMentions: false
-
 # Set custom aliases for targets
 # aliases:
 #   r: repo

@@ -8,9 +8,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.SelectAccountPayload = void 0;
 var SelectAccountPayload;
 (function (SelectAccountPayload) {
-    function is(data) {
-        return typeof data === "object" && "currentUser" in data && "otherUser" in data;
-    }
-    SelectAccountPayload.is = is;
-})(SelectAccountPayload = exports.SelectAccountPayload || (exports.SelectAccountPayload = {}));
+  function is(data) {
+    return (
+      typeof data === "object" && "currentUser" in data && "otherUser" in data
+    );
+  }
+  SelectAccountPayload.is = is;
+})(
+  (SelectAccountPayload =
+    exports.SelectAccountPayload || (exports.SelectAccountPayload = {}))
+);
 //# sourceMappingURL=auth.js.map

@@ -46,4 +46,3 @@ deactivate_vacation:
     accesspoint_id:
       description: The ID of the Homematic IP Access Point
       example: 3014xxxxxxxxxxxxxxxxxxxx
-

@@ -3,17 +3,17 @@ title: Issue Complete
 description: Marks incomplete issues with a label and comment
 slug: issue-complete
 screenshots:
-- https://user-images.githubusercontent.com/8315038/37742479-cc18daaa-2d33-11e8-886e-6de63df96edd.png
+  - https://user-images.githubusercontent.com/8315038/37742479-cc18daaa-2d33-11e8-886e-6de63df96edd.png
 authors:
-- szeck87
+  - szeck87
 repository: szeck87/issue-complete
 host: https://issue-complete.glitch.me
 stars: 2
 updated: 2018-07-16 16:14:29 UTC
 installations: 6
 organizations:
-- Maatwebsite
-- Glavin001
+  - Maatwebsite
+  - Glavin001
 ---
 
 ## What It Does
@@ -39,7 +39,7 @@ commentText: >
   And more text here.
 
 # Whether or not to ensure all checkboxes are checked
-checkCheckboxes: true  
+checkCheckboxes: true
 
 keywords:
   - gist

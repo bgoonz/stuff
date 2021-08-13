@@ -8,28 +8,28 @@ deck:
     logo: "/static/extensions/branding/logo.png"
   spyglass:
     lenses:
-    - lens:
-        name: metadata
-      required_files:
-      - started.json|finished.json
-    - lens:
-        config:
-        name: buildlog
-      required_files:
-      - build-log.txt
-    - lens:
-        name: podinfo
-      required_files:
-      - podinfo.json
+      - lens:
+          name: metadata
+        required_files:
+          - started.json|finished.json
+      - lens:
+          config:
+          name: buildlog
+        required_files:
+          - build-log.txt
+      - lens:
+          name: podinfo
+        required_files:
+          - podinfo.json
 
 plank:
   job_url_prefix_config:
     "*": https://prow.gitpod-dev.com/view/
   report_templates:
-    '*': >-
-        [Full PR test history](https://prow.gitpod-dev.com/pr-history?org={{.Spec.Refs.Org}}&repo={{.Spec.Refs.Repo}}&pr={{with index .Spec.Refs.Pulls 0}}{{.Number}}{{end}}).
-        [Your PR dashboard](https://prow.gitpod-dev.com/pr?query=is:pr+state:open+author:{{with
-        index .Spec.Refs.Pulls 0}}{{.Author}}{{end}}).
+    "*": >-
+      [Full PR test history](https://prow.gitpod-dev.com/pr-history?org={{.Spec.Refs.Org}}&repo={{.Spec.Refs.Repo}}&pr={{with index .Spec.Refs.Pulls 0}}{{.Number}}{{end}}).
+      [Your PR dashboard](https://prow.gitpod-dev.com/pr?query=is:pr+state:open+author:{{with
+      index .Spec.Refs.Pulls 0}}{{.Author}}{{end}}).
   default_decoration_configs:
     "*":
       gcs_configuration:
@@ -49,39 +49,39 @@ tide:
     gitpod-io/gitpod-test-repo: rebase
     gitpod-io/gitbot: rebase
   queries:
-  - repos:
-    - gitpod-io/gitpod
-    labels:
-    - lgtm
-    - approved
-    missingLabels:
-    # no one's setting this label yet because we don't have the external needs-rebase plugin set up yet
-    - needs-rebase
-    - do-not-merge/hold
-    - do-not-merge/work-in-progress
-    - do-not-merge/invalid-owners-file
-  - repos:
-    - gitpod-io/gitpod-test-repo
-    labels:
-    - lgtm
-    - approved
-    missingLabels:
-    # no one's setting this label yet because we don't have the external needs-rebase plugin set up yet
-    - needs-rebase
-    - do-not-merge/hold
-    - do-not-merge/work-in-progress
-    - do-not-merge/invalid-owners-file
-  - repos:
-    - gitpod-io/gitbot
-    labels:
-    - lgtm
-    - approved
-    missingLabels:
-    # no one's setting this label yet because we don't have the external needs-rebase plugin set up yet
-    - needs-rebase
-    - do-not-merge/hold
-    - do-not-merge/work-in-progress
-    - do-not-merge/invalid-owners-file
+    - repos:
+        - gitpod-io/gitpod
+      labels:
+        - lgtm
+        - approved
+      missingLabels:
+        # no one's setting this label yet because we don't have the external needs-rebase plugin set up yet
+        - needs-rebase
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - do-not-merge/invalid-owners-file
+    - repos:
+        - gitpod-io/gitpod-test-repo
+      labels:
+        - lgtm
+        - approved
+      missingLabels:
+        # no one's setting this label yet because we don't have the external needs-rebase plugin set up yet
+        - needs-rebase
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - do-not-merge/invalid-owners-file
+    - repos:
+        - gitpod-io/gitbot
+      labels:
+        - lgtm
+        - approved
+      missingLabels:
+        # no one's setting this label yet because we don't have the external needs-rebase plugin set up yet
+        - needs-rebase
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - do-not-merge/invalid-owners-file
   context_options:
     # Treat unknown contexts as optional
     skip-unknown-contexts: true
@@ -90,7 +90,7 @@ tide:
         repos:
           "gitpod-io/gitpod":
             required-contexts:
-             - "ci/werft/build"
+              - "ci/werft/build"
 
 sinker:
   resync_period: 1m

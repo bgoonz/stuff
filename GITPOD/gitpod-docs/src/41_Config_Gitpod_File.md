@@ -1,8 +1,8 @@
 ## Gitpod Config File
 
- * [Checked-in Gitpod Config File](#checked-in-gitpod-file)
- * [definitely-gp Repository](#definitely-gp-repository)
- * [Inferred Gitpod Config File](#inferred-gitpod-file)
+- [Checked-in Gitpod Config File](#checked-in-gitpod-file)
+- [definitely-gp Repository](#definitely-gp-repository)
+- [Inferred Gitpod Config File](#inferred-gitpod-file)
 
 A workspace gets configured through a `.gitpod.yml` file written in YAML syntax. Here's an example:
 
@@ -43,6 +43,7 @@ analyzing your project and using good common defaults.
 
 Gitpod comes with a cli, that walks you through the initial creation of a `.gitpod.yml` file.
 Open a terminal and type
+
 ```sh
 gp init
 ```

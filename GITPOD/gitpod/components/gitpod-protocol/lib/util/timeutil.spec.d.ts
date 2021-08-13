@@ -4,7 +4,7 @@
  * See License-AGPL.txt in the project root for license information.
  */
 export declare class TimeutilSpec {
-    testTimeutil(): void;
-    isOneMonthLater(from: Date, day: number, expectation: Date): void;
+  testTimeutil(): void;
+  isOneMonthLater(from: Date, day: number, expectation: Date): void;
 }
 //# sourceMappingURL=timeutil.spec.d.ts.map

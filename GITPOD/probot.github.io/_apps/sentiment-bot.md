@@ -1,28 +1,29 @@
 ---
 title: Sentiment Bot
-description: Replies to toxic comments with a maintainer designated reply and a link
+description:
+  Replies to toxic comments with a maintainer designated reply and a link
   to the repo's code of conduct
 slug: sentiment-bot
 screenshots:
-- https://user-images.githubusercontent.com/13410355/29323857-fcfe4b4e-8196-11e7-9a08-6184fd46edbb.png
+  - https://user-images.githubusercontent.com/13410355/29323857-fcfe4b4e-8196-11e7-9a08-6184fd46edbb.png
 stars: 35
 authors:
-- hiimbex
+  - hiimbex
 repository: behaviorbot/sentiment-bot
 updated: 2018-06-21 18:27:58 UTC
 host: https://probot-sentiment-bot.herokuapp.com
 installations: 77
 organizations:
-- nlohmann
-- probot
-- git-for-windows
-- tiaanduplessis
-- MvvmCross
-- modo-studio
-- jahirfiquitiva
-- imolorhe
-- pliablepixels
-- u3u
+  - nlohmann
+  - probot
+  - git-for-windows
+  - tiaanduplessis
+  - MvvmCross
+  - modo-studio
+  - jahirfiquitiva
+  - imolorhe
+  - pliablepixels
+  - u3u
 ---
 
 Replies to toxic comments with a maintainer designated reply and a link to the repo's code of conduct. It does so by taking data from a `.github/config.yml`.
@@ -33,8 +34,10 @@ You can tell from this example just how toxic I am 😜
 ## Usage
 
 1. Install the bot on the intended repositories. The app requires the following **Permissions and Events**:
+
 - Issues: **Read & Write**
   - **Issue Comment** events
+
 2. Add a `.github/config.yml` file that contains the following:
 
 ```yml
@@ -50,4 +53,5 @@ sentimentBotReplyComment: >
 
 # Note: the bot will only work if your repository has a Code of Conduct
 ```
+
 3. Be sure to check out the [Perspective API](https://www.perspectiveapi.com/) before choosing your toxicity threshold to get a feel for what kind of comments would register at what toxicity threshold.

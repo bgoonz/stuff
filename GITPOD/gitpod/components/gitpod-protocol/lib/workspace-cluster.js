@@ -10,7 +10,11 @@ var fs = require("fs");
 var env_1 = require("./env");
 var TLSConfig;
 (function (TLSConfig) {
-    TLSConfig.loadFromBase64File = function (path) { return fs.readFileSync(env_1.filePathTelepresenceAware(path)).toString("base64"); };
-})(TLSConfig = exports.TLSConfig || (exports.TLSConfig = {}));
+  TLSConfig.loadFromBase64File = function (path) {
+    return fs
+      .readFileSync(env_1.filePathTelepresenceAware(path))
+      .toString("base64");
+  };
+})((TLSConfig = exports.TLSConfig || (exports.TLSConfig = {})));
 exports.WorkspaceClusterDB = Symbol("WorkspaceClusterDB");
 //# sourceMappingURL=workspace-cluster.js.map

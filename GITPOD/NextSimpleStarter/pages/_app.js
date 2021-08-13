@@ -8,7 +8,7 @@ import initStore from '../utils/store'
 
 /* debug to log how the store is being used */
 export default withRedux(initStore, {
-	debug: typeof window !== 'undefined' && process.env.NODE_ENV !== 'production'
+	debug: typeof window !== 'undefined' && process.env.NODE_ENV !== 'production',
 })(
 	class MyApp extends App {
 		static async getInitialProps({ Component, ctx }) {
@@ -17,8 +17,8 @@ export default withRedux(initStore, {
 					// Call page-level getInitialProps
 					...(Component.getInitialProps
 						? await Component.getInitialProps(ctx)
-						: {})
-				}
+						: {}),
+				},
 			}
 		}
 

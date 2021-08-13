@@ -7,8 +7,8 @@
 import { ContainerModule } from "inversify";
 import { GitpodServerImpl } from "../../src/workspace/gitpod-server-impl";
 import { GitpodServerEEImpl } from "./workspace/gitpod-server-impl";
-import { GraphQLController } from './graphql/graphql-controller';
-import { GraphQLResolvers } from './graphql/resolvers';
+import { GraphQLController } from "./graphql/graphql-controller";
+import { GraphQLResolvers } from "./graphql/resolvers";
 import { Server } from "../../src/server";
 import { ServerEE } from "./server";
 import { UserController } from "../../src/user/user-controller";
@@ -38,8 +38,16 @@ import { WorkspaceHealthMonitoring } from "./workspace/workspace-health-monitori
 import { EnvEE } from "./env";
 import { Env } from "../../src/env";
 import { AccountService } from "@gitpod/gitpod-payment-endpoint/lib/accounting/account-service";
-import { AccountServiceImpl, SubscriptionService, TeamSubscriptionService } from "@gitpod/gitpod-payment-endpoint/lib/accounting";
-import { ChargebeeProvider, ChargebeeProviderOptions, UpgradeHelper } from "@gitpod/gitpod-payment-endpoint/lib/chargebee";
+import {
+  AccountServiceImpl,
+  SubscriptionService,
+  TeamSubscriptionService,
+} from "@gitpod/gitpod-payment-endpoint/lib/accounting";
+import {
+  ChargebeeProvider,
+  ChargebeeProviderOptions,
+  UpgradeHelper,
+} from "@gitpod/gitpod-payment-endpoint/lib/chargebee";
 import { ChargebeeCouponComputer } from "./user/coupon-computer";
 import { ChargebeeService } from "./user/chargebee-service";
 import { EligibilityService } from "./user/eligibility-service";
@@ -50,22 +58,32 @@ import { WorkspaceStarterEE } from "./workspace/workspace-starter";
 import { WorkspaceStarter } from "../../src/workspace/workspace-starter";
 import { UserDeletionService } from "../../src/user/user-deletion-service";
 import { BlockedUserFilter } from "../../src/auth/blocked-user-filter";
-import { EMailDomainService, EMailDomainServiceImpl } from "./auth/email-domain-service";
+import {
+  EMailDomainService,
+  EMailDomainServiceImpl,
+} from "./auth/email-domain-service";
 import { UserDeletionServiceEE } from "./user/user-deletion-service";
 import { GitHubAppSupport } from "./github/github-app-support";
 
-export const productionEEContainerModule = new ContainerModule((bind, unbind, isBound, rebind) => {
+export const productionEEContainerModule = new ContainerModule(
+  (bind, unbind, isBound, rebind) => {
     rebind(Server).to(ServerEE).inSingletonScope();
     rebind(UserService).to(UserServiceEE).inSingletonScope();
     rebind(WorkspaceFactory).to(WorkspaceFactoryEE).inSingletonScope();
-    rebind(MonitoringEndpointsApp).to(MonitoringEndpointsAppEE).inSingletonScope();
+    rebind(MonitoringEndpointsApp)
+      .to(MonitoringEndpointsAppEE)
+      .inSingletonScope();
 
     bind(WorkspaceHealthMonitoring).toSelf().inSingletonScope();
     bind(PrebuildManager).toSelf().inSingletonScope();
     bind(PrebuildRateLimiter).toSelf().inSingletonScope();
     bind(PrebuildQueueMaintainer).toSelf().inSingletonScope();
-    bind(IPrefixContextParser).to(StartPrebuildContextParser).inSingletonScope();
-    bind(IPrefixContextParser).to(StartIncrementalPrebuildContextParser).inSingletonScope();
+    bind(IPrefixContextParser)
+      .to(StartPrebuildContextParser)
+      .inSingletonScope();
+    bind(IPrefixContextParser)
+      .to(StartIncrementalPrebuildContextParser)
+      .inSingletonScope();
     bind(GithubApp).toSelf().inSingletonScope();
     bind(GitHubAppSupport).toSelf().inSingletonScope();
     bind(GithubAppRules).toSelf().inSingletonScope();
@@ -88,7 +106,9 @@ export const productionEEContainerModule = new ContainerModule((bind, unbind, is
     bind(EnvEE).toSelf().inSingletonScope();
     rebind(Env).to(EnvEE).inSingletonScope();
 
-    rebind(MessageBusIntegration).to(MessageBusIntegrationEE).inSingletonScope();
+    rebind(MessageBusIntegration)
+      .to(MessageBusIntegrationEE)
+      .inSingletonScope();
     rebind(HostContainerMapping).to(HostContainerMappingEE).inSingletonScope();
     bind(EMailDomainService).to(EMailDomainServiceImpl).inSingletonScope();
     rebind(BlockedUserFilter).toService(EMailDomainService);
@@ -107,11 +127,14 @@ export const productionEEContainerModule = new ContainerModule((bind, unbind, is
 
     // payment/billing
     bind(ChargebeeProvider).toSelf().inSingletonScope();
-    bind(ChargebeeProviderOptions).toDynamicValue(ctx => {
+    bind(ChargebeeProviderOptions)
+      .toDynamicValue((ctx) => {
         const env = ctx.container.get(EnvEE);
         return env.chargebeeProviderOptions;
-    }).inSingletonScope();
+      })
+      .inSingletonScope();
     bind(UpgradeHelper).toSelf().inSingletonScope();
     bind(ChargebeeCouponComputer).toSelf().inSingletonScope();
     bind(ChargebeeService).toSelf().inSingletonScope();
-});
+  }
+);

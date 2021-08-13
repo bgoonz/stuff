@@ -2,9 +2,7 @@
   "domain": "folder_watcher",
   "name": "Folder watcher",
   "documentation": "https://www.home-assistant.io/components/folder_watcher",
-  "requirements": [
-    "watchdog==0.8.3"
-  ],
+  "requirements": ["watchdog==0.8.3"],
   "dependencies": [],
   "codeowners": []
 }

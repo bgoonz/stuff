@@ -9,9 +9,9 @@ components:
       containerd:
         socket: /run/k3s/containerd/containerd.sock
       nodeRoots:
-      - /var/lib
-      - /run/k3s/containerd/io.containerd.runtime.v1.linux
-      - /run/k3s/containerd/io.containerd.runtime.v2.task/k8s.io
+        - /var/lib
+        - /run/k3s/containerd/io.containerd.runtime.v1.linux
+        - /run/k3s/containerd/io.containerd.runtime.v2.task/k8s.io
     userNamespaces:
       fsShift: fuse
   workspace:

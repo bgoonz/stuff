@@ -25,7 +25,7 @@ nuki_lock_n_go:
   fields:
     entity_id:
       description: Entity id of the Nuki lock.
-      example: 'lock.front_door'
+      example: "lock.front_door"
     unlatch:
       description: Whether to unlatch the lock.
       example: false
@@ -35,14 +35,14 @@ nuki_unlatch:
   fields:
     entity_id:
       description: Entity id of the Nuki lock.
-      example: 'lock.front_door'
+      example: "lock.front_door"
 
 lock:
   description: Lock all or specified locks.
   fields:
     entity_id:
       description: Name of lock to lock.
-      example: 'lock.front_door'
+      example: "lock.front_door"
     code:
       description: An optional code to lock the lock with.
       example: 1234
@@ -65,7 +65,7 @@ unlock:
   fields:
     entity_id:
       description: Name of lock to unlock.
-      example: 'lock.front_door'
+      example: "lock.front_door"
     code:
       description: An optional code to unlock the lock with.
       example: 1234
@@ -75,7 +75,7 @@ wink_set_lock_vacation_mode:
   fields:
     entity_id:
       description: Name of lock to unlock.
-      example: 'lock.front_door'
+      example: "lock.front_door"
     enabled:
       description: enable or disable. true or false.
       example: true
@@ -85,7 +85,7 @@ wink_set_lock_alarm_mode:
   fields:
     entity_id:
       description: Name of lock to unlock.
-      example: 'lock.front_door'
+      example: "lock.front_door"
     mode:
       description: One of tamper, activity, or forced_entry.
       example: tamper
@@ -95,7 +95,7 @@ wink_set_lock_alarm_sensitivity:
   fields:
     entity_id:
       description: Name of lock to unlock.
-      example: 'lock.front_door'
+      example: "lock.front_door"
     sensitivity:
       description: One of low, medium_low, medium, medium_high, high.
       example: medium
@@ -105,7 +105,7 @@ wink_set_lock_alarm_state:
   fields:
     entity_id:
       description: Name of lock to unlock.
-      example: 'lock.front_door'
+      example: "lock.front_door"
     enabled:
       description: enable or disable. true or false.
       example: true
@@ -115,7 +115,7 @@ wink_set_lock_beeper_state:
   fields:
     entity_id:
       description: Name of lock to unlock.
-      example: 'lock.front_door'
+      example: "lock.front_door"
     enabled:
       description: enable or disable. true or false.
       example: true
@@ -125,7 +125,7 @@ wink_add_new_lock_key_code:
   fields:
     entity_id:
       description: Name of lock to unlock.
-      example: 'lock.front_door'
+      example: "lock.front_door"
     name:
       description: name of the new key code.
       example: Bob

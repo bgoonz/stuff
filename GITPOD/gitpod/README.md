@@ -38,6 +38,7 @@ Gitpod is provided as a [managed Saas version](https://gitpod.io) with a free su
 ## Getting Started
 
 You can start using Gitpod with one or more of the following ways:
+
 1. [Use a Prefixed URL](https://www.gitpod.io/docs/getting-started/#prefixed-url)
 1. [Install Browser Extension](https://www.gitpod.io/docs/getting-started#browser-extension)
 1. [Enable GitLab Integration](https://www.gitpod.io/docs/gitlab-integration#gitlab-integration)
@@ -65,9 +66,9 @@ You can upvote [popular feature requests](https://github.com/gitpod-io/gitpod/is
 
 We work with quarterly roadmaps in monthly iterations.
 
- - [Development Process](https://www.notion.so/gitpod/Development-Process-2b105f72847440ec8f4a1d87ac25801b)
- - [Product Roadmap](https://www.notion.so/gitpod/Product-Roadmap-b9b5eac0a15147ac8d2dd25cf0519203)
- - [Architectural Roadmap](https://www.notion.so/gitpod/Architecture-Roadmap-4669b58fc9cc45488a0a094d2a596886)
+- [Development Process](https://www.notion.so/gitpod/Development-Process-2b105f72847440ec8f4a1d87ac25801b)
+- [Product Roadmap](https://www.notion.so/gitpod/Product-Roadmap-b9b5eac0a15147ac8d2dd25cf0519203)
+- [Architectural Roadmap](https://www.notion.so/gitpod/Architecture-Roadmap-4669b58fc9cc45488a0a094d2a596886)
 
 ## Related Projects
 

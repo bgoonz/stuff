@@ -4,22 +4,22 @@
  * See License-AGPL.txt in the project root for license information.
  */
 export interface SelectAccountPayload {
-    currentUser: {
-        name: string;
-        avatarUrl: string;
-        authHost: string;
-        authName: string;
-        authProviderType: string;
-    };
-    otherUser: {
-        name: string;
-        avatarUrl: string;
-        authHost: string;
-        authName: string;
-        authProviderType: string;
-    };
+  currentUser: {
+    name: string;
+    avatarUrl: string;
+    authHost: string;
+    authName: string;
+    authProviderType: string;
+  };
+  otherUser: {
+    name: string;
+    avatarUrl: string;
+    authHost: string;
+    authName: string;
+    authProviderType: string;
+  };
 }
 export declare namespace SelectAccountPayload {
-    function is(data: any): data is SelectAccountPayload;
+  function is(data: any): data is SelectAccountPayload;
 }
 //# sourceMappingURL=auth.d.ts.map

@@ -4,7 +4,5 @@
   "documentation": "https://www.home-assistant.io/components/filter",
   "requirements": [],
   "dependencies": [],
-  "codeowners": [
-    "@dgomes"
-  ]
+  "codeowners": ["@dgomes"]
 }

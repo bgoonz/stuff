@@ -1,0 +1,90 @@
+.ui-widget {
+	font-size: 12px;
+}
+
+.ui-widget-header {
+	/* Remove tab header border */
+	border: none;
+}
+
+:focus {
+	/* Remove outline on tab when it is selected */
+	outline: none;
+}
+
+.header {
+	color: #2779aa;
+}
+
+.wire-frame {
+	border: 1px solid #aed0ea;
+	width: 500px;
+	padding: 10px;
+}
+
+.component-frame {
+	border: 1px solid #aed0ea;
+	padding: 2px;
+}
+
+textarea {
+	border-color: #aed0ea;
+	padding: 0;
+	margin: 0;
+	width: 525px;
+}
+
+.footnote {
+	font-size: 10px;
+	padding-top: 5px;;
+}
+
+button {
+	padding-bottom: 3px;
+	margin-left: 4px;
+}
+
+.graphSubtitle {
+	color: #6d91c6;
+	font-size: small;
+	text-align: center;
+}
+
+.graphTooltip {
+	position: absolute;
+	display: none;
+	border: 2px solid #4572a7;
+	padding: 2px;
+	background-color: #ffffff;
+	font-size: 14px;
+	font-weight: 600;
+	font-family: MS, serif;
+	opacity: 0.80;
+}
+
+.tagDialog {
+	display:none;
+}
+
+a
+{
+    color: #2779aa;
+}
+
+.flotChartSize{
+	width: 100%;
+	height:300px;
+}
+
+.metricNameTable input
+{
+    width: 320px;
+}
+
+.cursorWaiting * {
+	cursor: wait;
+}
+
+.cursorNormal * {
+	cursor: auto;
+}

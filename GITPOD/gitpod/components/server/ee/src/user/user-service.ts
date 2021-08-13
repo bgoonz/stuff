@@ -4,7 +4,11 @@
  * See License.enterprise.txt in the project root folder.
  */
 
-import { UserService, CheckSignUpParams, CheckTermsParams } from "../../../src/user/user-service";
+import {
+  UserService,
+  CheckSignUpParams,
+  CheckTermsParams,
+} from "../../../src/user/user-service";
 import { User, WorkspaceTimeoutDuration } from "@gitpod/gitpod-protocol";
 import { inject } from "inversify";
 import { LicenseEvaluator } from "@gitpod/licensor/lib";
@@ -14,55 +18,60 @@ import { EligibilityService } from "./eligibility-service";
 import { EnvEE } from "../env";
 
 export class UserServiceEE extends UserService {
-    @inject(EnvEE) protected readonly env: EnvEE;
-    @inject(LicenseEvaluator) protected readonly licenseEvaluator: LicenseEvaluator;
-    @inject(EligibilityService) protected readonly eligibilityService: EligibilityService;
+  @inject(EnvEE) protected readonly env: EnvEE;
+  @inject(LicenseEvaluator)
+  protected readonly licenseEvaluator: LicenseEvaluator;
+  @inject(EligibilityService)
+  protected readonly eligibilityService: EligibilityService;
 
-    async getDefaultWorkspaceTimeout(user: User, date: Date): Promise<WorkspaceTimeoutDuration> {
-        if (this.env.enablePayment) {
-            // the SAAS case
-            return this.eligibilityService.getDefaultWorkspaceTimeout(user, date);
-        }
-
-        // the self-hosted case
-        if (!this.licenseEvaluator.isEnabled(Feature.FeatureSetTimeout)) {
-            return "30m";
-        }
-
-        return "60m";
+  async getDefaultWorkspaceTimeout(
+    user: User,
+    date: Date
+  ): Promise<WorkspaceTimeoutDuration> {
+    if (this.env.enablePayment) {
+      // the SAAS case
+      return this.eligibilityService.getDefaultWorkspaceTimeout(user, date);
     }
 
-    async checkSignUp(params: CheckSignUpParams) {
-
-        // todo@at: check if we need an optimization for SaaS here. used to be a no-op there.
-
-        // 1. check the license
-        const userCount = await this.userDb.getUserCount(true);
-        if (!this.licenseEvaluator.hasEnoughSeats(userCount)) {
-            const msg = `Maximum number of users permitted by the license exceeded`;
-            throw AuthException.create("Cannot sign up", msg, { userCount, params });
-        }
-
-        // 2. check defaults
-        await super.checkSignUp(params);
+    // the self-hosted case
+    if (!this.licenseEvaluator.isEnabled(Feature.FeatureSetTimeout)) {
+      return "30m";
     }
 
-    async checkTermsAcceptanceRequired(params: CheckTermsParams): Promise<boolean> {
-        ///////////////////////////////////////////////////////////////////////////
-        // Currently, we don't check for ToS on login.
-        ///////////////////////////////////////////////////////////////////////////
+    return "60m";
+  }
 
-        return false;
+  async checkSignUp(params: CheckSignUpParams) {
+    // todo@at: check if we need an optimization for SaaS here. used to be a no-op there.
+
+    // 1. check the license
+    const userCount = await this.userDb.getUserCount(true);
+    if (!this.licenseEvaluator.hasEnoughSeats(userCount)) {
+      const msg = `Maximum number of users permitted by the license exceeded`;
+      throw AuthException.create("Cannot sign up", msg, { userCount, params });
     }
 
-    async checkTermsAccepted(user: User) {
-        // called from GitpodServer implementation
+    // 2. check defaults
+    await super.checkSignUp(params);
+  }
 
-        ///////////////////////////////////////////////////////////////////////////
-        // Currently, we don't check for ToS on Gitpod API calls.
-        ///////////////////////////////////////////////////////////////////////////
+  async checkTermsAcceptanceRequired(
+    params: CheckTermsParams
+  ): Promise<boolean> {
+    ///////////////////////////////////////////////////////////////////////////
+    // Currently, we don't check for ToS on login.
+    ///////////////////////////////////////////////////////////////////////////
 
-        return true;
-    }
+    return false;
+  }
 
+  async checkTermsAccepted(user: User) {
+    // called from GitpodServer implementation
+
+    ///////////////////////////////////////////////////////////////////////////
+    // Currently, we don't check for ToS on Gitpod API calls.
+    ///////////////////////////////////////////////////////////////////////////
+
+    return true;
+  }
 }

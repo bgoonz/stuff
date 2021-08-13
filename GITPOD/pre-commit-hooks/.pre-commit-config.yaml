@@ -9,7 +9,7 @@ repos:
     rev: 7.0.2
     hooks:
       - id: md-toc
-        args: [-p, --skip-lines, '1', commonmarker]
+        args: [-p, --skip-lines, "1", commonmarker]
 
   - repo: https://github.com/jumanjihouse/pre-commit-hooks
     rev: 2.1.0
@@ -19,8 +19,8 @@ repos:
           (?x)^(
             ci/fixtures/one-byte-binary
           )$
-      - id: git-check  # Configure in .gitattributes
-      - id: git-dirty  # Configure in .gitignore
+      - id: git-check # Configure in .gitattributes
+      - id: git-dirty # Configure in .gitignore
       - id: shellcheck
 
   - repo: local
@@ -29,14 +29,14 @@ repos:
         name: Detect if an email address needs to be added to mailmap
         language: script
         entry: pre_commit_hooks/check-mailmap
-        always_run: true  # Run on every commit.
-        exclude: .*       # Otherwise runs once per file.
+        always_run: true # Run on every commit.
+        exclude: .* # Otherwise runs once per file.
 
       - id: forbid-binary
         name: forbid-binary (local)
         language: script
         entry: pre_commit_hooks/forbid-binary
-        types: ['binary']
+        types: ["binary"]
         exclude: >
           (?x)^(
             ci/fixtures/one-byte-binary
@@ -59,7 +59,7 @@ repos:
         entry: pre_commit_hooks/require-ascii.py
         language: python
         types: [text]
-        exclude: ^ci/ansi$  # 3rd-party script
+        exclude: ^ci/ansi$ # 3rd-party script
 
       - id: shellcheck
         name: shellcheck (local)
@@ -80,7 +80,7 @@ repos:
     rev: v1.23.0
     hooks:
       - id: yamllint
-        args: ['--format', 'parsable', '--strict']
+        args: ["--format", "parsable", "--strict"]
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.1.0

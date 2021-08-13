@@ -1,0 +1,23 @@
+To install add the following lines to your .emacs file:
+
+(add-to-list 'load-path "/some/path")
+(require 'nu)
+
+I'd recommend also to install PAREDIT and PARENFACE modes and
+activate them for NU-MODE:
+
+(require 'paredit)
+(add-hook 'nu-mode-hook (lambda () (paredit-mode +1)) t)
+
+(require 'parenface)
+(set-face-foreground 'paren-face "SteelBlue")
+(add-hook 'nu-mode-hook (paren-face-add-support nu-font-lock-keywords))
+
+
+The hook for paredit-mode must be appended, not prepended, to the mode hook
+list, as it is usually done by default. This is because the 'heredoc' strings
+syntax support is made with help of the syntactic fontification API, and the
+mode itself adds a hook to properly fontificate 'heredoc' strings through the
+whole buffer when entering nu-mode.
+
+This is still an alpha version, that only has been tested under GNU Emacs 22.1.1. 

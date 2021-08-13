@@ -10,5 +10,7 @@
  *  - webview-1234-moccasin-ferret-155799b3.ws-eu01.gitpod.io (or any other string replacing webview)
  * @param hostname The hostname the request is headed to
  */
-export declare const parseWorkspaceIdFromHostname: (hostname: string) => string | undefined;
+export declare const parseWorkspaceIdFromHostname: (
+  hostname: string
+) => string | undefined;
 //# sourceMappingURL=parse-workspace-id.d.ts.map

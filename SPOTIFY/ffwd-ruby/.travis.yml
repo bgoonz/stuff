@@ -1,0 +1,6 @@
+language: ruby
+before_install:
+  - 'echo ''gem: --no-ri --no-rdoc'' > ~/.gemrc'
+rvm:
+  - 2.1.0
+script: tools/ci-build

@@ -20,9 +20,15 @@ var encryption_service_1 = require("./encryption-service");
  *  }).inSingletonScope();
  */
 var encryptionModule = function (bind) {
-    bind(key_provider_1.KeyProvider).to(key_provider_1.KeyProviderImpl).inSingletonScope();
-    bind(encryption_engine_1.EncryptionEngine).to(encryption_engine_1.EncryptionEngineImpl).inSingletonScope();
-    bind(encryption_service_1.EncryptionService).to(encryption_service_1.EncryptionServiceImpl).inSingletonScope();
+  bind(key_provider_1.KeyProvider)
+    .to(key_provider_1.KeyProviderImpl)
+    .inSingletonScope();
+  bind(encryption_engine_1.EncryptionEngine)
+    .to(encryption_engine_1.EncryptionEngineImpl)
+    .inSingletonScope();
+  bind(encryption_service_1.EncryptionService)
+    .to(encryption_service_1.EncryptionServiceImpl)
+    .inSingletonScope();
 };
 exports.encryptionModule = encryptionModule;
 //# sourceMappingURL=container-module.js.map

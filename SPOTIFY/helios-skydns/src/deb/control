@@ -1,0 +1,8 @@
+Package: helios-skydns
+Version: [[project.version]]
+Section: non-free/net
+Priority: optional
+Architecture: all
+Maintainer: Drew Csillag <drewc@spotify.com>
+Description: Helios Service Registration SkyDNS Adapter
+Distribution: development

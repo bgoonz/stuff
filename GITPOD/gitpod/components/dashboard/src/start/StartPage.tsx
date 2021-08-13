@@ -4,8 +4,8 @@
  * See License-AGPL.txt in the project root for license information.
  */
 
-import { useEffect } from 'react';
-import gitpodIcon from '../icons/gitpod.svg';
+import { useEffect } from "react";
+import gitpodIcon from "../icons/gitpod.svg";
 
 export enum StartPhase {
   Checking = 0,
@@ -15,7 +15,7 @@ export enum StartPhase {
   Running = 4,
   Stopping = 5,
   Stopped = 6,
-};
+}
 
 function getPhaseTitle(phase?: StartPhase, error?: StartWorkspaceError) {
   if (!!error) {
@@ -41,27 +41,29 @@ function getPhaseTitle(phase?: StartPhase, error?: StartWorkspaceError) {
   }
 }
 
-function ProgressBar(props: { phase: number, error: boolean }) {
+function ProgressBar(props: { phase: number; error: boolean }) {
   const { phase, error } = props;
-  return <div className="flex mt-4 mb-6">
-    {[1, 2, 3].map(i => {
-      let classes = 'h-2 w-10 mx-1 my-2 rounded-full';
-      if (i < phase) {
-        // Already passed this phase successfully
-        classes += ' bg-green-400';
-      } else if (i > phase) {
-        // Haven't reached this phase yet
-        classes += ' bg-gray-200 dark:bg-gray-800';
-      } else if (error) {
-        // This phase has failed
-        classes += ' bg-red-500';
-      } else {
-        // This phase is currently running
-        classes += ' bg-green-400 animate-pulse';
-      }
-      return <div key={'phase-' + i} className={classes} />;
-    })}
-  </div>;
+  return (
+    <div className="flex mt-4 mb-6">
+      {[1, 2, 3].map((i) => {
+        let classes = "h-2 w-10 mx-1 my-2 rounded-full";
+        if (i < phase) {
+          // Already passed this phase successfully
+          classes += " bg-green-400";
+        } else if (i > phase) {
+          // Haven't reached this phase yet
+          classes += " bg-gray-200 dark:bg-gray-800";
+        } else if (error) {
+          // This phase has failed
+          classes += " bg-red-500";
+        } else {
+          // This phase is currently running
+          classes += " bg-green-400 animate-pulse";
+        }
+        return <div key={"phase-" + i} className={classes} />;
+      })}
+    </div>
+  );
 }
 
 export interface StartPageProps {
@@ -80,17 +82,28 @@ export interface StartWorkspaceError {
 export function StartPage(props: StartPageProps) {
   const { phase, error } = props;
   let title = props.title || getPhaseTitle(phase, error);
-  useEffect(() => { document.title = 'Starting — Gitpod' }, []);
-  return <div className="w-screen h-screen align-middle">
-    <div className="flex flex-col mx-auto items-center text-center h-screen">
-      <div className="h-1/3"></div>
-      <img src={gitpodIcon} className={`h-16 flex-shrink-0 ${(error || phase === StartPhase.Stopped) ? '' : 'animate-bounce'}`} />
-      <h3 className="mt-8 text-xl">{title}</h3>
-      {typeof(phase) === 'number' && phase < StartPhase.Stopping && <ProgressBar phase={phase} error={!!error} />}
-      {error && <StartError error={error} />}
-      {props.children}
+  useEffect(() => {
+    document.title = "Starting — Gitpod";
+  }, []);
+  return (
+    <div className="w-screen h-screen align-middle">
+      <div className="flex flex-col mx-auto items-center text-center h-screen">
+        <div className="h-1/3"></div>
+        <img
+          src={gitpodIcon}
+          className={`h-16 flex-shrink-0 ${
+            error || phase === StartPhase.Stopped ? "" : "animate-bounce"
+          }`}
+        />
+        <h3 className="mt-8 text-xl">{title}</h3>
+        {typeof phase === "number" && phase < StartPhase.Stopping && (
+          <ProgressBar phase={phase} error={!!error} />
+        )}
+        {error && <StartError error={error} />}
+        {props.children}
+      </div>
     </div>
-  </div>;
+  );
 }
 
 function StartError(props: { error: StartWorkspaceError }) {

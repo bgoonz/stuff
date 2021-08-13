@@ -2,11 +2,7 @@
   "domain": "mastodon",
   "name": "Mastodon",
   "documentation": "https://www.home-assistant.io/components/mastodon",
-  "requirements": [
-    "Mastodon.py==1.4.6"
-  ],
+  "requirements": ["Mastodon.py==1.4.6"],
   "dependencies": [],
-  "codeowners": [
-    "@fabaff"
-  ]
+  "codeowners": ["@fabaff"]
 }

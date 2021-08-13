@@ -39,9 +39,17 @@ packages:
     type: generic
     config:
       commands:
-        - ["curl", "-OL", "https://matt.ucc.asn.au/dropbear/dropbear-2020.81.tar.bz2"]
+        - [
+            "curl",
+            "-OL",
+            "https://matt.ucc.asn.au/dropbear/dropbear-2020.81.tar.bz2",
+          ]
         - ["tar", "xjf", "dropbear-2020.81.tar.bz2"]
-        - ["sh", "-c", "cd dropbear-2020.81; ./configure --enable-static && make"]
+        - [
+            "sh",
+            "-c",
+            "cd dropbear-2020.81; ./configure --enable-static && make",
+          ]
         - ["mv", "dropbear-2020.81/dropbear", "dropbear"]
         - ["mv", "dropbear-2020.81/dropbearkey", "dropbearkey"]
         - ["rm", "-rf", "dropbear-2020.81*"]

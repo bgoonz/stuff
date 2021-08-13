@@ -1,11 +1,11 @@
 {
-    "config": {
-        "step": {
-            "init": {
-                "data": {
-                    "port": "Port"
-                }
-            }
+  "config": {
+    "step": {
+      "init": {
+        "data": {
+          "port": "Port"
         }
+      }
     }
+  }
 }

@@ -6,6 +6,7 @@ affectedsystems:
   - workspaces
 resolved: true
 ---
+
 Cannot create new workspaces for GitLab repositories. Instead, Gitpod shows "Error: Cannot read property 'Symbol(Symbol.iterator)' of undefined".
 
 https://github.com/gitpod-io/gitpod/issues/2371

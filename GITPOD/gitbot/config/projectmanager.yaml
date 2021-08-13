@@ -1,7 +1,7 @@
 orgsRepos:
   "gitpod-io":
     fromRepos:
-    - gitpod-io/gitpod
+      - gitpod-io/gitpod
     projects:
       "Engineering Groundwork":
         columns:

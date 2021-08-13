@@ -75,4 +75,3 @@ managedNodeGroups:
         - arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM
     launchTemplate:
       id: "lt-00e3b031af66b3766"
-  

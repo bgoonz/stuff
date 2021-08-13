@@ -1,0 +1,30 @@
+{
+    "name": "threaddump-analyzer",
+    "version": "0.0.0",
+    "description": "Java thread dump analyzer",
+    "license": "Apache-2.0",
+    "homepage": "https://spotify.github.io/threaddump-analyzer/",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/spotify/threaddump-analyzer.git"
+    },
+    "bugs": {
+        "url": "https://github.com/spotify/threaddump-analyzer/issues"
+    },
+    "scripts": {
+        "test": "gulp test eslint htmllint csslint"
+    },
+    "keywords": [
+        "java",
+        "thread",
+        "thread dump"
+    ],
+    "dependencies": {},
+    "devDependencies": {
+        "gulp-qunit": "2.0.3",
+        "gulp-eslint": "6.0.0",
+        "gulp-htmlhint": "2.2.1",
+        "gulp-csslint": "1.0.1",
+        "gulp": "4.0.2"
+    }
+}

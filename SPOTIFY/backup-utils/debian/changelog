@@ -1,0 +1,171 @@
+github-backup-utils (2.6.3) UNRELEASED; urgency=medium
+
+  * Cluster: git-hooks backup fixes #235
+
+ -- Sergio Rubio <rubiojr@github.com>  Wed, 29 Jun 2016 21:05:21 +0200
+
+github-backup-utils (2.6.2) UNRELEASED; urgency=medium
+
+    * git-hooks fixes #231
+    * Cluster: speedup repositories restore #232 (requires GitHub Enterprise
+      2.6.4)
+    * Cluster: restore Git over SSH keys #230
+    * Benchmark restores #219
+
+ -- Sergio Rubio <rubiojr@github.com>  Wed, 22 Jun 2016 19:36:06 +0200
+
+github-backup-utils (2.6.1) UNRELEASED; urgency=medium
+
+  * Cluster: faster gist restores #220
+  * Cluster: faster storage restores #212
+  * Cluster: fix git-hooks restores #204
+
+ -- Sergio Rubio <rubiojr@github.com>  Tue, 31 May 2016 20:54:11 +0200
+
+github-backup-utils (2.6.0) UNRELEASED; urgency=medium
+
+  * Adds support for GitHub Enterprise 2.6
+  * Adds an extra supported location for the backup configuration #197
+  * New config option to check for corrupted repositories after the backup #195
+  * General improvements and bug fixes
+
+ -- Sergio Rubio <rubiojr@github.com>  Tue, 26 Apr 2016 18:03:01 +0200
+
+github-backup-utils (2.5.2) UNRELEASED; urgency=medium
+
+  * New configuration variable: GHE_CREATE_DATA_DIR #186
+  * Require that snapshots originated from an instance running GitHub
+    Enterprise 2.5.0 or above when restoring to a cluster #182
+  * Prevent Git GC operations and some other maintenance jobs from running
+    while repositories are being restored #179
+  * Fix Solaris and SmartOS support, using Bash everywhere #177
+
+ -- Sergio Rubio <rubiojr@github.com>  Wed, 30 Mar 2016 14:32:15 +0200
+
+github-backup-utils (2.5.1) UNRELEASED; urgency=medium
+
+  * Fixes for cluster restores #173
+  * Fix Elasticsearch backups for GitHub Enterprise <= 2.2 #175
+  * Removed experimental S3 support #167
+  * Remote logging output fixes #170
+  * Update ghe-host-check to detect extra port 22 error #162
+
+ -- Sergio Rubio <rubiojr@github.com>  Wed, 09 Mar 2016 14:44:05 +0100
+
+github-backup-utils (2.5.0) UNRELEASED; urgency=medium
+
+  * Adds GitHub Enterpise 2.5 support
+  * Adds GitHub Enterprise Clustering support
+  * Backups and restores SAML keypairs
+
+ -- Sergio Rubio <rubiojr@github.com>  Tue, 9 Feb 2016 00:02:37 +0000
+
+github-backup-utils (2.4.0) UNRELEASED; urgency=medium
+
+  * Moves the in-progress detection to a separate file with PID which is
+    removed if the process is no longer running after the backup. #145, #99
+  * Updates the README to explain why backup-utils is useful even if you have
+    the high availability replica running. #140
+  * Changes the use of the --link-dest option to only occur when backing up
+    populated directories. #138
+  * Adds logging to /var/log/syslog on the remote GitHub Enterprise appliance
+    to both ghe-backup and ghe-restore.  #131
+  * Restarts memcached after restoring to an already configured appliance to
+    ensure it doesn't contain out-of-sync information. #130
+  * Removes the temporary /data/user/repositories-nw-backup directory that
+    remains after successfully migrating the repository storage layout to the
+    new format used on GitHub Enterprise 2.2.0 and later after restoring a
+    backup from an older release of GitHub Enterprise. #129
+  * Add devscripts to Debian's build-depends for checkbashisms. #101
+  * Documents the -c option which forces the restoration of the configuration
+    information to an already configured appliance. #96
+
+ -- Colin Seymour <colin@github.com>  Tue, 20 Oct 2015 00:02:37 +0000
+
+github-backup-utils (2.2.0) UNRELEASED; urgency=medium
+
+  * Adds support for the new repositories filesystem layout include in
+    GitHub Enterprise v2.2. #122, #124
+  * ghe-restore now performs a config run on the instance after an incremental
+    restore to 11.10.x and 2.x instances. #100
+  * ghe-restore now fails fast when run against a GHE instance with replication
+    enabled. Replication should be disabled during a restore and then setup
+    after the restore completes. #121
+  * Fixes an issue with special port 122 detection failing when port is
+    overridden in an ssh config file. #102
+  * Removes a warning message when running ghe-backup against an instance with
+    GitHub Pages disabled. #117
+  * backup-utils release version numbers now track GitHub Enterprise releases
+    to ease the process of determining which version of backup-utils is
+    required for a given GitHub Enterprise version.
+
+ -- Ryan Tomayko <ryan@github.com>  Wed, 29 Apr 2015 07:29:04 +0000
+
+github-backup-utils (2.0.2) UNRELEASED; urgency=medium
+
+  * ghe-restore now requires that an already-configured appliance be put into
+    maintenance mode manually. This is a safeguard against accidentally
+    overwriting data on the wrong instance. #62, #84
+  * ghe-backup and ghe-restore now run a ghe-negotiate-version program on the
+    appliance to determine whether the backup-utils and GHE versions are
+    compatible. #91
+  * Various portability fixes for problems surfaced when running on Solaris
+    and FreeBSD. #86, #87
+  * Fixes an issue in ghe-backup where mysqldump failures weren't being
+    reported properly. #90
+  * Automated builds are now run on Travis CI. #77
+
+ -- Ryan Tomayko <ryan@github.com>  Tue, 20 Jan 2015 16:00:00 +0000
+
+github-backup-utils (2.0.1) UNRELEASED; urgency=medium
+
+  * Adds /etc/github-backup-utils/backup.config as a default config file search
+    location for deb / system installs.
+  * Enables SSH BatchMode for all remote command invocation except initial host
+    check / version identification.
+  * Fixes a bug in ghe-backup where Git GC process detection would misclassify
+    long-running server processes matching /git.*gc/, causing the backup operation
+    to timeout.
+  * Adds a note and link to the Migrating from GitHub Enterprise v11.10.34x to
+    v2.0 documentation in the README.
+  * Adds example / documentation for the GHE_EXTRA_SSH_OPTS config value to the
+    backup.config-example file.
+
+ -- Ryan Tomayko <ryan@github.com>  Mon, 17 Nov 2014 12:47:22 +0000
+
+github-backup-utils (2.0.0) UNRELEASED; urgency=medium
+
+  * Support for GitHub Enterprise 2.0.
+  * Support for migrating from GitHub Enterprise 11.10.34x to 2.0 (including from
+    VMware to AWS).
+  * ghe-backup retains hardlinks present on VM in backup snapshots, saving space.
+  * ghe-restore retains hardlinks present in backup snapshot when restoring to VM.
+  * backup-utils now includes debian packaging support.
+  * Fixes an issue with ghe-restore -s not using the snapshot specified.
+  * Fixes an issue with ghe-backup not waiting for nw-repack processes to finish
+    in some instances.
+
+ -- Ryan Tomayko <ryan@github.com>  Mon, 10 Nov 2014 10:48:36 +0000
+
+github-backup-utils (1.1.0) UNRELEASED; urgency=medium
+
+  * Updated documentation on minimum GitHub Enterprise version requirements for
+    online and incremental backups from v11.10.341 to at least v11.10.342.
+  * The ghe-restore command now prompts for confirmation of the host to restore to
+    before performing any destructive operation. This is to reduce the chances of
+    restoring to the wrong host. The prompt may be bypassed in automated scenarios
+    by providing the --force option.
+  * Added a -c option to ghe-restore for restoring base appliance settings in
+    addition to primary datastores. See ghe-restore --help for more information.
+  * Added a note about disabling maintenance mode on the appliance after a
+    successful ghe-restore operation.
+  * Added support for filesystem layout changes and upgraded server components in
+  * future versions of GitHub Enterprise.
+
+ -- Twan Wolthof <xeago@spotify.com>  Sat, 18 Oct 2014 19:14:47 +0000
+
+github-backup-utils (1.0.1) UNRELEASED; urgency=medium
+
+  * Initial release.
+
+ -- Twan Wolthof <xeago@spotify.com>  Tue, 23 Sep 2014 08:34:55 +0000

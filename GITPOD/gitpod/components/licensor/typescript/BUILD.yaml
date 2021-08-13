@@ -9,7 +9,13 @@ packages:
       - components/licensor:lib
     prep:
       - ["go", "mod", "init", "licensor"]
-      - ["go", "mod", "edit", "-replace", "github.com/gitpod-io/gitpod/licensor=./components-licensor--lib"]
+      - [
+          "go",
+          "mod",
+          "edit",
+          "-replace",
+          "github.com/gitpod-io/gitpod/licensor=./components-licensor--lib",
+        ]
       - ["yarn", "preinstall"]
     config:
       packaging: library

@@ -7,7 +7,7 @@ environmentManifest:
   - name: "yarn"
     command: ["yarn", "--version"]
 variants:
-- name: nogit
-  srcs:
-    exclude:
-    - "**/.git"
+  - name: nogit
+    srcs:
+      exclude:
+        - "**/.git"

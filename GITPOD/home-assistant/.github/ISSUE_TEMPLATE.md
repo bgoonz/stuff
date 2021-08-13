@@ -9,39 +9,38 @@
 -->
 
 **Home Assistant release with the issue:**
+
 <!--
 - Frontend -> Developer tools -> Info
 - Or use this command: hass --version
 -->
 
-
 **Last working Home Assistant release (if known):**
 
-
 **Operating environment (Hass.io/Docker/Windows/etc.):**
+
 <!--
 Please provide details about your environment.
 -->
 
 **Component/platform:**
+
 <!--
 Please add the link to the documentation at https://www.home-assistant.io/components/ of the component/platform in question.
 -->
 
-
 **Description of problem:**
 
-
-
 **Problem-relevant `configuration.yaml` entries and (fill out even if it seems unimportant):**
+
 ```yaml
 
 ```
 
 **Traceback (if applicable):**
+
 ```
 
 ```
 
 **Additional information:**
-

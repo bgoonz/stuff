@@ -1,22 +1,19 @@
 {
-	"manifest_version": 2,
-	"name": "Autopod",
-	"version": "1.00",
+  "manifest_version": 2,
+  "name": "Autopod",
+  "version": "1.00",
 
-	"description": "Various utilities for gitpod's website made while kreyren is waiting for code review/brainstorm due to his impatience and laziness to write a code from scratch.. So he took the code from Hoh",
+  "description": "Various utilities for gitpod's website made while kreyren is waiting for code review/brainstorm due to his impatience and laziness to write a code from scratch.. So he took the code from Hoh",
 
-	"icons": {
-		"48": "icons/aniscripts-48.png"
-	},
+  "icons": {
+    "48": "icons/aniscripts-48.png"
+  },
 
-	"content_scripts": [
-		{
-			"matches": ["https://gitpod.io/*"],
-			"js": ["autopod.js"]
-		}
-	],
-	"permissions": [
-		"https://gitpod.io/*",
-		"webRequest"
-	]
+  "content_scripts": [
+    {
+      "matches": ["https://gitpod.io/*"],
+      "js": ["autopod.js"]
+    }
+  ],
+  "permissions": ["https://gitpod.io/*", "webRequest"]
 }

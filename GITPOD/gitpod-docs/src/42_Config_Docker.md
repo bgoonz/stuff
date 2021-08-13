@@ -7,21 +7,24 @@ developing your project, you can provide a custom Docker image.
 
 There are two ways to configure a custom Docker image in your `.gitpod.yml` file:
 
-* Reference a publicly available image:
+- Reference a publicly available image:
 
-    ```yaml
-    image: node:alpine
-    ```
-    The official Gitpod Docker images are hosted on [DockerHub](https://hub.docker.com/u/gitpod/).
-* Reference a Dockerfile next to your `.gitpod.yml` file:
+  ```yaml
+  image: node:alpine
+  ```
 
-    ```yaml
-    image:
-      file: docker/gitpod.Dockerfile
-      # Context is optional, defaults to an empty context
-      context: docker
-    ```
-    The Docker image is rebuilt automatically whenever the Dockerfile changes.
+  The official Gitpod Docker images are hosted on [DockerHub](https://hub.docker.com/u/gitpod/).
+
+- Reference a Dockerfile next to your `.gitpod.yml` file:
+
+  ```yaml
+  image:
+    file: docker/gitpod.Dockerfile
+    # Context is optional, defaults to an empty context
+    context: docker
+  ```
+
+  The Docker image is rebuilt automatically whenever the Dockerfile changes.
 
 ### Creating Docker Images for Gitpod
 
@@ -38,6 +41,7 @@ FROM gitpod/workspace-full
 When you are launching the Gitpod IDE, the local console will use the `gitpod` user, so all local settings, config file, etc. should apply to `/home/gitpod` or be run using `USER gitpod`.
 
 Switching users in the Dockerfile to `gitpod` requires switching back to `USER root` at the end of the Dockerfile, so that the IDE can start. The following example shows a typical Dockerfile inheriting from `gitpod/workspace-full`:
+
 ```Dockerfile
 FROM gitpod/workspace-full:latest
 

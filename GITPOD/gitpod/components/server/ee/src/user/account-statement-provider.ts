@@ -9,8 +9,10 @@ import { WorkspaceInstance } from "@gitpod/gitpod-protocol";
 import { AccountStatement } from "@gitpod/gitpod-protocol/lib/accounting-protocol";
 import { AccountService } from "@gitpod/gitpod-payment-endpoint/lib/accounting";
 
-
-export type CachedAccountStatement = Pick<AccountStatement, "remainingHours" | "endDate">;
+export type CachedAccountStatement = Pick<
+  AccountStatement,
+  "remainingHours" | "endDate"
+>;
 
 /**
  * This represents shared functionality and _state_ between GitpodServerImplIO and EiligibilityServiceIO
@@ -18,31 +20,47 @@ export type CachedAccountStatement = Pick<AccountStatement, "remainingHours" | "
  */
 @injectable()
 export class AccountStatementProvider {
-    @inject(AccountService) protected readonly accountService: AccountService;
+  @inject(AccountService) protected readonly accountService: AccountService;
 
-    protected cachedStatement: CachedAccountStatement | undefined;
+  protected cachedStatement: CachedAccountStatement | undefined;
 
-    setCachedStatement(cachedStatement: CachedAccountStatement) {
-        this.cachedStatement = cachedStatement;
-    }
+  setCachedStatement(cachedStatement: CachedAccountStatement) {
+    this.cachedStatement = cachedStatement;
+  }
 
-    getCachedStatement(): CachedAccountStatement | undefined {
-        return this.cachedStatement;
-    }
+  getCachedStatement(): CachedAccountStatement | undefined {
+    return this.cachedStatement;
+  }
 
-    async getAccountStatement(userId: string, date: string): Promise<AccountStatement> {
-        const statement = await this.accountService.getAccountStatement(userId, date);
-        // Fill cache
-        this.setCachedStatement({
-            remainingHours: statement.remainingHours,
-            endDate: statement.endDate
-        });
-        return statement;
-    }
+  async getAccountStatement(
+    userId: string,
+    date: string
+  ): Promise<AccountStatement> {
+    const statement = await this.accountService.getAccountStatement(
+      userId,
+      date
+    );
+    // Fill cache
+    this.setCachedStatement({
+      remainingHours: statement.remainingHours,
+      endDate: statement.endDate,
+    });
+    return statement;
+  }
 
-    async getRemainingUsageHours(userId: string, date: string, runningInstancesPromise: Promise<WorkspaceInstance[]>) {
-        const statement = await this.getAccountStatement(userId, date);
-        const runningInstancesCount = Math.max(1, (await runningInstancesPromise).length);
-        return this.accountService.getRemainingUsageHours(statement, runningInstancesCount);
-    }
+  async getRemainingUsageHours(
+    userId: string,
+    date: string,
+    runningInstancesPromise: Promise<WorkspaceInstance[]>
+  ) {
+    const statement = await this.getAccountStatement(userId, date);
+    const runningInstancesCount = Math.max(
+      1,
+      (await runningInstancesPromise).length
+    );
+    return this.accountService.getRemainingUsageHours(
+      statement,
+      runningInstancesCount
+    );
+  }
 }
