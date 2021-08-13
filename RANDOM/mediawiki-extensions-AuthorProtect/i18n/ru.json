@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Facenapalm",
+			"Ferrer",
+			"Okras",
+			"Vlad5250",
+			"Александр Сигачёв"
+		]
+	},
+	"authorprotect": "Защита страницы от не-авторов",
+	"authorprotect-desc": "Разрешает автору страницы защищать её от правок других участников",
+	"authorprotect-notauthor": "{{GENDER:$1|Вы}} не являетесь {{GENDER:$1|автором}} этой страницы.",
+	"authorprotect-confirm": "Изменить уровни защиты",
+	"authorprotect-edit": "править могут только авторы",
+	"authorprotect-move": "переименовывать могут только авторы",
+	"authorprotect-intro": "Используйте эту форму, чтобы защитить страницу от участников, не являющихся авторами",
+	"authorprotect-success": "Защита установлена!",
+	"protect-level-author": "Защита от не-авторов",
+	"restriction-level-author": "Авторская защита",
+	"action-authorprotect": "защиты от не-авторов",
+	"right-authorprotect": "защита авторских страниц",
+	"action-author": "правка авторски-защищённых страниц",
+	"right-author": "правка авторски-защищённых страниц"
+}

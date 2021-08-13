@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jan Myšák",
+			"Robins7"
+		]
+	},
+	"blog-and": "a",
+	"blog-by-user-category": "Články uživatele $1",
+	"blog-comments-of-day": "Komentáře dne",
+	"blog-created": "vytvořeno $1",
+	"blog-new-articles": "Nové články",
+	"blog-permission-required": "Nemáte povolení vytvářet články.",
+	"blog-popular-articles": "Nenechte si ujít",
+	"blog-recent-voters": "Ostatní nedávní hlasující",
+	"blog-recent-voters-message": "Pokud se vám článek líbil, hlasujte pro něj.",
+	"blog-view-archive-link": "Zobrazit vše",
+	"articlelists": "Nové články na blogu",
+	"blog-ah-no-results": "Nenalezeny žádné stránky.",
+	"blog-ah-new-articles": "Nové články",
+	"blog-ah-write-article": "Vytvořit článek",
+	"articleshome": "Hlavní strana blogu",
+	"blog-create-text": "Text",
+	"blog-create-categories": "Kategorie",
+	"blog-more": "více",
+	"blog-time-ago": "před $1"
+}

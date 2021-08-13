@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"admanager": "Alministrador d'anuncios",
+	"admanagerzones": "Zones del alministrador d'anuncios",
+	"admanager-desc": "Ufre una [[Special:AdManager|páxina especial]] que permite a los operadores del sistema configurar la zona pa les páxines o categoríes",
+	"admanager_docu": "Para amestar o quitar la zona de publicidá d'una páxina o de tola categoría, amiesta o desanicia más abaxo'l títulu de la páxina o de la categoría.",
+	"admanagerzones_docu": "Escriba cada númberu de zona d'anuncios na so propia llinia.",
+	"admanager_invalidtargetpage": "Nun s'alcontró denguna páxina col títulu \"$1\".",
+	"admanager_invalidtargetcategory": "Nun s'alcontró denguna categoría col títulu \"$1\".",
+	"admanager_notable": "¡Error! ¡Nun s'alcontró una tabla requerida de la base de datos! Execute primero update.php.",
+	"admanager_noAdManagerZones": "¡Error! Tien d'amestar dalgunes zones d'anuncios. Amiesteles nes [[Special:AdManagerZones|zones del xestor d'anuncios]].",
+	"admanager_labelPage": "Títulos de páxina",
+	"admanager_labelCategory": "Nomes de categoría",
+	"admanager_submit": "Unviar",
+	"admanager_noads": "Nun amosar anuncios",
+	"admanager_Page": "Páxines",
+	"admanager_Category": "Categoríes",
+	"admanager_added": "Guardaronse los cambeos",
+	"admanager_addedzone": "Amestóse la zona $1.",
+	"admanager_removedzone": "Desanicióse la zona $1.",
+	"admanager_nozonesadded": "Nun s'amestó nenguna zona.",
+	"admanager_nozonesremoved": "Nun se desanició nenguna zona.",
+	"admanager_zonenum": "Zona nº: $1",
+	"admanager_zonenotnumber": "¡Error! $1 nun ye un númberu.",
+	"admanager_return": "Volver al [[Special:AdManager|Alministrador d'anuncios]]",
+	"admanager_gotoads": "[[Special:AdManager|Editar la posición del anunciu]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Editar les zones d'anuncios]]",
+	"action-admanager": "xestionar configuración de publicidá",
+	"right-admanager": "[[Special:AdManager|Alministrar la configuración d'anuncios]]"
+}

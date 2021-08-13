@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Agilight",
+			"Монгуш Салим"
+		]
+	},
+	"coll-remove": "Баладыр",
+	"coll-show": "Көргүзер",
+	"coll-move_up": "Өрү өскедир",
+	"coll-move_down": "Куду бадырар",
+	"coll-empty_collection": "Куруг ном",
+	"coll-yes": "Ийе",
+	"coll-no": "Чок",
+	"coll-overwrite": "Кырынче бижиир",
+	"coll-cancel": "Ойталаар",
+	"coll-rendering_status": "<strong>Деңнел:</strong> $1",
+	"coll-rendering_article": "(чүүл: $1)",
+	"coll-rendering_page": "(арын: $1)",
+	"coll-about_pp": "$1 дугайты",
+	"coll-license": "Лицензия",
+	"coll-suggest_your_book": "Номуңар",
+	"coll-suggest_undo": "чөрчүүр",
+	"coll-format-rl": "е-ном (PDF)",
+	"coll-format-epub": "е-ном (EPUB)",
+	"coll-format-odf": "сөзүглелдиг процессор (OpenDocument)",
+	"coll-format-zim": "Kiwix (OpenZIM)",
+	"coll-format-docbook": "DocBook",
+	"coll-format-okawix_zeno": "Okawix",
+	"coll-print_export": "Парлаар/үндүр чорудар",
+	"coll-create_a_book": "Ном кылыр",
+	"coll-book_creator": "Ном кылыры",
+	"coll-download_as": "$1 кылдыр киир чүдүрер",
+	"coll-help": "Дуза",
+	"coll-helppage": "Help: Номнар",
+	"coll-remove_this_page": "Номуңардан бо арынны баладыр"
+}

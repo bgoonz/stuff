@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gregory Varnum"
+		]
+	},
+	"blackout-desc": "{{desc|name=Blackout|url=https://www.mediawiki.org/wiki/Extension:Blackout}}",
+	"blackout-stopsopa-header": "Header used on StopSopa skin",
+	"blackout-stopsopa-message": "Message used on StopSopa skin",
+	"blackout-protestsopa-header": "Header used on ProtestSopa skin",
+	"blackout-protestsopa-message1": "Message used on ProtestSopa skin",
+	"blackout-protestsopa-message2": "Message used on ProtestSopa skin",
+	"blackout-protestsopa-message3": "Message used on ProtestSopa skin",
+	"blackout-protestsopa-action": "Message used on ProtestSopa skin",
+	"blackout-protestsopa-actionmsg": "Message used on ProtestSopa skin",
+	"blackout-protestsopa-join": "Message used on ProtestSopa skin",
+	"blackout-sopastrike-title": "Header used on SopaStrike skin",
+	"blackout-sopastrike-ogdesc": "Message used on SopaStrike skin",
+	"blackout-sopastrike-message1": "Message used on SopaStrike skin",
+	"blackout-sopastrike-message2": "Message used on SopaStrike skin",
+	"blackout-sopastrike-message3": "Message used on SopaStrike skin",
+	"blackout-sopastrike-address": "Message used on SopaStrike skin",
+	"blackout-sopastrike-zipcode": "Message used on SopaStrike skin",
+	"blackout-sopastrike-action": "Message used on SopaStrike skin",
+	"blackout-sopastrike-actionmsg1": "Message used on SopaStrike skin",
+	"blackout-sopastrike-actionmsg2": "Message used on SopaStrike skin",
+	"blackout-sopastrike-join": "Message used on SopaStrike skin",
+	"blackout-sopastrike-add": "Message used on SopaStrike skin",
+	"blackout-sopastrike-learn": "Message used on SopaStrike skin",
+	"blackout-sopastrike-video": "Message used on SopaStrike skin",
+	"blackout-sopastrike-orgpage": "Message used on SopaStrike skin",
+	"blackout-sopastrike-infographic": "Message used on SopaStrike skin",
+	"blackout-sopastrike-ocsopa": "Message used on SopaStrike skin",
+	"blackout-sopastrike-ocpipa": "Message used on SopaStrike skin",
+	"blackout-sopastrike-disclaimer": "Message used on SopaStrike skin",
+	"blackout-sopastrike-privacy": "Message used on SopaStrike skin"
+}

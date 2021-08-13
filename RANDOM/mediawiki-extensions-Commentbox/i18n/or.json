@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jnanaranjan Sahu"
+		]
+	},
+	"commentbox-savebutton": "ମନ୍ତବ୍ୟଟିକୁ ସାଇତିବେ",
+	"commentbox-name": "ନାମ:",
+	"commentbox-log": "ନୂଆ ମତାମତ",
+	"commentbox-first-comment-heading": "== ମତାମତ ==",
+	"commentbox-errorpage-title": "ମନ୍ତବ୍ୟ ଦେବାରେ ଅସୁବିଧା",
+	"commentbox-error-page-nonexistent": "ଏହିପରି କୌଣସି ପୃଷ୍ଠା ନାହିଁ !",
+	"commentbox-error-namespace": "ଏହି ନେମସ୍ପେସରେ ମନ୍ତବ୍ୟ ଦେଇ ହେବ ନାହିଁ!",
+	"commentbox-error-empty-comment": "ଖାଲି ମନ୍ତବ୍ୟ ଦେଇ ହେବନାହିଁ!"
+}

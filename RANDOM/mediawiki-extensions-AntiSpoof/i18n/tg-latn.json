@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Liangent"
+		]
+	},
+	"antispoof-desc": "Az eçodi hisobhoi korbarī bo hurufhoi giçkunanda jo muşobeh bo digar hisobhoi korbarī çilavgirī mekunad.",
+	"antispoof-name-illegal": "Nomi \"$1\" ba daleli çilavgirī az nomhoi korbariji sardardkunanda jo masxara miçoz nest: $2. Lutfan nomi digarero intixob kuned.",
+	"antispoof-badtype": "Nav'i dodai nomunosib",
+	"antispoof-empty": "Riştai xolī",
+	"antispoof-prohibited": "Alomathoi dar fehristi sijoh qarordoştaro dar bar megirad",
+	"antispoof-combining": "Bo alomati çam' şurū' meşavad.",
+	"antispoof-unassigned": "Alomati ta'jinnaşuda jo nomunosib ast",
+	"antispoof-noletters": "Jagon harfho nadorad",
+	"antispoof-mixedscripts": "Skripthoi omextai nosozgarro dar bar megirad",
+	"antispoof-tooshort": "Nomi mū'tarif xele kūtoh ast"
+}

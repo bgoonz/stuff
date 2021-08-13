@@ -1,0 +1,48 @@
+{
+	"name": "Arrays",
+	"version": "2.2.1",
+	"author": [
+		"Li Ding",
+		"Jie Bao",
+		"[https://www.mediawiki.org/wiki/User:Danwe Daniel Werner]"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:Arrays",
+	"descriptionmsg": "arrays-desc",
+	"license-name": "MIT",
+	"type": "parserhook",
+	"requires": {
+		"MediaWiki": ">= 1.31.0"
+	},
+	"MessagesDirs": {
+		"Arrays": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"ArraysMagic": "Arrays.i18n.magic.php"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "ExtArrays::init",
+		"ParserClearState": "ExtArrays::onParserClearState"
+	},
+	"config_prefix": "eg",
+	"config": {
+		"ArraysCompatibilityMode": {
+			"description": "Set to false by default since version 2.0.",
+			"value": false
+		},
+		"ArraysExpansionEscapeTemplates": {
+			"description": "Contains a key-value pair list of characters that should be replaced by a template or parser function call within array values included into an '#arrayprint'. By replacing these special characters before including the values into the string which is being expanded afterwards, array values can't distract the surrounding MW code. Otherwise the array values themselves would be parsed as well.\n\nThis has no effect in case $egArraysCompatibilityMode is set to false! If set to null, Arrays will jump to compatibility mode behavior on this, independently from $egArraysCompatibilityMode.",
+			"value": {
+				"=": "{{=}}",
+				"|": "{{!}}",
+				"{{": "{{((}}",
+				"}}": "{{))}}"
+			}
+		}
+	},
+	"AutoloadClasses": {
+		"ExtArrays": "ExtArrays.php"
+	},
+	"manifest_version": 2
+}

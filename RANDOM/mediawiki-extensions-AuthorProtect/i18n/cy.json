@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lloffiwr",
+			"Xxglennxx"
+		]
+	},
+	"authorprotect": "Diogeler y dudalen rhag ei newid gan neb ond ei hawduron",
+	"authorprotect-desc": "Yn galluogi awdur tudalen i'w diogelu rhag defnyddwyr eraill",
+	"authorprotect-notauthor": "Nid chi yw awdur y dudalen hon",
+	"authorprotect-confirm": "Newid lefelau diogelu",
+	"authorprotect-edit": "Cyfyngu'r gallu i olygu i'r awduron",
+	"authorprotect-move": "Cyfyngu'r gallu i symud tudalen i'r awduron",
+	"authorprotect-intro": "Defnyddiwch y ffurflen hon i gloi'r dudalen hon rhag neb ond ei hawduron",
+	"authorprotect-success": "Llwyddodd y diogelu!",
+	"protect-level-author": "Diogeler rhag cael ei newid gan neb ond ei hawduron",
+	"restriction-level-author": "Cyfyngedig-i-awduron",
+	"right-authorprotect": "Gallu awdur i ddiogelu tudalennau o'i waith ei hun",
+	"right-author": "Golygu tudalennau sydd wedi eu diogelu rhag pawb ond yr awdur"
+}

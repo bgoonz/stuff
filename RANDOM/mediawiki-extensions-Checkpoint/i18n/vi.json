@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Minh Nguyen",
+			"Trần Nguyễn Minh Huy"
+		]
+	},
+	"checkpoint": "Lưu và tiếp tục sửa đổi",
+	"checkpoint-desc": "Cho phép một lần lưu sửa đổi và tiếp tục sửa đổi",
+	"checkpoint-tooltip": "Lưu những thay đổi của bạn và tiếp tục sửa đổi trang này",
+	"checkpoint-notice": "([[{{ns:project}}:Kiểm soát|lưu nửa chừng]])"
+}

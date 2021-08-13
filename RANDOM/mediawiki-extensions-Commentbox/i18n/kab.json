@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Belkacem77"
+		]
+	},
+	"commentbox-desc": "Rnu tanaka n iwenniten di kra n isebtar",
+	"commentbox-intro": "== Rnu awennit... ==\n\nƔur-k awennit ɣef usebter-agi? Rnu-t dagi neɣ <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} snifel asebter srid]</span>.",
+	"commentbox-savebutton": "Sekles awennit",
+	"commentbox-name": "Isem:",
+	"commentbox-name-explanation": "<small>(Taxbalut: ma yella [[Special:UserLogin|teqqneḍ]], ur tesriḍ ara ad taččareḍ isem-ik dagi s ufus)</small>",
+	"commentbox-log": "IWenniten imaynuten",
+	"commentbox-first-comment-heading": "== Iwenniten ==",
+	"commentbox-regex": "/\\n==\\s*Iwenniten\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Tuccḍa di tmerna n uwennit",
+	"commentbox-error-page-nonexistent": "Asebter-agi ulac-it!",
+	"commentbox-error-namespace": "Iwenniten ur ttwasirgen ara di tallunt-agi n yismawen!",
+	"commentbox-error-empty-comment": "Iwenniten ilmawen ur ttwasirgen ara!"
+}

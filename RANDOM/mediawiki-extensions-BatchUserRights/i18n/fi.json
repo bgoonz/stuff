@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"01miki10",
+			"Nike",
+			"VezonThunder"
+		]
+	},
+	"batchuserrights-desc": "Mahdollistaa yhden tai useamman käyttäjän lisäämiseen yhteen tai useampaan ryhmään kerralla",
+	"batchuserrights-names": "Käyttäjänimet, joille lisätään tämä ryhmä (yksi riviä kohti):",
+	"batchuserrights-intro": "Tämä sivu antaa lisätä ryhmän useille käyttäjille kerralla.\nTurvallisuussyistä lisättävien ryhmien luettelo on määritetty laajennuksen asetuksissa eikä sitä voi muuttaa wikistä.\nKysy järjestelmän ylläpitäjältä, jos sinun tarvitsee sallia muiden ryhmien joukkolisääminen.",
+	"batchuserrights-single-progress-update": "Lisätty {{PLURAL:$1|ryhmä|ryhmää}} käyttäjälle <strong>$2</strong>.",
+	"batchuserrights-add-groups": "Lisätään {{PLURAL:$1|yksi käyttäjä|$1 käyttäjää}} {{PLURAL:$2|seuraavaan ryhmään|seuraaviin ryhmiin}}: <strong>$3</strong>.",
+	"batchuserrights-userload-error": "{{GENDER:$1|Käyttäjän}} '''$1''' lataaminen epäonnistui.",
+	"batchuserrights-no-groups": "Et valinnut ryhmiä.\nTämä ei muuta mitään.\nLoput sivusta suoritetaan vain jotta voisit helposti nähdä, epäonnistuuko joidenkin käyttäjänimien lataaminen.",
+	"right-batchuserrights": "Lisätä yksi tai useampia käyttäjiä yhteen tai useampaan ryhmään kerralla",
+	"action-batchuserrights": "lisätä yhden tai useamman käyttäjän yhteen tai useampaan ryhmään kerralla"
+}

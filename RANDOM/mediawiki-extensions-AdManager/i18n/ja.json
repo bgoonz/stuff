@@ -1,0 +1,38 @@
+{
+	"@metadata": {
+		"authors": [
+			"Afaz",
+			"Fryed-peach",
+			"Shirayuki",
+			"SkyDaisy9",
+			"Sujiniku"
+		]
+	},
+	"admanager": "広告の管理",
+	"admanagerzones": "広告管理のゾーン",
+	"admanager-desc": "管理者がページまたはカテゴリにゾーンを設定できるようにする、[[Special:AdManager|特別ページ]]を提供する",
+	"admanager_docu": "ページまたはカテゴリ全体の広告ゾーンを追加または除去するには、下でページ名またはカテゴリ名を追加または除去してください。",
+	"admanagerzones_docu": "広告ゾーン番号を各行に 1 つずつ入力してください。",
+	"admanager_invalidtargetpage": "「$1」という名前のページはありません。",
+	"admanager_invalidtargetcategory": "「$1」という名前のカテゴリはありません。",
+	"admanager_notable": "エラー! 必須のデータベーステーブルがありません! まず update.php を実行してください。",
+	"admanager_noAdManagerZones": "エラー! 広告ゾーンをいくつか設定する必要があります。[[Special:AdManagerZones|広告管理のゾーン]]で入力してください。",
+	"admanager_labelPage": "ページ名",
+	"admanager_labelCategory": "カテゴリ名",
+	"admanager_submit": "送信",
+	"admanager_noads": "広告非表示",
+	"admanager_Page": "ページ",
+	"admanager_Category": "カテゴリ",
+	"admanager_added": "変更を保存しました",
+	"admanager_addedzone": "ゾーン $1 を追加しました",
+	"admanager_removedzone": "ゾーン$1を削除しました。",
+	"admanager_nozonesadded": "追加されたゾーンはありません。",
+	"admanager_nozonesremoved": "削除されたゾーンはありません。",
+	"admanager_zonenum": "ゾーン番号: $1",
+	"admanager_zonenotnumber": "エラー! $1 は数値ではありません。",
+	"admanager_return": "[[Special:AdManager|広告の管理]]に戻る",
+	"admanager_gotoads": "[[Special:AdManager|広告の配置を編集]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|広告ゾーンを編集]]",
+	"action-admanager": "広告の設定の管理",
+	"right-admanager": "[[Special:AdManager|広告の設定を管理]]"
+}

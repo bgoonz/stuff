@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joris Darlington Quarshie",
+			"Naudefj"
+		]
+	},
+	"ajaxpoll-vote-update": "U stem is opgedateer.",
+	"ajaxpoll-vote-add": "U stem is bygevoeg.",
+	"ajaxpoll-percent-votes": "$1% van alle stemme",
+	"ajaxpoll-no-vote": "Stem asseblief hier onder.",
+	"ajaxpoll-readonly": "Daar kan nie op hierdie meningspeiling gestem word nie, die databasis is gesluit om die volgende rede: $1."
+}

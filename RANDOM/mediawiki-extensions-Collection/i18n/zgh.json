@@ -1,0 +1,42 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amara-Amaziɣ",
+			"Aslmad mohamed belarhzali",
+			"Brahim-essaidi",
+			"Hakim1bal",
+			"Mdb897",
+			"YesIn",
+			"ⵕⴰⵊⵉ"
+		]
+	},
+	"coll-remove": "ⵙⵉⵜⵜⵢ",
+	"coll-show": "ⵙⵎⴰⵍ",
+	"coll-move_up": "ⴰⵍⵍ",
+	"coll-move_down": "ⵙⵙⵓⴳⴳⵣ",
+	"coll-yes": "ⵢⴰⵀ",
+	"coll-no": "ⵓⵀⵓ",
+	"coll-print_export": "ⵙⵙⵉⴳⵣ/ⵙⵙⵓⴼⵖ",
+	"coll-create_a_book": "ⵙⵏⴼⵍⵓⵍ ⴽⵔⴰ ⵏ ⵓⴷⵍⵉⵙ",
+	"coll-book_creator": "ⴰⵎⵙⵏⵓⵍⴼⵓ ⵏ ⵓⴷⵍⵉⵙ",
+	"coll-download_as": "ⴰⴳⵎ ⴰⵎ $1",
+	"coll-disable": "ⵙⵙⵏⵙ",
+	"coll-book_creator_disable": "ⵙⵙⵏⵙ ⴰⴷⵍⵉⵙ ⴰⵎⵖⵏⴰⵡ",
+	"coll-book_creator_disable_tooltip": "ⵙⴱⴷⴷ ⴰⵙⵙⵎⵔⵙ ⵏ ⵓⴷⵍⵉⵙ ⵏ ⵓⵎⵖⵏⴰⵡ",
+	"coll-add_this_page": "ⵔⵏⵓ ⵜⴰⵙⵏⴰ ⴰ ⵉ ⵓⴷⵍⵉⵙ {{GENDER:|ⵏⵏⴽ|ⵏⵏⵎ}}",
+	"coll-add_page_tooltip": "ⵔⵏⵓ ⵜⴰⵙⵏⴰ ⵡⵉⴽⵉ ⴰⴷ ⵜⴰⵎⵉⵔⴰⵏⵜ ⵉ ⵓⴷⵍⵉⵙ ⵏⵏⴽ",
+	"coll-help": "ⵜⵉⵡⵉⵙⵉ",
+	"coll-help_tooltip": "ⵙⴽⵏ ⵜⵉⵡⵉⵙⵉ ⵖⴼ ⵓⵙⵏⵓⵍⴼⵓ ⵏ ⵉⴷⵍⵉⵙⵏ",
+	"coll-helppage": "Help:ⵉⴷⵍⵉⵙⵏ",
+	"coll-n_pages": "$1 {{PLURAL:$1|ⵜⴰⵙⵏⴰ|ⵜⴰⵙⵏⵉⵡⵉⵏ}}",
+	"coll-remove_this_page": "ⴽⴽⵙ ⵜⴰⵙⵏⴰ ⴰ ⵙⴳ ⵓⴷⵍⵉⵙ  {{GENDER:|ⵏⵏⴽ|ⵏⵏⵎ}}",
+	"coll-show_collection": "ⵙⴽⵏ ⴰⴷⵍⵉⵙ",
+	"coll-show_collection_tooltip": "ⴽⵍⵉⴽⵉ ⴱⴰⵛ ⴰⴷ ⵜⵙⵏⴼⵍⴷ/ⵜⴰⴳⵎⴷ/ⵜⴻⵜⵜⵔⴷ ⴰⴷⵍⵉⵙ {{GENDER:|ⵏⵏⴽ|ⵏⵏⵎ}}",
+	"coll-make_suggestions": "ⵜⴰⵙⵏⵉⵡⵉⵏ ⵜⵜⵓⵙⵓⵎⵔⵏⵉⵏ",
+	"coll-make_suggestions_tooltip": "ⵙⴽⵏ ⵜⵉⵙⵓⵎⵔⵉⵏ ⵉⴱⴷⴷⴰⵏ ⵅⴼ ⵜⴰⵙⵏⵉⵡⵉⵏ ⵏ ⵓⴷⵍⵉⵙ ⵏⵏⴽ",
+	"coll-setting-toc-yes": "ⵢⴰⵀ",
+	"coll-setting-toc-no": "ⵓⵀⵓ",
+	"coll-attribution-anons": "ⴰⵔⵓⵙⵙⵉⵏ: $1",
+	"coll-article-attribution": "<b>$1</b> <i>ⴰⵙⴰⴳⵎ:</i> $2 <i>ⵉⵏⴰⵎⵓⵜⵏ:</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>ⴰⵙⴰⴳⵎ:</i> $2 <i>ⵜⵓⵔⴰⴳⵜ:</i> $3 <i>ⵉⵏⴰⵎⵓⵜⵏ:</i> $4 <i>ⴰⵏⴰⵥⵓⵔ ⴰⵙⴰⵍⴰⵏ:</i> $5"
+}

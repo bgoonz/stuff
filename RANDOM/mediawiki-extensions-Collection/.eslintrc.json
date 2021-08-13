@@ -1,0 +1,21 @@
+{
+	"root": true,
+	"extends": [
+		"wikimedia",
+		"wikimedia/mediawiki"
+	],
+	"env": {
+		"browser": true,
+		"jquery": true
+	},
+	"globals": {
+		"mediaWiki": false
+	},
+	"rules": {
+		"camelcase": 0,
+		"no-alert": 0,
+		"no-use-before-define": 0,
+		"no-redeclare": "warn",
+		"no-shadow": "warn"
+	}
+}

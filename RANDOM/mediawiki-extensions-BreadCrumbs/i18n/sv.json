@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jopparn",
+			"LittleGun",
+			"Scofie",
+			"WikiPhoenix"
+		]
+	},
+	"breadcrumbs-desc": "Visar användarens väg genom wikin",
+	"prefs-breadcrumbs-separator": "Avskiljare i den synliga sökvägen",
+	"prefs-breadcrumbs-separator-max": "Högst 2 tecken kan anges.",
+	"prefs-breadcrumbs": "Synlig sökväg",
+	"prefs-breadcrumbs-showcrumbs": "Visa synlig sökväg",
+	"prefs-breadcrumbs-numberofcrumbs": "Antal delmål i den synliga sökvägen",
+	"prefs-breadcrumbs-numberofcrumbs-max": "Maximalt 20 delmål i den synliga sökvägen.",
+	"prefs-breadcrumbs-namespaces": "Inkludera namnrymden i synliga sökvägen",
+	"prefs-breadcrumbs-filter-duplicates": "Filtrera bort sidor som besökts återkommande",
+	"prefs-breadcrumbs-preceding-text": "Text som visas före synlig sökväg",
+	"prefs-breadcrumbs-preceding-text-max": "Maximalt 30 tecken kan anges."
+}

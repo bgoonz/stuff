@@ -1,0 +1,1 @@
+ALTER TABLE /*_*/ajaxpoll_vote DROP COLUMN poll_user;

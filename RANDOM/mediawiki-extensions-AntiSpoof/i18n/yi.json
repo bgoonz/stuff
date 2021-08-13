@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"פוילישער"
+		]
+	},
+	"antispoof-desc": "בלאקירט שאפֿן קאנטעס מיט געמישטע שריפֿטן, פֿארפלאנטערטע און ענלעכע באניצער נעמען",
+	"antispoof-conflict-top": "דער באניצער־נאָמען \"$1\" איז צו ענלעך צו {{PLURAL:$2|דעם פֿאלגנדעם באניצער נאמען|די פֿאלגנדע באניצער נעמען}}:",
+	"antispoof-conflict-bottom": "ביטע קלויבט אויס אן אנדער באניצער־נאָמען.",
+	"antispoof-badtype": "שלעכטער דאַטן טיפ",
+	"antispoof-empty": "ליידיג שנירל",
+	"antispoof-prohibited": "כולל דעם געאסר'טן צייכן $1",
+	"antispoof-combining": "הייבט אן מיטן קאמבינאציע צייכן $1",
+	"antispoof-unassigned": "כולל א נישט געניצטער אדער אלטלעכער צייכן",
+	"antispoof-deprecated": "אנטהאלט פארעלטערטן כאראקטער $1",
+	"antispoof-noletters": "אַנטהאַלט ניט קײַן בוכשטאַבן.",
+	"antispoof-tooshort": "נאמען צו קורץ"
+}

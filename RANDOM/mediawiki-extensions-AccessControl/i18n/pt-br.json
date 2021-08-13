@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"!Silent"
+		]
+	},
+	"accesscontrol-desc": "Permite restrições de acesso a uma página baseado no grupo de usuário",
+	"accesscontrol-info": "Esta é uma página protegida.",
+	"accesscontrol-info-box": "Restrições de acesso foram estabelecidas para esta página. Se está vendo essa mensagem, significa que você não tem acesso a essa página."
+}

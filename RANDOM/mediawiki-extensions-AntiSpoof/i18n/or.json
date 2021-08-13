@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jnanaranjan Sahu",
+			"Psubhashish"
+		]
+	},
+	"antispoof-desc": "ମିଶା-ସ୍କ୍ରିପ୍ଟ, ଭ୍ରମାତ୍ମକ ଓ ଏକା ଇଉଜର ନାଆଁ ତିଆରିକୁ ବନ୍ଦ କରିଥାଏ",
+	"antispoof-conflict-top": "\"$1\"  ନାମଟି ଏହି {{PLURAL:$2|ସଭ୍ୟ ନାମ|$2 ସଭ୍ୟ ନାମମାନଙ୍କ}} ସହିତ ବହୁତ ସମାନ:",
+	"antispoof-conflict-bottom": "ଦୟାକରି ଆଉ ଗୋଟେ ନାଆଁ ବାଛନ୍ତୁ ।",
+	"antispoof-name-illegal": "ସନ୍ଦେହ ହେଲାଭଳି ନାଆଁପାଇଁ \"$1\" ନାଆଁଟିକୁ ଅନୁମତି ଦେଇପାରୁନାହୁଁ: $2 ।\nଦୟାକରି ଆଉଗୋଟିଏ ନାଆଁ ବାଛନ୍ତୁ ।",
+	"antispoof-badtype": "ଖରାପ ତଥ୍ୟ",
+	"antispoof-empty": "ଖାଲି ଘର",
+	"antispoof-prohibited": "ଏଥିରେ $1ନାମକ ବାରଣ କରାଯାଇଥିବା ଅକ୍ଷର ଅଛି",
+	"antispoof-combining": "$1ମିଶାଇବା ଚିହ୍ନସହ ଆରମ୍ଭ ହୁଏ",
+	"antispoof-unassigned": "ଏଥିରେ ଏବେଯାଏଁ ଦିଆ ଯାଇନଥିବା ଅକ୍ଷର $1  ଅଛି",
+	"antispoof-deprecated": "ଏଥିରେ $1ନାମକ ଅଦରକାରୀ ଅକ୍ଷର ଅଛି",
+	"antispoof-noletters": "ଏଥିରେ କିଛି ଲେଖା ହୋଇନାହିଁ",
+	"antispoof-mixedscripts": "ଏଥିରେ ମିଶୁନଥିବା ଅଜଣା ଲେଖା ଅଛି",
+	"antispoof-tooshort": "ମୂଳ ନାଆଁଟି ଖୁବ ସାନ",
+	"antispoof-ignore": "ଖରାପ ନାଆଁକୁ ଦେଖନ୍ତୁ ନାହିଁ",
+	"right-override-antispoof": "ଜାଣିଶୁଣି କରାଯିଇଥିବା ଭୁଲସବୁକୁ ଅଣଦେଖା କରିବେ"
+}

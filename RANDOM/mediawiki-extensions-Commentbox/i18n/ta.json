@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Karthi.dr",
+			"TRYPPN",
+			"மதனாஹரன்"
+		]
+	},
+	"commentbox-savebutton": "கருத்துரையைச் சேமிக்கவும்",
+	"commentbox-name": "பெயர்:",
+	"commentbox-log": "புதிய கருத்துக்கள்",
+	"commentbox-first-comment-heading": "== கருத்துக்கள் ==",
+	"commentbox-errorpage-title": "கருத்துரை உருவாக்குவதில் பிழை",
+	"commentbox-error-page-nonexistent": "இந்தப் பக்கம் இல்லை!",
+	"commentbox-error-namespace": "இப் பெயர்வெளியில் கருத்துரைகளுக்கு அனுமதியில்லை!",
+	"commentbox-error-empty-comment": "வெற்றுக் கருத்துரைகளுக்கு அனுமதி இல்லை !"
+}

@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kghbln",
+			"Metalhead64",
+			"Purodha",
+			"Umherirrender"
+		]
+	},
+	"adminlinks": "Adminlinks",
+	"adminlinks-desc": "Erweitert das Wiki um eine [[Special:AdminLinks|Spezialseite]] mit hilfreichen Links für Administratoren",
+	"adminlinks_documentation": "Dokumentation zu „$1“",
+	"adminlinks_general": "Allgemein",
+	"adminlinks_editsidebar": "Seitenleiste bearbeiten",
+	"adminlinks_editcss": "CSS bearbeiten",
+	"adminlinks_editmainpagename": "Namen der Hauptseite bearbeiten",
+	"adminlinks_users": "Benutzer",
+	"adminlinks_browsesearch": "Durchsehen und Suchen",
+	"adminlinks_importexport": "Importieren und Exportieren",
+	"adminlinks_pagenotfound": "Die Spezialseite mit der Bezeichnung „$1“ wurde nicht gefunden.",
+	"action-adminlinks": "Links für Administratoren zu nutzen",
+	"right-adminlinks": "[[Special:AdminLinks|Links für Administratoren]] nutzen"
+}

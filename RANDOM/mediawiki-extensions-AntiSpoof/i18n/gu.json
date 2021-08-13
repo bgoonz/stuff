@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ashok modhvadia",
+			"Dsvyas",
+			"KartikMistry"
+		]
+	},
+	"antispoof-desc": "મિક્સ્ડ-સ્ક્રિપ્ટ, ગૂંચવણ અને સમાન સભ્યનામો વાળા ખાતાં ખોલવા પર પ્રતિબંધ મુકે છે",
+	"antispoof-conflict-top": "ઈચ્છિત સભ્યનામ \"$1\" નીચેના {{PLURAL:$2|સભ્યનામ|સભ્યનામો}} સાથે ઘણું મળતું આવે છે:",
+	"antispoof-conflict-bottom": "\"મહેરબાની કરી બીજું સભ્યનામ પસંદ કરો:\"",
+	"antispoof-name-illegal": "સંભવત: ગૂંચવણ કે છેતરામણી જનક સભ્યનામ $2 અટકાવવાના હેતુથી સભ્યનામ \"$1\"ની છૂટ નથી.\nકૃપા કરી અન્ય નામ પસંદ કરો.",
+	"antispoof-badtype": "ખરાબ માહિતી પ્રકાર",
+	"antispoof-empty": "ખાલી વાક્ય",
+	"antispoof-prohibited": "પ્રતિબંધિત અક્ષર $1 ધરાવે છે",
+	"antispoof-combining": "સંયોજક નિશાની $1 થી શરૂ થાય છે",
+	"antispoof-unassigned": "અનિર્દિષ્ટ અક્ષર $1 ધરાવે છે",
+	"antispoof-deprecated": "અનિર્દિષ્ટ અક્ષર $1 ધરાવે છે",
+	"antispoof-noletters": "આમાં એકપણ અક્ષર નથી",
+	"antispoof-mixedscripts": "અસંગત મિક્સ્ડ સ્ક્રિપ્ટ્સ ધરાવે છે",
+	"antispoof-tooshort": "સંક્ષિપ્ત કરેલું નામ ખૂબ નાનું છે",
+	"antispoof-ignore": "છેતરામણી પરિક્ષણને અવગણો",
+	"right-override-antispoof": "છેતરામણી પરિક્ષણની ઉપરવટ જાવ"
+}

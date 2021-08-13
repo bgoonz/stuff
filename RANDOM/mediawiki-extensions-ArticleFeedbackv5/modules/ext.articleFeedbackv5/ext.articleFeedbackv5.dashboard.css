@@ -1,0 +1,306 @@
+/*----- SPECIAL PAGE ------*/
+
+/* Utility classes */
+.float-clear {
+	clear: both;
+	height: 0;
+}
+.float-clear:after {
+	clear: both;
+}
+
+/** Adjustments **/
+#bodyContent h2 {
+	clear: both;
+}
+select {
+	vertical-align: baseline;
+	height: 1.5em;
+}
+
+/** Notices **/
+#articlefeedbackv5-header-message {
+	color: #444;
+}
+#articleFeedbackv5-beta-label {
+	float: right;
+	font-size: 0.5em;
+	color: #444;
+}
+
+/** Disabled notice/enable switch **/
+#articlefeedbackv5-disabled {
+	padding: 6px 12px 6px 50px;
+	margin-bottom: 10px;
+
+	/* @embed */
+	background: url(images/big_lock.png);
+	/* @embed */
+	background-image: -webkit-linear-gradient(transparent, transparent), url(images/big_lock.svg);
+	/* @embed */
+	background-image: -moz-linear-gradient(transparent, transparent), url(images/big_lock.svg);
+	/* @embed */
+	background-image: linear-gradient(transparent, transparent), url(images/big_lock.svg);
+
+	background-color: #fefcea;
+	background-repeat: no-repeat;
+	background-size: 30px auto;
+	background-position: 10px center;
+}
+#articlefeedbackv5-disabled:after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+#articlefeedbackv5-disabled p {
+	line-height: 1.3em;
+}
+#articlefeedbackv5-disabled .articlefeedbackv5-disabled-header {
+	font-weight: bold;
+}
+#articlefeedbackv5-disabled .articlefeedbackv5-enable-button {
+	margin: 10px 0;
+	padding: 3px;
+	float: right;
+	background: #f7f8f8 !important;
+	color: #000;
+}
+
+/** Header section **/
+#articleFeedbackv5-header-wrap {
+	font-size: 1.2em;
+	line-height: 1.5em;
+	margin: 0 0 30px;
+}
+#articleFeedbackv5-header-wrap:after {
+	clear: both;
+}
+#articleFeedbackv5-header-links {
+	float: right;
+	height: 30px;
+}
+#articleFeedbackv5-header-links a {
+	padding-left: 10px;
+	line-height: 30px;
+}
+#articlefeedbackv5-special-central-watchlist-link {
+	margin-left: 10px;
+}
+#articlefeedbackv5-special-central-watchlist-link:before {
+	content: '•';
+	margin-right: 10px;
+}
+#articleFeedbackv5-showing-count-wrap,
+#articleFeedbackv5-special-watchlist-showing-wrap {
+	color: #444;
+	display: inline;
+	line-height: 30px;
+}
+#articleFeedbackv5-showing-count-wrap span:before,
+#articleFeedbackv5-special-watchlist-showing-wrap span:before {
+	content: '';
+
+	padding: 5px 0 5px 25px;
+
+	/* @embed */
+	background-image: url(../jquery.articleFeedbackv5/images/toolbox_discuss.png);
+	background-image: -webkit-linear-gradient(transparent, transparent), url(../jquery.articleFeedbackv5/images/toolbox_discuss.svg);
+	background-image: -moz-linear-gradient(transparent, transparent), url(../jquery.articleFeedbackv5/images/toolbox_discuss.svg);
+	background-image: linear-gradient(transparent, transparent), url(../jquery.articleFeedbackv5/images/toolbox_discuss.svg);
+
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: 20px 20px;
+
+	/* grayscale background image */
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: gray;
+}
+#articleFeedbackv5-percent-found-wrap {
+	color: #444;
+	display: inline;
+	line-height: 30px;
+}
+#articleFeedbackv5-percent-found-wrap .stat-marker {
+	margin-left: 30px;
+	padding: 8px 0 5px 25px;
+
+	background-size: 18px;
+	background-repeat: no-repeat;
+	background-position: left;
+}
+#articleFeedbackv5-percent-found-wrap .positive {
+	/* @embed */
+	background-image: url(../jquery.articleFeedbackv5/images/emotion_positive.png);
+	/* @embed */
+	background-image: -webkit-linear-gradient(transparent, transparent), url(../jquery.articleFeedbackv5/images/emotion_positive.svg);
+	/* @embed */
+	background-image: -moz-linear-gradient(transparent, transparent), url(../jquery.articleFeedbackv5/images/emotion_positive.svg);
+	/* @embed */
+	background-image: linear-gradient(transparent, transparent), url(../jquery.articleFeedbackv5/images/emotion_positive.svg);
+}
+#articleFeedbackv5-percent-found-wrap .negative {
+	/* @embed */
+	background-image: url(../jquery.articleFeedbackv5/images/emotion_negative.png);
+	/* @embed */
+	background-image: -webkit-linear-gradient(transparent, transparent), url(../jquery.articleFeedbackv5/images/emotion_negative.svg);
+	/* @embed */
+	background-image: -moz-linear-gradient(transparent, transparent), url(../jquery.articleFeedbackv5/images/emotion_negative.svg);
+	/* @embed */
+	background-image: linear-gradient(transparent, transparent), url(../jquery.articleFeedbackv5/images/emotion_negative.svg);
+}
+#articleFeedbackv5-percent-found-wrap .neutral {
+	/* @embed */
+	background-image: url(../jquery.articleFeedbackv5/images/emotion_neutral.png);
+	/* @embed */
+	background-image: -webkit-linear-gradient(transparent, transparent), url(../jquery.articleFeedbackv5/images/emotion_neutral.svg);
+	/* @embed */
+	background-image: -moz-linear-gradient(transparent, transparent), url(../jquery.articleFeedbackv5/images/emotion_neutral.svg);
+	/* @embed */
+	background-image: linear-gradient(transparent, transparent), url(../jquery.articleFeedbackv5/images/emotion_neutral.svg);
+}
+.aftv5-feedbackpage .aftv5-feedbackpage-comment-display-header {
+	height: 40px;
+	/* @embed */
+	background: url(images/bg-feedbackpage-header.png) repeat-x;
+	padding: 0 10px;
+}
+
+/** Filter & sort line **/
+#articleFeedbackv5-sort > div, #articleFeedbackv5-sort > span, #articleFeedbackv5-sort > a,
+#articleFeedbackv5-filter > div, #articleFeedbackv5-filter > span, #articleFeedbackv5-filter > a {
+	display: inline-block;
+	/* IE7 inline-block hack */
+	zoom: 1;
+	*display: inline;
+	height: 2em;
+	vertical-align: bottom;
+}
+
+/** Filtering **/
+#articleFeedbackv5-sort-filter-controls {
+	font-size: 1.1em;
+	line-height: 1.5em;
+	clear: both;
+	padding: 10px 0 0 0;
+	/* @embed */
+	background-image: url(images/bg-feedbackpage-header.png);
+	background-position: bottom left;
+	background-repeat: repeat-x;
+	overflow: hidden;
+}
+#articleFeedbackv5-sort-filter-controls:after {
+	clear: both;
+}
+.articleFeedbackv5-filter-link,.articleFeedbackv5-filter-link:visited {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.articleFeedbackv5-filter-link:hover {
+	/* @embed */
+	background-image: url(images/bg-feedbackpage-header-on.png);
+	background-position: bottom left;
+	background-repeat: repeat-x;
+	text-decoration: none;
+}
+#articleFeedbackv5-filter {
+	float: left;
+}
+.filter-active, .filter-active:hover, .articleFeedbackv5-filter-link.filter-active:hover {
+	font-weight: bold;
+	/* @embed */
+	background-image: url(images/bg-feedbackpage-header-on.png);
+	background-position: bottom left;
+	background-repeat: repeat-x;
+}
+.filter-active, .filter-active:visited {
+	color: #000;
+}
+#articleFeedbackv5-select-wrapper,
+#articleFeedbackv5-sort-wrapper {
+	font-weight: bold;
+	margin: 0 0 0 4px;
+	padding: 0 5px;
+}
+#articleFeedbackv5-select-wrapper:hover,
+#articleFeedbackv5-select-wrapper.filter-active {
+	/* @embed */
+	background-image: url(images/bg-feedbackpage-header-on.png);
+	background-position: bottom left;
+	background-repeat: repeat-x;
+}
+#articleFeedbackv5-filter-select,
+#articleFeedbackv5-sort-select {
+	margin-right: 0px;
+	color: #444444;
+}
+.filter-active #articleFeedbackv5-filter-select,
+.filter-active #articleFeedbackv5-sort-select {
+	color: black;
+	font-weight: bold;
+}
+.articleFeedbackv5-sort-label {
+	color: #333;
+}
+
+/** Sorting **/
+#articleFeedbackv5-sort {
+	float: right;
+}
+#articleFeedbackv5-sort .articleFeedbackv5-sort-label {
+	margin: 0 5px 0 0;
+	font-weight: bold;
+}
+
+/** Show Feedback Results */
+#articleFeedbackv5-show-feedback {
+	min-height: 250px;
+	width: 100%;
+	float: none;
+	margin: 0;
+	padding: 0;
+}
+
+/** No feedback message */
+#articlefeedbackv5-no-feedback {
+	padding-top: 10px;
+}
+
+/** List footer **/
+#articleFeedbackv5-footer {
+	width: 100%;
+	text-align: center;
+	background: #d2e5f7;
+	cursor: pointer;
+	line-height: 47px;
+}
+
+/** Show more **/
+a#articleFeedbackv5-show-more {
+	font-size: 1.2em;
+}
+
+/** Refresh list **/
+#articleFeedbackv5-refresh-list {
+	float: right;
+	margin: 10px !important;
+}
+
+/** Back to central page **/
+.articleFeedbackv5-feedback-central-goback {
+	font-size: 1.2em;
+	margin-top: 10px;
+	clear: both;
+}
+
+/** Permalink styles **/
+.articleFeedbackv5-feedback-permalink-goback {
+	font-size: 1.2em;
+	margin-top: 10px;
+}
+

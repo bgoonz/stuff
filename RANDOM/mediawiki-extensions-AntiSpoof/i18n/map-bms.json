@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mbrt",
+			"StefanusRA",
+			"Umherirrender"
+		]
+	},
+	"antispoof-desc": "Menggak nggawé akun sing jeneng panganggone nganggo aksara campuran, mbingungna lan sing mèmper",
+	"antispoof-conflict-top": "Jeneng \"$1\" mèmper banget karo {{PLURAL:$2|jeneng panganggo|}} kiye:",
+	"antispoof-conflict-bottom": "Monggo milih jeneng liyane.",
+	"antispoof-name-illegal": "Jeneng \"$1\" ora olih dinggo supaya wong ora bingung utawa menggak ngapi-api jeneng panganggo sing wis ana: $2.\nMonggo pilihen jeneng liyane baen.",
+	"antispoof-badtype": "Tipe data salah",
+	"antispoof-empty": "Data kosong",
+	"antispoof-prohibited": "Ngandhut karakter sing ora olih dienggo yakuwe $1",
+	"antispoof-combining": "Diwiwiti karo tandha kombinasi $1",
+	"antispoof-unassigned": "Ana karakter sing ora dienggo yakuwe $1",
+	"antispoof-deprecated": "Ngandhut karakter sing wis ora dinggo maning yakuwe $1",
+	"antispoof-noletters": "Ora ngandhut aksara babar belas",
+	"antispoof-mixedscripts": "Ngandhut aksara campuran sing ora kompatibel",
+	"antispoof-tooshort": "Jeneng kanonikalisasi kecendhaken",
+	"antispoof-ignore": "Lirwakaké pamrikasaan panipuan akun (spoofing)",
+	"right-override-antispoof": "''Override'' pamriksan palècèhan"
+}

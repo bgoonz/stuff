@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Brad Jorsch",
+			"FunPika"
+		]
+	},
+	"apihelp-antispoof-description": "{{doc-apihelp-description|antispoof}}",
+	"apihelp-antispoof-summary": "{{doc-apihelp-summary|antispoof}}",
+	"apihelp-antispoof-param-username": "{{doc-apihelp-param|antispoof|username}}",
+	"apihelp-antispoof-example-1": "{{doc-apihelp-example|antispoof}}",
+	"apihelp-createaccount-param-ignoreantispoof": "{{doc-apihelp-param|createaccount|ignoreantispoof}}"
+}

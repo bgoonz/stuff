@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Purodha"
+		]
+	},
+	"apihelp-antispoof-description": "Donn de Nahme vun de Metmaacher jähje dem <i lang=\"en\" xml:lang=\"en\">AntiSpoof</i> sing Nommallisehronge prööve.",
+	"apihelp-antispoof-param-username": "Dä Nahme zom pröhve jähje dem <i lang=\"en\" xml:lang=\"en\">AntiSpoof</i> sing Nommallisehrong.",
+	"apihelp-antispoof-example-1": "Donn dä Nahme <i lang=\"en\" xml:lang=\"en\">Foo</i> jähje dem <i lang=\"en\" xml:lang=\"en\">AntiSpoof</i> sing Nommallisehronge pröhve."
+}

@@ -1,0 +1,29 @@
+== $wgArticleCreationWorkflows ==
+
+Lists conditions when attempts to create a page should be redirected to
+Special:CreatePage. Any condition matching is enough to redirect.
+
+Format:
+[
+	condition 1,
+	condition 2,
+	. . .
+]
+
+Condition format:
+[
+	'namespaces' => [ namespace 1, namespace 2, ... ],
+	'excludeRight' => 'some right',
+]
+
+* 'namespaces' (required) - namespaces you want to redirect from.
+* 'excludeRight' (optional) - don't redirect users with this right.
+
+Example configuration:
+
+	$wgArticleCreationWorkflows = [
+		[
+			'namespaces' => [ NS_MAIN ],
+			'excludeRight' => 'autoconfirmed',
+		],
+	];

@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"BeginaFelicysym",
+			"Chrumps",
+			"Derbeth",
+			"Matma Rex",
+			"Mikołka",
+			"Rail",
+			"Railfail536",
+			"Sp5uhe",
+			"Woytecr"
+		]
+	},
+	"antispoof-desc": "Blokuje tworzenie kont użytkowników o nazwach podobnych do już istniejących lub dezorientujących",
+	"antispoof-conflict-top": "Nazwa użytkownika „$1” jest zbyt podobna do {{PLURAL:$2|następującej nazwy konta|następujących nazw kont}}:",
+	"antispoof-conflict-bottom": "Wybierz inną nazwę użytkownika.",
+	"antispoof-name-illegal": "Nazwa użytkownika „$1” nie jest dozwolona, gdyż może być myląca: $2.\nWybierz inną nazwę użytkownika.",
+	"antispoof-bad-char": "„$1” ($2)",
+	"antispoof-badtype": "Zły typ danych",
+	"antispoof-empty": "Pusty ciąg znaków",
+	"antispoof-prohibited": "Zawiera niedozwolony znak $1",
+	"antispoof-combining": "Zaczyna się od łącznika $1",
+	"antispoof-unassigned": "Zawiera nieprzypisany znak $1",
+	"antispoof-deprecated": "Zawiera niezalecany znak $1",
+	"antispoof-noletters": "Nie zawiera ani jednej litery",
+	"antispoof-mixedscripts": "Zawiera przemieszane znaki niezgodnych ze sobą pism",
+	"antispoof-tooshort": "Normalizowana nazwa użytkownika zbyt krótka",
+	"antispoof-ignore": "Ignoruj podobieństwo do istniejących nazw",
+	"antispoof-ignore-help": "Pozwala użytkownikom z określonymi uprawnieniami na utworzenie konta, nawet gdy jego nazwa jest podobna do istniejącego już konta.",
+	"action-override-antispoof": "obchodzenia ograniczeń przed zakładaniem kont o podobnych nazwach do już istniejących",
+	"right-override-antispoof": "Brak ograniczenia przed zakładaniem kont o podobnych nazwach do już istniejących"
+}

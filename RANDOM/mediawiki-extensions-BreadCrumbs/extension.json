@@ -1,0 +1,72 @@
+{
+	"name": "BreadCrumbs",
+	"version": "0.6.1",
+	"author": [
+		"Manuel Schneider",
+		"Tony Boyles",
+		"..."
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:BreadCrumbs",
+	"descriptionmsg": "breadcrumbs-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.35.0"
+	},
+	"DefaultUserOptions": {
+		"breadcrumbs-showcrumbs": true,
+		"breadcrumbs-delimiter": ">",
+		"breadcrumbs-numberofcrumbs": 5,
+		"breadcrumbs-namespaces": true,
+		"breadcrumbs-filter-duplicates": false,
+		"breadcrumbs-preceding-text": ""
+	},
+	"MessagesDirs": {
+		"Breadcrumbs": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"BreadCrumbsFunctions": "BreadCrumbsFunctions.php"
+	},
+	"Hooks": {
+		"BeforePageDisplay": "BreadCrumbsFunctions::fnBreadCrumbsShowHook",
+		"GetPreferences": "BreadCrumbsFunctions::fnBreadCrumbsAddPreferences"
+	},
+	"ResourceModules": {
+		"ext.breadCrumbs": {
+			"styles": "BreadCrumbs.css"
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "BreadCrumbs"
+	},
+	"config": {
+		"BreadCrumbsShowAnons": {
+			"value": true,
+			"description": "Whether to provide the links also for anonymous users."
+		},
+		"BreadCrumbsAllowUPOs": {
+			"value": true,
+			"description": "Whether users should be allowed to configure BreadCrumbs options."
+		},
+		"BreadCrumbsIgnoreRefreshes": {
+			"value": true,
+			"description": "Whether to ignore page refreshes."
+		},
+		"BreadCrumbsRearrangeHistory": {
+			"value": false,
+			"description": "Whether to rearrange history - not yet used."
+		},
+		"BreadCrumbsLink": {
+			"value": true,
+			"description": "Whether to link our breadcrumbs."
+		},
+		"BreadCrumbsIgnoreNameSpaces": {
+			"value": [],
+			"description": "If you do not want certain namespaces recorded use this value to add them here."
+		}
+	},
+	"manifest_version": 2
+}

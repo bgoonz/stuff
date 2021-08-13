@@ -1,0 +1,42 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jakub Fabijan",
+			"Javiero"
+		]
+	},
+	"blog-and": "kaj",
+	"blog-author-more-by": "Plu de $1",
+	"blog-by": "de",
+	"blog-by-user-category": "Artikoloj de uzanto $1",
+	"blog-comments-of-day": "Komentoj de la tago",
+	"blog-created": "kreita $1",
+	"blog-created-ago": "kreita antaŭ $1",
+	"blog-in-the-news": "En la novaĵoj",
+	"blog-last-edited": "laste redaktita $1",
+	"blog-login": "Vi devas [[Special:UserLogin|ensaluti]] por krei artikolojn.",
+	"blog-login-edit": "Vi devas [[Special:UserLogin|ensaluti]] por redakti blogajn artikolojn.",
+	"blog-new-articles": "Novaj artikoloj",
+	"blog-permission-required": "Vi ne havas la permeson por krei artikolojn.",
+	"blog-view-archive-link": "Vidi Ĉiujn",
+	"articlelists": "Novaj blogaj artikoloj",
+	"blog-ah-no-results": "Neniu paĝo trovita.",
+	"blog-ah-popular-articles": "Popularaj artikoloj",
+	"blog-ah-new-articles": "Novaj artikoloj",
+	"blog-ah-write-article": "Skribi artikolon",
+	"blog-ah-todays-articles": "Hodiaŭaj artikoloj",
+	"articleshome": "Bloga hejmpaĝo",
+	"blog-create-title": "Titolo",
+	"blog-create-text": "Teksto",
+	"blog-create-categories": "Kategorioj",
+	"blog-create-button": "Krei!",
+	"blog-more": "pli",
+	"blog-time-ago": "antaŭ $1",
+	"blog-time-days": "{{PLURAL:$1|unu tago|$1 tagoj}}",
+	"blog-time-hours": "{{PLURAL:$1|unu horo|$1 horoj}}",
+	"blog-time-minutes": "{{PLURAL:$1|unu minuto|$1 minutoj}}",
+	"blog-time-seconds": "{{PLURAL:$1|unu sekundo|$1 sekundoj}}",
+	"blog-user-articles-title": "Blogoj",
+	"blog-user-articles-votes": "{{PLURAL:$1|vote|votes}}",
+	"blog-user-article-comment": "{{PLURAL:$1|unu komento|$1 komentoj}}"
+}

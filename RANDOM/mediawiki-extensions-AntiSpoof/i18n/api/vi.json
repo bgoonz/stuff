@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Minh Nguyen"
+		]
+	},
+	"apihelp-antispoof-description": "Kiểm tra tên người dùng qua quá trình chuẩn hóa của AntiSpoof.",
+	"apihelp-antispoof-param-username": "Tên người dùng để kiểm tra qua AntiSpoof.",
+	"apihelp-antispoof-example-1": "Kiểm tra tên người dùng “Foo” qua AntiSpoof",
+	"apihelp-createaccount-param-ignoreantispoof": "Bỏ qua các kiểm tra lừa gạt (cần quyền <code>override-antispoof</code>)."
+}

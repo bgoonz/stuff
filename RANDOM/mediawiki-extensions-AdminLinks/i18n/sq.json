@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ammartivari",
+			"Kosovastar"
+		]
+	},
+	"adminlinks": "Admin lidhjet",
+	"adminlinks-desc": "Shton një [[Special:AdminLinks|faqe të veçantë]] që mban lidhje të dobishme për administratorët",
+	"adminlinks_documentation": "Dokumentacioni $1",
+	"adminlinks_general": "Të përgjithshme",
+	"adminlinks_editsidebar": "Redakton shiritin anësor",
+	"adminlinks_editcss": "Redakto skedën CSS",
+	"adminlinks_editmainpagename": "Redakoton emrin e faqes kryesore",
+	"adminlinks_users": "Përdoruesit",
+	"adminlinks_browsesearch": "Shfleton dhe të kërkon",
+	"adminlinks_importexport": "Importo dhe eksporto",
+	"right-adminlinks": "Shih lidhjen në [[Special:AdminLinks|Admin lidhjet]]"
+}

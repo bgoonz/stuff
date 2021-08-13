@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bentong Isles"
+		]
+	},
+	"coll-remove": "Tangtanga",
+	"coll-show": "Ipakita",
+	"coll-move_up": "Isaka",
+	"coll-move_down": "Ikanaog",
+	"coll-print_export": "I-print/i-eksport",
+	"coll-create_a_book": "Paghimo og libro",
+	"coll-download_as": "Idiskargar isip $1",
+	"coll-helppage": "Help:Mga libro",
+	"coll-remove_this_page": "Tangtanga kining maong panid sa imong libro",
+	"coll-image-attribution": "<b>$1</b> <i>Gigikanan:</i> $2 <i>Pagtugot:</i> $3 <i>Mga kontributor:</i> $4 <i>Orihinal nga naghimo:</i> $5"
+}

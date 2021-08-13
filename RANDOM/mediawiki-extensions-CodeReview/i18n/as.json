@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bishnu Saikia",
+			"Gitartha.bordoloi",
+			"Simbu123"
+		]
+	},
+	"code-authors": "লেখকসকল",
+	"code-field-timestamp": "তাৰিখ",
+	"code-field-comments": "মন্তব্যসমূহ",
+	"code-field-text": "টোকা",
+	"code-rev-author": "লেখক",
+	"code-rev-date": "তাৰিখ",
+	"code-rev-comment-preview": "খচৰা চাওক",
+	"code-rev-inline-preview": "খচৰা চাওক",
+	"code-rev-diff": "পাৰ্থক্য",
+	"code-rev-diff-link": "পাৰ্থক্য",
+	"code-rev-history-link": "ইতিহাস",
+	"code-status-new": "নতুন",
+	"code-status-ok": "সঠিক",
+	"code-signoff-field-user": "সদস্য",
+	"code-signoff-field-date": "তাৰিখ",
+	"codereview-batch-submit": "দাখিল কৰক",
+	"code-stats": "পৰিসংখ্যা",
+	"repoadmin-new-button": "সৃষ্টি কৰক",
+	"repoadmin-edit-button": "বাৰু"
+}

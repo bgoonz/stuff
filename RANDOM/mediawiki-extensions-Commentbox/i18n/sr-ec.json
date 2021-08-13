@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"BadDog",
+			"Rancher",
+			"Михајло Анђелковић"
+		]
+	},
+	"commentbox-desc": "Додаје кутијице за коментаре на извесне стране",
+	"commentbox-intro": "== Додавање коментара... ==\nИмате коментар о овој страници? Додајте га или <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} уредите страницу директно]</span>.",
+	"commentbox-savebutton": "Сними коментар",
+	"commentbox-name": "Име:",
+	"commentbox-log": "Нови коментари",
+	"commentbox-first-comment-heading": "== Коментари ==",
+	"commentbox-regex": "/\\n==\\s*Коментари\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Грешка током прављења коментара",
+	"commentbox-error-page-nonexistent": "Ова страница не постоји.",
+	"commentbox-error-namespace": "Коментари нису дозвољени у овом именском простору!",
+	"commentbox-error-empty-comment": "Празни коментари нису могући!"
+}

@@ -1,0 +1,31 @@
+<div class="collection-column-right-box{{#sectionDisabled}} collection-box-disabled{{/sectionDisabled}}" id="coll-downloadbox">
+	<h2><span class="mw-headline">{{headline}}</span></h2>
+	{{{description}}}
+	<form id="downloadForm" action="{{formAction}}" method="post">
+		<table style="width:100%; background-color: transparent;">
+			<tbody>
+				<tr>
+					<td>
+						{{#writer}}
+						<input type="hidden" name="writer" value="{{writer}}" />
+						{{/writer}}
+						{{^writer}}
+						<label for="formatSelect">{{formatSelectLabel}}</label>
+						<select id="formatSelect" name="writer"{{#sectionDisabled}} disabled="disabled"{{/sectionDisabled}}>
+							{{#formats}}
+							<option value="{{name}}">{{label}}</option>
+							{{/formats}}
+						</select>
+						{{/writer}}
+					</td>
+					<td id="collection-download-button">
+						<input type="hidden" name="bookcmd" value="render" />
+						<input type="hidden" name="returnto" value="{{returnTo}}" />
+						<input id="downloadButton" type="submit" value="{{buttonLabel}}"
+							{{#downloadDisabled}}disabled="disabled"{{/downloadDisabled}}/>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+</div>

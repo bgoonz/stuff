@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aefgh39622",
+			"Horus"
+		]
+	},
+	"adminlinks": "ลิงก์ผู้ดูแลระบบ",
+	"adminlinks-desc": "เพิ่ม[[Special:AdminLinks|หน้าพิเศษ]]ซึ่งมีลิงก์ที่เป็นประโยชน์สำหรับผู้ดูแลระบบ",
+	"adminlinks_documentation": "คำอธิบายการใช้งาน $1",
+	"adminlinks_general": "ทั่วไป",
+	"adminlinks_editsidebar": "แก้ไขแถบด้านข้าง",
+	"adminlinks_editcss": "แก้ไขไฟล์ CSS",
+	"adminlinks_editmainpagename": "แก้ไขชื่อหน้าหลัก",
+	"adminlinks_users": "ผู้ใช้",
+	"adminlinks_browsesearch": "เรียกดูและค้นหา",
+	"adminlinks_importexport": "นำเข้าและส่งออก",
+	"adminlinks_pagenotfound": "ไม่สามารถค้นหาหน้าพิเศษที่มีชื่อ: $1",
+	"action-adminlinks": "ดูลิงก์ผู้ดูแลระบบ",
+	"right-adminlinks": "ดูลิงก์ไปยัง[[Special:AdminLinks|ลิงก์สำหรับผู้ดูแลระบบ]]"
+}

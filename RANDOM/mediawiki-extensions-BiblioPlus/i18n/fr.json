@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cquoi",
+			"Thibaut120094",
+			"Tititou36",
+			"Verdy p"
+		]
+	},
+	"biblioplus-desc": "Récupère automatiquement les références de PubMed et de la base de données de l’ISBN",
+	"biblioplus-doi-tooltip": "Consulter ou acheter un article de l’éditeur",
+	"biblioplus-pmid-tooltip": "Consulter ou acheter l’article de l’éditeur (si disponible)",
+	"biblioplus-isbn-tooltip": "Information sur le livre à isbndb.org",
+	"biblioplus-medline-abstracts": "Tous les résumés de Medline :",
+	"biblioplus-pubmed-abstracts": "Tous les résumés à PubMed",
+	"biblioplus-hubmed-abstracts": "Tous les résumés à HubMed",
+	"biblioplus-vkey-title": "lien vers la base de données bibliographique"
+}

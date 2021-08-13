@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Murma174"
+		]
+	},
+	"apihelp-antispoof-description": "En brükernööm uun det normoolisiarangs-preew faan AntiSpoof apnem.",
+	"apihelp-antispoof-param-username": "Di brükernööm, di mä AntiSpoof preewet wurd skal.",
+	"apihelp-antispoof-example-1": "Di brükernööm „Foo“ mä AntiSpoof preewe.",
+	"apihelp-createaccount-param-ignoreantispoof": "Auergongt det spoofing-preew (wan det rocht <code>override-antispoof</code> föörleit)."
+}

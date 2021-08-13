@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="WikimediaFoundation.Wikipedia" Version="1.0.0.28" Publisher="CN=2180B9A4-DDFD-4BFD-8D7E-EADC9C394EF5" />
+  <Properties>
+    <DisplayName>Wikipedia</DisplayName>
+    <PublisherDisplayName>Wikimedia Foundation</PublisherDisplayName>
+    <Logo>images\storelogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.0</OSMinVersion>
+    <OSMaxVersionTested>6.2.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="default.html">
+      <VisualElements DisplayName="Wikipedia" Logo="win8-tile.png" SmallLogo="win8-small-tile.png" Description="Wikipedia Mobile for Windows 8" ForegroundText="dark" BackgroundColor="#ffffff">
+        <DefaultTile ShowName="logoOnly" WideLogo="win8-wide-tile.png" />
+        <SplashScreen Image="images\splashscreen.png" />
+      </VisualElements>
+      <Extensions>
+        <Extension Category="windows.search" />
+        <Extension Category="windows.shareTarget" StartPage="target.html">
+          <ShareTarget>
+            <DataFormat>Text</DataFormat>
+          </ShareTarget>
+        </Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

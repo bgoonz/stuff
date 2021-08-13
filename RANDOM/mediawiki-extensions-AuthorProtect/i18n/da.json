@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Saederup92",
+			"Sarrus"
+		]
+	},
+	"authorprotect": "Beskyt side fra ikke-forfattere",
+	"authorprotect-desc": "Tillader forfatteren af en side til at beskytte den fra andre brugere",
+	"authorprotect-notauthor": "{{GENDER:$1|Du}} er ikke {{GENDER:$1|forfatteren}} af denne side.",
+	"authorprotect-confirm": "Skift beskyttelsesniveauer",
+	"authorprotect-edit": "Begræns redigering til forfattere",
+	"authorprotect-move": "Begræns flytning til forfattere",
+	"authorprotect-intro": "Brug denne formular til at låse denne side fra ikke-forfattere",
+	"authorprotect-success": "Beskyttelsen blev sat!",
+	"protect-level-author": "Beskyt mod ikke-forfattere",
+	"restriction-level-author": "Forfatterbeskyttet"
+}

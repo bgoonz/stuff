@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fanjiayi",
+			"OIS",
+			"Renan",
+			"Stavanger7"
+		]
+	},
+	"coll-collection": "Libre",
+	"coll-collections": "Libres",
+	"coll-your_book": "Tui libre",
+	"coll-remove": "Remover",
+	"coll-show": "Monstrar",
+	"coll-move_up": "Mover ad-up",
+	"coll-move_down": "Mover a-bass",
+	"coll-suggest_your_book": "Tui libre",
+	"coll-print_export": "Printar/exportar",
+	"coll-create_a_book": "Crear un libre",
+	"coll-book_creator": "Creation de libres",
+	"coll-download_as": "Descargar quam $1",
+	"coll-add_this_page": "Adjunter ti-ci págine a vor libre",
+	"coll-add_page_tooltip": "Adjunter li actual wiki-págine al vor libre",
+	"coll-bookscategory": "Libres",
+	"coll-help": "Auxilie",
+	"coll-helppage": "Help:Libres",
+	"coll-n_pages": "$1 {{PLURAL:$1|págine|págines}}",
+	"coll-show_collection": "Monstrar li libre",
+	"coll-make_suggestions": "Suggester págines",
+	"coll-attribution-anons": "Anonim: $1",
+	"coll-article-attribution": "<b>$1</b> <i>Orígine:</i> $2 <i>Contributores:</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>Orígine:</i> $2 <i>Licentie:</i> $3 <i>Contributores:</i> $4 <i>Original artist:</i> $5"
+}

@@ -1,0 +1,32 @@
+_  = require 'underscore'
+ko = require 'knockout'
+
+{ DataSource,
+} = require '../datasource'
+{ Metric,
+} = require './metric'
+
+
+
+/**
+ * @class 
+ */
+class exports.GeoMapMetric extends Metric
+    -> super ...
+    
+    
+    defaults : ->
+        source_id  : null       # String
+    
+    
+    /**
+     * The GeoJSON dataset associated with this Metric.
+     * @type ko.computed<Object>
+     * @depends source
+     */
+    data : @computed ->
+        return unless geojson = @source()?.data()
+        geojson.getData()
+    
+    
+

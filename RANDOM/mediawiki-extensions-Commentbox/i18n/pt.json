@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu",
+			"Indech",
+			"Luckas"
+		]
+	},
+	"commentbox-desc": "Inclui uma caixa de comentários em certas páginas",
+	"commentbox-intro": "== Adicione um comentário... ==\nTem um comentário acerca desta página? Adicione-o aqui ou <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} edite a página diretamente]</span>.",
+	"commentbox-savebutton": "Gravar comentário",
+	"commentbox-name": "Nome:",
+	"commentbox-name-explanation": "<small>(Dica: Se [[Special:UserLogin|se autenticar]], não terá de preencher o seu nome aqui manualmente)</small>",
+	"commentbox-log": "Novos comentários",
+	"commentbox-first-comment-heading": "== Comentários ==",
+	"commentbox-regex": "/\\n==\\s*Comentários\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Erro ao criar comentário",
+	"commentbox-error-page-nonexistent": "Esta página não existe!",
+	"commentbox-error-namespace": "Não são permitidos comentários neste espaço nominal!",
+	"commentbox-error-empty-comment": "Comentários vazios não são permitidos!"
+}

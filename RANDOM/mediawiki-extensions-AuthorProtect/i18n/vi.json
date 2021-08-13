@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Minh Nguyen",
+			"Tuankiet65",
+			"Vinhtantran"
+		]
+	},
+	"authorprotect": "Khóa trang đối với những người không phải tác giả",
+	"authorprotect-desc": "Cho phép tác giả của trang khóa trang đó đối với những thành viên khác",
+	"authorprotect-notauthor": "Bạn không phải là tác giả của trang này",
+	"authorprotect-confirm": "Thay đổi mức khóa",
+	"authorprotect-edit": "Hạn chế sửa đổi chỉ dành cho tác giả",
+	"authorprotect-move": "Hạn chế di chuyển chỉ dành cho tác giả",
+	"authorprotect-intro": "Sử dụng mẫu này để khóa trang đối với những người không phải tác giả",
+	"authorprotect-success": "Đã khóa xong!",
+	"protect-level-author": "Khóa đối với những người không phải tác giả",
+	"restriction-level-author": "Khóa cho mức tác giả",
+	"right-authorprotect": "Khóa trang do mình viết",
+	"right-author": "Sửa trang bị tác giả khóa"
+}

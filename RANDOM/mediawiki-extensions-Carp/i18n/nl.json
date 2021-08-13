@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Siebrand"
+		]
+	},
+	"carp-desc": "Voegt de mogelijkheid toe voor het rapporteren van fouten en het uitpluizen van de stack voor andere uitbreidingen"
+}

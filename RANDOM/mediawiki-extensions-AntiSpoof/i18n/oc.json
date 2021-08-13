@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cedric31"
+		]
+	},
+	"antispoof-desc": "Blòca, amb un escript mixt, la creacion dels comptes per de noms d'utilizaires similars o podent prestar a confusion.",
+	"antispoof-conflict-top": "Lo nom « $1 » es tròp similar {{PLURAL:$2|a l'utilizaire seguent|als utilizaires seguents}} :",
+	"antispoof-conflict-bottom": "Causissètz un autre nom d'utilizaire.",
+	"antispoof-name-illegal": "Lo nom d'utilizaire « $1 » es pas autorizat, per fin d'evitar la confusion o l'usurpacion de noms d'utilizaire : $2.\nCausissètz un autre nom d'utilizaire.",
+	"antispoof-badtype": "Marrit tipe de donadas",
+	"antispoof-empty": "Cadena voida",
+	"antispoof-prohibited": "Conten lo caractèr interdit $1",
+	"antispoof-combining": "Comença amb una marca combinatòria $1",
+	"antispoof-unassigned": "Conten un caractèr non assignat $1",
+	"antispoof-deprecated": "Conten lo caractèr obsolèt $1",
+	"antispoof-noletters": "Conten pas cap de letra",
+	"antispoof-mixedscripts": "Conten mantun escript incompatible",
+	"antispoof-tooshort": "Nom normalizat tròp cort",
+	"antispoof-ignore": "Ignorar las verificacions d'engana",
+	"right-override-antispoof": "Espotís de pseudoverificacions"
+}

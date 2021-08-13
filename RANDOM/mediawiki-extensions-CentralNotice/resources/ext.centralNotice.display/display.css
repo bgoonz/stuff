@@ -1,0 +1,16 @@
+@media print {
+	#centralNotice {
+		display: none;
+	}
+}
+
+.cn-closeButton {
+	display: inline-block;
+	/* @embed */
+	background: url( images/close.png ) no-repeat;
+	width: 20px;
+	height: 20px;
+	text-indent: 20px;
+	white-space: nowrap;
+	overflow: hidden;
+}

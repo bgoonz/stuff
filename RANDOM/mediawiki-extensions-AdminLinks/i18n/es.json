@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Crazymadlover",
+			"Dgstranz",
+			"Locos epraix",
+			"Macofe",
+			"Ryo567"
+		]
+	},
+	"adminlinks": "Enlaces de administración",
+	"adminlinks-desc": "Añade una [[Special:AdminLinks|página especial]] con enlaces útiles para administradores",
+	"adminlinks_documentation": "documentación de $1",
+	"adminlinks_general": "General",
+	"adminlinks_editsidebar": "Editar barra lateral",
+	"adminlinks_editcss": "Editar archivo CSS",
+	"adminlinks_editmainpagename": "Editar nombre de página principal",
+	"adminlinks_users": "Usuarios",
+	"adminlinks_browsesearch": "Exploración y búsqueda",
+	"adminlinks_importexport": "Importación y exportación",
+	"adminlinks_pagenotfound": "No se pudo encontrar la página especial con nombre: $1.",
+	"action-adminlinks": "ver enlaces de administradores",
+	"right-adminlinks": "Ver el vínculo a [[Special:AdminLinks|Administrar vínculos]]"
+}

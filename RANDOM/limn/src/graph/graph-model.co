@@ -1,0 +1,65 @@
+_  = require 'underscore'
+ko = require 'knockout'
+
+{ StoredModel,
+} = require '../base'
+{ GraphJSONConverter,
+} = require '../data/graph-json-converter'
+{ GraphNodeData,
+} = require './node/graph-node-data'
+
+
+
+class exports.Graph extends StoredModel
+    resource : 'graphs'
+    
+    -> super ...
+    
+    getId    : -> @get 'id'
+    defaults : ->
+        graph_version : '0.6.0'
+        id            : null
+        slug          : ''
+        name          : ''
+        shortName     : ''
+        desc          : ''
+        notes         : ''
+        tags          : []
+        root : 
+            nodeType  : 'canvas'
+            width     : 750
+            height    : 500
+    
+    attributeTypes: ->
+        root : GraphNodeData.create
+    
+    
+    /**
+     * Inform sub-objects its safe to begin their watchers.
+     */
+    watching: @computed ->
+        @isWatching = true
+        @root().watching()
+    
+    
+    /**
+     * Invoked to transform raw attribute data into its "proper" form for
+     * this object, whatever that might be.
+     * 
+     * @param {Object} data Raw attributes to canonicalize.
+     * @returns {Object} Converted raw data.
+     */
+    canonicalize: (data) ->
+        converter = new GraphJSONConverter data
+        converter.canonicalize()
+    
+    
+    /**
+     * All metrics in the Graph.
+     * @type ko.computed<Array<Metric>>
+     */
+    metrics: @computed ->
+        _.compact @root().invoke 'metric'
+    
+
+

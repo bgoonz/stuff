@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"biblioplus-desc": "Henter automatisk referanser fra PubMed og ISBN-databasen",
+	"biblioplus-doi-tooltip": "Vis eller kjøp artikkel fra utgiver",
+	"biblioplus-pmid-tooltip": "Vis eller kjøp artikkel fra utgiver (om tilgjengelig)",
+	"biblioplus-isbn-tooltip": "Bokinformasjon på isbndb.org",
+	"biblioplus-medline-abstracts": "Alle Medline-abstrakter:",
+	"biblioplus-pubmed-abstracts": "Alle abstrakter på PubMed",
+	"biblioplus-hubmed-abstracts": "Alle abstrakter på HubMed",
+	"biblioplus-vkey-title": "lenke til bibliografidatabase"
+}

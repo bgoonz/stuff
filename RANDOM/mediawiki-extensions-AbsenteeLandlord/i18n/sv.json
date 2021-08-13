@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lejonel",
+			"M.M.S."
+		]
+	},
+	"absenteelandlord-reason": "Databasen har låsts automatiskt på grund av att administratörerna inte har varit aktiva.",
+	"absenteelandlord-desc": "Låser automatiskt wikins databas om alla administratörer är frånvarande under en viss tid"
+}

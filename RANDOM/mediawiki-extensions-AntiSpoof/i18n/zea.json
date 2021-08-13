@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"NJ",
+			"Ooswesthoesbes"
+		]
+	},
+	"antispoof-desc": "Blokkeer 't anmaeken van gebrukers mie meêdere schriffen, verwarr'nde en heliekende gebrukersnaemen",
+	"antispoof-name-illegal": "De naem \"$1\" is nie toehestaen om verwarrieng of gefinheerde gebrukersnaemen te voorkomm'n: $2. Kies asjeblieft een aore naem.",
+	"antispoof-badtype": "Verkeêrd datatype",
+	"antispoof-empty": "Lehe strieng",
+	"antispoof-prohibited": "Bevat verbood'n karakter",
+	"antispoof-combining": "Behun mie een hecombineerd merkteêken",
+	"antispoof-unassigned": "Bevat nie toehewezen of verouwerd karakter",
+	"antispoof-noletters": "Bevat hin letters",
+	"antispoof-mixedscripts": "Bevat nie compatibele schriffen",
+	"antispoof-tooshort": "Afekorte naem te kort",
+	"antispoof-ignore": "Controle op geliekende gebrukersnaemen negeren"
+}

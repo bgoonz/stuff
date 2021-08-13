@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eduardo.mps"
+		]
+	},
+	"absenteelandlord-reason": "A base de dados foi automaticamente bloqueada devido à inatividade dos sysops.",
+	"absenteelandlord-desc": "Bloqueia a base dados do wiki automaticamente se todos os sysops estiverem inativos por algum tempo"
+}

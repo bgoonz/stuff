@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Andrei Stroe",
+			"Firilacroco",
+			"Minisarm"
+		]
+	},
+	"admanager": "Gestionar de anunțuri",
+	"admanagerzones": "Zone gestionare anunțuri",
+	"admanager-desc": "Furnizează o [[Special:AdManager|pagină specială]] care permite administratorilor să seteze zona pentru pagini sau categorii",
+	"admanager_docu": "Pentru a adăuga sau înlătura zona cu anunțuri a unei pagini sau a unei întregi categorii, adăugați sau eliminați de mai jos titlul paginii sau categoriei.",
+	"admanagerzones_docu": "Introduceți fiecare număr al zonei cu anunțuri pe un singur rând.",
+	"admanager_invalidtargetpage": "Nicio pagină găsită cu titlul „$1”.",
+	"admanager_invalidtargetcategory": "Nicio categorie găsită cu titlul „$1”.",
+	"admanager_notable": "Eroare! Un tabel cu baza de date, care a fost solicitat, nu a fost găsit! Rulați mai întâi update.php.",
+	"admanager_noAdManagerZones": "Eroare! Trebuie să adăugați câteva zone cu anunțuri. Introduceți-le în pagina [[Special:AdManagerZones|Zone gestionare anunțuri]].",
+	"admanager_labelPage": "Titluri de pagină",
+	"admanager_labelCategory": "Nume de categorie",
+	"admanager_submit": "Trimite",
+	"admanager_noads": "Nu se afișează anunțuri",
+	"admanager_Page": "Pagini",
+	"admanager_Category": "Categorii",
+	"admanager_added": "Modificările dumneavoastră au fost salvate",
+	"admanager_addedzone": "Adăugat zona $1",
+	"admanager_zonenum": "Zona nr.: $1",
+	"admanager_zonenotnumber": "Eroare! $1 nu este un număr.",
+	"admanager_return": "Revenire la [[Special:AdManager|Ad Manager]]",
+	"admanager_gotoads": "[[Special:AdManager|Modifică amplasarea anunțurilor]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Modifică zonele cu anunțuri]]",
+	"right-admanager": "[[Special:AdManager|Gestionează configurația anunțurilor publicitare]]"
+}

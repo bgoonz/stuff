@@ -1,0 +1,15 @@
+<li class="mw-book-tocitem mw-book-tocitem-type-{{type}} level-{{level}}">
+    {{! Use data attributes for consistency with RemexCollectionMunger.
+        Ignore $level === 0 which means a Contributors section in a single-article book. }}
+    <a href="#{{anchor}}" {{#level?}}data-mw-sectionnumber="{{number}}"{{/level?}}>
+        {{! section title and displaytitle can contain safe HTML }}
+        {{{text}}}
+    </a>
+    {{#children?}}
+        <ul>
+            {{#children}}
+                {{>tocitem}}
+            {{/children}}
+        </ul>
+    {{/children?}}
+</li>

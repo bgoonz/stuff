@@ -1,0 +1,274 @@
+{
+	"name": "Collection",
+	"version": "1.8.0",
+	"author": [
+		"PediaPress GmbH",
+		"Siebrand Mazeland",
+		"Marcin Cieślak"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:Collection",
+	"descriptionmsg": "coll-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "specialpage",
+	"requires": {
+		"MediaWiki": ">= 1.37.0"
+	},
+	"callback": "CollectionHooks::registerExtension",
+	"AvailableRights": [
+		"collectionsaveasuserpage",
+		"collectionsaveascommunitypage"
+	],
+	"SpecialPages": {
+		"Book": "SpecialCollection",
+		"RenderBook": "MediaWiki\\Extensions\\Collection\\Specials\\SpecialRenderBook"
+	},
+	"MessagesDirs": {
+		"Collection": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"CollectionAlias": "Collection.alias.php"
+	},
+	"AutoloadClasses": {
+		"SpecialCollection": "includes/Specials/SpecialCollection.php",
+		"CollectionAjaxFunctions": "includes/CollectionAjaxFunctions.php",
+		"CollectionSession": "includes/CollectionSession.php",
+		"CollectionHooks": "includes/CollectionHooks.php",
+		"CollectionSuggest": "includes/CollectionSuggest.php",
+		"CollectionProposals": "includes/CollectionProposals.php",
+		"CollectionPageTemplate": "templates/CollectionPageTemplate.php",
+		"CollectionListTemplate": "templates/CollectionListTemplate.php",
+		"CollectionLoadOverwriteTemplate": "templates/CollectionLoadOverwriteTemplate.php",
+		"CollectionSaveOverwriteTemplate": "templates/CollectionSaveOverwriteTemplate.php",
+		"CollectionRenderingTemplate": "templates/CollectionRenderingTemplate.php",
+		"CollectionFinishedTemplate": "templates/CollectionFinishedTemplate.php",
+		"CollectionFailedTemplate": "templates/CollectionFailedTemplate.php",
+		"CollectionSuggestTemplate": "templates/CollectionSuggestTemplate.php",
+		"CollectionRenderingAPI": "includes/rendering/CollectionRenderingAPI.php",
+		"MWServeRenderingAPI": "includes/rendering/MWServeRenderingAPI.php",
+		"CollectionAPIResult": "includes/rendering/CollectionAPIResult.php"
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extensions\\Collection\\": "includes/"
+	},
+	"ResourceModules": {
+		"ext.collection": {
+			"scripts": "ext.collection/collection.js",
+			"dependencies": [
+				"ext.collection.bookcreator",
+				"jquery.ui",
+				"mediawiki.language"
+			]
+		},
+		"ext.collection.bookcreator.styles": {
+			"styles": "ext.collection.bookcreator.styles/bookcreator.less"
+		},
+		"ext.collection.bookcreator": {
+			"scripts": "ext.collection.bookcreator/bookcreator.js",
+			"dependencies": [
+				"jquery.jStorage",
+				"mediawiki.util",
+				"ext.collection.bookcreator.styles"
+			]
+		},
+		"ext.collection.checkLoadFromLocalStorage": {
+			"scripts": "ext.collection.checkLoadFromLocalStorage/check_load_from_localstorage.js",
+			"dependencies": [
+				"ext.collection",
+				"ext.collection.bookcreator.styles",
+				"jquery.jStorage"
+			],
+			"messages": [
+				"coll-load_local_book"
+			]
+		},
+		"ext.collection.suggest": {
+			"scripts": "ext.collection.suggest/suggest.js",
+			"dependencies": "ext.collection.bookcreator"
+		},
+		"ext.collection.offline": {
+			"styles": "ext.collection.offline/offline.less"
+		},
+		"ext.collection.bookcreator.messageBox": {
+			"dependencies": [
+				"mediawiki.hlist",
+				"ext.collection.bookcreator.messageBox.styles",
+				"ext.collection.bookcreator.messageBox.icons"
+			]
+		},
+		"ext.collection.bookcreator.messageBox.styles": {
+			"styles": "ext.collection.bookcreator.messageBox/messageBox.less"
+		},
+		"ext.collection.bookcreator.messageBox.icons": {
+			"class": "ResourceLoaderImageModule",
+			"selector": ".collection-icon-{name}:before",
+			"images": {
+				"warning": "ext.collection.bookcreator.messageBox/images/warning-icon.svg",
+				"info": "ext.collection.bookcreator.messageBox/images/info-icon.svg"
+			}
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "Collection/resources"
+	},
+	"Hooks": {
+		"SidebarBeforeOutput": "CollectionHooks::onSidebarBeforeOutput",
+		"SiteNoticeAfter": "CollectionHooks::siteNoticeAfter",
+		"OutputPageCheckLastModified": "CollectionHooks::checkLastModified"
+	},
+	"config": {
+		"CollectionMWServeURL": {
+			"description": "URL of mw-serve render server",
+			"value": "https://tools.pediapress.com/mw-serve/"
+		},
+		"CollectionMWServeCredentials": {
+			"description": "Login credentials to this MediaWiki as 'USERNAME:PASSWORD' string",
+			"value": null
+		},
+		"CollectionMWServeCert": {
+			"description": "PEM-encoded SSL certificate for the mw-serve render server to pass to CURL",
+			"value": null
+		},
+		"CollectionArticleNamespaces": {
+			"description": "Array of namespaces that can be added to a collection",
+			"value": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				8,
+				9,
+				100,
+				101,
+				102,
+				103,
+				104,
+				105,
+				106,
+				107,
+				108,
+				109,
+				110,
+				111
+			]
+		},
+		"CommunityCollectionNamespace": {
+			"description": "Namespace for \"community books\"",
+			"value": 4
+		},
+		"CollectionMaxArticles": {
+			"description": "Maximum no. of articles in a book",
+			"value": 500
+		},
+		"CollectionLicenseName": {
+			"description": "Name of license",
+			"value": null
+		},
+		"CollectionLicenseURL": {
+			"description": "HTTP(s) URL pointing to license in wikitext format",
+			"value": null
+		},
+		"CollectionFormats": {
+			"description": "List of available download formats, as mapping of mwlib writer to format name",
+			"value": {
+				"rl": "PDF"
+			}
+		},
+		"CollectionRendererSettings": {
+			"description": "Additional renderer options for collections. Format is as for HTMLForm::loadInputFromParameters. Note that fieldnames may only contain [a-zA-Z0-9_-], and values may not contain pipes or newlines. If the 'options' field is an array, keys will be interpreted as messages",
+			"value": {
+				"papersize": {
+					"type": "select",
+					"label-message": "coll-setting-papersize",
+					"default": "a4",
+					"options": {
+						"coll-setting-papersize-a4": "a4",
+						"coll-setting-papersize-letter": "letter"
+					}
+				},
+				"toc": {
+					"type": "select",
+					"label-message": "coll-setting-toc",
+					"default": "auto",
+					"options": {
+						"coll-setting-toc-auto": "auto",
+						"coll-setting-toc-yes": "yes",
+						"coll-setting-toc-no": "no"
+					}
+				},
+				"columns": {
+					"type": "select",
+					"label-message": "coll-setting-columns",
+					"default": "2",
+					"options": {
+						"coll-setting-columns-1": "1",
+						"coll-setting-columns-2": "2"
+					}
+				}
+			}
+		},
+		"CollectionCommandToServeURL": {
+			"description": "Some commands require an external server",
+			"value": []
+		},
+		"CollectionFormatToServeURL": {
+			"description": "For formats which rendering depends on an external server",
+			"value": []
+		},
+		"CollectionContentTypeToFilename": {
+			"description": "",
+			"value": {
+				"application/pdf": "collection.pdf",
+				"application/vnd.oasis.opendocument.text": "collection.odt",
+				"text/plain": "collection.txt"
+			}
+		},
+		"CollectionPortletFormats": {
+			"value": [
+				"rl"
+			]
+		},
+		"CollectionPortletForLoggedInUsersOnly": {
+			"value": false
+		},
+		"CollectionMaxSuggestions": {
+			"value": 10
+		},
+		"CollectionSuggestCheapWeightThreshhold": {
+			"value": 50
+		},
+		"CollectionSuggestThreshhold": {
+			"value": 100
+		},
+		"CollectionPODPartners": {
+			"value": {
+				"pediapress": {
+					"name": "PediaPress",
+					"url": "https://pediapress.com/",
+					"posturl": "https://pediapress.com/api/collections/",
+					"infopagetitle": "coll-order_info_article"
+				}
+			}
+		},
+		"CollectionShowRenderNotes": {
+			"description": "Optional notes that are displayed on the download screen for the rendered document. Each entry is a message key",
+			"value": [
+				"coll-rendering_finished_note_not_satisfied"
+			]
+		},
+		"CollectionDisableDownloadSection": {
+			"description": "Disable the download section see https://phabricator.wikimedia.org/T175996",
+			"value": true
+		},
+		"CollectionDisableSidebarLink": {
+			"description": "Disable the link to the book creator in the sidebar",
+			"value": false
+		}
+	},
+	"load_composer_autoloader": true,
+	"manifest_version": 2
+}

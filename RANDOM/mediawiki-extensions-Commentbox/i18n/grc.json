@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Crazymadlover",
+			"Omnipaedista"
+		]
+	},
+	"commentbox-name": "Ὄνομα:",
+	"commentbox-first-comment-heading": "== Σχόλια ==",
+	"commentbox-regex": "/\\n==\\s*Σχόλια\\s*==\\s*\\n/i"
+}

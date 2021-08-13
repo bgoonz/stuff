@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"categorysortheaders-desc": "Permitte alterar le ordine de apparentia de paginas in categorias, per specificar claves multi-character de ordination usante un syntaxe como <nowiki>[[category:Foo|^Header^Invisible part of sortkey]]</nowiki>"
+}

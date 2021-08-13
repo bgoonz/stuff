@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"XthemeCore"
+		]
+	},
+	"commentbox-desc": "เพิ่มกล่องความคิดเห็นบนหน้า",
+	"commentbox-intro": "แสดงความคิดเห็นที่นี่",
+	"commentbox-savebutton": "แสดงความคิดเห็น",
+	"commentbox-name": "ชื่อ:",
+	"commentbox-name-explanation": "<small>(เคล็ดลับ: ถ้าคุณ [[Special:UserLogin|เข้าสู่ระบบ]], คุณไม่จำเป็นต้องใส่ชื่อในช่องนี้)</small>",
+	"commentbox-log": "ความคิดเห็นใหม่",
+	"commentbox-first-comment-heading": "== ความคิดเห็น ==",
+	"commentbox-regex": "/\\n==\\s*ความคิดเห็น\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "มีปัญหาในขณะสร้างความคิดเห็น",
+	"commentbox-error-page-nonexistent": "ไม่มีหน้าดังกล่าว",
+	"commentbox-error-namespace": "ไม่อนุญาตให้ใช้ namespace นี้ในการแสดงความคิดเห็น",
+	"commentbox-error-empty-comment": "ไม่อนุญาตให้เว้นช่องแสดงความคิดเห็น"
+}

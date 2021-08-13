@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kghbln",
+			"Metalhead64",
+			"Raimond Spekking",
+			"Umherirrender"
+		]
+	},
+	"authorprotect": "Seitenbearbeitung auf den Autor der Seite beschränken",
+	"authorprotect-desc": "Ermöglicht es dem Autor einer Seite, diese für die Bearbeitung durch andere Benutzer zu sperren",
+	"authorprotect-notauthor": "{{GENDER:$1|Du}} bist nicht {{GENDER:$1|der Autor|die Autorin}} dieser Seite.",
+	"authorprotect-confirm": "Seitenschutz ändern",
+	"authorprotect-edit": "Bearbeitungen auf die Autoren beschränken",
+	"authorprotect-move": "Verschiebungen auf die Autoren beschränken",
+	"authorprotect-intro": "Mit diesem Formular kann die Bearbeitung dieser Seite auf den Autor beschränkt werden.",
+	"authorprotect-success": "Seitenschutz festgelegt!",
+	"protect-level-author": "Bearbeitungen auf den Autor beschränken",
+	"restriction-level-author": "Bearbeitungen sind auf den Autor beschränkt",
+	"action-authorprotect": "Seiten für Nicht-Autoren zu schützen",
+	"right-authorprotect": "Seiten auf die Bearbeitung durch den Autor beschränken",
+	"action-author": "auf die Bearbeitung durch den Autor beschränkte Seiten zu bearbeiten",
+	"right-author": "Auf die Bearbeitung durch den Autor beschränkte Seiten bearbeiten"
+}

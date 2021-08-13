@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ukabia"
+		]
+	},
+	"centralauth-admin-info-locked": "Gbàchịrị:",
+	"centralauth-admin-info-username": "Ahàǹjìème:",
+	"centralauth-admin-list-blocked": "Kàchịrị",
+	"centralauth-admin-no": "mbà",
+	"centralauth-admin-reason": "Mgbághapụtà:",
+	"centralauth-admin-status-hidden": "Zonarịrị:",
+	"centralauth-admin-username": "Ahàǹjìème:",
+	"centralauth-admin-yes": "eeh",
+	"centralauth-days-ago": "{{PLURAL:$1|chi|chi}} $1 gárá",
+	"centralauth-editgroup-reason": "Mgbághapụtà:",
+	"centralauth-editset-name": "Áhà:",
+	"centralauth-editset-nouse": "(efù)",
+	"centralauth-editset-reason": "Mgbághapụtà:",
+	"centralauth-editset-submit": "Zibànye",
+	"centralauth-editset-submit-delete": "Kàcha",
+	"centralauth-editset-type": "Ùdị:",
+	"centralauth-editset-wikis": "Wiki:",
+	"centralauth-finish-login": "Banyé",
+	"centralauth-finish-password": "Okwúngáfè:",
+	"centralauth-hours-ago": "{{PLURAL:$1|àmànì|àmànì}} $1 gárá",
+	"centralauth-listusers-locked": "gbàchịrị",
+	"centralauth-log-status-locked": "gbàchịrị",
+	"centralauth-log-status-none": "(efù)",
+	"centralauth-merge-method-primary": "wiki nke úlọ",
+	"centralauth-months-ago": "{{PLURAL:$1|önwa|önwa}} $1 gárá",
+	"centralauth-rename-progress-username": "Ahàǹjìème",
+	"centralauth-years-ago": "{PLURAL:$1|afọr|afọr}} $1 gárá",
+	"globalrenamequeue-column-rq-name": "Ahàǹjìème",
+	"globalrenamequeue-form-username": "Ahàǹjìème:",
+	"globalrenamequeue-request-cancel-text": "Hapụ̀"
+}

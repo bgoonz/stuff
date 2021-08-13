@@ -1,0 +1,38 @@
+{
+	"@metadata": {
+		"authors": [
+			"DCamer",
+			"Engineering",
+			"Kaganer",
+			"Okras",
+			"Vlad5250"
+		]
+	},
+	"admanager": "Менеджер рекламы",
+	"admanagerzones": "Менеджер рекламных зон",
+	"admanager-desc": "Добавляет [[Special:AdManager|служебную страницу]] которая позволяет администраторам устанавливать зоны для страниц или категорий",
+	"admanager_docu": "Чтобы добавить или удалить рекламную зону страницы или всей категории, добавьте или удалите ниже название страницы или категории.",
+	"admanagerzones_docu": "Введите номер каждой рекламной зоны на отдельной строке.",
+	"admanager_invalidtargetpage": "Не найдена страница «$1».",
+	"admanager_invalidtargetcategory": "Не найдена категория «$1».",
+	"admanager_notable": "Ошибка! Не найдена необходимая таблица базы данных! Сначала запустите update.php.",
+	"admanager_noAdManagerZones": "Ошибка! Необходимо добавить несколько рекламных зон. Введите их в [[Special:AdManagerZones|Менеджере рекламных зон]].",
+	"admanager_labelPage": "Названия страниц",
+	"admanager_labelCategory": "Названия категорий",
+	"admanager_submit": "Отправить",
+	"admanager_noads": "Не отображать рекламу",
+	"admanager_Page": "Страницы",
+	"admanager_Category": "Категории",
+	"admanager_added": "Ваши изменения были сохранены",
+	"admanager_addedzone": "Добавлена зона $1",
+	"admanager_removedzone": "Удалена зона $1.",
+	"admanager_nozonesadded": "Нет зон для добавления.",
+	"admanager_nozonesremoved": "Нет зон для удаления.",
+	"admanager_zonenum": "Зона #:$1",
+	"admanager_zonenotnumber": "Ошибка!  $1 — не число.",
+	"admanager_return": "Обратно в [[Special:AdManager|Менеджер рекламы]]",
+	"admanager_gotoads": "[[Special:AdManager|Изменить размещение рекламы]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Изменить рекламные зоны]]",
+	"action-admanager": "управление конфигурацией рекламы",
+	"right-admanager": "[[Special:AdManager|Управление конфигурацией рекламы]]"
+}

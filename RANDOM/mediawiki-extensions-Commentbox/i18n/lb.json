@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Les Meloures",
+			"Robby",
+			"Soued031"
+		]
+	},
+	"commentbox-desc": "Setzt op bestëmmte Säiten eng Këscht fir Bemierkungen dobäi",
+	"commentbox-intro": "== Eng Bemierkung derbäisetzen... ==\nDir hutt eng Bemierkung zu dëser Säit? Setzt se hei derbäi oder <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} ännert d'Säit direkt]</span>.",
+	"commentbox-savebutton": "Bemierkung späicheren",
+	"commentbox-name": "Numm:",
+	"commentbox-name-explanation": "<small>(Tip: Wann Dir [[Special:UserLogin|Iech umellt]], braucht Dir Ären Numm hei net manuell anzeginn)</small>",
+	"commentbox-log": "Nei Bemierkungen",
+	"commentbox-first-comment-heading": "== Bemierkungen ==",
+	"commentbox-regex": "/\\n==\\s*Bemierkungen\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Feeler beim Uleeë vun der Bemierkung",
+	"commentbox-error-page-nonexistent": "Dës Säit gëtt et net!",
+	"commentbox-error-namespace": "Bemierkunge sinn an dësem Nummraum net erlaabt!",
+	"commentbox-error-empty-comment": "Eidel Bemierkunge sinn net erlaabt!"
+}

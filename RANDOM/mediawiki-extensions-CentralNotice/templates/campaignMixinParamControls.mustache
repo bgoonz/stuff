@@ -1,0 +1,22 @@
+<fieldset id="{{divId}}">
+<div class="campaignMixinControls">
+{{#params}}
+	<p>
+		<label for="{{inputName}}">
+			{{labelMsg}}
+			<input
+				type="{{inputType}}"
+				{{#inputSizeFlagAndVar}}size="{{inputSize}}"{{/inputSizeFlagAndVar}}
+				value="{{inputValue}}"
+				name="{{inputName}}"
+				{{#checkedFlagAndVar}}checked="{{checked}}"{{/checkedFlagAndVar}}
+				data-data-type="{{dataType}}" />
+
+			{{#help}}
+				<div class="htmlform-help">{{help}}</div>
+			{{/help}}
+		</label>
+	</p>
+{{/params}}
+</div>
+</fieldset>

@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"SVG",
+			"Shirayuki",
+			"The Evil IP address",
+			"Umherirrender"
+		]
+	},
+	"batchuserrights": "{{doc-special|BatchUserRights|unlisted=1}}",
+	"batchuserrights-desc": "{{desc|name=Batch User Rights|url=https://www.mediawiki.org/wiki/Extension:BatchUserRights}}",
+	"batchuserrights-names": "Names of users which should be added to the selected groups",
+	"batchuserrights-intro": "How to use description on Special:BatchUserRights",
+	"batchuserrights-single-progress-update": "Used as success message. Parameters:\n* $1 - number of groups\n* $2 - username",
+	"batchuserrights-add-groups": "Used as success message. Parameters:\n* $1 - number of users\n* $2 - number of groups\n* $3 - list of groups",
+	"batchuserrights-userload-error": "Error message if a user could not loaded. Parameters:\n* $1 - username",
+	"batchuserrights-no-groups": "Error message which will be shown if no groups to add has been selected",
+	"right-batchuserrights": "{{doc-right|batchuserrights}}",
+	"action-batchuserrights": "{{doc-action|batchuserrights}}"
+}

@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"commentbox-desc": "Engade unha caixa de comentarios a determinadas páxinas",
+	"commentbox-intro": "== Engadir un comentario... ==\nQuere facer un comentario sobre esta páxina? Engádao aquí ou <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} edite a páxina directamente]</span>.",
+	"commentbox-savebutton": "Gardar o comentario",
+	"commentbox-name": "Nome:",
+	"commentbox-name-explanation": "<small>(Consello: se [[Special:UserLogin|accede ao sistema]], non terá que encher manualmente o seu nome)</small>",
+	"commentbox-log": "Novos comentarios",
+	"commentbox-first-comment-heading": "== Comentarios ==",
+	"commentbox-regex": "/\\n==\\s*Comentarios\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Erro ao crear o comentario",
+	"commentbox-error-page-nonexistent": "Esta páxina non existe!",
+	"commentbox-error-namespace": "Os comentarios non están permitidos neste espazo de nomes!",
+	"commentbox-error-empty-comment": "Non se permiten comentarios baleiros!"
+}

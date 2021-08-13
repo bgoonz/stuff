@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Michawiki"
+		]
+	},
+	"antispoof-desc": "Blokěrujo napóranje kontow z měšanym pismom, mjerwjece a pódobne wužywarske mjenja",
+	"antispoof-conflict-top": "Mě \"$1\" jo pśepódobny {{PLURAL:$2|slědujucemu wužywarskemu mjenjeju|slědujucyma wužywarskima mjenjoma|slědujucym wužywarskim mjenjam}}:",
+	"antispoof-conflict-bottom": "Pšosym wubjeŕ druge mě.",
+	"antispoof-name-illegal": "Mě \"$1\" se njedowólujo, aby se mjerwjece abo manipulěrowane wužywarske mjenja wopinuli: $2. Wubjeŕ pšosym druge mě.",
+	"antispoof-badtype": "Wopacny datowy typ",
+	"antispoof-empty": "Prozne pólo",
+	"antispoof-prohibited": "Wopśimujo njedowólone znamuško $1",
+	"antispoof-combining": "Zachopina se ze znamuškoweju kombinaciju $1",
+	"antispoof-unassigned": "Wopśimujo njepśirědowane abo njewitane znamuško",
+	"antispoof-deprecated": "Wopśimujo zestarjone znamuško $1",
+	"antispoof-noletters": "Njewopśimjejo pismiki",
+	"antispoof-mixedscripts": "Wopśimjejo znamješka z njekompatibelnych rozdźělnych pismow",
+	"antispoof-tooshort": "Kanonizěrowane mě jo pśekrotko.",
+	"antispoof-ignore": "Torjeńsku kontrolu ignorěrowaś",
+	"right-override-antispoof": "Kontrole pódobnosći wužywarskich mjenjow pódtłocyś"
+}

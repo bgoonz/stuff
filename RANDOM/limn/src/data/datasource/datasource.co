@@ -1,0 +1,247 @@
+_   = require 'underscore'
+op  = require 'operator'
+ko  = require 'knockout'
+
+{ ReadyEmitter,
+} = require 'emitters'
+
+{ Model, StoredModel, ModelCache,
+} = require '../../base'
+{ ParsingMixin,
+} = require '../../util'
+{ Dataset,
+} = require '../dataset'
+{ MetricDef,
+} = require '../metric/metric-def'
+
+
+
+/**
+ * @class Encapsulates the definition of a column in a DataSource.
+ */
+export class ColumnDef extends Model
+    ParsingMixin.mix this
+    (attributes, @source) -> super ...
+    
+    getId: -> @get 'id'
+    
+    defaults: ->
+        id         : null
+        label      : ''
+        type       : 'int'
+        index      : -1
+        metricDefs : null
+    
+    attributeTypes: ->
+        metricDefs : MetricDef.get
+    
+    
+    canonicalize: (data={}) ->
+        defs = data.metricDefs or= []
+        data.metricDefs = [defs] unless _.isArray defs
+        data
+    
+    
+    toJSON: ->
+        attrs = @toJS _.omit @attributes, 'metricDefs'
+        attrs.metricDefs = _.map @attributes.metricDefs.peek(), -> if it then it.id.peek() else ''
+        attrs
+    
+    
+    /**
+     * Convert the string representation of a value from this Column to
+     * its real type.
+     * 
+     * @param {String} value A serialized value.
+     * @returns {*} The value parsed into the appropriate type.
+     */
+    parse: (value) ->
+        @parseValue value, @get 'type'
+    
+
+
+/**
+ * @class Metadata representing a source of data, such as a CSV file or
+ * a web service endpoint.
+ */
+export class DataSource extends StoredModel
+    -> super ...
+    
+    
+    resource : 'datasources'
+    getId    : -> @get 'id'
+    
+    formatContentTypes:
+        # format    : Content-Type for AJAX request
+        csv         : 'text'
+        tsv         : 'text'
+        json        : 'json'
+        jsonp       : 'jsonp'
+        xml         : 'xml'
+    
+    defaults: ->
+        id            : null
+        slug          : null
+        
+        format        : 'json'          # := csv | tsv | json | jsonp | xml                 ContentType/serialization/encoding of the dataset response.
+        type          : 'timeseries'    # := series | timeseries | geojson | topojson                 Type of the contents of the dataset.
+        url           : ''
+        
+        name          : ''
+        shortName     : ''
+        desc          : ''
+        notes         : ''
+        
+        columns       : []
+        timespan      : { start:null, end:null, step:null }
+    
+    attributeTypes: ->
+        columns: ->
+            return it if it instanceof ColumnDef
+            new ColumnDef it, this
+    
+    
+    
+    /**
+     * Whether this DataSource is valid, and thus ready to load data.
+     * @type ko.computed<Boolean>
+     */
+    isValid: @computed ->
+        !!  @dataUrl() and @get('format') in @formatContentTypes
+    
+    
+    /**
+     * Generates a random number of length around 10
+     */
+    generateRandom: -> 999999999 + Math.floor(Math.random() * 999999999)
+    
+    
+    /**
+     * URL for the data.
+     * @type ko.computed<String>
+     */
+    dataUrl: @computedRequires 'url', (url) ->
+        return url unless url
+        if url.indexOf('http') == 0
+            url = "/x/#url"
+        if url.indexOf('?') < 0
+            cacheBuster = @generateRandom()
+            url = "#url?#cacheBuster"
+        url
+    
+    
+    /**
+     * Encoding of the dataset response.
+     * @type ko.computed<String>
+     */
+    dataFormat: @computed ->
+        format = @format()
+        unless format
+            return @defaults.format unless @url()
+            @determineFormat()
+        format
+    
+    
+    determineFormat: ->
+        url = @url().split('?')[0]
+        if      _.endsWith url, '.csv'
+            @format 'csv'
+        else if _.endsWith url, '.json'
+            @format 'json'
+        else if _.endsWith url, '.tsv'
+            @format 'tsv'
+        else if _.endsWith url, '.xml'
+            @format 'xml'
+        else
+            throw new Error "Unknown DataSource format for '#url'!"
+    
+    
+    /**
+     * Dataset class wrapping the data.
+     * @type ko.computed<Class<Dataset>>
+     */
+    datasetType: @computedRequires 'type', (type) ->
+        Dataset.lookupType type
+    
+    
+    /**
+     * The content-type of the datafile, as sent by the server; null before load.
+     * @type ko.observable<String>
+     */
+    dataContentType : ko.observable null
+    
+    
+    /**
+     * The reified dataset associated with this DataSource.
+     * @type ko.asyncComputed<TimeSeriesData|CSVData>
+     * @depends url, format
+     */
+    data: @asyncComputed ->
+        return unless @isValid()
+        return unless format      = @dataFormat()
+        return unless DatasetType = @datasetType()
+        
+        xhr = $.ajax do
+            url      : @dataUrl()
+            dataType : @formatContentTypes[format]
+        
+        promise = xhr.pipe (data) ~> new DatasetType this, data
+        promise.then do
+            (data) ~>
+                @dataContentType xhr.getResponseHeader 'Content-Type'
+                @trigger 'data-load',  this, data
+            (err) ~>
+                @dataContentType null
+                @trigger 'data-error', this
+        promise.xhr = xhr
+        
+        promise
+    
+    
+    /**
+     * Enforces backwards compatibility at runtime by converting a DataSource from
+     * one of many of the historical "formats" we've used to whatever the modern
+     * format looks like.
+     * 
+     * @param {Object} data Raw DataSource attributes to canonicalize.
+     * @returns {Object} Converted raw data.
+     */
+    canonicalize: (data) ->
+        data.slug         or= data.id
+        data.shortName    or= data.name
+        
+        cols = data.columns
+        if _.isArray cols
+            data.columns = _.map cols, (col, idx) ->
+                if _.isArray col
+                    [label, type] = col
+                    id = _.str.underscored(label.toLowerCase())
+                    {id, index: idx, label, type or 'int'}
+                else
+                    col.type or= 'int'
+                    col.index or= idx
+                    col
+        else
+            cols = _.merge { ids:[], types:[] }, cols
+            data.columns = _.map cols.labels, (label, idx) ->
+                label = String(label)
+                id   = cols.ids[idx]   or _.str.underscored(label.toLowerCase())
+                type = cols.types[idx] or 'int'
+                {id, index: idx, label, type}
+        data
+    
+    
+    /**
+     * Looks up a column definition.
+     * 
+     * @param {Number|String} id Identifier of the column, by index or id.
+     * @returns {ColumnDef}
+     */
+    getColumnDef: (id) ->
+        if typeof id is 'number'
+            @columns()?[id]
+        else
+            _.find @columns(), -> it.id.peek() is id
+    
+    
+

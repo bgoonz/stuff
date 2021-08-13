@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kaustubh",
+			"Sfic",
+			"Siddhartha Ghai"
+		]
+	},
+	"authorprotect": "लेखक छोडके अन्य सदस्योंसे पन्ना सुरक्षित करें",
+	"authorprotect-desc": "एक लेखकको उसके द्वारा लिखे गये लेख को अन्य सदस्योंसे सुरक्षित करने की अनुमति देता हैं",
+	"authorprotect-notauthor": "{{GENDER:$1|आप}} इस लेख के {{GENDER:$1|लेखक}} नहीं हैं।",
+	"authorprotect-confirm": "सुरक्षा स्तर बदलें",
+	"authorprotect-edit": "सिर्फ लेखकोंको बदलाव करने की अनुमति दें",
+	"authorprotect-move": "सिर्फ लेखकोंको नाम बदलने की अनुमति दें",
+	"authorprotect-intro": "लेखक छोडकर अन्य सदस्योंसे यह पन्ना सुरक्षित करने के लिये इस फ़ार्म का इस्तेमाल करें",
+	"authorprotect-success": "सुरक्षित कर दिया!",
+	"protect-level-author": "लेखक छोडकर अन्य सदस्योंसे सुरक्षित करें",
+	"restriction-level-author": "लेखक-सुरक्षित"
+}

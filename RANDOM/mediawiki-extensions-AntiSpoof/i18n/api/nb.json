@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chameleon222",
+			"Jon Harald Søby"
+		]
+	},
+	"apihelp-antispoof-description": "Sjekker et brukernavn mot AntiSpoofs normaliseringskontroller.",
+	"apihelp-antispoof-summary": "Sjekk et brukernavn mot AntiSpoofs normaliseringssjekker.",
+	"apihelp-antispoof-param-username": "Brukernavnet som skal sjekkes mot AntiSpoof.",
+	"apihelp-antispoof-example-1": "Sjekk brukernavn «Foo» mot AntiSpoof",
+	"apihelp-createaccount-param-ignoreantispoof": "Ignorer misbrukskontroller (krever rettigheten <code>override-antispoof</code>)."
+}

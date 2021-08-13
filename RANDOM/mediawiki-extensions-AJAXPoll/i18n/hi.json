@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ansumang",
+			"Innocentbunny",
+			"Jayprakash12345"
+		]
+	},
+	"ajaxpoll-desc": "<code>&lt;चुनाव&gt;</code> टैग के साथ AJAX आधारित चुनाव के लिए अनुमति है",
+	"ajaxpoll-tracking-category": "जनमत के साथ पृष्ठ",
+	"ajaxpoll-tracking-category-desc": "पृष्ठ पर <code>&lt;सर्वेक्षण&gt;</code> किया है",
+	"ajaxpoll-vote-update": "आपका वोट अद्यतन किया गया है।",
+	"ajaxpoll-vote-add": "आपका वोट जोड़ दिया गया है।",
+	"ajaxpoll-vote-error": "आपके वोट प्रसंस्करण के साथ कुछ समस्या थी, पुन: प्रयास करें।",
+	"ajaxpoll-percent-votes": "सभी मतों के $1%",
+	"ajaxpoll-your-vote": "आपने \"$1\" के लिए $3 पर $4 पर मतदान किया।",
+	"ajaxpoll-no-vote": "कृपया नीचे वोट दें।",
+	"ajaxpoll-no-vote-results-after-voting": "नीचे मतदान करें। परिणाम जब आप वोट देंगे तब दिखाया जाएगा।",
+	"ajaxpoll-info": "जबसे $2 पर निर्वाचन बनाया गया, तबसे {{PLURAL:$1|\"एक\" मत आया है।|\"$1\" मत आए हैं।}}",
+	"ajaxpoll-submitting": "कृपया प्रतीक्षा करें, अपका वोट जमा हो रहा है।",
+	"ajaxpoll-vote-permission": "आप मतदान करने के हकदार नहीं हैं।",
+	"ajaxpoll-view-results-permission": "आप इस पोल के परिणाम को देखने के हकदार नहीं हैं।",
+	"ajaxpoll-view-results-before-vote-permission": "आप इस पोल के परिणाम को अपने मतदान से पहले देखने के लिए हकदार नहीं हैं।",
+	"ajaxpoll-revoke-vote": "मैं अपने वोट रद्द करना चाहते हु",
+	"ajaxpoll-vote-revoked": "आपका वोट रद्द कर दिया गया।",
+	"right-ajaxpoll-vote": "क्या AJAX आधारित चुनाव में मतदान कर सकते हैं",
+	"right-ajaxpoll-view-results": "क्या AJAX आधारित चुनाव में परिणाम देख सकते हैं",
+	"right-ajaxpoll-view-results-before-vote": "मतदान होने से पहले क्या AJAX आधारित चुनाव में परिणाम देख सकते हैं",
+	"action-ajaxpoll-vote": "AJAX आधारित चुनाव में मतदान",
+	"action-ajaxpoll-view-results": "AJAX आधारित चुनाव में परिणाम देखें",
+	"action-ajaxpoll-view-results-before-vote": "मतदान होने से पहले AJAX आधारित चुनाव में परिणाम देखें"
+}

@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"01miki10",
+			"Crt",
+			"Nike",
+			"Pxos",
+			"Pyscowicz",
+			"Str4nd",
+			"Varusmies",
+			"ZeiP"
+		]
+	},
+	"adminlinks": "Ylläpidon linkit",
+	"adminlinks-desc": "Lisää [[Special:AdminLinks|toimintosivun]], joka sisältää hyödyllisiä linkkejä ylläpitäjille.",
+	"adminlinks_documentation": "$1 dokumentaatio",
+	"adminlinks_general": "Yleiset",
+	"adminlinks_editsidebar": "Muokkaa sivupalkkia",
+	"adminlinks_editcss": "Muokkaa CSS-tiedostoa",
+	"adminlinks_editmainpagename": "Muokkaa etusivun nimeä",
+	"adminlinks_users": "Käyttäjät",
+	"adminlinks_browsesearch": "Selaaminen ja hakeminen",
+	"adminlinks_importexport": "Tuonti ja vienti",
+	"adminlinks_pagenotfound": "Toimintosivua nimellä $1 ei löydetty.",
+	"action-adminlinks": "nähdä ylläpitäjän linkkejä",
+	"right-adminlinks": "Nähdä linkin sivulle [[Special:AdminLinks|ylläpitäjien linkit]]"
+}

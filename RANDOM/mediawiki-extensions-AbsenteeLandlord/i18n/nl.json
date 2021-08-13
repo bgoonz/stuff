@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Rcdeboer",
+			"Siebrand"
+		]
+	},
+	"absenteelandlord-reason": "De database is automatisch vergrendeld vanwege inactiviteit van de beheerders.",
+	"absenteelandlord-desc": "Vergrendelt de database automatisch als alle beheerders gedurende een bepaalde tijd inactief zijn"
+}

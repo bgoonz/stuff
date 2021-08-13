@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ajeje Brazorf",
+			"Aushulz",
+			"Pippinu",
+			"Sarvaturi"
+		]
+	},
+	"adminlinks": "Liami pi l'amministratura",
+	"adminlinks-desc": "Agghiunci na [[Special:AdminLinks|pàggina spiciali]] chi havi liami ùtili pi l'amministratura",
+	"adminlinks_documentation": "Ducumintazzioni di $1",
+	"adminlinks_general": "Ginirali",
+	"adminlinks_editsidebar": "Cancia la sbarra latirali",
+	"adminlinks_editcss": "Cancia lu file CSS",
+	"adminlinks_editmainpagename": "Cancia lu nomu dâ pàggina principali",
+	"adminlinks_users": "Utenti",
+	"adminlinks_browsesearch": "Splurazzioni e arricerca",
+	"adminlinks_importexport": "Mpurtazzioni e spurtazzioni",
+	"action-adminlinks": "talìa li liami pi l'amministratura",
+	"right-adminlinks": "Vìdiri la liami versu [[Special:AdminLinks|li liami pi l'amministratura]]"
+}

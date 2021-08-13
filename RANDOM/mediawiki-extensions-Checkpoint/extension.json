@@ -1,0 +1,23 @@
+{
+	"name": "Checkpoint",
+	"version": "0.3.0",
+	"author": "Ryan Schmidt",
+	"url": "https://www.mediawiki.org/wiki/Extension:Checkpoint",
+	"descriptionmsg": "checkpoint-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "other",
+	"MessagesDirs": {
+		"Checkpoint": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"CheckpointHooks": "CheckpointHooks.php"
+	},
+	"Hooks": {
+		"EditPageBeforeEditButtons": "CheckpointHooks::efCheckpointButton",
+		"PageContentSave": "CheckpointHooks::efCheckpointSave",
+		"GetFullURL": "CheckpointHooks::efCheckpointReturn"
+	},
+	"manifest_version": 1
+}

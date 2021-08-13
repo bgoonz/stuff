@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"biblioplus-desc": "Recupera automáticamente cites de PubMed y la base de datos ISBN",
+	"biblioplus-doi-tooltip": "Ver o mercar l'artículu del editor",
+	"biblioplus-pmid-tooltip": "Ver o mercar l'artículu del editor (si ta disponible)",
+	"biblioplus-isbn-tooltip": "Información del llibru en isbndb.org",
+	"biblioplus-medline-abstracts": "Tolos resumes de Medline:",
+	"biblioplus-pubmed-abstracts": "Tolos resumes de PubMed",
+	"biblioplus-hubmed-abstracts": "Tolos resumes de HubMed",
+	"biblioplus-vkey-title": "enllaz a la base de datos bibliográfica"
+}

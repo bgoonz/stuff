@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"CERminator",
+			"Seha",
+			"Srdjan m",
+			"Srđan"
+		]
+	},
+	"authorprotect": "Zaštiti stranicu od ne-autora.",
+	"authorprotect-desc": "Dozvoli autoru stranice da je zaštiti od drugih korsinika.",
+	"authorprotect-notauthor": "{{GENDER:$1|Vi}} niste {{GENDER:$1|autor|autorica}} ove stranice.",
+	"authorprotect-confirm": "Izmjeni stepen zaštite.",
+	"authorprotect-edit": "Zabrani uređivanje autorima.",
+	"authorprotect-move": "Zabrani preusmjeravanje autorima.",
+	"authorprotect-intro": "Koristi ovaj formular za zaključavanje stranice ne-autorima.",
+	"authorprotect-success": "Zaštita postavljena!",
+	"protect-level-author": "Zaštiti od ne-autora.",
+	"restriction-level-author": "Autorska zaštita.",
+	"right-authorprotect": "Stavljanje zaštite na autorizirane stranice"
+}

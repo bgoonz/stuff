@@ -1,0 +1,39 @@
+{
+	"@metadata": {
+		"authors": [
+			"BaRaN6161 TURK",
+			"Hedda Gabler",
+			"Incelemeelemani",
+			"Sayginer",
+			"Sezgin İbiş",
+			"Sucsuzz"
+		]
+	},
+	"admanager": "Reklam Yöneticisi",
+	"admanagerzones": "Reklam Yöneticisi bölgeleri",
+	"admanager-desc": "Sistemin bölgeleri sayfalar veya kategoriler için ayarlamasına izin veren bir [[Special:AdManager|özel sayfa]] sağlar",
+	"admanager_docu": "Bir sayfanın veya tüm kategorinin reklam bölgesini eklemek veya kaldırmak için aşağıya sayfanın veya kategorinin başlığını ekleyin veya kaldırın.",
+	"admanagerzones_docu": "Her reklam bölgesi numarasını kendi satırına girin.",
+	"admanager_invalidtargetpage": "\"$1\" başlıklı sayfa bulunamadı.",
+	"admanager_invalidtargetcategory": "\"$1\" başlıklı kategori bulunamadı.",
+	"admanager_notable": "Hata! Gerekli bir veritabanı tablosu bulunamadı! Önce update.php'yi çalıştırın.",
+	"admanager_noAdManagerZones": "Hata! Bazı reklam bölgeleri eklemelisiniz. Bunları [[Special:AdManagerZones|Reklam Yöneticisi bölgeleri]] olarak girin.",
+	"admanager_labelPage": "Sayfa başlıkları",
+	"admanager_labelCategory": "Kategori adları",
+	"admanager_submit": "Gönder",
+	"admanager_noads": "Reklamları gösterme",
+	"admanager_Page": "Sayfalar",
+	"admanager_Category": "Kategoriler",
+	"admanager_added": "Değişiklikleriniz kaydedildi.",
+	"admanager_addedzone": "Eklenen bölge $1.",
+	"admanager_removedzone": "Kaldırılan bölge $1.",
+	"admanager_nozonesadded": "Bölge eklenmedi.",
+	"admanager_nozonesremoved": "Bölge kaldırılmadı.",
+	"admanager_zonenum": "Bölge #: $1",
+	"admanager_zonenotnumber": "Hata! $1 bir sayı değil.",
+	"admanager_return": "[[Special:AdManager|Reklam Yöneticisine]] dön",
+	"admanager_gotoads": "[[Special:AdManager|Reklam yerleşimini düzenle]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Reklam bölgelerini düzenle]]",
+	"action-admanager": "reklam yapılandırmasını yönet",
+	"right-admanager": "[[Special:AdManager|Reklam yapılandırmasını yönet]]"
+}

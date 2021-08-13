@@ -1,0 +1,35 @@
+Approved Revs Extension
+
+        Version 1.6
+        Yaron Koren and others
+
+This is free software licensed under the GNU General Public License. Please
+see http://www.gnu.org/copyleft/gpl.html for further details, including the
+full text and terms of the license.
+
+== Overview ==
+
+Approved Revs is an extension to MediaWiki that lets administrators mark a
+certain revision of a page, or file, as "approved". The approved revision is
+the one displayed when users view the page or file at its main URL.
+
+For more information, see the extension homepage at:
+https://www.mediawiki.org/wiki/Extension:Approved_Revs
+
+== Requirements ==
+
+This version of the Approved Revs extension requires MediaWiki 1.31 or
+higher.
+
+== Installation ==
+
+To install the extension, place the entire 'ApprovedRevs' directory
+within your MediaWiki 'extensions' directory, then add the following
+line to your 'LocalSettings.php' file:
+
+     wfLoadExtension( 'ApprovedRevs' );
+
+== Contact ==
+
+Comments, questions, suggestions and bug reports should be sent to Yaron
+Koren, at yaron57@gmail.com.

@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chaduvari",
+			"Jprmvnvijay5",
+			"Veeven"
+		]
+	},
+	"admanager": "యాడ్ మేనేజరు",
+	"admanagerzones": "యాడ్ మేనేజరు జోన్లు",
+	"admanager_invalidtargetpage": "\"$1\" పేరుతో పేజీ ఏదీ కనబడలేదు.",
+	"admanager_invalidtargetcategory": "\"$1\" పేరుతో వర్గమేదీ కనబడలేదు.",
+	"admanager_notable": "లోపం!. అవసరమైన ఓ డేటాబేసు టేబుల్ కనబడలేదు! ముందు update.php ని రన్ చెయ్యండి.",
+	"admanager_noAdManagerZones": "లోపం! మీరు కొన్ని యాడ్ జోన్లను చేర్చాలి. వీటిని [[Special:AdManagerZones|యాడ్ మేనేజర్ జోన్ల]] వద్ద చేర్చండి.",
+	"admanager_labelPage": "పేజీ శీర్షికలు",
+	"admanager_labelCategory": "వర్గాల పేర్లు",
+	"admanager_submit": "దాఖలుచెయ్యి",
+	"admanager_noads": "యాడ్లను చూపించవద్దు",
+	"admanager_Page": "పుటలు",
+	"admanager_Category": "వర్గాలు",
+	"admanager_added": "మీ మార్పుల భద్రమయ్యాయి",
+	"admanager_addedzone": "జోన్‍ను చేర్చాం",
+	"admanager_zonenum": "జోన్ #: $1",
+	"admanager_zonenotnumber": "లోపం! $1 సంఖ్య కాదు.",
+	"admanager_return": "తిరిగి [[Special:AdManager|యాడ్ మేనేజరు]]కు వెళ్ళు",
+	"admanager_gotoads": "[[Special:AdManager|యాడ్ స్థలాన్ని మార్చు]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|యాడ్ జోన్లను మార్చు]]"
+}

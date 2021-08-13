@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Khanmarat",
+			"Sorbat"
+		]
+	},
+	"coll-remove": "Уйғалы",
+	"coll-show": "Күргәскәле",
+	"coll-move_up": "Өстөгә күцергәле",
+	"coll-move_down": "Астыға күцергәле",
+	"coll-print_export": "Пастырғалы/цығарғалы",
+	"coll-create_a_book": "Китап төсәгәле",
+	"coll-book_creator": "Китап йасау",
+	"coll-download_as": "$1 итеп күцергәле",
+	"coll-disable": "Сүнтергәле",
+	"coll-book_creator_disable": "Китап оста функцияны сүнтергәле",
+	"coll-book_creator_disable_tooltip": "Китап останы ошланыуны ҡуйың",
+	"coll-add_this_page": "Пы питне сеснең китапҡа өстәгәле",
+	"coll-add_page_tooltip": "Ошо вики-питне китапҡа өстәгәле",
+	"coll-help": "Пелешмә",
+	"coll-help_tooltip": "Китап пултырыу турлы пелешмәне күргәскәле",
+	"coll-helppage": "Help:Китаплар",
+	"coll-n_pages": "$1 {{PLURAL:$1|пит}}",
+	"coll-remove_this_page": "Пы питне сеснең китабығыстан алып ташлағалы",
+	"coll-show_collection": "Китапны күргәскәле",
+	"coll-show_collection_tooltip": "Китапны төсәтеү/төйәү/заказ пиреү өцөн пасың",
+	"coll-make_suggestions": "Күтәреп цығарылған питләр",
+	"coll-make_suggestions_tooltip": "Китабығыста пулған питләргә төпләнкән кәплемнәрне күргәскәле",
+	"coll-attribution-anons": "Аноним: $1",
+	"coll-article-attribution": "<b>$1</b> <i>Аҡма:</i> $2 <i>Авторлар:</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>Аҡма:</i> $2 <i>Лицензия:</i> $3 <i>Авторлар:</i> $4 <i>Наҡышцы:</i> $5"
+}

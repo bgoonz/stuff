@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gomoko",
+			"Great11",
+			"IAlex",
+			"Orlodrim",
+			"Pols12",
+			"Thibaut120094",
+			"TomT0m",
+			"Urhixidur",
+			"Verdy p",
+			"Wladek92"
+		]
+	},
+	"autoproxyblock-desc": "Permet de bloquer les actions effectuées sur le wiki au travers de mandataires ouverts",
+	"proxy-blocked": "{{GENDER:|}}Votre adresse IP est répertoriée en tant que mandataire, l’action effectuée a été annulée.",
+	"abusefilter-edit-builder-vars-is-proxy": "Vrai si cette action a été réalisée par le biais d’un mandataire",
+	"tag-proxy": "action par l’intermédiaire d’un mandataire",
+	"action-proxyunbannable": "contourner les blocages automatiques de mandataires",
+	"right-proxyunbannable": "Contourner les blocages automatiques de mandataires",
+	"action-notagproxychanges": "restreindre le marquage comme « mandataire » des modifications effectuées au moyen d’un mandataire",
+	"right-notagproxychanges": "Restreindre le marquage comme « mandataire » des modifications effectuées au moyen d’un mandataire",
+	"action-autoproxyblock-log": "afficher le journal AutoProxyBlock",
+	"right-autoproxyblock-log": "Voir les journaux des blocages automatiques des modifications effectuées au moyen d’un mandataire",
+	"proxyblock-log-name": "Journal de blocage automatique des mandataires",
+	"proxyblock-log-header": "Liste des modifications effectuées au moyen d’un mandataire et bloquées automatiquement",
+	"proxyblock-logentry-blocked": "action « $2 » par l’{{GENDER:$3|utilisateur|utilisatrice}} $3 sur la page [[$1]] bloquée automatiquement."
+}

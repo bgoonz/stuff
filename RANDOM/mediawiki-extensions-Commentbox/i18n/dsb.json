@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Michawiki"
+		]
+	},
+	"commentbox-desc": "Pśidawa komentarowy kašćik do wěstych bokow",
+	"commentbox-intro": "== Komentar pśidaś... ==\nMaš komentar na toś tom boku? Pśidaj jen sem abo <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} wobźěłaj bok direktnje]</span>.",
+	"commentbox-savebutton": "Komentar składowaś",
+	"commentbox-name": "Mě:",
+	"commentbox-name-explanation": "<small>(Tip: Jolic [[Special:UserLogin|se pśizjawjaš]], njetrjebaš swójo mě how manuelnje zapisaś)</small>",
+	"commentbox-log": "Nowe komentary",
+	"commentbox-first-comment-heading": "== Komentary ==",
+	"commentbox-regex": "/\\n==\\s*Komentary\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Zmólka pśi napóranju komentara",
+	"commentbox-error-page-nonexistent": "Toś ten bok njeeksistěrujo!",
+	"commentbox-error-namespace": "Komentary njejsu dowólone w toś tom mjenjowem rumje!",
+	"commentbox-error-empty-comment": "Prozne komentary njejsu dowólone!"
+}

@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"!Silent",
+			"Dianakc",
+			"Felipe L. Ewald"
+		]
+	},
+	"apihelp-antispoof-description": "Verifica um nome de usuário contra verificações de normalização do AntiSpoof.",
+	"apihelp-antispoof-summary": "Verifica um nome de usuário contra verificações de normalização do AntiSpoof.",
+	"apihelp-antispoof-param-username": "O nome de usuário para verificar no AntiSpoof.",
+	"apihelp-antispoof-example-1": "Verifica o nome de usuário \"Foo\" através do AntiSpoof",
+	"apihelp-createaccount-param-ignoreantispoof": "Ignorar as verificações de semelhança de nome (necessita do privilégio <code>override-antispoof</code>)."
+}

@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"Geoleplubo"
+		]
+	},
+	"coll-remove": "Inlever",
+	"coll-show": "Montrer",
+	"coll-move_up": "Ermonter",
+	"coll-move_down": "Déchènne",
+	"coll-print_export": "Imprimer/ésporter",
+	"coll-create_a_book": "Créer un live",
+	"coll-book_creator": "Créateu éd lives",
+	"coll-download_as": "Télécartcher conme $1",
+	"coll-disable": "désactiver",
+	"coll-book_creator_disable": "Désactiver ch' créateu d' live",
+	"coll-book_creator_disable_tooltip": "Arréter d’uzer ch' créateu d' live",
+	"coll-add_this_page": "Ajouter chole pache à vote live",
+	"coll-add_page_tooltip": "Ajouter l' pache wiki courante à vote live",
+	"coll-help": "Aïude",
+	"coll-help_tooltip": "Montrer l’ayude édseur l' créachon d' lives",
+	"coll-helppage": "Help:Lives",
+	"coll-n_pages": "$1 {{PLURAL:$1|pache|paches}}",
+	"coll-remove_this_page": "Értirer l'pache-lo d'vote lisse à suire",
+	"coll-show_collection": "Montrer ch' live",
+	"coll-show_collection_tooltip": "Bukez pour modifier / télécarguer / comminder vote live",
+	"coll-make_suggestions": "Suggérer des paches",
+	"coll-make_suggestions_tooltip": "Montrer chés suggestions fondées édseur chés paches dins vote live",
+	"coll-article-attribution": "<b>$1</b> <i>Source :</i> $2 <i>Uzeus :</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>Source :</i> $2 <i>Licince :</i> $3 <i>Contributeus :</i> $4 <i>Artisse d’origine :</i> $5"
+}

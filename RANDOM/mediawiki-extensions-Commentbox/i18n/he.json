@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Guycn2",
+			"Rotemliss",
+			"YaronSh"
+		]
+	},
+	"commentbox-desc": "הוספת תיבת תגובות לדפים מסוימים",
+	"commentbox-intro": "== הוספת תגובה... ==\nיש לך הערה על דף זה? באפשרותך להוסיף תגובה כאן או <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} לערוך את הדף ישירות]</span>.",
+	"commentbox-savebutton": "שמירת התגובה",
+	"commentbox-name": "שם:",
+	"commentbox-name-explanation": "<small>(עצה: באפשרותך [[Special:UserLogin|להיכנס לחשבון]] כדי שלא יהיה צורך למלא את שמך ידנית)</small>",
+	"commentbox-log": "תגובות חדשות",
+	"commentbox-first-comment-heading": "== תגובות ==",
+	"commentbox-regex": "/\\n==\\s*תגובות\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "אירעה שגיאה בעת יצירת התגובה",
+	"commentbox-error-page-nonexistent": "דף זה אינו קיים!",
+	"commentbox-error-namespace": "תגובות אינן מורשות במרחב שם זה!",
+	"commentbox-error-empty-comment": "תגובות ריקות אינן מורשות!"
+}

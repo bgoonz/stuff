@@ -1,0 +1,43 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jopparn",
+			"Liftarn",
+			"Lokal Profil",
+			"Mjälten",
+			"Sturban",
+			"Technic2",
+			"Tobulos1",
+			"WikiPhoenix"
+		]
+	},
+	"apihelp-pollsubmitvote-description": "AJAXPoll API-modul",
+	"apihelp-pollsubmitvote-summary": "AJAXPoll API-modul",
+	"apihelp-pollsubmitvote-param-poll": "Omröstnings-ID, som 832A5FA2C2583A5732B90CEFF658FE25. IDs skapas genom att hasha inputen(frågan+svarsalternativ, alltså texten mellan <code>&lt;poll&gt;...&lt;/poll&gt;</code>-taggarna) med MD5-hashningsalgoritmen och konvertera resultatet till VERSALER med PHPs <code>strtoupper</code>-funktion",
+	"apihelp-pollsubmitvote-param-answer": "Numerisk svaralternativ-ID; användning 0 för att nollställa en tidigare avgiven röst",
+	"apihelp-pollsubmitvote-example-1": "Leverera det tredje (3) svaret till röstningen med ID:et 832A5FA2C2583A5732B90CEFF658FE25",
+	"ajaxpoll-desc": "Gör AJAX-baserade omröstningar med <code>&lt;poll&gt;</code>-tagg",
+	"ajaxpoll-tracking-category": "Sidor med en omröstning",
+	"ajaxpoll-tracking-category-desc": "Sidan har en <code>&lt;poll&gt;</code>.",
+	"ajaxpoll-vote-update": "Din röst har uppdaterats.",
+	"ajaxpoll-vote-add": "Din röst har lagts till.",
+	"ajaxpoll-vote-error": "Det uppstod ett problem med bearbetningen av din röst, var god försök igen.",
+	"ajaxpoll-percent-votes": "$1% av alla röster",
+	"ajaxpoll-your-vote": "Du röstade på \"$1\" den $3 kl. $4. Du kan ändra din röst genom att klicka på ett annat svar nedan.",
+	"ajaxpoll-no-vote": "Var god rösta nedan.",
+	"ajaxpoll-no-vote-results-after-voting": "Rösta nedan. Resultaten kommer att visas när du har röstat.",
+	"ajaxpoll-info": "Det var {{PLURAL:$1|en röst|$1 röster}} sedan omröstningen skapades den $2.",
+	"ajaxpoll-submitting": "Var god vänta, skickar in din röst.",
+	"ajaxpoll-vote-permission": "Du är inte berättigad att rösta.",
+	"ajaxpoll-readonly": "Denna omröstning kan inte röstas, databasen är låst av följande anledning: $1.",
+	"ajaxpoll-view-results-permission": "Du har inte rätt att se resultat från denna enkät.",
+	"ajaxpoll-view-results-before-vote-permission": "Du har inte rätt att se resultat från denna enkät innan du har röstat.",
+	"ajaxpoll-revoke-vote": "Jag vill återkalla min röst",
+	"ajaxpoll-vote-revoked": "Din röst har återkallats.",
+	"right-ajaxpoll-vote": "Kan rösta i AJAX-baserade omröstningar",
+	"right-ajaxpoll-view-results": "Kan visa resultaten i AJAX-baserade omröstningar",
+	"right-ajaxpoll-view-results-before-vote": "Kan visa resultaten i AJAX-baserade omröstningar innan de har röstat",
+	"action-ajaxpoll-vote": "rösta i AJAX-baserade omröstningar",
+	"action-ajaxpoll-view-results": "visa resultat i AJAX-baserade enkäter",
+	"action-ajaxpoll-view-results-before-vote": "visa resultat i AJAX-baserade enkäter innan de har röstat"
+}

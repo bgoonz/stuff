@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Filipinayzd",
+			"Geopoet",
+			"Kunokuno"
+		]
+	},
+	"antispoof-desc": "Minakubkob sa pagmukna nin mga panindog na igwang pinaghalong eskripto, nakakalibong asin may kaparehong mga paragamit-ngaran",
+	"antispoof-conflict-top": "An pangaran na \"$1\" may kaagid sa minasunod na {{PLURAL:$2|ngaran-paragamit|mga ngaran-paragamit}}:",
+	"antispoof-conflict-bottom": "Pakipili tabi nin ibang pangaran.",
+	"antispoof-name-illegal": "An parágamit na \"$1\" dai tinotogotan tanganing maibitaran an pagpaparibong o inarogan na mga ngaran-paragamit: $2. Pakipilî tabî nin ibang pangaran.",
+	"antispoof-badtype": "Maraot na tipo nin datos",
+	"antispoof-empty": "Mayong laman na panunod",
+	"antispoof-prohibited": "Minalaman nin pinagbaraduhang panggurit na $1",
+	"antispoof-combining": "Minapoon na igwang kasalakang marka an $1",
+	"antispoof-unassigned": "Minalaman nin bakong designadong panggurit na $1",
+	"antispoof-deprecated": "Minalaman nin deprekadong panggurit na $1",
+	"antispoof-noletters": "Mayong nakakaag na mga letra",
+	"antispoof-mixedscripts": "Igwang dai angay na mga halong eskripto",
+	"antispoof-tooshort": "Kanonikalisadong pangaran na grabe kahalipoton",
+	"antispoof-ignore": "Pabayae an palibong na mga rikisa",
+	"antispoof-ignore-help": "Nagtutugot sa mga paragamit na igwa nin mga prebilihiyo na makagibo nin account dawa na an ngaran-paragamit kaini igwa na nin kapadis.",
+	"action-override-antispoof": "i-override an mga spoofing checks",
+	"right-override-antispoof": "Salambawan an palibong na mga rikisa"
+}

@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Si Gam Acèh"
+		]
+	},
+	"coll-remove": "Sampôh",
+	"coll-show": "Peuleumah",
+	"coll-move_up": "Peu'ék",
+	"coll-move_down": "Peutren",
+	"coll-print_export": "Rakam/èkspor",
+	"coll-create_a_book": "Peugöt buku",
+	"coll-book_creator": "Ureueng peugöt buku",
+	"coll-download_as": "Cok keubah seubagoë $1",
+	"coll-disable": "Pumaté",
+	"coll-book_creator_disable": "Pumaté pumeugöt kitab",
+	"coll-book_creator_disable_tooltip": "Bèk ngui lé pumeugöt kitab",
+	"coll-add_this_page": "Tamah laman nyoe lam kitabneuh",
+	"coll-add_page_tooltip": "Tamah laman wiki jinoe u kitabneuh",
+	"coll-help": "Beunantu",
+	"coll-help_tooltip": "Peuleumah beunantu bhaih peugöt kitab",
+	"coll-helppage": "Help:Buku",
+	"coll-n_pages": "$1 {{PLURAL:$1|laman}}",
+	"coll-remove_this_page": "Sampôh laman nyoë nibak kitab droëneuh",
+	"coll-show_collection": "Peuleumah buku",
+	"coll-show_collection_tooltip": "Teugön keu peusaneut/cok keubah/peusan kitab",
+	"coll-make_suggestions": "Saran laman",
+	"coll-make_suggestions_tooltip": "Peuleumah saran meunurôt laman lam kitabneuh",
+	"coll-attribution-anons": "Ureuëng ngui hana meusoë: $1",
+	"coll-article-attribution": "<b>$1</b> <i>Nè:</i> $2 <i>Ureueng teumuléh:</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>Nè:</i> $2 <i>Lisènsi:</i> $3 <i>Ureuëng Pasoë:</i> $4 <i>Ureuëng Peugöt:</i> $5"
+}

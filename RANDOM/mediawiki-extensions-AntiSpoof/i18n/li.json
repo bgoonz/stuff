@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Matthias",
+			"Ooswesthoesbes"
+		]
+	},
+	"antispoof-desc": "Blokkeert 't aanmake van gebroekers mit miedere sjrifte, verwarrende en geliekmakende gebroekersname",
+	"antispoof-conflict-top": "De gebroekersnaam \"$1\" liek te zeer op de volgende bestäönde {{PLURAL:$2|gebroekersnaam|$2 gebroekersname}}:",
+	"antispoof-conflict-bottom": "Kees 'ne angere naam.",
+	"antispoof-name-illegal": "De naam \"$1\" is neet toegestange óm verwarring of vervörmdje gebroekersname te veurkómme: $2. \nKees estebleef 'ne angere naam.",
+	"antispoof-badtype": "Verkeerd datatype",
+	"antispoof-empty": "Laege string",
+	"antispoof-prohibited": "Bevat verbaoje karakter $1",
+	"antispoof-combining": "Begint mit 'n gecombineerd merkteike $1",
+	"antispoof-unassigned": "Bevat neet toegeweze of verajerdj karakter",
+	"antispoof-deprecated": "Bevat verajerd teken $1",
+	"antispoof-noletters": "Bevat gein letters",
+	"antispoof-mixedscripts": "Bevat neet compatibele sjrifter.",
+	"antispoof-tooshort": "Aafgekorte naam te kort",
+	"antispoof-ignore": "Spoofcontroles negere",
+	"antispoof-ignore-help": "Laot gebroekers mit zat rechte toe veur 'nen account aan te make, zelfs es deze naam op 'ne bestäöndje accountsnaam liek.",
+	"right-override-antispoof": "Spoofkonträöl negere"
+}

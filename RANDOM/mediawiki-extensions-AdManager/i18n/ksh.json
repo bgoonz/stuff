@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Purodha"
+		]
+	},
+	"admanager": "Reklahme Verwallde",
+	"admanagerzones": "Reklahme Verwallde &mdash; Berätte",
+	"admanager-desc": "Deihd en [[Special:AdManager|{{int:specialpage}}]] en et Wikki, domet Wiki_Köbeße der Berätt för Aanzeije op Sigge un en Saachjroppe faß lähje künne.",
+	"admanager_docu": "Öm ene Berätt för de Reklahme vun ene Sigg udder en janze Saachjropp derbei ze donn udder afzeträcke, donn onge dä Tittel derbei udder fott.",
+	"admanagerzones_docu": "Donn jedem Berätt för de Reklahme sing Nommer op sing eije Reih.",
+	"admanager_invalidtargetpage": "Kein Sigg mem Nahme „$1“ jefonge.",
+	"admanager_invalidtargetcategory": "Kein Saachjropp mem Nahme „$1“ jefonge.",
+	"admanager_notable": "Fähler: En nüüdeje Tabäll en dä Dahtebangk vun Wikki wood nit jefonge.\nLohß eets ens dat Projramm „<code lang=\"en\" xml:lang=\"en\" dir=\"ltr\">update.php</code>“ loufe.",
+	"admanager_noAdManagerZones": "Fähler: Do moss ene Berätt för de Reklahme aanjävve. Donn di op dä Sigg [[Special:AdManagerZones|Berätte för de Reklahme]] aanlähje.",
+	"admanager_labelPage": "Sigge_Övverschreffte:",
+	"admanager_labelCategory": "Saachjroppe ier Nahme:",
+	"admanager_submit": "Lohß Jonn!",
+	"admanager_noads": "Kein Reklahme aanzeije",
+	"admanager_Page": "Sigge",
+	"admanager_Category": "Saachjroppe",
+	"admanager_added": "Ding Änderonge sin faßjehalde.",
+	"admanager_addedzone": "Dä Berätt „$1“ för de Reklahme wood zojeföhsch.",
+	"admanager_removedzone": "Dä Berätt „$1“ för de Reklahme wood fott jenumme.",
+	"admanager_nozonesadded": "kein Berätte för de Reklahme woode zojeföhsch.",
+	"admanager_nozonesremoved": "kein Berätte för de Reklahme woode fott jenumme.",
+	"admanager_zonenum": "Berätt för de Reklahme met dä Nommer: $1",
+	"admanager_zonenotnumber": "Fähler: „$1“ es kein Zahl.",
+	"admanager_return": "Retuhr nohm [[Special:AdManager|Reklahme Verwallde]]",
+	"admanager_gotoads": "[[Special:AdManager|Reklahme plazehre]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Berätte för de Reklahme Verwallde]]",
+	"right-admanager": "[[Special:AdManager|Enschtällonge för de Reklahme ändere]]"
+}

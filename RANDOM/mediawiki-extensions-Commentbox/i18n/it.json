@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Darth Kule"
+		]
+	},
+	"commentbox-desc": "Aggiunge una casella di commenti a determinate pagine",
+	"commentbox-intro": "== Aggiungere un commento ... ==\nSi hanno commenti su questa pagina? Aggiungere qui o <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} modificare direttamente la pagina]</span>.",
+	"commentbox-savebutton": "Salva commento",
+	"commentbox-name": "Nome:",
+	"commentbox-name-explanation": "<small>(Suggerimento: Se si [[Special:UserLogin|effettua l'accesso]], non si deve inserire manualmente qui il proprio nome )</small>",
+	"commentbox-log": "Nuovi commenti",
+	"commentbox-first-comment-heading": "== Commenti ==",
+	"commentbox-regex": "/\\n==\\s*Commenti\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Errore durante la creazione del commento",
+	"commentbox-error-page-nonexistent": "Questa pagina non esiste",
+	"commentbox-error-namespace": "Commenti non sono ammessi in questo namespace",
+	"commentbox-error-empty-comment": "Commenti vuoti non sono ammessi!"
+}

@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"EugeneZelenko",
+			"Wizardist"
+		]
+	},
+	"breadcrumbs-desc": "Дадае навігацыйны шлях («хлебныя крошкі») пад панэль закладак",
+	"prefs-breadcrumbs-separator": "Разьдзяляльнік хлебных крошак",
+	"prefs-breadcrumbs-separator-max": "Можа быць уведзена ня больш за 2 сымбалі.",
+	"prefs-breadcrumbs": "Навігацыйны шлях",
+	"prefs-breadcrumbs-showcrumbs": "Паказваць навігацыйны шлях",
+	"prefs-breadcrumbs-numberofcrumbs": "Даўжыня навігацыйнага шляху",
+	"prefs-breadcrumbs-numberofcrumbs-max": "Ня больш за 20 «хлебных крошак».",
+	"prefs-breadcrumbs-namespaces": "Дадаваць прасторы назваў у навігацыйны шлях",
+	"prefs-breadcrumbs-filter-duplicates": "Адфільтроўваць часта наведвальныя старонкі",
+	"prefs-breadcrumbs-preceding-text": "Тэкст перад навігацыйным шляхам",
+	"prefs-breadcrumbs-preceding-text-max": "Можа быць уведзена ня больш за 30 сымбаляў."
+}

@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Giromin Cangiaxo"
+		]
+	},
+	"adminlinks": "Inganci amministratô",
+	"adminlinks-desc": "O l'azonze una [[Special:AdminLinks|paggina speciale]] ch'a conten di inganci uttili a-i aministratoî",
+	"adminlinks_documentation": "Documentaçion de$1",
+	"adminlinks_general": "Generâ",
+	"adminlinks_editsidebar": "Modiffica bara laterâ",
+	"adminlinks_editcss": "Modifica file CSS",
+	"adminlinks_editmainpagename": "Modiffica o nomme da paggina prinçipâ",
+	"adminlinks_users": "Utenti",
+	"adminlinks_browsesearch": "Vixualizza e riçerca",
+	"adminlinks_importexport": "Importa e esporta",
+	"adminlinks_pagenotfound": "Imposcibbile trovâ a pagina speciale con nomme: $1.",
+	"right-adminlinks": "Vixualizza l'ingancio a-i [[Special:AdminLinks|inganci aministratô]]"
+}

@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chase me ladies, I'm the Cavalry"
+		]
+	},
+	"breadcrumbs-desc": "Adds a trail of breadcrumbs to the page to show the path of users through the wiki.",
+	"prefs-breadcrumbs-separator": "Breadcrumb separator",
+	"prefs-breadcrumbs-separator-max": "A maximum of two characters may be entered.",
+	"prefs-breadcrumbs": "Breadcrumbs",
+	"prefs-breadcrumbs-showcrumbs": "Display breadcrumbs",
+	"prefs-breadcrumbs-numberofcrumbs": "Number of breadcrumbs",
+	"prefs-breadcrumbs-numberofcrumbs-max": "A maximum of twenty breadcrumbs can be shown.",
+	"prefs-breadcrumbs-namespaces": "Include Namespaces in breadcrumbs",
+	"prefs-breadcrumbs-filter-duplicates": "Filter out repeatedly-visited pages",
+	"prefs-breadcrumbs-preceding-text": "Text to appear before breadcrumbs",
+	"prefs-breadcrumbs-preceding-text-max": "A maximum of thirty characters can be entered."
+}

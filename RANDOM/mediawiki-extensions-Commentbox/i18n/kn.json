@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dimension10",
+			"Nayvik",
+			"VASANTH S.N."
+		]
+	},
+	"commentbox-savebutton": "ಟಿಪ್ಪಣಿಗಳನ್ನು ಉಳಿಸಿ",
+	"commentbox-name": "ಹೆಸರು:",
+	"commentbox-log": "ಹೊಸ ಟಿಪ್ಪಣಿಗಳು",
+	"commentbox-first-comment-heading": "== ಟಿಪ್ಪಣಿಗಳು ==",
+	"commentbox-regex": "/\\n==\\s*ಟಿಪ್ಪಣಿಗಳು\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "ಟಿಪ್ಪಣಿಗಳನ್ನು ಸೃಜಿಸುವುವ ಸಂದರ್ಭದಲ್ಲಿ ದೋಷ",
+	"commentbox-error-page-nonexistent": "ಈ ಪುಟವು ಆಸ್ಥಿತ್ವದಲ್ಲಿ ಇಲ್ಲ!",
+	"commentbox-error-empty-comment": "ಖಾಲಿ ಟಿಪ್ಪಣಿಗಳಿಗೆ ಅವಕಾಶವಿಲ್ಲ!"
+}

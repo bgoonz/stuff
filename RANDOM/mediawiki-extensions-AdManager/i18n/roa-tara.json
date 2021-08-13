@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras",
+			"Reder"
+		]
+	},
+	"admanager": "Aggiunge 'nu amministratore",
+	"admanagerzones": "Aggiunge 'nu amministratore de zone",
+	"admanager-desc": "Dèje 'na [[Special:AdManager|pàgene speciale]] 'a quale permette a le amministrature de 'mbostà 'a zone pe le pàggene o le categorije",
+	"admanager_docu": "Pe aggiungere o luà 'a zone ad de 'na pàgene o 'n'indera categorije, aggiungere o luà 'u titole de 'na pàgene o de 'na categorije aqquà sotte.",
+	"admanagerzones_docu": "Sckaffe ogne membre de zone ''ad'' sus a linèa soje.",
+	"admanager_invalidtargetpage": "Nisciune pàgene acchijate c'u titole \"$1\".",
+	"admanager_invalidtargetcategory": "Nisciune categorije acchijate c'u titole \"$1\".",
+	"admanager_notable": "Errore! 'A tabbelle d'u database ca è richieste non ge stè! Lange update.php apprime.",
+	"admanager_noAdManagerZones": "Errore! Tu à aggiungere quacche zone ''ad''. Sckaffele sus a 'u [[Special:AdManagerZones|Gestore de Zone ''ad'']].",
+	"admanager_labelPage": "Titele d'a pàgene",
+	"admanager_labelCategory": "Nome de le categorie",
+	"admanager_submit": "Conferme",
+	"admanager_noads": "Non ge vide nisciune annunce",
+	"admanager_Page": "Pàggene",
+	"admanager_Category": "Categorije",
+	"admanager_added": "Le cangiaminde tue sonde state salvate",
+	"admanager_addedzone": "Vanne aggiunde $1.",
+	"admanager_removedzone": "Vanne luate $1.",
+	"admanager_nozonesadded": "Nisciuna vanne aggiunde.",
+	"admanager_nozonesremoved": "Nisciuna vanne ha state luate.",
+	"admanager_zonenum": "Vanne #: $1",
+	"admanager_zonenotnumber": "Errore! $1 non g'è 'nu numere.",
+	"admanager_return": "Tuèrne a [[Special:AdManager|Ad Manager]]",
+	"admanager_gotoads": "[[Special:AdManager|Cange 'u posizionamènde de le annunce]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Cange 'na zone]]",
+	"action-admanager": "gestisce 'a configurazione d'a pubblecetà",
+	"right-admanager": "[[Special:AdManager|Gestisce 'a configurazione d'a pubblecetà]]"
+}

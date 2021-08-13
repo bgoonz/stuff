@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Beta16"
+		]
+	},
+	"batchuserrights": "Aggiunta massiva diritti utente",
+	"batchuserrights-desc": "Consente di aggiungere uno o più utenti ad un gruppo o più gruppi con una singola azione",
+	"batchuserrights-names": "Nomi utente a cui aggiungere questo gruppo (uno per riga):",
+	"batchuserrights-intro": "Questa pagina ti permetterà di aggiungere un gruppo a più utenti contemporaneamente.\nPer motivi di sicurezza, l'elenco dei gruppi aggiungibili si trova nella configurazione dell'estensione e non può essere modificato dall'interno del wiki.\nChiedi ad un amministratore di sistema se occorre consentire l'aggiunta massiva per altri gruppi.",
+	"batchuserrights-single-progress-update": "{{PLURAL:$1|Aggiunto un gruppo|Aggiunti i gruppi}} a <strong>$2</strong>.",
+	"batchuserrights-add-groups": "{{PLURAL:$1|Aggiunto un utente|Aggiunti $1 utenti}} {{PLURAL:$2|al gruppo|ai gruppi}}: <strong>$3</strong>.",
+	"batchuserrights-userload-error": "Impossibile caricare l'{{GENDER:$1|utente}} '''$1'''.",
+	"batchuserrights-no-groups": "Non hai scelto alcun gruppo.\nQuesto non realizzerà nulla.\nIl resto della pagina sarà eseguito solo perché così puoi facilmente vedere se uno dei nomi utente non può essere caricato.",
+	"right-batchuserrights": "Aggiunge uno o più utenti ad un gruppo o più gruppi con una singola azione",
+	"action-batchuserrights": "aggiungere uno o più utenti ad un gruppo o più gruppi con una singola azione"
+}

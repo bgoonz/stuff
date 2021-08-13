@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fohanno",
+			"Fulup",
+			"Macofe",
+			"Y-M D"
+		]
+	},
+	"batchuserrights": "Gwirioù oberour dre strolladoù",
+	"batchuserrights-desc": "Aotren a ra ouzhpennañ unan pe meur a implijer d'ur strollad, pe meur a hini, en un taol hepken",
+	"batchuserrights-names": "Anvioù implijer da ouzhpennañ d'ar strollad-mañ (unan dre linenn) :",
+	"batchuserrights-single-progress-update": "{{PLURAL:$1|Strollad|Strolladoù}} ouzhpennet da <strong>$2</strong>.",
+	"batchuserrights-add-groups": "Ouzhpennañ {{PLURAL:$1|un implijer|$1 implijer}} d'ar {{PLURAL:$2|strollad|strolladoù}}-mañ : <strong>$3</strong>.",
+	"batchuserrights-userload-error": "Dibosupl eo kargañ an implijer '''$1'''.",
+	"right-batchuserrights": "Ouzhpennañ un implijer pe meur a hini d'ar strollad pe da lies strollad en un oberiadenn hepken",
+	"action-batchuserrights": "ouzhpennañ un implijer pe meur a hini d'ar strollad pe da lies strollad en un oberiadenn hepken"
+}

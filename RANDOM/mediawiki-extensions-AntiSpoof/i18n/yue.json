@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Antonytse",
+			"CRCHF",
+			"Hello903hello",
+			"Ktchankt",
+			"Yueman"
+		]
+	},
+	"antispoof-desc": "封鎖一啲對於有混合程序、混淆同埋相似嘅用戶名嘅開戶口動作",
+	"antispoof-conflict-top": "用戶名「$1」同以下呢啲{{PLURAL:$2|用戶名}}太似：",
+	"antispoof-conflict-bottom": "請揀第個用戶名。",
+	"antispoof-name-illegal": "呢個用戶名「$1」唔畀用，以預防撈亂或者冒充用戶名：「$2」。\n請揀過個用戶名。",
+	"antispoof-badtype": "錯誤嘅資料類型",
+	"antispoof-empty": "空白字串",
+	"antispoof-prohibited": "有列喺黑名單度嘅字符「$1」",
+	"antispoof-combining": "從結合標記$1開始",
+	"antispoof-unassigned": "有未指定嘅字符「$1」",
+	"antispoof-deprecated": "有列喺黑名單度嘅字符「$1」",
+	"antispoof-noletters": "唔包含任何字元",
+	"antispoof-mixedscripts": "包含唔相容嘅混合碼",
+	"antispoof-tooshort": "標準化之後嘅名太短",
+	"antispoof-ignore": "略過欺詐檢查",
+	"antispoof-ignore-help": "畀有特定權限嘅用戶去開同現有戶口個名相似嘅新戶口。",
+	"action-override-antispoof": "無視欺詐檢查",
+	"right-override-antispoof": "無視欺詐檢查"
+}

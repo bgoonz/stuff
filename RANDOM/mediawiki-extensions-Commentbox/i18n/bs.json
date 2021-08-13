@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"CERminator"
+		]
+	},
+	"commentbox-desc": "Dodaje kutiju za komentare na određene stranice",
+	"commentbox-intro": "== Dodajte komentar... ==\nŽelite komentirati na ovoj stranici? Dodajte ovdje ili <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} direktno uredite stranicu]</span>.",
+	"commentbox-savebutton": "Sačuvaj komentar",
+	"commentbox-name": "Ime:",
+	"commentbox-name-explanation": "<small>(Savjet: Ako se [[Special:UserLogin|prijavite]], nećete morati ovdje ručno popunjavati Vaše ime)</small>",
+	"commentbox-log": "Novi komentari",
+	"commentbox-first-comment-heading": "== Komentari ==",
+	"commentbox-regex": "/\\n==\\s*Komentari\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Greška pri pravljenju komentara",
+	"commentbox-error-page-nonexistent": "Ova stranica ne postoji!",
+	"commentbox-error-namespace": "Komentari nisu dozvoljeni u ovom imenskom prostoru!",
+	"commentbox-error-empty-comment": "Prazni komentari nisu dozvoljeni!"
+}

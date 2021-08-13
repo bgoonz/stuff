@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jordi Roqué",
+			"SMP"
+		]
+	},
+	"absenteelandlord-reason": "La base de dades s'ha blocat automàticament a causa de la inactivitat dels seus administradors.",
+	"absenteelandlord-desc": "Bloca automàticament la base de dades del viqui si tots els administradors fa temps que estan inactius"
+}

@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Base"
+		]
+	},
+	"breadcrumbs-desc": "Показує шлях користувачів по вікі",
+	"prefs-breadcrumbs-separator": "Розділювач хлібних крихт",
+	"prefs-breadcrumbs-separator-max": "Максимум 2 символи може бути введено.",
+	"prefs-breadcrumbs": "Хлібні крихти",
+	"prefs-breadcrumbs-showcrumbs": "Показувати хлібні крихти",
+	"prefs-breadcrumbs-numberofcrumbs": "Число хлібних крихт",
+	"prefs-breadcrumbs-numberofcrumbs-max": "Може бути показано не більше 20 хлібних крихт.",
+	"prefs-breadcrumbs-namespaces": "Включати простір назв до хлібних крихт",
+	"prefs-breadcrumbs-filter-duplicates": "Фільтрувати повторно відвідані сторінки",
+	"prefs-breadcrumbs-preceding-text": "Текст, що показується перед хлібними крихтами",
+	"prefs-breadcrumbs-preceding-text-max": "Може бути введено не більше 30 символів."
+}

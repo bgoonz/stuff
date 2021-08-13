@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": []
+	},
+	"batchuserrights": "Batch user rights",
+	"batchuserrights-desc": "Allows adding one or more users to a group or more groups in one action",
+	"batchuserrights-names": "Usernames to add this group to (one per line):",
+	"batchuserrights-intro": "This page will let you add a group to multiple users at once.\nFor security reasons, the list of addable groups is set in the extension configuration and cannot be changed from within the wiki.\nPlease ask a system administrator if you need to allow batch-adding of other groups.",
+	"batchuserrights-single-progress-update": "Added {{PLURAL:$1|group|groups}} to <strong>$2</strong>.",
+	"batchuserrights-add-groups": "Adding {{PLURAL:$1|one user|$1 users}} to the following {{PLURAL:$2|group|groups}}: <strong>$3</strong>.",
+	"batchuserrights-userload-error": "Could not load the {{GENDER:$1|user}} '''$1'''.",
+	"batchuserrights-no-groups": "You did not choose any groups.\nThis will not accomplish anything.\nThe rest of the page will be allowed to run just so that you can easily see if any of the usernames could not be loaded.",
+	"right-batchuserrights": "Add one or more users to a group or multiple groups in one action",
+	"action-batchuserrights": "add one or more users to a group or multiple groups in one action"
+}

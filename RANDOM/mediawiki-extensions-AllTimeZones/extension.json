@@ -1,0 +1,21 @@
+{
+	"name": "AllTimeZones",
+	"version": "0.3.0",
+	"author": "Nischay Nahata",
+	"url": "https://www.mediawiki.org/wiki/Extension:AllTimeZones",
+	"descriptionmsg": "alltimezones-desc",
+	"license-name": "GPL-3.0-only",
+	"type": "parserhook",
+	"MessagesDirs": {
+		"AllTimeZones": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"AllTimeZonesHooks": "AllTimeZonesHooks.php"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "AllTimeZonesHooks::wfTimezoneSetup"
+	},
+	"manifest_version": 1
+}

@@ -1,0 +1,39 @@
+{
+	"@metadata": {
+		"authors": [
+			"Siebrand"
+		]
+	},
+	"articlefeedbackv5-cta-confirmation-message": "Je kunt je bericht bekijken op deze [$1 terugkoppelingspagina].",
+	"articlefeedbackv5-cta1-confirmation-title": "Wist je dat je deze pagina kunt bewerken?",
+	"articlefeedbackv5-cta2-confirmation-call": "Deze website wordt gemaakt door mensen zoals jij. Kan je ons helpen?",
+	"articlefeedbackv5-cta4-confirmation-call-line1": "Registreer een gebruiker of meld je aan zodat andere gebruikers op je terugkoppeling kunnen reageren.",
+	"articlefeedbackv5-cta4-confirmation-call-line2": "Jouw gratis gebruiker maakt het eenvoudiger om wat je weet te delen in {{SITENAME}}.",
+	"articlefeedbackv5-cta5-confirmation-call": "Bekijk suggesties van andere lezers. Kan je helpen de beste ideeën te kiezen?",
+	"articlefeedbackv5-error-abuse": "Je bericht is afgewezen door een softwarefilter dat aangeeft dat de [$1 richtlijnen voor terugkoppeling] van {{SITENAME}} mogelijk geschonden worden. Pas je opmerking alstublieft aan en probeer het opnieuw.",
+	"articlefeedbackv5-error-nofeedback": "Geef je terugkoppeling.",
+	"articlefeedbackv5-error-throttled": "Je bericht is geweigerd omdat je recentelijk meer terugkoppeling hebt gegeven dan wordt aangeraden in de richtlijnen voor terugkoppeling van {{SITENAME}}. Geef je terugkoppeling niet herhaaldelijk of excessief.",
+	"articlefeedbackv5-special-survey-button-text": "Wat vind je van deze functie om terugkoppeling te geven?",
+	"articlefeedbackv5-no-feedback": "Er is geen terugkoppeling voor het filter dat je hebt geselecteerd. Probeer een van de bovenstaande opties om je filter te wijzigen (bijvoorbeeld \"Meest relevant\" of \"Alle reacties\").",
+	"articlefeedbackv5-noteflyover-feature-placeholder": "Waarom licht je dit bericht uit?",
+	"articlefeedbackv5-noteflyover-unfeature-placeholder": "Waarom laat je dit bericht niet langer uitgelicht worden?",
+	"articlefeedbackv5-noteflyover-hide-placeholder": "Waarom verberg je dit bericht?",
+	"articlefeedbackv5-noteflyover-request-label": "Opmerking toevoegen om toe te lichten waarom je toezicht aanvraagt",
+	"articlefeedbackv5-noteflyover-request-placeholder": "Waarom vraag je toezicht aan?",
+	"articlefeedbackv5-noteflyover-unrequest-placeholder": "Waarom annuleer je het verwijderingsverzoek?",
+	"articlefeedbackv5-noteflyover-oversight-placeholder": "Waarom verwijder je dit bericht?",
+	"articlefeedbackv5-noteflyover-unoversight-placeholder": "Waarom maak je de verwijdering van dit bericht ongedaan?",
+	"articlefeedbackv5-bucket1-question-toggle": "Heb je gevonden wat je zocht?",
+	"articlefeedbackv5-bucket4-subhead": "Wist je dat je deze pagina kunt bewerken?",
+	"articlefeedbackv5-bucket4-help-tooltip-info": "{{SITENAME}} wil graag weten wat je van de site vindt. Help deze pagina te verbeteren door redacteur te worden.",
+	"articlefeedbackv5-bucket4-noedit-teaser-line1": "Deze website wordt gemaakt door mensen zoals jij.",
+	"articlefeedbackv5-bucket4-noedit-teaser-line2": "Kan jij ons helpen?",
+	"articlefeedbackv5-bucket6-question-toggle": "Heb je gevonden wat je zocht?",
+	"articlefeedbackv5-bucket6-question-instructions-yes": "Bedankt. Heb je nog suggesties voor verbetering?",
+	"articlefeedbackv5-bucket6-question-placeholder-yes": "Schrijf hier je suggesties, bijvoorbeeld \"Deze pagina heeft een afbeelding nodig\"",
+	"articlefeedbackv5-bucket6-question-placeholder-no": "Schrijf hier je suggesties, bijvoorbeeld \"Deze pagina heeft een afbeelding nodig\"",
+	"articlefeedbackv5-help-tooltip-info": "{{SITENAME}} wil graag weten wat je vindt van deze pagina. Deel je terugkoppeling met de redacteuren en help deze pagina te verbeteren.",
+	"articlefeedbackv5-help-transparency-terms": "Geef alsjeblieft [//en.wikipedia.org/wiki/Wikipedia:Feedback_guidelines nuttige terugkoppeling]. Door op te slaan ga je akkoord met transparantie onder deze [//foundation.wikimedia.org/wiki/Feedback_privacy_statement/nl voorwaarden].",
+	"articlefeedbackv5-toolbox-add": "Geef ons je terugkoppeling",
+	"articlefeedbackv5-email-request-oversight-body": "Hallo toezichthouders!\n\nEr is een verzoek voor toezicht op terugkoppeling ingediend door gebruiker $1 op deze pagina:\n\n$2\n\nControleer deze terugkoppeling alstublieft, en keur het verzoek voor toezicht goed of af:\n\n$3\n\nBedankt!\n\nHet team van {{SITENAME}}\n\nPS Als je vragen hebt over het gebruik van de functie toezicht op de terugkoppelingspagina, raadpleeg dan de veel gestelde vragen over toezicht:\n\n$4"
+}

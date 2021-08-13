@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Harald Khan",
+			"Njardarlogar"
+		]
+	},
+	"commentbox-desc": "Legg til ein kommentarboks til sume sider",
+	"commentbox-intro": "== Legg til ein kommentar... ==\n\nHar du ein kommentar til denne sida? Legg han til her eller <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} endra sida direkte]</span>.",
+	"commentbox-savebutton": "Lagra kommentar",
+	"commentbox-name": "Namn:",
+	"commentbox-name-explanation": "<small>(Tips: Du slepp du å fylla ut namnet ditt manuelt her om du [[Special:UserLogin|loggar inn]])</small>",
+	"commentbox-log": "Nye kommentarar",
+	"commentbox-first-comment-heading": "== Kommentarar ==",
+	"commentbox-regex": "/\\n==\\s*Kommentarar\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Det oppstod ein feil medan kommentaren vart oppretta",
+	"commentbox-error-page-nonexistent": "Denne sida finst ikkje.",
+	"commentbox-error-namespace": "Kommentarar er ikkje tillatne i dette namnerommet.",
+	"commentbox-error-empty-comment": "Tomme kommentarar er ikkje tillatne."
+}

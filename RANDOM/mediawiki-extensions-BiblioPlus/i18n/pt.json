@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fúlvio",
+			"Giro720",
+			"Hamilton Abreu"
+		]
+	},
+	"biblioplus-desc": "Recupera automaticamente as referências da base de dados PubMed e ISBN",
+	"biblioplus-doi-tooltip": "Ver ou comprar o artigo da editora",
+	"biblioplus-pmid-tooltip": "Ver ou comprar o artigo da editora (se disponível)",
+	"biblioplus-isbn-tooltip": "Informação do livro em isbndb.org",
+	"biblioplus-medline-abstracts": "Todos os resumos na Medline:",
+	"biblioplus-pubmed-abstracts": "Todos os resumos na PubMed",
+	"biblioplus-hubmed-abstracts": "Todos os resumos na HubMed",
+	"biblioplus-vkey-title": "hiperligação para a base de dados bibliográfica"
+}

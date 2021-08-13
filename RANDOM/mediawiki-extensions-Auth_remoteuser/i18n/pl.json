@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Rail",
+			"Railfail536"
+		]
+	},
+	"auth_remoteuser-desc": "Automatycznie loguje użutkowników używających zmienej środowiska <code>REMOTE_USER</code>"
+}

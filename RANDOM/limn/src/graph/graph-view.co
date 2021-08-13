@@ -1,0 +1,264 @@
+_  = require 'underscore'
+ko = require 'knockout'
+
+limn = require '../' # yes, you actually need the trailing slash
+{ View,
+} = require '../base/view'
+{ OrderedMap, ParsingMixin,
+} = require '../util'
+{ Graph,
+} = require './graph-model'
+{ TableView,
+} = require './table-view'
+{ GraphNode,
+} = require './node/graph-node'
+{ EditView,
+} = require '../edit/edit-view'
+ds = require '../data/datasource'
+
+Trait = require './node/graph-node-trait'
+
+
+
+class exports.GraphView extends View
+    template: 'graph'
+    
+    # Apply Parser mixin
+    ParsingMixin.mix this
+    
+    defaults: ->
+        model  : null
+        action : null
+        isDisposed : false
+    
+    isUrl: /https?:\/\/.*?([^\/]*)\.(csv|tsv|json)(\?.*)?/i
+    
+    /**
+     * @constructor
+     * @param {Graph} model Graph model for this view.
+     * @param {string} action the action this view was created to respond to
+     */
+    (model, action) ->
+        @nodeCache = new OrderedMap()
+        super()
+        @graphId = 'graph-' + @__id__
+        
+        if model instanceof Graph
+            # if the id is a url to a csv, infer metadata
+            if @isUrl.test model.id()
+                parsed = model.id().match(@isUrl)
+                model.url = parsed[0]
+                model.id parsed[1]
+                optionQuery = parsed[3]?.substr 1
+                if optionQuery
+                    options = optionQuery.split('&').forEach(->
+                        [k, v] = it.split('=')
+                        if ['type'].indexOf(k) >= 0
+                            model[k] = v
+                        else
+                            model[k]?(v)
+                    )
+                # have to make the id unique, otherwise caching
+                # will cause different graphs to use the same data
+                if model.name()?
+                    model.id(model.id() + model.name())
+
+            else
+                model.fetch()
+        else if typeof model is 'string'
+            model = Graph.load { id:model }
+        else
+            model = new Graph model
+        
+        @action action
+        @model model
+        @tabularizeDialog = ko.observable()
+        
+        @watching()
+    
+    /**
+     * The `GraphNode` cache.
+     * @protected
+     * @type OrderedMap<GraphNodeData, GraphNode>
+     */
+    nodeCache : null
+    
+    /**
+     * root to the tree of GraphNode(s)
+     * @type GraphNode
+     */
+    rootNode : @eagerComputed ->
+        return null unless graph = @model()
+        @lookupNode graph.root()
+    
+    /**
+     * DOM Element for this view. jQuery objects and d3 Selections
+     * will be automatically stripped of their wrappers.
+     * @type ko.observable<Element>
+     */
+    el : @eagerCoerciveObservable (el) ->
+        @$el = null
+        el = el[0]      if el instanceof jQuery
+        el = el.node()  if el instanceof d3.selection
+        return el       unless _.isElement el
+        @$el = $ el
+        el
+    
+    /**
+     * jQuery-wrapped root element.
+     * @type jQuery
+     */
+    $el : null
+    
+    
+    /**
+     * 
+     */
+    watchDOM: @computed ->
+        # ensure we register our dependencies before potentially aborting the build() chain
+        root = @rootNode()
+        el   = @el()
+        return null unless limn?.domReady() and root and el
+        return null unless rootParentEl = @$('.graph-chart-row > .inner').0
+        root.build rootParentEl
+        rootParentEl
+    
+    
+    
+    /**
+     * Inform sub-objects its safe to begin their watchers.
+     */
+    watchOthers : ->
+        rootNode    = @rootNode().watching()
+        rootBuilt   = @watchDOM()
+        [ rootNode, rootBuilt ]
+    
+    
+    /**
+     * Looks up a `GraphNode` by an instance of `GraphNodeData`. On cache-miss,
+     * creates a new GraphNode for the data and registers it with the cache.
+     * 
+     * @protected
+     * @param {GraphNodeData} nodeData
+     * @returns {GraphNode} The node corresponding to this data.
+     */
+    lookupNode: (nodeData) ->
+        return null unless nodeData?
+        return nodeData if nodeData instanceof GraphNode
+        return that if @nodeCache.get nodeData
+        
+        node = GraphNode.fromNodeData this, nodeData
+        @nodeCache.set nodeData, node
+        
+        # register for notification when the node is destroyed
+        destroySub = node.isDisposed.subscribe (isDisposed) ~>
+            throw new Error "WTF! node.isDisposed false for #node!" unless isDisposed
+            currentNode = @nodeCache.get nodeData
+            @nodeCache.remove nodeData if currentNode is node
+            destroySub.dispose()
+        
+        # inform the node it can begin watching
+        node.watching() if @isWatching
+        
+        node
+    
+    
+    resize: ->
+        @rootNode?.peek()?.resize()
+    
+    
+    /**
+     * Called by Knockout once the Graph template has finished rendering.
+     */
+    afterRender: (element) ->
+        # console.log "#this.afterRender()"
+        @el element
+        
+        #if @action() is 'edit'
+            #new EditView this
+        
+        # gotta defer or the dependency tracking will cause an infinite loop.
+        doLater = ~>
+            datasource = new ds.DataSource()
+            datasource.id @model().id()
+            datasource.url @model().url
+            datasource.determineFormat()
+            datasource.data()
+            if not @model().name.peek()
+                @model().name(@model().id())
+            
+            datasource.data.task().done (dataset) ~>
+                dataset.parsedData.labels.map (label, i) ~>
+                    id = _.str.underscored (label or "#i").toLowerCase()
+                    type = @getTypeNameFromExample dataset.data[0][i]
+                    newColumn = new ds.ColumnDef {id, label, type}, datasource
+                    newColumn.index i
+                    datasource.columns.push newColumn
+                
+                # must add the datasource to the cache, so dependencies can resolve
+                # without a trip to the server (which would fail since the datasource
+                # is ephemeral in this case)
+                ds.DataSourceCache.cache[datasource.id()] = datasource
+                datasourceView = new ds.DataSourceView(datasource)
+                graph = datasourceView.buildGraphModel(
+                    datasource,
+                    @model().type or 'line',
+                    do
+                        width: 'auto',
+                        height: 500,
+                        noTweaks: true
+                )
+                @model().root(graph.root)
+                # hack the link so it doesn't go anywhere
+                @$el.find('.graph-name').attr('href', '#')
+        
+        if @isUrl.test(@model().url)
+            setTimeout doLater, 0
+    
+    
+    metricDefs: @computed ->
+        defs = @rootNode()?.walk [], (defs, node) ->
+            if      node.hasTrait(Trait.METRIC_CONTENT_DATA) and
+                    metric = node.model()?.metric()
+                defs.push ...yDefs if yDefs = metric.yColumnDef()?.metricDefs()
+                defs.push ...xDefs if xDefs = metric.xColumnDef()?.metricDefs()
+            defs
+        defs = _.uniq _.compact(defs), false
+        if defs.length then defs else null
+    
+    
+    uniqueMetricDataLinks: @computed ->
+        links = @rootNode()?.walk [], (links, node) ->
+            if      node.hasTrait(Trait.METRIC_CONTENT_DATA) and
+                    url = node.model()?.metric()?.source()?.url()
+                links.push url
+            links
+        _.uniq links, false
+    
+    
+    tabularize: ->
+        @tabularizeDialog new TableView @model(), @rootNode()
+        @$el.find '.tabularizeDialog' .modal 'show'
+    
+    
+    save: ->
+        graph = ko.utils.unwrapObservable @model
+        graph.save()
+            .done ->
+                limn.info 'Saved Successfully'
+            .fail (data, message, response) ->
+                switch response.status
+                    case 403
+                        limn.error "Not Saved.  #message"
+                    default
+                        limn.error 'Not Saved.  There was a problem'
+    
+    
+    /* * * *  UI Feedback  * * * {{{ */
+    
+    configurationError: (message) ->
+        
+    
+    
+    # }}}
+    

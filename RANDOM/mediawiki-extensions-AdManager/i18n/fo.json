@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"EileenSanda"
+		]
+	},
+	"admanager": "Lýsingaskipan",
+	"admanager-desc": "Ger ein [[Special:AdManager|serstaka síðu]] sum loyvir administatorum at seta økið fyri síður ella bólkar",
+	"admanager_docu": "Fyri at leggja afturat ella taka burtur lýsingarteigin á einari síðu ella hjá einum heilum bólki, so skal tú leggja afturat ella taka burtur heitið hjá síðuni ella bólkinum her niðanfyri.",
+	"admanager_invalidtargetpage": "Ongin síða funnin við heitinum \"$1\".",
+	"admanager_invalidtargetcategory": "Ongin bólkur funnin við heitinum \"$1\".",
+	"admanager_labelPage": "Siðuheiti",
+	"admanager_labelCategory": "Bólkanøvn",
+	"admanager_submit": "Send inn",
+	"admanager_noads": "Vís ongar lýsingar",
+	"admanager_Page": "Síður",
+	"admanager_Category": "Bólkar",
+	"admanager_added": "Tínar broytingar eru goymdar",
+	"admanager_zonenum": "Økið #: $1",
+	"admanager_zonenotnumber": "Feilur! $1 er ikki eitt tal.",
+	"admanager_return": "Far aftur til [[Special:AdManager|Lýsingaskipanina]]"
+}

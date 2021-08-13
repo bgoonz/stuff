@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Arianit",
+			"Besnik b",
+			"FatosMorina",
+			"Olsi"
+		]
+	},
+	"antispoof-desc": "Bllokon krijimin e llogarive me shkrime të përziera, duke çrregulluar edhe emrat e ngjashëm të përdorusve",
+	"antispoof-conflict-top": "Emri \"$1\" është shumë i ngjashëm me {{PLURAL:$2||llogarinë|llogaritë}}:",
+	"antispoof-conflict-bottom": "Ju lutemi zgjidhni një emër përdoruesi tjetër.",
+	"antispoof-name-illegal": "Emri i përdoruesit \"$1\" nuk është i lejuar për të shmangur emra përdoruesish të ngatërrueshëm apo të rremë: $2.",
+	"antispoof-badtype": "Shtypje e keqe e të dhënave",
+	"antispoof-empty": "Fushë boshe",
+	"antispoof-prohibited": "Përmban shenjë të ndaluar $1",
+	"antispoof-combining": "Fillon me shenjën e kombinuar $1",
+	"antispoof-unassigned": "Përmban karakter të papërcaktuar $1",
+	"antispoof-deprecated": "Përmban karakter të palejueshëm $1",
+	"antispoof-noletters": "Nuk përmban asnjë shkronjë",
+	"antispoof-mixedscripts": "Përmban shkrime të përziera të papajtueshme",
+	"antispoof-tooshort": "Emri i normlizuar shumë i shkurtër",
+	"antispoof-ignore": "Tejkaloni kontrollet për emra të rremë",
+	"right-override-antispoof": "Refuzoni kontrollet për emra të rremë"
+}

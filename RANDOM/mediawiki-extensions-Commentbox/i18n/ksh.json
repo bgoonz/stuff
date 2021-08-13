@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Purodha"
+		]
+	},
+	"commentbox-desc": "Deiht ene Kaßte för Aanmärkonge op beschtemmpte Sigge derbei.",
+	"commentbox-intro": "== en Aanmärkong derbei donn ==\nHäß De en Aanmärkong zoh heh dä Sigg? Donn se heh enjävve, udder <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} donn heh di Sigg ändere]</span>.",
+	"commentbox-savebutton": "Aanmerkong avshpeishere",
+	"commentbox-name": "Nahme:",
+	"commentbox-name-explanation": "<small>(Opjepaß: Wann De [[Special:UserLogin|enjelog beß]], moß De nit immer heh Dinge Name entippe)</small>",
+	"commentbox-log": "Neu Aanmerkonge",
+	"commentbox-first-comment-heading": "== Aanmärkonge ==",
+	"commentbox-regex": "/\\n==\\s*Aanmärkonge\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Ene Fähler es opjetrodde wi mer en Aanmärkong aanlääje wullte",
+	"commentbox-error-page-nonexistent": "Di Sigg jidd_et nit!",
+	"commentbox-error-namespace": "Aanmärkonge sin nit zohjelohße en heh dämm Appachtemang!",
+	"commentbox-error-empty-comment": "Aanmärkonge met nix dren sin nit zohjelohße!"
+}

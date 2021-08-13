@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fryed-peach",
+			"Omotecho",
+			"Schu",
+			"Shirayuki",
+			"Yusuke1109",
+			"青子守歌"
+		]
+	},
+	"authorprotect": "作成者以外の利用者からページを保護",
+	"authorprotect-desc": "ページの作成者が、そのページを他の利用者から保護できるようにする",
+	"authorprotect-notauthor": "{{GENDER:$1|あなた}}はこのページの{{GENDER:$1|作成者}}ではありません。",
+	"authorprotect-confirm": "保護レベルを変更",
+	"authorprotect-edit": "編集を作成者に制限",
+	"authorprotect-move": "移動を作成者に制限",
+	"authorprotect-intro": "このページを作成者以外から保護するには、このフォームを使用してください。",
+	"authorprotect-success": "保護しました!",
+	"protect-level-author": "作成者以外から保護",
+	"restriction-level-author": "作成者が保護",
+	"action-authorprotect": "作成者以外からの保護",
+	"right-authorprotect": "作成したページを保護",
+	"action-author": "作成者が保護したページの編集",
+	"right-author": "作成者が保護したページを編集"
+}

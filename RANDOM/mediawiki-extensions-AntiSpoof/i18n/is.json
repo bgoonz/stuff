@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"S.Örvarr.S",
+			"Snævar",
+			"Spacebirdy",
+			"Sveinn í Felli"
+		]
+	},
+	"antispoof-desc": "Lokar á gerð notandaaðganga með bland-skriftu, ruglandi og svipuðum notandanöfnum",
+	"antispoof-conflict-top": "Notandanafnið \"$1\" er of líkt eftirfarandi {{PLURAL:$2|notandanafni|notendanöfnum}}:",
+	"antispoof-conflict-bottom": "Veldu eitthvað annað notandanafn.",
+	"antispoof-name-illegal": "Notandanafnið „$1“ er ekki leyfilegt til að sporna gegn ruglandi eða skopstælandi notandanöfnum:: „$2“. Vinsamlegast veldu annað notandanafn.",
+	"antispoof-bad-char": "\"$1\" ($2)",
+	"antispoof-badtype": "Léleg gerð gagna",
+	"antispoof-empty": "Tómur strengur",
+	"antispoof-prohibited": "Inniheldur bannaða staftáknið $1",
+	"antispoof-combining": "Byrjar á samsetningartákninu $1",
+	"antispoof-unassigned": "Inniheldur óúthlutaða eða úrelda staftáknið $1",
+	"antispoof-deprecated": "Inniheldur úrelda staftáknið $1",
+	"antispoof-noletters": "Inniheldur enga stafi",
+	"antispoof-mixedscripts": "Inniheldur ósamhæfðar blandskriftur",
+	"antispoof-tooshort": "Staðlað nafn er of stutt",
+	"antispoof-ignore": "Hunsa eftirlit með misnotkun",
+	"antispoof-ignore-help": "Leyfir notendum með nægjanleg réttindi að búa til að gang þó nafnið sé svipað fyrirliggjandi aðgang",
+	"action-override-antispoof": "hunsa misnotkunar athuganir",
+	"right-override-antispoof": "Hunsa misnotkunar athuganir"
+}

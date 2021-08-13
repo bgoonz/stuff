@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Les Meloures",
+			"Robby"
+		]
+	},
+	"authorprotect": "Ännere vun der Säit op d'Auteure limitéieren",
+	"authorprotect-desc": "Erlaabt et dem Auteur vun enger Säit, déi fir Ännerungen duerch aner Benotzer ze spären",
+	"authorprotect-notauthor": "{{GENDER:$1|Dir}} sidd net den {{GENDER:$1|Auteur}} vun dëser Säit.",
+	"authorprotect-confirm": "D'Niveaue vun der Protectioun änneren",
+	"authorprotect-edit": "Ännerungen nëmmen fir Auteure méiglech maachen",
+	"authorprotect-move": "Réckelen nëmme fir Auteure méiglech maachen",
+	"authorprotect-intro": "Benotzt dëse Formulaire fir d'Ännere vun dëser Säit op d'Auteuren ze limitéieren",
+	"authorprotect-success": "D'Säit gouf protegéiert!",
+	"protect-level-author": "Protegéiert virun ''Net-Auteuren''",
+	"restriction-level-author": "Auteur-protegéiert",
+	"right-authorprotect": "Säite mat engem Auteur schützen",
+	"right-author": "Säiten déi, ausser fir den Auteur, gespaart sinn, änneren"
+}

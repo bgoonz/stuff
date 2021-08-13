@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Andrei Stroe",
+			"KlaudiuMihaila",
+			"Mihai",
+			"Minisarm"
+		]
+	},
+	"authorprotect": "Protejează pagina pentru cei care nu sunt autori",
+	"authorprotect-desc": "Permite autorului unei pagini să o protejeze față de ceilalți utilizatori",
+	"authorprotect-notauthor": "Nu sunteți {{GENDER:$1|autorul|autoarea|autorul}} acestei pagini",
+	"authorprotect-confirm": "Schimbă niveluri de protecție",
+	"authorprotect-edit": "Restricționează modificările autorilor",
+	"authorprotect-move": "Restricționează mutarea la autori",
+	"authorprotect-intro": "Utilizați acest formular pentru a proteja această pagină de non-autori",
+	"authorprotect-success": "Protejare efectuată!",
+	"protect-level-author": "Protejare de non-autori",
+	"restriction-level-author": "Autor-protejat",
+	"right-authorprotect": "Protejează pagini de autor",
+	"right-author": "Modifică pagini protejate de autor"
+}

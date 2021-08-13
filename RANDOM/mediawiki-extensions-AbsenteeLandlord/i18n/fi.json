@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jaakonam",
+			"Pxos"
+		]
+	},
+	"absenteelandlord-reason": "Tämä tietokanta on lukittu automaattisesti ylläpitäjien aktiivisuuden puutteen takia.",
+	"absenteelandlord-desc": "Lukitsee wikin tietokannan automaattisesti, jos kaikki ylläpitäjät ovat riittävän kauan aikaa tekemättä mitään."
+}

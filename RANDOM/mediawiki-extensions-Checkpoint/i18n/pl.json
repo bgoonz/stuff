@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Marcin Łukasz Kiejzik",
+			"Sp5uhe"
+		]
+	},
+	"checkpoint": "Zapisz i kontynuuj edycję",
+	"checkpoint-desc": "Pozwala zapisać zmiany i kontynuować edycję",
+	"checkpoint-tooltip": "Zapisz dotychczas wprowadzone zmiany i kontynuuj edycję strony",
+	"checkpoint-notice": "([[{{ns:project}}:Checkpoint|zapisany punkt kontrolny]])"
+}

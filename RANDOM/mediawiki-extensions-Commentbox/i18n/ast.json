@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"commentbox-desc": "Amiesta un cuadru de comentarios a ciertes páxines",
+	"commentbox-intro": "== Amestar un comentariu... ==\nTienes un comentariu sobro esta páxina? Amiestalu equí o <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} edita la páxina direutamente]</span>.",
+	"commentbox-savebutton": "Guardar el comentariu",
+	"commentbox-name": "Nome:",
+	"commentbox-name-explanation": "<small>(Conseyu: Si [[Special:UserLogin|anicies sesión]], nun tendrás que poner equí el to nome a mano)</small>",
+	"commentbox-log": "Comentarios nuevos",
+	"commentbox-first-comment-heading": "== Comentarios ==",
+	"commentbox-regex": "/\\n==\\s*Comentarios\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Error al crear el comentariu",
+	"commentbox-error-page-nonexistent": "¡Esta páxina nun esiste!",
+	"commentbox-error-namespace": "¡Nun se permiten comentarios nesti espaciu de nomes!",
+	"commentbox-error-empty-comment": "¡Nun se permiten los comentarios baleros!"
+}

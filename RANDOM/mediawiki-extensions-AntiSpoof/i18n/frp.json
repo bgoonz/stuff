@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"ChrisPtDe"
+		]
+	},
+	"antispoof-desc": "Dèfend la crèacion de comptos qu’utilisont un mouél d’ècritures avouéc des noms d’usanciér semblâblos, ou ben que pôvont prétar a confusion.",
+	"antispoof-conflict-top": "Lo nom « $1 » est trop pariér {{PLURAL:$2|u compto ègzistent|a cetos $2 comptos}} :",
+	"antispoof-conflict-bottom": "Volyéd chouèsir un ôtro nom.",
+	"antispoof-name-illegal": "Lo nom d’usanciér « $1 » est pas ôtorisâ por empachiér de confondre ou ben d’utilisar lo nom « $2 ».\nVolyéd chouèsir un ôtro nom.",
+	"antispoof-badtype": "Crouyo tipo de balyês",
+	"antispoof-empty": "Chêna voueda",
+	"antispoof-prohibited": "Contint lo caractèro de la lista nêre $1",
+	"antispoof-combining": "Comence avouéc na mârca combinâye $1",
+	"antispoof-unassigned": "Contint lo caractèro pas assignê $1",
+	"antispoof-deprecated": "Contint lo caractèro dèfendu $1",
+	"antispoof-noletters": "Contint gins de lètra.",
+	"antispoof-mixedscripts": "Contint un mouél d’ècritures que vont pas avouéc.",
+	"antispoof-tooshort": "Nom canonico trop côrt",
+	"antispoof-ignore": "Ignorar los contrôlos de frôda",
+	"right-override-antispoof": "Ignorar los contrôlos de frôda"
+}

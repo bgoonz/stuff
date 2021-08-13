@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": []
+	},
+	"commentbox-desc": "Adds a commentbox to certain pages",
+	"commentbox-prefill": "",
+	"commentbox-intro": "== Add a comment... ==\nYou have a comment on this page? Add it here or <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} edit the page directly]</span>.",
+	"commentbox-savebutton": "Save comment",
+	"commentbox-name": "Name:",
+	"commentbox-name-explanation": "<small>(Tip: If you [[Special:UserLogin|log in]], you will not have to fill in your name here manually)</small>",
+	"commentbox-log": "New comments",
+	"commentbox-first-comment-heading": "== Comments ==",
+	"commentbox-regex": "/\\n==\\s*Comments\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Error while creating comment",
+	"commentbox-error-page-nonexistent": "This page does not exist!",
+	"commentbox-error-namespace": "Comments are not allowed in this namespace!",
+	"commentbox-error-empty-comment": "Empty comments are not allowed!"
+}

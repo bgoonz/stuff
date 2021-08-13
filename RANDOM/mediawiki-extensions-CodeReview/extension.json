@@ -1,0 +1,260 @@
+{
+	"name": "CodeReview",
+	"version": "1.19.2",
+	"author": [
+		"Brion Vibber",
+		"Aaron Schulz",
+		"Alexandre Emsenhuber",
+		"Chad Horohoe",
+		"Sam Reed",
+		"Roan Kattouw"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:CodeReview",
+	"descriptionmsg": "codereview-desc",
+	"license-name": "GPL-2.0-or-later",
+	"requires": {
+		"MediaWiki": ">= 1.36.0"
+	},
+	"type": "specialpage",
+	"config": {
+		"CodeReviewMaxDiffSize": {
+			"value": 500000
+		},
+		"CodeReviewShuffleTagCloud": {
+			"value": false
+		},
+		"CodeReviewImportBatchSize": {
+			"value": 400
+		},
+		"SubversionUser": {
+			"value": false
+		},
+		"CodeReviewMaxDiffPaths": {
+			"value": 20
+		},
+		"CodeReviewFlags": {
+			"value": [
+				"inspected",
+				"tested"
+			]
+		},
+		"CodeReviewImgRegex": {
+			"value": "/\\.(png|jpg|jpeg|gif)$/i"
+		},
+		"SubversionProxyTimeout": {
+			"value": 30
+		},
+		"SubversionProxy": {
+			"value": false
+		},
+		"SubversionPassword": {
+			"value": false
+		},
+		"CodeReviewCommentWatcherName": {
+			"value": "CodeReview comments list"
+		},
+		"SubversionOptions": {
+			"value": "--non-interactive --trust-server-cert"
+		},
+		"CodeReviewDisableFollowUpNotification": {
+			"value": false
+		},
+		"CodeReviewRepoStatsCacheTime": {
+			"value": 21600
+		},
+		"CodeReviewProtectedStates": {
+			"value": [
+				"ok",
+				"resolved"
+			]
+		},
+		"CodeReviewCommentWatcherEmail": {
+			"value": ""
+		},
+		"CodeReviewENotif": {
+			"value": false
+		},
+		"CodeReviewStates": {
+			"value": [
+				"new",
+				"fixme",
+				"reverted",
+				"resolved",
+				"ok",
+				"deferred",
+				"old"
+			]
+		},
+		"CodeReviewDeferredPaths": {
+			"value": []
+		},
+		"CodeReviewAutoTagPath": {
+			"value": []
+		},
+		"CodeReviewFixmePerPath": {
+			"value": []
+		},
+		"CodeReviewNewPerPath": {
+			"value": []
+		},
+		"CodeReviewRC": {
+			"value": []
+		},
+		"CodeReviewListSpecialPage": {
+			"value": true
+		}
+	},
+	"ExtensionMessagesFiles": {
+		"CodeReviewAliases": "CodeReview.alias.php"
+	},
+	"APIModules": {
+		"codeupdate": "ApiCodeUpdate",
+		"codediff": "ApiCodeDiff",
+		"coderevisionupdate": "ApiRevisionUpdate"
+	},
+	"APIListModules": {
+		"codecomments": "ApiQueryCodeComments",
+		"codepaths": "ApiQueryCodePaths",
+		"coderevisions": "ApiQueryCodeRevisions",
+		"codetags": "ApiQueryCodeTags"
+	},
+	"Hooks": {
+		"MakeGlobalVariablesScript": "CodeReviewHooks::onMakeGlobalVariablesScript",
+		"LoadExtensionSchemaUpdates": "CodeReviewHooks::onLoadExtensionSchemaUpdates",
+		"RenameUserSQL": "CodeReviewHooks::onRenameUserSQL",
+		"UserMergeAccountFields": "CodeReviewHooks::onUserMergeAccountFields"
+	},
+	"MessagesDirs": {
+		"CodeReview": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"ext.codereview": {
+			"scripts": "ext.codereview.js",
+			"dependencies": "jquery.suggestions"
+		},
+		"ext.codereview.styles": {
+			"styles": "ext.codereview.styles.css"
+		},
+		"ext.codereview.loaddiff": {
+			"scripts": "ext.codereview.loaddiff.js",
+			"dependencies": "jquery.spinner"
+		},
+		"ext.codereview.tooltips": {
+			"class": "CodeReviewTooltipsModule",
+			"scripts": "ext.codereview.tooltips.js",
+			"messages": [
+				"code-tooltip-withsummary",
+				"code-tooltip-withoutsummary"
+			],
+			"dependencies": "jquery.tipsy"
+		},
+		"ext.codereview.overview": {
+			"scripts": "ext.codereview.overview.js",
+			"styles": "ext.codereview.overview.css",
+			"dependencies": "jquery.tipsy",
+			"messages": [
+				"codereview-overview-title",
+				"codereview-overview-desc"
+			]
+		},
+		"ext.codereview.local": {
+			"class": "ResourceLoaderWikiModule",
+			"styles": [
+				"MediaWiki:CodeReview.css"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "modules",
+		"remoteExtPath": "CodeReview/modules"
+	},
+	"GroupPermissions": {
+		"*": {
+			"codereview-use": true
+		},
+		"user": {
+			"codereview-add-tag": true,
+			"codereview-remove-tag": true,
+			"codereview-post-comment": true,
+			"codereview-set-status": true,
+			"codereview-link-user": true,
+			"codereview-signoff": true,
+			"codereview-associate": true
+		}
+	},
+	"AvailableRights": [
+		"repoadmin",
+		"codereview-use",
+		"codereview-add-tag",
+		"codereview-remove-tag",
+		"codereview-post-comment",
+		"codereview-set-status",
+		"codereview-signoff",
+		"codereview-associate",
+		"codereview-link-user",
+		"codereview-review-own"
+	],
+	"SpecialPages": {
+		"Code": "SpecialCode",
+		"RepoAdmin": "SpecialRepoAdmin"
+	},
+	"AutoloadClasses": {
+		"ApiCodeUpdate": "includes/api/ApiCodeUpdate.php",
+		"ApiCodeDiff": "includes/api/ApiCodeDiff.php",
+		"ApiRevisionUpdate": "includes/api/ApiRevisionUpdate.php",
+		"ApiQueryCodeComments": "includes/api/ApiQueryCodeComments.php",
+		"ApiQueryCodePaths": "includes/api/ApiQueryCodePaths.php",
+		"ApiQueryCodeRevisions": "includes/api/ApiQueryCodeRevisions.php",
+		"ApiQueryCodeTags": "includes/api/ApiQueryCodeTags.php",
+		"CodeRevisionCommitterApi": "includes/api/CodeRevisionCommitterApi.php",
+		"SubversionAdaptor": "includes/backend/Subversion.php",
+		"SubversionPecl": "includes/backend/SubversionPecl.php",
+		"SubversionShell": "includes/backend/SubversionShell.php",
+		"SubversionProxy": "includes/backend/SubversionProxy.php",
+		"CodeDiffHighlighter": "includes/backend/DiffHighlighter.php",
+		"CodeRepository": "includes/backend/CodeRepository.php",
+		"CodeRevision": "includes/backend/CodeRevision.php",
+		"CodeComment": "includes/backend/CodeComment.php",
+		"CodeCommentLinker": "includes/backend/CodeCommentLinker.php",
+		"CodeCommentLinkerHtml": "includes/backend/CodeCommentLinkerHtml.php",
+		"CodeCommentLinkerWiki": "includes/backend/CodeCommentLinkerWiki.php",
+		"CodePropChange": "includes/backend/CodePropChange.php",
+		"CodeSignoff": "includes/backend/CodeSignoff.php",
+		"RepoStats": "includes/backend/RepoStats.php",
+		"CodeRepoListView": "includes/ui/CodeRepoListView.php",
+		"CodeRepoStatsView": "includes/ui/CodeRepoStatsView.php",
+		"CodeRevisionAuthorView": "includes/ui/CodeRevisionAuthorView.php",
+		"CodeRevisionAuthorLink": "includes/ui/CodeRevisionAuthorLink.php",
+		"CodeRevisionCommitter": "includes/ui/CodeRevisionCommitter.php",
+		"CodeRevisionListView": "includes/ui/CodeRevisionListView.php",
+		"CodeRevisionStatusView": "includes/ui/CodeRevisionStatusView.php",
+		"CodeRevisionTagView": "includes/ui/CodeRevisionTagView.php",
+		"CodeRevisionView": "includes/ui/CodeRevisionView.php",
+		"CodeAuthorListView": "includes/ui/CodeAuthorListView.php",
+		"CodeStatusListView": "includes/ui/CodeStatusListView.php",
+		"CodeTagListView": "includes/ui/CodeTagListView.php",
+		"CodeCommentsListView": "includes/ui/CodeCommentsListView.php",
+		"CodeCommentsAuthorListView": "includes/ui/CodeCommentsAuthorListView.php",
+		"CodeReleaseNotes": "includes/ui/CodeReleaseNotes.php",
+		"CodeStatusChangeListView": "includes/ui/CodeStatusChangeListView.php",
+		"CodeStatusChangeAuthorListView": "includes/ui/CodeStatusChangeAuthorListView.php",
+		"SpecialCode": "includes/ui/SpecialCode.php",
+		"CodeView": "includes/ui/CodeView.php",
+		"SvnTablePager": "includes/ui/SvnTablePager.php",
+		"SpecialRepoAdmin": "includes/ui/SpecialRepoAdmin.php",
+		"RepoAdminListView": "includes/ui/RepoAdminListView.php",
+		"RepoAdminRepoView": "includes/ui/RepoAdminRepoView.php",
+		"WordCloud": "includes/ui/WordCloud.php",
+		"SvnRevTablePager": "includes/ui/SvnRevTablePager.php",
+		"CodeCommentsTablePager": "includes/ui/CodeCommentsTablePager.php",
+		"SvnRevAuthorTablePager": "includes/ui/SvnRevAuthorTablePager.php",
+		"SvnRevStatusTablePager": "includes/ui/SvnRevStatusTablePager.php",
+		"SvnRevTagTablePager": "includes/ui/SvnRevTagTablePager.php",
+		"CodeStatusChangeTablePager": "includes/ui/CodeStatusChangeTablePager.php",
+		"CodeReviewHooks": "includes/CodeReviewHooks.php",
+		"CodeReviewTooltipsModule": "includes/CodeReviewTooltipsModule.php"
+	},
+	"manifest_version": 2
+}

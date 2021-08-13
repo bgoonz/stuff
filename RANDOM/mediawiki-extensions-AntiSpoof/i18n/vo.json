@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Malafaya",
+			"Smeira"
+		]
+	},
+	"antispoof-desc": "Blokön jafi kalas labü gebananems kofudik, tu sümiks u labü lafabs distik",
+	"antispoof-conflict-top": "Nem: \"$1\" binon tu sümik äs {{PLURAL:$1|nem kala ya dabinöla|nems kalas ya dabinölas}}:",
+	"antispoof-conflict-bottom": "Välolös nemi votik.",
+	"antispoof-name-illegal": "Nem: „$1“ no padälon, ad vitön gebananemis kofudik u smilöfikis: $2. Välolös, begö! nemi votik.",
+	"antispoof-badtype": "Nünasot badik",
+	"antispoof-empty": "Vödem vagik",
+	"antispoof-prohibited": "Keninükon malatis no pedälölis.",
+	"antispoof-combining": "Primon me malat kobüköl",
+	"antispoof-unassigned": "Keninükon malatis no lonöfölis u vorädikis",
+	"antispoof-noletters": "No ninädon tonatis alseimik",
+	"antispoof-mixedscripts": "Keninükon migi penamasitas no balabikas",
+	"antispoof-tooshort": "Nem valemik tu brefik",
+	"antispoof-ignore": "Nedemön sümikontrolis",
+	"right-override-antispoof": "Nefägükon sümikontrolis"
+}

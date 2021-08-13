@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"Guycn2",
+			"Rotemliss",
+			"Steeve815",
+			"StuB",
+			"YaronSh"
+		]
+	},
+	"authorprotect": "הגנה על הדף מפני משתמשים שלא יצרו אותו",
+	"authorprotect-desc": "מתן אפשרות ליוצר של דף להגן עליו מפני משתמשים אחרים",
+	"authorprotect-notauthor": "אינך {{GENDER:$1|היוצר|היוצרת}} של דף זה.",
+	"authorprotect-confirm": "שינוי רמות ההגנה",
+	"authorprotect-edit": "הגבלת עריכה ליוצרים בלבד",
+	"authorprotect-move": "הגבלת העברה ליוצרים בלבד",
+	"authorprotect-intro": "ניתן להשתמש בטופס זה כדי להגן על דף זה מפני משתמשים שלא יצרו אותו.",
+	"authorprotect-success": "ההגנה הופעלה בהצלחה!",
+	"protect-level-author": "הגנה מפני משתמשים שלא יצרו את הדף",
+	"restriction-level-author": "הגנה מפני משתמשים שלא יצרו את הדף",
+	"action-authorprotect": "להגן על דפים מפני משתמשים שלא יצרו אותם",
+	"right-authorprotect": "הפעלת הגנה על דפים שנכתבו על־ידי המשתמש עצמו",
+	"action-author": "עריכת דפים המוגנים על־ידי המחבר",
+	"right-author": "עריכת דפים המוגנים על־ידי המחבר"
+}

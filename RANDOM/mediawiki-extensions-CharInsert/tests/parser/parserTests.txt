@@ -1,0 +1,37 @@
+!! Version 2
+
+!! hooks
+charinsert
+!! endhooks
+
+!! test
+basic charinsert usage
+!! wikitext
+<charinsert>Σ</charinsert>
+!! html
+<p><a data-mw-charinsert-start="Σ" data-mw-charinsert-end="" class="mw-charinsert-item">Σ</a>
+</p>
+!! end
+
+!! test
+Escaped character sequences
+!! wikitext
+<charinsert>\0 \n \r \t</charinsert>
+!! html
+<p><a data-mw-charinsert-start="\0" data-mw-charinsert-end="" class="mw-charinsert-item">\0</a>
+<a data-mw-charinsert-start="\n" data-mw-charinsert-end="" class="mw-charinsert-item">\n</a>
+<a data-mw-charinsert-start="\r" data-mw-charinsert-end="" class="mw-charinsert-item">\r</a>
+<a data-mw-charinsert-start="\t" data-mw-charinsert-end="" class="mw-charinsert-item">\t</a>
+</p>
+!! end
+
+!! test
+Code snippet with a line break
+!! wikitext
+<charinsert>==H2==
+===H3===</charinsert>
+!! html
+<p><a data-mw-charinsert-start="==H2==" data-mw-charinsert-end="" class="mw-charinsert-item">==H2==</a><br />
+<a data-mw-charinsert-start="===H3===" data-mw-charinsert-end="" class="mw-charinsert-item">===H3===</a>
+</p>
+!! end

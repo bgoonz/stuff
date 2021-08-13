@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"BadDog",
+			"Kizule",
+			"Milicevic01",
+			"Rancher",
+			"Zoranzoki21"
+		]
+	},
+	"approvedrevs-approve": "одобри",
+	"approvedrevs-unapprovesuccess": "Више не постоји одобрена верзија ове странице.\nУместо тога биће приказана најновија измена.",
+	"approvedrevs-unapprovesuccess2": "Више не постоји одобрена верзија ове странице.\nУместо тога биће приказана празна страница.",
+	"approvedrevs": "Одобрене измене",
+	"approvedrevs-approvedpages": "Све странице са одобреном изменом",
+	"approvedrevs-notlatestpages": "Странице чија одобрена измена није најновија",
+	"approvedrevs-unapprovedpages": "Неодобрене странице",
+	"approvedrevs-view": "Преглед списка:",
+	"approvedrevs-revisionnumber": "измена $1",
+	"approvedrevs-approvedby": "{{GENDER:$3|одобрио|одобрила|одобрио}} $1 дана $4 у $5",
+	"approvedrevs-difffromlatest": "разлика од последње",
+	"approvedrevs-approvelatest": "одобри последњу",
+	"approvedrevs-approvethisrev": "Одобри ову измену.",
+	"approvedrevs-viewlatestrev": "Погледајте последњу измену.",
+	"approvedrevs-approvedrevision": "Одобрена измена",
+	"right-approverevisions": "постављање одређене измене на вики страници као одобрене",
+	"right-viewlinktolatest": "преглед образложења на врху страница које имају одобрену измену",
+	"approvedrevs-approvedfiles": "Све датотеке с одобреном изменом",
+	"approvedrevs-notlatestfiles": "Датотеке чија одобрена измена није најновија",
+	"approvedrevs-unapprovedfiles": "Неодобрене датотеке",
+	"approvedrevs-approvedfile": "Одобрена датотека",
+	"approvedrevs-latestfile": "Најновија датотека",
+	"apihelp-approve-example-1": "Одобри измену бр. 12345",
+	"apihelp-approve-example-2": "Одбиј измену бр. 12345"
+}

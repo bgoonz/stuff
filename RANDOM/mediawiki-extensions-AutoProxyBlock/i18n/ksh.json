@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Purodha"
+		]
+	},
+	"autoproxyblock-desc": "Määd et müjjelesch, offen <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„ene ẞööver en de Nohberschaff, ene Zweschedrääjer udder Zwescheschpeijscher, ene Vermeddelongsrääschner“\">proxy</i>-ẞööver draan ze henndere, em Wikki jät ze donn.",
+	"proxy-blocked": "Ding <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"Internet Protocol\">IP</i>-Adräß es als ene <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„ene ẞööver en de Nohberschaff, ene Zweschedrääjer udder Zwescheschpeijscher, ene Vermeddelongsrääschner“\">proxy</i>-ẞööver jeleß. Nit zohjelohße.{{GENDER:|}}\n<!-- https://phabricator.wikimedia.org/T130194 -->",
+	"abusefilter-edit-builder-vars-is-proxy": "„Wohr“, wann jedonn övver ene <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„ene ẞööver en de Nohberschaff, ene Zweschedrääjer udder Zweschescheijscher, ene Vermeddelongsrääschner“\">proxy</i>-ẞööver",
+	"tag-proxy": "jedonn övver ene <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„ene ẞööver en de Nohberschaff, ene Zweschedrääjer udder Zwescheschpeijscher, ene Vermeddelongsrääschner“\">proxy</i>-ẞööver",
+	"right-proxyunbannable": "Es ußjenomme fun automatische Sperre fun Proxy-Servere",
+	"right-notagproxychanges": "schöz dojähje, et Änndere övver ene <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„ene ẞööver en de Nohberschaff, ene Zweschedrääjer udder Zwescheschpeijscher, ene Vermeddelongsrääschner“\">proxy</i>-ẞööver met „<code lang=\"en\" xml:lang=\"en\" dir=\"ltr\">proxy</code>“ ze makkehre.\nen heh dä Sigg ier Leß met de Väsiohne faßjehallde wääde. Wann",
+	"right-autoproxyblock-log": "belohr et Logbohch met automattesch nit zohjelohße Änderonge övver <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„ẞööver en de Nohberschaff, Zweschedrääjer udder Zwescheschpeijscher, Vermeddelongsrääschner“\">proxies</i>.",
+	"proxyblock-log-name": "Logbohch met Änderonge övver <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„ẞööver en de Nohberschaff, Zweschedrääjer udder Zwescheschpeijscher, Vermeddelongsrääschner“\">proxies</i>, di automattesch nit zohjelohße wohde",
+	"proxyblock-log-header": "De Leß met Änderonge vun <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„ẞööver en de Nohberschaff, Zweschedrääjer udder Zwescheschpeijscher, Vermeddelongsrääschner“\">proxies</i>, di automattesch nit zohjelohße wohde",
+	"proxyblock-logentry-blocked": "{{GENDER:$3|dä|dat|dä Metmaacher|de|dat}} $3 wullt de Sigg „[[$1]]“ „$2“, un dat es automattesch nit zohjelohße wohde.\n<!-- https://phabricator.wikimedia.org/T130192 -->"
+}

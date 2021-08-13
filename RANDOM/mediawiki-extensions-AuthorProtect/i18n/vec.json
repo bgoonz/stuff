@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Candalua"
+		]
+	},
+	"authorprotect": "Protèzi la pagina dai non-autori",
+	"authorprotect-desc": "Permete a l'autor de na pagina de protègiarla da i altri utenti",
+	"authorprotect-notauthor": "No te sì mìa l'autor de sta pagina",
+	"authorprotect-confirm": "Canbia livèi de protession",
+	"authorprotect-edit": "Ristrenzi le modifiche ai soli autori",
+	"authorprotect-move": "Ristrenzi i spostamenti ai soli autori",
+	"authorprotect-intro": "Dòpara sto modulo par blocar sta pagina par i non-autori",
+	"authorprotect-success": "Proteto con sucesso!",
+	"protect-level-author": "Protèzi dai non-autori",
+	"restriction-level-author": "Proteto da l'autor",
+	"right-authorprotect": "Protegere le pagine con autori"
+}

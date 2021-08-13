@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Prima klasy4na",
+			"Sodmy",
+			"Тест"
+		]
+	},
+	"commentbox-desc": "Додає поле коментаря до певних сторінок",
+	"commentbox-intro": "== Додавання коментаря... ==\nУ вас є коментар до цієї сторінки? Додайте його тут або <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} безпосередньо редагуйте сторінку]</span>.",
+	"commentbox-savebutton": "Зберегти коментар",
+	"commentbox-name": "Назва:",
+	"commentbox-name-explanation": "<small>(Порада: Якщо ви [[Special:UserLogin|увійдете в систему]], вам не потрібно буде заповнювати своє ім'я вручну)</small>",
+	"commentbox-log": "Нові коментарі",
+	"commentbox-first-comment-heading": "== Коментарі ==",
+	"commentbox-regex": "/\\n==\\s*Коментарі\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Помилка при створенні коментаря",
+	"commentbox-error-page-nonexistent": "Цієї сторінки не існує!",
+	"commentbox-error-namespace": "Коментарі не дозволені в цьому просторі назв!",
+	"commentbox-error-empty-comment": "Порожні коментарі не дозволені!"
+}

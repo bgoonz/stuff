@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"categorysortheaders-desc": "Permite especificar cabeceiras de ordenación personalizadas, con múltiples caracteres, para listar as páxinas baixo categorías mediante unha sintaxe como <nowiki>[[category:Foo|^Cabeceira^Parte invisible da clave de ordenación]]</nowiki>"
+}

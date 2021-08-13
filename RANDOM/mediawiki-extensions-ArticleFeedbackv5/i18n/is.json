@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sveinn í Felli",
+			"පසිඳු කාවින්ද"
+		]
+	},
+	"articlefeedbackv5-cta4-button-text-login": "Innskrá",
+	"articlefeedbackv5-overlay-close": "Loka",
+	"articlefeedbackv5-form-helpful-yes-label": "Já",
+	"articlefeedbackv5-form-helpful-no-label": "Nei",
+	"articlefeedbackv5-discussion-page": "Spjall",
+	"articlefeedbackv5-whats-this": "Hjálp",
+	"articlefeedbackv5-comment-more": "Meira",
+	"articlefeedbackv5-short-status-request": "{{GENDER:$1|Yfirfarið af $1}}",
+	"articlefeedbackv5-short-status-decline": "{{GENDER:$1|Yfirfarið af $1}}",
+	"articlefeedbackv5-short-status-oversight": "{{GENDER:$1|Yfirfarið af $1}}",
+	"articlefeedbackv5-short-status-unflag": "{{GENDER:$1|Yfirfarið af $1}}",
+	"articlefeedbackv5-short-status-autoflag": "{{GENDER:$1|Yfirfarið af $1}}",
+	"articlefeedbackv5-short-status-unfeature": "{{GENDER:$1|Yfirfarið af $1}}",
+	"articlefeedbackv5-short-status-unresolve": "{{GENDER:$1|Yfirfarið af $1}}",
+	"articlefeedbackv5-short-status-unnoaction": "{{GENDER:$1|Yfirfarið af $1}}",
+	"articlefeedbackv5-short-status-uninappropriate": "{{GENDER:$1|Yfirfarið af $1}}",
+	"articlefeedbackv5-short-status-unhide": "{{GENDER:$1|Yfirfarið af $1}}",
+	"articlefeedbackv5-short-status-unarchive": "{{GENDER:$1|Yfirfarið af $1}}",
+	"articlefeedbackv5-short-status-undo-helpful": "{{GENDER:$1|Yfirfarið af $1}}",
+	"articlefeedbackv5-short-status-undo-unhelpful": "{{GENDER:$1|Yfirfarið af $1}}",
+	"articlefeedbackv5-bucket1-toggle-found-yes": "Já",
+	"articlefeedbackv5-bucket1-toggle-found-no": "Nei",
+	"articlefeedbackv5-bucket6-toggle-found-yes": "Já",
+	"articlefeedbackv5-bucket6-toggle-found-no": "Nei"
+}

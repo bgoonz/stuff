@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Elisardojm",
+			"Toliño"
+		]
+	},
+	"breadcrumbs-desc": "Engade un conxunto de ligazóns de navegación baixo a barra de lapelas",
+	"prefs-breadcrumbs-separator": "Separador das ligazóns de navegación",
+	"prefs-breadcrumbs-separator-max": "Pode inserir un máximo de 2 caracteres.",
+	"prefs-breadcrumbs": "Ligazóns de navegación",
+	"prefs-breadcrumbs-showcrumbs": "Amosar as ligazóns de navegación",
+	"prefs-breadcrumbs-numberofcrumbs": "Número de ligazóns de navegación",
+	"prefs-breadcrumbs-numberofcrumbs-max": "Pódese amosar un máximo de 20 ligazóns de navegación.",
+	"prefs-breadcrumbs-namespaces": "Incluír os espazos de nomes nas ligazóns de navegación",
+	"prefs-breadcrumbs-filter-duplicates": "Excluír as páxinas visitadas a miúdo",
+	"prefs-breadcrumbs-preceding-text": "Texto a amosar antes da Guía de navegación",
+	"prefs-breadcrumbs-preceding-text-max": "Pode inserir un máximo de 30 caracteres."
+}

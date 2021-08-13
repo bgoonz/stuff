@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ерней",
+			"Ильнар"
+		]
+	},
+	"admanager": "Реклама идарәчесе",
+	"admanager_labelPage": "Бит исемнәре",
+	"admanager_labelCategory": "Төркем исемнәре",
+	"admanager_submit": "Җибәрү",
+	"admanager_Page": "Битләр",
+	"admanager_Category": "Төркемнәр",
+	"admanager_added": "Үзгәрешләрегез сакланды.",
+	"admanager_zonenum": "Зона № $1",
+	"admanager_zonenotnumber": "Хата! $1 — сан түгел.",
+	"admanager_return": "[[Special:AdManager|Реклама идарәчесенә]] кире кайту"
+}

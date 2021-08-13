@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Matěj Grabovský"
+		]
+	},
+	"absenteelandlord-reason": "Databáze byla automaticky zamknuta z důvodu neaktivity správců.",
+	"absenteelandlord-desc": "Automaticky zamyká wiki databázi, pokud jsou všichni správci po určitou dobu neaktivní"
+}

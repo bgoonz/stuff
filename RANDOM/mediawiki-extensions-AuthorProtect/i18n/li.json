@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ooswesthoesbes",
+			"Pahles"
+		]
+	},
+	"authorprotect": "Pagina beveilige veur neet-auteurs",
+	"authorprotect-desc": "Sjteit de auteur van 'n pagina toe um deze te beveilige veur ander gebroekers",
+	"authorprotect-notauthor": "{{GENDER:$1|Doe}} bös neet de {{GENDER:$1|sjriever}} van dees pagina.",
+	"authorprotect-confirm": "Beveiligingsniveau verangere",
+	"authorprotect-edit": "Elein bewirke door auteurs",
+	"authorprotect-move": "Elein hernoeme door auteurs",
+	"authorprotect-intro": "Gebroek dit formuleer om de pagina veur neet-auteurs te beveilige",
+	"authorprotect-success": "Beveiliging ingesjtèld!",
+	"protect-level-author": "Beveilige veur neet-auteurs",
+	"restriction-level-author": "Elein te bewirke door auteurs",
+	"action-authorprotect": "beveilig taenge neet-sjrievers",
+	"right-authorprotect": "Beveilig zèlfbewèrkdje ziej",
+	"right-author": "Bewirk pagina's die allein door outäörs te bewirke zeen"
+}

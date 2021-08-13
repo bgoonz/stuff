@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Candalua",
+			"Conky77",
+			"Vajotwo"
+		]
+	},
+	"adminlinks": "Paneło admin",
+	"adminlinks_documentation": "$1 documentasion",
+	"adminlinks_general": "Xenerałe",
+	"adminlinks_editsidebar": "Modifega sidebar",
+	"adminlinks_editcss": "Modifega file CSS",
+	"adminlinks_editmainpagename": "Modifega el nome de ƚa pàgina prinsipaƚe",
+	"adminlinks_users": "Utenti",
+	"adminlinks_browsesearch": "Visuałisa e riserca",
+	"adminlinks_importexport": "Inporta ed esporta",
+	"right-adminlinks": "Vede el cołegamento al [[Special:AdminLinks|Paneło Admin]]"
+}

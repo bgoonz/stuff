@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrisportelli",
+			"Macofe"
+		]
+	},
+	"batchuserrights": "Drittijiet tal-utent għal ħafna",
+	"batchuserrights-desc": "Tħalli ż-żieda ta' wieħed jew iktar utenti fi grupp wieħed jew iktar b'azzjoni waħda",
+	"batchuserrights-names": "Ismijiet tal-utenti xi żżid ma' dan il-grupp (wieħed f'kull linja):",
+	"batchuserrights-intro": "Din il-paġna tippermettilek li żżid grupp lil diversi utenti f'daqqa.\nGħal raġunijiet ta' sigurtà, il-lista ta' gruppi li jistgħu jiġu miżjuda tinsab fil-konfigurazzjoni tal-estensjoni u ma tistax tinbidel fi ħdan il-wiki.\nJekk jogħġbok staqsi amministratur tas-sistema jekk għandek bżonn iż-żieda bil-lott ta' gruppi oħra.",
+	"batchuserrights-single-progress-update": "{{PLURAL:$1|Grupp miżjud|Gruppi miżjuda}} f'<strong>$2</strong>.",
+	"batchuserrights-add-groups": "{{PLURAL:$1|Utent wieħed miżjud|$1 utenti miżjuda}} fil-{{PLURAL:$2|grupp|gruppi}}: <strong>$3</strong>.",
+	"batchuserrights-userload-error": "L-utent '''$1''' ma setax jiġi miżjud.",
+	"batchuserrights-no-groups": "Int m'għażilt l-ebda grupp.\nDan mhu se jagħmel xejn.\nIl-kumplament tal-paġna se tkompli tiġi esegwita sabiex tkun tista' tara jekk kwalunkwe wieħed mill-ismijiet tal-utent ma jistgħux jiġu mtella'.",
+	"right-batchuserrights": "Iżid wieħed jew iktar utenti fi grupp wieħed jew iktar b'azzjoni waħda"
+}

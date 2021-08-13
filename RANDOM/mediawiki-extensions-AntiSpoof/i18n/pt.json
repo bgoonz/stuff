@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Brunoy Anastasiya Seryozhenko",
+			"Hamilton Abreu",
+			"Malafaya",
+			"Rhaijin",
+			"Umherirrender",
+			"Vitorvicentevalente"
+		]
+	},
+	"antispoof-desc": "Impede a criação de contas cujo nome de utilizador contenha misturas de alfabetos, ou seja confundível ou semelhante a outros existentes",
+	"antispoof-conflict-top": "O nome \"$1\" é demasiado semelhante {{PLURAL:$2|ao seguinte nome de utilizador|aos seguintes nomes de utilizador}}:",
+	"antispoof-conflict-bottom": "Escolha outro nome de utilizador, por favor.",
+	"antispoof-name-illegal": "O nome de utilizador \"$1\" não é permitido para evitar confusões ou enganos: $2.\nEscolha outro nome, por favor.",
+	"antispoof-badtype": "Formato de dados incorreto",
+	"antispoof-empty": "Linha vazia",
+	"antispoof-prohibited": "Contém o carácter proibido $1",
+	"antispoof-combining": "Começa com o carácter de combinação $1",
+	"antispoof-unassigned": "Contém o carácter proibido $1",
+	"antispoof-deprecated": "Contém o carácter não suportado $1",
+	"antispoof-noletters": "Não contém letras",
+	"antispoof-mixedscripts": "Contém uma mistura de alfabetos incompatíveis",
+	"antispoof-tooshort": "Nome canónico demasiado curto",
+	"antispoof-ignore": "Ignorar as verificações de semelhança de nomes (''spoofing'')",
+	"antispoof-ignore-help": "Permite que os utilizadores com os privilégios necessários criem uma conta com nome seja semelhante ao de outra conta existente.",
+	"action-override-antispoof": "contornar as verificações de semelhança de nomes (''spoofing'')",
+	"right-override-antispoof": "Contornar as verificações de semelhança de nomes (''spoofing'')"
+}

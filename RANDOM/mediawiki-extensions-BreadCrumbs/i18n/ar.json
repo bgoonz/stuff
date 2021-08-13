@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"ديفيد"
+		]
+	},
+	"breadcrumbs-desc": "يعرض مسار المستخدمين خلال الويكي",
+	"prefs-breadcrumbs-separator": "فاصل فتات الخبز",
+	"prefs-breadcrumbs-separator-max": "قد يتم إدخال حرفين بحد أقصى.",
+	"prefs-breadcrumbs": "فتات الخبز",
+	"prefs-breadcrumbs-showcrumbs": "عرض فتات الخبز",
+	"prefs-breadcrumbs-numberofcrumbs": "عدد فتات الخبز",
+	"prefs-breadcrumbs-numberofcrumbs-max": "يمكن عرض 20 فتات خبز كحد أقصى.",
+	"prefs-breadcrumbs-namespaces": "تضمين النطاقات في فتات الخبز",
+	"prefs-breadcrumbs-filter-duplicates": "تصفية الصفحات التي تمت زيارتها بشكل متكرر",
+	"prefs-breadcrumbs-preceding-text": "النص الذي يظهر أمام فتات الخبز",
+	"prefs-breadcrumbs-preceding-text-max": "قد يتم إدخال 30 حرفا كحد أقصى."
+}

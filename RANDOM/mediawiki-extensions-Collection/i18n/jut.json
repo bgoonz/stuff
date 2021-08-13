@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jyllanj"
+		]
+	},
+	"coll-remove": "Fjän",
+	"coll-show": "Wis",
+	"coll-move_up": "Flytt op",
+	"coll-move_down": "Flytt nier",
+	"coll-print_export": "Utskriiw/eksportiir",
+	"coll-create_a_book": "Law en bueg",
+	"coll-book_creator": "Buegwärktyeslinjen",
+	"coll-download_as": "Lägg nier som $1",
+	"coll-disable": "slo fra",
+	"coll-book_creator_disable": "Slo buegwärktyeslinjen fra",
+	"coll-book_creator_disable_tooltip": "Stopp brugi å buegwärktyeslinjen",
+	"coll-add_this_page": "Tilfye siden til den bueg",
+	"coll-add_page_tooltip": "Tilfye den nuwærenje wikisiid te din bueg",
+	"coll-help": "Hjälp",
+	"coll-help_tooltip": "Få hjälp te å law byeg",
+	"coll-helppage": "Help:Byeg",
+	"coll-n_pages": "$1 {{PLURAL:$1|siid|side}}",
+	"coll-remove_this_page": "Fjän siden fra din bueg",
+	"coll-show_collection": "Wis bueg",
+	"coll-show_collection_tooltip": "Klikk for å redigiir, lägg nier elle bestell din bueg",
+	"coll-make_suggestions": "Forsloe side",
+	"coll-make_suggestions_tooltip": "Wis forslaw basiirtj på sider i din bueg",
+	"coll-attribution-anons": "Anonym: $1",
+	"coll-article-attribution": "<b>$1</b> <i>Tjelj:</i> $2 <i>Bidrawya:</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>Tjelj:</i> $2 <i>Licens:</i> $3 <i>Bidrawya:</i> $4 <i>Original kunstne:</i> $5"
+}

@@ -1,0 +1,28 @@
+{
+	"name": "Category Tests",
+	"version": "1.7.0",
+	"author": "Ryan Schmidt",
+	"license-name": "GPL-2.0-or-later",
+	"url": "https://www.mediawiki.org/wiki/Extension:CategoryTests",
+	"descriptionmsg": "categorytests-desc",
+	"type": "parserhook",
+	"requires": {
+		"MediaWiki": ">= 1.32.0"
+	},
+	"MessagesDirs": {
+		"CategoryTests": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"CategoryTestsMagic": "CategoryTests.i18n.magic.php"
+	},
+	"AutoloadClasses": {
+		"ExtCategoryTests": "ExtCategoryTests.php",
+		"ExtCategoryTestsHooks": "ExtCategoryTestsHooks.php"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "ExtCategoryTestsHooks::onParserFirstCallInit"
+	},
+	"manifest_version": 1
+}

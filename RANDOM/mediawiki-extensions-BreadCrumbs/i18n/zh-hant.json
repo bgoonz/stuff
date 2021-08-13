@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gaoxuewei",
+			"Kevinhksouth"
+		]
+	},
+	"breadcrumbs-desc": "顯示使用者在這個網站的軌跡。",
+	"prefs-breadcrumbs-separator": "麵包糠分離器",
+	"prefs-breadcrumbs-separator-max": "只能輸入最多2個字元。",
+	"prefs-breadcrumbs": "麵包糠",
+	"prefs-breadcrumbs-showcrumbs": "顯示麵包糠",
+	"prefs-breadcrumbs-numberofcrumbs": "麵包糠的數量",
+	"prefs-breadcrumbs-numberofcrumbs-max": "只能顯示最多20個麵包糠。",
+	"prefs-breadcrumbs-namespaces": "在麵包糠中包含命名空間",
+	"prefs-breadcrumbs-filter-duplicates": "篩選出多次訪問過的頁面",
+	"prefs-breadcrumbs-preceding-text": "在麵包糠之前顯示文字",
+	"prefs-breadcrumbs-preceding-text-max": "只能輸入最多30個字元。"
+}

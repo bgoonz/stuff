@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kaszeba"
+		]
+	},
+	"adminlinks": "Lënczi dlô sprôwników",
+	"adminlinks-desc": "Dodôwô [[Special:AdminLinks|szpecjalną starnã]] z pòmòcnyma lënkama dlô sprôwników.",
+	"adminlinks_documentation": "Dokùmentacëjô $1",
+	"adminlinks_general": "Òglowé",
+	"adminlinks_editsidebar": "Editëjë bòczną lëstwã",
+	"adminlinks_editcss": "Editëjë lopk CSS",
+	"adminlinks_editmainpagename": "Editëjë miono przédny starnë",
+	"adminlinks_users": "Brëkòwnicë",
+	"adminlinks_browsesearch": "Przezéranié ë szëkba",
+	"adminlinks_importexport": "Jimpòrt ë ekspòrt",
+	"adminlinks_pagenotfound": "Nie dało sã nalezc szpecjalny starnë z mionã: $1.",
+	"right-adminlinks": "Ùżëwôj [[Special:AdminLinks|Lënczi dlô sprôwników]]"
+}

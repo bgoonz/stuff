@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"autoproxyblock-desc": "Gjør det mulig å blokkere åpne proxyer fra å utføre handlinger på wikien",
+	"proxy-blocked": "{{GENDER:|Din}} IP-adresse er listet som en proxy, handlingen ble avbrutt.",
+	"abusefilter-edit-builder-vars-is-proxy": "True om denne handlingen ble gjort via en proxy",
+	"tag-proxy": "handling via proxy",
+	"action-proxyunbannable": "omgå automatisk blokkering av proxyer",
+	"right-proxyunbannable": "Kan redigere fra blokkerte proxyer",
+	"action-notagproxychanges": "beskytte mot tagging av redigeringer via proxyer som «proxy»",
+	"right-notagproxychanges": "Beskytt fra å tagge redigeringer via proxyer som «proxy»",
+	"action-autoproxyblock-log": "vis loggen for AutoProxyBlock",
+	"right-autoproxyblock-log": "Beskytte fra å tagge redigeringer via proxyer som «proxy»",
+	"proxyblock-log-name": "AutoProxyBlock-logg",
+	"proxyblock-log-header": "Liste over automatisk blokkerte endringer via proxyer",
+	"proxyblock-logentry-blocked": "handlingen «$2» av {{GENDER:$3|$3}} på siden [[$1]] ble automatisk blokkert."
+}

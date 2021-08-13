@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eduardo.mps"
+		]
+	},
+	"commentbox-desc": "Adiciona uma caixa de comentários a certas páginas",
+	"commentbox-intro": "== Adicione um comentário... ==\nVocê tem um comentário sobre esta página? Adicione-o aqui ou <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} edite a página diretamente]</span>.",
+	"commentbox-savebutton": "Salvar comentário",
+	"commentbox-name": "Nome:",
+	"commentbox-name-explanation": "<small>(Dica: Se você se [[Special:UserLogin|autenticar]], você não terá que preencher seu nome aqui manualmente)</small>",
+	"commentbox-log": "Novos comentários",
+	"commentbox-first-comment-heading": "== Comentários ==",
+	"commentbox-regex": "/\\n==\\s*Commentários\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Erro ao criar comentário",
+	"commentbox-error-page-nonexistent": "Esta página não existe!",
+	"commentbox-error-namespace": "Comentários não são permitidos neste domínio!",
+	"commentbox-error-empty-comment": "Comentários vazios não são permitidos!"
+}

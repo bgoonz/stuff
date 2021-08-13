@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"01miki10",
+			"Beluga",
+			"Crt",
+			"Macofe",
+			"Nedergard",
+			"Stryn",
+			"Valtlait",
+			"VezonThunder"
+		]
+	},
+	"admanager": "Mainoshallinta",
+	"admanagerzones": "Mainoshallinnan alueet",
+	"admanager-desc": "Sisältää [[Special:AdManager|toimintosivun]], jolla ylläpitäjät voivat asettaa mainosalueet sivuille tai luokille",
+	"admanager_docu": "Voit lisätä tai poistaa sivun tai kokonaisen luokan mainosalueen lisäämällä tai poistamalla sivun tai luokan otsikon alla.",
+	"admanagerzones_docu": "Kirjoita kunkin mainosalueen numero omalle rivilleen.",
+	"admanager_invalidtargetpage": "Sivua otsikolla ”$1” ei löytynyt.",
+	"admanager_invalidtargetcategory": "Luokkaa otsikolla ”$1” ei löytynyt.",
+	"admanager_notable": "Virhe! Vaadittua tietokantataulukkoa ei löytynyt! Suorita update.php ensin.",
+	"admanager_noAdManagerZones": "Virhe! Sinun tulee lisätä mainosalueita. Lisää ne sivulla [[Special:AdManagerZones|Mainoshallinnan alueet]].",
+	"admanager_labelPage": "Sivujen nimet",
+	"admanager_labelCategory": "Luokkien nimet",
+	"admanager_submit": "Lähetä",
+	"admanager_noads": "Ei mainoksia",
+	"admanager_Page": "Sivut",
+	"admanager_Category": "Luokat",
+	"admanager_added": "Muutoksesi on tallennettu",
+	"admanager_addedzone": "Lisätty vyöhyke $1.",
+	"admanager_removedzone": "Poistettu alue $1.",
+	"admanager_nozonesadded": "Alueita ei lisätty.",
+	"admanager_nozonesremoved": "Alueita ei poistettu.",
+	"admanager_zonenum": "Vyöhyke #: $1",
+	"admanager_zonenotnumber": "Virhe! $1 ei ole numero.",
+	"admanager_return": "Palaa sivulle [[Special:AdManager|Mainoshallinta]]",
+	"admanager_gotoads": "[[Special:AdManager|Muokkaa mainosten sijaintia]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Muokkaa mainosalueita]]",
+	"action-admanager": "hallinnoida mainonta-asetuksia",
+	"right-admanager": "[[Special:AdManager|Hallinnoida mainonta-asetuksia]]"
+}

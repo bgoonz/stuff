@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"autoproxyblock-desc": "Permette de bloccà le proxy apirte da eseguì aziune sus a uicchi",
+	"proxy-blocked": "L'indirizze IP {{GENDER:|tune}} ste elengate cumme proxy, azione eseguite annullate.",
+	"abusefilter-edit-builder-vars-is-proxy": "Vere ce st'azione ha state fatte ausanne 'nu proxy",
+	"tag-proxy": "azione ausanne proxy",
+	"action-proxyunbannable": "Zumbe automaticamende le blocche de le proxy",
+	"right-proxyunbannable": "Zumbe automaticamende le condrolle d'u proxy",
+	"action-notagproxychanges": "prutegge da signà le cangiaminde ausanne le proxy cumme \"proxy\"",
+	"right-notagproxychanges": "Prutegge da signà le cangiaminde ausanne le proxy cumme \"proxy\"",
+	"action-autoproxyblock-log": "'ndruche l'archivije AutoProxyBlock",
+	"right-autoproxyblock-log": "'Ndruche l'archivije de le cangiaminde bloccate automaticamende fatte ausanne le proxy",
+	"proxyblock-log-name": "Archivije AutoProxyBlock",
+	"proxyblock-log-header": "Elenghe de le cangiaminde bloccate automaticamende fatte ausanne le proxy",
+	"proxyblock-logentry-blocked": "azione \"$2\" fatte {{GENDER:$3|da l'utende}} $3 sus 'a pàgene [[$1]] bloccate automaticamende."
+}

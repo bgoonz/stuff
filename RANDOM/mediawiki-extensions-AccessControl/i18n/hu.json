@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dj",
+			"Wolf Rex"
+		]
+	},
+	"accesscontrol-desc": "Lehetőséget ad arra, bizonyos lapokat csak adott felhasználók érhessenek el.",
+	"accesscontrol-info": "Ez egy védett lap.",
+	"accesscontrol-info-box": "Hozzáférési korlátozás lett bevezetve erre a lapra. Ha ezt az üzenetet látod, nincs hozzáférésed a laphoz."
+}

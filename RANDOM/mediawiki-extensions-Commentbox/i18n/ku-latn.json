@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"George Animal"
+		]
+	},
+	"commentbox-savebutton": "Şîroveyê tomar bike",
+	"commentbox-name": "Nav:",
+	"commentbox-log": "Şîroveyên nû",
+	"commentbox-first-comment-heading": "== Şîrove ==",
+	"commentbox-regex": "/\\n==\\s*Şîrove\\s*==\\s*\\n/i",
+	"commentbox-error-page-nonexistent": "Ev rûpel tune ye!"
+}

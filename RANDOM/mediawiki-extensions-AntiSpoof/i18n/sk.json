@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Helix84",
+			"TomášPolonec",
+			"Vlad5250"
+		]
+	},
+	"antispoof-desc": "Blokuje tvorbu účtov so zmiešanými písmami, mätúce a podobné mená.",
+	"antispoof-conflict-top": "Meno „$1” je príliš podobné {{PLURAL:$2|nasledovnému účtu|nasledovným účtom}}:",
+	"antispoof-conflict-bottom": "Prosím, vyberte si iné meno.",
+	"antispoof-name-illegal": "Meno „$1“ nie je povolené, aby sa zabránilo náhodnému alebo zámernému pomýleniu mien používateľov: $2. Zvoľte si prosím iné meno.",
+	"antispoof-badtype": "Nesprávny typ dát",
+	"antispoof-empty": "Prázdny reťazec",
+	"antispoof-prohibited": "Obsahuje znak zo zoznamu zakázaných $1",
+	"antispoof-combining": "Začína kombinačným znakom $1",
+	"antispoof-unassigned": "Obsahuje nepriradený znak $1",
+	"antispoof-deprecated": "Obsahuje zavrhovaný znak $1",
+	"antispoof-noletters": "Neobsahuje žiadne písmená",
+	"antispoof-mixedscripts": "Obsahuje nekompatibilné zmiešané písma",
+	"antispoof-tooshort": "Meno prevedené do kanonického tvaru je príliš krátke",
+	"antispoof-ignore": "Ignorovať kontroly klamania",
+	"antispoof-ignore-help": "Povolí používateľom s dostatočnými oprávneniami vytvoriť účet, aj keď je jeho názov podobný názvu už jestvujúceho účtu.",
+	"action-override-antispoof": "prekonať kontroly klamania",
+	"right-override-antispoof": "Prekonať kontroly klamania"
+}

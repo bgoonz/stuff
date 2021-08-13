@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"John Reid"
+		]
+	},
+	"apihelp-antispoof-description": "Check ae uisername again AntiSpoof's normalisation checks.",
+	"apihelp-antispoof-param-username": "The uisername tae check again AntiSpoof.",
+	"apihelp-antispoof-example-1": "Check uisername \"Foo\" again AntiSpoof"
+}

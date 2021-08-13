@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"बिप्लब आनन्द"
+		]
+	},
+	"antispoof-conflict-bottom": "कृपया कोनो आन नाम चुनु।",
+	"antispoof-name-illegal": "भ्रामक नाम सभ के रोकए के लेल नाम \"$1\" राखए लेल अवैध अछि: $2\nकृपया कोनो आन नाम चुनल जाए।",
+	"antispoof-badtype": "खराब डाटा प्रकार",
+	"antispoof-empty": "खाली स्ट्रिंग",
+	"antispoof-prohibited": "ऐ मे बिरोधसूची क्यारेक्टर $1 अछि",
+	"antispoof-combining": "एकत्रिकरण चिन्ह $1 स सुरु होएत अछि",
+	"antispoof-unassigned": "ऐ मे बिरोधसूची क्यारेक्टर $1 अछि",
+	"antispoof-deprecated": "ऐ मे बिरोधसूची क्यारेक्टर $1 अछि",
+	"antispoof-noletters": "ए मे कोनो अक्षर नै अछि",
+	"antispoof-mixedscripts": "एहिमे असङ्गत मिश्र लिपिसभ अछि",
+	"antispoof-tooshort": "अधिकारयुक्त नाम बहुत छोट अछि",
+	"antispoof-ignore": "स्पूफिंग जाँच नै मानू",
+	"right-override-antispoof": "स्पूफिंग जाँच के नै मानू"
+}

@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Tarawneh",
+			"ديفيد"
+		]
+	},
+	"biblioplus-desc": "يسترد تلقائيا الاستشهادات من ببميد وقاعدة بيانات ردمك",
+	"biblioplus-doi-tooltip": "عرض أو شراء المادة من الناشر",
+	"biblioplus-pmid-tooltip": "عرض أو شراء المادة من الناشر (إذا كانت متوفرة)",
+	"biblioplus-isbn-tooltip": "معلومات الكتاب ضمن isbndb.org",
+	"biblioplus-medline-abstracts": "جميع ملخصات مدلاين:",
+	"biblioplus-pubmed-abstracts": "جميع الملخصات في ببميد",
+	"biblioplus-hubmed-abstracts": "جميع الملخصات في هوبميد",
+	"biblioplus-vkey-title": "وصلة لقاعدة بيانات ببليوغرافية"
+}

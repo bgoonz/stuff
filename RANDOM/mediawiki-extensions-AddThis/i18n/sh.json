@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"OC Ripper"
+		]
+	},
+	"addthis": "Podijelite",
+	"addthis-desc": "Dodaje [http://www.addthis.com widget AddThis] na bočni stupac i prikazuje toolbar na zaglavlju stranicu koji se može reproducirati svuda preko ubacivanja <nowiki><addthis /></nowiki> taga"
+}

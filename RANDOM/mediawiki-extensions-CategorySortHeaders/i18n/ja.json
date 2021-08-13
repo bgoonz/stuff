@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Shirayuki"
+		]
+	},
+	"categorysortheaders-desc": "カテゴリに属するページを列挙してヘッダーを並べ替える際に、カスタム複数文字「先頭文字」を指定できるようにする。指定には <nowiki>[[category:Foo|^ヘッダー^ソートキーの不可視部分]]</nowiki> のような構文を使用する。"
+}

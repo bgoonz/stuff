@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX /*i*/poll_id_actor ON /*_*/ajaxpoll_vote (poll_id, poll_actor);

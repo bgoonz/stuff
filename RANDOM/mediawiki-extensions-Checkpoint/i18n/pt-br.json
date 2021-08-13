@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Giro720",
+			"Luckas",
+			"Luckas Blade"
+		]
+	},
+	"checkpoint": "Salvar e continuar editando",
+	"checkpoint-desc": "Permite gravar uma edição e continuar a editar",
+	"checkpoint-tooltip": "Gravar seu progresso e seguir editando a página",
+	"checkpoint-notice": "([[{{ns:project}}:Checkpoint|gravação do estado presente]])"
+}

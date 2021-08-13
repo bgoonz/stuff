@@ -1,0 +1,16 @@
+section.canvas-node.viewport-node.graph-node
+    section.meta.fg
+    section.chart
+        svg(pointer-events='all', data-bind='attr: { width:frameWidth, height:frameHeight }')
+            defs
+                clipPath(data-bind='attr: { id:"clip-"+graphId }')
+                    rect(data-bind='attr: { width: clipWidth, height:clipHeight }')
+                g.metricDefs
+            g.margin-frame(data-bind='attr: { transform:"translate("+margin.left+","+margin.top+")" }')
+                g.frame
+                    g.content-frame(data-bind='attr: { "clip-path":"url(#clip-"+graphId+")" }')
+                        g.bg
+                            rect.bgcolor(data-bind='attr: { width: clipWidth, height:clipHeight }')
+                        g.viewport
+                    g.fg
+    section.meta.bg

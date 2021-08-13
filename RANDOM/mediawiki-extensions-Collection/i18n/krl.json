@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Flrn",
+			"Ilja.mos",
+			"Likopiän tyttö",
+			"Mashoi7",
+			"Varvana"
+		]
+	},
+	"coll-remove": "Poista",
+	"coll-show": "Näytä",
+	"coll-move_up": "Šiirrä ylähäkši",
+	"coll-move_down": "Šiirrä alahakši",
+	"coll-cancel": "Keskevytä",
+	"coll-print_export": "Tulošta/vie",
+	"coll-create_a_book": "Luo kirja",
+	"coll-book_creator": "Kirjan luontatila",
+	"coll-download_as": "Pane talteh $1:nä",
+	"coll-disable": "poista käytöštä",
+	"coll-book_creator_disable": "Poista kirjan luontatila käytöštä",
+	"coll-book_creator_disable_tooltip": "Lopeta kirjan luontatilan käyttö",
+	"coll-add_this_page": "Lisyä tämä šivu šiun kirjah",
+	"coll-add_page_tooltip": "Lisyä nykyni wiki-šivu šiun kirjah",
+	"coll-help": "Apu",
+	"coll-help_tooltip": "Näytä ohje kirjojen luonnašta",
+	"coll-helppage": "Help:Kirjat",
+	"coll-n_pages": "$1 {{PLURAL:$1|šivu|šivuo}}",
+	"coll-remove_this_page": "Poista tämä šivu šiun kirjaštaš",
+	"coll-show_collection": "Näytä kirja",
+	"coll-show_collection_tooltip": "Klikkua, jotta korjata/lat't'ata/tilata šiun kirja",
+	"coll-make_suggestions": "Ehotetut šivut",
+	"coll-make_suggestions_tooltip": "Näytä ehotukšet, kumpaset peruššutah kirjan šivuloih",
+	"coll-attribution-anons": "Anoniimi: $1",
+	"coll-article-attribution": "<b>$1</b> <i>Lähteh:</i> $2 <i>Kirjuttajat:</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>Lähteh:</i> $2 <i>Lisenssi:</i> $3 <i>Kirjuttajat:</i> $4 <i>Alkuperäni esittäjä:</i> $5"
+}

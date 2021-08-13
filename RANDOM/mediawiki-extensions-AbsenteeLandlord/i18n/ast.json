@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Esbardu",
+			"Xuacu"
+		]
+	},
+	"absenteelandlord-reason": "La base de datos bloquióse automáticamente por inactividá de los alministradores.",
+	"absenteelandlord-desc": "Bloquia automáticamente la base de datos wiki si los alministradores tán toos inactivos dalgún tiempu"
+}

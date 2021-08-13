@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"BaRaN6161 TURK",
+			"Vito Genovese"
+		]
+	},
+	"adminlinks": "Yönetici bağlantıları",
+	"adminlinks-desc": "Yöneticiler için yararlı bağlantıları bulunduran bir [[Special:AdminLinks|özel sayfa]] ekler",
+	"adminlinks_documentation": "$1 belgeleme",
+	"adminlinks_general": "Genel",
+	"adminlinks_editsidebar": "Kenar çubuğunu düzenle",
+	"adminlinks_editcss": "CSS dosyasını düzenle",
+	"adminlinks_editmainpagename": "Ana sayfanın adını düzenle",
+	"adminlinks_users": "Kullanıcılar",
+	"adminlinks_browsesearch": "Göz at ve ara",
+	"adminlinks_importexport": "İçe ve dışa aktar",
+	"adminlinks_pagenotfound": "Özel sayfa adı bulunamadı: $1.",
+	"action-adminlinks": "yönetici bağlantılarına bakın",
+	"right-adminlinks": "[[Special:AdminLinks|Yönetici bağlantılarına]] giden bağlantıya bakın"
+}

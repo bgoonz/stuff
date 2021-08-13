@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lokal Profil"
+		]
+	},
+	"categorysortheaders-desc": "Gör det möjligt att ange egna 'första-tecken'-sorteringsrubriker med flera tecken för att lista sidor under i kategorier, med syntax som <nowiki>[[category:Foo|^Rubrik^Osynlig del av sorteringsnyckeln]]</nowiki>"
+}

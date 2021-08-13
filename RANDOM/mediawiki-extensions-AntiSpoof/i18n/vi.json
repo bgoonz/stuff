@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Minh Nguyen",
+			"Quenhitran",
+			"Vinhtantran"
+		]
+	},
+	"antispoof-desc": "Cấm không được mở tài khoản dưới tên người dùng sử dụng hơn một hệ thống chữ viết, gây nhầm lẫn, và tương tự với tên người dùng khác",
+	"antispoof-conflict-top": "Tên người dùng “$1” quá giống {{PLURAL:$2|tên|các tên}} người dùng sau:",
+	"antispoof-conflict-bottom": "Xin hãy chọn tên người dùng khác.",
+	"antispoof-name-illegal": "Không được phép dùng tên người dùng “$1” vì có thể gây nhầm lẫn hoặc lừa đảo: $2. Xin hãy chọn tên người dùng khác.",
+	"antispoof-bad-char": "“$1” ($2)",
+	"antispoof-badtype": "Kiểu dữ liệu không hợp lệ",
+	"antispoof-empty": "Chuỗi trống",
+	"antispoof-prohibited": "Có chứa ký tự bị cấm $1",
+	"antispoof-combining": "Bắt đầu bằng dấu kết hợp $1",
+	"antispoof-unassigned": "Có chứa ký tự chưa gán hoặc ký tự bị phản đối",
+	"antispoof-deprecated": "Có chứa ký tự bị phản đối $1",
+	"antispoof-noletters": "Không có bất kỳ chữ nào",
+	"antispoof-mixedscripts": "Có trộn lẫn hệ thống viết không tương thích",
+	"antispoof-tooshort": "Tên chuẩn hóa quá ngắn",
+	"antispoof-ignore": "Không kiểm tra tên có gây nhầm lẫn",
+	"antispoof-ignore-help": "Cho phép những người dùng có đủ quyền tạo tài khoản có tên tương tự với một tài khoản đã tồn tại.",
+	"right-override-antispoof": "Bỏ qua kiểm tra tên"
+}

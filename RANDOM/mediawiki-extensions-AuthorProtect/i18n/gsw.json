@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Als-Chlämens",
+			"Als-Holder"
+		]
+	},
+	"authorprotect": "Sytebearbeitig uf Autore bschränke",
+	"authorprotect-desc": "Macht s megli d Sytebearbeitig uf dr Autor z bschränken",
+	"authorprotect-notauthor": "Du bisch nit dr Autor vu däre Syte",
+	"authorprotect-confirm": "Schutzebeni ändere",
+	"authorprotect-edit": "Bearbeitig uf Autore bschränke",
+	"authorprotect-move": "Verschiebig uf Autore bschränke",
+	"authorprotect-intro": "Mit däm Formular chasch d Sytebearbeitig uf Autore bschränke.",
+	"authorprotect-success": "Syte isch gschitzt wore!",
+	"protect-level-author": "Sytebearbeitig uf Autore bschränke",
+	"restriction-level-author": "Autor-gschitzt",
+	"right-authorprotect": "Autorisierti Syte schitze",
+	"right-author": "Syte bearbeite, wo uff de Autor beschränkt sin"
+}

@@ -1,0 +1,39 @@
+{
+	"@metadata": {
+		"authors": [
+			"Babanwalia"
+		]
+	},
+	"articlefeedbackv5-loading-tag": "ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...",
+	"articlefeedbackv5-bucket4-learn-to-edit": "ਸੋਧਣਾ ਸਿੱਖੋ",
+	"articlefeedbackv5-bucket4-form-submit": "ਇਹ ਸਫ਼ਾ ਸੋਧੋ",
+	"articlefeedbackv5-bucket4-noedit-title": "{{SITENAME}} ਨੂੰ ਸੁਧਾਰਣ ਵਿਚ ਮਦਦ ਕਰੋ",
+	"articlefeedbackv5-bucket4-noedit-teaser-line1": "ਇਹ ਵੈੱਬਸਾਈਟ ਤੁਹਾਡੇ ਵਰਗੇ ਲੋਕਾਂ ਵੱਲੋਂ ਬਣਾਈ ਗਈ ਹੈ।",
+	"articlefeedbackv5-bucket4-noedit-teaser-line2": "ਕੀ ਤੁਸੀਂ ਸਾਡੀ ਮਦਦ ਕਰ ਸਕਦੇ ਹੋ?",
+	"articlefeedbackv5-bucket4-noedit-form-submit": "ਹੋਰ ਜਾਣੋ",
+	"articlefeedbackv5-bucket6-title": "ਇਸ ਸਫ਼ੇ ਨੂੰ ਸੁਧਾਰਣ ਵਿਚ ਮਦਦ ਕਰੋ",
+	"articlefeedbackv5-bucket6-question-toggle": "ਕੀ ਤੁਹਾਨੂੰ ਉਹ ਮਿਲਿਆ ਜੋ ਤੁਸੀਂ ਲੱਭ ਰਹੇ ਸੀ?",
+	"articlefeedbackv5-bucket6-toggle-found-yes": "ਹਾਂ",
+	"articlefeedbackv5-bucket6-toggle-found-no": "ਨਹੀਂ",
+	"articlefeedbackv5-bucket6-toggle-found-yes-full": "ਹਾਂ, ਮੈਨੂੰ ਮਿਲ ਗਿਆ ਜੋ ਮੈਂ ਲੱਭ ਰਿਹਾ ਸੀ।",
+	"articlefeedbackv5-bucket6-toggle-found-no-full": "ਨਹੀਂ, ਮੈਂ ਜੋ ਲੱਭ ਰਿਹਾ ਸੀ ਮੈਨੂੰ ਨਹੀਂ ਮਿਲਿਆ।",
+	"articlefeedbackv5-bucket6-feedback-countdown": "{{PLURAL:$1|($1 ਅੱਖਰ ਬਾਕੀ)}}",
+	"articlefeedbackv5-bucket6-question-instructions-yes": "ਬਹੁਤ ਵਧੀਆ। ਸੁਧਾਰ ਲਈ ਕੋਈ ਸਲਾਹ?",
+	"articlefeedbackv5-bucket6-question-placeholder-yes": "ਆਪਣੀ ਸਲਾਹ ਇੱਥੇ ਲਿਖੋ (ਮਿਸਾਲ: \"ਇਸ ਸਫ਼ੇ ਵਿਚ ਤਸਵੀਰ ਲੋੜੀਂਦੀ ਹੈ\")",
+	"articlefeedbackv5-bucket6-question-instructions-no": "ਸਾਨੂੰ ਅਫ਼ਸੋਸ ਹੈ। ਸੁਧਾਰ ਲਈ ਕੋਈ ਸਲਾਹ?",
+	"articlefeedbackv5-bucket6-question-placeholder-no": "ਆਪਣੀ ਸਲਾਹ ਇੱਥੇ ਲਿਖੋ (ਮਿਸਾਲ: \"ਇਸ ਸਫ਼ੇ ਵਿਚ ਤਸਵੀਰ ਲੋੜੀਂਦੀ ਹੈ\")",
+	"articlefeedbackv5-bucket6-form-submit": "ਆਪਣੀ ਸੋਚ ਛਾਪੋ",
+	"articlefeedbackv5-bucket6-backlink-text": "ਕਦਮ ੧ ਵੱਲ ਵਾਪਸ",
+	"articlefeedbackv5-help-tooltip-title": "ਇਹ ਕੀ ਹੈ?",
+	"articlefeedbackv5-help-tooltip-linktext": "ਹੋਰ ਜਾਣੋ",
+	"articlefeedbackv5-sitesub-linktext": "ਇਹ ਸਫ਼ਾ ਸੁਧਾਰੋ",
+	"articlefeedbackv5-titlebar-linktext": "ਇਹ ਸਫ਼ਾ ਸੁਧਾਰਣ ਵਿਚ ਮਦਦ ਕਰੋ >>",
+	"articlefeedbackv5-fixedtab-linktext": "ਇਹ ਸਫ਼ਾ ਸੁਧਾਰੋ",
+	"articlefeedbackv5-bottomrighttab-linktext": "ਇਹ ਸਫ਼ਾ ਸੁਧਾਰੋ",
+	"articlefeedbackv5-section-linktext": "ਫ਼ੀਡਬੈਕ",
+	"articlefeedbackv5-toolbox-view": "ਫ਼ੀਡਬੈਕ ਵੇਖੋ",
+	"articlefeedbackv5-toolbox-add": "ਆਪਣੀ ਫ਼ੀਡਬੈਕ ਜੋੜੋ",
+	"articlefeedbackv5-toolbox-enable": "ਫ਼ੀਡਬੈਕ ਚਾਲੂ ਕਰੋ",
+	"articlefeedbackv5-activity-more": "ਹੋਰ ਕਾਰਵਾਈ ਵਿਖਾਓ",
+	"articlefeedbackv5-talk-view-feedback": "ਪਾਠਕ ਦੀ ਫ਼ੀਡਬੈਕ ਵੇਖੋ"
+}

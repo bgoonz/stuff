@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chinneeb"
+		]
+	},
+	"commentbox-first-comment-heading": "== Сэтгэгдлүүд ==",
+	"commentbox-regex": "/\\n==\\s*Сэтгэгдлүүдs*==\\s*\\n/i"
+}

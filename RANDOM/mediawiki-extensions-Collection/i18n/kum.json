@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Arsenekoumyk",
+			"ArslanX"
+		]
+	},
+	"coll-remove": "Тайдырмакъ",
+	"coll-show": "Гёрсетмек",
+	"coll-move_up": "Оьрге гёчюрмек",
+	"coll-move_down": "Тюпге гёчюрмек",
+	"coll-print_export": "Басмагъа/тышгъа чыгъарыву",
+	"coll-create_a_book": "Китап ясамакъ",
+	"coll-book_creator": "Китап язывчу",
+	"coll-download_as": "$1 форматда эндирмек",
+	"coll-disable": "сёндюрмек",
+	"coll-book_creator_disable": "Китап яратывчуну сёндюрмек",
+	"coll-book_creator_disable_tooltip": "Китап яратывчуну къоллавун токътат",
+	"coll-add_this_page": "Бу сагьифаны китабынга къошмакъ",
+	"coll-add_page_tooltip": "Бу вики сагьифаны китапгъа къошмакъ",
+	"coll-help": "Кёмек",
+	"coll-help_tooltip": "Китап яратывну гьакъында хабар бермек",
+	"coll-helppage": "Help:Китаплар",
+	"coll-n_pages": "$1 {{PLURAL:$1|сагьифа|сагьифалар}}",
+	"coll-remove_this_page": "Сени китабынгдан бу сагьифаны тайдырмакъ",
+	"coll-show_collection": "Китапны гёрсетмек",
+	"coll-show_collection_tooltip": "Тюзлемек/юклемек/тапшурмакъ учун бас",
+	"coll-make_suggestions": "Таклифли сагьифалар",
+	"coll-make_suggestions_tooltip": "Сени китабынгда энди бар сагьифаларына гёре таклифлер гёрсетмек",
+	"coll-attribution-anons": "Аноним: $1",
+	"coll-article-attribution": "<b>$1</b> <i>Чыкъма:</i> $2 <i>Ясавчулар:</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>Чыкъма:</i> $2 <i>Лисензия:</i> $3 <i>Ясавчулар:</i> $4 <i>Суратчы:</i> $5"
+}

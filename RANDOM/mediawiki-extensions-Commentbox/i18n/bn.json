@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aftabuzzaman",
+			"Wikitanvir",
+			"আফতাবুজ্জামান"
+		]
+	},
+	"commentbox-desc": "নির্দিষ্ট পাতায় একটি মন্তব্য বাক্স যোগ করুন",
+	"commentbox-intro": "== একটা মন্তব্য যোগ করুন... ==\nএই পৃষ্ঠায় আপনার একটি মন্তব্য আছে? এটি এখানে যোগ করুন বা <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} সরাসরি পাতাটি সম্পাদনা করুন]</span>।",
+	"commentbox-savebutton": "মন্তব্য সংরক্ষণ",
+	"commentbox-name": "নাম:",
+	"commentbox-name-explanation": "<small>(পরামর্শ: আপনি যদি [[Special:UserLogin|প্রবেশ করেন]], তাহলে আপনাকে এখানে আপনার নিজের নাম ম্যানুয়ালি পূরণ করতে হবে না)</small>",
+	"commentbox-log": "নতুন মন্তব্যসমূহ",
+	"commentbox-first-comment-heading": "== মন্তব্যসমূহ ==",
+	"commentbox-regex": "/\\n==\\s*মন্তব্য\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "মন্তব্য তৈরির সময় ত্রুটি দেখা দিয়েছে",
+	"commentbox-error-page-nonexistent": "এই পাতাটি নেই!",
+	"commentbox-error-namespace": "এই নামস্থানে কোনো মন্তব্য গ্রহণযোগ্য নয়!",
+	"commentbox-error-empty-comment": "খালি মন্তব্য গ্রহণযোগ্য নয়!"
+}

@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Demmy"
+		]
+	},
+	"antispoof-conflict-top": "Orúkọ ''$1'' jọ {{PLURAL:$2|àpamọ́ tó wà yìí|àwọn àpamọ́ $2 wọ̀nyí}} jù:",
+	"antispoof-conflict-bottom": "Ẹ jọ̀wọ́ ẹ yan orúkọ míràn.",
+	"antispoof-name-illegal": "Orúkọ ''$1'' kò ṣe é gbà ní àyè láti dínà ìdojúrú tàbí ìtànjẹ orúkọ oníṣe: $2.\nẸ jọ̀wọ́ ẹ yan orúkọ míràn.",
+	"antispoof-badtype": "Irú dátà burúkú",
+	"antispoof-noletters": "Kò ní lẹ́tà kankan nínú"
+}

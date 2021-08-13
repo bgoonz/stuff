@@ -1,0 +1,59 @@
+ko = require 'knockout'
+
+class exports.EditView
+    /**
+     * @constructor
+     * @param {View} view The view this object is watching and editing
+     */
+    (view) ->
+        @view = view
+        $(@view.el()).addClass 'edit'
+        
+        @editable = "edit-#{@__id__}"
+        @isEditable = ".#{@editable}"
+        @editing = "editing"
+        @isEditing = ".#{@editing}"
+        
+        @makeEditable()
+        @registerEvents()
+    
+    /**
+     * Declares what elements this editor will be watching for by adding a class unique among editors
+     * TODO: figure out how to not apply this class to subviews
+     */
+    makeEditable: ->
+        $('.editable', @view.el()).addClass @editable
+        $('.hide-during-edit').hide()
+        $('.show-during-edit').show()
+    
+    /**
+     * registers events in the scope of the view this is editing
+     */
+    registerEvents: ->
+        scope = @view.el()
+        self = this
+        $(scope).on 'click', @isEditable, (event) ->
+            # Preventing default here causes links to stop working
+            # This is the inteded behavior because we want to edit link text, but it might be disorienting
+            event.preventDefault()
+            event.stopPropagation()
+            el = this
+            
+            unless $(el).next().is self.isEditing
+                $(el).after $($(el).data('editor')).addClass(self.editing)
+                ko.applyBindings ko.dataFor(el), $(el).next()[0]
+            
+            $(el).hide()
+            $(el).next().show().focus()
+        
+        $(scope).on 'blur', @isEditing, (event) ->
+            event.stopPropagation()
+            el = this
+            
+            display = $(el).prev()
+            
+            $(el).hide()
+            display.show()
+    
+    save: ->
+        console.log 'saving', this

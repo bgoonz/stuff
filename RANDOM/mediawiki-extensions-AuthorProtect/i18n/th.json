@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aefgh39622"
+		]
+	},
+	"authorprotect": "ป้องกันหน้าจากผู้ที่ไม่ใช่ผู้เขียน",
+	"authorprotect-desc": "อนุญาตให้ผู้เขียนป้องกันหน้าไม่ให้ผู้ใช้อื่นแก้ไข",
+	"authorprotect-notauthor": "คุณไม่ใช่ผู้เขียนหน้านี้",
+	"authorprotect-confirm": "เปลี่ยนระดับการป้องกัน",
+	"authorprotect-edit": "จำกัดสิทธิ์การแก้ไขให้กับผู้เขียนเท่านั้น",
+	"authorprotect-move": "จำกัดสิทธิ์การย้ายให้กับผู้เขียนเท่านั้น",
+	"authorprotect-intro": "ใช้แบบฟอร์มนี้เพื่อล็อกหน้านี้จากผู้อื่นที่ไม่ใช่ผู้เขียน",
+	"authorprotect-success": "ตั้งค่าการป้องกันแล้ว!",
+	"protect-level-author": "ป้องกันจากผู้ที่ไม่ใช่ผู้เขียน",
+	"restriction-level-author": "ป้องกันโดยผู้เขียน",
+	"action-authorprotect": "ป้องกันจากผู้ที่ไม่ใช่ผู้เขียน",
+	"right-authorprotect": "ป้องกันหน้าที่เขียน",
+	"action-author": "แก้ไขหน้าที่ป้องกันโดยผู้เขียน",
+	"right-author": "แก้ไขหน้าที่ป้องกันโดยผู้เขียน"
+}

@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Geraki",
+			"Giannaras99",
+			"Glavkos",
+			"Protnet",
+			"ZaDiak"
+		]
+	},
+	"admanager": "Διαχείριση διαφημίσεων",
+	"admanagerzones": "Ζώνες διαχείρισης διαφημίσεων",
+	"admanager-desc": "Παρέχει μια [[Special:AdManager|ειδική σελίδα]] που επιτρέπει σε διαχειριστές να ορίσουν τη ζώνη για σελίδες ή κατηγορίες",
+	"admanager_docu": "Για να προσθέσετε ή να καταργήσετε τη ζώνη διαφημίσεων μιας σελίδας ή ολόκληρης της κατηγορίας, προσθέστε ή καταργήστε τον τίτλο της σελίδας ή της κατηγορίας παρακάτω.",
+	"admanagerzones_docu": "Εισαγάγετε τον αριθμό κάθε ζώνης διαφημίσεων σε δική του γραμμή.",
+	"admanager_invalidtargetpage": "Δε βρέθηκε καμία σελίδα με τίτλο \"$1\".",
+	"admanager_invalidtargetcategory": "Δε βρέθηκε καμία κατηγορία με τίτλο \"$1\".",
+	"admanager_notable": "Σφάλμα! Δεν βρέθηκε ο απαιτούμενος πίνακας βάσης δεδομένων! Τρέξτε πρώτα το update.php.",
+	"admanager_noAdManagerZones": "Σφάλμα! Πρέπει να προσθέσετε ορισμένες ζώνες διαφημίσεων. Εισάγετέ τες στις [[Special:AdManagerZones|Ζώνες Διαχείρισης Διαφημίσεων]].",
+	"admanager_labelPage": "Τίτλοι σελίδων",
+	"admanager_labelCategory": "Ονόματα κατηγοριών",
+	"admanager_submit": "Καταχώρηση",
+	"admanager_noads": "Μη προβολή διαφημίσεων",
+	"admanager_Page": "Σελίδες",
+	"admanager_Category": "Κατηγορίες",
+	"admanager_added": "Οι αλλαγές σας έχουν αποθηκευτεί.",
+	"admanager_addedzone": "Προστέθηκε η ζώνη $1.",
+	"admanager_removedzone": "Αφαιρέθηκε η ζώνη $1.",
+	"admanager_nozonesadded": "Δεν προστέθηκαν ζώνες.",
+	"admanager_nozonesremoved": "Δεν αφαιρέθηκε καμία ζώνη.",
+	"admanager_zonenum": "Ζώνη#:$1",
+	"admanager_zonenotnumber": "Σφάλμα! Το $1 δεν είναι αριθμός.",
+	"admanager_return": "Επιστρέψετε στη [[Special:AdManager|Διαχείριση διαφημίσεων]]",
+	"admanager_gotoads": "[[Special:AdManager|Επεξεργασία θέσης διαφημίσεων]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Επεξεργασία ζωνών διαφημίσεων]]",
+	"right-admanager": "[[Special:AdManager|Διαχείριση διαμόρφωσης διαφήμισης]]"
+}

@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"Kambai Akau"
+		]
+	},
+	"coll-remove": "Turung",
+	"coll-show": "Tsa",
+	"coll-move_up": "Shyei a̱za",
+	"coll-move_down": "Shyei a̱tak",
+	"coll-print_export": "Lyui/Ghwut ma̱ng ta̱usa",
+	"coll-create_a_book": "Khwuk kwambwat",
+	"coll-book_creator": "A̱tyukhwuk kwambwat",
+	"coll-download_as": "Cyok ndyo nang $1",
+	"coll-disable": "hyat",
+	"coll-book_creator_disable": "Hyat kyangkhwuk kwambwat",
+	"coll-book_creator_disable_tooltip": "Yok nyia̱ ta̱m ma̱ng kyangkhwuk kwambwat hu",
+	"coll-add_this_page": "Mbeang peji huni mi̱ kwambwat ang hu",
+	"coll-add_page_tooltip": "Mbeang peji wiki yong huni mi̱ kwambwat ang hu",
+	"coll-help": "Beang",
+	"coll-help_tooltip": "Tsa beang tazwa khwuk nkwambwat",
+	"coll-helppage": "Help:Nkwambwat",
+	"coll-remove_this_page": "Turung peji huni mi̱ kwambwat ang hu",
+	"coll-show_collection": "Tsa kwambwat",
+	"coll-show_collection_tooltip": "Nyap a jhyuk/cyok ma̱ng/nyia̱ oda kwambwat ang hu",
+	"coll-attribution-anons": "A̱sanga̱lyoot: $1",
+	"coll-article-attribution": "<b>$1</b> <i>A̱vwuoneet:</i> $2 <i>Á̱nietnwuat:</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>A̱vwuoneet:</i> $2 <i>Kwambwat yak:</i> $3 <i>Á̱nietnwuat:</i> $4 <i>A̱tsatsak a̱tyughwang:</i> $5"
+}

@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cgboeree",
+			"Katxis",
+			"Mafcadio",
+			"Malafaya"
+		]
+	},
+	"centralauth": "Manejor de contas global",
+	"centralauth-admin-blocklog": "istoria de blocis",
+	"centralauth-admin-list-method": "Metodo",
+	"centralauth-admin-no": "no",
+	"centralauth-admin-yes": "si",
+	"centralauth-editgroup-name": "Nom de la grupo:",
+	"centralauth-editset-name": "Nom:",
+	"centralauth-foreign-contributions": "$1 {{PLURAL:$1|contribui|contribuis}} en $2",
+	"centralauth-foreign-link": "Usor $1 en $2",
+	"centralauth-globalgroupperms-rights": "Diretos",
+	"centralauth-merge-dryrun-or": "'''o'''",
+	"centralauth-merge-method-login": "creada par identifia",
+	"globalgroupmembership": "La parteni en grupos global",
+	"globalgrouppermissions": "Maneja de grupos global",
+	"globalrenameprogress": "Progresa de renomi global",
+	"globalrenamerequest": "Solisita de renomi de conta global de usor",
+	"globalusers": "Lista de contas global",
+	"mergeaccount": "State de uni de autentici",
+	"userswhowillberenamed": "Usores ci va es renomida"
+}

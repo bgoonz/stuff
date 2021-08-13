@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"BaRaN6161 TURK"
+		]
+	},
+	"biblioplus-desc": "PubMed ve ISBN veritabanından alıntıları otomatik olarak alır",
+	"biblioplus-doi-tooltip": "Makaleyi yayıncıdan görüntüleyin veya satın alın",
+	"biblioplus-pmid-tooltip": "Makaleyi yayıncıdan görüntüleyin veya satın alın (varsa)",
+	"biblioplus-isbn-tooltip": "isbndb.org adresindeki kitap bilgileri",
+	"biblioplus-medline-abstracts": "Tüm Medline özetleri:",
+	"biblioplus-pubmed-abstracts": "PubMed'deki tüm özetler",
+	"biblioplus-hubmed-abstracts": "HubMed'deki tüm özetler",
+	"biblioplus-vkey-title": "bibliyografi veritabanına bağlantı"
+}

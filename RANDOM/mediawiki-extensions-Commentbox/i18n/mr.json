@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"V.narsikar",
+			"ज्ञानदा गद्रे-फडके"
+		]
+	},
+	"commentbox-desc": "काही पानांवर टिप्पणीपेटी जोडते",
+	"commentbox-intro": "== टिप्पणी जोडा... ==\nआपल्यापाशी काय या पानासाठी टिप्पण्या आहेत?त्या येथे जोडा किंवा<span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} या पानाचे थेट संपादन करा]</span>",
+	"commentbox-savebutton": "टिप्पणी जतन करा",
+	"commentbox-name": "नाव:",
+	"commentbox-name-explanation": "<small>(सूचना: जर आपण [[Special:UserLogin|सनोंद प्रवेश केला]] तर, आपणास आपले नांव स्वतः येथे टाकावे लागणार नाही)</small>",
+	"commentbox-log": "नविन टिप्पण्या",
+	"commentbox-first-comment-heading": "== टिप्पण्या ==",
+	"commentbox-regex": "/\\n==\\s*टिप्पण्या\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "प्रतिक्रिया तयार करतांना घडणाऱ्या त्रुटी",
+	"commentbox-error-page-nonexistent": "हे पान अस्तीत्वात नाही!",
+	"commentbox-error-namespace": "या नामविश्वात टिप्पण्या करण्यास परवानगी नाही!",
+	"commentbox-error-empty-comment": "रिकाम्या टिप्पण्यास परवानगी नाही!"
+}

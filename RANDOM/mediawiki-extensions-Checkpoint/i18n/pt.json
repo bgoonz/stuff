@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu"
+		]
+	},
+	"checkpoint": "Gravar e continuar a editar",
+	"checkpoint-desc": "Permite gravar uma edição e continuar a editar",
+	"checkpoint-tooltip": "Grave o seu progresso e continue a editar a página",
+	"checkpoint-notice": "([[{{ns:project}}:Checkpoint|gravação do estado presente]])"
+}

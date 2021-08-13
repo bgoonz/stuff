@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dianakc",
+			"Giro720",
+			555
+		]
+	},
+	"breadcrumbs-desc": "Adiciona o percurso até a página corrente, por baixo da barra de separadores",
+	"prefs-breadcrumbs-separator": "Separador da trilha",
+	"prefs-breadcrumbs-separator-max": "Um máximo de 2 caracteres podem ser inseridos.",
+	"prefs-breadcrumbs": "Percurso de Navegação",
+	"prefs-breadcrumbs-showcrumbs": "Mostrar percurso de navegação",
+	"prefs-breadcrumbs-numberofcrumbs": "Número de passos",
+	"prefs-breadcrumbs-numberofcrumbs-max": "Exibir no máximo 20 passos.",
+	"prefs-breadcrumbs-namespaces": "Incluir domínios da trilha",
+	"prefs-breadcrumbs-filter-duplicates": "Filtre páginas visitadas repetidamente",
+	"prefs-breadcrumbs-preceding-text": "Texto que aparece antes da trilha",
+	"prefs-breadcrumbs-preceding-text-max": "Um máximo de 30 caracteres podem ser inseridos."
+}

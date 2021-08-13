@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"Purodha"
+		]
+	},
+	"approvedrevs-desc": "Määd et müjjelesch, vun ener Sigg en beshtemmpte Version johd_ze_heiße.",
+	"approvedrevs-logname": "Logbohch vum Johdheiße vun Väsjohn vun Sigge",
+	"approvedrevs-logdesc": "En heh däm Logbohch wääde de johdjeheiße Väsjohne vun Sigge faßjehallde.",
+	"approvedrevs-approve": "johdheiße",
+	"approvedrevs-unapprove": "nit johdheiße",
+	"approvedrevs-approvesuccess": "Heh di Väsjohn  vun dä Sigg wood johdjeheiße.",
+	"approvedrevs-unapprovesuccess": "Jäz jidd_et kein johdjeheiße Väsjohn vun dä Sigg mih.\nDoför kritt mer de neuste Väsjohn aanjezeisch.",
+	"approvedrevs-unapprovesuccess2": "Jäz jidd_et kein johdjeheiße Version vun dä Sigg mih.\nDoför kritt mer en läddije Sigg aanjezeisch.",
+	"approvedrevs-approveaction": "hät $2 vun dä Sigg „[[$1]]“ johdjeheiße",
+	"approvedrevs-unapproveaction": "donn kein Väsjohn vun dä Sigg „[[$1]]“ mih johdheijße",
+	"approvedrevs-notlatest": "Dat heh es de johdjeheiße Väsjohn vun dä Sigg, es ävver nit de neuste Väsjohn.",
+	"approvedrevs-approvedandlatest": "Dat heh es de johdjeheiße Väsjohn vun dä Sigg, un och de Neuste.",
+	"approvedrevs-blankpageshown": "Vun heh dä Sigg jidd_et kein johdjeheiße Väsjohne.",
+	"approvedrevs-noapprovedrevision": "Dat heh es de neuste Väsjohn vun dä Sigg. Se hät kein johdjeheiße Väsjohne.",
+	"approvedrevs-editwarning": "Opjepaß: Do bes de neuste Väsjohn vun heh dä Sigg aam ändere. Dat es ävver nit de johdjeheiße Väsjohn, di mer schtandmääßesch aanjezeisch krett.",
+	"approvedrevs": "Johdjeheiße Väsjohne",
+	"approvedrevs-approvedpages": "Alle Sigge med en johdjeheiße Väsjohn",
+	"approvedrevs-notlatestpages": "Sigge, woh de johdjeheiße Väsjohn nit de neuste es.",
+	"approvedrevs-unapprovedpages": "De nit johdjeheiße Sigge",
+	"approvedrevs-view": "Aanlohre:",
+	"approvedrevs-revisionnumber": "Väsjohn $1",
+	"approvedrevs-approvedby": "johdjeheiße {{GENDER:$3|vum|vum|vum Metmaacher|vun dä|vum}} $1 aam $4 öm $5 Uhr",
+	"approvedrevs-difffromlatest": "der Ongerscheid zor neuste Väsjohn",
+	"approvedrevs-approvelatest": "de neuste Väsjohn johdheiße",
+	"approvedrevs-approvethisrev": "Heh di Väsjohn johdheiße",
+	"approvedrevs-viewlatestrev": "De neuste Väsjohn aanlohre",
+	"approvedrevs-approvedrevision": "Johdjeheiße Väsjohn",
+	"right-approverevisions": "En beshtemmpte Väsjohn vun ene Sigg em Wiki johheiße",
+	"right-viewlinktolatest": "Donn ene Henwies droh drövver aanzeije op Sigge di en johdjeheiße Väsjohn han"
+}

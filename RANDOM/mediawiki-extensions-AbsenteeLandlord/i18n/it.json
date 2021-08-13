@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Darth Kule",
+			"Nemo bis"
+		]
+	},
+	"absenteelandlord-reason": "Il database è stato automaticamente bloccato perché gli amministratori sono inattivi.",
+	"absenteelandlord-desc": "Blocca automaticamente il database di un wiki se tutti i suoi amministratori sono inattivi per qualche tempo"
+}

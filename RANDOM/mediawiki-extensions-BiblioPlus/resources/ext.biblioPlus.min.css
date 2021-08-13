@@ -1,0 +1,17 @@
+/* BiblioPlus v1.2.0 | Licensed GPL */
+
+/* Enlarge the max width of the tooltip from default 280px */
+.qtip {
+	max-width: 400px;
+}
+
+/* Shrink the line height a bit from default 20px */
+.qtip-bootstrap {
+	line-height: 18px;
+}
+
+/* Shrink the font-size a bit from default 14px */
+.qtip-content {
+	font-size: 0.95em;
+}
+

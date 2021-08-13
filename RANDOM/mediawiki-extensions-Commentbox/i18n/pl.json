@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sp5uhe"
+		]
+	},
+	"commentbox-desc": "Dodaje okienko komentarzy do niektórych stron",
+	"commentbox-intro": "== Dodawanie komentarza... ==\nMasz komentarz na tej stronie? Dodaj ten komentarz lub <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} wyedytuj treść strony]</span>.",
+	"commentbox-savebutton": "Zapisz komentarz",
+	"commentbox-name": "Imię i nazwisko",
+	"commentbox-name-explanation": "<small>(Podpowiedź – jeśli [[Special:UserLogin|się zalogujesz]] nie będziesz musiał wypełniać podpisu ręcznie)</small>",
+	"commentbox-log": "Nowe komentarze",
+	"commentbox-first-comment-heading": "== Komentarze ==",
+	"commentbox-regex": "/\\n==\\s*Komentarze\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Wystąpił błąd w trakcie tworzenia komentarza",
+	"commentbox-error-page-nonexistent": "Strona nie istnieje!",
+	"commentbox-error-namespace": "W tej przestrzeni nazw nie można umieszczać komentarzy!",
+	"commentbox-error-empty-comment": "Komentarz nie może być pusty!"
+}

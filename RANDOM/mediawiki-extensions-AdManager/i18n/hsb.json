@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Michawiki"
+		]
+	},
+	"admanager": "Ad Manager",
+	"admanagerzones": "Ad Manager - nawěškowe wobłuki",
+	"admanager-desc": "Dodawa [[Special:AdManager|specialnu stronu]], kotraž administratoram dowoluje, zo bychu nawěškowy wobłuk za strony abo kategorije nastajili",
+	"admanager_docu": "Zo by nawěškowy wobłuk strony abo cyłeje kategorije přidał abo wotstronił, přidaj abo wotstroń titul strony abo kategorije.",
+	"admanagerzones_docu": "Zapodaj čisło kóždeho nawěškoweho wobłuka we swójskej lince.",
+	"admanager_invalidtargetpage": "Žana strona z titulom \"$1\" namakana.",
+	"admanager_invalidtargetcategory": "Žana kategorija z titulom \"$1\" namakana.",
+	"admanager_notable": "Zmylk! Trěbna tabela datoweje banki njeje so namakała! Wuwjedź najprjedy update.php.",
+	"admanager_noAdManagerZones": "Zmylk! Dyrbiš nawěškowe wobłuki přidać. Zapodaj je na [[Special:AdManagerZones|Ad Manager - nawěškowe wobłuki]]",
+	"admanager_labelPage": "Titule stronow",
+	"admanager_labelCategory": "Kategorijowe mjena",
+	"admanager_submit": "Wotpósłać",
+	"admanager_noads": "Žane nawěški pokazać",
+	"admanager_Page": "Strony",
+	"admanager_Category": "Kategorije",
+	"admanager_added": "Twoje změny su so składowali",
+	"admanager_addedzone": "Cona $1 přidata",
+	"admanager_removedzone": "Cona $1 wotstronjena.",
+	"admanager_nozonesadded": "Njejsu so žane cony přidali.",
+	"admanager_nozonesremoved": "Njejsu so žane cony wotstronili.",
+	"admanager_zonenum": "Čisło nawěškoweho wobłuka: $1",
+	"admanager_zonenotnumber": "Zmylk! $1 ličba njeje.",
+	"admanager_return": "Wróćo k [[Special:AdManager|Ad Manager]]",
+	"admanager_gotoads": "[[Special:AdManager|Nawěški wobdźěłać]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Nawěškowe wobłuki wobdźěłać]]",
+	"right-admanager": "[[Special:AdManager|Nawěški konfigurować]]"
+}

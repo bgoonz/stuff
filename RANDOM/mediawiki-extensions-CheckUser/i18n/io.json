@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joao Xavier",
+			"Malafaya",
+			"Robin van der Vliet"
+		]
+	},
+	"checkuser": "Kontrolero di adresi IP",
+	"group-checkuser": "Kontroleri dil uzeri",
+	"group-checkuser-member": "{{GENDER:$1|kontrolero di IP-adresi}}",
+	"grouppage-checkuser": "{{ns:project}}:Kontrolero di IP-adresi",
+	"checkuser-reason": "Motivo:",
+	"checkuser-showlog": "Montrez la registro 'CheckUser'",
+	"checkuser-target": "IP-adreso od uzeronomo:",
+	"checkuser-period": "Durado:",
+	"checkuser-week-1": "lasta semano",
+	"checkuser-week-2": "lasta du semani",
+	"checkuser-month": "lasta 30 dii",
+	"checkuser-all": "omna",
+	"checkuser-cidr-res": "Komuna CIDR:",
+	"checkuser-blocked": "Blokusita",
+	"checkuser-gblocked": "Blokusita en omna Wiki",
+	"checkuser-wasblocked": "Antee blokusita",
+	"checkuser-block-success": "'''L'{{PLURAL:$2|uzero|uzeri}} $1 {{PLURAL:$2|nun esas}} blokusata.'''",
+	"checkuser-block-failure": "'''Nula uzeri blokusata.'''",
+	"checkuser-block-limit": "Multa uzeri selektata.",
+	"checkuser-block-noreason": "Vu mustas informar la motivo pri blokuso.",
+	"checkuser-search-submit": "Serchar",
+	"checkuser-ipeditcount": "~$1 di omna uzanti",
+	"checkuser-email-action": "sendar e-posto al uzero \"$1\"",
+	"checkuser-investigate-subtitle-block-button-label": "Blokusar",
+	"checkuser-investigate-subtitle-continue-button-label": "Durar",
+	"checkuser-investigate-tab-preliminary-check": "Informo pri la konto",
+	"checkuser-investigate-compare-table-button-add-ip-targets-label": "Montrez omna IP-adresi de ca uzero",
+	"checkuser-investigate-compare-table-button-add-user-targets-label": "Montrez omna uzeri en ca IP"
+}

@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dani"
+		]
+	},
+	"absenteelandlord-reason": "Az adatbázis automatikusan le lett zárva az adminisztrátorok inaktivitása miatt.",
+	"absenteelandlord-desc": "Automatikusan lezárja a wiki adatbázisát az adminisztrátorok inaktívsága esetén"
+}

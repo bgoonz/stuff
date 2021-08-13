@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aguve"
+		]
+	},
+	"restriction-articlefeedbackv5": "Dzedze",
+	"articlefeedbackv5-disabled": "Wotiae be dɔgbedenya megawɔ dɔ o.",
+	"articlefeedbackv5-disabled-admin-admin": "Wotiae be dɔgbedenya megawɔ dɔ na nuxlẽlawo kple nuŋlɔlawo siaa o. Womate ŋu aŋlɔ dɔgbedenya yeyewo ɖe axa sia o.",
+	"articlefeedbackv5-disabled-admin-editor": "Wotiae be dɔgbedenya megawɔ dɔ na nuxlẽlawo o. Womate ŋu aŋlɔ dɔgbedenya yeyewo ɖe axa sia o.",
+	"articlefeedbackv5-disabled-editor-admin": "Nudzikpɔla tiae be dɔgbedenya megawɔ dɔ o. Nuxlẽlawo kple nuŋlɔlawo mate ŋu aŋlɔ dɔgbedenya yeyewo ɖe axa sia o.",
+	"articlefeedbackv5-disabled-editor-editor": "Wotiae be dɔgbedenya megawɔ dɔ o. Nuxlẽlawo mate ŋu aŋlɔ dɔgbedenya yeyewo ɖe axa sia o.",
+	"articlefeedbackv5-disabled-reader": "Wotiae be dɔgbedenya megawɔ dɔ o. Nuxlẽlawo mate ŋu aŋlɔ dɔgbedenya yeyewo ɖe axa sia o.",
+	"articlefeedbackv5-disabled-admin-button-text": "Trɔ takpɔtiatiaa",
+	"articlefeedbackv5-disabled-editor-button-text": "Tiae dɔgbedenya nawɔ dɔ",
+	"articlefeedbackv5-settings-status-enable": "Tiae be dɔgbedenya nawɔ dɔ le axa sia",
+	"articlefeedbackv5-settings-status-disable": "Tiae be dɔgbedenya megawɔ dɔ le axa sia o",
+	"articlefeedbackv5-enabled-form-message": "Wotiae fifi laa be dɔgbedenya nawɔ dɔ. Nuxlẽla ƒe nuŋɔŋlɔwo adze [$1 le dɔgbedenya ƒe axa].",
+	"articlefeedbackv5-contribs-entry": "$1 . . $2 . . [[$3|Dɔgbedenya: $4]] $5 $6 $7",
+	"articlefeedbackv5-contribs-entry-status": ". . Nɔnɔme: $1",
+	"articlefeedbackv5-contribs-status-action-helpful": "Ɖe vi"
+}

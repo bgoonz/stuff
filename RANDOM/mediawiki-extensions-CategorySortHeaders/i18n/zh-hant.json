@@ -1,0 +1,6 @@
+{
+	"@metadata": {
+		"authors": []
+	},
+	"categorysortheaders-desc": "允許自定義多個字符為分類中排序頁面列表的“索引字”，使用語法為<nowiki>[[category:Foo|^索引字^其餘部分]]</nowiki>"
+}

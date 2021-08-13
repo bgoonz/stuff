@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"authorprotect": "Protexer la páxina de los que nun son los autores",
+	"authorprotect-desc": "Permite al autor d'una páxina protexela d'otros usuarios",
+	"authorprotect-notauthor": "Nun yes {{GENDER:$1|l'autor|l'autora}} d'esta páxina.",
+	"authorprotect-confirm": "Camudar los niveles de protección",
+	"authorprotect-edit": "Llendar la edición a los autores",
+	"authorprotect-move": "Llendar el treslláu a los autores",
+	"authorprotect-intro": "Use esti formulariu pa protexer esta páxina de los que nun son los sos autores.",
+	"authorprotect-success": "¡Protección aplicada!",
+	"protect-level-author": "Protexer de los que nun son los autores",
+	"restriction-level-author": "Protexida pol autor",
+	"action-authorprotect": "protexer de los que nun son los autores",
+	"right-authorprotect": "Protexer les páxines con autor",
+	"action-author": "editar les páxines protexíes pol autor",
+	"right-author": "Editar les páxines protexíes pol autor"
+}

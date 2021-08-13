@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"BaRaN6161 TURK",
+			"HakanIST"
+		]
+	},
+	"accesscontrol-desc": "Sayfa bazında kullanıcı erişimine göre grup erişim kısıtlamasını mümkün kılar",
+	"accesscontrol-info": "Bu korunan bir sayfadır.",
+	"accesscontrol-info-box": "Bu sayfa için erişim kısıtlamaları oluşturulmuştur. Bu mesajı görürseniz, bu sayfaya erişim hakkınız yok."
+}

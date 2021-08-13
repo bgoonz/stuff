@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aotake",
+			"Shirayuki"
+		]
+	},
+	"commentbox-desc": "指定したページにコメントボックスを追加する",
+	"commentbox-intro": "== コメントの追加... ==\nこのページにコメントしますか? ここに入力するか、<span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} ページを直接編集]</span>してください。",
+	"commentbox-savebutton": "コメントを保存",
+	"commentbox-name": "名前:",
+	"commentbox-name-explanation": "<small>(ヒント: [[Special:UserLogin|ログイン]]すると、名前を手動で入力する必要がなくなります)</small>",
+	"commentbox-log": "新規コメント",
+	"commentbox-first-comment-heading": "== コメント ==",
+	"commentbox-regex": "/\\n==\\s*コメント\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "コメントの作成エラー",
+	"commentbox-error-page-nonexistent": "このページは存在しません!",
+	"commentbox-error-namespace": "この名前空間ではコメントは許可されていません!",
+	"commentbox-error-empty-comment": "空のコメントは許可されていません!"
+}

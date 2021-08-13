@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Duolaimi",
+			"Hzy980512",
+			"Impersonator 1",
+			"Mywood",
+			"Yfdyh000"
+		]
+	},
+	"biblioplus-desc": "自动从PubMed和ISBN数据库检索引文",
+	"biblioplus-doi-tooltip": "从发行者处查看或购买文章",
+	"biblioplus-pmid-tooltip": "从发行者处查看或购买文章（若可用）",
+	"biblioplus-isbn-tooltip": "isbndb.org的图书信息",
+	"biblioplus-medline-abstracts": "所有Medline摘要：",
+	"biblioplus-pubmed-abstracts": "所有在PubMed的摘要",
+	"biblioplus-hubmed-abstracts": "所有在HubMed的摘要",
+	"biblioplus-vkey-title": "查看参考书目数据库"
+}

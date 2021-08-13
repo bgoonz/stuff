@@ -1,0 +1,61 @@
+_  = require 'underscore'
+ko = require 'knockout'
+
+{ SeriesGroupNode, SeriesGroupNodeData,
+} = require './series-group-node'
+
+Trait = require '../graph-node-trait'
+
+
+/**
+ * @class
+ * @extends SeriesGroupNodeData
+ */
+class exports.LineGroupNodeData extends SeriesGroupNodeData
+    @registerType 'line-group'
+    
+    defaults: ->
+        options :
+            palette     : 'wmf_projects'
+            
+            dateFormat  : 'MMM YYYY'
+            valueFormat : ',.2s'
+            
+            stroke :
+                color   : null              # := null (use palette) | rgb() color | hex color
+                width   : 3
+                pattern : 'solid'
+                opacity : 1
+            
+            # tracking circles shown on hover
+            hoverPoints :
+                enabled     : true
+                radius      : 5
+                fill        : null
+                fillOpacity : 1
+                stroke : 
+                    color   : null
+                    width   : 0
+                    pattern : 'solid'
+                    opacity : 1
+            
+    
+    attributeTypes: ->
+        {}
+    
+    -> super ...
+
+
+
+/**
+ * @class
+ * @extends SeriesGroupNode
+ */
+class exports.LineGroupNode extends SeriesGroupNode
+    @registerType 'line-group'
+    traits : [
+        Trait.VIS_NODE
+        Trait.SVG
+    ]
+    
+    -> super ...

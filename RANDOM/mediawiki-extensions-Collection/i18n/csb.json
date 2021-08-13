@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kaszeba",
+			"Kirsan"
+		]
+	},
+	"coll-remove": "Rëmôj",
+	"coll-show": "Pokôżë",
+	"coll-move_up": "na górã",
+	"coll-move_down": "Biéj niżi",
+	"coll-print_export": "Drëkùjë/ekspòrtëjë",
+	"coll-create_a_book": "Ùsadzë ksążkã",
+	"coll-book_creator": "Usôdzanié ksążczi.",
+	"coll-download_as": "Zladënk jakò $1",
+	"coll-disable": "wëłączë",
+	"coll-book_creator_disable": "Wëłãczë usôdzanié ksążczi.",
+	"coll-book_creator_disable_tooltip": "Wëłãczë ùsôdzanié ksążczi.",
+	"coll-add_this_page": "Dodôj tã starnã do twòji ksążczi",
+	"coll-add_page_tooltip": "Dodôj tã starnã wiki do ksążczi",
+	"coll-help": "Pòmòc",
+	"coll-help_tooltip": "Pòkôżë pòmòc do ùsôdzaniô ksążków",
+	"coll-helppage": "Help:Ksążczi",
+	"coll-n_pages": "$1 {{PLURAL:$1|starna|starnë|starnów}}",
+	"coll-remove_this_page": "Rëmôj nã starnã z twòji ksążczi",
+	"coll-show_collection": "Pòkarzë ksążka",
+	"coll-show_collection_tooltip": "Klëkni dlô edicëji/zladënkù/zamówienia ksążczi",
+	"coll-make_suggestions": "Propònowóné starnë",
+	"coll-make_suggestions_tooltip": "Pòkôżë sugestëje na spòdlim ju dodónych starnów",
+	"coll-attribution-anons": "Anonimòwi: $1",
+	"coll-article-attribution": "<b>$1</b> <i>Zdrój:</i> $2 <i>Ùsôdzcë:</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>Zdrój:</i> $2 <i>Licencëjô:</i> $3 <i>Rozwijôrze:</i> $4 <i>Spòdlowi ùsôdzca:</i> $5"
+}

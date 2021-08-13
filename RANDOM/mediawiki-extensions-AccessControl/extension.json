@@ -1,0 +1,37 @@
+{
+	"name": "AccessControl",
+	"version": "2.6",
+	"author": [
+		"[https://www.mediawiki.org/wiki/m:User:Want Aleš Kapica]"
+	],
+	"type": "parserhook",
+	"url": "https://www.mediawiki.org/wiki/Extension:AccessControl",
+	"descriptionmsg": "accesscontrol-desc",
+	"license-name": "GPL-2.0-or-later",
+	"requires": {
+		"MediaWiki": ">= 1.32.0"
+	},
+	"AutoloadClasses": {
+		"AccessControlHooks": "src/AccessControlHooks.php"
+	},
+	"MessagesDirs": {
+		"AccessControl": [
+			"i18n"
+		]
+	},
+	"config": {
+		"AdminCanReadAll": {
+			"value": true,
+			"description": "Sysop users can read all restricted pages"
+		},
+		"AccessControlRedirect": {
+			"value": true,
+			"description": "Do not redirect from page in search results to restricted pages"
+		}
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "AccessControlHooks::accessControlExtension",
+		"userCan": "AccessControlHooks::onUserCan"
+	},
+	"manifest_version": 2
+}

@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"ديفيد"
+		]
+	},
+	"categorysortheaders-desc": "السماح بتحديد رؤوس الفرز \"الحرف الأول\" المخصصة متعددة الحروف لسرد الصفحات ضمن التصنيفات، باستخدام بناء الجملة مثل <nowiki>[[category:Foo|^Header^Invisible part of sortkey]]</nowiki>"
+}

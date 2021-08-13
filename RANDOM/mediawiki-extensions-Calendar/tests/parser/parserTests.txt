@@ -1,0 +1,409 @@
+!! Version 2
+
+!! test
+Basic #calendar usage
+!! wikitext
+{{#calendar:|month=02|year=2018}}
+!! html
+<table class="calendar calWidth">
+
+<tbody><tr>
+<td class="calTitle" colspan="7">February 2018
+</td></tr>
+<tr>
+<th>Sun
+</th>
+<th>Mon
+</th>
+<th>Tue
+</th>
+<th>Wed
+</th>
+<th>Thu
+</th>
+<th>Fri
+</th>
+<th>Sat
+</th></tr>
+<tr>
+<td class="sundays">&#160;
+</td>
+<td>&#160;
+</td>
+<td>&#160;
+</td>
+<td>&#160;
+</td>
+<td>1
+</td>
+<td>2
+</td>
+<td>3
+</td></tr>
+<tr>
+<td class="sundays">4
+</td>
+<td>5
+</td>
+<td>6
+</td>
+<td>7
+</td>
+<td>8
+</td>
+<td>9
+</td>
+<td>10
+</td></tr>
+<tr>
+<td class="sundays">11
+</td>
+<td>12
+</td>
+<td>13
+</td>
+<td>14
+</td>
+<td>15
+</td>
+<td>16
+</td>
+<td>17
+</td></tr>
+<tr>
+<td class="sundays">18
+</td>
+<td>19
+</td>
+<td>20
+</td>
+<td>21
+</td>
+<td>22
+</td>
+<td>23
+</td>
+<td>24
+</td></tr>
+<tr>
+<td class="sundays">25
+</td>
+<td>26
+</td>
+<td>27
+</td>
+<td>28
+</td>
+<td>&#160;
+</td>
+<td>&#160;
+</td>
+<td>&#160;
+</td></tr></tbody></table>
+!! end
+
+!! test
+Basic #calendar with position
+!! wikitext
+{{#calendar:|position=Right|month=02|year=2018}}
+!! html
+<table class="calendar calRight calWidth">
+
+<tbody><tr>
+<td class="calTitle" colspan="7">February 2018
+</td></tr>
+<tr>
+<th>Sun
+</th>
+<th>Mon
+</th>
+<th>Tue
+</th>
+<th>Wed
+</th>
+<th>Thu
+</th>
+<th>Fri
+</th>
+<th>Sat
+</th></tr>
+<tr>
+<td class="sundays">&#160;
+</td>
+<td>&#160;
+</td>
+<td>&#160;
+</td>
+<td>&#160;
+</td>
+<td>1
+</td>
+<td>2
+</td>
+<td>3
+</td></tr>
+<tr>
+<td class="sundays">4
+</td>
+<td>5
+</td>
+<td>6
+</td>
+<td>7
+</td>
+<td>8
+</td>
+<td>9
+</td>
+<td>10
+</td></tr>
+<tr>
+<td class="sundays">11
+</td>
+<td>12
+</td>
+<td>13
+</td>
+<td>14
+</td>
+<td>15
+</td>
+<td>16
+</td>
+<td>17
+</td></tr>
+<tr>
+<td class="sundays">18
+</td>
+<td>19
+</td>
+<td>20
+</td>
+<td>21
+</td>
+<td>22
+</td>
+<td>23
+</td>
+<td>24
+</td></tr>
+<tr>
+<td class="sundays">25
+</td>
+<td>26
+</td>
+<td>27
+</td>
+<td>28
+</td>
+<td>&#160;
+</td>
+<td>&#160;
+</td>
+<td>&#160;
+</td></tr></tbody></table>
+!! end
+
+!! test
+Basic #calendar with title
+!! wikitext
+{{#calendar:|title=Parser Testing|month=02|year=2018}}
+!! html
+<table class="calendar calWidth">
+
+<tbody><tr>
+<td class="calTitle" colspan="7">Parser Testing
+</td></tr>
+<tr>
+<th>Sun
+</th>
+<th>Mon
+</th>
+<th>Tue
+</th>
+<th>Wed
+</th>
+<th>Thu
+</th>
+<th>Fri
+</th>
+<th>Sat
+</th></tr>
+<tr>
+<td class="sundays">&#160;
+</td>
+<td>&#160;
+</td>
+<td>&#160;
+</td>
+<td>&#160;
+</td>
+<td>1
+</td>
+<td>2
+</td>
+<td>3
+</td></tr>
+<tr>
+<td class="sundays">4
+</td>
+<td>5
+</td>
+<td>6
+</td>
+<td>7
+</td>
+<td>8
+</td>
+<td>9
+</td>
+<td>10
+</td></tr>
+<tr>
+<td class="sundays">11
+</td>
+<td>12
+</td>
+<td>13
+</td>
+<td>14
+</td>
+<td>15
+</td>
+<td>16
+</td>
+<td>17
+</td></tr>
+<tr>
+<td class="sundays">18
+</td>
+<td>19
+</td>
+<td>20
+</td>
+<td>21
+</td>
+<td>22
+</td>
+<td>23
+</td>
+<td>24
+</td></tr>
+<tr>
+<td class="sundays">25
+</td>
+<td>26
+</td>
+<td>27
+</td>
+<td>28
+</td>
+<td>&#160;
+</td>
+<td>&#160;
+</td>
+<td>&#160;
+</td></tr></tbody></table>
+!! end
+
+!! test
+Basic #calendar with highlightedDays
+!! wikitext
+{{#calendar:|highlightedDays=1 9 17|month=02|year=2018}}
+!! html
+<table class="calendar calWidth">
+
+<tbody><tr>
+<td class="calTitle" colspan="7">February 2018
+</td></tr>
+<tr>
+<th>Sun
+</th>
+<th>Mon
+</th>
+<th>Tue
+</th>
+<th>Wed
+</th>
+<th>Thu
+</th>
+<th>Fri
+</th>
+<th>Sat
+</th></tr>
+<tr>
+<td class="sundays">&#160;
+</td>
+<td>&#160;
+</td>
+<td>&#160;
+</td>
+<td>&#160;
+</td>
+<td class="highlighted">1
+</td>
+<td>2
+</td>
+<td>3
+</td></tr>
+<tr>
+<td class="sundays">4
+</td>
+<td>5
+</td>
+<td>6
+</td>
+<td>7
+</td>
+<td>8
+</td>
+<td class="highlighted">9
+</td>
+<td>10
+</td></tr>
+<tr>
+<td class="sundays">11
+</td>
+<td>12
+</td>
+<td>13
+</td>
+<td>14
+</td>
+<td>15
+</td>
+<td>16
+</td>
+<td class="highlighted">17
+</td></tr>
+<tr>
+<td class="sundays">18
+</td>
+<td>19
+</td>
+<td>20
+</td>
+<td>21
+</td>
+<td>22
+</td>
+<td>23
+</td>
+<td>24
+</td></tr>
+<tr>
+<td class="sundays">25
+</td>
+<td>26
+</td>
+<td>27
+</td>
+<td>28
+</td>
+<td>&#160;
+</td>
+<td>&#160;
+</td>
+<td>&#160;
+</td></tr></tbody></table>
+!! end

@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"DzWiki",
+			"Palapa"
+		]
+	},
+	"admanager_labelPage": "Naslovi stranice",
+	"admanager_labelCategory": "Imena kategorija",
+	"admanager_submit": "Pošalji",
+	"admanager_noads": "Ne prikazuj reklame",
+	"admanager_Page": "Stranice",
+	"admanager_Category": "Kategorije",
+	"admanager_added": "Vaše promjene su sačuvane.",
+	"admanager_addedzone": "Dodana zona $1",
+	"admanager_removedzone": "Uklonjena zona $1",
+	"admanager_nozonesadded": "Nijedna zona nije dodata.",
+	"admanager_nozonesremoved": "Nijedna zona nije uklonjena.",
+	"admanager_zonenum": "Zona #:$1"
+}

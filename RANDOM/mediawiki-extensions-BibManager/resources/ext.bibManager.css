@@ -1,0 +1,161 @@
+span.bibmanager-citation {
+	position:relative;
+	color: black;
+	cursor:help;
+}
+
+span.bibmanager-citation > span {
+	background-color: #FAFAFA;
+	display:none;
+	text-decoration: none;
+	position: absolute; 
+	top: 15px;
+	left: 20px;
+	width: 350px;
+	z-index: 100;
+	border:3px dotted #555;
+	padding:10px;
+	text-align: left;
+}
+
+span.bibmanager-citation:hover > span {
+	display: block;
+}
+
+span.bm_icon_link{
+	display: inline;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 16px;
+	height: 16px;
+	border: none;
+	padding: 0;
+	margin-left: 5px;
+}
+
+.bm-icon {
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+	text-indent: -9999px;
+	overflow: hidden;
+	margin: 4px;
+}
+
+.bm-icon .bm-icon-book {
+	/*@embed*/
+	background-image: url(images/book.png);
+}
+
+.bm-icon .bm-icon-cross {
+	/*@embed*/
+	background-image: url(images/cross.png);
+}
+
+.bm-icon .bm-icon-disk {
+	/*@embed*/
+	background-image: url(images/disk.png);
+}
+
+.bm-icon .bm-icon-link {
+	/*@embed*/
+	background-image: url(images/link.png);
+}
+
+.bm-icon .bm-icon-link_error {
+	/*@embed*/
+	background-image: url(images/link_error.png);
+}
+
+.bm-icon .bm-icon-pencil {
+	/*@embed*/
+	background-image: url(images/pencil.png);
+}
+
+#bm_form input:focus,
+#bm_form textarea:focus,
+#bm_form select:focus {
+	border-color: #99F;
+}
+
+#bm_form .error {
+	font-size: small;
+}
+
+#bm_form .mw-label {
+	font-style: italic;
+	vertical-align: middle;
+	padding-right: 5px;
+}
+
+input[readonly] {
+	color: #AAA;
+	background-color: #FAFAFA;
+}
+
+#bm_table a.icon {
+	position: relative;
+	width: 16px;
+	text-indent: 9999px;
+	margin: 3px;
+	background-repeat: no-repeat;
+	display: inline-block;
+	overflow: hidden;
+}
+
+#bm_table a.edit {
+	/*@embed*/
+	background-image: url(images/pencil.png);
+}
+
+#bm_table a.delete {
+	/*@embed*/
+	background-image: url(images/cross.png);
+}
+
+#bm_table a.export {
+	/*@embed*/
+	background-image: url(images/disk.png);
+}
+
+#bm_delete th {
+	text-align: right;
+	background-color: #EEE;
+}
+
+#bm_table table th {
+	background-color: #EEE;
+	border: 1px solid #BBB;
+}
+
+#bm_table table, #bm_delete {
+	border-collapse: collapse;
+	margin: 10px 0;
+	border: 1px solid #BBB;
+}
+
+#bm_table th,
+#bm_table td,
+#bm_delete th,
+#bm_delete td{
+	padding: 5px;
+	border: 1px solid #BBB;
+}
+
+table.bm_list_table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table.bm_list_table td{
+	padding: 3px;
+}
+
+table.bm_list_table tr:hover {
+	background-color: #FCFCFC;
+}
+
+.bm-create-posttext {
+	margin-top: 15px;
+}

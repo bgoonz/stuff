@@ -1,0 +1,17 @@
+/* Enforce a minimum width for items that are very narrow (e.g. the pipe character '|')
+   or indeed of zero width (e.g. combining marks like U+0308) to make them clickable. */
+.client-js .mw-charinsert-item {
+	min-width: 0.5em;
+	display: inline-block;
+	text-align: center;
+}
+
+/* Make it appear non-link like for non-js clients */
+.client-nojs .mw-charinsert-item {
+	color: #000;
+	cursor: text;
+}
+
+.client-nojs .mw-charinsert-item:hover {
+	text-decoration: none;
+}

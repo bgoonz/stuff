@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Helix84",
+			"Luky001",
+			"Sudo77(new)",
+			"TomášPolonec",
+			"Vlad5250"
+		]
+	},
+	"admanager": "Správca reklám",
+	"admanagerzones": "Zóny správcu reklám",
+	"admanager-desc": "Poskytuje [[Special:AdManager|špeciálnu stránku]], ktorá umožňuje správcom nastaviť zóny stránok alebo kategórií",
+	"admanager_docu": "Ak chcete pridať alebo odstrániť reklamnú zónu stránky alebo celej kategórie, pridajte alebo odstráňte názov danej stránky alebo kategórie nižšie.",
+	"admanagerzones_docu": "Zadajte číslo každej reklamnej zóny na samostatnom riadku.",
+	"admanager_invalidtargetpage": "Žiadna stránka s názvom „$1“.",
+	"admanager_invalidtargetcategory": "Žiadna kategória s názvom „$1“.",
+	"admanager_labelPage": "Názvy stránok",
+	"admanager_labelCategory": "Názvy kategórií",
+	"admanager_submit": "Odoslať",
+	"admanager_noads": "Nezobrazovať reklamy",
+	"admanager_Page": "Stránky",
+	"admanager_Category": "Kategórie",
+	"admanager_added": "Vaše úpravy boli uložené",
+	"admanager_addedzone": "Pridaná zóna $1.",
+	"admanager_nozonesadded": "Neboli pridané žiadne zóny.",
+	"admanager_nozonesremoved": "Neboli odstránené žiadne zóny.",
+	"admanager_zonenum": "Zóna #:$1",
+	"admanager_zonenotnumber": "Chyba! $1 nie je číslo.",
+	"admanager_gotoads": "[[Special:AdManager|Upraviť umiestnenie reklamy]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Upraviť zóny reklám]]"
+}

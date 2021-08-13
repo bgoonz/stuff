@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dj",
+			"Glanthor Reviol",
+			"Wolf Rex"
+		]
+	},
+	"ajaxpoll-desc": "AJAX alapú közvélemény-kutatás <code>&lt;poll&gt;</code> cimkével",
+	"ajaxpoll-tracking-category": "Közvélemény-kutatást tartalmazó lapok",
+	"ajaxpoll-vote-update": "A szavazatod frissítve.",
+	"ajaxpoll-vote-add": "A szavazatod rögzítve.",
+	"ajaxpoll-vote-error": "Hiba történt a szavazás feldolgozása során, próbáld meg később.",
+	"ajaxpoll-percent-votes": "Az összes szavazat $1%-a",
+	"ajaxpoll-your-vote": "Már szavaztál a \"$1\"-re ekkor: $4 $3 Megváltoztathatod a szavazatodat egy másik válaszra kattintva.",
+	"ajaxpoll-no-vote": "Kérlek szavazz alant.",
+	"ajaxpoll-no-vote-results-after-voting": "Alább szavazhatsz. Az eredményeket szavazatod leadása után láthatod.",
+	"ajaxpoll-info": "Összesen {{PLURAL:$1|egy|$1}} szavazat érkezett a $2 óta.",
+	"ajaxpoll-submitting": "Kérlek várj a szavazatod elküldésére.",
+	"ajaxpoll-vote-permission": "Nem vagy jogosult szavazni.",
+	"ajaxpoll-view-results-permission": "Nincs jogosultságod az eredmények megtekintéséhez.",
+	"ajaxpoll-view-results-before-vote-permission": "Amíg nem szavaztál, nem láthatod az eredményeket.",
+	"ajaxpoll-revoke-vote": "Vissza akarom vonni a szavazatomat",
+	"ajaxpoll-vote-revoked": "Sikeresen visszavontad a szavazatodat.",
+	"right-ajaxpoll-vote": "Szavazhat az AJAX alapú közvélemény-kutatásokban"
+}

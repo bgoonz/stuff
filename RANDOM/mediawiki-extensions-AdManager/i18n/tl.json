@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"AnakngAraw"
+		]
+	},
+	"admanager": "Tagapamahala ng Patalastas",
+	"admanagerzones": "Mga Sona ng Tagapamahala ng Anunsiyo",
+	"admanager-desc": "Nagbibigay ng isang [[Special:AdManager|natatanging pahina]] na nagpapahintulot sa mga tagapagpaandar ng sistema na magtakda ng sona para sa mga pahina o mga kategorya",
+	"admanager_docu": "Upang makapagdagdag o makapagtanggal ng sona ng anunsiyo ng isang pahina o buong kategorya, idagdag o tanggalin ang pamagat nito sa ibaba.",
+	"admanagerzones_docu": "Ipasok ang bawat isang bilang na pangsona ng anunsiyo sa ibabaw ng sarili nitong guhit.",
+	"admanager_invalidtargetpage": "Walang pahinang natagpuan na mayroong pamagat na \"$1\".",
+	"admanager_invalidtargetcategory": "Walang kategoryang natagpuan na mayroong pamagat na \"$1\".",
+	"admanager_notable": "Kamalian! Hindi natagpuan ang isang kinakailangang talahanayan ng kalipunan ng dato! Patakbuhin muna ang update.php.",
+	"admanager_noAdManagerZones": "Pagkakamali! Dapat kang magdagdag ng ilang mga sona ng patalastas. Ipasok ang mga ito roon sa [[Special:AdManagerZones|Mga Sona ng Tagapamahala ng Patalastas]].",
+	"admanager_labelPage": "Mga pamagat ng pahina",
+	"admanager_labelCategory": "Mga pangalan ng kategorya",
+	"admanager_submit": "Ipasa",
+	"admanager_noads": "Huwag magpakita ng mga patalastas",
+	"admanager_Page": "Mga pahina",
+	"admanager_Category": "Mga kategorya",
+	"admanager_added": "Nasagip na ang mga binago mo",
+	"admanager_addedzone": "Idinagdag ang sonang",
+	"admanager_zonenum": "Sona #: $1",
+	"admanager_zonenotnumber": "Kamalian! Ang $1 ay hindi isang bilang.",
+	"admanager_return": "Bumalik sa [[Special:AdManager|Tagapamahala ng Patalastas]]",
+	"admanager_gotoads": "[[Special:AdManager|Baguhin ang pagkakalagay ng patalastas]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Baguhin ang mga sona ng patalastas]]",
+	"right-admanager": "[[Special:AdManager|Pamahalaan ang pagkakaayos ng pag-aanunsiyo]]"
+}

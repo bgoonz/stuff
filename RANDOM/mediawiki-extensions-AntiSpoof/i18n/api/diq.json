@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"1917 Ekim Devrimi"
+		]
+	},
+	"apihelp-antispoof-description": "Verê kontrolê normalizasyonê AntiSpoofi yew namey karberi kontrol kerê",
+	"apihelp-antispoof-summary": "Verê kontrolê normalizasyonê AntiSpoofi yew namey karberi kontrol kerê",
+	"apihelp-antispoof-param-username": "AntiSpoofi dê reyna namey karberi kontrol kerê",
+	"apihelp-antispoof-example-1": "Verê AntiSpoofi \"Misal\" namey karberi kontrol kerê",
+	"apihelp-createaccount-param-ignoreantispoof": "Çekme xapeynayışi mehesıbne heqê (<code>override-antispoof</code> wazeno )."
+}

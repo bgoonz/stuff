@@ -1,0 +1,10 @@
+#AllTimeZones lets you show time in all timezones.
+
+#To install place this directory in your extensions directory and add the following line in your LocalSettings.php file in the bottom
+
+  include_once('extensions/AllTimeZones/AllTimeZones.php');
+	
+	
+#More information can be found at www.mediawiki.org/wiki/Extensions:AllTimeZones
+
+#Feedback is most welcomed on the discussion page of the extension or on the github page

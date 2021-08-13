@@ -1,0 +1,84 @@
+fieldset.controlGroup.datasources-page
+    legend.accordion-toggle(data-toggle="collapse", data-target="form.form-horizontal") Add New Data Source
+    form.form-horizontal.collapse(data-bind="submit: newDataSource, with: blankDataSource, css: { 'in': showAddForm, 'out': hideAddForm }")
+        .control-group
+            label.control-label(for="type") Type of File
+            .controls
+                select(id="type", data-bind="value: type", required)
+                    option(value="timeseries") Timeseries
+                    option(value="series") Series
+                    option(value="mobile_device_by_geo") Special: Pivoted Geographical
+                    option(value="wikimetrics_timeseries") Special: Wikimetrics Timeseries
+            .control-group
+                label.control-label(for="format") Format of Data
+                .controls
+                    select(id="format", data-bind="value: format", required)
+                        option(value="csv") Comma Separated Values
+                        option(value="tsv") Tab Separated Values
+                        option(value="json") JSON
+                        option(value="jsonp") JSONp
+                        option(value="xml") XML
+                        //- option(value="log") Custom format, gets Pre-Parsed
+        .control-group
+            label.control-label(for="url") Datafile URL
+            .controls
+                input(type="text", id="url", placeholder="relative or absolute url", data-bind="value: url", required)
+        .control-group
+            label.control-label(for="slug") Unique Id
+            .controls
+                input(type="text", id="slug", placeholder="unique id: must_look_like_this", data-bind="value: slug", required, pattern="^[a-z0-9_]+$")
+        .control-group
+            label.control-label(for="name") Name
+            .controls
+                input(type="text", id="name", placeholder="name", data-bind="value: name", required)
+        .control-group
+            label.control-label(for="shortName") Short Name
+            .controls
+                input(type="text", id="shortName", placeholder="short name", data-bind="value: shortName")
+        .control-group
+            h4 Metrics in Datafile
+            a.btn(data-bind="click: $parent.addMetric") Add Metric
+            .control-group(data-bind="foreach: columns")
+                .controls.controls-row
+                    span(data-bind="text: $index")
+                    input.span1(type="text", required, placeholder="id", data-bind="value: id()")
+                    input.span3(type="text", required, placeholder="column heading", data-bind="value: label()")
+                    input.span2(type="text", required, placeholder="data type (int, Date, float)", data-bind="value: type()")
+                    a.btn(data-bind="click: $parents[1].removeMetricFrom($parent)") Remove
+        .form-actions
+            button.btn.btn-primary.save(type="submit") Save
+            span.pull-right(data-bind="text: $parent.message")
+
+
+h3 Search Datasources
+.navbar
+    .navbar-inner
+        .navbar-search
+            input.search-query.datasourceSearch(data-bind="value: filter", placeholder="filter by id or name")
+
+table.table.table-striped
+    thead(data-bind="if: model().length == 0"): tr: th Loading all the datasources...
+    tbody(data-bind="foreach: filteredModel")
+        tr
+            td
+                .btn-group
+                    button.btn(data-bind="click: $parent.visualizeLineGraph") Visualize
+                    button.btn.dropdown-toggle(data-toggle="dropdown")
+                        span.caret
+                    ul.dropdown-menu
+                        li: a(href="#", data-bind="click: $parent.visualizeLineGraph") as Line Graph
+                        li: a(href="#", data-bind="click: $parent.visualizeWorldMap") as World Map
+            td
+                span(data-bind="text: id")
+            td
+                span(data-bind="text: name")
+
+
+.modal.hide.visualizeDialog(data-backdrop="false", data-bind="if: visualizeDialog")
+    .modal-header
+        button.close(data-dismiss="modal", aria-hidden="true") &times;
+        h3 Quick Peek
+    .modal-body
+        section(data-bind="subview: visualizeDialog")
+    .modal-footer
+        a.btn.btn-primary(data-dismiss="modal") Close

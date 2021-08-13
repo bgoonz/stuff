@@ -1,0 +1,4 @@
+exports import datasource       = require './datasource'
+exports import datasource_cache = require './datasource-cache'
+exports import datasource_view  = require './datasource-view'
+

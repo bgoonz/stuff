@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Crazy1880",
+			"Kghbln"
+		]
+	},
+	"apihelp-antispoof-description": "Einen Benutzernamen in die Normalisierungsprüfung der Erweiterung AntiSpoof aufnehmen.",
+	"apihelp-antispoof-summary": "Einen Benutzernamen in die Normalisierungsprüfung der Erweiterung AntiSpoof aufnehmen.",
+	"apihelp-antispoof-param-username": "Der Benutzername, der mit der Erweiterung AntiSpoof geprüft werden soll.",
+	"apihelp-antispoof-example-1": "Den Benutzernamen „Foo“ mit der Erweiterung AntiSpoof überprüfen.",
+	"apihelp-createaccount-param-ignoreantispoof": "Ignoriert die Prüfung auf Spoofing (erfordert die Berechtigung <code>override-antispoof</code>)."
+}

@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aefgh39622"
+		]
+	},
+	"apihelp-pollsubmitvote-description": "โมดูล API ของ AJAXPoll",
+	"apihelp-pollsubmitvote-summary": "โมดูล API ของ AJAXPoll",
+	"ajaxpoll-desc": "อนุญาตโพลที่ใช้ AJAX ที่มีป้ายกำกับ <code>&lt;poll&gt;</code>",
+	"ajaxpoll-tracking-category": "หน้าที่มีโพล",
+	"ajaxpoll-tracking-category-desc": "หน้านี้มี<code>&lt;โพล&gt;</code>",
+	"ajaxpoll-vote-update": "อัปเดตการลงคะแนนของคุณแล้ว",
+	"ajaxpoll-vote-add": "เพิ่มการลงคะแนนของคุณแล้ว",
+	"ajaxpoll-vote-error": "มีปัญหาในการประมวลผลการลงคะแนนของคุณ โปรดลองอีกครั้ง",
+	"ajaxpoll-percent-votes": "$1% ของการลงคะแนนทั้งหมด",
+	"ajaxpoll-your-vote": "คุณลงคะแนนสำหรับ \"$1\" แล้วเมื่อ $3 เวลา $4 คุณสามารถเปลี่ยนการลงคะแนนของคุณได้โดยคลิกคำตอบอื่นที่อยู่ด้านล่าง",
+	"ajaxpoll-no-vote": "โปรดลงคะแนนด้านล่าง",
+	"ajaxpoll-no-vote-results-after-voting": "โปรดลงคะแนนด้านล่าง ผลลัพธ์จะถูกแสดงเมื่อคุณได้ลงคะแนนแล้ว",
+	"ajaxpoll-info": "มี {{PLURAL:$1|$1 การลงคะแนน}}ตั้งแต่โพลถูกสร้างเมื่อ $2",
+	"ajaxpoll-submitting": "โปรดรอสักครู่ กำลังส่งการลงคะแนนของคุณ",
+	"ajaxpoll-vote-permission": "คุณไม่มีสิทธิลงคะแนน",
+	"ajaxpoll-view-results-permission": "คุณไม่มีสิทธิดูผลลัพธ์ของโพลนี้",
+	"ajaxpoll-view-results-before-vote-permission": "คุณไม่มีสิทธิดูผลลัพธ์ของโพลนี้ก่อนที่คุณจะลงคะแนน",
+	"ajaxpoll-revoke-vote": "ฉันต้องการยกเลิกการลงคะแนนของฉัน",
+	"ajaxpoll-vote-revoked": "ยกเลิกการลงคะแนนของคุณแล้ว",
+	"right-ajaxpoll-vote": "สามารถลงคะแนนในโพลที่ใช้ AJAX ได้",
+	"right-ajaxpoll-view-results": "สามารถดูผลลัพธ์ในโพลที่ใช้ AJAX ได้",
+	"right-ajaxpoll-view-results-before-vote": "สามารถดูผลลัพธ์ในโพลที่ใช้ AJAX ก่อนที่จะมีการลงคะแนนได้",
+	"action-ajaxpoll-vote": "ลงคะแนนในโพลที่ใช้ AJAX",
+	"action-ajaxpoll-view-results": "ดูผลลัพธ์ในโพลที่ใช้ AJAX",
+	"action-ajaxpoll-view-results-before-vote": "ดูผลลัพธ์ในโพลที่ใช้ AJAX ก่อนที่จะมีการลงคะแนน"
+}

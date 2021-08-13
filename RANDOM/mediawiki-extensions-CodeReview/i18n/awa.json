@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"1AnuraagPandey"
+		]
+	},
+	"code-rev-title": "$1 - कोड समीक्षा",
+	"code-comments": "टिपण्णी",
+	"code-change-removed": "हटाइ गय:",
+	"code-change-added": "जोडि गय:",
+	"code-old-status": "पुरान स्थिति",
+	"code-new-status": "नँवा स्थिति",
+	"code-prop-changes": "स्थिति औ लॉग टैगिंग",
+	"codereview-desc": "[[Special:Code|कोड समीक्षा उपकरण]] [[Special:RepoAdmin|सबवर्ज़न समर्थन]] कय साथे",
+	"code-no-repo": "कवनो भंडार कॉन्फ़िगर नाइ कइ गय!",
+	"code-create-repo": "[[Special:RepoAdmin|रेपोएडमिन]] को जाएँ भंडार निर्माण के लिए",
+	"code-repo-not-found": "भंडार '''$1''' मौजूद नाइ है!",
+	"code-load-diff": "लोडिंग अंतर...",
+	"code-notes": "हालीए कय टिप्पणियाँ",
+	"code-statuschanges": "स्थिति परिवर्तन",
+	"code-mycommits": "हमार प्रयास",
+	"code-mycomments": "हमार टिप्पणि",
+	"code-authors": "लेखक",
+	"code-status": "स्थिती",
+	"code-tags": "टैग",
+	"code-tags-no-tags": "इस भंडार में कोई टैग मौजूद नहीं ।",
+	"code-author-link": "लिंक?",
+	"code-author-unlink": "अनलिंक ?"
+}

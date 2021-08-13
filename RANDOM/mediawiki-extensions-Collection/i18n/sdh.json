@@ -1,0 +1,38 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kurdbuddha",
+			"Paraw2"
+		]
+	},
+	"coll-collection": "پرتووک",
+	"coll-collections": "پرتووکەیل",
+	"coll-your_book": "پرتووکەگەت",
+	"coll-remove": "لاوردن",
+	"coll-show": "نیشانی بیە",
+	"coll-move_up": "بچووە سەرەو",
+	"coll-move_down": "بچووە ژێرەو",
+	"coll-subtitle": "ژێرنۊس",
+	"coll-yes": "بەڵێ",
+	"coll-no": "نە",
+	"coll-print_export": "چاپ/ناردن",
+	"coll-create_a_book": "درسکردن کتاوێگ",
+	"coll-book_creator": "کتاو ساز",
+	"coll-download_as": "داگرتن چۊ $1",
+	"coll-disable": "لەکارخستن",
+	"coll-book_creator_disable": "کتاوساز لە کار بخە",
+	"coll-book_creator_disable_tooltip": "ئسفادەکردن لە درسکەر کتاو تواو بکە",
+	"coll-add_this_page": "ئەی پەڕە وە کتاوەگەت ئزافە بکە",
+	"coll-add_page_tooltip": "ئەی پەڕە ویکییە ئزافە بکە وە کتاوەگەت",
+	"coll-help": "کۆمەک",
+	"coll-help_tooltip": "یارمەتی درسکردن کتاوەگان نیشان بیە",
+	"coll-helppage": "Help:کتاوەگان",
+	"coll-n_pages": "$1 {{PLURAL:$1|پەڕە}}",
+	"coll-remove_this_page": "ئەی پەڕە لە پێڕست کتاوەگەت بسڕەو",
+	"coll-show_collection": "کتاوەگان نیشان بیە",
+	"coll-show_collection_tooltip": "ئەڕاێ وێراشتەکردن/داگرتن/سفارشت کتاوەگەت کلیک بکە",
+	"coll-make_suggestions": "پەڕەگان پێشنیار بکە",
+	"coll-setting-toc-yes": "بەڵێ",
+	"coll-setting-toc-no": "نە",
+	"coll-image-attribution": "<b>$1</b> <i>سەرچاوە:</i> $2 <i>مۆڵەتنامە:</i> $3 <i>بەشداربۊه‌یل:</i> $4 <i>ھنەرمەند ئەسلی:</i> $5"
+}

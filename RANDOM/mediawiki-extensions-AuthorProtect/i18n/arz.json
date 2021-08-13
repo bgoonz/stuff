@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Meno25"
+		]
+	},
+	"authorprotect": "احمى الصفحة من غير المؤلفون",
+	"authorprotect-desc": "يسمح لمؤلف الصفحة بأن يحميها من المستخدمين الآخرين",
+	"authorprotect-notauthor": "{{GENDER:$1|انت}} لست {{GENDER:$1|مؤلف}} هذه الصفحة",
+	"authorprotect-confirm": "تغيير مستويات الحماية",
+	"authorprotect-edit": "احصر التعديل للمؤلفين",
+	"authorprotect-move": "احصر النقل للمؤلفين",
+	"authorprotect-intro": "استخدم هذه الاستمارة لتقفل هذه الصفحة عن غير المؤلفين",
+	"authorprotect-success": "نجحت الحماية!",
+	"protect-level-author": "احمى من غير المؤلفين",
+	"restriction-level-author": "حماية المؤلف"
+}

@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Rex"
+		]
+	},
+	"absenteelandlord-reason": "Basis data telah dikunci secara otomatis karena ketidakaktifan para opsis.",
+	"absenteelandlord-desc": "Mengunci basis data wiki secara otomatis jika seluruh opsis tidak aktif selama periode tertentu."
+}

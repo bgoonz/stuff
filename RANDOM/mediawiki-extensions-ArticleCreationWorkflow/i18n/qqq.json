@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Liuxinyu970226"
+		]
+	},
+	"acw-desc": "{{desc|name=ArticleCreationWorkflow|url=https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ArticleCreationWorkflow}}",
+	"action-createpagemainns": "{{doc-action|createpagemainns}}",
+	"right-createpagemainns": "{{doc-right|createpagemainns}}\nRight to create pages in the main namespace"
+}

@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Adam-Yourist"
+		]
+	},
+	"antispoof-conflict-top": "ЦIи «$1» сов тарра я {{PLURAL:$2|1=укх доакъашхочун цIерах|укх доакъашхой цIерех}}:",
+	"antispoof-conflict-bottom": "Боккъала, кхыйола цIи харжа.",
+	"antispoof-name-illegal": "«$1» цIи лелаяр могадаьдац кхычарца тувлаергйоацаш: $2.\nБоккъала, кхыйола цIи харжа.",
+	"antispoof-badtype": "Нийсадоаца дарий тайпа",
+	"antispoof-empty": "цхьаккха символ йоаллац",
+	"antispoof-prohibited": "укхунах йоалл Iаьржача хьаязъяьра чура символ: $1"
+}

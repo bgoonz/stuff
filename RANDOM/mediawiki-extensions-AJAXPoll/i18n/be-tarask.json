@@ -1,0 +1,39 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jim-by",
+			"Red Winged Duck",
+			"Renessaince",
+			"Wizardist"
+		]
+	},
+	"apihelp-pollsubmitvote-description": "AJAXPoll API-модуль",
+	"apihelp-pollsubmitvote-summary": "API-модуль AJAXPoll",
+	"apihelp-pollsubmitvote-param-poll": "Ідэнтыфікатар апытаньня, такі як 832A5FA2C2583A5732B90CEFF658FE25; ідэнтыфікатары фармуюцца хэшаваньнем уводу (пытаньне + парамэтры адказу, напрыклад, тэкст паміж тэгамі <code>&lt;poll&gt;...&lt;/poll&gt;</code>) з альгарытмам хэшаваньня MD5 і канвэртацыяй выніку ў ВЕРХНІ РЭГІСТАР з дапамогай функцыі PHP <code>strtoupper</code>",
+	"apihelp-pollsubmitvote-param-answer": "Лікавы ідэнтыфікатар вэрсіі адказу; ужывайце 0, каб адклікаць раней пададзены голас",
+	"apihelp-pollsubmitvote-example-1": "Даслаць трэці (3) адказ на апытаньне, які мае ідэнтыфікатар 832A5FA2C2583A5732B90CEFF658FE25",
+	"ajaxpoll-desc": "Дазваляе AJAX-апытаньні, якія можна дадаць тэгам <code>&lt;poll&gt;</code>",
+	"ajaxpoll-tracking-category": "Старонкі з апытаньнямі",
+	"ajaxpoll-tracking-category-desc": "На старонцы ёсьць <code>&lt;poll&gt;</code>.",
+	"ajaxpoll-vote-update": "Ваш голас быў абноўлены.",
+	"ajaxpoll-vote-add": "Ваш голас быў даданы.",
+	"ajaxpoll-vote-error": "Адбылася памылка падчас захаваньня Вашага голасу, калі ласка, паспрабуйце яшчэ.",
+	"ajaxpoll-percent-votes": "$1% ад усіх галасоў",
+	"ajaxpoll-your-vote": "Вы ўжо прагаласавалі за варыянт «$1» у $4 $3. Вы можаце зьмяніць свой выбар, націснуўшы адзін з пададзеных ніжэй адказаў.",
+	"ajaxpoll-no-vote": "Калі ласка, прагаласуйце ніжэй.",
+	"ajaxpoll-no-vote-results-after-voting": "Прагаласуйце, калі ласка, ніжэй. Вынікі зьявяцца, як прагаласуеце.",
+	"ajaxpoll-info": "З моманту стварэньня галасаваньня $2 {{PLURAL:$1|пададзены $1 голас|пададзеныя $1 галасы|пададзена $1 галасоў}}.",
+	"ajaxpoll-submitting": "Калі ласкай, чакайце, ваш голас дадаецца.",
+	"ajaxpoll-vote-permission": "Вы ня можаце галасаваць.",
+	"ajaxpoll-readonly": "У гэтым галасаваньні немагчыма прагаласаваць, база зьвестак заблякаваная з прычыны: $1.",
+	"ajaxpoll-view-results-permission": "Вы ня можаце праглядаць вынікі гэтага апытаньня.",
+	"ajaxpoll-view-results-before-vote-permission": "Вы ня можаце праглядаць вынікі гэтага апытаньня, пакуль не прагаласуеце.",
+	"ajaxpoll-revoke-vote": "Я хачу адклікаць мой голас",
+	"ajaxpoll-vote-revoked": "Ваш голас быў адкліканы.",
+	"right-ajaxpoll-vote": "магчымасьць галасаваць у AJAX-апытаньнях",
+	"right-ajaxpoll-view-results": "Можа праглядаць вынікі AJAX-апытаньняў",
+	"right-ajaxpoll-view-results-before-vote": "Можа праглядаць вынікі AJAX-апытаньняў да галасаваньня",
+	"action-ajaxpoll-vote": "ўдзел у AJAX-галасаваньнях",
+	"action-ajaxpoll-view-results": "прагляд вынікаў AJAX-апытаньняў",
+	"action-ajaxpoll-view-results-before-vote": "прагляд вынікаў AJAX-аптыаньняў да вашага галасаваньня"
+}

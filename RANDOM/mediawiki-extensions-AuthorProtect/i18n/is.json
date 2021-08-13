@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"S.Örvarr.S",
+			"Snævar",
+			"Sveinn í Felli"
+		]
+	},
+	"authorprotect": "Vernda síðu gegn öðrum en höfundum hennar",
+	"authorprotect-desc": "Heimilar höfundi síðu að vernda hana gegn öðrum notendum",
+	"authorprotect-notauthor": "{{GENDER:$1|Þú}} ert ekki {{GENDER:$1|höfundur}} þessarar síðu.",
+	"authorprotect-confirm": "Breyta verndarstigum",
+	"authorprotect-edit": "Takamarka síðubreytingar við höfunda",
+	"authorprotect-move": "Takamarka síðufæringar við höfunda",
+	"authorprotect-intro": "Notaðu þetta eyðublað til að loka þessari síðu fyrir öðrum en höfunum hennar",
+	"authorprotect-success": "Verndun heppnaðist!",
+	"protect-level-author": "Vernda gegn öðrum en höfundum",
+	"restriction-level-author": "Höfundavarið",
+	"action-authorprotect": "vernda frá öðrum en höfundum",
+	"right-authorprotect": "Vernda síður höfunda",
+	"right-author": "Breyta síðum sem varðar eru af höfundum"
+}

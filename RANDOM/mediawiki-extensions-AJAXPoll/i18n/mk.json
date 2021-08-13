@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06",
+			"McDutchie"
+		]
+	},
+	"apihelp-pollsubmitvote-description": "Приложнички модиул за Анкета со AJAX",
+	"apihelp-pollsubmitvote-summary": "модиул за Анкета со AJAX",
+	"apihelp-pollsubmitvote-param-poll": "Назнака на анкетата, како 832A5FA2C2583A5732B90CEFF658FE25; назнаките се образуваат со тарабење на вносот (прашање + можни одговори, т.е. текстот помеѓу ознаките <code>&lt;poll&gt;...&lt;/poll&gt;</code>) со тарабен алгоритам MD5 и претворање на исходот во ГОЛЕМИ БУКВИ со функцијата <code>strtoupper</code> на PHP",
+	"apihelp-pollsubmitvote-param-answer": "Назнака на бројчениот одговор; 0 за да отповикате претходно даден глас",
+	"apihelp-pollsubmitvote-example-1": "Поднеси го третиот (3) одговор во анкетата што ја има назнаката 832A5FA2C2583A5732B90CEFF658FE25",
+	"ajaxpoll-desc": "Овозможува анкети на основа на AJAX со ознаката <code>&lt;poll&gt;</code>",
+	"ajaxpoll-tracking-category": "Страници со анкета",
+	"ajaxpoll-tracking-category-desc": "Страницата има <code>&lt;poll&gt;</code>.",
+	"ajaxpoll-vote-update": "Вашиот глас е подновен.",
+	"ajaxpoll-vote-add": "Вашиот глас е додаден.",
+	"ajaxpoll-vote-error": "Се појави проблем при обработката на вашиот глас. Обидете се повторно.",
+	"ajaxpoll-percent-votes": "$1% од вкупниот број на гласови",
+	"ajaxpoll-your-vote": "Веќе имате гласано за „$1“ на $3 во $4; можете да го промените гласот стискајќи на еден од одговорите подолу.",
+	"ajaxpoll-no-vote": "Гласајте подолу.",
+	"ajaxpoll-no-vote-results-after-voting": "Дајте го вашиот глас подолу. Исходот ќе се прикаже откако ќе гласате.",
+	"ajaxpoll-info": "Откако е создадена анкетата ($2) {{PLURAL:$1|даден еден глас|дадени се $1 гласа}}.",
+	"ajaxpoll-submitting": "Почекајте, го заведувам вашиот глас.",
+	"ajaxpoll-vote-permission": "Не можете да гласате.",
+	"ajaxpoll-readonly": "На оваа анкета не може да се гласа бидејќи. Базата е заклучена од следнава причина: $1.",
+	"ajaxpoll-view-results-permission": "Немате право да го гледате исходот од анкетава.",
+	"ajaxpoll-view-results-before-vote-permission": "Немате право да го гледате исходот од анкетава пред да гласате.",
+	"ajaxpoll-revoke-vote": "Сакам да го повлечам гласот",
+	"ajaxpoll-vote-revoked": "Вашиот глас е повлечен.",
+	"right-ajaxpoll-vote": "Може да гласа на анкети на основа на AJAX.",
+	"right-ajaxpoll-view-results": "Може да гледа исходи од анкети со AJAX",
+	"right-ajaxpoll-view-results-before-vote": "Може да гледа исходи од анкети со AJAX без да има гласано",
+	"action-ajaxpoll-vote": "гласање во анкети со AJAX",
+	"action-ajaxpoll-view-results": "преглед на исход од анкети со AJAX",
+	"action-ajaxpoll-view-results-before-vote": "преглед на исходи од анкети со AJAX пред да се гласа"
+}

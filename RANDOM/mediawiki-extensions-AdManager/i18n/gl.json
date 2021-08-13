@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"Breogan2008",
+			"Elisardojm",
+			"Toliño"
+		]
+	},
+	"admanager": "Xestor de anuncios",
+	"admanagerzones": "Xestor das zonas de anuncios",
+	"admanager-desc": "Proporciona unha [[Special:AdManager|páxina especial]] que permite aos administradores definir a zona das páxinas ou categorías",
+	"admanager_docu": "Para engadir ou eliminar a zona de anuncios dunha páxina ou categoría enteira, engada ou elimine o título da páxina ou da categoría a continuación.",
+	"admanagerzones_docu": "Escriba cada número de zona de anuncios na súa propia liña.",
+	"admanager_invalidtargetpage": "Non se atopou ningunha páxina co título \"$1\".",
+	"admanager_invalidtargetcategory": "Non se atopou ningunha categoría co título \"$1\".",
+	"admanager_notable": "Erro! Non se atopou a táboa da base de datos necesaria para continuar! Execute update.php primeiro.",
+	"admanager_noAdManagerZones": "Erro! Ten que engadir algunhas zonas de anuncios. Insíraas no [[Special:AdManagerZones|Xestor das zonas de anuncios]].",
+	"admanager_labelPage": "Títulos da páxinas",
+	"admanager_labelCategory": "Nomes da categorías",
+	"admanager_submit": "Enviar",
+	"admanager_noads": "Non amosar os anuncios",
+	"admanager_Page": "Páxinas",
+	"admanager_Category": "Categorías",
+	"admanager_added": "Gardáronse os seus cambios",
+	"admanager_addedzone": "Engadida zona $1",
+	"admanager_removedzone": "Zona $1 eliminada.",
+	"admanager_nozonesadded": "Non se engadiu ningunha zona.",
+	"admanager_nozonesremoved": "Non se eliminou ningunha zona.",
+	"admanager_zonenum": "Zona nº: $1",
+	"admanager_zonenotnumber": "Erro! \"$1\" non é un número.",
+	"admanager_return": "Volver ao [[Special:AdManager|Xestor de anuncios]]",
+	"admanager_gotoads": "[[Special:AdManager|Editar a posición do anuncio]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Editar as zonas dos anuncios]]",
+	"action-admanager": "xestionar configuración de anuncios",
+	"right-admanager": "[[Special:AdManager|Xestionar a configuración dos anuncios]]"
+}

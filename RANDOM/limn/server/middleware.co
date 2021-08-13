@@ -1,0 +1,381 @@
+#!/usr/bin/env coco
+
+url                     = require 'url'
+subproc = {exec, spawn} = require 'child_process'
+
+op                    = require 'operator'
+Seq                   = require 'seq'
+glob                  = require 'glob'
+yaml                  = require 'js-yaml'
+mkdirp                = require 'mkdirp'
+
+express               = require 'express'
+
+_                     = require 'underscore'
+_.mixin                 require 'underscore.nested'
+_.mixin                 require 'underscore.kv'
+_.str                 = require 'underscore.string'
+_.mixin                 _.str.exports()
+
+
+{readFilesAsync}      = require './files'
+Controller            = require './controller'
+view_helpers          = require './view-helpers'
+
+
+/**
+ * Limn project-internals
+ */
+{
+    MODULES,
+    BASE, SRC, STATIC, VIEWS, CSS, TEST,
+    NODE_ENV, IS_DEV, IS_PROD, LIMN_VARDIR, LIMN_DATA,
+    LIMN_CONFIG
+} = require '../sources'
+
+LOG_LEVEL = process.env.LIMN_LOG_LEVEL
+LOG_LEVEL or= if IS_DEV then 'INFO' else 'WARN'
+LOG_LEVEL .= toUpperCase()
+
+REV = process.env.LIMN_REV or 'HEAD'
+
+
+
+/**
+ * For authentication via passport js and OAuth
+ */
+users               = {}
+passport            = require 'passport'
+MediaWikiStrategy   = require 'passport-mediawiki-oauth' .OAuthStrategy;
+
+passport.serializeUser (user, done) -> done(null, user.id)
+passport.deserializeUser (id, done) -> done(null, users[id])
+
+passport.use 'mediawiki', new MediaWikiStrategy(
+    {
+        consumerKey: LIMN_CONFIG.mediawiki.consumerKey,
+        consumerSecret: LIMN_CONFIG.mediawiki.consumerSecret,
+        callbackURL: LIMN_CONFIG.mediawiki.callbackURL
+    },
+    (token, tokenSecret, profile, done) ->
+        user = users[profile.id] ?= profile
+        done(null, user)
+)
+
+
+/**
+ * Limn option defaults.
+ */
+DEFAULT_OPTIONS =
+    /**
+     * @name dataDir
+     * @type String
+     * Path to directory where data and metadata files are stored.
+     */
+    dataDir : LIMN_DATA
+    
+    /**
+     * @name varDir
+     * @type String
+     * Path to directory where derived files are written while in dev-mode.
+     */
+    varDir : LIMN_VARDIR
+    
+    /**
+     * @name proxy
+     * @type Object
+     */
+    proxy :
+        /**
+         * @name enabled
+         * @type Boolean
+         * Enables remote dataset proxy. If omitted, the proxy will be enabled
+         * if either `proxy.whitelist` or `proxy.blacklist` are set.
+         */
+        enabled : false
+        
+        /**
+         * @name whitelist
+         * @type Array<String|RegExp>
+         * Array of domain patterns to whitelist for proxy. Strings are matched
+         * via glob syntax, but regular expressions may also be passed. 
+         * If `proxy.enabled` is true but no whitelist is provided, it defaults to `['*']`.
+         */
+        whitelist : null
+        
+        /**
+         * @name blacklist
+         * @type Array<String|RegExp>
+         * Array of domain patterns to blacklist from proxying. Strings are matched
+         * via glob syntax, but regular expressions may also be passed.
+         */
+        blacklist : null
+    
+    /**
+     * @name staticMaxAge
+     * @type Object
+     * Max-Age of static files served by Limn. Object is a hash from NODE_ENV to
+     * expiry time in miliseconds, with a special key "default" that does what you
+     * expect.
+     */
+    staticMaxAge :
+        default     : 0
+        development : 0
+        production  : 108_000_000_ms # set a one month max-age for static files
+    
+
+
+
+
+# expose API
+exports = module.exports = limn
+
+
+/**
+ * Create a new instance of the Limn middleware.
+ * @param {Object} [options={}] Options:
+ */
+function limn(options)
+    app = express.createServer()
+    app = _.extend app, application
+    app.init options
+    app
+
+
+
+/**
+ * Application pseudo-prototype (as we don't actually inherit from the Express server).
+ */
+application = limn.application = 
+    
+    /**
+     * @constructor
+     */
+    init : (opts={}) ->
+        app   = this
+        @REV  = REV
+        @BASE = BASE
+        
+        ### setup options with defaults
+        opts = _.merge {}, DEFAULT_OPTIONS, opts
+        opx = opts.proxy
+        opx = opts.proxy = { enabled:opx } if typeof opx is 'boolean'
+        opx.enabled = true if opx.enabled is false and (opx.whitelist or opx.blacklist)
+        if opx.enabled
+            opx.whitelist or= <[ * ]>
+            opx.blacklist or= []
+        @set 'limn options', opts
+        
+        # create data directory
+        mkdirp.sync opts.dataDir
+        
+        
+        ### apply configuration
+        
+        @set 'view engine', 'jade'
+        
+        view_opts = {
+            layout  : false
+            config  : @set('limn options')
+            version : REV
+            IS_DEV, IS_PROD, REV
+        } import view_helpers
+        view_opts.__defineGetter__ 'mount', -> app.route or '/'
+        @set 'view options', view_opts
+        
+        @dynamicHelpers({
+            isAuthenticated: (req, res) -> req.isAuthenticated()
+            user: (req, res) -> req.user
+        })
+        
+        /**
+         * All environments: pre-process requests.
+         */
+        @configure ->
+            # Parse form submits into req.params
+            @use express.bodyParser()
+            
+            # Allow "spoofing" HTTP methods that IE doesn't support
+            @use express.methodOverride()
+        
+        
+        # development config
+        @configure 'development', ->
+            opts = {varDir, dataDir} = @set 'limn options'
+            
+            # turn on pretty-printing
+            @set('view options').pretty = true
+            @set('json spaces', 4)
+            
+            # import dev-only deps here, so prod users don't need them
+            browserify = require 'browserify'
+            compiler   = require 'connect-compiler-extras'
+            
+            # Browserify some deps
+            @use browserify do
+                mount   : '/vendor/browserify.js'
+                require : MODULES.browserify
+                cache   : "#varDir/.cache/browserify/cache.json"
+            
+            # transparently recompile modules that have changed
+            @use '/js/limn', compiler do
+                enabled : 'coco'
+                src     : SRC
+                dest    : "#varDir/js/limn"
+                log_level : LOG_LEVEL
+            @use '/css', compiler do
+                enabled : 'stylus'
+                src     : CSS
+                dest    : "#varDir/css"
+                options : stylus : { +nib, include:CSS }
+                allowed_methods : <[ GET HEAD ]>
+                log_level : LOG_LEVEL
+            
+            # Support dynamic resources in tests
+            @use '/js/limn/test', compiler do
+                enabled : <[ coco stylus jade-browser jade ]>
+                src     : TEST
+                dest    : "#varDir/js/limn/test"
+                options : stylus : { +nib, include:CSS }
+                allowed_methods : <[ GET HEAD ]>
+                log_level : LOG_LEVEL
+            
+            # Wrap modules in AMD/CommonJS closure for browser
+            @use compiler do
+                enabled : <[ amd commonjs_define ]>
+                src     : STATIC
+                dest    : varDir
+                options :
+                    amd             : { drop_path_parts:1, drop_full_ext:false }
+                    commonjs_define : { drop_path_parts:1, drop_full_ext:false }
+                log_level : LOG_LEVEL
+            @use compiler do
+                enabled : <[ amd commonjs_define ]>
+                src     : varDir
+                dest    : varDir
+                options :
+                    amd             : { drop_path_parts:1, drop_full_ext:true }
+                    commonjs_define : { drop_path_parts:1, drop_full_ext:true }
+                log_level : LOG_LEVEL
+        
+        /**
+         * Set CORS header to allow access to our datafiles.
+         * TODO: path should be based on `opts.dataDir`?
+         */
+        @use '/data', (req, res, next) ->
+            if origin = req.header 'Origin'
+                res.header 'Access-Control-Allow-Origin', origin
+            next()
+        
+        /**
+         * All environments: static files prior to applying routes and controllers.
+         */
+        @configure ->
+            {varDir, staticMaxAge, dataDir} = @set 'limn options'
+            maxAge = staticMaxAge[NODE_ENV] ? staticMaxAge.default
+            
+            @use                    express.static varDir,  {maxAge}
+            @use '/js/limn/test',   express.static TEST,    {maxAge}
+            @use '/data',           express.static dataDir, {maxAge}
+            @use                    express.static STATIC,  {maxAge}
+            
+            # Passport required middleware
+            @use express.cookieParser()
+            @use express.bodyParser()
+            @use express.session({ secret: LIMN_CONFIG.secret })
+            @use passport.initialize()
+            @use passport.session()
+            # End Passport required middleware
+            
+            @use @router
+        
+        
+        
+        # data controllers
+        @controller require './controllers/graph'
+        @controller require './controllers/dashboard'
+        
+        # Has to preceed controllers/datasource to override
+        # TODO: fix Controller#mapping!
+        YAML_EXT_PAT = /\.ya?ml$/i
+        @get '/datasources/all', (req, res, next) ->
+            opts = {varDir, dataDir} = app.set 'limn options'
+            
+            data = {}
+            Seq()
+                .seq glob, "#dataDir/datasources/**/*.@(yaml|json)", {+nocase, +nosort}, Seq
+                .seq (paths) -> readFilesAsync paths, this
+                .seq (txts) -> @ok _.items txts
+                .flatten false
+                .parMap ([f, text]) ->
+                    # console.log "parsing file[#i]: '#f' -> text[#{text.length}]..."
+                    k = f.replace YAML_EXT_PAT, '.json'
+                    v = data[k] = {}
+                    try
+                        if YAML_EXT_PAT.test f
+                            v = data[k] = yaml.load text
+                        else
+                            v = data[k] = JSON.parse text
+                        # console.log "#f ok!", data
+                        @ok v
+                    catch err
+                        console.error "[/datasources/all] Error parsing data!"
+                        console.error err
+                        console.error that if err.stack
+                        res.send { error:String(err), partial_data:data }, 500
+                .seq ->
+                    res.contentType 'application/json'
+                    return res.send JSON.stringify(data, null, 4) if 'pretty' in req.query
+                    res.send data
+                .catch (err) ->
+                    console.error '[/datasources/all] Error!'
+                    console.error err
+                    console.error that if err.stack
+                    res.send { error:String(err), partial_data:data }, 500
+        
+        @controller require './controllers/datasource'
+        
+        # Proxy endpoint: /x
+        if opts.proxy.enabled
+            proxy = require('./proxy')(opts.proxy)
+            @get '/x',   proxy
+            @get '/x/*', proxy
+        
+        
+        # Tests
+        @get '/test', (req, res) ->
+            res.render 'test'
+        
+        # Redirect the user to MediaWiki for authentication.  When complete, MediaWiki
+        # will redirect the user back to the application at
+        #     /auth/mediawiki/callback
+        @get '/auth/mediawiki', (req, res) ~>
+            req.session.next = req.header('Referer') or '/'
+            passport.authenticate('mediawiki') ...
+
+        # MediaWiki will redirect the user to this URL after authentication.  Finish
+        # the process by verifying the assertion.  If valid, the user will be
+        # logged in.  Otherwise, authentication has failed.
+        @get '/auth/mediawiki/callback', passport.authenticate('mediawiki', {
+            failureRedirect: '/auth/mediawiki'
+        }), (req, res) ->
+            next = req.session.next
+            req.session.next = null
+            res.redirect next or '/'
+
+        @get '/logout', (req, res) ->
+            req.logout()
+            res.redirect '/'
+        
+        @get '/login-view', (req, res) ->
+            res.render 'login'
+        
+        # All other non-controller, non-static endpoints mapped to default view
+        # for client-side routing
+        @get '/*', (req, res) ->
+            res.render 'index'
+        
+        this
+    
+
+limn.view_helpers = view_helpers

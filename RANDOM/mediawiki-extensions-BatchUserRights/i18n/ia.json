@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Macofe",
+			"McDutchie"
+		]
+	},
+	"batchuserrights": "Derectos de usator in lot",
+	"batchuserrights-desc": "Permitte adder un o plure usatores a un gruppo o a plure gruppos in un sol action",
+	"batchuserrights-names": "Nomines de usator al quales adder iste gruppo (un per linea):",
+	"batchuserrights-intro": "Iste pagina te permitte adder un gruppo a plure usatores insimul.\nPro motivos de securitate, le lista de gruppos addibile es definite in le configuration del extension e non pote esser cambiate ab intra le wiki.\nPer favor demanda lo a un administrator de systema si tu ha besonio de permitter le addition in lot de altere gruppos.",
+	"batchuserrights-single-progress-update": "Addeva {{PLURAL:$1|gruppo|gruppos}} a <strong>$2</strong>.",
+	"batchuserrights-add-groups": "Adde {{PLURAL:$1|un usator|$1 usator}} al sequente {{PLURAL:$2|gruppo|gruppos}}: <strong>$3</strong>.",
+	"batchuserrights-userload-error": "Non poteva cargar le {{GENDER:$1|usator}} '''$1'''.",
+	"batchuserrights-no-groups": "Tu non seligeva alcun gruppo.\nIsto va complir nihil.\nLe resto del pagina essera executate solmente a fin que tu pote vider facilemente si alcun del nomines de usator non poteva esser cargate.",
+	"right-batchuserrights": "Adder un o plure usatores a un gruppo o a plure gruppos in un sol action",
+	"action-batchuserrights": "adder un o plure usatores a un gruppo o a plure gruppos in un sol action"
+}

@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"AvatarTeam",
+			"Erwin",
+			"Esketti",
+			"HanV",
+			"Mainframe98",
+			"Mar(c)",
+			"McDutchie",
+			"SPQRobin",
+			"Siebrand"
+		]
+	},
+	"antispoof-desc": "Blokkeert het aanmaken van gebruikersnamen in meerdere schriften, en verwarrende en gelijkende gebruikersnamen",
+	"antispoof-conflict-top": "De gebruikersnaam \"$1\" lijkt te veel op de volgende bestaande {{PLURAL:$2|gebruikersnaam|$2 gebruikersnamen}}:",
+	"antispoof-conflict-bottom": "Kies een andere naam.",
+	"antispoof-name-illegal": "De gebruikersnaam \"$1\" is niet toegestaan om verwarring of gefingeerde gebruikersnamen te voorkomen: $2.\nKies een andere naam.",
+	"antispoof-badtype": "Ongeldig gegevenstype",
+	"antispoof-empty": "Lege string",
+	"antispoof-prohibited": "Bevat verboden teken $1",
+	"antispoof-combining": "Begint met gecombineerd merkteken $1",
+	"antispoof-unassigned": "Bevat het niet toegewezen teken $1",
+	"antispoof-deprecated": "Bevat verouderd teken $1",
+	"antispoof-noletters": "Bevat geen letters",
+	"antispoof-mixedscripts": "Bevat niet compatibele schriften",
+	"antispoof-tooshort": "Afgekorte naam te kort",
+	"antispoof-ignore": "Controle op gelijkende gebruikersnamen negeren",
+	"antispoof-ignore-help": "Laat gebruikers met voldoende rechten toe om een account aan te maken, zelfs als deze naam op een bestaande accountnaam lijkt.",
+	"action-override-antispoof": "spoofcontroles te negeren",
+	"right-override-antispoof": "Spoofcontroles negeren"
+}

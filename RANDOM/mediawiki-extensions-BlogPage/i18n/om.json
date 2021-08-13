@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Oromoo"
+		]
+	},
+	"blog-and": "fi",
+	"blog-in-the-news": "Oduu keessaa",
+	"blog-last-edited": "dhumaarra kan gulaalame $1",
+	"blog-popular-articles": "Si hin darbin",
+	"blog-recent-editors": "Gumaacha dhihoo biroo",
+	"blog-view-archive-link": "Hunda ilaali",
+	"blog-ah-no-results": "Fuulota homtu hin argamne.",
+	"blog-ah-new-articles": "Barruuwwan haaraa",
+	"blog-create-text": "Barreeffama",
+	"blog-create-categories": "Ramaddiiwwan",
+	"blog-create-button": "Uumi!",
+	"blog-time-ago": "$1 dura",
+	"blog-time-days": "{{PLURAL:$1|guyyaa tokko|guyyaa $1}}",
+	"blog-time-seconds": "{{PLURAL:$1|sekondii tokko|sekondii $1}}"
+}

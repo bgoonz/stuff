@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"authorprotect": "Zaštiti stranicu od ne-autora",
+	"authorprotect-desc": "Omogućava autoru jedne stranice da je zaštiti od drugih korisnika",
+	"authorprotect-notauthor": "{{GENDER:$1|Vi}} niste {{GENDER:$1|autor|autorica}} ove stranice.",
+	"authorprotect-confirm": "Promijeni nivo zaštite",
+	"authorprotect-edit": "Ograniči pravo izmjene na autore",
+	"authorprotect-move": "Ograniči pravo premještanja samo na autore",
+	"authorprotect-intro": "Koristite ovaj obrazac za zaključavanje stranice ne-autorima",
+	"authorprotect-success": "Zaštita je uspostavljena!",
+	"protect-level-author": "Zaštiti od ne-autora",
+	"restriction-level-author": "Autorska zaštita",
+	"action-authorprotect": "zaštitu od neautora",
+	"right-authorprotect": "Zaštiti autorske stranice",
+	"action-author": "uređivanje stranica zaštićenih autorima",
+	"right-author": "Uređivanje stranica zaštićenih autorima"
+}

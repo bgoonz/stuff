@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"CERminator",
+			"Palapa",
+			"Semso98",
+			"Srdjan m",
+			"Srđan"
+		]
+	},
+	"antispoof-desc": "Blokira pravljenje računa sa miješanim slovima, zbunjujućim i sličnim korisničkim imenima",
+	"antispoof-conflict-top": "Korisničko ime \"$1\" previše je slično {{PLURAL:$2|sljedećem korisničkom imenu|sljedećim korisničkim imenima}}:",
+	"antispoof-conflict-bottom": "Izaberite drugo.",
+	"antispoof-name-illegal": "Korisničko ime \"$1\" nije dozvoljeno da bi se izbjegla zbunjujuća ili lažirana korisnička imena:\n$2.\nIzaberite drugo korisničko ime.",
+	"antispoof-badtype": "Pogrešna vrsta podataka",
+	"antispoof-empty": "Prazan unos",
+	"antispoof-prohibited": "Sadrži nepoželjni znak $1",
+	"antispoof-combining": "Počinje sa znakom kombinacije $1",
+	"antispoof-unassigned": "Sadrži nedodijeljeni znak $1",
+	"antispoof-deprecated": "Sadrži zastarjeli znak $1",
+	"antispoof-noletters": "Ne sadrži ni jedno slovo",
+	"antispoof-mixedscripts": "Sadrži miješana slova koja nisu podržana",
+	"antispoof-tooshort": "Normalizirano ime je prekratko",
+	"antispoof-ignore": "Zanemari provjeru sličnosti",
+	"right-override-antispoof": "Zaobilaženje provjera korisničkog imena"
+}

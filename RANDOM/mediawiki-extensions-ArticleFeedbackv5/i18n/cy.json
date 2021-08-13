@@ -1,0 +1,40 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lloffiwr",
+			"Pwyll",
+			"Robin Owain"
+		]
+	},
+	"articlefeedbackv5-cta-thanks": "Diolch!",
+	"articlefeedbackv5-cta1-learn-how": "Dysgwch sut i olygu",
+	"articlefeedbackv5-cta1-edit-linktext": "Golygwch y dudalen",
+	"articlefeedbackv5-cta2-button-text": "Dysgu mwy",
+	"articlefeedbackv5-cta3-button-text": "Dechrau'r arolwg",
+	"articlefeedbackv5-cta4-button-text-signup": "Creu cyfrif",
+	"articlefeedbackv5-cta4-button-text-login": "Mewngofnodi",
+	"articlefeedbackv5-cta4-button-text-later": "Yn ddiweddarach, efallai",
+	"articlefeedbackv5-cta4-button-text-or": "neu",
+	"articlefeedbackv5-cta5-button-text": "Gweld yr holl sylwadau",
+	"articlefeedbackv5-cta6-confirmation-title": "Angen cymorth i olygu {{SITENAME}}?",
+	"articlefeedbackv5-overlay-close": "Cau",
+	"articlefeedbackv5-error": "Cafwyd gwall. Ceisiwch eto nes ymlaen os gwelwch yn dda.",
+	"articlefeedbackv5-error-unknown": "Gwall anhysbys",
+	"articlefeedbackv5-error-nofeedback": "Ysgrifennwch eich adborth.",
+	"articlefeedbackv5-protection-level": "Adborth ar erthyglau",
+	"protect-level-aft-reader": "Galluogi i bob defnyddiwr",
+	"articlefeedbackv5-contribs-status-action-feature": "Defnyddiol",
+	"articlefeedbackv5-contribs-status-action-resolve": "Wedi datrys",
+	"articlefeedbackv5-contribs-status-action-noaction": "Dim angen gweithredu",
+	"articlefeedbackv5-contribs-status-action-inappropriate": "Anaddas",
+	"articlefeedbackv5-contribs-status-action-archive": "Archifwyd",
+	"articlefeedbackv5-contribs-status-action-hide": "Cuddio",
+	"articlefeedbackv5-form-helpful-label": "Ydy'r adborth hwn yn ddefnyddiol?",
+	"articlefeedbackv5-form-helpful-yes-label": "Ydy",
+	"articlefeedbackv5-form-helpful-no-label": "Nacydy",
+	"articlefeedbackv5": "Adborth ar erthygl - Prif dudalen",
+	"articlefeedbackv5-desc": "Adborth am erthygl",
+	"articlefeedbackv5-permalink-info-stats-title-scores": "Sgor",
+	"articlefeedbackv5-noteflyover-hide-caption": "Cuddio",
+	"articlefeedbackv5-disable-preference": "Peidiwch dangos y teclyn adborth erthygl ar dudalennau."
+}

@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Geopoet"
+		]
+	},
+	"commentbox-desc": "Minadugang nin sarong kahon nin komento sa mga sambit nin mga pahina",
+	"commentbox-intro": "== Magdugang nin komento... == Ika igwang komento sa pahinang ini? Idugang ini digde o <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} direktang liwaton an pahina]</span>.",
+	"commentbox-savebutton": "Itagama an komento",
+	"commentbox-name": "Pangaran:",
+	"commentbox-name-explanation": "<small>(Pangunday: Kun ika [[Special:UserLogin|nakalaog na]], ika dae na manwal na magkakaag kan saimong pangaran digde)</small>",
+	"commentbox-log": "Baguhong mga komento",
+	"commentbox-first-comment-heading": "== Mga Komento ==",
+	"commentbox-regex": "/\\n==\\s*Mga Komento\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Kasalaan mantang minumukna an komento",
+	"commentbox-error-page-nonexistent": "Ining pahina bako tabing eksistido!",
+	"commentbox-error-namespace": "An mga komento bakong tinutugot digde sa espasyong-pangaran!",
+	"commentbox-error-empty-comment": "Blangkong mga komento dae tabi pinagtutugutan!"
+}

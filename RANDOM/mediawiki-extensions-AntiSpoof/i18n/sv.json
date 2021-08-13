@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Boivie",
+			"Jopparn",
+			"Lejonel",
+			"Lokal Profil",
+			"M.M.S.",
+			"Mjälten",
+			"Skalman",
+			"Technic2",
+			"WikiPhoenix"
+		]
+	},
+	"antispoof-desc": "Förhindrar registreringen av konton med förvirrande eller liknande namn samt användarnamn som innehåller blandade skriftsystem.",
+	"antispoof-conflict-top": "Användarnamnet \"$1\" är för likt {{PLURAL:$2|följande användarnamn}}:",
+	"antispoof-conflict-bottom": "Välj ett annat användarnamn.",
+	"antispoof-name-illegal": "För att förhindra förvirrande eller falska användarnamn, är användarnamnet \"$1\" inte tillåtet. Anledning: $2\nVälj ett annat användarnamn istället.",
+	"antispoof-badtype": "Felaktig datatyp",
+	"antispoof-empty": "Tom sträng",
+	"antispoof-prohibited": "Innehåller det förbjudna tecknet $1",
+	"antispoof-combining": "Börjar med kombinationstecknet $1",
+	"antispoof-unassigned": "Innehåller det icke-tilldelade tecknet $1",
+	"antispoof-deprecated": "Innehåller det utfasade tecknet $1",
+	"antispoof-noletters": "Innehåller inga bokstäver",
+	"antispoof-mixedscripts": "Innehåller flera inkompatibla skriftsystem",
+	"antispoof-tooshort": "Normaliserade namnet är för kort",
+	"antispoof-ignore": "Ignorera missbrukskontroller",
+	"antispoof-ignore-help": "Tillåter användare med tillräckliga behörigheter att skapa ett konto, även om dess namn är liknande namnet på ett befintligt konto.",
+	"action-override-antispoof": "Slipper kontroller mot förvirrande användarnamn",
+	"right-override-antispoof": "Slipper kontroller mot förvirrande användarnamn"
+}

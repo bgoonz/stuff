@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hugo.arg"
+		]
+	},
+	"coll-remove": "Ėštrintė",
+	"coll-show": "Ruodītė",
+	"coll-move_up": "Pastomtė aukštīnuo",
+	"coll-move_down": "Pastomtė žemīnuo",
+	"coll-update": "Atšvėižintė",
+	"coll-print_export": "Ėšgoldītė/Eksportoutė",
+	"coll-create_a_book": "Dėrbtė kninga",
+	"coll-book_creator": "Kningas kūries",
+	"coll-download_as": "Siōstėis $1 skvarmuo",
+	"coll-disable": "ėšjongtė",
+	"coll-book_creator_disable": "Ėšjongtė kningas dėrbėma",
+	"coll-book_creator_disable_tooltip": "Nabnauduotė kningas dėrbėma rakonda",
+	"coll-add_this_page": "Pridietė ton poslapi i sava kninga",
+	"coll-add_page_tooltip": "Pridietė esama wiki poslapi i sava kninga",
+	"coll-help": "Pagelba",
+	"coll-help_tooltip": "Ruodītė pagelba, kap dėrbtė kninga",
+	"coll-helppage": "Help:Kningas",
+	"coll-n_pages": "$1 {{PLURAL:$1|poslapis|poslapē|poslapiu}}",
+	"coll-remove_this_page": "Pašalėntė poslapi ėš Tamstas kningas",
+	"coll-show_collection": "Ruodītė kninga",
+	"coll-show_collection_tooltip": "Spauskat, ka keistomėt/atsisiūstomėt/ožsakītomėt sava kninga",
+	"coll-make_suggestions": "Siūluomė poslapē",
+	"coll-make_suggestions_tooltip": "Ruodītė pasiūlėmus palē Tamstas kningas poslapius",
+	"coll-attribution-anons": "Anuonėms: $1",
+	"coll-article-attribution": "<b>$1</b> <i>Šaltėnis:</i> $2 <i>Kūriejē:</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>Šaltėnis:</i> $2 <i>Lėcencėjė:</i> $3 <i>Duovi pridiejė:</i> $4 <i>Kūries:</i> $5"
+}

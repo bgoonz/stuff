@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cedric31"
+		]
+	},
+	"breadcrumbs-desc": "Aficha lo ligam de las darrièras paginas que l’utilizaire a visitadas dins lo wiki",
+	"prefs-breadcrumbs-separator": "Separador del fial d'Ariana",
+	"prefs-breadcrumbs-separator-max": "Un maximum de 2 caractèrs pòdon èsser entrats.",
+	"prefs-breadcrumbs": "Barra de navigacion",
+	"prefs-breadcrumbs-showcrumbs": "Afichar la barra de navigacion",
+	"prefs-breadcrumbs-numberofcrumbs": "Nombre de ligams de navigacion",
+	"prefs-breadcrumbs-numberofcrumbs-max": "Al maximum 20 ligams de navigacion pòdon èsser afichats",
+	"prefs-breadcrumbs-namespaces": "Inclure los espacis de noms dins los fials d'Ariana",
+	"prefs-breadcrumbs-filter-duplicates": "Filtrar las paginas visitadas a bèls còps",
+	"prefs-breadcrumbs-preceding-text": "Tèxte d'afichar davant los fials d'Ariane",
+	"prefs-breadcrumbs-preceding-text-max": "Un maximum de 30 caractèrs pòdon èsser entrats."
+}

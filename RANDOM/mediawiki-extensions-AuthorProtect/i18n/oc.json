@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cedric31"
+		]
+	},
+	"authorprotect": "Protegir la pagina dels non-autors",
+	"authorprotect-desc": "Permet a l’autor d’una pagina de la protegir dels autres utilizaires",
+	"authorprotect-notauthor": "{{GENDER:$1|Sètz}} pas l'autor{{GENDER:$1||a}} d'aquesta pagina.",
+	"authorprotect-confirm": "Cambiar los nivèls de proteccion",
+	"authorprotect-edit": "Restrénher l’edicion als autors",
+	"authorprotect-move": "Restrénher lo cambiament de nom als autors",
+	"authorprotect-intro": "Utilizatz aqueste formulari per verrolhar aquesta pagina dels non-autors",
+	"authorprotect-success": "Proteccion aplicada !",
+	"protect-level-author": "Protegir de non-autors",
+	"restriction-level-author": "Autor protegit",
+	"right-authorprotect": "Protegir la pagina dels autors",
+	"right-author": "Modificar las paginas protegidas per son autor"
+}

@@ -1,0 +1,27 @@
+RootViewController
+
+- fix live search crash on some chars (fid...)
+
+MapViewController
+
+- Fix location search
+
+- Fix map reloading code
+
+- Location button UI feedback
+
+- Fix segmented control states
+
+WikiViewController
+
+- Fix HUD frame
+
+Version 2.1 
+
+- Multitasking crash when relaunched (Xcode 4 bug, test on actual device)
+
+- Use system language as default for wiki (code for this is in app delegate)
+
+- Landscape mode
+
+- Reorderable bookmarks

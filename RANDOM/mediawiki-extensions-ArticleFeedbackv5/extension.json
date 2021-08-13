@@ -1,0 +1,774 @@
+{
+	"name": "Article Feedback",
+	"version": "5.6.0",
+	"author": [
+		"Greg Chiasson",
+		"Reha Sterbin",
+		"Sam Reed",
+		"Roan Kattouw",
+		"Trevor Parscal",
+		"Brandon Harris",
+		"Adam Miller",
+		"Nimish Gautam",
+		"Arthur Richards",
+		"Timo Tijhof",
+		"Ryan Kaldari",
+		"Elizabeth M Smith",
+		"Michael Jackson",
+		"Matthias Mullie",
+		"Jack Phoenix"
+	],
+	"license-name": "GPL-2.0-or-later",
+	"requires": {
+		"MediaWiki": ">= 1.36.0"
+	},
+	"url": "https://www.mediawiki.org/wiki/Extension:ArticleFeedbackv5",
+	"descriptionmsg": "articlefeedbackv5-desc",
+	"type": "other",
+	"callback": "ArticleFeedbackv5Hooks::registerExtension",
+	"DefaultUserOptions": {
+		"aftv5-last-filter": null,
+		"echo-subscriptions-web-feedback": true,
+		"echo-subscriptions-email-feedback": true
+	},
+	"AvailableRights": [
+		"aft-reader",
+		"aft-member",
+		"aft-editor",
+		"aft-monitor",
+		"aft-administrator",
+		"aft-oversighter"
+	],
+	"SpecialPages": {
+		"ArticleFeedbackv5": "SpecialArticleFeedbackv5",
+		"ArticleFeedbackv5Watchlist": "SpecialArticleFeedbackv5Watchlist"
+	},
+	"JobClasses": {
+		"ArticleFeedbackv5MailerJob": "ArticleFeedbackv5MailerJob"
+	},
+	"LogTypes": [
+		"articlefeedbackv5"
+	],
+	"LogActionsHandlers": {
+		"articlefeedbackv5/protect": "ArticleFeedbackv5ProtectionLogFormatter",
+		"articlefeedbackv5/create": "ArticleFeedbackv5LogFormatter"
+	},
+	"APIModules": {
+		"articlefeedbackv5-set-status": "ApiSetStatusArticleFeedbackv5",
+		"articlefeedbackv5-add-flag-note": "ApiAddFlagNoteArticleFeedbackv5",
+		"articlefeedbackv5-flag-feedback": "ApiFlagFeedbackArticleFeedbackv5",
+		"articlefeedbackv5-get-count": "ApiGetCountArticleFeedbackv5",
+		"articlefeedbackv5": "ApiArticleFeedbackv5"
+	},
+	"APIListModules": {
+		"articlefeedbackv5-view-feedback": {
+			"class": "ApiViewFeedbackArticleFeedbackv5",
+			"services": [
+				"UserOptionsManager"
+			]
+		},
+		"articlefeedbackv5-view-activity": "ApiViewActivityArticleFeedbackv5"
+	},
+	"MessagesDirs": {
+		"ArticleFeedbackv5": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"ArticleFeedbackv5Alias": "ArticleFeedbackv5.alias.php"
+	},
+	"AutoloadClasses": {
+		"ApiArticleFeedbackv5": "api/ApiArticleFeedbackv5.php",
+		"ApiViewFeedbackArticleFeedbackv5": "api/ApiViewFeedbackArticleFeedbackv5.php",
+		"ApiSetStatusArticleFeedbackv5": "api/ApiSetStatusArticleFeedbackv5.php",
+		"ApiAddFlagNoteArticleFeedbackv5": "api/ApiAddFlagNoteArticleFeedbackv5.php",
+		"ApiFlagFeedbackArticleFeedbackv5": "api/ApiFlagFeedbackArticleFeedbackv5.php",
+		"ApiGetCountArticleFeedbackv5": "api/ApiGetCountArticleFeedbackv5.php",
+		"ApiViewActivityArticleFeedbackv5": "api/ApiViewActivityArticleFeedbackv5.php",
+		"DataModel": "data/DataModel.php",
+		"DataModelBackend": "data/DataModelBackend.php",
+		"DataModelBackendLBFactory": "data/DataModelBackend.LBFactory.php",
+		"DataModelList": "data/DataModelList.php",
+		"ArticleFeedbackv5Utils": "includes/ArticleFeedbackv5Utils.php",
+		"ArticleFeedbackv5Hooks": "includes/ArticleFeedbackv5Hooks.php",
+		"ArticleFeedbackv5Permissions": "includes/ArticleFeedbackv5Permissions.php",
+		"ArticleFeedbackv5Log": "includes/ArticleFeedbackv5Log.php",
+		"ArticleFeedbackv5LogFormatter": "includes/ArticleFeedbackv5LogFormatter.php",
+		"ArticleFeedbackv5ProtectionLogFormatter": "includes/ArticleFeedbackv5ProtectionLogFormatter.php",
+		"ArticleFeedbackv5Flagging": "includes/ArticleFeedbackv5Flagging.php",
+		"ArticleFeedbackv5MailerJob": "includes/ArticleFeedbackv5MailerJob.php",
+		"ArticleFeedbackv5Render": "includes/ArticleFeedbackv5Render.php",
+		"EchoArticleFeedbackv5PresentationModel": "includes/notifications/EchoArticleFeedbackv5PresentationModel.php",
+		"EchoArticleFeedbackv5ModeratedPresentationModel": "includes/notifications/EchoArticleFeedbackv5ModeratedPresentationModel.php",
+		"SpecialArticleFeedbackv5": "includes/specials/SpecialArticleFeedbackv5.php",
+		"SpecialArticleFeedbackv5Watchlist": "includes/specials/SpecialArticleFeedbackv5Watchlist.php",
+		"ArticleFeedbackv5Model": "includes/ArticleFeedbackv5Model.php",
+		"ArticleFeedbackv5BackendLBFactory": "includes/ArticleFeedbackv5BackendLBFactory.php",
+		"ArticleFeedbackv5Activity": "includes/ArticleFeedbackv5Activity.php",
+		"ArticleFeedbackv5AbuseFilterConsequence": "includes/ArticleFeedbackv5AbuseFilterConsequence.php"
+	},
+	"ResourceModules": {
+		"jquery.articleFeedbackv5.utils": {
+			"scripts": "jquery.articleFeedbackv5/jquery.articleFeedbackv5.utils.js",
+			"messages": [
+				"articlefeedbackv5-error-unknown"
+			],
+			"dependencies": [
+				"jquery.cookie",
+				"mediawiki.util",
+				"mediawiki.user"
+			]
+		},
+		"ext.articleFeedbackv5.startup": {
+			"scripts": "ext.articleFeedbackv5/ext.articleFeedbackv5.startup.js",
+			"messages": [
+				"articlefeedbackv5-toolbox-enable",
+				"articlefeedbackv5-enabled-form-message"
+			],
+			"dependencies": [
+				"jquery.articleFeedbackv5.utils",
+				"mediawiki.jqueryMsg",
+				"mediawiki.util"
+			]
+		},
+		"ext.articleFeedbackv5": {
+			"scripts": "ext.articleFeedbackv5/ext.articleFeedbackv5.js",
+			"styles": "ext.articleFeedbackv5/ext.articleFeedbackv5.css",
+			"messages": [
+				"articlefeedbackv5-sitesub-linktext",
+				"articlefeedbackv5-titlebar-linktext",
+				"articlefeedbackv5-fixedtab-linktext",
+				"articlefeedbackv5-bottomrighttab-linktext",
+				"articlefeedbackv5-section-linktext",
+				"articlefeedbackv5-article-view-feedback"
+			],
+			"dependencies": [
+				"mediawiki.jqueryMsg",
+				"jquery.ui",
+				"jquery.articleFeedbackv5",
+				"jquery.cookie",
+				"jquery.articleFeedbackv5.utils",
+				"mediawiki.api",
+				"mediawiki.util"
+			]
+		},
+		"ext.articleFeedbackv5.dashboard": {
+			"scripts": "ext.articleFeedbackv5/ext.articleFeedbackv5.dashboard.js",
+			"styles": "ext.articleFeedbackv5/ext.articleFeedbackv5.dashboard.css",
+			"messages": [
+				"articlefeedbackv5-no-feedback",
+				"articlefeedbackv5-page-disabled"
+			],
+			"dependencies": [
+				"jquery.articleFeedbackv5.utils",
+				"jquery.articleFeedbackv5.special"
+			]
+		},
+		"ext.articleFeedbackv5.talk": {
+			"scripts": "ext.articleFeedbackv5/ext.articleFeedbackv5.talk.js",
+			"styles": "ext.articleFeedbackv5/ext.articleFeedbackv5.talk.css",
+			"messages": [
+				"articlefeedbackv5-talk-view-feedback"
+			],
+			"dependencies": [
+				"jquery.articleFeedbackv5.utils",
+				"mediawiki.api",
+				"mediawiki.util"
+			]
+		},
+		"ext.articleFeedbackv5.watchlist": {
+			"scripts": "ext.articleFeedbackv5/ext.articleFeedbackv5.watchlist.js",
+			"styles": "ext.articleFeedbackv5/ext.articleFeedbackv5.watchlist.css",
+			"messages": [
+				"articlefeedbackv5-watchlist-view-feedback"
+			],
+			"dependencies": [
+				"mediawiki.user",
+				"mediawiki.util"
+			]
+		},
+		"jquery.appear": {
+			"scripts": "jquery.articleFeedbackv5/jquery.appear.js"
+		},
+		"jquery.articleFeedbackv5": {
+			"scripts": "jquery.articleFeedbackv5/jquery.articleFeedbackv5.js",
+			"styles": "jquery.articleFeedbackv5/jquery.articleFeedbackv5.css",
+			"templates": {
+				"bucket1.mustache": "templates/bucket1.mustache",
+				"bucket4-editable.mustache": "templates/bucket4-editable.mustache",
+				"bucket4-noneditable.mustache": "templates/bucket4-noneditable.mustache",
+				"bucket6.mustache": "templates/bucket6.mustache",
+				"cta1.mustache": "templates/cta1.mustache",
+				"cta2.mustache": "templates/cta2.mustache",
+				"cta3.mustache": "templates/cta3.mustache",
+				"cta4.mustache": "templates/cta4.mustache",
+				"cta5.mustache": "templates/cta5.mustache",
+				"cta6.mustache": "templates/cta6.mustache",
+				"cta-title-confirm.mustache": "templates/cta-title-confirm.mustache",
+				"disable-flyover.mustache": "templates/disable-flyover.mustache",
+				"error-panel.mustache": "templates/error-panel.mustache",
+				"help-tooltip-trigger.mustache": "templates/help-tooltip-trigger.mustache",
+				"panel-outer.mustache": "templates/panel-outer.mustache"
+			},
+			"messages": [
+				"articlefeedbackv5-error-validation",
+				"articlefeedbackv5-error-nofeedback",
+				"articlefeedbackv5-error-unknown",
+				"articlefeedbackv5-error-submit",
+				"articlefeedbackv5-cta-thanks",
+				"articlefeedbackv5-error-abuse",
+				"articlefeedbackv5-error-abuse-link",
+				"articlefeedbackv5-error-throttled",
+				"articlefeedbackv5-cta-confirmation-message",
+				"articlefeedbackv5-cta1-confirmation-title",
+				"articlefeedbackv5-cta1-confirmation-call",
+				"articlefeedbackv5-cta1-learn-how",
+				"articlefeedbackv5-cta1-learn-how-url",
+				"articlefeedbackv5-cta1-edit-linktext",
+				"articlefeedbackv5-cta2-confirmation-title",
+				"articlefeedbackv5-cta2-confirmation-call",
+				"articlefeedbackv5-cta2-button-text",
+				"articlefeedbackv5-cta3-confirmation-title",
+				"articlefeedbackv5-cta3-confirmation-call",
+				"articlefeedbackv5-cta3-button-text",
+				"articlefeedbackv5-cta4-confirmation-title",
+				"articlefeedbackv5-cta4-confirmation-call-line1",
+				"articlefeedbackv5-cta4-confirmation-call-line2",
+				"articlefeedbackv5-cta4-button-text-signup",
+				"articlefeedbackv5-cta4-button-text-login",
+				"articlefeedbackv5-cta4-button-text-later",
+				"articlefeedbackv5-cta4-button-text-or",
+				"articlefeedbackv5-cta5-confirmation-title",
+				"articlefeedbackv5-cta5-confirmation-call",
+				"articlefeedbackv5-cta5-button-text",
+				"articlefeedbackv5-cta6-confirmation-title",
+				"articlefeedbackv5-cta6-confirmation-call",
+				"articlefeedbackv5-cta6-button-text",
+				"articlefeedbackv5-cta6-button-link",
+				"articlefeedbackv5-overlay-close",
+				"articlefeedbackv5-bucket1-title",
+				"articlefeedbackv5-bucket1-question-toggle",
+				"articlefeedbackv5-bucket1-toggle-found-yes",
+				"articlefeedbackv5-bucket1-toggle-found-yes-full",
+				"articlefeedbackv5-bucket1-toggle-found-no",
+				"articlefeedbackv5-bucket1-toggle-found-no-full",
+				"articlefeedbackv5-bucket1-question-placeholder-yes",
+				"articlefeedbackv5-bucket1-question-placeholder-no",
+				"articlefeedbackv5-bucket1-form-submit",
+				"articlefeedbackv5-bucket4-title",
+				"articlefeedbackv5-bucket4-subhead",
+				"articlefeedbackv5-bucket4-teaser-line1",
+				"articlefeedbackv5-bucket4-teaser-line2",
+				"articlefeedbackv5-bucket4-learn-to-edit",
+				"articlefeedbackv5-bucket4-form-submit",
+				"articlefeedbackv5-bucket4-help-tooltip-info",
+				"articlefeedbackv5-bucket4-noedit-title",
+				"articlefeedbackv5-bucket4-noedit-teaser-line1",
+				"articlefeedbackv5-bucket4-noedit-teaser-line2",
+				"articlefeedbackv5-bucket4-noedit-form-submit",
+				"articlefeedbackv5-bucket6-title",
+				"articlefeedbackv5-bucket6-question-toggle",
+				"articlefeedbackv5-bucket6-toggle-found-yes",
+				"articlefeedbackv5-bucket6-toggle-found-yes-full",
+				"articlefeedbackv5-bucket6-toggle-found-no",
+				"articlefeedbackv5-bucket6-toggle-found-no-full",
+				"articlefeedbackv5-bucket6-feedback-countdown",
+				"articlefeedbackv5-bucket6-question-instructions-yes",
+				"articlefeedbackv5-bucket6-question-placeholder-yes",
+				"articlefeedbackv5-bucket6-question-instructions-no",
+				"articlefeedbackv5-bucket6-question-placeholder-no",
+				"articlefeedbackv5-bucket6-form-submit",
+				"articlefeedbackv5-bucket6-backlink-text",
+				"articlefeedbackv5-leave-warning",
+				"articlefeedbackv5-error",
+				"articlefeedbackv5-help-tooltip-title",
+				"articlefeedbackv5-help-tooltip-info",
+				"articlefeedbackv5-help-tooltip-linktext",
+				"articlefeedbackv5-help-form-linkurl",
+				"articlefeedbackv5-help-form-linkurl-editors",
+				"articlefeedbackv5-help-form-linkurl-monitors",
+				"articlefeedbackv5-help-form-linkurl-oversighters",
+				"articlefeedbackv5-help-transparency-terms",
+				"articlefeedbackv5-help-transparency-terms-anon",
+				"parentheses",
+				"articlefeedbackv5-disable-flyover-title",
+				"articlefeedbackv5-disable-flyover-help-message",
+				"articlefeedbackv5-disable-flyover-prefbutton",
+				"articlefeedbackv5-disable-preference",
+				"pipe-separator",
+				"articlefeedbackv5-toolbox-view",
+				"articlefeedbackv5-toolbox-add",
+				"mypreferences",
+				"prefs-rendering"
+			],
+			"dependencies": [
+				"jquery.appear",
+				"jquery.tipsy",
+				"jquery.ui",
+				"jquery.cookie",
+				"mediawiki.cookie",
+				"mediawiki.jqueryMsg",
+				"mediawiki.Uri",
+				"mediawiki.user",
+				"mediawiki.util"
+			]
+		},
+		"jquery.articleFeedbackv5.special": {
+			"scripts": "jquery.articleFeedbackv5/jquery.articleFeedbackv5.special.js",
+			"styles": "jquery.articleFeedbackv5/jquery.articleFeedbackv5.special.css",
+			"templates": {
+				"loading.mustache": "templates/loading.mustache",
+				"note-panel.mustache": "templates/note-panel.mustache"
+			},
+			"messages": [
+				"articlefeedbackv5-error-flagging",
+				"articlefeedbackv5-invalid-feedback-id",
+				"articlefeedbackv5-invalid-log-id",
+				"articlefeedbackv5-invalid-log-update",
+				"articlefeedbackv5-invalid-feedback-flag",
+				"articlefeedbackv5-invalid-feedback-state",
+				"articlefeedbackv5-feedback-reloaded-after-error",
+				"articlefeedbackv5-comment-more",
+				"articlefeedbackv5-error-loading-feedback",
+				"articlefeedbackv5-loading-tag",
+				"articlefeedbackv5-permalink-activity-more",
+				"articlefeedbackv5-permalink-activity-fewer",
+				"articlefeedbackv5-abuse-saved",
+				"articlefeedbackv5-abuse-saved-tooltip",
+				"articlefeedbackv5-form-unrequest",
+				"articlefeedbackv5-form-declined",
+				"articlefeedbackv5-help-special-linkurl",
+				"articlefeedbackv5-help-special-linkurl-editors",
+				"articlefeedbackv5-help-special-linkurl-monitors",
+				"articlefeedbackv5-help-special-linkurl-oversighters",
+				"articlefeedbackv5-viewactivity",
+				"articlefeedbackv5-noteflyover-feature-caption",
+				"articlefeedbackv5-noteflyover-feature-label",
+				"articlefeedbackv5-noteflyover-feature-placeholder",
+				"articlefeedbackv5-noteflyover-feature-submit",
+				"articlefeedbackv5-noteflyover-feature-help",
+				"articlefeedbackv5-noteflyover-feature-help-link",
+				"articlefeedbackv5-noteflyover-unfeature-caption",
+				"articlefeedbackv5-noteflyover-unfeature-label",
+				"articlefeedbackv5-noteflyover-unfeature-placeholder",
+				"articlefeedbackv5-noteflyover-unfeature-submit",
+				"articlefeedbackv5-noteflyover-unfeature-help",
+				"articlefeedbackv5-noteflyover-unfeature-help-link",
+				"articlefeedbackv5-noteflyover-resolve-caption",
+				"articlefeedbackv5-noteflyover-resolve-label",
+				"articlefeedbackv5-noteflyover-resolve-placeholder",
+				"articlefeedbackv5-noteflyover-resolve-submit",
+				"articlefeedbackv5-noteflyover-resolve-help",
+				"articlefeedbackv5-noteflyover-resolve-help-link",
+				"articlefeedbackv5-noteflyover-unresolve-caption",
+				"articlefeedbackv5-noteflyover-unresolve-label",
+				"articlefeedbackv5-noteflyover-unresolve-placeholder",
+				"articlefeedbackv5-noteflyover-unresolve-submit",
+				"articlefeedbackv5-noteflyover-unresolve-help",
+				"articlefeedbackv5-noteflyover-unresolve-help-link",
+				"articlefeedbackv5-noteflyover-noaction-caption",
+				"articlefeedbackv5-noteflyover-noaction-label",
+				"articlefeedbackv5-noteflyover-noaction-placeholder",
+				"articlefeedbackv5-noteflyover-noaction-submit",
+				"articlefeedbackv5-noteflyover-noaction-help",
+				"articlefeedbackv5-noteflyover-noaction-help-link",
+				"articlefeedbackv5-noteflyover-unnoaction-caption",
+				"articlefeedbackv5-noteflyover-unnoaction-label",
+				"articlefeedbackv5-noteflyover-unnoaction-placeholder",
+				"articlefeedbackv5-noteflyover-unnoaction-submit",
+				"articlefeedbackv5-noteflyover-unnoaction-help",
+				"articlefeedbackv5-noteflyover-unnoaction-help-link",
+				"articlefeedbackv5-noteflyover-inappropriate-caption",
+				"articlefeedbackv5-noteflyover-inappropriate-label",
+				"articlefeedbackv5-noteflyover-inappropriate-placeholder",
+				"articlefeedbackv5-noteflyover-inappropriate-submit",
+				"articlefeedbackv5-noteflyover-inappropriate-help",
+				"articlefeedbackv5-noteflyover-inappropriate-help-link",
+				"articlefeedbackv5-noteflyover-uninappropriate-caption",
+				"articlefeedbackv5-noteflyover-uninappropriate-label",
+				"articlefeedbackv5-noteflyover-uninappropriate-placeholder",
+				"articlefeedbackv5-noteflyover-uninappropriate-submit",
+				"articlefeedbackv5-noteflyover-uninappropriate-help",
+				"articlefeedbackv5-noteflyover-uninappropriate-help-link",
+				"articlefeedbackv5-noteflyover-archive-caption",
+				"articlefeedbackv5-noteflyover-archive-label",
+				"articlefeedbackv5-noteflyover-archive-placeholder",
+				"articlefeedbackv5-noteflyover-archive-submit",
+				"articlefeedbackv5-noteflyover-archive-help",
+				"articlefeedbackv5-noteflyover-archive-help-link",
+				"articlefeedbackv5-noteflyover-unarchive-caption",
+				"articlefeedbackv5-noteflyover-unarchive-label",
+				"articlefeedbackv5-noteflyover-unarchive-placeholder",
+				"articlefeedbackv5-noteflyover-unarchive-submit",
+				"articlefeedbackv5-noteflyover-unarchive-help",
+				"articlefeedbackv5-noteflyover-unarchive-help-link",
+				"articlefeedbackv5-noteflyover-hide-caption",
+				"articlefeedbackv5-noteflyover-hide-label",
+				"articlefeedbackv5-noteflyover-hide-placeholder",
+				"articlefeedbackv5-noteflyover-hide-submit",
+				"articlefeedbackv5-noteflyover-hide-help",
+				"articlefeedbackv5-noteflyover-hide-help-link",
+				"articlefeedbackv5-noteflyover-unhide-caption",
+				"articlefeedbackv5-noteflyover-unhide-label",
+				"articlefeedbackv5-noteflyover-unhide-placeholder",
+				"articlefeedbackv5-noteflyover-unhide-submit",
+				"articlefeedbackv5-noteflyover-unhide-help",
+				"articlefeedbackv5-noteflyover-unhide-help-link",
+				"articlefeedbackv5-noteflyover-request-caption",
+				"articlefeedbackv5-noteflyover-request-label",
+				"articlefeedbackv5-noteflyover-request-placeholder",
+				"articlefeedbackv5-noteflyover-request-submit",
+				"articlefeedbackv5-noteflyover-request-help",
+				"articlefeedbackv5-noteflyover-request-help-link",
+				"articlefeedbackv5-noteflyover-unrequest-caption",
+				"articlefeedbackv5-noteflyover-unrequest-label",
+				"articlefeedbackv5-noteflyover-unrequest-placeholder",
+				"articlefeedbackv5-noteflyover-unrequest-submit",
+				"articlefeedbackv5-noteflyover-unrequest-help",
+				"articlefeedbackv5-noteflyover-unrequest-help-link",
+				"articlefeedbackv5-noteflyover-decline-caption",
+				"articlefeedbackv5-noteflyover-decline-label",
+				"articlefeedbackv5-noteflyover-decline-placeholder",
+				"articlefeedbackv5-noteflyover-decline-submit",
+				"articlefeedbackv5-noteflyover-decline-help",
+				"articlefeedbackv5-noteflyover-decline-help-link",
+				"articlefeedbackv5-noteflyover-oversight-caption",
+				"articlefeedbackv5-noteflyover-oversight-label",
+				"articlefeedbackv5-noteflyover-oversight-placeholder",
+				"articlefeedbackv5-noteflyover-oversight-submit",
+				"articlefeedbackv5-noteflyover-oversight-help",
+				"articlefeedbackv5-noteflyover-oversight-help-link",
+				"articlefeedbackv5-noteflyover-unoversight-caption",
+				"articlefeedbackv5-noteflyover-unoversight-label",
+				"articlefeedbackv5-noteflyover-unoversight-placeholder",
+				"articlefeedbackv5-noteflyover-unoversight-submit",
+				"articlefeedbackv5-noteflyover-unoversight-help",
+				"articlefeedbackv5-noteflyover-unoversight-help-link",
+				"articlefeedbackv5-activity-pane-header",
+				"articlefeedbackv5-settings-status-enable",
+				"articlefeedbackv5-settings-status-disable"
+			],
+			"dependencies": [
+				"mediawiki.user",
+				"mediawiki.util",
+				"jquery.cookie",
+				"jquery.tipsy",
+				"jquery.ui"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "modules",
+		"remoteExtPath": "ArticleFeedbackv5/modules"
+	},
+	"Hooks": {
+		"LoadExtensionSchemaUpdates": "ArticleFeedbackv5Hooks::loadExtensionSchemaUpdates",
+		"BeforePageDisplay": "ArticleFeedbackv5Hooks::beforePageDisplay",
+		"ResourceLoaderGetConfigVars": "ArticleFeedbackv5Hooks::resourceLoaderGetConfigVars",
+		"MakeGlobalVariablesScript": "ArticleFeedbackv5Hooks::makeGlobalVariablesScript",
+		"GetPreferences": "ArticleFeedbackv5Hooks::getPreferences",
+		"EditPage::showEditForm:fields": "ArticleFeedbackv5Hooks::pushFieldsToEdit",
+		"ContribsPager::reallyDoQuery": "ArticleFeedbackv5Hooks::contributionsData",
+		"ContributionsLineEnding": "ArticleFeedbackv5Hooks::contributionsLineEnding",
+		"ProtectionForm::buildForm": "ArticleFeedbackv5Hooks::onProtectionForm",
+		"ProtectionForm::save": "ArticleFeedbackv5Hooks::onProtectionSave",
+		"ProtectionForm::showLogExtract": "ArticleFeedbackv5Hooks::onShowLogExtract",
+		"UserLoginComplete": "ArticleFeedbackv5Hooks::userLoginComplete",
+		"UserGetReservedNames": "ArticleFeedbackv5Hooks::onUserGetReservedNames",
+		"BeforeCreateEchoEvent": "ArticleFeedbackv5Hooks::onBeforeCreateEchoEvent",
+		"EchoGetDefaultNotifiedUsers": "ArticleFeedbackv5Hooks::onEchoGetDefaultNotifiedUsers",
+		"EchoGetBundleRules": "ArticleFeedbackv5Hooks::onEchoGetBundleRules",
+		"AbuseFilterCustomActions": "ArticleFeedbackv5Hooks::onAbuseFilterCustomActions"
+	},
+	"config": {
+		"ArticleFeedbackv5DefaultFilters": {
+			"description": "Default filter and direction settings for groups.\nreaders (= all)\neditors (autoconfirmed)\nmonitors\noversighters",
+			"value": {
+				"aft-reader": "featured",
+				"aft-editor": "featured",
+				"aft-monitor": "featured",
+				"aft-oversighter": "featured"
+			}
+		},
+		"ArticleFeedbackv5DefaultSorts": {
+			"description": "Default sorts by filter. Because privileges don't play a part in default sort, the visible-, notdeleted-, and all- prefixes have been removed.",
+			"value": {
+				"featured": [
+					"relevance",
+					"DESC"
+				],
+				"unreviewed": [
+					"age",
+					"DESC"
+				],
+				"helpful": [
+					"helpful",
+					"DESC"
+				],
+				"unhelpful": [
+					"helpful",
+					"ASC"
+				],
+				"flagged": [
+					"age",
+					"DESC"
+				],
+				"useful": [
+					"age",
+					"DESC"
+				],
+				"resolved": [
+					"age",
+					"DESC"
+				],
+				"noaction": [
+					"age",
+					"DESC"
+				],
+				"inappropriate": [
+					"age",
+					"DESC"
+				],
+				"archived": [
+					"age",
+					"DESC"
+				],
+				"allcomment": [
+					"age",
+					"DESC"
+				],
+				"hidden": [
+					"age",
+					"DESC"
+				],
+				"requested": [
+					"age",
+					"DESC"
+				],
+				"declined": [
+					"age",
+					"DESC"
+				],
+				"oversighted": [
+					"age",
+					"DESC"
+				],
+				"all": [
+					"age",
+					"DESC"
+				]
+			}
+		},
+		"ArticleFeedbackv5RelevanceScoring": {
+			"description": "Relevance Scoring. name => integer scoring actions pairs. After changing this you should also change the values in relevance_score.sql and run it to reset relevance",
+			"value": {
+				"helpful": 1,
+				"undo-helpful": -1,
+				"unhelpful": -1,
+				"undo-unhelpful": 1,
+				"flag": -5,
+				"unflag": 5,
+				"autoflag": 5,
+				"feature": 50,
+				"unfeature": -50,
+				"resolve": -5,
+				"unresolve": 5,
+				"noaction": -5,
+				"unnoaction": 5,
+				"inappropriate": -50,
+				"uninappropriate": 50,
+				"autohide": -100,
+				"hide": -100,
+				"unhide": 100,
+				"archive": -50,
+				"unarchive": 50,
+				"request": -150,
+				"unrequest": 150,
+				"decline": 150,
+				"oversight": -750,
+				"unoversight": 750
+			}
+		},
+		"ArticleFeedbackv5Permissions": {
+			"description": "Permissions, which are added to $wgAvailableRights. See ArticleFeedbackv5Hooks.php for more documentation etc. on this.",
+			"value": [
+				"aft-reader",
+				"aft-member",
+				"aft-editor",
+				"aft-monitor",
+				"aft-administrator",
+				"aft-oversighter"
+			]
+		},
+		"ArticleFeedbackv5AutoArchiveEnabled": {
+			"description": "Enable/disable the \"archived\" filter. This is a setting that needs to explicitly be set to true since the functionality will depend on a cronjob to be run periodically. True to enable, false to disable.",
+			"value": false
+		},
+		"ArticleFeedbackv5AutoArchiveTtl": {
+			"description": "Defines the auto-archive period for feedback that is not being considered useful. Value should be an strtotime-capable format.\n\nIf defined as string, this will be a fixed TTL based on the feedback creation date.\n\nIt is also possible to set a certain TTL per offset of unreviewed feedback, e.g.:\narray(\n\t0 => '+2 years', // < 9: 2 years\n\t10 => '+1 month', // 10-19: 1 month\n\t20 => '+1 week', // 20-29: 1 week\n\t30 => '+3 days', // 30-39: 3 days\n\t40 => '+2 days', // > 40: 2 days\n\t);",
+			"value": "+2 weeks"
+		},
+		"ArticleFeedbackv5ArticlePageLink": {
+			"description": "Defines whether or not there should be a link to the corresponding feedback on the article page",
+			"value": true
+		},
+		"ArticleFeedbackv5TalkPageLink": {
+			"description": "Defines whether or not there should be a link to the corresponding feedback on the article page's talk page",
+			"value": true
+		},
+		"ArticleFeedbackv5WatchlistLink": {
+			"description": "Defines whether or not there should be a link to the watchlisted feedback on the watchlist page",
+			"value": true
+		},
+		"ArticleFeedbackv5Watchlist": {
+			"description": "Defines whether or not the special page for feedback on a user's watchlisted pages is enabled",
+			"value": true
+		},
+		"ArticleFeedbackv5OversightEmails": {
+			"description": "Email address to send oversight request emails to, if set to null no emails are sent",
+			"value": null
+		},
+		"ArticleFeedbackv5OversightEmailName": {
+			"description": "Name to send oversight request emails to",
+			"value": "Oversighters"
+		},
+		"ArticleFeedbackv5OversightEmailHelp": {
+			"description": "Help link for oversight email",
+			"value": "https://en.wikipedia.org/wiki/Wikipedia:Article_Feedback_Tool/Version_5/Help/Feedback_page_Oversighters"
+		},
+		"ArticleFeedbackv5AutoHelp": {
+			"description": "Help link for auto flag/hide etc.",
+			"value": "http://en.wikipedia.org/wiki/Wikipedia:Article_Feedback_Tool/Version_5/Help"
+		},
+		"ArticleFeedbackv5MaxCommentLength": {
+			"description": "How long text-based feedback is allowed to be before returning an error. Set to 0 to disable length checking entirely.",
+			"value": 5000
+		},
+		"ArticleFeedbackv5MaxActivityNoteLength": {
+			"description": "How long text-based activity items are allowed to be - note this will not return an error but simply chop notes that are too long",
+			"value": 5000
+		},
+		"ArticleFeedbackv5RatingLifetime": {
+			"description": "Number of revisions to keep a rating alive for",
+			"value": 30
+		},
+		"ArticleFeedbackv5LotteryOdds": {
+			"description": "Percentage of article AFT should be enabled on",
+			"value": 100
+		},
+		"ArticleFeedbackv5Categories": {
+			"description": "Which categories the pages must belong to have the rating widget added (with _ in text). Extension is \"disabled\" if this field is an empty array (as per default configuration)",
+			"value": [
+				"Article_Feedback_5"
+			]
+		},
+		"ArticleFeedbackv5BlacklistCategories": {
+			"description": "Which categories the pages must not belong to have the rating widget added (with _ in text)",
+			"value": [
+				"Article_Feedback_Blacklist"
+			]
+		},
+		"ArticleFeedbackv5EnableProtection": {
+			"description": "Allow/disallow the ability to enable or disable AFTv5 on a per-article basis. This feature will add an AFTv5 entry in page protection settings (for admins) or a simple enable/disable link for editors. Disabling this will remove said links & entry in ?action=protect & ignore existing opt-in/-outs, leaving only lottery & whitelist/blacklist categories to define if an article should get AFTv5.",
+			"value": true
+		},
+		"ArticleFeedbackv5Debug": {
+			"description": "This puts the JavaScript into debug mode. In debug mode, you can set your own bucket by passing it in the URL (e.g., ?bucket=1), and the showstopper error mode will have a useful error message, if one exists, rather than the default message.",
+			"value": false
+		},
+		"ArticleFeedbackv5DisplayBuckets": {
+			"description": "Bucket settings for display options. Users can fall into one of several display buckets (these are defined in modules/jquery.articlefeedbackv5/jquery.articlefeedbackv5.js). When a user arrives at the page, this config will be used by core bucketing to decide which of the available form options they see. Whenever there's an update to the available buckets, change the version number to ensure the new odds are applied to everyone, not just people who have yet to be placed in a bucket.",
+			"value": {
+				"buckets": {
+					"0": 0,
+					"1": 0,
+					"4": 0,
+					"6": 100
+				},
+				"version": 6,
+				"expires": 30
+			}
+		},
+		"ArticleFeedbackv5LinkBuckets": {
+			"description": "Bucket settings for links to the feedback form. Users can fall into one of several buckets for links. These are:\nX: No link; user must scroll to the bottom of the page\nA: After the site tagline (below the article title)\nB: Below the titlebar on the right\nC: Button fixed to right side\nD: Button fixed to bottom right\nE: Button fixed to bottom right, design D2\nF: Button fixed to left side\nG: Button below logo\nH: Link on each section bar",
+			"value": {
+				"buckets": {
+					"X": 100,
+					"A": 0,
+					"B": 0,
+					"C": 0,
+					"D": 0,
+					"E": 0,
+					"F": 0,
+					"G": 0,
+					"H": 0
+				},
+				"version": 5,
+				"expires": 30
+			}
+		},
+		"ArticleFeedbackv5CTABuckets": {
+			"description": "Bucket settings for CTAs. Users can fall into one of several CTAs (these are defined in modules/jquery.articlefeedbackv5/jquery.articlefeedbackv5.js). When a user arrives at the page, this config will be used by core bucketing to decide which of the available CTAs they see.  Whenever there's an update to the available buckets, change the version number to ensure the new odds are applied to everyone, not just people who have yet to be placed in a bucket.",
+			"value": {
+				"buckets": [
+					0,
+					0,
+					0,
+					0,
+					90,
+					9,
+					1
+				],
+				"version": 7,
+				"expires": 0
+			}
+		},
+		"ArticleFeedbackv5AbusiveThreshold": {
+			"description": "Abusive threshold. After this many users flag a comment as abusive, it is marked as such.",
+			"value": 3
+		},
+		"ArticleFeedbackv5HideAbuseThreshold": {
+			"description": "Hide abuse threshold. After this many users flag a comment as abusive, it is hidden.",
+			"value": 5
+		},
+		"ArticleFeedbackv5AbuseFiltering": {
+			"description": "Turn on abuse filtering. If this is set to true, comments will be run through:\n1. $wgSpamRegex, if set\n2. SpamBlacklist, if installed\n3. AbuseFilter, if installed",
+			"value": false
+		},
+		"ArticleFeedbackv5AbuseFilterGroup": {
+			"description": "This is the custom group name for AbuseFilter. It ensures that AbuseFilter only pulls the filters related to AFT. If you would like AbuseFilter to pull all of the filters, enter 'default' here.",
+			"value": "feedback"
+		},
+		"ArticleFeedbackv5ThrottleThresholdPostsPerHour": {
+			"description": "How many feedback posts per hour before triggering a throttling response? This is per-user and is governed by last-posted timestamps stored in a cookie. If this is set to -1, the number of posts is not throttled.",
+			"value": 20
+		},
+		"ArticleFeedbackv5LearnToEdit": {
+			"description": "The full URL for the \"Learn to Edit\" link",
+			"value": "//en.wikipedia.org/wiki/Wikipedia:Tutorial"
+		},
+		"ArticleFeedbackv5SurveyUrls": {
+			"description": "The full URL for the survey link",
+			"value": {
+				"1": "https://www.surveymonkey.com/s/aft5-1",
+				"2": "https://www.surveymonkey.com/s/aft5-2",
+				"3": "https://www.surveymonkey.com/s/aft5-3",
+				"6": "https://www.surveymonkey.com/s/aft5-6"
+			}
+		},
+		"ArticleFeedbackv5SpecialPageSurveyUrl": {
+			"description": "The full URL for the special page survey link",
+			"value": "https://www.surveymonkey.com/s/aft5-5"
+		},
+		"ArticleFeedbackv5BackendClass": {
+			"description": "Defines the backend class to be used by AFT's DataModel. Currently, only 1 (ArticleFeedbackv5BackendLBFactory) backend is supported, so better not touch that ;)",
+			"value": "ArticleFeedbackv5BackendLBFactory"
+		},
+		"ArticleFeedbackv5Cluster": {
+			"description": "Will define what external server should be used. If set to false, the current database (wfGetDB) will be used to read/write data from/to. If AFT data is supposed to be stored on an external database, set the value of this variable to the $wgExternalServers key representing that external connection.",
+			"value": false
+		}
+	},
+	"load_composer_autoloader": true,
+	"manifest_version": 2
+}

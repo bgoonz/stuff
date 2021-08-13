@@ -1,0 +1,78 @@
+{
+	"name": "AJAX Poll",
+	"version": "2.3",
+	"author": [
+		"Dariusz Siedlecki",
+		"Jack Phoenix",
+		"Thomas Gries"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:AJAX_Poll",
+	"descriptionmsg": "ajaxpoll-desc",
+	"type": "parserhook",
+	"license-name": "GFDL-1.2",
+	"requires": {
+		"MediaWiki": ">= 1.34.0"
+	},
+	"GroupPermissions": {
+		"*": {
+			"ajaxpoll-vote": false,
+			"ajaxpoll-view-results": false,
+			"ajaxpoll-view-results-before-vote": false
+		},
+		"user": {
+			"ajaxpoll-vote": true,
+			"ajaxpoll-view-results": true
+		}
+	},
+	"AvailableRights": [
+		"ajaxpoll-vote",
+		"ajaxpoll-view-results",
+		"ajaxpoll-view-results-before-vote"
+	],
+	"MessagesDirs": {
+		"AJAXPoll": [
+			"i18n"
+		]
+	},
+	"APIModules": {
+		"pollsubmitvote": "ApiAJAXPollSubmitVote"
+	},
+	"AutoloadClasses": {
+		"AJAXPoll": "includes/AJAXPoll.php",
+		"ApiAJAXPollSubmitVote": "includes/api/ApiAJAXPollSubmitVote.php",
+		"MigrateOldAJAXPollUserColumnsToActor": "maintenance/migrateOldAJAXPollUserColumnsToActor.php"
+	},
+	"ResourceModules": {
+		"ext.ajaxpoll": {
+			"group": "ext.ajaxpoll",
+			"scripts": [
+				"js/ajaxpoll.js"
+			],
+			"styles": [
+				"css/ajaxpoll.css"
+			],
+			"dependencies": [
+				"mediawiki.api"
+			],
+			"messages": [
+				"ajaxpoll-submitting"
+			],
+			"targets": [
+				"desktop",
+				"mobile"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "AJAXPoll/resources"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "AJAXPoll::onParserFirstCallInit",
+		"LoadExtensionSchemaUpdates": "AJAXPoll::onLoadExtensionSchemaUpdates"
+	},
+	"TrackingCategories": [
+		"ajaxpoll-tracking-category"
+	],
+	"manifest_version": 2
+}

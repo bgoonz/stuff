@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"C.R."
+		]
+	},
+	"apihelp-antispoof-description": "Cuntrolla nu nomme utente a cunfronto ch' 'e cuntrolle 'e normalizzaziona 'AntiSpoof.",
+	"apihelp-antispoof-param-username": "Nomme utente ca s'avesse 'e cuntrullà d'AntiSpoof.",
+	"apihelp-antispoof-example-1": "Cuntrolla nomme utente \"Foo\" d'AntiSpoof",
+	"apihelp-createaccount-param-ignoreantispoof": "Lasse perdere le verifiche de spoofing (vole 'u deritte <code>override-antispoof</code>)."
+}

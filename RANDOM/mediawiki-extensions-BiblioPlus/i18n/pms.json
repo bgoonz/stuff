@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Borichèt",
+			"Dragonòt"
+		]
+	},
+	"biblioplus-desc": "A treuva automaticament le corëspondense da PubMed e da la base ëd dàit d'ISBN",
+	"biblioplus-doi-tooltip": "Consulté o caté n'artìcol da l'editor",
+	"biblioplus-pmid-tooltip": "Consulté o caté l'artìcol da l'editor (se disponìbil)",
+	"biblioplus-isbn-tooltip": "Anformassion an sël lìber a isbndb.org",
+	"biblioplus-medline-abstracts": "Tùit ij resumé ëd Medline:",
+	"biblioplus-pubmed-abstracts": "Tùit ij resumé a PubMed",
+	"biblioplus-hubmed-abstracts": "Tùit ij resumé a HubMed",
+	"biblioplus-vkey-title": "liura a la base ëd dàit bibliogràfica"
+}

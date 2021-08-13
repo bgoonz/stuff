@@ -1,0 +1,43 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aursani",
+			"Indus Asia",
+			"Mehtab ahmed",
+			"Sindhu"
+		]
+	},
+	"coll-format_label": "فارميٽ:",
+	"coll-remove": "ھٽايو",
+	"coll-show": "ڏيکاريو",
+	"coll-move_up": "مٿي چوريو",
+	"coll-move_down": "ھيٺ چوريو",
+	"coll-cancel": "رد",
+	"coll-return_to": "[[:$1]] ڏانھن واپس ٿيو",
+	"coll-suggest_reset_bans_tooltip": "پويون ھٽايل صلاحون ڏيکاريو",
+	"coll-suggest_undo": "اڻڪريو",
+	"coll-print_export": "ڇاپيو/برآمديو",
+	"coll-create_a_book": "ڪو ڪتاب سرجيو",
+	"coll-book_creator": "ڪتاب سرجڻھار",
+	"coll-download_as": "$1 طور اتاريو",
+	"coll-disable": "اڻفعاليو",
+	"coll-book_creator_disable": "ڪتاب سرجڻھار کي اڻفعاليو",
+	"coll-book_creator_disable_tooltip": "ڪتاب سرجڻھار استعمال ڪرڻ بند ڪريو",
+	"coll-add_this_page": "ھيءُ صفحو پنھنجي ڪتاب ۾ وجھو",
+	"coll-add_page_tooltip": "ھلندڙ وڪي صفحو پنھنجي ڪتاب ۾ وجھو",
+	"coll-help": "مدد",
+	"coll-help_tooltip": "ڪتاب سرجڻ بابت امدادي مواد نمايو",
+	"coll-helppage": "Help:ڪتاب",
+	"coll-n_pages": "$1 {{PLURAL:$1|صفحو|صفحا}}",
+	"coll-remove_this_page": "پنھنجي ڪتاب مان ھيءُ صفحو ھٽايو",
+	"coll-show_collection": "ڪتاب نمايو",
+	"coll-show_collection_tooltip": "پنھنجو ڪتاب سنوارڻ/اتارڻ/گھرائڻ لاءِ ٽڙڪ ڪريو",
+	"coll-make_suggestions": "صفحا ڏَسيو",
+	"coll-make_suggestions_tooltip": "پنھنجي ڪتاب جي صفحن جي آڌار تي ڏس ڏيو",
+	"coll-setting-columns": "قطارون:",
+	"coll-attribution-anons": "نامعلوم: $1",
+	"coll-article-attribution": "<b>$1</b> <i>ذريعو:</i> $2 <i>ڀاڱيدار:</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>ذريعو:</i> $2 <i>اجازتنام:</i> $3 <i>ڀاڱيدارَ:</i> $4 <i>اصل فنڪار:</i> $5",
+	"coll-warning-learn-more": "وڌيڪ ڄاڻو",
+	"coll-contributors-title": "ڀاڱيدارَ"
+}

@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"BaRaN6161 TURK",
+			"Joseph",
+			"Karduelis",
+			"Khutuck",
+			"TmY e12",
+			"ToprakM"
+		]
+	},
+	"authorprotect": "Sayfayı yazar olmayanlardan koru",
+	"authorprotect-desc": "Bir sayfanın yazarının, sayfayı diğer kullanıcılardan korumasına izin verir",
+	"authorprotect-notauthor": "{{GENDER:$1|Siz}} bu sayfanın {{GENDER:$1|yazarı}} değilsiniz",
+	"authorprotect-confirm": "Koruma seviyesini değiştir",
+	"authorprotect-edit": "Yazarlara değiştirmeyi kısıtla",
+	"authorprotect-move": "Yazarlara taşımayı kısıtla",
+	"authorprotect-intro": "Bu sayfayı yazar-olmayanlardan kilitlemek için bu formu kullanın",
+	"authorprotect-success": "Koruma ayarlandı!",
+	"protect-level-author": "Yazar olmayanlardan koru",
+	"restriction-level-author": "Yazar korumalı",
+	"action-authorprotect": "yazar olmayanlardan koru",
+	"right-authorprotect": "Yazarlı sayfaları koru",
+	"action-author": "yazar korumalı sayfaları düzenle",
+	"right-author": "Yarı korumadaki sayfaları düzenle"
+}

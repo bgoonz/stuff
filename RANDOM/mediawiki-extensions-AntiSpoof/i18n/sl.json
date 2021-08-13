@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dbc334",
+			"Eleassar",
+			"Irena Plahuta",
+			"Yerpo"
+		]
+	},
+	"antispoof-desc": "Prepreči ustvarjanje računov z mešanimi pisavami ter begajočimi in podobnimi uporabniškimi imeni",
+	"antispoof-conflict-top": "Uporabniško ime »$1« je preveč podobno {{PLURAL:$2|spodnjemu $2 uporabniškemu imenu|spodnjima $2 uporabniškima imenoma|spodnjim $2 uporabniškim imenom}}:",
+	"antispoof-conflict-bottom": "Prosimo, izberite drugo uporabniško ime.",
+	"antispoof-name-illegal": "Uporabniško ime »$1« ni dovoljeno. Razlog: »$2«.\nProsimo, izberite drugo uporabniško ime.",
+	"antispoof-badtype": "Napačen podatkovni tip",
+	"antispoof-empty": "Prazen niz",
+	"antispoof-prohibited": "Vsebuje prepovedan znak $1",
+	"antispoof-combining": "Začne se z združevalnim znakom $1",
+	"antispoof-unassigned": "Vsebuje nepripisan ali nedovoljen znak",
+	"antispoof-deprecated": "Vsebuje odsvetovan znak $1",
+	"antispoof-noletters": "Ne vsebuje nobenih črk",
+	"antispoof-mixedscripts": "Vsebuje nezdružljive mešane skripte",
+	"antispoof-tooshort": "Normalizirano ime je prekratko",
+	"antispoof-ignore": "Prezri preverjanja prevare",
+	"antispoof-ignore-help": "Dovoli uporabnikom z dovoljšnjimi pooblastili ustvariti račun, tudi če je ime podobno obstoječemu računu.",
+	"right-override-antispoof": "Preskoči preverjanja prevar"
+}

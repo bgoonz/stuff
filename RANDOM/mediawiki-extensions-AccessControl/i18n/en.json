@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": []
+	},
+	"accesscontrol-desc": "Enables group access restriction on a page by user basis",
+	"accesscontrol-info": "This is a protected page.",
+	"accesscontrol-move-anonymous": "Deny_anonymous_by_include",
+	"accesscontrol-move-users": "Deny_user_by_include",
+	"accesscontrol-redirect-anonymous": "Deny_anonymous",
+	"accesscontrol-redirect-users": "Deny_user",
+	"accesscontrol-info-box": "Access restrictions were established for this page. If you see this message, you have no access to this page."
+}

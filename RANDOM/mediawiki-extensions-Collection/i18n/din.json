@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"Dinkawiki"
+		]
+	},
+	"coll-remove": "Nyɛɛi",
+	"coll-show": "Anyooth",
+	"coll-move_up": "Laarnhial",
+	"coll-move_down": "Laarpiny",
+	"coll-print_export": "Guurë/kɛ̈nybɛ̈ɛ̈ië",
+	"coll-create_a_book": "Cak athör",
+	"coll-book_creator": "Ducak athör",
+	"coll-download_as": "Jɔɔlpiny keye $1",
+	"coll-disable": "temkɔ̈u",
+	"coll-book_creator_disable": "Riɛtpinyë ducak ë athör",
+	"coll-book_creator_disable_tooltip": "Kääce në luui de duciëk de athöör",
+	"coll-add_this_page": "Mät abakë në athörku",
+	"coll-add_page_tooltip": "Matë apam de wiki kän në athördu-yic",
+	"coll-help": "Kony",
+	"coll-help_tooltip": "Nyuoth kony në cäk ë athör",
+	"coll-helppage": "Help:Athör",
+	"coll-n_pages": "$1 {{PLURAL:$1|apam|apɛɛm}}",
+	"coll-remove_this_page": "Nyɛɛi abakë në athörku-yic",
+	"coll-show_collection": "Nyooth athör",
+	"coll-show_collection_tooltip": "Tuany ku ba athördu waaric/miɛɛtpiny/tuöc",
+	"coll-make_suggestions": "Takë apääm",
+	"coll-make_suggestions_tooltip": "Luel, ee käŋu bïke looi, ke thiääkthok ke apɛ̈m ke athöördu",
+	"coll-attribution-anons": "Acinrin: $1",
+	"coll-article-attribution": "<b>$1</b> <i>Tënëyök:</i> $2 <i>Dujuëër:</i> $3",
+	"coll-image-attribution": "\n<b>$1</b> <i>Tënëyök:</i> $2 <i>Anyoothluɔi:</i> $3 <i> Dujuëër:</i> $4 <i>Raankäŋthɔ̈ɔ̈ŋ cë kaŋ lɔ tueŋ:</i> $5"
+}

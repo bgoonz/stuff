@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Giromin Cangiaxo"
+		]
+	},
+	"apihelp-antispoof-description": "Controlla un nomme utente co-e veriffiche de normalizaçion AntiSpoof.",
+	"apihelp-antispoof-param-username": "O nomme utente da veificâ co l'AntiSpoof.",
+	"apihelp-antispoof-example-1": "Controlla o nomme utente \"Foo\" con AntiSpoof",
+	"apihelp-createaccount-param-ignoreantispoof": "Ignora i controlli anti-spoofing (ghe vœu o drito <code>override-antispoof</code>)"
+}

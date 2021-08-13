@@ -1,0 +1,54 @@
+!! Version 2
+# MediaWiki 'Arrays' extension Parser test cases for testing interaction with 'Loops' extension
+# Author: Daniel Werner
+
+# Generate required templates.
+# These are the defaults set in $egArraysExpansionEscapeTemplates
+!!article
+Template:((
+!! text
+{{
+!!endarticle
+
+!!article
+Template:))
+!! text
+}}
+!!endarticle
+
+!!article
+Template:=
+!! text
+<nowiki>=</nowiki>
+!!endarticle
+
+
+!! functionhooks
+arrayprint
+loop
+!! endfunctionhooks
+
+
+!! test
+'arrayprint' with 'loop'
+!! wikitext
+{{#arraydefine: colors | red;#FF0000, green;#00FF00, blue;#0000FF }}
+{{
+  #loop: i
+  | 0
+  | {{#expr:{{#arraysize:colors}} }}
+  | <span></span>
+{{
+    #arraydefine: val | {{#arrayindex:colors | {{#var:i}} }} | ;
+
+    }}<span style="color:{{#arrayindex: val | 1}}">{{
+    #arrayindex: val | 0
+    }}</span>
+}}
+!! html
+<p><span></span>
+<span style="color: #FF0000">red</span><span></span>
+<span style="color: #00FF00">green</span><span></span>
+<span style="color: #0000FF">blue</span>
+</p>
+!! end

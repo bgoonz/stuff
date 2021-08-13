@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"BaRaN6161 TURK",
+			"Sayginer",
+			"Vito Genovese"
+		]
+	},
+	"breadcrumbs-desc": "Sayfaya bir parça ekmek kırıntısı ekler",
+	"prefs-breadcrumbs-separator": "Ekmek kırıntısı ayırıcı",
+	"prefs-breadcrumbs-separator-max": "En fazla 2 karakter girilebilir.",
+	"prefs-breadcrumbs": "Ekmek Kırıntıları",
+	"prefs-breadcrumbs-showcrumbs": "Ekmek kırıntılarını görüntüle",
+	"prefs-breadcrumbs-numberofcrumbs": "Ekmek kırıntısı sayısı",
+	"prefs-breadcrumbs-numberofcrumbs-max": "Maksimum 20 ekmek kırıntısı gösterilebilir.",
+	"prefs-breadcrumbs-namespaces": "Ekmek kırıntılarına Ad Alanları dahil et",
+	"prefs-breadcrumbs-filter-duplicates": "Tekrar tekrar ziyaret edilen sayfaları filtreleyin",
+	"prefs-breadcrumbs-preceding-text": "Ekmek kırıntılarından önce görünecek metin",
+	"prefs-breadcrumbs-preceding-text-max": "En fazla 30 karakter girilebilir."
+}

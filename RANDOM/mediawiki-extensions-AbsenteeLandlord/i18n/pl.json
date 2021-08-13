@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sp5uhe"
+		]
+	},
+	"absenteelandlord-reason": "Baza danych została automatycznie zablokowana z powodu braku aktywności administratorów.",
+	"absenteelandlord-desc": "Automatyczna blokada bazy danych wiki, jeśli wszyscy administratorzy będą nieaktywni przez określony czas"
+}

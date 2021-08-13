@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chinamoonroll"
+		]
+	},
+	"antispoof-desc": "Ngalangin pangardian akun antuk parab anganggé aksara campuhan, hémeng, miwah sané sami",
+	"antispoof-conflict-top": "Parab anganggé \"$1\" sanget sami sareng {{PLURAL:$2|parab anganggé}} puniki:",
+	"antispoof-conflict-bottom": "Durus milih parab anganggé liyanan.",
+	"antispoof-name-illegal": "Parab anganggé \"$1\" nénten kalugra mangda nénten hémeng utawi panipuan parab anganggé: $2. Durus milih parab anganggé liyanan.",
+	"antispoof-badtype": "Tipe data jelé",
+	"antispoof-empty": "Data puyung",
+	"antispoof-prohibited": "Madaging karakter sané nénten kalugra $1",
+	"antispoof-combining": "Kakawitin antuk tanda kombinasi $1",
+	"antispoof-unassigned": "Madaging karakter sané nénten kapican $1",
+	"antispoof-deprecated": "Madaging karakter sané nénten kaanggén malih $1",
+	"antispoof-noletters": "Nénten madaging aksara napi",
+	"antispoof-mixedscripts": "Madaging aksara campuhan sané nénten kompatibel",
+	"antispoof-tooshort": "Aran normalisasi bes cendek",
+	"antispoof-ignore": "Depang pameriksaan panipuan akun",
+	"antispoof-ignore-help": "Lugra sang anganggé antuk hak antuk ngardi satunggal akun yadiastun larab ipun sami antuk akun sané sampun wénten.",
+	"action-override-antispoof": "depang pameriksaan panipuan",
+	"right-override-antispoof": "Depang pangecék panipuan"
+}

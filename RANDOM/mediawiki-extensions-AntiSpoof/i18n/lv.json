@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"GreenZeb",
+			"Papuass"
+		]
+	},
+	"antispoof-desc": "Bloķē kontu izveidi ar jauktas rakstības, mulsinošiem un līdzīgiem lietotājvārdiem",
+	"antispoof-conflict-top": "Lietotājvārds \"$1\" ir pārāk līdzīgs {{PLURAL:$2|šiem $2 kontiem|šim $2 kontam|šiem $2 kontiem}}:",
+	"antispoof-conflict-bottom": "Lūdzu, izvēlies citu lietotājvārdu.",
+	"antispoof-badtype": "Nederīgs datu tips",
+	"antispoof-empty": "Tukša virkne",
+	"antispoof-prohibited": "Satur aizliegtu simbolu $1",
+	"antispoof-unassigned": "Satur nepiešķirtu rakstzīmi $1",
+	"antispoof-noletters": "Nesatur nevienu burtu",
+	"antispoof-mixedscripts": "Satur nesavietojamas jauktas rakstu zīmes"
+}

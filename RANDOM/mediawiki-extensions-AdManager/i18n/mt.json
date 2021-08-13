@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrisportelli",
+			"Leli Forte"
+		]
+	},
+	"admanager": "Ġestjoni tar-reklamar",
+	"admanager_invalidtargetpage": "L-ebda paġna ma nstabet bit-titlu \"$1\".",
+	"admanager_invalidtargetcategory": "L-ebda kategorija ma nstabet bit-titlu \"$1\".",
+	"admanager_labelPage": "Titli tal-paġni",
+	"admanager_labelCategory": "Ismijiet tal-kategoriji",
+	"admanager_submit": "Ibgħat",
+	"admanager_noads": "Turix l-ebda reklam",
+	"admanager_Page": "Paġni",
+	"admanager_Category": "Kategoriji",
+	"admanager_added": "It-tibdiliet tiegħek ġew salvati",
+	"admanager_addedzone": "Żdiedu ż-żoni $1",
+	"admanager_zonenum": "Żona #: $1",
+	"admanager_zonenotnumber": "Żball! $1 mhuwiex numru.",
+	"admanager_return": "Irritorna lura lejn [[Special:AdManager|Ġestjoni tar-reklamar]]"
+}

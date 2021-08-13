@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cekli829",
+			"Vago"
+		]
+	},
+	"code-comments": "Şərhlər",
+	"code-change-removed": "çıxarılıb:",
+	"code-change-added": "əlavə olunub:",
+	"code-old-status": "Qədim status",
+	"code-new-status": "Yeni status",
+	"code-authors": "müəlliflər",
+	"code-author-link": "keçid?",
+	"code-field-author": "Müəllif",
+	"code-field-status": "Status",
+	"code-field-timestamp": "Tarix",
+	"code-field-comments": "Şərhlər",
+	"code-field-text": "Qeyd",
+	"code-rev-author": "Müəllif:",
+	"code-rev-date": "Tarix:",
+	"code-rev-message": "Şərhlər:",
+	"code-rev-rev": "Dəyişiklik:",
+	"code-rev-modified-a": "əlavə olunub",
+	"code-rev-modified-r": "dəyişdirilib",
+	"code-rev-status": "Status:",
+	"code-rev-diff": "Fərq",
+	"code-status-new": "yeni",
+	"code-status-ok": "ok",
+	"code-status-old": "qədim",
+	"code-signoff-field-user": "İstifadəçi",
+	"code-signoff-field-flag": "Bayraq",
+	"code-signoff-field-date": "Tarix",
+	"code-revfilter-cr_status": "Status = $1",
+	"code-revfilter-cr_author": "Müəllif = $1",
+	"code-rev-submit": "Dəyişiklikləri yadda saxla",
+	"codereview-batch-submit": "Təsdiq et",
+	"codereview-subtitle": "$1 üçün",
+	"code-stats": "statistikalar",
+	"repoadmin-edit-button": "OK"
+}

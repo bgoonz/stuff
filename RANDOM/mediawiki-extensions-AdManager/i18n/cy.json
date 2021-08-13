@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lloffiwr",
+			"Pwyll",
+			"Robin Owain"
+		]
+	},
+	"admanager": "Rheolwr hysbysebion",
+	"admanagerzones": "Ardaloedd Rheolwr Hysbysebion",
+	"admanager-desc": "Yn darparu [[Special:AdManager|tudalen arbennig]] sy'n galluogi gweinyddwyr i osod yr ardal ar gyfer tudalennau neu gategorïau.",
+	"admanager_docu": "I ychwanegu neu waredu ardal hysbysebu tudalen neu categori lawn, ychwanegwch neu waredwch ei deitl isod.",
+	"admanagerzones_docu": "Nodwch rif pob ardal hysbyseb ar ei linell ei hun.",
+	"admanager_invalidtargetpage": "Ni ddaethpwyd o hyd i dudalen gyda'r teitl \"$1\".",
+	"admanager_invalidtargetcategory": "Ni ddaethpwyd o hyd i gategori gyda'r teitl \"$1\".",
+	"admanager_notable": "Gwall! Ni ddaethpwyd o hyd i dabl cronfa ddata angenrheidiol. Rhedwch update.php yn gyntaf.",
+	"admanager_noAdManagerZones": "Gwall! Rhaid i chi ychwanegu rhai ardaloedd. Nodwch nhw yn [[Special:AdManagerZones|Ardaloedd Rheolwr Hysbysebion]].",
+	"admanager_labelPage": "Teitlau tudalennau",
+	"admanager_labelCategory": "Enwau categorïau",
+	"admanager_submit": "Cyflwyner",
+	"admanager_noads": "Peidio arddangos hysbysebion",
+	"admanager_Page": "Tudalennau",
+	"admanager_Category": "Categorïau",
+	"admanager_added": "Cadwyd eich newidiadau",
+	"admanager_addedzone": "Ychwanegwyd ardal $1.",
+	"admanager_removedzone": "Diddymwyn ardal $1.",
+	"admanager_nozonesadded": "Ni ychwanegwyd ardal.",
+	"admanager_nozonesremoved": "Ni ddiddymwyd ardal.",
+	"admanager_zonenum": "Ardal #: $1",
+	"admanager_zonenotnumber": "Gwall! Nid rhif yw $1",
+	"admanager_return": "Dychwelyd i [[Special:AdManager|Rheolwr Hysbesebion]]",
+	"admanager_gotoads": "[[Special:AdManager|Golygu gosodiad hysbyseb]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Golygu rhanbarthau'r hysbysebion]]",
+	"right-admanager": "[[Special:AdManager|Trefnu ffurfwedd yr hysbysebu]]"
+}

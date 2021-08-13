@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Liuxinyu970226",
+			"PhiLiP",
+			"Sweeite012f",
+			"Xiaomingyan",
+			"阿pp"
+		]
+	},
+	"commentbox-desc": "于特定页面添加注释框",
+	"commentbox-intro": "== 添加评论... ==\n您对此页有意见么？请在此添加，或<span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} 直接编辑页面]</span>。",
+	"commentbox-savebutton": "保存注释",
+	"commentbox-name": "名称：",
+	"commentbox-name-explanation": "<small>(提示：[[Special:UserLogin|登入]]后不需要手动填写姓名)</small>",
+	"commentbox-log": "新评论",
+	"commentbox-first-comment-heading": "== 评论 ==",
+	"commentbox-regex": "/\\n==\\s*评论\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "创建注释时出错",
+	"commentbox-error-page-nonexistent": "此页面不存在 ！",
+	"commentbox-error-namespace": "此名字空间禁止使用评论！",
+	"commentbox-error-empty-comment": "不允许使用空注释 ！"
+}

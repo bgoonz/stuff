@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joe Watzmo",
+			"Mucalexx"
+		]
+	},
+	"antispoof-desc": "Vahindert d' Erstöung voh Benutzerkontos mid gmischte Zeichenseetz, vawirrende und änliche Benutzernåmen",
+	"antispoof-conflict-top": "Da Nåm „$1“ ist {{PLURAL:$2|'m existiarerten Benutzerkonto|de foigenden $2 Benutzerkontos}} z' änle:",
+	"antispoof-conflict-bottom": "Bittschee suach da an andan Nam aus",
+	"antispoof-name-illegal": "Da ausgsuachte Benutzernåm „$1“ is ned dalaabt. Grund: $2<br />Bittschee an åndern Benutzernåmen aussuachen.",
+	"antispoof-badtype": "Ungütiger Daatentyp",
+	"antispoof-empty": "Laars Föd",
+	"antispoof-prohibited": "Es san ned dalaabte Zeichen enthoiden.",
+	"antispoof-combining": "Kombinazionszeichen z' Beginn.",
+	"antispoof-unassigned": "Es san ned zuagordnate oder unerwynschte Zeichen enthoiden.",
+	"antispoof-noletters": "Es san koane Buachstom enthoiden.",
+	"antispoof-mixedscripts": "Es san Zeichen voh unterschiadliche Schriftsysteme enthoiden.",
+	"antispoof-tooshort": "Da kanonisiarde Nåm is z' kurz.",
+	"antispoof-ignore": "D' Änlichkeitspriaffung ignorirn",
+	"right-override-antispoof": "D' Benutzernåm-Änlichkeitspriaffung ausschoiden"
+}

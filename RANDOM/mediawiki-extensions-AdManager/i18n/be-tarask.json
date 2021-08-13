@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"EugeneZelenko",
+			"Jim-by",
+			"Red Winged Duck"
+		]
+	},
+	"admanager": "Кіраўнік рэклямы",
+	"admanagerzones": "Кіраваньне зонамі рэклямы",
+	"admanager-desc": "Дадае [[Special:AdManager|спэцыяльную старонку]], якая дазваляе адміністратарам прызначаць зону для старонак ці катэгорыяў",
+	"admanager_docu": "Для даданьня ці выдаленьня зоны рэклямы на старонцы ці ўсёй катэгорыі, трэба дадаць ці выдаліць назву старонкі ці катэгорыі ўнізе.",
+	"admanagerzones_docu": "Увядзіце нумар кожнай зоны рэклямы ў асобным радку.",
+	"admanager_invalidtargetpage": "Старонка з назвай «$1» ня знойдзеная.",
+	"admanager_invalidtargetcategory": "Катэгорыя з назвай «$1» ня знойдзеная.",
+	"admanager_notable": "Памылка! Неабходная табліца базы зьвестак ня знойдзеная! Спачатку запусьціце update.php.",
+	"admanager_noAdManagerZones": "Памылка! Вам неабходна дадаць зоны рэклямы. Увядзіце іх у [[Special:AdManagerZones|Кіраваньні зонамі рэклямы]].",
+	"admanager_labelPage": "Назвы старонак",
+	"admanager_labelCategory": "Назвы катэгорыяў",
+	"admanager_submit": "Захаваць",
+	"admanager_noads": "Не паказваць рэкляму",
+	"admanager_Page": "Старонкі",
+	"admanager_Category": "Катэгорыі",
+	"admanager_added": "Вашыя зьмены былі захаваныя",
+	"admanager_addedzone": "Дададзеная зона $1",
+	"admanager_removedzone": "Выдаленая зона $1.",
+	"admanager_nozonesadded": "Зоны не былі дададзеныя.",
+	"admanager_nozonesremoved": "Зоны не былі выдаленыя.",
+	"admanager_zonenum": "Зона № $1",
+	"admanager_zonenotnumber": "Памылка: $1 не зьяўляецца лікам.",
+	"admanager_return": "Вярнуцца да [[Special:AdManager|кіраваньня рэклямай]]",
+	"admanager_gotoads": "[[Special:AdManager|Рэдагаваць разьмяшчэньне рэклямы]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Рэдагаваць зоны рэклямы]]",
+	"action-admanager": "кіраваньне канфігурацыяй рэклямы",
+	"right-admanager": "[[Special:AdManager|кіраваньне наладамі рэклямы]]"
+}

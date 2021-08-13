@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gazeb"
+		]
+	},
+	"admanager": "Адміністратор реклам",
+	"admanagerzones": "Адміністратор рекламовых зон",
+	"admanager-desc": "Забеспечує [[Special:AdManager|службову сторінку]], яка дозволює адміністраторам встановлёвати зоны про сторінкы або катеґорії",
+	"admanager_docu": "Кідь хочете придати або вылучіти рекламову зону сторінкы або цїлой катеґорії, придайте або одоберьте їй назву долов.",
+	"admanagerzones_docu": "Уведьте чісло каждой рекламовой зоны на екстра рядку.",
+	"admanager_invalidtargetpage": "Сторінка з назвов \"$1\" ся не нашла.",
+	"admanager_invalidtargetcategory": "Жадна катеґорія з назвов \"$1\" ся не нашла.",
+	"admanager_notable": "Хыба! Потрібна табліця датабазы ся не нашла! Найсамперше спустьте update.php.",
+	"admanager_noAdManagerZones": "Хыба! Мусите придати даякы рекламовы зоны. Тото є можливе в [[Special:AdManagerZones|Адміністратор рекламовых зон]].",
+	"admanager_labelPage": "Назвы сторінок",
+	"admanager_labelCategory": "Назвы катеґорій",
+	"admanager_submit": "Загнати",
+	"admanager_noads": "Не вказовати рекламы",
+	"admanager_Page": "Сторінкы",
+	"admanager_Category": "Катеґорії",
+	"admanager_added": "Вашы зміны захованы",
+	"admanager_addedzone": "Придана зона",
+	"admanager_zonenum": "Зона #: $1",
+	"admanager_zonenotnumber": "Хыба! $1 не є чісло.",
+	"admanager_return": "Вернути ся до [[Special:AdManager|Адміністратор реклам]]",
+	"admanager_gotoads": "[[Special:AdManager|Управляти розміщіня реклам]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Едітовати зону реклам]]"
+}

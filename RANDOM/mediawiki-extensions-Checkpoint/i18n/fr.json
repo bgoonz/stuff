@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Peter17"
+		]
+	},
+	"checkpoint": "Sauvegarder et continuer la modification",
+	"checkpoint-desc": "Permet d'enregistrer une modification et de continuer à modifier",
+	"checkpoint-tooltip": "Enregistrer votre progression et continuer à modifier la page",
+	"checkpoint-notice": "([[{{ns:project}}:Checkpoint|enregistrer un point de contrôle]])"
+}

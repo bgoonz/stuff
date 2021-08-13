@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hangmanwa7id"
+		]
+	},
+	"coll-remove": "Arracher",
+	"coll-show": "Afficher",
+	"coll-move_up": "Élever",
+	"coll-move_down": "Descendre",
+	"coll-create_a_book": "Créer un livre",
+	"coll-download_as": "Télécharger comme $1",
+	"coll-disable": "désactiver",
+	"coll-book_creator_disable_tooltip": "Arrêter d’user le créateur de livre",
+	"coll-help": "Aide",
+	"coll-help_tooltip": "Afficher l’aide sur la création de livres",
+	"coll-attribution-anons": "Anonyme: $1"
+}

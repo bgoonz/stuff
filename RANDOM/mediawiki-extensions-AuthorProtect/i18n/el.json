@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Consta",
+			"KATRINE1992",
+			"Kiriakos",
+			"NikosLikomitros",
+			"Nikosgranturismogt",
+			"Omnipaedista",
+			"ZaDiak"
+		]
+	},
+	"authorprotect": "Προστασία σελίδων από μη-συγγραφείς",
+	"authorprotect-desc": "Επιτρέπει στον συγγραφέα μιας σελίδας να την προστατέψει από άλλους χρήστες",
+	"authorprotect-notauthor": "{{GENDER:$1|Εσείς}} δεν είστε ο {{GENDER:$1|συγγραφέας}} αυτής της σελίδας",
+	"authorprotect-confirm": "Αλλαγή επιπέδων προστασίας",
+	"authorprotect-edit": "Περιορισμός επεξεργασιών σε συγγραφείς",
+	"authorprotect-move": "Περιορισμός μετακίνησης στους συγγραφείς",
+	"authorprotect-intro": "Χρησιμοποιείστε αυτή τη φόρμα για να κλειδώσετε τη σελίδα από μη-συγγραφείς",
+	"authorprotect-success": "Ορίστηκε προστασία!",
+	"protect-level-author": "Προστασία από μη-συγγραφείς",
+	"restriction-level-author": "Συγγραφικά-προστατευμένο",
+	"action-authorprotect": "προστασία από μη-συγγραφείς",
+	"right-authorprotect": "Συγγραφικά προστατευμένες σελίδες",
+	"right-author": "Επεξεργασία προστατευμένων από τον συγγραφέα σελίδων"
+}

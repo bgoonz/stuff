@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"checkpoint": "Sačuvaj i nastavi s uređivanjem",
+	"checkpoint-desc": "Omogućuje korisniku da spremi promjenu i nastavi uređivanje",
+	"checkpoint-tooltip": "Spremite svoj rad do sada i nastavite s uređivanjem",
+	"checkpoint-notice": "([[{{ns:project}}:Checkpoint|spremi do sada]])"
+}

@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Alma",
+			"Banjo",
+			"Elisardojm",
+			"Toliño"
+		]
+	},
+	"antispoof-desc": "Bloquea a creación de contas con escrituras mesturadas, confusas ou con nomes de usuario similares",
+	"antispoof-conflict-top": "O nome de usuario \"$1\" é moi similar {{PLURAL:$2|ao seguinte nome|aos seguintes nomes}} de usuario:",
+	"antispoof-conflict-bottom": "Por favor, escolle outro nome de usuario.",
+	"antispoof-name-illegal": "O nome de usuario \"$1\" non está permitido para evitar confusións ou enganos cos seguintes nomes de usuario: $2. Por favor, escolla outro nome de usuario.",
+	"antispoof-badtype": "Tipo de datos incorrecto",
+	"antispoof-empty": "Cadea baleira",
+	"antispoof-prohibited": "Contén o carácter $1, presente na lista negra",
+	"antispoof-combining": "Comeza coa marca combinatoria $1",
+	"antispoof-unassigned": "Contén o carácter sen asignar $1",
+	"antispoof-deprecated": "Contén o carácter rexeitado $1",
+	"antispoof-noletters": "Non contén ningunha letra",
+	"antispoof-mixedscripts": "Contén guións incompatibles mesturados",
+	"antispoof-tooshort": "Nome normalizado curto de máis",
+	"antispoof-ignore": "Ignorar as comprobacións de engaños (spoofing)",
+	"antispoof-ignore-help": "Permite ós usuarios con permisos axeitados crear unha conta incluso se o seu nome é semellante ó dunha conta xa existente.",
+	"right-override-antispoof": "Ignorar as comprobacións de engaños (spoofing)"
+}

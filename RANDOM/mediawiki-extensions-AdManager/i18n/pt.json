@@ -1,0 +1,39 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bonifácio",
+			"Fúlvio",
+			"Hamilton Abreu",
+			"Malafaya",
+			"SandroHc",
+			"Vitorvicentevalente"
+		]
+	},
+	"admanager": "Gestor de anúncios",
+	"admanagerzones": "Zonas do gestor de anúncios",
+	"admanager-desc": "Fornece uma [[Special:AdManager|página especial]] que permite que os administradores estabeleçam a zona para as páginas e as categorias",
+	"admanager_docu": "Para adicionar ou remover a zona de publicidade de uma página ou de toda a categoria, adicionar ou remover o título da página ou categoria abaixo.",
+	"admanagerzones_docu": "Introduza cada número de zona de anúncio numa linha própria.",
+	"admanager_invalidtargetpage": "Não foi encontrada nenhuma página com o título \"$1\".",
+	"admanager_invalidtargetcategory": "Não foi encontrada nenhuma categoria com o título \"$1\".",
+	"admanager_notable": "Erro! Não foi encontrada uma tabela necessária da base de dados! Execute o update.php primeiro.",
+	"admanager_noAdManagerZones": "Erro! Deverá adicionar algumas zonas de anúncio. Insira-as nas [[Special:AdManagerZones|Zonas do Gestor de Anúncios]].",
+	"admanager_labelPage": "Títulos de páginas",
+	"admanager_labelCategory": "Nomes de categorias",
+	"admanager_submit": "Enviar",
+	"admanager_noads": "Não apresentar anúncios",
+	"admanager_Page": "Páginas",
+	"admanager_Category": "Categorias",
+	"admanager_added": "As suas alterações foram gravadas",
+	"admanager_addedzone": "Zona $1 adicionada.",
+	"admanager_removedzone": "Zona $1 removida.",
+	"admanager_nozonesadded": "Não foram adicionadas zonas.",
+	"admanager_nozonesremoved": "Não foram removidas zonas.",
+	"admanager_zonenum": "Zona #: $1",
+	"admanager_zonenotnumber": "Erro! $1 não é um número.",
+	"admanager_return": "Voltar para o [[Special:AdManager|gestor de anúncios]]",
+	"admanager_gotoads": "[[Special:AdManager|Editar posicionamento do anúncio]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Editar zonas de anúncio]]",
+	"action-admanager": "gerir configuração de anúncios",
+	"right-admanager": "[[Special:AdManager|Gerir configuração de anúncios]]"
+}

@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sociologist"
+		]
+	},
+	"coll-remove": "Oʻchirish",
+	"coll-show": "Koʻrsat",
+	"coll-move_up": "Yuqoriroqqa koʻtarish",
+	"coll-move_down": "Pastroqqa tushirish",
+	"coll-suggest_show": "koʻrsatish",
+	"coll-print_export": "Nashr/eksport qilish",
+	"coll-create_a_book": "Kitob yaratish",
+	"coll-download_as": "$1 sifatida yuklab olish",
+	"coll-remove_this_page": "Ushbu sahifani kitobdan olib tashlash",
+	"coll-image-attribution": "<b>$1</b> <i>Manba:</i> $2 <i>Litsenziya:</i> $3 <i>Mualliflar:</i> $4 <i>Rassom:</i> $5"
+}

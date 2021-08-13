@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Milicevic01"
+		]
+	},
+	"apihelp-pollsubmitvote-description": "AJAXPoll API modul",
+	"apihelp-pollsubmitvote-summary": "AJAXPoll API modul",
+	"ajaxpoll-tracking-category": "Stranice sa anketama",
+	"ajaxpoll-tracking-category-desc": "Stranica ima <code>&lt;poll&gt;</code>.",
+	"ajaxpoll-vote-update": "Vaš glas je ažuriran.",
+	"ajaxpoll-vote-add": "Vaš glas je dodan.",
+	"ajaxpoll-vote-error": "Došlo je do greške pri beleženju vašeg glasa. Pokušajte ponovo.",
+	"ajaxpoll-percent-votes": "$1% od svih glasova",
+	"ajaxpoll-no-vote": "Molimo glasajte ispod.",
+	"ajaxpoll-submitting": "Sačekajte, šaljem vaš glas.",
+	"ajaxpoll-vote-permission": "Ne možete da glasate.",
+	"ajaxpoll-revoke-vote": "Želim da povučem glas",
+	"ajaxpoll-vote-revoked": "Vaš glas je poništen."
+}

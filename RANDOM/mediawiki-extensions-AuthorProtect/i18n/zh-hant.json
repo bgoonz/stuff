@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Frankou",
+			"Gzdavidwong",
+			"Horacewai2",
+			"Kly",
+			"LNDDYL",
+			"Liangent",
+			"Mark85296341",
+			"Waihorace",
+			"Wrightbus"
+		]
+	},
+	"authorprotect": "防止非作者編輯頁面",
+	"authorprotect-desc": "允許頁面的作者禁止其他使用者編輯",
+	"authorprotect-notauthor": "{{GENDER:$1|您}}並非本頁面的{{GENDER:$1|作者}}。",
+	"authorprotect-confirm": "變更保護等級",
+	"authorprotect-edit": "禁止除作者以外人士編輯",
+	"authorprotect-move": "禁止除作者以外人士移動",
+	"authorprotect-intro": "使用此表格禁止除作者以外人士編輯",
+	"authorprotect-success": "保護已設定！",
+	"protect-level-author": "防止非作者編輯",
+	"restriction-level-author": "作者保護",
+	"action-authorprotect": "防止非作者編輯",
+	"right-authorprotect": "保護自己創作的頁面禁止他人編輯",
+	"action-author": "編輯被作者保護的頁面",
+	"right-author": "編輯被作者保護的頁面"
+}

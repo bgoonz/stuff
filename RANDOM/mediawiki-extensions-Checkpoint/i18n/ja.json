@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Shirayuki",
+			"青子守歌"
+		]
+	},
+	"checkpoint": "保存して編集を続行",
+	"checkpoint-desc": "編集を保存した後、その編集を続行できるようにする",
+	"checkpoint-tooltip": "現時点の内容を保存して、ページの編集を続行する",
+	"checkpoint-notice": "([[{{ns:project}}:Checkpoint|チェックポイントの保存]])"
+}

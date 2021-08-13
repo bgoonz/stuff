@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cem Rize"
+		]
+	},
+	"coll-remove": "Kaldır",
+	"coll-show": "Ko3ʼiri",
+	"coll-move_up": "Yukarı taşı",
+	"coll-move_down": "Aşağı taşı",
+	"coll-print_export": "Yazdır/dışa aktar",
+	"coll-create_a_book": "Bir kitap oluştur",
+	"coll-book_creator": "Kitap oluşturucu",
+	"coll-download_as": "$1 olarak indir",
+	"coll-disable": "devre dışı bırak",
+	"coll-book_creator_disable": "Kitap oluşturucuyu devre dışı bırak",
+	"coll-book_creator_disable_tooltip": "Kitap oluşturucuyu kullanmayı bırak",
+	"coll-add_this_page": "Bu sayfayı kitabınıza ekleyin",
+	"coll-add_page_tooltip": "Mevcut vikiyi kitabınıza ekleyin",
+	"coll-help": "Meşvela",
+	"coll-help_tooltip": "Kitap oluşturma hakkında yardım göster",
+	"coll-helppage": "Help:Kitaplar",
+	"coll-n_pages": "$1 {{PLURAL:$1|sayfa|sayfa}}",
+	"coll-remove_this_page": "Skani gotxozu listʼeşen jili am butʼkʼa",
+	"coll-show_collection": "Kitabı göster",
+	"coll-show_collection_tooltip": "Tıklayıp kitabınızı düzenleyin/indirin/sipariş edin",
+	"coll-make_suggestions": "Sayfa öner",
+	"coll-make_suggestions_tooltip": "Kitabınızdaki mevcut sayfalara göre öneriler göster",
+	"coll-attribution-anons": "Anonim: $1",
+	"coll-article-attribution": "<b>$1</b> <i>Kaynak:</i> $2 <i>Katkıda bulunanlar:</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>Kaynak:</i> $2 <i>Lisans:</i> $3 <i>Katkıda bulunanlar:</i> $4 <i>Özgün yazarı:</i> $5"
+}

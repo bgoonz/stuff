@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sborsody"
+		]
+	},
+	"centralauth-admin-no": "чок",
+	"centralauth-admin-reason": "Чылдагаан:",
+	"centralauth-admin-status-hidden": "Чажыт:",
+	"centralauth-admin-username": "Ажыглакчының ады:",
+	"centralauth-admin-yes": "ийе",
+	"centralauth-editgroup-reason": "Чылдагаан:",
+	"centralauth-editset-name": "Ат:",
+	"centralauth-editset-reason": "Чылдагаан:",
+	"centralauth-editset-type": "Янзы:",
+	"centralauth-finish-login": "Кирери",
+	"centralauth-finish-password": "Чажыт сөс:",
+	"centralauth-finish-send-confirmation": "Меңээ чажыт сөсту чорудаары",
+	"centralauth-log-status-hidden": "чажыт",
+	"centralauth-merge-dryrun-or": "'''азы'''",
+	"centralauth-merge-method-empty": "немелделер чок",
+	"centralauth-merge-method-new": "чаа бүрүткел бижик"
+}

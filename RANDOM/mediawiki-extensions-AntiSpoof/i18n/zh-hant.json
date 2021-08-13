@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"A2093064",
+			"Arthur2e5",
+			"Cwlin0416",
+			"Gzdavidwong",
+			"Justincheng12345",
+			"Kly",
+			"LNDDYL",
+			"Liangent",
+			"Mark85296341",
+			"Simon Shek",
+			"Waihorace",
+			"Wrightbus",
+			"Xiplus"
+		]
+	},
+	"antispoof-desc": "禁止使用混合 Script、容易混淆或與既有使用者名稱過於相似的使用者名稱建立帳號",
+	"antispoof-conflict-top": "使用者名稱 \"$1\" 與以下{{PLURAL:$2|使用者|$2 個使用者}}過於相似：",
+	"antispoof-conflict-bottom": "請選擇其他使用者名稱。",
+	"antispoof-name-illegal": "已禁止使用使用者名稱 \"$1\"，以避免混淆或欺騙使用者名稱：$2。\n請使用其他使用者名稱。",
+	"antispoof-badtype": "錯誤的資料類型",
+	"antispoof-empty": "空字串",
+	"antispoof-prohibited": "含有已禁止的字元 $1",
+	"antispoof-combining": "以組合符號開頭 $1",
+	"antispoof-unassigned": "含有未分配的字元 $1",
+	"antispoof-deprecated": "含有不建議使用的字元 $1",
+	"antispoof-noletters": "未含有任何字母",
+	"antispoof-mixedscripts": "包含不兼容的混合文字",
+	"antispoof-tooshort": "標準化後的名稱過短",
+	"antispoof-ignore": "忽略欺騙檢查",
+	"antispoof-ignore-help": "允許有特定權限的用戶創建與現有帳戶名相似的新帳戶。",
+	"action-override-antispoof": "覆蓋欺騙檢查",
+	"right-override-antispoof": "覆蓋欺騙檢查"
+}

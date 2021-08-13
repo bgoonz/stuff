@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Davidzdh",
+			"GnuDoyng",
+			"唐吉訶德的侍從"
+		]
+	},
+	"coll-remove": "Dṳ̀-lâi",
+	"coll-show": "Hiêng",
+	"coll-move_up": "Gà̤-dēng giàng",
+	"coll-move_down": "Â-dā̤ giàng",
+	"coll-print_export": "Páh-éng/Dô̤-chók",
+	"coll-create_a_book": "Siā cī buōng cṳ̆",
+	"coll-book_creator": "Gióng-lĭk dù-cṳ̄ gì tiàng-sê̤ṳ",
+	"coll-download_as": "Hâ-cái có̤ $1",
+	"coll-disable": "Dìng-ê̤ṳng",
+	"coll-book_creator_disable": "Dìng-cī sāi-ê̤ṳng gióng-lĭk dù-cṳ̄ gì tiàng-sê̤ṳ",
+	"coll-book_creator_disable_tooltip": "Dìng-cī sāi-ê̤ṳng gióng-lĭk dù-cṳ̄ gì tiàng-sê̤ṳ",
+	"coll-add_this_page": "Gâe̤ng cī-siŏh-hiĕk gă gáu nṳ̄ gì cṳ̄",
+	"coll-add_page_tooltip": "Cuŏng hiêng-câi gì wiki-hiĕk gă gáu nṳ̄ gì cṳ̄",
+	"coll-help": "Suók-mìng",
+	"coll-help_tooltip": "Hiēng-sê có̤ sĭng-cṳ̄ gì suók-mìng",
+	"coll-helppage": "Help:Dù-cṳ̄",
+	"coll-n_pages": "$1 bĭh {{PLURAL:$1|hiĕk-miêng}}",
+	"coll-remove_this_page": "Gâe̤ng cī-hiĕk téng găng-sê-dăng lā̤ iè-kŭi kó̤",
+	"coll-show_collection": "Hiēng-sê dù-cṳ̄",
+	"coll-show_collection_tooltip": "Dók cē̤-nē̤ biĕng-cĭk, hâ-cái, dèng-gáiu nṳ̄ gì cṳ̄",
+	"coll-make_suggestions": "Gióng-ngiê-hiĕk",
+	"coll-make_suggestions_tooltip": "Káng siŏh káng áng nṳ̄ cṳ̄ diē-sié gì hiĕk-miêng  sĕng-sìng gì gióng-ngiê",
+	"coll-attribution-anons": "Nĭk-mìng：$1",
+	"coll-article-attribution": "<b>$1</b> <i>Lài-nguòng:</i> $2 <i>Góng-hióng-ciā:</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>Lài-nguòng:</i> $2 <i>Sêu-guòng dèu-kuāng:</i> $3 <i>Góng-hióng-ciā:</i> $4 <i>Nguòng-sṳ̄ cáuk-ciā:</i> $5"
+}

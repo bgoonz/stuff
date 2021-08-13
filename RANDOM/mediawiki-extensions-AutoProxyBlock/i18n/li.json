@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Matthias",
+			"Ooswesthoesbes"
+		]
+	},
+	"autoproxyblock-desc": "Steit 'a autematis blokkere van hanjelinge op deze wiki tou via aope proxy's.",
+	"proxy-blocked": "{{GENDER:|Dien}} IP-addres is in de lies gezat es 'ne proxy; de oetgeveurde hanjeling is eweggehaold.",
+	"abusefilter-edit-builder-vars-is-proxy": "\"true\" wen de hanjeling is oetgeveurd via 'ne proxy",
+	"tag-proxy": "hanjeling via proxy",
+	"right-proxyunbannable": "Blokkades veur proxy's gelde neet",
+	"right-notagproxychanges": "beveilig taenge bewirkinge labele door proxy's es \"proxy\"",
+	"action-autoproxyblock-log": "tuin 't logbook van AutoProxyBlock",
+	"right-autoproxyblock-log": "tuin logbook van autematis geblokkeerde verangeringe via proxy's",
+	"proxyblock-log-name": "AutoProxyBlock-logbook",
+	"proxyblock-log-header": "Lies van autematis geblokkeerde verangeringe via proxy's",
+	"proxyblock-logentry-blocked": "hanjeling \"$2\" door {{GENDER:$3|gebroeker}} $3 op pagina [[$1]] is autematis geblokkeerd wore."
+}

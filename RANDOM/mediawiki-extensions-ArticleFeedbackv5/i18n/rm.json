@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Terfili"
+		]
+	},
+	"articlefeedbackv5-form-helpful-yes-label": "Gea",
+	"articlefeedbackv5-form-helpful-no-label": "Na",
+	"articlefeedbackv5-form-helpful-votes-count": "{{PLURAL:$1|1 gea|$1 gea}} / {{PLURAL:$2|1 na|$2 na}}",
+	"articlefeedbackv5-bucket1-toggle-found-yes": "Gea",
+	"articlefeedbackv5-bucket1-toggle-found-no": "Na"
+}

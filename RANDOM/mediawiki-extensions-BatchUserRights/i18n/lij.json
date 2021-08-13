@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Giromin Cangiaxo"
+		]
+	},
+	"batchuserrights": "Driti utente pe lotti",
+	"batchuserrights-desc": "O consente d'azonze un ò ciu utenti a 'n groppo ò ciu groppi co-ina scingola açion",
+	"batchuserrights-names": "Nommi utente a chi azonze questo groppo (un pe riga):",
+	"batchuserrights-intro": "Sta paggina a te permetiâ d'azonze 'n groppo a ciu utenti inte 'na votta.\nPe motivi de sigueçça, a lista di groppi azonzibbili a se troeuva inta configuaçion de l'estenscion e a no poeu ese modificâ da l'interno da wiki.\nDomanda a 'n aministratô de scistema se ocore consentî l'azonta pe lotti pe di atri groppi.",
+	"batchuserrights-single-progress-update": "{{PLURAL:$1|Azonto o groppo|Azonti i groppi}} a <strong>$2</strong>."
+}

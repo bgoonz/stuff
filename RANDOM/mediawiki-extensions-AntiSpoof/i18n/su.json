@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Irwangatot",
+			"Kandar"
+		]
+	},
+	"antispoof-desc": "Peungpeuk dijieunna akun anu sandiasma skrip campuran, ngaco, atawa sarupa",
+	"antispoof-conflict-top": "Ngaran \"$1\" mirip teuing jeung {{PLURAL:$2|sandiasma|sandiasma}}:",
+	"antispoof-conflict-bottom": "Mangga pilih ngaran séjén.",
+	"antispoof-name-illegal": "Sandiasma \"$1\" teu diwenangkeun ngarah teu pahili jeung sandiasma: $2. Pilih sandiasma séjénna.",
+	"antispoof-badtype": "Tipeu datana awon",
+	"antispoof-empty": "String kosong",
+	"antispoof-prohibited": "Ngandung karakter nu dipahing $1",
+	"antispoof-combining": "Dimimitian ku tanda gabungan $1",
+	"antispoof-unassigned": "Ngandung karakter anu teu dipaké $1",
+	"antispoof-noletters": "Kosong",
+	"antispoof-mixedscripts": "Ngandung tulisan campuran nu teu kompatibel",
+	"antispoof-tooshort": "Sandiasma pondok teuing",
+	"right-override-antispoof": "Abeykeun pangecekan panipuan ngaran pamaké"
+}

@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Red Winged Duck"
+		]
+	},
+	"apihelp-antispoof-description": "Праверка імені ўдзельніка паводле крытэраў нармалізацыі AntiSpoof.",
+	"apihelp-antispoof-summary": "Праверка імені ўдзельніка паводле крытэраў нармалізацыі AntiSpoof.",
+	"apihelp-antispoof-param-username": "Імя ўдзельніка для праверкі паводле крытэраў AntiSpoof.",
+	"apihelp-antispoof-example-1": "Праверка імя ўдзельніка «Foo» паводле крытэраў AntiSpoof",
+	"apihelp-createaccount-param-ignoreantispoof": "Ігнараваць праверкі падменаў (патрабуе правоў <code>override-antispoof</code>)."
+}

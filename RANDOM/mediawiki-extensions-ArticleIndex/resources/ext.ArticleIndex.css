@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+
+.articleIndexNavPrev,
+.articleIndexNavNext,
+.articleIndexNavIndex {
+	font-size: 80%;
+	color: #508ced;
+	margin-left: 5px;
+}
+
+.articleIndexNavIndex {
+	margin-right: 5px;
+}

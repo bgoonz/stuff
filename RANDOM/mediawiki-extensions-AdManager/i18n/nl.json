@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jeleniccz",
+			"Mainframe98",
+			"SPQRobin",
+			"Siebrand"
+		]
+	},
+	"admanager": "Advertentiebeheer",
+	"admanagerzones": "Zones voor advertentiebeheer",
+	"admanager-desc": "Voegt een [[Special:AdManager|speciale pagina]] toe die beheerders in staat stelt om de zone voor pagina's of categorieën in te stellen",
+	"admanager_docu": "Toevoegen of verwijderen van de ad-zone van een pagina of de hele categorie, toevoegen of verwijderen van pagina's of categorie titel hieronder.",
+	"admanagerzones_docu": "Voer elke advertentiezone op een eigen regel in.",
+	"admanager_invalidtargetpage": "Geen pagina gevonden met de naam \"$1\".",
+	"admanager_invalidtargetcategory": "Geen categorie gevonden met de naam \"$1\".",
+	"admanager_notable": "Fout: een vereiste databasetabel is niet gevonden. Voer eerst update.php uit.",
+	"admanager_noAdManagerZones": "Fout: u moet advertentiezones toevoegen. Voer ze in op de [[Special:AdManagerZones|speciale pagina]].",
+	"admanager_labelPage": "Paginanamen",
+	"admanager_labelCategory": "Categorienamen",
+	"admanager_submit": "Opslaan",
+	"admanager_noads": "Geen advertenties weergeven",
+	"admanager_Page": "Pagina's",
+	"admanager_Category": "Categorieën",
+	"admanager_added": "Uw wijzigingen zijn opgeslagen",
+	"admanager_addedzone": "Zone $1 toegevoegd",
+	"admanager_removedzone": "Zone $1 verwijderd.",
+	"admanager_nozonesadded": "Er zijn geen zones toegevoegd.",
+	"admanager_nozonesremoved": "Er zijn geen zones verwijderd.",
+	"admanager_zonenum": "Zonenummer: $1",
+	"admanager_zonenotnumber": "Fout: $1 is geen getal.",
+	"admanager_return": "Terug naar [[Special:AdManager|advertentiebeheer]]",
+	"admanager_gotoads": "[[Special:AdManager|Advertentieplaatsing bewerken]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Advertentiezones bewerken]]",
+	"action-admanager": "advertentie-instellingen te beheren",
+	"right-admanager": "[[Special:AdManager|Advertentie-instellingen beheren]]"
+}

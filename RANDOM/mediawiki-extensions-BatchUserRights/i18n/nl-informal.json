@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Siebrand"
+		]
+	},
+	"batchuserrights-intro": "Via deze pagina kan je meerdere gebruikers tegelijkertijd aan een groep toevoegen.\nOm beveiligingsredenen wordt de lijst met beschikbare groepen ingesteld in de instellingen van de uitbreiding en deze groepen kunnen niet vanuit de wiki gewijzigd worden.\nVraag hulp van een systeembeheerder als je de beschikbare groepen wilt wijzigen.",
+	"batchuserrights-no-groups": "Je hebt geen groepen gekozen.\nNu wordt er niets uitgevoerd.\nDe rest van de pagina kan uitgevoerd worden zodat je eenvoudig kunt zien of een van de gebruikersnamen niet geladen kon worden."
+}

@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ibrahima",
+			"Ibrahima Malal Sarr"
+		]
+	},
+	"coll-remove": "Ittu",
+	"coll-show": "Hollu",
+	"coll-move_up": "Faarnu dow",
+	"coll-move_down": "Faarnu les",
+	"coll-print_export": "Winndito/jiggito",
+	"coll-create_a_book": "Sos deftere",
+	"coll-book_creator": "Sosirde defte",
+	"coll-download_as": "Aawto e innde $1",
+	"coll-disable": "daaƴ",
+	"coll-book_creator_disable": "Daaƴ sosirde defte",
+	"coll-book_creator_disable_tooltip": "Nattu huutoraade sosirde defte",
+	"coll-add_this_page": "Ɓeydu ngoo hello e deftere maa",
+	"coll-add_page_tooltip": "Ɓeydu hello wiki wonaango ngoo e deftere maa",
+	"coll-help": "Balal",
+	"coll-help_tooltip": "Hollu defte baɗte cosgol defte",
+	"coll-helppage": "Help:Defte",
+	"coll-n_pages": "$1 {{PLURAL:$1|hello|kelle}}",
+	"coll-remove_this_page": "Momtu ngoo hello e deftere maa",
+	"coll-show_collection": "Hollu deftere",
+	"coll-show_collection_tooltip": "Dobo ngam taƴtaade/aawtaade/soodde deftere maa",
+	"coll-make_suggestions": "Wasiyo kelle",
+	"coll-make_suggestions_tooltip": "Hollu wasiyaaji pawiiɗi e kelle ngonɗe e deftere maa",
+	"coll-article-attribution": "<b>$1</b> <i>Sewnde:</i> $2 <i>Wallitooɓe:</i> $3"
+}

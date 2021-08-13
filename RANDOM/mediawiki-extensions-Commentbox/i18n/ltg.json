@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dark Eagle"
+		]
+	},
+	"commentbox-first-comment-heading": "== Komentari ==",
+	"commentbox-regex": "/\\n==\\s*Komentari\\s*==\\s*\\n/i"
+}

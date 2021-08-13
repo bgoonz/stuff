@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Siebrand"
+		]
+	},
+	"commentbox-intro": "== Je kunt een reactie toevoegen... ==\nHeb je een opmerking over deze pagina?\nVoeg deze hier toe of <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} bewerk deze pagina direct]</span>.",
+	"commentbox-name-explanation": "<small>Tip: als je je [[Special:UserLogin|aanmeld]], hoef je je naam hier niet in de voeren.</small>"
+}

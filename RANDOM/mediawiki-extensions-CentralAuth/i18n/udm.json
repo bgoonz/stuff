@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Irus",
+			"Kaganer",
+			"Kotwys",
+			"Mouse21",
+			"Wadorgurt"
+		]
+	},
+	"centralauth-admin-blocked2-indef": "Пырак азелы заблокировать каремын.",
+	"centralauth-admin-blocklog": "блокировкаосын журнал",
+	"centralauth-contribs-locked": "Та учётной запись глобально ӵогамын.\nУчке [[Special:CentralAuth/$1|огъя учётной записьлэсь даннойёссэ]] пыр-поч информация понна.",
+	"centralauth-foreign-contributions": "$1 {{PLURAL:$1|тупатон}} $2 проектын",
+	"centralauth-foreign-link": "$2 викиысь $1 викиавтор",
+	"centralauth-logout-progress": "Ортче {{int:Centralauth-groupname}} мукет {{PLURAL:$2|проектысь|проектъёсысь}} потон:",
+	"centralauth-merge-method-login": "системае пырыку кылдытэмын",
+	"globalrenamequeue-action-view": "Учкон",
+	"globalrenamequeue-form-status-all": "ваньзэ",
+	"globalrenamerequest-status-text": "Тӥляд викиавтор нимдэс воштон ласянь куронды ужын луэ но стюардэн юнматонэз вите. Ужан йылпумъяськоз бере, тӥ электрон почта пыр ивортон басьтоды.\n\n;Али нимды:\n:$1\n;Курем нимды:\n:$2",
+	"globalusers": "Огъя викиавторъёслэн списоксы"
+}

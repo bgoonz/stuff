@@ -1,0 +1,59 @@
+@import 'mediawiki.ui/variables.less';
+
+.collection-maintenance-box {
+	border-radius: 2px;
+	border: solid 1px @colorGray14;
+	padding-left: 46px;
+	padding-bottom: 2px;
+	font-size: 13px;
+	position: relative;
+
+	h5.collection-box-heading {
+		margin-top: 0;
+		padding-top: 0;
+		font-size: 13px;
+		margin-left: 1px;
+
+		&:before {
+			content: '';
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			left: 15px;
+			top: 14px;
+			float: left;
+		}
+	}
+
+	p.notice-text {
+		margin: 0 0 2px 0;
+		line-height: 21px;
+	}
+
+	.hlist {
+		margin-left: 0;
+
+		a {
+			font-weight: bold;
+			color: @colorProgressive;
+		}
+	}
+}
+
+.collection-warning-box {
+	background-color: @colorGray14;
+	padding-top: 13px;
+	padding-bottom: 9px;
+}
+
+.collection-notice-box {
+	margin-bottom: 24px;
+	padding-top: 8px;
+	padding-bottom: 5px;
+
+	h5.collection-box-heading {
+		&:before {
+			top: 10px;
+		}
+	}
+}

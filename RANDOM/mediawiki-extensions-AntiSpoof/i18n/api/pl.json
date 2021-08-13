@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Rail",
+			"Railfail536",
+			"Woytecr"
+		]
+	},
+	"apihelp-antispoof-description": "Sprawdź nazwę użytkownika według kryteriów AntiSpoof.",
+	"apihelp-antispoof-summary": "Sprawdź nazwę użytkownika według kryteriów AntiSpoof.",
+	"apihelp-antispoof-param-username": "Nazwa użytkownika, którą sprawdzić za pomocą AntiSpoof.",
+	"apihelp-antispoof-example-1": "Sprawdź nazwę użytkownika \"Foo\" za pomocą AntiSpoof",
+	"apihelp-createaccount-param-ignoreantispoof": "Ignoruj sprawdzenie podobieństwa nazwy (wymaga uprawnienia <code>override-antispoof</code>)."
+}

@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Laitei",
+			"Teitei Para"
+		]
+	},
+	"coll-remove": "Thy",
+	"coll-show": "Palâ",
+	"coll-move_up": "Chôlâ paly",
+	"coll-move_down": "Ry lâ paly",
+	"coll-print_export": "Chhuh/papua",
+	"coll-create_a_book": "Châbu bu kha tao",
+	"coll-book_creator": "Châbu taotuhpa",
+	"coll-download_as": "$1 châta adao",
+	"coll-disable": "Khaw",
+	"coll-book_creator_disable": "Châbu taona khaw teih",
+	"coll-book_creator_disable_tooltip": "Châbu taona hmâpa chalihsa",
+	"coll-add_this_page": "He châhmia he na châbu lâ khô teih",
+	"coll-add_page_tooltip": "Tahmâ wiki châhmia he na châbu lâta khô teih",
+	"coll-help": "Baona",
+	"coll-help_tooltip": "Châbuzy taona nata azaopa baona moh teih",
+	"coll-helppage": "Help:Châbuzy",
+	"coll-n_pages": "$1 {{PLURAL:$1|châhmia|châhmiazy}}",
+	"coll-remove_this_page": "He châhmia he na châbu tawh thy teih",
+	"coll-show_collection": "Châbu palâ",
+	"coll-show_collection_tooltip": "Na châbu taopathi/adao/pazua n'awpa ta hmie teih",
+	"coll-make_suggestions": "Khokheipa châhmiazy",
+	"coll-make_suggestions_tooltip": "Palâsapa khokheinazy cha na châbu liata châhmiazy chô lia â pahnieh",
+	"coll-attribution-anons": "Pahnoleipa: $1",
+	"coll-article-attribution": "<b>$1</b> <i>Hnawh:</i> $2 <i>Paduapazy:</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>Hnawh:</i> $2 <i>License:</i> $3 <i>Paduatuhpazy:</i> $4 <i>Châ rohtuh kakuapa:</i> $5"
+}

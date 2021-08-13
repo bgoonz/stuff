@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kghbln"
+		]
+	},
+	"breadcrumbs-desc": "Ermöglicht die Anzeige des Navigationsweges des Benutzers durch das Wiki",
+	"prefs-breadcrumbs-separator": "Trennzeichen zwischen den einzelnen Navigationselementen:",
+	"prefs-breadcrumbs-separator-max": "Maximal 2 Zeichen können als Trennzeichen angegeben werden.",
+	"prefs-breadcrumbs": "Navigationsweg",
+	"prefs-breadcrumbs-showcrumbs": "Navigationsweg anzeigen",
+	"prefs-breadcrumbs-numberofcrumbs": "Anzahl der Navigationselemente:",
+	"prefs-breadcrumbs-numberofcrumbs-max": "Es können maximal 20 Navigationselemente angezeigt werden.",
+	"prefs-breadcrumbs-namespaces": "Namensraum der aufgesuchten Seiten anzeigen",
+	"prefs-breadcrumbs-filter-duplicates": "Bereits aufgesuchte Seiten nicht erneut anzeigen",
+	"prefs-breadcrumbs-preceding-text": "Vor dem Navigationsweg anzuzeigender Text:",
+	"prefs-breadcrumbs-preceding-text-max": "Maximal 30 Zeichen können, als vor dem Navigationsweg anzuzeigender Text, angegeben werden."
+}

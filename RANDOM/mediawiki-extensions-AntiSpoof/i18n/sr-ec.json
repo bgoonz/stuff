@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"BadDog",
+			"Milicevic01",
+			"Millosh",
+			"Rancher",
+			"Sasa Stefanovic",
+			"Јованвб",
+			"Жељко Тодоровић",
+			"Михајло Анђелковић",
+			"Сербијана"
+		]
+	},
+	"antispoof-desc": "Спречава отварање налога с мешаним писмима, збуњујућим и сличним корисничким именима",
+	"antispoof-conflict-top": "Корисничко име „$1“ је превише слично са следећим {{PLURAL:$2|корисничким именом|корисничким именима}}:",
+	"antispoof-conflict-bottom": "Изаберите друго име.",
+	"antispoof-name-illegal": "Корисничко име „$1“ није дозвољено да би се избегла збуњујућа или лажирана корисничка имена: $2.\nИзаберите друго корисничко име.",
+	"antispoof-bad-char": "„$1“ ($2)",
+	"antispoof-badtype": "Погрешна врста података",
+	"antispoof-empty": "Празна ниска",
+	"antispoof-prohibited": "Садржи забрањени знак $1",
+	"antispoof-combining": "Почиње са саставним знаком $1",
+	"antispoof-unassigned": "Садржи недодељен знак $1",
+	"antispoof-deprecated": "Садржи застарели знак $1",
+	"antispoof-noletters": "Не садржи ниједно слово",
+	"antispoof-mixedscripts": "Садржи несагласна мешана писма",
+	"antispoof-tooshort": "Нормализовано име је прекратко",
+	"antispoof-ignore": "Занемари међусобно слична имена",
+	"right-override-antispoof": "заобилажење провера за међусобно слична имена"
+}

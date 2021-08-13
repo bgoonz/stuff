@@ -1,0 +1,24 @@
+{
+	"name": "ActiveAbstract",
+	"author": [
+		"Brion Vibber"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:ActiveAbstract",
+	"descriptionmsg": "activeabstract-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.35.0"
+	},
+	"MessagesDirs": {
+		"ActiveAbstract": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"AbstractFilter": "includes/AbstractFilter.php",
+		"NoredirectFilter": "includes/NoredirectFilter.php",
+		"GoogleCoopFilter": "includes/GoogleCoopFilter.php"
+	},
+	"manifest_version": 2
+}

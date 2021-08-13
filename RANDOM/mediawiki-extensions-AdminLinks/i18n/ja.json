@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fryed-peach",
+			"Otokoume",
+			"Shirayuki",
+			"マツムシ"
+		]
+	},
+	"adminlinks": "管理者用リンク集",
+	"adminlinks-desc": "管理者に有用なリンクを集めた[[Special:AdminLinks|特別ページ]]を追加する",
+	"adminlinks_documentation": "$1 の説明書",
+	"adminlinks_general": "全般",
+	"adminlinks_editsidebar": "サイドバーを編集",
+	"adminlinks_editcss": "CSS ファイルを編集",
+	"adminlinks_editmainpagename": "メインページの名前を編集",
+	"adminlinks_users": "利用者",
+	"adminlinks_browsesearch": "閲覧と検索",
+	"adminlinks_importexport": "取り込みと書き出し",
+	"adminlinks_pagenotfound": "指定した特別ページが見つかりませんでした: $1",
+	"action-adminlinks": "管理者用リンクの閲覧",
+	"right-adminlinks": "[[Special:AdminLinks|管理者用リンク集]]へのリンクが表示される"
+}

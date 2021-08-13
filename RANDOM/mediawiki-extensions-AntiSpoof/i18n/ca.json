@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"Arnaugir",
+			"Bombolla",
+			"Jmarchn",
+			"Mguix",
+			"Pginer",
+			"Qllach",
+			"SMP",
+			"Toniher",
+			"Vriullop"
+		]
+	},
+	"antispoof-desc": "Bloca la creació de comptes amb alfabets barrejats i noms d'usuari similars o que portin a confusió",
+	"antispoof-conflict-top": "El nom d'usuari «$1» és massa similar {{PLURAL:$2|al nom d'usuari següent|als noms d'usuari següents}}:",
+	"antispoof-conflict-bottom": "Trieu un altre nom d'usuari.",
+	"antispoof-name-illegal": "El nom d'usuari «$1» no està permès per evitar confusions o falsificacions amb els noms d'usuari: $2. \nSi us plau, escolliu un altre nom d'usuari.",
+	"antispoof-badtype": "Tipus de dades incorrecte",
+	"antispoof-empty": "Cadena buida",
+	"antispoof-prohibited": "Conté el caràcter no permès $1",
+	"antispoof-combining": "Comença amb la marca de combinació $1",
+	"antispoof-unassigned": "Conté el caràcter no assignat $1",
+	"antispoof-deprecated": "Conté el caràcter obsolet $1",
+	"antispoof-noletters": "No conté cap lletra",
+	"antispoof-mixedscripts": "Conté una mescla incompatible d'escriptures",
+	"antispoof-tooshort": "Nom normalitzat massa curt",
+	"antispoof-ignore": "Ignora controls antispoof",
+	"antispoof-ignore-help": "Permet crear un compte als usuaris amb prou privilegis, inclús sota un nom similar a un d'existent.",
+	"right-override-antispoof": "Evitar el control de noms d'usuari"
+}

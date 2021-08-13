@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"AlimanRuna"
+		]
+	},
+	"antispoof-desc": "Chaqrusqa sananchayuq, pantachiq, musphachiq rakiquna suti kamariyta hark'an",
+	"antispoof-conflict-top": "\"$1\" nisqa sutiqa {{PLURAL:$2|kay rakiqunapman|kay rakiqunakunapman}} nisyu kaqllam kachkan:",
+	"antispoof-conflict-bottom": "Ama hina kaspa, huk hina sutita akllakuy.",
+	"antispoof-name-illegal": "Nisqayki \"$1\" sutiqa manam saqillasqachu, suti pantachiyta hark'anapaq: \"$2\". Ama hina kaspa, huk sutita akllay.",
+	"antispoof-badtype": "Willa layaqa manam allinchu",
+	"antispoof-empty": "Ch'usaq qillqa",
+	"antispoof-prohibited": "Mana allin sutisuyupi kaq $1 sananchayuq",
+	"antispoof-combining": "$1 t'inkinakuy sananchawanmi qallarin",
+	"antispoof-unassigned": "Mana allin $1 sananchayuq",
+	"antispoof-deprecated": "Mawk'ayasqa $1 sananchayuq",
+	"antispoof-noletters": "Manam ima sanampayuqchu",
+	"antispoof-mixedscripts": "Mana allin chaqrusqa qillqayuq",
+	"antispoof-tooshort": "Kanunikuchasqa sutiqa nisyu pisillam",
+	"antispoof-ignore": "Kaqlla kay llanchiyta ama ruraychu",
+	"right-override-antispoof": "Kaqlla kay llanchiyta ama atichiychu"
+}

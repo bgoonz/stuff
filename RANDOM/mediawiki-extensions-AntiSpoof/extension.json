@@ -1,0 +1,85 @@
+{
+	"name": "AntiSpoof",
+	"author": "Brion Vibber",
+	"url": "https://www.mediawiki.org/wiki/Extension:AntiSpoof",
+	"descriptionmsg": "antispoof-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "antispam",
+	"requires": {
+		"MediaWiki": ">= 1.37.0"
+	},
+	"GroupPermissions": {
+		"sysop": {
+			"override-antispoof": true
+		},
+		"bureaucrat": {
+			"override-antispoof": true
+		}
+	},
+	"AvailableRights": [
+		"override-antispoof"
+	],
+	"GrantPermissions": {
+		"createaccount": {
+			"override-antispoof": true
+		}
+	},
+	"APIModules": {
+		"antispoof": "ApiAntiSpoof"
+	},
+	"MessagesDirs": {
+		"AntiSpoof": [
+			"i18n",
+			"i18n/api"
+		]
+	},
+	"AutoloadClasses": {
+		"AntiSpoof": "includes/AntiSpoof.php",
+		"AntiSpoofHooks": "includes/AntiSpoofHooks.php",
+		"SpoofUser": "includes/SpoofUser.php",
+		"AntiSpoofAuthenticationRequest": "includes/AntiSpoofAuthenticationRequest.php",
+		"AntiSpoofPreAuthenticationProvider": "includes/AntiSpoofPreAuthenticationProvider.php",
+		"ApiAntiSpoof": "includes/ApiAntiSpoof.php"
+	},
+	"AuthManagerAutoConfig": {
+		"preauth": {
+			"AntiSpoofPreAuthenticationProvider": {
+				"class": "AntiSpoofPreAuthenticationProvider",
+				"services": [
+					"PermissionManager"
+				]
+			}
+		}
+	},
+	"Hooks": {
+		"LoadExtensionSchemaUpdates": "AntiSpoofHooks::asUpdateSchema",
+		"LocalUserCreated": "AntiSpoofHooks::asLocalUserCreated",
+		"RenameUserComplete": "AntiSpoofHooks::asAddRenameUserHook",
+		"DeleteAccount": "AntiSpoofHooks::asDeleteAccount"
+	},
+	"config": {
+		"AntiSpoofAccounts": {
+			"description": "Whether to stop spoofed accounts from being created. When false, only log.",
+			"value": true,
+			"public": true
+		},
+		"AntiSpoofProhibitedCharacters": {
+			"description": "List of characters prohibited from use in your wiki.",
+			"value": [
+				"\u0337",
+				"\u0338",
+				"\u2044",
+				"\u2215",
+				"\u23AE",
+				"\u29F6",
+				"\u29F8",
+				"\u2AFB",
+				"\u2AFD",
+				"\uFF0F"
+			],
+			"public": true
+		}
+	},
+	"load_composer_autoloader": true,
+	"manifest_version": 2
+}

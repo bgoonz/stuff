@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"admanager": "Раководител со реклами",
+	"admanagerzones": "Зони - Раководител со реклами",
+	"admanager-desc": "Дава [[Special:AdManager|службена страница]] каде системските оператори можат да ја зададат зоната за страниците или категориите",
+	"admanager_docu": "За да додадете или отстраните рекламно подрачје на една страница или цела категорија, подолу додајте/отстранете го нејзиниот наслов.",
+	"admanagerzones_docu": "Внесете го ги броевите на рекламните зони, секој во посебен ред.",
+	"admanager_invalidtargetpage": "Не пронајдов страница со наслов „$1“.",
+	"admanager_invalidtargetcategory": "Не пронајдов категорија со наслов „$1“.",
+	"admanager_notable": "Грешка! Не ја пронајдов потребната табела во базата! Најпрвин направете поднова со update.php.",
+	"admanager_noAdManagerZones": "Грешка! Мора да додадете некои рекламни зони. Внесете ги во „[[Special:AdManagerZones|Зони - Раководител со реклами]]“.",
+	"admanager_labelPage": "Наслови на страниците",
+	"admanager_labelCategory": "Имиња на категориите",
+	"admanager_submit": "Поднеси",
+	"admanager_noads": "Не прикажувај реклами",
+	"admanager_Page": "Страници",
+	"admanager_Category": "Категории",
+	"admanager_added": "Вашите измени се зачувани",
+	"admanager_addedzone": "Додадено подрачјето $1",
+	"admanager_removedzone": "Отстранета зона $1.",
+	"admanager_nozonesadded": "Не беше додадена ниедна зона.",
+	"admanager_nozonesremoved": "Не беше отстранета ниедна зона.",
+	"admanager_zonenum": "Зона бр: $1",
+	"admanager_zonenotnumber": "Грешка! $1 не претставува број.",
+	"admanager_return": "Назад на [[Special:AdManager|Раководителот со реклами]]",
+	"admanager_gotoads": "[[Special:AdManager|Смени положба на рекламата]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Уреди рекламни зони]]",
+	"action-admanager": "раководење со поставеноста на рекламите",
+	"right-admanager": "[[Special:AdManager|Поставки за рекламирање]]"
+}

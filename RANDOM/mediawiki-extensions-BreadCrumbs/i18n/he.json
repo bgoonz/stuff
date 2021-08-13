@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80"
+		]
+	},
+	"breadcrumbs-desc": "הוספת שביל פירורי לחם תחת סרגל הלשוניות",
+	"prefs-breadcrumbs-separator": "תו מפריד לפירורי לחם",
+	"prefs-breadcrumbs-separator-max": "אפשר להזין 2 תווים לכל היותר",
+	"prefs-breadcrumbs": "פירורי לחם",
+	"prefs-breadcrumbs-showcrumbs": "להציג פירורי לחם",
+	"prefs-breadcrumbs-numberofcrumbs": "מספר פירורי הלחם",
+	"prefs-breadcrumbs-numberofcrumbs-max": "אפשר להציג 20 פירורי לחם לכל היותר",
+	"prefs-breadcrumbs-namespaces": "לכלול את מרחב השם בפירורי לחם",
+	"prefs-breadcrumbs-filter-duplicates": " לסנן דפים שחוזרים על עצמם הרבה",
+	"prefs-breadcrumbs-preceding-text": "טקסט שיופיע לפני פירורי הלחם",
+	"prefs-breadcrumbs-preceding-text-max": "אפשר להזין לכל היותר 30 תווים."
+}

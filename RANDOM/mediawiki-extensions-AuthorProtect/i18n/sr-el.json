@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Liangent",
+			"Michaello",
+			"Rancher"
+		]
+	},
+	"authorprotect": "Zaštiti članak od ne-autora",
+	"authorprotect-desc": "Omogućava autoru članka da ga zaštiti od drugih korisnika",
+	"authorprotect-notauthor": "Vi niste autor ovog članka",
+	"authorprotect-confirm": "Promeni nivoe zaštite",
+	"authorprotect-edit": "Ograniči pravo izmene na autore",
+	"authorprotect-move": "Ograniči pravo premeštanja samo na autore",
+	"authorprotect-intro": "Koristite ovu formu da biste zaključali ovaj članak za ne-autore",
+	"authorprotect-success": "Zaštita uspešna!",
+	"protect-level-author": "Zaštiti od ne-autora",
+	"restriction-level-author": "Korisnički zaštićeno",
+	"right-authorprotect": "zaštita stranica od strane autora"
+}

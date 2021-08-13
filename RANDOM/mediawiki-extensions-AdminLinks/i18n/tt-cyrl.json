@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ерней",
+			"Ильнар",
+			"Рашат Якупов"
+		]
+	},
+	"adminlinks": "Идарәчеләр өчен сылтамалар",
+	"adminlinks-desc": "Идарәчеләр өчен кирәкле булган сылтамалар белән [[Special:AdminLinks|махсус битне]] өсти",
+	"adminlinks_documentation": "$1 өчен документация",
+	"adminlinks_general": "Гомуми",
+	"adminlinks_editsidebar": "Ян өлгене үзгәртү",
+	"adminlinks_editcss": "CSS файлны үзгәртү",
+	"adminlinks_editmainpagename": "Баш битнең исемен үзгәртү",
+	"adminlinks_users": "Кулланучылар",
+	"adminlinks_browsesearch": "Карап чыгу һәм эзләү",
+	"adminlinks_importexport": "Кертү һәм чыгару",
+	"adminlinks_pagenotfound": "$1 исемле махсус битне табып булмады.",
+	"action-adminlinks": "идарә сылтамаларын карау",
+	"right-adminlinks": "[[Special:AdminLinks|Идарәчеләр өчен сылтамаларны]] карау"
+}

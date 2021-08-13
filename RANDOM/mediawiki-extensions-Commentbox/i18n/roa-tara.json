@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"commentbox-desc": "Aggiunge 'na sckatole de commende a certe pàggene",
+	"commentbox-intro": "== Aggiunge 'nu commende... ==\nTu è 'nu commende sus a sta pàgene? Aggiungile aqquà o <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} cange 'a pàgene direttamende]</span>.",
+	"commentbox-savebutton": "Reggistre 'u commende",
+	"commentbox-name": "Nome:",
+	"commentbox-name-explanation": "<small>(Conziglie: Ce tu [[Special:UserLogin|tràse]], non g'ha mettere 'u nome tue a màne)</small>",
+	"commentbox-log": "Commende nuève",
+	"commentbox-first-comment-heading": "== Commende ==",
+	"commentbox-regex": "/\\n==\\s*Commende\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Errore mendre stoche a ccreje 'nu commende",
+	"commentbox-error-page-nonexistent": "Sta pàgene non g'esiste!",
+	"commentbox-error-namespace": "Le commende non ge sò permesse jndr'à stu namespace!",
+	"commentbox-error-empty-comment": "Le commende vacande non ge se ponne mettere!"
+}

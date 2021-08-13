@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"!Silent"
+		]
+	},
+	"carp-desc": "Fornece relatório de erros e o conteúdo do ''stack'' da memória às outras extensões"
+}

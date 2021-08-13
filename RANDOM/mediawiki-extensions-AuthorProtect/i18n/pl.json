@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrumps",
+			"Derbeth",
+			"Leinad",
+			"Rail",
+			"Railfail536",
+			"Sp5uhe",
+			"Woytecr"
+		]
+	},
+	"authorprotect": "Zabezpiecz stronę przed wszystkimi poza autorami",
+	"authorprotect-desc": "Umożliwia autorowi strony zabezpieczenie jej przed innymi użytkownikami",
+	"authorprotect-notauthor": "Nie {{GENDER:$1|jesteś}} {{GENDER:$1|autorem|autorką}} tej strony.",
+	"authorprotect-confirm": "Zmień poziomy zabezpieczenia",
+	"authorprotect-edit": "Ogranicz możliwość edycji do autorów",
+	"authorprotect-move": "Ogranicz możliwość przenoszenia do autorów",
+	"authorprotect-intro": "Użyj tego formularza, by zabezpieczyć tę stronę przed edycją przez osoby, które nie są jej autorami",
+	"authorprotect-success": "Zabezpieczono!",
+	"protect-level-author": "Zabezpieczenie przed wszystkimi poza autorami",
+	"restriction-level-author": "Tylko autorzy",
+	"action-authorprotect": "zabezpieczania przed wszystkimi poza autorami",
+	"right-authorprotect": "Zabezpieczanie stron autorskich",
+	"action-author": "edytowania stron zabezpieczonych przez autora",
+	"right-author": "Edycja stron zabezpieczonych przez autora"
+}

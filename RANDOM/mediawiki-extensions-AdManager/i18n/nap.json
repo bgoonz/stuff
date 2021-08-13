@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"C.R."
+		]
+	},
+	"admanager": "Gestione 'e pubbricità",
+	"admanagerzones": "Gestióne 'e Zone 'e pubbricità",
+	"admanager-desc": "Ce dà na [[Special:AdManager|paggena speciale]] ca permettesse a ll'ammenistrature d'impustà 'e zzone pe' paggene o categurìe",
+	"admanager_docu": "Pe' ll'azzeccà o luvà 'a zona 'e na paggena o na categurìa sana sana, ghienche o sbacanta c' 'o titolo ccà abbascio.",
+	"admanagerzones_docu": "Azzecca 'o nummero d'ogne zona dint'a propria riga.",
+	"admanager_invalidtargetpage": "Nisciuna paggena truvata c' 'o titolo \"$1\".",
+	"admanager_invalidtargetcategory": "Nisciuna categurìa truvata c' 'o titolo \"$1\".",
+	"admanager_notable": "Errore! Na tabbella 'e database addimannata nun è stata truvata! Và ncopp'a update.php apprimm' 'e cuntinuà.",
+	"admanager_noAdManagerZones": "Errore! È necessario ghienchere cocche zona p' 'a pubbricità. Azzecca sti zzone dint' 'a [[Special:AdManagerZones|Gestione zzone pe' pubbricità]].",
+	"admanager_labelPage": "Titule d' 'e paggene",
+	"admanager_labelCategory": "Nomme d' 'e categurìe",
+	"admanager_submit": "Manna",
+	"admanager_noads": "Nun fà vedé pubbricità",
+	"admanager_Page": "Paggene",
+	"admanager_Category": "Categurìe",
+	"admanager_added": "'E cagnamiente so' state sarvate",
+	"admanager_addedzone": "Azzeccata zona $1",
+	"admanager_removedzone": "Luvata zona $1.",
+	"admanager_nozonesadded": "Nun è stata azzeccata nisciuna zona.",
+	"admanager_nozonesremoved": "Nun è stata luvata nisciuna zona.",
+	"admanager_zonenum": "Zona #: $1",
+	"admanager_zonenotnumber": "Errore! $1 nun è nu nummero.",
+	"admanager_return": "Torna a [[Special:AdManager|Gestione pubbricità]]",
+	"admanager_gotoads": "[[Special:AdManager|Cágna 'o mpizzamiento d' 'a pubbricità]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Cágna zzone 'e pubbricità]]",
+	"right-admanager": "[[Special:AdManager|Gestisce 'a configurazione d' 'a pubbricità]]"
+}

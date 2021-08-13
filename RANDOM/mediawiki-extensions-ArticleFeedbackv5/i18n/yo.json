@@ -1,0 +1,40 @@
+{
+	"@metadata": {
+		"authors": [
+			"Demmy"
+		]
+	},
+	"articlefeedbackv5-cta4-button-text-login": "Ìjáwọlé",
+	"articlefeedbackv5-go-to-article": "Ìgbéwò ojúewé",
+	"articlefeedbackv5-discussion-page": "Ọ̀rọ̀",
+	"articlefeedbackv5-whats-this": "Ìrànwọ́",
+	"articlefeedbackv5-settings-menu-title": "Àwọn ìtòjọ",
+	"articlefeedbackv5": "Ibi èsì àyọkà",
+	"articlefeedbackv5-desc": "条目评级（测试版）",
+	"articlefeedbackv5-short-status-request": "{{GENDER:$1|Àtúnyẹ̀wò látọwọ́ $1}}",
+	"articlefeedbackv5-short-status-unrequest": "{{GENDER:$1|Àtúnyẹ̀wò látọwọ́ $1}}",
+	"articlefeedbackv5-short-status-decline": "{{GENDER:$1|Àtúnyẹ̀wò látọwọ́ $1}}",
+	"articlefeedbackv5-short-status-autohide": "{{GENDER:$1|Àtúnyẹ̀wò látọwọ́ $1}}",
+	"articlefeedbackv5-short-status-oversight": "{{GENDER:$1|Àtúnyẹ̀wò látọwọ́ $1}}",
+	"articlefeedbackv5-short-status-unoversight": "{{GENDER:$1|Àtúnyẹ̀wò látọwọ́ $1}}",
+	"articlefeedbackv5-short-status-unflag": "{{GENDER:$1|Àtúnyẹ̀wò látọwọ́ $1}}",
+	"articlefeedbackv5-short-status-flag": "{{GENDER:$1|Àtúnyẹ̀wò látọwọ́ $1}}",
+	"articlefeedbackv5-short-status-autoflag": "{{GENDER:$1|Àtúnyẹ̀wò látọwọ́ $1}}",
+	"articlefeedbackv5-short-status-feature": "{{GENDER:$1|Àtúnyẹ̀wò látọwọ́ $1}}",
+	"articlefeedbackv5-short-status-unfeature": "{{GENDER:$1|Àtúnyẹ̀wò látọwọ́ $1}}",
+	"articlefeedbackv5-short-status-resolve": "{{GENDER:$1|Àtúnyẹ̀wò látọwọ́ $1}}",
+	"articlefeedbackv5-short-status-unresolve": "{{GENDER:$1|Àtúnyẹ̀wò látọwọ́ $1}}",
+	"articlefeedbackv5-short-status-noaction": "{{GENDER:$1|Àtúnyẹ̀wò látọwọ́ $1}}",
+	"articlefeedbackv5-short-status-unnoaction": "{{GENDER:$1|Àtúnyẹ̀wò látọwọ́ $1}}",
+	"articlefeedbackv5-short-status-inappropriate": "{{GENDER:$1|Àtúnyẹ̀wò látọwọ́ $1}}",
+	"articlefeedbackv5-short-status-uninappropriate": "{{GENDER:$1|Àtúnyẹ̀wò látọwọ́ $1}}",
+	"articlefeedbackv5-short-status-hide": "{{GENDER:$1|Àtúnyẹ̀wò látọwọ́ $1}}",
+	"articlefeedbackv5-short-status-unhide": "{{GENDER:$1|Àtúnyẹ̀wò látọwọ́ $1}}",
+	"articlefeedbackv5-short-status-archive": "{{GENDER:$1|Àtúnyẹ̀wò látọwọ́ $1}}",
+	"articlefeedbackv5-short-status-unarchive": "{{GENDER:$1|Àtúnyẹ̀wò látọwọ́ $1}}",
+	"articlefeedbackv5-short-status-helpful": "{{GENDER:$1|Àtúnyẹ̀wò látọwọ́ $1}}",
+	"articlefeedbackv5-short-status-undo-helpful": "{{GENDER:$1|Àtúnyẹ̀wò látọwọ́ $1}}",
+	"articlefeedbackv5-short-status-unhelpful": "{{GENDER:$1|Àtúnyẹ̀wò látọwọ́ $1}}",
+	"articlefeedbackv5-short-status-undo-unhelpful": "{{GENDER:$1|Àtúnyẹ̀wò látọwọ́ $1}}",
+	"articlefeedbackv5-noteflyover-hide-caption": "Ìbòmọ́lẹ̀"
+}

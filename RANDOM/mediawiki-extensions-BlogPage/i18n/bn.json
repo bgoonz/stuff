@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"Titodutta",
+			"আফতাবুজ্জামান"
+		]
+	},
+	"blog-and": "এবং",
+	"blog-author-comments": "$1টি {{PLURAL:$1|মন্তব্য}}",
+	"blog-author-more-by": "$1 কর্তৃক আরও",
+	"blog-author-title": "{{PLURAL:$1|লেখক|লেখকগণ}} সম্পর্কে",
+	"blog-author-votes": "$1টি {{PLURAL:$1|ভোট}}",
+	"blog-comments-of-day": "আজকের নির্বাচিত মন্তব্য",
+	"blog-created-ago": "$1 আগে তৈরি করা",
+	"blog-in-the-news": "সংবাদে",
+	"blog-new-articles": "নতুন নিবন্ধসমূহ",
+	"blog-view-archive-link": "সব দেখুন",
+	"articlelists": "নতুন ব্লগ নিবন্ধ",
+	"blog-ah-no-results": "পাতা খুঁজে পাওয়া যায়নি।",
+	"blog-ah-popular-articles": "জনপ্রিয় নিবন্ধ",
+	"blog-ah-new-articles": "নতুন নিবন্ধ",
+	"blog-ah-write-article": "একটি নিবন্ধ লিখুন",
+	"blog-ah-todays-articles": "আজকের নিবন্ধ",
+	"blog-ah-most-votes": "সর্বাধিক ভোট (৭২ ঘণ্টা)",
+	"blog-ah-what-talking-about": "সর্বাধিক মন্তব্য (৭২ ঘণ্টা)",
+	"articleshome": "ব্লগের প্রধান পাতা",
+	"createblogpost": "ব্লগ পোস্ট তৈরি করুন",
+	"blog-create-title": "শিরোনাম",
+	"blog-create-text": "লেখা",
+	"blog-create-categories": "বিষয়শ্রেণীসমূহ",
+	"blog-create-button": "তৈরি করুন!",
+	"blog-more": "আরও",
+	"blog-time-ago": "$1 আগে",
+	"blog-time-days": "{{PLURAL:$1|এক দিন|$1 দিন}}",
+	"blog-time-hours": "{{PLURAL:$1|এক ঘণ্টা|$1 ঘণ্টা}}",
+	"blog-time-minutes": "{{PLURAL:$1|এক মিনিট|$1 মিনিট}}",
+	"blog-time-seconds": "{{PLURAL:$1|এক সেকেন্ড|$1 সেকেন্ড}}",
+	"blog-user-articles-title": "ব্লগসমূহ",
+	"blog-user-articles-votes": "{{PLURAL:$1|একটি ভোট|$1টি ভোট}}",
+	"blog-user-article-comment": "{{PLURAL:$1|একটি মন্তব্য|$1টি মন্তব্য}}"
+}

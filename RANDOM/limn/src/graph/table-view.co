@@ -1,0 +1,85 @@
+_  = require 'underscore'
+ko = require 'knockout'
+moment = require 'moment'
+
+{ View,
+} = require '../base/view'
+{ ColumnDef,
+} = require '../data/datasource'
+Trait = require './node/graph-node-trait'
+
+
+
+class exports.TableView extends View
+    template: 'table'
+    
+    defaults: ->
+        model: null
+        rootNode: null
+        columnDefs: []
+        columns: []
+        rows: []
+        tableColumns: null
+        tableRows: null
+    
+    
+    /**
+     * @constructor
+     * @param {Graph} model Graph model for this view.
+     * @param {GraphNode} rootNode The root node that was rendering the Graph model
+     */
+    (model, rootNode) ->
+        super ...
+        @rootNode rootNode
+        @model model
+        
+        # TODO: this is awful and should be replaced with scales mapping to column/row indices
+        distinctRows = {}
+        
+        # TODO: make work for non-timeseries data
+        @rootNode().walk [], (columns, node) ~>
+            if      node.hasTrait(Trait.METRIC_CONTENT_DATA) and
+                    columnDef = node.model()?.metric()?.yColumnDef()
+                column = {}
+                column.label = node.label()
+                for row of node.model().metric().materialized().rows
+                    column[row[0]] = row[1]
+                    distinctRows[row[0]] = true
+                @columns.push column
+        
+        firstColumn = []
+        for value in distinctRows
+            if moment(value).isValid()
+                firstColumn.push new Date(value)
+            else
+                firstColumn.push value
+        
+        dateFormat = @findLegendDateFormat()
+        for value of firstColumn.sort((a,b) ->
+            return -1 if a > b
+            return 1 if a < b
+            return 0
+        )
+            row = []
+            if moment(value).isValid()
+                row.push moment(value).format(dateFormat)
+            else
+                row.push value
+            
+            for column, i of @columns()
+                row.push column[value]
+            @rows.push row
+        
+        @columns.insert [], 0
+        @columns()[0].label = if firstColumn[0] instanceof Date then 'Date' else ''
+        @tableColumns @columns()
+        @tableRows @rows()
+    
+    
+    findLegendDateFormat: ->
+        dateFormat = 'YYYY-MM-DD HH:mm'
+        @rootNode().walk [], (columns, node) ~>
+            if node.nodeType is 'legend'
+                dateFormat := node.model().get('options.dateFormat')
+        
+        return dateFormat

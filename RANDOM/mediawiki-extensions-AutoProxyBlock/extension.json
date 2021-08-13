@@ -1,0 +1,84 @@
+{
+	"name": "AutoProxyBlock",
+	"version": "1.2.0",
+	"author": "[https://www.mediawiki.org/wiki/User:Cryptocoryne Cryptocoryne]",
+	"url": "https://www.mediawiki.org/wiki/Extension:AutoProxyBlock",
+	"descriptionmsg": "autoproxyblock-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "antispam",
+	"requires": {
+		"MediaWiki": ">= 1.36.0"
+	},
+	"AvailableRights": [
+		"proxyunbannable",
+		"notagproxychanges",
+		"autoproxyblock-log"
+	],
+	"GroupPermissions": {
+		"sysop": {
+			"proxyunbannable": true
+		},
+		"bureaucrat": {
+			"autoproxyblock-log": true
+		}
+	},
+	"LogActions": {
+		"proxyblock/proxyblock": "proxyblock-logentry",
+		"proxyblock/blocked": "proxyblock-logentry-blocked"
+	},
+	"LogHeaders": {
+		"proxyblock": "proxyblock-log-header"
+	},
+	"LogNames": {
+		"proxyblock": "proxyblock-log-name"
+	},
+	"LogRestrictions": {
+		"proxyblock": "autoproxyblock-log"
+	},
+	"LogTypes": [
+		"proxyblock"
+	],
+	"MessagesDirs": {
+		"AutoProxyBlock": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"AutoProxyBlock": "AutoProxyBlock.body.php"
+	},
+	"Hooks": {
+		"getUserPermissionsErrorsExpensive": "AutoProxyBlock::checkProxy",
+		"RecentChange_save": "AutoProxyBlock::onRecentChangeSave",
+		"ListDefinedTags": "AutoProxyBlock::addProxyTag",
+		"ChangeTagsListActive": "AutoProxyBlock::addProxyTag",
+		"AbuseFilter-filterAction": "AutoProxyBlock::AFSetVar",
+		"AbuseFilter-builder": "AutoProxyBlock::AFBuilderVars"
+	},
+	"config": {
+		"ProxyCanPerform": {
+			"value": [
+				"read",
+				"edit",
+				"upload"
+			]
+		},
+		"TagProxyActions": {
+			"value": false
+		},
+		"AutoProxyBlockSources": {
+			"value": {
+				"api": [
+					"https://en.wikipedia.org/w/api.php"
+				],
+				"raw": [
+					"/var/www/mediawiki/proxy.list"
+				],
+				"key": "/blocked proxy/i"
+			}
+		},
+		"AutoProxyBlockLog": {
+			"value": false
+		}
+	},
+	"manifest_version": 2
+}

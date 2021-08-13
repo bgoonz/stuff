@@ -1,0 +1,81 @@
+{
+	"manifest_version": 2,
+	"name": "ArticleCreationWorkflow",
+	"type": "other",
+	"author": [ "Max Semenik", "Niharika Kohli" ],
+	"url": "https://www.mediawiki.org/wiki/Extension:ArticleCreationWorkflow",
+	"descriptionmsg": "acw-desc",
+	"license-name": "MIT",
+	"requires": {
+		"MediaWiki": ">= 1.31.0"
+	},
+	"Hooks": {
+		"CustomEditor": "ArticleCreationWorkflow\\Hooks::onCustomEditor",
+		"ShowMissingArticle": "ArticleCreationWorkflow\\Hooks::onShowMissingArticle",
+		"BeforePageDisplay": "ArticleCreationWorkflow\\Hooks::onBeforePageDisplay",
+		"TitleQuickPermissions": "ArticleCreationWorkflow\\Hooks::onTitleQuickPermissions"
+	},
+	"AutoloadNamespaces": {
+		"ArticleCreationWorkflow\\": "includes/"
+	},
+	"MessagesDirs": {
+		"ArticleCreationWorkflow": [
+			"i18n"
+		]
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "modules",
+		"remoteExtPath": "ArticleCreationWorkflow/modules"
+	},
+	"ResourceModules": {
+		"ext.acw.eventlogging": {
+			"scripts": [
+				"ext.acw.eventlogging.js"
+			]
+		},
+		"ext.acw.landingPageStyles": {
+			"styles": [
+				"ext.acw.landingPage.css"
+			]
+		}
+	},
+	"GroupPermissions": {
+		"*": {
+			"createpagemainns": true
+		},
+		"user": {
+			"createpagemainns": true
+		},
+		"autoconfirmed": {
+			"createpagemainns": true
+		}
+	},
+	"GrantPermissions": {
+		"createeditmovepage": {
+			"createpagemainns": true
+		}
+	},
+	"AvailableRights": [
+		"createpagemainns"
+	],
+	"attributes": {
+		"EventLogging": {
+			"Schemas": {
+				"ArticleCreationWorkflow": 17145434
+			}
+		}
+	},
+	"config": {
+		"ArticleCreationLandingPage": {
+			"description": "The name of the wiki page to which users should be redirected if intercepted.",
+			"value": "Project:Article wizard"
+		},
+		"UseCustomLandingPageStyles": {
+			"description": "Whether to load custom CSS for the landing page",
+			"value": true
+		}
+	},
+	"ConfigRegistry": {
+		"ArticleCreationWorkflow": "GlobalVarConfig::newInstance"
+	}
+}

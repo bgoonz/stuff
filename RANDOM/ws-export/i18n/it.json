@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"ACortellari",
+			"Ajeje Brazorf",
+			"Beta16",
+			"Toa"
+		]
+	},
+	"footer-version": "Questa è una versione di $1 $2.",
+	"version": "versione $1",
+	"statistics-link": "statistiche",
+	"back-to-wikisource": "Ritorna a Wikisource",
+	"export-book": "Esporta un libro",
+	"lang-field-label": "Wikisource",
+	"lang-field-help": "Wikisource da cui esportare il libro.",
+	"title-field-label": "Titolo",
+	"format-field-label": "Formato file",
+	"format-htmlz": "HTML",
+	"format-pdf-a5": "PDF - Formato A5",
+	"format-pdf-a6": "PDF - Formato A6",
+	"format-rtf": "RTF",
+	"format-txt": "Testo normale",
+	"font-field-label": "Carattere",
+	"font-field-help": "Scegli tra $1 tipi di carattere disponibili.",
+	"options-label": "Opzioni",
+	"export-button": "Esporta",
+	"alert-close": "Chiudi",
+	"learn-more": "Ulteriori informazioni.",
+	"error-breadcrumb": "Errore $1",
+	"epub-title-page": "Titolo",
+	"epub-exported-date": "Esportato da Wikisource il $1. Segnala eventuali errori su it.wikisource.org/wiki/Segnala_errori",
+	"epub-about": "Informazioni"
+}

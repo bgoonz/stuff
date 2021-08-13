@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lejonel",
+			"Mjälten",
+			"Technic2"
+		]
+	},
+	"autoproxyblock-desc": "Tillåter blockering av öppna proxier att utföra handlingar på wikin",
+	"proxy-blocked": "{{GENDER:|Din}} IP-address har listats som en proxy, utförd handling avbruten.",
+	"abusefilter-edit-builder-vars-is-proxy": "Sant om denna åtgärden genomfördes genom en proxy",
+	"tag-proxy": "agera genom proxy",
+	"action-proxyunbannable": "förbigå automatiska blockeringar av proxier",
+	"right-proxyunbannable": "Kan redigera från blockerade proxyer",
+	"action-notagproxychanges": "skydda från taggning av redigeringar genom proxier som \"proxy\"",
+	"right-notagproxychanges": "Skydda från taggning av redigeringar genom proxier som \"proxy\"",
+	"action-autoproxyblock-log": "visa AutoProxyBlock-loggen",
+	"right-autoproxyblock-log": "Visa logg av automatiskt blockerade ändringar genom proxier",
+	"proxyblock-log-name": "AutoProxyBlock-logg",
+	"proxyblock-log-header": "Lista över automatiskt blockerade ändringar genom proxier",
+	"proxyblock-logentry-blocked": "handling \"$2\" av {{GENDER:$3|användaren}} $3 på sidan [[$1]] blockerades automatiskt."
+}

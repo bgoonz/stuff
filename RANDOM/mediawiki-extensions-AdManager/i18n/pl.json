@@ -1,0 +1,38 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrumps",
+			"Matma Rex",
+			"Rail",
+			"Railfail536",
+			"Woytecr"
+		]
+	},
+	"admanager": "Menedżer reklam",
+	"admanagerzones": "Obszary reklamowe",
+	"admanager-desc": "Dodaje [[Special:AdManager|stronę specjalną]], która pozwala administratorom ustalać obszary reklamowe dla stron lub kategorii",
+	"admanager_docu": "Aby dodać lub usunąć obszar reklamowy do/z strony lub całej kategorii, dodaj lub usuń nazwę strony/kategorii poniżej.",
+	"admanagerzones_docu": "Wpisz numer każdego obszaru reklamowego w osobnej linii.",
+	"admanager_invalidtargetpage": "Nie znaleziono strony o nazwie „$1”.",
+	"admanager_invalidtargetcategory": "Nie znaleziono kategorii o nazwie „$1”.",
+	"admanager_notable": "Błąd! Nie znaleziono wymaganej tabeli bazy danych! Najpierw uruchom skrypt update.php.",
+	"admanager_noAdManagerZones": "Błąd! Musisz najpierw zdefiniować obszary reklamowe. Wpisz je na stronie specjalnej [[Special:AdManagerZones|Obszary reklamowe]].",
+	"admanager_labelPage": "Tytuły stron",
+	"admanager_labelCategory": "Nazwy kategorii",
+	"admanager_submit": "Wyślij",
+	"admanager_noads": "Nie wyświetlaj reklam",
+	"admanager_Page": "Strony",
+	"admanager_Category": "Kategorie",
+	"admanager_added": "Zmiany zostały zapisane",
+	"admanager_addedzone": "Dodano obszar $1",
+	"admanager_removedzone": "Usunięto strefę $1.",
+	"admanager_nozonesadded": "Nie dodano żadnych stref.",
+	"admanager_nozonesremoved": "Nie usunięto żadnych stref.",
+	"admanager_zonenum": "Strefa #: $1",
+	"admanager_zonenotnumber": "Błąd! „$1” nie jest liczbą.",
+	"admanager_return": "Wróć do [[Special:AdManager|Menedżera reklam]]",
+	"admanager_gotoads": "[[Special:AdManager|Zmień umiejscowienie reklam]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Zmień obszary reklamowe]]",
+	"action-admanager": "zarządzania konfiguracją reklam",
+	"right-admanager": "[[Special:AdManager|Zarządzaj konfiguracją reklam]]"
+}

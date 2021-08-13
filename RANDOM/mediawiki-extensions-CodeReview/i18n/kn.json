@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nayvik"
+		]
+	},
+	"code-field-id": "ಆವೃತ್ತಿ",
+	"code-field-author": "ಕರ್ತೃ",
+	"code-field-status": "ಸ್ಥಾನಮಾನ",
+	"code-field-timestamp": "ದಿನಾಂಕ",
+	"code-rev-author": "ಕರ್ತೃ:",
+	"code-rev-date": "ದಿನಾಂಕ:",
+	"code-rev-rev": "ಆವೃತ್ತಿ:",
+	"code-rev-status": "ಸ್ಥಾನಮಾನ:",
+	"code-rev-comment-preview": "ಮುನ್ನೋಟ",
+	"code-rev-inline-preview": "ಮುನ್ನೋಟ:",
+	"code-status-new": "ಹೊಸ",
+	"code-revfilter-cr_status": "ಸ್ಥಾನಮಾನ = $1"
+}

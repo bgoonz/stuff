@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"absenteelandlord-reason": "Le base de datos ha essite automaticamente blocate a causa de inactivitate del administratores.",
+	"absenteelandlord-desc": "Automaticamente bloca le base de datos del wiki si tote le administratores es inactive durante alcun tempore"
+}

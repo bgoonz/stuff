@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"AnakngAraw",
+			"Jojit fb",
+			"Sky Harbor",
+			"Umherirrender"
+		]
+	},
+	"antispoof-desc": "Humaharang sa paglikha ng mga kuwentang may pinaghalong panitik, nakakalito at magkakatulad na mga pangalan ng tagagamit",
+	"antispoof-conflict-top": "Labis na magkatulad ang pangalang \"$1\" sa sumusunod na account:",
+	"antispoof-conflict-bottom": "Mangyaring pumili lamang ng iba pang pangalan.",
+	"antispoof-name-illegal": "Hindi pinapayagan ang pangalang \"$1\" upang maiwasan ang nakalilito o mapanlilang na mga pangalan ng tagagamit: $2.\nMangyaring pumili ng iba pang pangalan.",
+	"antispoof-bad-char": "\"$1\" ($2)",
+	"antispoof-badtype": "Masamang uri ng dato",
+	"antispoof-empty": "Bagting (''string'') na walang laman",
+	"antispoof-prohibited": "Naglalaman ng nakalistang ipinagbabawal na panitik na $1",
+	"antispoof-combining": "Nagsisimula sa panandang pambuklod na $1",
+	"antispoof-unassigned": "Naglalaman ng hindi nakatakdang panitik na $1",
+	"antispoof-deprecated": "Naglalaman ng tinutulang panitik na $1",
+	"antispoof-noletters": "Hindi naglalaman ng anumang mga titik",
+	"antispoof-mixedscripts": "Naglalaman ng hindi magkakatugmang pinaghalong mga panitik",
+	"antispoof-tooshort": "Napakamaikli ng naging panuntunang pangalan",
+	"antispoof-ignore": "Balewalain ang mga pagsusuring pangpanlilinlang (spoof)",
+	"right-override-antispoof": "Daigin ang mga pagsusuring pangpanlilinlang (''spoof'')"
+}

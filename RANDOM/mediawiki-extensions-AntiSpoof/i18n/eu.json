@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"An13sa",
+			"Joxemai",
+			"Kobazulo",
+			"Mikel Ibaiba"
+		]
+	},
+	"antispoof-conflict-bottom": "Mesedez, beste erabiltzaile izen bat aukeratu.",
+	"antispoof-name-illegal": "\"$1\" erabiltzaile izena ez dago onartuta gaizkiulertuak saihesteko: $2. Beste izen bat hautatu mesedez.",
+	"antispoof-badtype": "Datu mota ezegokia",
+	"antispoof-empty": "Kate hutsa",
+	"antispoof-noletters": "Ez dauka letrarik",
+	"antispoof-tooshort": "Izen normalizatua laburregia"
+}

@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Siebrand"
+		]
+	},
+	"categorysortheaders-desc": "Maakt het mogelijk om aangepaste sorteervolgorden (op meerdere tekens) toe te voegen aan pagina's voor opname in categorieën, met de opmaak <nowiki>[[category:Foo:Categorienaam|ˆHeader^Onzichtbaar deel van de sorteersleutel]]</nowiki>"
+}

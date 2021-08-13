@@ -1,0 +1,40 @@
+{
+	"@metadata": {
+		"authors": [
+			"Crochet.david",
+			"Gomoko",
+			"Hashar",
+			"Pols12",
+			"Thibaut120094",
+			"Verdy p",
+			"Wladek92"
+		]
+	},
+	"admanager": "Gestionnaire de publicité",
+	"admanagerzones": "Zones de gestionnaire de publicité",
+	"admanager-desc": "Fournit une [[Special:AdManager|page spéciale]] qui permet aux sysops de fixer la zone pour les pages ou les catégories",
+	"admanager_docu": "Pour ajouter ou supprimer la zone de publicité d’une page ou d’une catégorie complète, ajoutez ou supprimez le titre de la page ou de la catégorie ci-dessous.",
+	"admanagerzones_docu": "Entrez chaque numéro de zone de publicité sur sa propre ligne.",
+	"admanager_invalidtargetpage": "Aucune page trouvée avec le titre « $1 ».",
+	"admanager_invalidtargetcategory": "Aucune catégorie trouvée avec le titre « $1 ».",
+	"admanager_notable": "Erreur ! Une table de base de données requise n’a pas été trouvée ! Lancez d’abord update.php.",
+	"admanager_noAdManagerZones": "Erreur ! Vous devez ajouter quelques zones de publicité. Entrez-les dans les [[Special:AdManagerZones|zones du gestionnaire de publicité]].",
+	"admanager_labelPage": "Titres de page",
+	"admanager_labelCategory": "Noms de catégorie",
+	"admanager_submit": "Soumettre",
+	"admanager_noads": "Ne pas afficher de publicité",
+	"admanager_Page": "Pages",
+	"admanager_Category": "Catégories",
+	"admanager_added": "Vos modifications ont été enregistrées.",
+	"admanager_addedzone": "Zone $1 ajoutée.",
+	"admanager_removedzone": "Zone $1 supprimée.",
+	"admanager_nozonesadded": "Aucune zone n’a été ajoutée.",
+	"admanager_nozonesremoved": "Aucune zone n’a été supprimée.",
+	"admanager_zonenum": "Nº de zone : $1",
+	"admanager_zonenotnumber": "Erreur ! « $1 » n’est pas un nombre.",
+	"admanager_return": "Revenir au [[Special:AdManager|Gestionnaire de publicité]]",
+	"admanager_gotoads": "[[Special:AdManager|Modifier l’emplacement de publicité]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Modifier les zones de publicité]]",
+	"action-admanager": "gérer la configuration de la publicité",
+	"right-admanager": "[[Special:AdManager|Gérer la configuration des publicités]]"
+}

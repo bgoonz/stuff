@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Alfiya55",
+			"Sagan",
+			"Аҡҡашҡа",
+			"Ләйсән"
+		]
+	},
+	"ajaxpoll-desc": "AJAX нигеҙендә <code>&lt;poll&gt;</code> тегы ярҙамы менән тауыш биреү мөмкинлеге бар",
+	"ajaxpoll-tracking-category": "Тауыш биреү бите",
+	"ajaxpoll-tracking-category-desc": "Биттә бар <code>&lt;яуап алыу &gt;</code>.",
+	"ajaxpoll-vote-update": "Һеҙҙең тауыш биреү яңыртылды",
+	"ajaxpoll-vote-add": "Һеҙҙең тауыш иҫәпкә алынды",
+	"ajaxpoll-vote-error": "Һеҙҙең тауышты иҫәпкә алғанда хата китте, ҡабатлап ҡарағыҙ.",
+	"ajaxpoll-percent-votes": "Бөтә тауыштың $1%",
+	"ajaxpoll-your-vote": "Һеҙ тауыш бирҙегеҙ ҙә инде «$1» $3 в $4. Түбәндә бирелгән яуаптарға баҫып, һеҙ үҙегеҙ һайлағанды үҙгәртә алаһығыҙ.",
+	"ajaxpoll-no-vote": "Зинһар өсөн, түбәндә тауыш биреүҙә ҡатнашығыҙ.",
+	"ajaxpoll-no-vote-results-after-voting": "Зинһар, түбәндә тауыш бирегеҙ.\nҺеҙ тауыш биргәс, һөҙөмтәләр күрһәтелер.",
+	"ajaxpoll-info": "Тауыш биреү моментынан $2 {{PLURAL:$1| $1 тауыш |алынды $1 тауыш алынды|тауыш $1 алынды}}.",
+	"ajaxpoll-submitting": "Зинһар, һеҙҙең тауыш тураһында мәғлүмәт тапшырылғанын көтөгөз...",
+	"ajaxpoll-vote-permission": "Һеҙҙең тауыш биреү хоҡуғы юҡ.",
+	"ajaxpoll-view-results-permission": "Һеҙ был һорауламаның һөҙөмтәләрен ҡарай алмайһығыҙ.",
+	"ajaxpoll-view-results-before-vote-permission": "Һеҙ был һорауламаның һөҙөмтәләрен тауыш бирмәйенсә ҡарай алмайһығыҙ.",
+	"ajaxpoll-revoke-vote": "Мин тауышымды кире алырға теләйем",
+	"ajaxpoll-vote-revoked": "Һеҙ тауышығыҙҙы кире алдығыҙ.",
+	"right-ajaxpoll-vote": "AJAX нигеҙендә һорау алыуҙа ҡатнаша алаһығыҙ.",
+	"right-ajaxpoll-view-results": "AJAX нигеҙендә һорау алыу һөҙөмтәләрен ҡарарға мөмкин",
+	"right-ajaxpoll-view-results-before-vote": "AJAX нигеҙендә тауыш биреү алдынан яуап алыу һөҙөмтәләрен ҡарарға мөмкин",
+	"action-ajaxpoll-vote": "AJAX нигеҙендә һорау алыу буйынса тауыш биреү.",
+	"action-ajaxpoll-view-results": "AJAX нигеҙендә һорау алыу һөҙөмтәләрен ҡарарға мөмкин",
+	"action-ajaxpoll-view-results-before-vote": "AJAX нигеҙендә тауыш биреү алдынан яуап алыу һөҙөмтәләрен ҡарарға мөмкин"
+}

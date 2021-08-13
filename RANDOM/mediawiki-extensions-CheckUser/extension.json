@@ -1,0 +1,255 @@
+{
+	"name": "CheckUser",
+	"version": "2.5",
+	"author": [
+		"Tim Starling",
+		"Aaron Schulz"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:CheckUser",
+	"descriptionmsg": "checkuser-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "specialpage",
+	"requires": {
+		"MediaWiki": ">= 1.37.0",
+		"platform": {
+			"ext-openssl": "*"
+		}
+	},
+	"ExtensionMessagesFiles": {
+		"CheckUserAliases": "CheckUser.alias.php"
+	},
+	"config": {
+		"CheckUserCIDRLimit": {
+			"value": {
+				"IPv4": 16,
+				"IPv6": 19
+			},
+			"description": "Shortest CIDR limits that can be checked in any individual range check"
+		},
+		"CheckUserMaxBlocks": {
+			"value": 200,
+			"description": "Maximum number of users that can be mass blocked simultaneously"
+		},
+		"CUPublicKey": {
+			"value": "",
+			"description": "Public key to encrypt private data that may need to be read later. Generate a public key with something like: `openssl genrsa -out cu.key 2048; openssl rsa -in cu.key -pubout > cu.pub` and paste the contents of cu.pub here."
+		},
+		"CUDMaxAge": {
+			"value": 7776000,
+			"description": "How long to keep CheckUser data (in seconds)"
+		},
+		"CheckUserForceSummary": {
+			"value": false,
+			"description": "Whether to force checkusers into giving a reason for each check they do through Special:CheckUser."
+		},
+		"CheckUserCAMultiLock": {
+			"value": false,
+			"description": "Whether to add a link to Special:MultiLock by CentralAuth to the Special:CheckUser's mass block form. This requires CentralAuth extension to be installed on the wiki. To enable this, set this to an array with a central wiki's database name and an array with the name(s) of the global group(s) to add the link for. Example: [ 'centralDB' => 'metawiki', 'groups' => [ 'steward' ] ]"
+		},
+		"CheckUserCAtoollink": {
+			"value": false,
+			"description": "Whether to add links to CentralAuth in Special:CheckUser results"
+		},
+		"CheckUserGBtoollink": {
+			"value": false,
+			"description": "Whether to add links for globally blocking accounts shown in Special:CheckUser results"
+		},
+		"CheckUserLogLogins": {
+			"value": false,
+			"description": "Whether login attempts should be logged in CheckUser logs"
+		},
+		"CheckUserLogSuccessfulBotLogins": {
+			"value": true,
+			"description": "Whether successful login attempts of accounts in the 'bot' user group should be logged in CheckUser logs (assuming wgCheckUserLogLogins is also true)"
+		},
+		"CheckUserEnableSpecialInvestigate": {
+			"value": false,
+			"description": "Enables Special:Investigate"
+		},
+		"CheckUserLogAdditionalRights": {
+			"value": [],
+			"description": "Additional rights to be used when adding CheckUser log entries"
+		},
+		"CheckUserMaximumRowCount": {
+			"value": 5000,
+			"description": "Maximum number of rows in cu_changes to be used in any query"
+		},
+		"CheckUserInvestigateMaximumRowCount": {
+			"value": 25000,
+			"description": "Maximum number of rows in cu_changes to be grouped in the Compare table query"
+		}
+	},
+	"APIListModules": {
+		"checkuser": "MediaWiki\\CheckUser\\Api\\ApiQueryCheckUser",
+		"checkuserlog": "MediaWiki\\CheckUser\\Api\\ApiQueryCheckUserLog"
+	},
+	"HookHandlers": {
+		"preferences": {
+			"class": "MediaWiki\\CheckUser\\HookHandler\\Preferences"
+		}
+	},
+	"Hooks": {
+		"RecentChange_save": [
+			"MediaWiki\\CheckUser\\Hooks::updateCheckUserData",
+			"MediaWiki\\CheckUser\\Hooks::maybePruneIPData"
+		],
+		"EmailUser": "MediaWiki\\CheckUser\\Hooks::updateCUEmailData",
+		"User::mailPasswordInternal": "MediaWiki\\CheckUser\\Hooks::updateCUPasswordResetData",
+		"LocalUserCreated": "MediaWiki\\CheckUser\\Hooks::onLocalUserCreated",
+		"UserMergeAccountFields": "MediaWiki\\CheckUser\\Hooks::onUserMergeAccountFields",
+		"RenameUserSQL": "MediaWiki\\CheckUser\\Hooks::onRenameUserSQL",
+		"LoadExtensionSchemaUpdates": "MediaWiki\\CheckUser\\Hooks::onLoadExtensionSchemaUpdates",
+		"ContributionsToolLinks": "MediaWiki\\CheckUser\\Hooks::checkUserContributionsLinks",
+		"PerformRetroactiveAutoblock": "MediaWiki\\CheckUser\\Hooks::doRetroactiveAutoblock",
+		"AuthManagerLoginAuthenticateAudit": "MediaWiki\\CheckUser\\Hooks::onAuthManagerLoginAuthenticateAudit",
+		"SpecialPage_initList": "MediaWiki\\CheckUser\\Hooks::onSpecialPage_initList",
+		"GetPreferences": "preferences"
+	},
+	"MessagesDirs": {
+		"CheckUser": [
+			"i18n",
+			"i18n/api"
+		]
+	},
+	"attributes": {
+		"EventLogging": {
+			"Schemas": {
+				"SpecialInvestigate": "/analytics/legacy/specialinvestigate/1.0.0"
+			}
+		}
+	},
+	"ResourceModules": {
+		"ext.checkUser": {
+			"localBasePath": "modules/ext.checkUser",
+			"remoteExtPath": "CheckUser/modules/ext.checkUser",
+			"packageFiles": [
+				"dispatcher.js",
+				"checkuser/cidr.js",
+				"checkuser/caMultiLock.js",
+				"investigateblock/investigateblock.js",
+				"investigate/init.js",
+				"investigate/tables.js",
+				"investigate/copy.js",
+				"investigate/blockform.js",
+				{
+					"name": "investigate/message.json",
+					"callback": "MediaWiki\\CheckUser\\ToolLinksMessages::getParsedMessage",
+					"callbackParam": "checkuser-investigate-compare-toollinks"
+				}
+			],
+			"dependencies": [
+				"jquery.tablesorter",
+				"oojs-ui-widgets",
+				"oojs-ui.styles.icons-editing-core",
+				"oojs-ui.styles.icons-editing-advanced",
+				"oojs-ui.styles.icons-interactions",
+				"oojs-ui.styles.icons-location",
+				"oojs-ui.styles.icons-moderation",
+				"oojs-ui.styles.icons-user",
+				"mediawiki.pager.tablePager",
+				"mediawiki.storage",
+				"mediawiki.Title",
+				"mediawiki.Uri",
+				"mediawiki.util",
+				"mediawiki.widgets"
+			],
+			"messages": [
+				"checkuser-centralauth-multilock",
+				"checkuser-investigate-compare-copy-button-label",
+				"checkuser-investigate-compare-copy-message-label",
+				"checkuser-investigate-compare-table-button-add-ip-targets-label",
+				"checkuser-investigate-compare-table-button-add-user-targets-label",
+				"checkuser-investigate-compare-table-button-add-user-targets-log-label",
+				"checkuser-investigate-compare-table-button-checks-label",
+				"checkuser-investigate-compare-table-button-contribs-label",
+				"checkuser-investigate-compare-table-button-filter-label",
+				"checkuser-investigate-subtitle-cancel-button-label",
+				"checkuser-investigate-subtitle-continue-button-label"
+			]
+		},
+		"ext.checkUser.styles": {
+			"localBasePath": "modules/ext.checkUser.styles",
+			"remoteExtPath": "CheckUser/modules/ext.checkUser.styles",
+			"styles": [
+				"investigate.less",
+				"investigateblock.less"
+			]
+		},
+		"ext.guidedTour.tour.checkuserinvestigateform": {
+			"localBasePath": "modules/ext.guidedTour.tour.checkuserinvestigateform",
+			"remoteExtPath": "CheckUser/modules/ext.guidedTour.tour.checkuserinvestigateform",
+			"scripts": [
+				"checkuserinvestigateform.js"
+			],
+			"dependencies": "ext.guidedTour",
+			"messages": [
+				"checkuser-investigate-tour-targets-title",
+				"checkuser-investigate-tour-targets-desc"
+			]
+		},
+		"ext.guidedTour.tour.checkuserinvestigate": {
+			"localBasePath": "modules/ext.guidedTour.tour.checkuserinvestigate",
+			"remoteExtPath": "CheckUser/modules/ext.guidedTour.tour.checkuserinvestigate",
+			"scripts": [
+				"checkuserinvestigate.js"
+			],
+			"dependencies": [
+				"ext.guidedTour",
+				"ext.checkUser"
+			],
+			"messages": [
+				"checkuser-investigate-tour-useragents-title",
+				"checkuser-investigate-tour-useragents-desc",
+				"checkuser-investigate-tour-addusertargets-title",
+				"checkuser-investigate-tour-addusertargets-desc",
+				"checkuser-investigate-tour-filterip-title",
+				"checkuser-investigate-tour-filterip-desc",
+				"checkuser-investigate-tour-block-title",
+				"checkuser-investigate-tour-block-desc",
+				"checkuser-investigate-tour-copywikitext-title",
+				"checkuser-investigate-tour-copywikitext-desc"
+			]
+		}
+	},
+	"GroupPermissions": {
+		"checkuser": {
+			"checkuser": true,
+			"checkuser-log": true
+		}
+	},
+	"AvailableRights": [
+		"checkuser",
+		"checkuser-log"
+	],
+	"SpecialPages": {
+		"CheckUser": {
+			"class": "MediaWiki\\CheckUser\\Specials\\SpecialCheckUser",
+			"services": [
+				"LinkBatchFactory",
+				"BlockPermissionCheckerFactory",
+				"UserGroupManager"
+			]
+		},
+		"CheckUserLog": {
+			"class": "MediaWiki\\CheckUser\\Specials\\SpecialCheckUserLog",
+			"services": [
+				"LinkBatchFactory",
+				"PermissionManager"
+			]
+		}
+	},
+	"AutoloadClasses": {
+		"PopulateCheckUserTable": "maintenance/populateCheckUserTable.php"
+	},
+	"ServiceWiringFiles": [
+		"includes/ServiceWiring.php"
+	],
+	"AutoloadNamespaces": {
+		"MediaWiki\\CheckUser\\": "src/"
+	},
+	"TestAutoloadNamespaces": {
+		"MediaWiki\\CheckUser\\Test\\": "tests/phpunit/"
+	},
+	"load_composer_autoloader": true,
+	"manifest_version": 2
+}

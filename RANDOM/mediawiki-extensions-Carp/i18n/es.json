@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Armando-Martin",
+			"Themasterriot"
+		]
+	},
+	"carp-desc": "Proporciona informes de errores y el desenredo de la pila de memoria a las otras extensiones.",
+	"carp-template-msg": "&#123;&#123; $1 &#124; $2 &#125;&#125;",
+	"carp-template": "&#123;&#123; $1 &#125;&#125;"
+}

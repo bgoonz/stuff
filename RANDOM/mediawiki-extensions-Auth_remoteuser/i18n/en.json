@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Otheus Shelling"
+		]
+	},
+	"auth_remoteuser-desc": "Automatically logs-in users using the <code>REMOTE_USER</code> environment variable"
+}

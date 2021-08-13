@@ -1,0 +1,39 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dalba",
+			"EugeneZelenko",
+			"Shirayuki",
+			"Tacsipacsi",
+			"Umherirrender",
+			"ديفيد"
+		]
+	},
+	"admanager": "{{doc-special|AdManager|unlisted=1}}",
+	"admanagerzones": "{{doc-special|AdManagerZones|unlisted=1}}\nSpecial:AdManagerZones is used to set which zones are available in Special:AdManager. AdManager is an extension to MediaWiki that allows per-page or per-category placement of ads into a wiki page. It is designed to work with zones from an external advertising server such as OpenX, but allows the placement of zones from (probably) any such server.",
+	"admanager-desc": "{{desc|name=AdManager|url=https://www.mediawiki.org/wiki/Extension:AdManager}}",
+	"admanager_docu": "Used in Special:AdManager, when there are no errors.",
+	"admanagerzones_docu": "Used in [[Special:AdManagerZones]]",
+	"admanager_invalidtargetpage": "Used as error message. Parameters:\n* $1 - page title",
+	"admanager_invalidtargetcategory": "Used as error message. Parameters:\n* $1 - category name (category page title)",
+	"admanager_notable": "Used as error message in Special:AdManager and Special:AdManagerZones.",
+	"admanager_noAdManagerZones": "Used in [[Special:AdManager]]",
+	"admanager_labelPage": "Used in [[Special:AdManager]].\n{{Identical|Page title}}",
+	"admanager_labelCategory": "Used in [[Special:AdManager]].\n{{Identical|Category name}}",
+	"admanager_submit": "{{Identical|Submit}}",
+	"admanager_noads": "Usage example of this message:\n\n* Zone #: Display no ads",
+	"admanager_Page": "{{Identical|Page}}",
+	"admanager_Category": "{{Identical|Category}}",
+	"admanager_added": "Used as success message in Special:AdManager.\n\nThis message is followed by the message {{msg-mw|Admanager return}}.",
+	"admanager_addedzone": "Parameters:\n* $1 - the Zone number.\n\nUsage example of this message (123 is the Zone number):\n\n*Added zone 123",
+	"admanager_removedzone": "Parameters:\n* $1 - the Zone number.\n\nUsage example of this message (123 is the Zone number):\n\n*Removed zone 123",
+	"admanager_nozonesadded": "Used as success message when no zones were added",
+	"admanager_nozonesremoved": "Used as success message when no zones were removed",
+	"admanager_zonenum": "\"#\" stands for \"number\" (number sign). Parameters:\n* $1 - the Zone number",
+	"admanager_zonenotnumber": "Error message\n\n* $1 is the invalid Zone number. $1 may contain HTML tags.",
+	"admanager_return": "Used in Special:AdManager.\n\nThis message follows the message {{msg-mw|Admanager added}}.",
+	"admanager_gotoads": "Link to [[Special:AdManager]]. Used in [[Special:AdManagerZones]].",
+	"admanager_gotozones": "Link to [[Special:AdManagerZones]]. Used in [[Special:AdManager]].",
+	"action-admanager": "{{doc-action|admanager}}",
+	"right-admanager": "{{doc-right|admanager}}"
+}

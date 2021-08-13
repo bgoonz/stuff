@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Makuba",
+			"Renan"
+		]
+	},
+	"adminlinks": "Ligamentes administrativ",
+	"adminlinks-desc": "Addir un [[Special:AdminLinks|special págine]] quel contene auxiliativ ligamentes por administratores",
+	"adminlinks_documentation": "Documentation pri $1",
+	"adminlinks_general": "General",
+	"adminlinks_editsidebar": "Redacter lateral liste",
+	"adminlinks_editcss": "Redacter file CSS",
+	"adminlinks_editmainpagename": "Redacter li nómine del principal págine",
+	"adminlinks_users": "Usatores",
+	"adminlinks_browsesearch": "Navigar e serchar",
+	"adminlinks_importexport": "Importar e exportar",
+	"adminlinks_pagenotfound": "Fallit in constatar special págine che nómine: $1.",
+	"action-adminlinks": "vider ligamentes administrativ",
+	"right-adminlinks": "Vider li ligament por [[Special:AdminLinks|ligamentes administrativ]]"
+}

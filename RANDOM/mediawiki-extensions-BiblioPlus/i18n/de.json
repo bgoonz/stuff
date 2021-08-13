@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kghbln",
+			"Metalhead64"
+		]
+	},
+	"biblioplus-desc": "Ermöglicht den automatischen Abruf von Zitaten über PubMed und die ISBN-Datenbank",
+	"biblioplus-doi-tooltip": "Den Artikel beim Verlag ansehen oder ihn dort kaufen.",
+	"biblioplus-pmid-tooltip": "Den Artikel beim Verlag ansehen oder ihn dort kaufen (sofern verfügbar).",
+	"biblioplus-isbn-tooltip": "Die Informationen zum Buch auf der Website isbndb.org.",
+	"biblioplus-medline-abstracts": "Alle Zusammenfassungen von Medline:",
+	"biblioplus-pubmed-abstracts": "Alle Zusammenfassungen bei PubMed",
+	"biblioplus-hubmed-abstracts": "Alle Zusammenfassungen bei HubMed",
+	"biblioplus-vkey-title": "Dies ist der Link zur bibliografischen Datenbank."
+}

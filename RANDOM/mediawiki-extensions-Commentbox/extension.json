@@ -1,0 +1,42 @@
+{
+	"name": "Commentbox",
+	"version": "0.3.0",
+	"author": "[http://spiele.j-crew.de Thomas Bleher]",
+	"url": "https://www.mediawiki.org/wiki/Extension:Commentbox",
+	"descriptionmsg": "commentbox-desc",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.34.0"
+	},
+	"SpecialPages": {
+		"AddComment": "\\MediaWiki\\Extension\\Commentbox\\SpecialAddComment"
+	},
+	"MessagesDirs": {
+		"Commentbox": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"CommentboxAlias": "Commentbox.alias.php"
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\Commentbox\\": "includes/"
+	},
+	"Hooks": {
+		"OutputPageBeforeHTML": "MediaWiki\\Extension\\Commentbox\\Hooks::onOutputPageBeforeHTML"
+	},
+	"config": {
+		"CommentboxNamespaces": {
+			"value": {
+				"0": true
+			}
+		},
+		"CommentboxRows": {
+			"value": 5
+		},
+		"CommentboxColumns": {
+			"value": 80
+		}
+	},
+	"manifest_version": 2
+}

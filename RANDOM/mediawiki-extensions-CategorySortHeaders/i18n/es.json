@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Armando-Martin"
+		]
+	},
+	"categorysortheaders-desc": "Permite especificar el 'primer-carácter' como multi-carácter personalizado clasificando los encabezados de las páginas en categorías, utilizando una sintaxis como <nowiki>[[category:Foo|^Encabezado^Parte invisible de sortkey]]</nowiki>"
+}

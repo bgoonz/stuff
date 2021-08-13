@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eitvys200",
+			"Manvydasz"
+		]
+	},
+	"commentbox-desc": "Prideda komentarų dėžutę tam tikruose puslapiuose",
+	"commentbox-savebutton": "Išsaugoti komentarą",
+	"commentbox-name": "Pavadinimas:",
+	"commentbox-log": "Nauji komentarai",
+	"commentbox-first-comment-heading": "== Komentarai ==",
+	"commentbox-regex": "/\\n==\\s*Komentarai\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Klaida kuriant komentarą",
+	"commentbox-error-page-nonexistent": "Puslapis neegzistuoja",
+	"commentbox-error-namespace": "Šioje vardų srityje komentarai neleidžiami!",
+	"commentbox-error-empty-comment": "Tušti komentarai neleidžiami!"
+}

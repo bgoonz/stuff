@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chameleon222",
+			"Dittaeva",
+			"Event",
+			"Jon Harald Søby"
+		]
+	},
+	"antispoof-desc": "Hindrer oppretting av kontoer med lignende eller forvirrende brukernavn, eller brukernavn som inneholder to forskjellige alfabettyper",
+	"antispoof-conflict-top": "Brukernavnet «$1» er for likt følgende {{PLURAL:$2|konto|kontoer}}:",
+	"antispoof-conflict-bottom": "Velg et annet brukernavn.",
+	"antispoof-name-illegal": "Brukernavnet «$1» er ikke tillatt for å forhindre sammenblanding: $2. Vennligst velg et annet navn.",
+	"antispoof-badtype": "Ugyldig datatype",
+	"antispoof-empty": "Tom streng",
+	"antispoof-prohibited": "Inneholder det svartelistede tegnet $1",
+	"antispoof-combining": "Begynner med kombinasjonstegnet $1",
+	"antispoof-unassigned": "Inneholder ugyldig eller foreldet tegn.",
+	"antispoof-deprecated": "Inneholder det ulovlige tegnet «$1»",
+	"antispoof-noletters": "Inneholder ingen bokstaver",
+	"antispoof-mixedscripts": "Inneholder blanding av skriftsystemer",
+	"antispoof-tooshort": "Normalisert navn er for kort",
+	"antispoof-ignore": "Ignorer misbrukssjekk",
+	"antispoof-ignore-help": "Lar brukere med tilstrekkelige rettigheter opprette en konto selv om navnet ligner på en eksisterende konto.",
+	"action-override-antispoof": "overstyre sjekk av brukernavn",
+	"right-override-antispoof": "Overkjøre sjekk av brukernavn"
+}

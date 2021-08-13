@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Klutzy",
+			"아라"
+		]
+	},
+	"breadcrumbs-desc": "문서에 이동 경로의 발자취를 추가합니다",
+	"prefs-breadcrumbs-separator": "이동 경로 구분자",
+	"prefs-breadcrumbs-separator-max": "최대 2글자를 입력할 수 있습니다.",
+	"prefs-breadcrumbs": "이동 경로",
+	"prefs-breadcrumbs-showcrumbs": "이동 경로 표시",
+	"prefs-breadcrumbs-numberofcrumbs": "이동 경로의 수",
+	"prefs-breadcrumbs-numberofcrumbs-max": "최대 이동 경로 20개를 보여줄 수 있습니다.",
+	"prefs-breadcrumbs-namespaces": "이동 경로에 이름공간 포함",
+	"prefs-breadcrumbs-filter-duplicates": "반복해서 방문한 문서 필터링",
+	"prefs-breadcrumbs-preceding-text": "이동 경로 앞에 나타낼 텍스트",
+	"prefs-breadcrumbs-preceding-text-max": "최대 30글자를 입력할 수 있습니다."
+}

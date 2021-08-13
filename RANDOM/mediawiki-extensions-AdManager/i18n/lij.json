@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Giromin Cangiaxo"
+		]
+	},
+	"admanager": "Gestô publiçitæ",
+	"admanagerzones": "Zone do gestô publiçitæ",
+	"admanager-desc": "O fornisce 'na [[Special:AdManager|paggina speciale]] ch'a permette a-i aministratoî d'impostâ e zone pe paggine ò categorie",
+	"admanager_docu": "Pe azonze ò levâ a zona pe-a publiçitæ de 'na paggina ò de tutta a categoria, azonzi ò leva o tittolo da paggina ò da categoria de sotta.",
+	"admanagerzones_docu": "Inseisci o nummero d'ogni zona inta so riga.",
+	"admanager_invalidtargetpage": "Nisciun-a paggina trovâ co-o tittolo \"$1\".",
+	"admanager_invalidtargetcategory": "Nisciun-a categoria trovâ co-o tittolo \"$1\".",
+	"admanager_notable": "Erô! Una tabella de database necesaia a no l'è stæta trovâ! Esegui update.php primma de procede.",
+	"admanager_noAdManagerZones": "Erô! L'è necessaio azonze arcun-e zone pe-a publiçitæ. Inseiscile inte [[Special:AdManagerZones|Zone Gestô publiçitæ]].",
+	"admanager_labelPage": "Tittoli de paggine",
+	"admanager_labelCategory": "Nommi de categorie",
+	"admanager_submit": "Invia"
+}

@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chenxiaoqino",
+			"Liuxinyu970226",
+			"Wilsonmess"
+		]
+	},
+	"checkpoint": "保存并继续编辑",
+	"checkpoint-desc": "允许用户保存正在进行的编辑并恢复编辑",
+	"checkpoint-tooltip": "保存您的进度并继续编辑",
+	"checkpoint-notice": "([[{{ns:project}}:Checkpoint|保存点]])"
+}

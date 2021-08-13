@@ -1,0 +1,1046 @@
+!! Version 2
+# MediaWiki 'Arrays' extension Parser test cases
+# Author: Daniel Werner
+
+# Generate required templates.
+# These are the defaults set in $egArraysExpansionEscapeTemplates
+!! article
+Template:((
+!! text
+{{
+!!endarticle
+
+!! article
+Template:))
+!! text
+}}
+!!endarticle
+
+!! article
+Template:=
+!! text
+<nowiki>=</nowiki>
+!!endarticle
+
+
+##
+## 0. Misc
+##
+
+!! test
+Inclusion of special page does not reset arrays. Did not work before 'Arrays 2.0' rewrite
+!! wikitext
+"{{#arraydefine:a|test}}{{#arraydefine:foo|{{Special:AllPages}} }}", "{{#arraysize:a}}"
+!! html
+<p>"", "1"
+</p>
+!! end
+
+
+##
+## 1. Construction
+## #arraydefine
+##
+
+!! functionhooks
+arraydefine
+!! endfunctionhooks
+
+!! test
+'arraydefine' with default parameters.
+!! wikitext
+{{#arraydefine: a | a, b, , a, a, }}
+"{{#arrayprint: a}}"
+!! html
+<p>"a, b, , a, a,"
+</p>
+!! end
+
+
+!! test
+';' as separator, unique option
+!! wikitext
+{{#arraydefine: a | a; ; b; a; a ; ; | ; | unique }}
+{{#arrayprint: a}}
+!! html
+<p>a, b
+</p>
+!! end
+
+
+!! test
+'arraydefine' using an regular expression
+!! wikitext
+{{#arraydefine: a | a b c d | /\s+/ }}
+{{#arrayprint: a}}
+!! html
+<p>a, b, c, d
+</p>
+!! end
+
+
+!! test
+'arraydefine' with empty definition should create empty array and one with 'singleempty' option
+!! wikitext
+{{#arraydefine: a | }}{{#arraydefine: b | |, | singleempty }}
+"{{#arraysize: a}}", "{{#arraysize: b}}"
+!! html
+<p>"0", "1"
+</p>
+!! end
+
+
+##
+## 2. Extracting information
+## #arrayprint
+##
+
+!! test
+'arrayprint' with non-existent array.
+!! wikitext
+"{{#arrayprint: non-existent-array }}"
+!! html
+<p>""
+</p>
+!! end
+
+
+!! test
+'arrayprint' with array key output.
+!! wikitext
+{{#arraydefine: a | a, bb, ccc}}
+"{{#arrayprint: a | <br/> }}"
+!! html
+<p>"a<br />bb<br />ccc"
+</p>
+!! end
+
+
+!! functionhooks
+len
+!! endfunctionhooks
+
+!! test
+Parser function within 'arrayprint'
+!! wikitext
+{{#arraydefine: a | a, bb, ccc}}
+"{{#arrayprint: a | | @ | {{#len:@}} }}"
+!! html
+<p>"123"
+</p>
+!! end
+
+
+!! test
+Test whether escaping special chars in 'arrayprint' works (this is related to $egArraysExpansionEscapeTemplates )
+!! wikitext
+{{#arraydefine: a | a{{))}}, {{!}}bb=bb, cc{{))}}c}}
+"{{#arrayprint: a | , | @ | @ }}"
+!! html
+<p>"a}},|bb=bb,cc}}c"
+</p>
+!! end
+
+
+!! article
+Template:ArrayTestHelper
+!! text
+{{
+<!-- This test will check for parameter use within statement -->
+#arrayprint:{{{name|}}} |{{{sep|}}} |@@@@ | {{#if:{{{1|}}}|"{{{1|}}}",}} "@@@@" {{#len:@@@@}}
+}}
+!!endarticle
+
+!! test
+'arrayprint' within a template with parameter in print statement
+!! wikitext
+{{#arraydefine: a | a, bb, ccc}}
+{{ArrayTestHelper |name=a |sep=<br/> |1=fo{{))}}o}}
+!! html
+<p>"fo}}o", "a" 1<br />"fo}}o", "bb" 2<br />"fo}}o", "ccc" 3
+</p>
+!! end
+
+
+##
+## #arrayindex
+##
+
+!! test
+'arrayindex' with non-defined array.
+!! wikitext
+"{{#arrayindex: undefined-array | 0 }}",
+"{{#arrayindex: undefined-array |  }}"
+!! html
+<p>"",
+""
+</p>
+!! end
+
+
+!! test
+'arrayindex' with existing and non-existing keys.
+!! wikitext
+{{#arraydefine: a | 1 }}
+"{{#arrayindex: a | 0 }}",
+"{{#arrayindex: a | 100 }}",
+"{{#arrayindex: a | xxx }}"
+!! html
+<p>"1",
+"",
+""
+</p>
+!! end
+
+
+!! test
+'arrayindex' with negative index.
+!! wikitext
+{{#arraydefine: a | a,b,c,d,e
+}}"{{
+#arrayindex: a | -1 }}", "{{
+#arrayindex: a | -0 }}", "{{
+#arrayindex: a | -111 }}"
+!! html
+<p>"e", "a", ""
+</p>
+!! end
+
+
+!! test
+the need for the 'default=' sucks, should be removed some day.
+!! wikitext
+"{{
+#arrayindex: undefined-array |  }}", "{{
+#arrayindex: undefined-array | 0| dflt
+}}"
+!! html
+<p>"", "dflt"
+</p>
+!! end
+
+
+!! test
+existing index, empty value "", default should jump in
+!! wikitext
+"{{
+#arraydefine: a | A }}{{
+#arrayindex: a | A | dflt
+}}"
+!! html
+<p>"dflt"
+</p>
+!! end
+
+
+!! test
+default expansion test
+!! wikitext
+"{{
+#arraydefine: a | A }}{{
+#vardefine: var }}{{
+#arrayindex: a | 0 | {{#vardefine: var | 1 }} }}{{
+#var: var }}", "{{
+#arrayindex: a | 1 | {{#vardefine: var | 2 }} }}{{
+#var: var
+}}"
+!! html
+<p>"A", "2"
+</p>
+!! end
+
+
+##
+## #arraysize
+##
+
+!! test
+'arraysize' with non-defined array.
+!! wikitext
+"{{#arraysize: undefined-array}}"
+!! html
+<p>""
+</p>
+!! end
+
+
+!! test
+'arraysize' with defined, empty array.
+!! wikitext
+{{#arraydefine: a}}
+"{{#arraysize: a}}"
+!! html
+<p>"0"
+</p>
+!! end
+
+
+!! test
+'arraysize' non-empty array.
+!! wikitext
+{{#arraydefine: a | a, 2 }}
+"{{#arraysize: a}}"
+!! html
+<p>"2"
+</p>
+!! end
+
+
+##
+## #arraysearch
+##
+
+!! test
+'arraysearch' without data
+!! wikitext
+"{{#arraysearch:}}"
+!! html
+<p>""
+</p>
+!! end
+
+
+!! test
+'arraysearch' returning '-1' on not found sucks returns empty string since 2.0 rewrite
+!! wikitext
+"{{#arraysearch:}}"
+!! html
+<p>""
+</p>
+!! end
+
+
+!! test
+'arraysearch' with data
+!! wikitext
+"{{
+#arraydefine:a|a}}{{
+#arraysearch:a| a |0|yes|no}}", "{{
+#arraysearch:a|foo|0|yes|no
+}}"
+!! html
+<p>"yes", "no"
+</p>
+!! end
+
+
+!! article
+Template:ArrayTests:arraysearch
+!! text
+<!-- base by the following tests
+-->{{#arraydefine: arrSearch | red, blue, 1, 5, green, 3, 1, 1, 2}}
+!!endarticle
+
+!! test
+Some basic 'arraysearch'
+!! wikitext
+{{ArrayTests:arraysearch}}
+"{{#arraysearch: arrSearch | 1 }}",
+"{{#arraysearch: arrSearch | red }}",
+"{{#arraysearch: arrSearch | 1 | 3 }}",
+"{{#arraysearch: arrSearch | /\d+/isx }}"
+!! html
+<p>"2",
+"0",
+"6",
+"2"
+</p>
+!! end
+
+!! test
+With negative start index
+!! wikitext
+{{ArrayTests:arraysearch}}
+"{{#arraysearch: arrSearch | 1 | -1 }}",
+"{{#arraysearch: arrSearch | 1 | -2 }}",
+"{{#arraysearch: arrSearch | 1 | -20 }}"
+!! html
+<p>"",
+"7",
+"2"
+</p>
+!! end
+
+!! test
+'arraysearch' parameter 'yes' and 'no' expansion test.
+!! wikitext
+{{ArrayTests:arraysearch}}{{
+#arraydefine: arrSearch | red, blue, 1, 5, green, 3, 1, 1, 2}}{{
+#arraysearch: arrSearch | 1 | 0 | {{#vardefine:yes|1}} | {{#vardefine:no|1}} }}"{{#var:yes}}_{{#var:no}}",
+{{#arraysearch: arrSearch | xxx | 0 | {{#vardefine:yes2|1}} | {{#vardefine:no2|1}} }}"{{#var:yes2}}_{{#var:no2}}"
+!! html
+<p>"1_",
+"_1"
+</p>
+!! end
+
+
+##
+## #arraysearcharray
+##
+
+!! article
+Template:ArrayTests:arraysearcharray
+!! text
+<!-- base by the following tests
+-->{{
+#arrayreset:
+}}{{
+#arraydefine: arrSearch | red, green 1, yellow 1 , 33 , 21, ,  , 9, 0, , 0 , 2, 1 , 1, red, blue
+}}
+!!endarticle
+
+!! test
+Only parameter one
+!! wikitext
+"{{
+ArrayTests:arraysearcharray
+}}{{
+#arrayreset: a }}{{
+#arraysearcharray: a }}{{
+#arraysize: a
+}}"
+!! html
+<p>"0"
+</p>
+!! end
+
+
+!! test
+Empty, this will find the three empty elements
+!! wikitext
+"{{
+ArrayTests:arraysearcharray
+}}{{
+#arraysearcharray: a | arrSearch }}{{
+#arrayprint: a | ,
+}}"
+!! html
+<p>",,"
+</p>
+!! end
+
+
+!! test
+Search for '1'
+!! wikitext
+"{{
+ArrayTests:arraysearcharray
+}}{{
+#arraysearcharray: a | arrSearch | 1 }}{{
+#arrayprint: a
+}}"
+!! html
+<p>"1, 1"
+</p>
+!! end
+
+
+!! test
+Regex search expression, index and offset omitted
+!! wikitext
+"{{
+ArrayTests:arraysearcharray
+}}{{
+#arraysearcharray: a | arrSearch | /\d+/ | | }}{{
+#arrayprint: a
+}}"
+!! html
+<p>"green 1, yellow 1, 33, 21, 9, 0, 0, 2, 1, 1"
+</p>
+!! end
+
+
+!! test
+Regex search with limit
+!! wikitext
+"{{
+ArrayTests:arraysearcharray
+}}{{
+#arraysearcharray: a | arrSearch | /\d+/ | 0 | 4 }}{{
+#arrayprint: a
+}}"
+!! html
+<p>"green 1, yellow 1, 33, 21"
+</p>
+!! end
+
+
+!! test
+Regex search with limit '0'
+!! wikitext
+"{{
+ArrayTests:arraysearcharray
+}}{{
+#arraysearcharray: a | arrSearch | /\d+/ | 0 | 0 }}{{
+#arrayprint: a
+}}"
+!! html
+<p>""
+</p>
+!! end
+
+
+!! test
+Regex search with limit and start index
+!! wikitext
+"{{
+ArrayTests:arraysearcharray
+}}{{
+#arraysearcharray: a | arrSearch | /\d+/ | 2 | 4 }}{{
+#arrayprint: a
+}}"
+!! html
+<p>"yellow 1, 33, 21, 9"
+</p>
+!! end
+
+
+!! test
+Regex search and transform
+!! wikitext
+"{{
+ArrayTests:arraysearcharray
+}}{{
+#arraysearcharray: a | arrSearch | /(\d+)/ | 2 | 3 | $0 + $1 }}{{
+#arrayprint: a
+}}"
+!! html
+<p>"yellow 1 + 1, 33 + 33, 21 + 21"
+</p>
+!! end
+
+
+!! test
+Regex search and transform with limit and negative start index
+!! wikitext
+"{{
+ArrayTests:arraysearcharray
+}}{{
+#arraysearcharray: a | arrSearch | /(\d+)/ | -6 | 4 | +$1 }}{{
+#arrayprint: a
+}}"
+!! html
+<p>"+0, +2, +1, +1"
+</p>
+!! end
+
+
+!! test
+Using Subpage Fun extension with 'e' modifier
+!! options
+disabled
+!! wikitext
+"{{
+ArrayTests:arraysearcharray
+}}{{
+#arraydefine: b | 55555, 333, 4444, 1, 22, 999999999, 88888888, 4444 }}{{
+#arraysearcharray: b | b | /\d+/e | 0 | -1 | {{#len:$0}} }}{{
+#arrayprint: b }}", "{{
+#arrayindex: b | 0
+}}"
+!! html
+<p>"5, 3, 4, 1, 2, 9, 8, 4", "5"
+</p>
+!! end
+
+
+##
+## #arrayslice
+##
+
+!! test
+empty 'arrayslice'
+!! wikitext
+"{{
+#arrayreset: a }}{{
+#arrayslice: a }}{{
+#arraysize: a }}"
+!! html
+<p>"0"
+</p>
+!! end
+
+
+!! test
+'arrayslice' without offset using for cloning an array
+!! wikitext
+"{{
+#arraydefine: a | a, b, c, d, e, f }}{{
+#arrayslice: a | a }}{{
+#arrayprint: a
+}}"
+!! html
+<p>"a, b, c, d, e, f"
+</p>
+!! end
+
+
+!! test
+'arrayslice' with offset and limit
+!! wikitext
+"{{
+#arraydefine: a | a, b, c, d, e, f }}{{
+#arrayslice: a | a | 1 | 2 }}{{
+#arrayprint: a
+}}"
+!! html
+<p>"b, c"
+</p>
+!! end
+
+
+!! test
+'arrayslice' with negative offset
+!! wikitext
+"{{
+#arraydefine: a | a, b, c, d, e, f }}{{
+#arrayslice: a | a | -2 | 100 }}{{
+#arrayprint: a
+}}"
+!! html
+<p>"e, f"
+</p>
+!! end
+
+
+!! test
+'arrayslice' with negative offset and limit
+!! wikitext
+"{{
+#arraydefine: a | a, b, c, d, e, f }}{{
+#arrayslice: a | a | -3 | -1 }}{{
+#arrayprint: a
+}}"
+!! html
+<p>"d, e"
+</p>
+!! end
+
+
+!! test
+'arrayslice' with negative offset and too hight negative limit
+!! wikitext
+"{{
+#arraydefine: a | a, b, c, d, e, f }}{{
+#arrayslice: a | a | -3 | -99 }}{{
+#arrayprint: a
+}}"
+!! html
+<p>""
+</p>
+!! end
+
+
+!! test
+'arrayslice' with negative offset below '0'
+!! wikitext
+"{{
+#arraydefine: a | a, b, c, d, e, f }}{{
+#arrayslice: a | a | -99 }}{{
+#arrayprint: a
+}}"
+!! html
+<p>"a, b, c, d, e, f"
+</p>
+!! end
+
+
+##
+## 3. Alteration
+## #arrayreset
+##
+
+!! test
+'arrayreset' certain arrayes
+!! wikitext
+"{{
+#arraydefine: a }}{{#arraydefine: b }}{{
+#arrayreset: a | xxx }}{{
+#arraysize: a }}{{#arraysize: b
+}}"
+!! html
+<p>"0"
+</p>
+!! end
+
+
+!! test
+'arrayreset' all arrayes
+!! wikitext
+"{{
+#arraydefine: a }}{{#arraydefine: b }}{{
+#arrayreset: }}{{
+#arraysize: a }}{{#arraysize: b
+}}"
+!! html
+<p>""
+</p>
+!! end
+
+
+!! test
+'arrayreset' compatbility-mode
+!! wikitext
+"{{
+#arraydefine: a }}{{#arraydefine: b }}{{
+#arrayreset: a, xxx }}{{
+#arraysize: a }}{{#arraysize: b
+}}"
+!! html
+<p>"00"
+</p>
+!! end
+
+
+##
+## #arrayunique
+##
+
+!! test
+'arrayunique' also removes empty elements!
+!! wikitext
+"{{
+#arraydefine: a }}{{#arraydefine: a | a,b,a,b, , a, ,a,b }}{{
+#arrayunique: a }}{{
+#arrayprint: a
+}}"
+!! html
+<p>"a, b"
+</p>
+!! end
+
+
+##
+## #arraysort
+##
+
+!! article
+Template:ArrayTests:arraysort
+!! text
+<!-- base by the following tests
+-->{{#arraydefine: arrSort | c, g, b, e, a, b, f, e, d }}
+!!endarticle
+
+!! test
+'arraysort' ascending order
+!! wikitext
+"{{
+ArrayTests:arraysort
+}}{{
+#arraysort: arrSort | asce }}{{
+#arrayprint: arrSort
+}}"
+!! html
+<p>"a, b, b, c, d, e, e, f, g"
+</p>
+!! end
+
+
+!! test
+'arraysort' descending order
+!! wikitext
+"{{
+ArrayTests:arraysort
+}}{{
+#arraysort: arrSort | desc }}{{
+#arrayprint: arrSort
+}}"
+!! html
+<p>"g, f, e, e, d, c, b, b, a"
+</p>
+!! end
+
+
+!! test
+'arraysort' ascending order and then revert
+!! wikitext
+"{{
+ArrayTests:arraysort
+}}{{
+#arraysort: arrSort | asc }}{{
+#arraysort: arrSort | reverse }}{{
+#arrayprint: arrSort
+}}"
+!! html
+<p>"g, f, e, e, d, c, b, b, a"
+</p>
+!! end
+
+
+##
+## 4. Interaction between arrays
+## #arraymerge
+##
+
+!! article
+Template:ArrayTests:arrayinteractions
+!! text
+<!-- base by the following tests
+-->{{
+#arrayreset: }}{{
+#arraydefine: 1 | a,    c, d, e, f, g }}{{
+#arraydefine: 2 | a, b,    d,         x, y, z }}{{
+#arraydefine: 3 | a, b,       e,      x,      1, 2
+}}
+!!endarticle
+
+!! test
+'arraymerge' with only one parameter
+!! wikitext
+"{{
+ArrayTests:arrayinteractions
+}}{{
+#arrayreset: new1 }}{{
+#arraymerge: new1 }}{{
+#arraysize: new1
+}}"
+!! html
+<p>"0"
+</p>
+!! end
+
+
+!! test
+'arraymerge' with only one array
+This already worked before 2.0!
+!! wikitext
+"{{
+ArrayTests:arrayinteractions
+}}{{
+#arrayreset: new1 }}{{
+#arraymerge: new1 | 1 }}{{
+#arraysize: new1
+}}"
+!! html
+<p>"6"
+</p>
+!! end
+
+
+!! test
+'arraymerge' of two tables
+!! wikitext
+"{{
+ArrayTests:arrayinteractions
+}}{{
+#arraymerge: new1 | 1 | 2 }}{{
+#arrayprint: new1
+}}"
+!! html
+<p>"a, c, d, e, f, g, a, b, d, x, y, z"
+</p>
+!! end
+
+
+!! test
+'arraymerge' of three tables
+!! wikitext
+"{{
+ArrayTests:arrayinteractions
+}}{{
+#arraymerge: new1 | 1 | 2 | 3 }}{{
+#arrayprint: new1
+}}"
+!! html
+<p>"a, c, d, e, f, g, a, b, d, x, y, z, a, b, e, x, 1, 2"
+</p>
+!! end
+
+
+##
+## #arrayunion
+##
+
+!! test
+'arrayunion' with only one parameter
+!! wikitext
+"{{
+ArrayTests:arrayinteractions
+}}{{
+#arrayreset: new1 }}{{
+#arrayunion: new1 }}{{
+#arraysize: new1
+}}"
+!! html
+<p>"0"
+</p>
+!! end
+
+
+!! test
+'arrayunion' with only one array
+!! wikitext
+"{{
+ArrayTests:arrayinteractions
+}}{{
+#arrayreset: new1 }}{{
+#arrayunion: new1 | 1 }}{{
+#arraysize: new1
+}}"
+!! html
+<p>"6"
+</p>
+!! end
+
+
+!! test
+'arrayunion' merging two tables
+!! wikitext
+"{{
+ArrayTests:arrayinteractions
+}}{{
+#arrayunion: new1 | 1 | 2 }}{{
+#arrayprint: new1
+}}"
+!! html
+<p>"a, c, d, e, f, g, b, x, y, z"
+</p>
+!! end
+
+
+!! test
+'arrayunion' of three tables
+!! wikitext
+"{{
+ArrayTests:arrayinteractions
+}}{{
+#arrayunion: new1 | 1 | 2 | 3 }}{{
+#arrayprint: new1
+}}"
+!! html
+<p>"a, c, d, e, f, g, b, x, y, z, 1, 2"
+</p>
+!! end
+
+
+##
+## #arraydiff
+##
+
+!! test
+'arraydiff' with only one parameter
+!! wikitext
+"{{
+ArrayTests:arrayinteractions
+}}{{
+#arrayreset: new1 }}{{
+#arraydiff: new1 }}{{
+#arraysize: new1
+}}"
+!! html
+<p>"0"
+</p>
+!! end
+
+
+!! test
+'arraydiff' with only one array
+!! wikitext
+"{{
+ArrayTests:arrayinteractions
+}}{{
+#arrayreset: new1 }}{{
+#arraydiff: new1 | 1 }}{{
+#arraysize: new1
+}}"
+!! html
+<p>"6"
+</p>
+!! end
+
+
+!! test
+'arraydiff' comparing two tables
+!! wikitext
+"{{
+ArrayTests:arrayinteractions
+}}{{
+#arraydiff: new1 | 1 | 2 }}{{
+#arrayprint: new1
+}}"
+!! html
+<p>"c, e, f, g"
+</p>
+!! end
+
+
+!! test
+'arraydiff' of three tables
+!! wikitext
+"{{
+ArrayTests:arrayinteractions
+}}{{
+#arraydiff: new1 | 1 | 2 | 3 }}{{
+#arrayprint: new1
+}}"
+!! html
+<p>"c, f, g"
+</p>
+!! end
+
+
+##
+## #arrayintersect
+##
+
+!! test
+'arrayintersect' with only one parameter
+!! wikitext
+"{{
+ArrayTests:arrayinteractions
+}}{{
+#arrayreset: new1 }}{{
+#arrayintersect: new1 }}{{
+#arraysize: new1
+}}"
+!! html
+<p>"0"
+</p>
+!! end
+
+
+!! test
+'arrayintersect' with only one array
+!! wikitext
+"{{
+ArrayTests:arrayinteractions
+}}{{
+#arrayreset: new1 }}{{
+#arrayintersect: new1 | 1 }}{{
+#arraysize: new1
+}}"
+!! html
+<p>"6"
+</p>
+!! end
+
+
+!! test
+'arrayintersect' comparing two tables
+!! wikitext
+"{{
+ArrayTests:arrayinteractions
+}}{{
+#arrayintersect: new1 | 1 | 2 }}{{
+#arrayprint: new1
+}}"
+!! html
+<p>"a, d"
+</p>
+!! end
+
+
+!! test
+'arrayintersect' of three tables
+!! wikitext
+"{{
+ArrayTests:arrayinteractions
+}}{{
+#arrayintersect: new1 | 1 | 2 | 3 }}{{
+#arrayprint: new1
+}}"
+!! html
+<p>"a"
+</p>
+!! end

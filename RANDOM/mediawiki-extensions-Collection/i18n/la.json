@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Andrew Dalby",
+			"Laurentianus",
+			"Lesgles",
+			"UV"
+		]
+	},
+	"coll-remove": "Removere",
+	"coll-show": "Monstrare",
+	"coll-move_up": "Ascendere",
+	"coll-move_down": "Descendere",
+	"coll-print_export": "Imprimere vel exportare",
+	"coll-create_a_book": "Librum creare",
+	"coll-download_as": "Paginam prehendere formá $1",
+	"coll-add_this_page": "Hanc paginam libro tuo subiungere",
+	"coll-add_page_tooltip": "Hanc paginam libro tuo subiungere",
+	"coll-help": "Auxilium",
+	"coll-n_pages": "$1 {{PLURAL:$1|pagina|paginae}}",
+	"coll-remove_this_page": "E libro removere",
+	"coll-attribution-anons": "Sine nomine: $1",
+	"coll-image-attribution": "<b>$1</b> <i>Fons:</i> $2 <i>Licentia:</i> $3 <i>Contributores:</i> $4 <i>Primus artifex:</i> $5"
+}

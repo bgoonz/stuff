@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bencemac",
+			"Tgr"
+		]
+	},
+	"adminlinks": "Adminlinkek",
+	"adminlinks-desc": "Létrehoz egy [[Special:AdminLinks|speciális lapot]], ami az adminisztrátorok számára hasznos linkeket tartalmaz",
+	"adminlinks_documentation": "$1 dokumentáció",
+	"adminlinks_general": "Általános",
+	"adminlinks_editsidebar": "Oldalsó menü szerkesztése",
+	"adminlinks_editcss": "CSS fájl szerkesztése",
+	"adminlinks_editmainpagename": "Főoldal nevének szerkesztése",
+	"adminlinks_users": "Felhasználók",
+	"adminlinks_browsesearch": "Böngészés és keresés",
+	"adminlinks_importexport": "Importálás és exportálás",
+	"adminlinks_pagenotfound": "Nem sikerült megtalálni a(z) $1 nevű speciális lapot.",
+	"action-adminlinks": "adminlinkek megtekintése",
+	"right-adminlinks": "látja az [[Special:AdminLinks|adminlinkeket]]"
+}

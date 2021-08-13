@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"BRUTE",
+			"OpusDEI",
+			"Tokoko"
+		]
+	},
+	"apihelp-antispoof-description": "მომხმარებლის შემოწმება AntiSpoof-ის ნორმალიზაციით.",
+	"apihelp-antispoof-param-username": "მომხმარებელი, რომელიც უნდა შემოწმდეს AntiSpoof-ზე.",
+	"apihelp-antispoof-example-1": "შეამოწმეთ მომხმარებელი \"Foo\" AntiSpoof-ზე",
+	"apihelp-createaccount-param-ignoreantispoof": "მსგავს სახელებზე შემოწმების იგნორირება (მოითხოვს უფლებებს <code>override-antispoof</code> right)."
+}

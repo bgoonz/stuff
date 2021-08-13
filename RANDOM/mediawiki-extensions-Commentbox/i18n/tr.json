@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"BaRaN6161 TURK",
+			"Karduelis",
+			"MuratTheTurkish",
+			"Vito Genovese"
+		]
+	},
+	"commentbox-desc": "Belirli sayfalara bir yorum kutusu ekler",
+	"commentbox-intro": "== Bir yorum ekle... ==\nBu sayfa ile ilgili bir yorumunuz mu var? Buraya ekleyin veya <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} direkt olarak sayfayı değiştirin]</span>.",
+	"commentbox-savebutton": "Yorumu kaydet",
+	"commentbox-name": "Ad:",
+	"commentbox-name-explanation": "<small>(İpucu: [[Special:UserLogin|Oturum açarsanız]], adınızı buraya manüel olarak girmek zorunda kalmayacaksınız)</small>",
+	"commentbox-log": "Yeni yorumlar",
+	"commentbox-first-comment-heading": "== Yorumlar ==",
+	"commentbox-regex": "/\\n==\\s*Yorumlar\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Yorumu oluşturmada hata",
+	"commentbox-error-page-nonexistent": "Bu sayfa mevcut değil!",
+	"commentbox-error-namespace": "Bu ad alanında yoruma izin verilmiyor!",
+	"commentbox-error-empty-comment": "Boş yorumlara izin verilmiyor!"
+}

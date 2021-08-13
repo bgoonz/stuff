@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bennylin",
+			"Irwangatot"
+		]
+	},
+	"commentbox-desc": "Menambahkan box komentar pada halaman tertentu",
+	"commentbox-intro": "== Tambah komentar ... ==\nAnda memiliki komentar di halaman ini? Tambahkan di sini atau <span class=\"plainlinks\"> [((fullurl:((FULLPAGENAME))|action=edit)) sunting halaman langsung] </span>.",
+	"commentbox-savebutton": "Simpan komentar",
+	"commentbox-name": "Nama:",
+	"commentbox-name-explanation": "<small> (Tip: Jika Anda [[Special:UserLogin|log in]], Anda tidak perlu mengisi nama Anda di sini secara manual) </small>",
+	"commentbox-log": "Komentar baru",
+	"commentbox-first-comment-heading": "== Komentar ==",
+	"commentbox-regex": "/\\n==\\s*Komentar\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Kesalahan selagi membuat komentar",
+	"commentbox-error-page-nonexistent": "Halaman ini tidak ada!",
+	"commentbox-error-namespace": "Komentar tidak diperbolehkan pada ruang nama ini!",
+	"commentbox-error-empty-comment": "Komentar kosong tidak diperbolehkan!"
+}

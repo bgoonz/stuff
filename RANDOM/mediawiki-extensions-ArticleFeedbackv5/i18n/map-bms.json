@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"StefanusRA"
+		]
+	},
+	"articlefeedbackv5-cta-thanks": "Matur nuwun!",
+	"articlefeedbackv5-cta-confirmation-message": "PostinganeRika teyeng dideleng nang [$1 kaca umpan balik] kiye.",
+	"articlefeedbackv5-cta1-confirmation-title": "Apa Rika weruh nek Rika teyeng nyunting kaca kiye?",
+	"articlefeedbackv5-cta1-confirmation-call": "{{SITENAME}} ana jalaran ana wong sing nyunting kacane. Mayuh, dijajal. Aja wedi!",
+	"articlefeedbackv5-cta1-learn-how": "Sinau carane nyunting",
+	"articlefeedbackv5-cta1-edit-linktext": "Nyunting kaca kiye",
+	"articlefeedbackv5-cta2-confirmation-title": "Nulungi ngembangna {{SITENAME}}",
+	"articlefeedbackv5-cta2-confirmation-call": "Situs web kiye digawe dening wong-wong kaya Rika. Apa Rika teyeng nulungi inyong?",
+	"articlefeedbackv5-cta2-button-text": "Sinau lewih",
+	"articlefeedbackv5-cta3-confirmation-title": "Monggo ngisi surpei cepet",
+	"articlefeedbackv5-cta3-confirmation-call": "Kiye mung merlokna wektu semenit thok lan bakal nulung ngembangna {{SITENAME}}.",
+	"articlefeedbackv5-cta3-button-text": "MOlai surpei",
+	"articlefeedbackv5-cta4-confirmation-title": "Gabung karo komunitas",
+	"articlefeedbackv5-cta4-confirmation-call-line1": "Ndafta utawa mlebu log, supaya editor teyeng nanggepi umpan balike Rika.",
+	"articlefeedbackv5-cta4-confirmation-call-line2": "Akun gratise Rika maraih dadi lewih gampang nggo nyebarna apa sing Rika weruh nang {{SITENAME}}.",
+	"articlefeedbackv5-cta4-button-text-signup": "Gawe akun",
+	"articlefeedbackv5-cta4-button-text-login": "Mlebu log",
+	"articlefeedbackv5-cta4-button-text-later": "Mengko baen lah",
+	"articlefeedbackv5-cta4-button-text-or": "utawa",
+	"articlefeedbackv5-cta5-confirmation-title": "Deleng apa sing diomongna wong sejen",
+	"articlefeedbackv5-cta5-button-text": "Deleng kabeh komen",
+	"articlefeedbackv5-cta6-confirmation-title": "Mbutuhna pitulung kanggo nyunting {{SITENAME}}?",
+	"articlefeedbackv5-cta6-button-text": "Mampir ming Teahouse",
+	"articlefeedbackv5-overlay-close": "Tutup",
+	"articlefeedbackv5-error": "Ana kasalahan. Jajal maning mengko.",
+	"articlefeedbackv5-form-helpful-yes-label": "Ya"
+}

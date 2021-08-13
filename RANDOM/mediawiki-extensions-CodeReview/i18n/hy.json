@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kareyac",
+			"M hamlet"
+		]
+	},
+	"code-authors": "հեղինակներ",
+	"code-field-author": "Հեղինակ",
+	"code-rev-history-link": "պատմություն",
+	"code-status-new": "նոր",
+	"code-status-ok": "լավ",
+	"code-signoff-field-user": "Մասնակից",
+	"code-signoff-field-flag": "Դրոշ",
+	"code-revfilter-cr_author": "Հեղինակ = $1",
+	"codereview-email-body3": "«$1» օգտագործողը փոխեց $2֊ի կարգավիճակը $4֊ով\n\nՀին կարգավիճակը՝ $3\nՆոր կարգավիճակը՝ $4\n\nԼրիվ URL-հասցեն՝ $5\nԽմբագրման ամփոփում $2֊ի համար՝\n\n$6",
+	"code-stats": "վիճակագրություն",
+	"repoadmin-edit-button": "Լավ"
+}

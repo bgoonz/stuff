@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Michaello",
+			"Milicevic01",
+			"Rancher",
+			"Жељко Тодоровић"
+		]
+	},
+	"antispoof-desc": "Sprečava otvaranje naloga s mešanim pismima, zbunjujućim i sličnim korisničkim imenima",
+	"antispoof-conflict-top": "Ime „$1“ je previše slično sa sledećim korisničkim {{PLURAL:$2|imenom|imenima}}:",
+	"antispoof-conflict-bottom": "Izaberite drugo ime.",
+	"antispoof-name-illegal": "Ime „$1“ nije dozvoljeno da bi se izbegla zbunjujuća ili lažirana korisnička imena: $2.\nIzaberite drugo ime.",
+	"antispoof-bad-char": "„$1“ ($2)",
+	"antispoof-badtype": "Pogrešna vrsta podataka",
+	"antispoof-empty": "Prazna niska",
+	"antispoof-prohibited": "Sadrži zabranjeni znak $1",
+	"antispoof-combining": "Počinje sa sastavnim znakom $1",
+	"antispoof-unassigned": "Sadrži nedodeljen znak $1",
+	"antispoof-deprecated": "Sadrži zastareli znak $1",
+	"antispoof-noletters": "Ne sadrži nijedno slovo",
+	"antispoof-mixedscripts": "Sadrži nesaglasna mešana pisma",
+	"antispoof-tooshort": "Normalizovano ime je prekratko",
+	"antispoof-ignore": "Zanemari međusobno slična imena",
+	"right-override-antispoof": "zaobilaženje provera za međusobno slična imena"
+}

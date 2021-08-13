@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eitvys200",
+			"Homo",
+			"Ignas693",
+			"Manvydasz",
+			"Perkunas",
+			"Vpovilaitis"
+		]
+	},
+	"adminlinks": "Administravimo nuorodos",
+	"adminlinks-desc": "Prideda [[Special:AdminLinks|specialųjį puslapį]], kuriame yra naudingos nuorodos administratoriams",
+	"adminlinks_documentation": "$1 dokumentacija",
+	"adminlinks_general": "Bendrosios",
+	"adminlinks_editsidebar": "Redaguoti šonines juostas",
+	"adminlinks_editcss": "Redaguoti CSS failą",
+	"adminlinks_editmainpagename": "Redaguoti pagrindinio puslapio pavadinimą",
+	"adminlinks_users": "Vartotojai",
+	"adminlinks_browsesearch": "Naršyti ir ieškoti",
+	"adminlinks_importexport": "Importas ir eksportas",
+	"adminlinks_pagenotfound": "Nepavyko rasti specialaus puslapio su pavadinimu $1.",
+	"right-adminlinks": "Žr. [[Special:AdminLinks|Administravimo nuorodų]] puslapį"
+}

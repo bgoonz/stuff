@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dalibor Bosits",
+			"MaGa",
+			"SpeedyGonsales"
+		]
+	},
+	"antispoof-desc": "Sprečava stvaranje sličnih i nepravilnih suradničkih računa",
+	"antispoof-conflict-top": "Ime \"$1\" je previše slično već {{PLURAL:$2|postojećem imenu|$2 postojećih imena}}:",
+	"antispoof-conflict-bottom": "Molimo odaberite drugo suradničko ime.",
+	"antispoof-name-illegal": "Ime \"$1\" nije dozvoljeno da se spriječi moguća zamjena suradničkih nadimaka: $2. Molimo izaberite drugo ime/nadimak.",
+	"antispoof-badtype": "Krivi tip podataka",
+	"antispoof-empty": "Prazan string",
+	"antispoof-prohibited": "Sadrži nedozvoljeni znak $1",
+	"antispoof-combining": "Počinje sa znakom spajanja $1",
+	"antispoof-unassigned": "Sadrži nedodijeljen znak $1",
+	"antispoof-noletters": "Prekratko",
+	"antispoof-mixedscripts": "Nekompatibilna pisma",
+	"antispoof-tooshort": "Prekratko ime",
+	"antispoof-ignore": "Ignoriraj provjeru nevaljanih imena (antispoof)",
+	"right-override-antispoof": "Premošćivanje spoofing provjere"
+}

@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Krol111",
+			"Uostofchuodnego"
+		]
+	},
+	"coll-remove": "Skasuj",
+	"coll-show": "Pokŏż",
+	"coll-move_up": "Przeniyś do gōry",
+	"coll-move_down": "Przeniyś w dōł",
+	"coll-print_export": "Durkuj abo eksportuj",
+	"coll-create_a_book": "Stwōrz ksiōnżkã",
+	"coll-book_creator": "Gyneratōr ksiōnżki",
+	"coll-download_as": "Pobier za $1",
+	"coll-disable": "zastŏw",
+	"coll-book_creator_disable": "Zastŏw tworzynie ksiōnżek",
+	"coll-book_creator_disable_tooltip": "Zastŏw gyneratōr ksiōnżek",
+	"coll-add_this_page": "Przidej tã strōnã do ksiōnżki",
+	"coll-add_page_tooltip": "Przidej teroźnõ strōnã wiki do swojij ksiōnżki",
+	"coll-help": "Pōmoc",
+	"coll-help_tooltip": "Pokŏż pōmoc ô tworzyniu ksiōnżek",
+	"coll-helppage": "Help:Ksiōnżki",
+	"coll-n_pages": "$1 {{PLURAL:$1|strōna|strōny|strōn}}",
+	"coll-remove_this_page": "Skasuj tã strōnã ze swojij ksiōnżki",
+	"coll-show_collection": "Pokŏż ksiōnżkã",
+	"coll-show_collection_tooltip": "Kliknij, żeby edytować/pobrać/ôbsztalować swojã ksiōnżkã",
+	"coll-make_suggestions": "Sugeruj strōny",
+	"coll-make_suggestions_tooltip": "Pokŏż sugestyje na bazie strōn we swojij ksiōnżce",
+	"coll-attribution-anons": "Anōnimowy: $1",
+	"coll-article-attribution": "<b>$1</b> <i>Zdrzōdło:</i> $2 <i>Autorzi:</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>Zdrzōdło:</i> $2 <i>Licyncyjŏ:</i> $3 <i>Autorzi:</i> $4 <i>Ôryginalny artysta:</i> $5"
+}

@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joedalton",
+			"Sarrus"
+		]
+	},
+	"accesscontrol-desc": "Aktiverer gruppeadgangsbegrænsning på en side per bruger",
+	"accesscontrol-info": "Dette er en beskyttet side.",
+	"accesscontrol-info-box": "Adgangsbegrænsninger blev etableret for denne side. Hvis du ser denne besked, så har du ikke adgang til denne side."
+}

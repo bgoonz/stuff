@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cin",
+			"Firilacroco",
+			"KlaudiuMihaila",
+			"Minisarm",
+			"Stelistcristi",
+			"Strainu"
+		]
+	},
+	"antispoof-desc": "Blochează crearea de conturi cu nume de utilizator cu LiTeRe AmEsTeCate, confuzante sau similare",
+	"antispoof-conflict-top": "Numele „$1” este prea asemănător cu {{PLURAL:$2|următorul cont deja existent|următoarele $2 conturi|următoarele $2 de conturi}}:",
+	"antispoof-conflict-bottom": "Vă rugăm să alegeți alt nume.",
+	"antispoof-name-illegal": "Numele „$1” nu este permis pentru a preveni confuziile cu numele de utilizator: $2. Vă rugăm să alegeți un alt nume de utilizator.",
+	"antispoof-badtype": "Tip de date greșit",
+	"antispoof-empty": "Șir gol",
+	"antispoof-prohibited": "Conține caracterul interzis $1",
+	"antispoof-combining": "Începe cu marcajul de combinare $1",
+	"antispoof-unassigned": "Conține un caracter neasociat sau învechit",
+	"antispoof-deprecated": "Conține caracterul interzis $1",
+	"antispoof-noletters": "Nu conține nici o literă",
+	"antispoof-mixedscripts": "Conține mai multe scripturi incompatibile",
+	"antispoof-tooshort": "Nume normalizat prea scurt",
+	"antispoof-ignore": "Nu verifica existența unor nume de cont similare",
+	"right-override-antispoof": "Trece peste verificările de spoofing"
+}

@@ -1,0 +1,44 @@
+{
+	"name": "Admin Links",
+	"version": "0.4.2",
+	"author": [
+		"Yaron Koren"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:Admin_Links",
+	"descriptionmsg": "adminlinks-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "specialpage",
+	"requires": {
+		"MediaWiki": ">= 1.28.0"
+	},
+	"GroupPermissions": {
+		"sysop": {
+			"adminlinks": true
+		}
+	},
+	"AvailableRights": [
+		"adminlinks"
+	],
+	"SpecialPages": {
+		"AdminLinks": "AdminLinks"
+	},
+	"MessagesDirs": {
+		"AdminLinks": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"AdminLinksAlias": "AdminLinks.alias.php"
+	},
+	"AutoloadClasses": {
+		"AdminLinks": "includes/AdminLinks.php",
+		"ALTree": "includes/ALTree.php",
+		"ALSection": "includes/ALSection.php",
+		"ALRow": "includes/ALRow.php",
+		"ALItem": "includes/ALItem.php"
+	},
+	"Hooks": {
+		"PersonalUrls": "AdminLinks::addURLToUserLinks"
+	},
+	"manifest_version": 1
+}

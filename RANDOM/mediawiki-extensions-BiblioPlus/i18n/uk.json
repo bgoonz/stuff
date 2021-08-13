@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ата"
+		]
+	},
+	"biblioplus-desc": "Автоматично отримує цитати з PubMed та бази даних ISBN",
+	"biblioplus-doi-tooltip": "Переглянути або купити статтю у видавця",
+	"biblioplus-pmid-tooltip": "Переглянути або купити статтю у видавця (якщо можливо)",
+	"biblioplus-isbn-tooltip": "Інформація про книгу на isbndb.org",
+	"biblioplus-medline-abstracts": "Усі тези з Medline:",
+	"biblioplus-pubmed-abstracts": "Усі тези в PubMed",
+	"biblioplus-hubmed-abstracts": "Усі тези в HubMed",
+	"biblioplus-vkey-title": "посилання на бібліографічну базу даних"
+}

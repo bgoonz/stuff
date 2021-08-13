@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Helix84"
+		]
+	},
+	"checkpoint": "Uložiť a pokračovať v úpravách",
+	"checkpoint-desc": "Umožňuje uložiť úpravy a pokračovať v úpravách",
+	"checkpoint-tooltip": "Uložiť aktuálny stav a pokračovať v úpravách stránky",
+	"checkpoint-notice": "([[{{ns:project}}:Checkpoint|Uloženie kontrolného bodu]])"
+}

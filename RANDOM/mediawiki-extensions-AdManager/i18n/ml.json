@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Adithyak1997",
+			"Kavya Manohar",
+			"Praveenp",
+			"Santhosh.thottingal"
+		]
+	},
+	"admanager_invalidtargetpage": "\"$1\" എന്ന തലക്കെട്ടുള്ള താൾ കണ്ടെത്താനായില്ല.",
+	"admanager_invalidtargetcategory": " \"$1\" എന്ന പേരിൽ ഒരു വർഗ്ഗം കണ്ടെത്താനായില്ല.",
+	"admanager_labelPage": "താളിന്റെ തലക്കെട്ടുകൾ",
+	"admanager_labelCategory": "വർഗ്ഗത്തിന്റെ പേരുകൾ",
+	"admanager_submit": "സമർപ്പിക്കുക",
+	"admanager_Page": "താളുകൾ",
+	"admanager_Category": "വർഗ്ഗങ്ങൾ",
+	"admanager_added": "താങ്കൾ വരുത്തിയ മാറ്റങ്ങൾ സേവ് ചെയ്തിരിക്കുന്നു.",
+	"admanager_addedzone": "$1 മേഖല ചേർത്തിരിക്കുന്നു.",
+	"admanager_removedzone": "$1 മേഖല ഒഴിവാക്കിയിരിക്കുന്നു.",
+	"admanager_nozonesadded": "ഒരു മേഖലയും ചേർത്തിട്ടില്ല.",
+	"admanager_nozonesremoved": "ഒരു മേഖലയും ഒഴിവാക്കിയിട്ടില്ല.",
+	"admanager_zonenum": "മേഖല #: $1",
+	"admanager_zonenotnumber": "പിഴവ്! $1 ഒരു സംഖ്യയല്ല."
+}

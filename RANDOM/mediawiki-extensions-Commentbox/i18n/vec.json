@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Candalua",
+			"Conky77",
+			"Vajotwo"
+		]
+	},
+	"commentbox-intro": "== Xonta on comento ... ==\nGheto comenti so sta pàgina? Xonta qui o <span class=\"plainlinks\">[{{fullurl:{{FULLPAGENAME}}|action=edit}} modifega diretamente a pàgina]</span>.",
+	"commentbox-savebutton": "Salva comento",
+	"commentbox-name": "Nome:",
+	"commentbox-name-explanation": "<small>(Sujerimento: Se se [[Special:UserLogin|effetua l'acesso]], non se deve inserire manualmente qui el proprio nome)</small>",
+	"commentbox-log": "Novi comenti",
+	"commentbox-first-comment-heading": "== Comenti ==",
+	"commentbox-regex": "/\\n==\\s*Comenti\\s*==\\s*\\n/i",
+	"commentbox-errorpage-title": "Erore durante a creasion del comento",
+	"commentbox-error-page-nonexistent": "Sta paxena non esiste",
+	"commentbox-error-namespace": "No i xe amessi comenti in sto namespace",
+	"commentbox-error-empty-comment": "Comenti vodi no i xe amessi!"
+}

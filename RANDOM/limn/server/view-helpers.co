@@ -1,0 +1,24 @@
+# Utilities for use in templates
+
+export fs = require 'fs'
+export path = require 'path'
+export glob = require 'glob'
+export moment = require 'moment'
+
+VERSION = 'HEAD'
+try VERSION = require '../version' catch e
+exports.VERSION = exports.version = VERSION
+
+export _ = require 'underscore'
+_.str = require 'underscore.string'
+_.mixin _.str.exports()
+
+export op = require 'operator'
+export yaml = require 'js-yaml'
+export jade = require 'jade'
+
+exports import require '../sources'
+
+export now = -> moment(new Date).format('YYYY-MM-DD HH:mm:ss.SSS')
+
+

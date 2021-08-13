@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"An13sa",
+			"Subi"
+		]
+	},
+	"apihelp-pollsubmitvote-description": "AJAXPoll API modulua",
+	"apihelp-pollsubmitvote-summary": "AJAXPoll API modulua",
+	"ajaxpoll-vote-update": "Zure boza eguneratu da.",
+	"ajaxpoll-vote-add": "Zure boza gehitu da.",
+	"ajaxpoll-vote-error": "Arazo bat egon da zure boza prozesatzean, mesedez, saiatu berriro.",
+	"ajaxpoll-percent-votes": "Boto guztien %$1a"
+}

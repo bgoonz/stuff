@@ -1,0 +1,40 @@
+{
+	"@metadata": {
+		"authors": [
+			"Asaifm",
+			"Claw eg",
+			"Maroen1990",
+			"Meno25",
+			"Tarawneh",
+			"ديفيد",
+			"روخو"
+		]
+	},
+	"admanager": "إدارة الإعلانات",
+	"admanagerzones": "مناطق مدير الإعلانات",
+	"admanager-desc": "يوفر [[Special:AdManager|صفحة خاصة]] تسمح للإداريين بتعيين المنطقة للصفحات أو التصنيفات",
+	"admanager_docu": "لإضافة أو إزالة منطقة الإعلان الخاصة بصفحة أو تصنيف بأكملها; قم بإضافة أو إزالة عنوان الصفحة أو التصنيف أدناه.",
+	"admanagerzones_docu": "أدخل كل رقم منطقة إعلان في السطر الخاص به.",
+	"admanager_invalidtargetpage": "لم يتم العثور على صفحة بهذا العنوان \"$1\".",
+	"admanager_invalidtargetcategory": "لم يتم العثور على تصنيف بهذا العنوان \"$1\".",
+	"admanager_notable": "خطأ! لم يتم العثور على جدول قاعدة بيانات مطلوب! الرجاء تشغيل update.php أولا.",
+	"admanager_noAdManagerZones": "خطأ! يجب عليك إضافة بعض المناطق الإعلانية; أدخلها في [[Special:AdManagerZones|مناطق مدير الإعلانات]].",
+	"admanager_labelPage": "عناوين الصفحة:",
+	"admanager_labelCategory": "أسماء التصنيف",
+	"admanager_submit": "إرسال",
+	"admanager_noads": "لا تعرض إعلانات",
+	"admanager_Page": "صفحات",
+	"admanager_Category": "تصنيفات",
+	"admanager_added": "تم حفظ التغييرات",
+	"admanager_addedzone": "أضاف المنطقة$1",
+	"admanager_removedzone": "تمت إزالة منطقة $1.",
+	"admanager_nozonesadded": "لم تتم إضافة أية مناطق.",
+	"admanager_nozonesremoved": "لم تتم إزالة أية مناطق.",
+	"admanager_zonenum": "المنطقة #: $1",
+	"admanager_zonenotnumber": "خطأ! $1 ليس برقم.",
+	"admanager_return": "عد إلى [[Special:AdManager|مدير الإعلانات]]",
+	"admanager_gotoads": "[[Special:AdManager|عدل موضع الإعلان]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|عدل مناطق الإعلانات]]",
+	"action-admanager": "التحكم بإعدادات الإعلان",
+	"right-admanager": "[[Special:AdManager|إدارة تكوين الإعلان]]"
+}

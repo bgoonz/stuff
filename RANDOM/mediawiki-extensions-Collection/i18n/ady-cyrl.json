@@ -1,0 +1,39 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"Bedynokue.nart",
+			"GR44 Luc",
+			"Highlander45temp",
+			"Inyzh",
+			"SamGamgee",
+			"SmartNart12",
+			"TheRossatron"
+		]
+	},
+	"coll-remove": "ИгъэкӀып",
+	"coll-show": "Къэгъэлъагъу",
+	"coll-move_up": "ДэӀэтай",
+	"coll-move_down": "Егъэх",
+	"coll-print_export": "Хэутын/хэгъэкӀын",
+	"coll-create_a_book": "Тхылъ егъажь",
+	"coll-book_creator": "Тхылъ гъэпсылъэ",
+	"coll-download_as": "$1 фэдэу къыхэщ",
+	"coll-disable": "гъэкӀуас",
+	"coll-book_creator_disable": "Тхылъ егъэжьалъэр гъэкӀуас",
+	"coll-book_creator_disable_tooltip": "Тхылъ егъэжьалъэм и гъэсэбэпын гъэуцу",
+	"coll-add_this_page": "Мы нэкӀубгъор уитхылъым хэгъахъу",
+	"coll-add_page_tooltip": "Джырэ вики нэкӀубгъор уи тхылъым датх",
+	"coll-help": "ӀэпыӀэгъу",
+	"coll-help_tooltip": "Тхылъхэр пшӀыным пае ӀэпыӀэгъоу хъущтыр къэгъэлъагъу",
+	"coll-helppage": "Help:Тхылъхэр",
+	"coll-n_pages": "$1 {{PLURAL:$1|нэкӀубгъо|нэкӀубгъу}}",
+	"coll-remove_this_page": "Мы тхьапэр уи тхылъым хэгъэкӀ",
+	"coll-show_collection": "Къэгъэлъагъу тхылъыр",
+	"coll-show_collection_tooltip": "ТеӀункӀ уитхылъ еӀэзэным/къыхэпщыным/ордерыным пае",
+	"coll-make_suggestions": "Зигугъу пшӀыгъэ нэкӀубгъохэр",
+	"coll-make_suggestions_tooltip": "Къыщыгъэлъагъу зи гугъу шӀыгъэхэр уи тхылъым и нэкӀубгъо",
+	"coll-attribution-anons": "ЦӀэрамыӀу: $1",
+	"coll-article-attribution": "<b>$1</b> <i>Лъапсэ:</i> $2 <i>Ауторхэр:</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>Лъапсэ:</i> $2 <i>Лицензие:</i> $3 <i>Ауторхэр:</i> $4 <i>СурэтышӀыр:</i> $5"
+}

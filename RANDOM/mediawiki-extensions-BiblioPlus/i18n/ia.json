@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"biblioplus-desc": "Recupera automaticamente citationes ab PubMed e ab le base de datos ISBN",
+	"biblioplus-doi-tooltip": "Vider o comprar articulo ab le editor",
+	"biblioplus-pmid-tooltip": "Vider o comprar articulo ab le editor (si disponibile)",
+	"biblioplus-isbn-tooltip": "Information del libro in isbndb.org",
+	"biblioplus-medline-abstracts": "Tote le summarios de Medline:",
+	"biblioplus-pubmed-abstracts": "Tote le summarios in PubMed",
+	"biblioplus-hubmed-abstracts": "Tote le summarios in HubMed",
+	"biblioplus-vkey-title": "ligamine al base de datos bibliographic"
+}

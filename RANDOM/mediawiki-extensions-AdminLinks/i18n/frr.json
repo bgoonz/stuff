@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Murma174"
+		]
+	},
+	"adminlinks": "Ferwisangen för administratooren",
+	"adminlinks-desc": "Racht en [[Special:AdminLinks|spezial-sidj]] mä ferwisangen för administratooren iin",
+	"adminlinks_documentation": "Auersicht tu „$1“",
+	"adminlinks_general": "Algemian",
+	"adminlinks_editsidebar": "Sidjenliist bewerke",
+	"adminlinks_editcss": "CSS-datei bewerke",
+	"adminlinks_editmainpagename": "Nööm faan't hoodsidj bewerke",
+	"adminlinks_users": "Brükern",
+	"adminlinks_browsesearch": "Trochluke an schük",
+	"adminlinks_importexport": "Importiare an eksportiare",
+	"adminlinks_pagenotfound": "Det spezial-sidj mä di nööm „$1“ koon ei fünjen wurd.",
+	"right-adminlinks": "[[Special:AdminLinks|Ferwisangen för administratooren]] brük"
+}

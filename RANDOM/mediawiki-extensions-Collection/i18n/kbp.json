@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gnangbade"
+		]
+	},
+	"coll-remove": "Lɩzɩ",
+	"coll-show": "Taaɖɩ",
+	"coll-move_up": "Kpazɩ",
+	"coll-move_down": "Tisi",
+	"coll-print_export": "Lɩzɩ takayahayʋʋ kɩlɩʋ / poliŋ taa wonaʋ",
+	"coll-create_a_book": "La takayaɣ",
+	"coll-book_creator": "Takayɛsɩ kɩkalasɩ lɩzɩyʋ",
+	"coll-download_as": "Poliŋ taa mʋʋ ɛzɩ $1 yɔ",
+	"coll-disable": "Sɩzɩ",
+	"coll-book_creator_disable": "Sɩzɩ takayɩsɩ kɩkalasɩ lɩzʋʋ",
+	"coll-book_creator_disable_tooltip": "Yele labɩnaʋ takayɛsɩ kɩkalasɩ lɩzʋʋ",
+	"coll-add_this_page": "Sɔzɩ takayɩhayʋʋ kʋnɛ ña-takayaɣ kɩkalaɣ taa",
+	"coll-add_page_tooltip": "Sɔzɩ takayɩhayʋʋ ŋgʋ ŋnaɣ yɔ ña-takayaɣ kɩkalaɣ taa",
+	"coll-help": "Sɩnaʋ",
+	"coll-help_tooltip": "Taaɖɩ sɩnaʋ takayɩsɩ kɩkalasɩ lɩzʋʋ yɔɔ",
+	"coll-helppage": "Sɩnaʋ:takayɛsɩ kɩkalasɩ",
+	"coll-n_pages": "$1 takayɩhayʋ{{PLURAL:$1||takayɩhatʋ}}",
+	"coll-remove_this_page": "Lɩzɩ takayɩhayʋʋ kʋnɛ ña-takayaɣ taa",
+	"coll-show_collection": "Taaɖɩ takayaɣ kɩkalasɩ",
+	"coll-show_collection_tooltip": "Tukina nɛ ŋñɔɔzɩ / ŋmʋ poliŋ taa / ŋpazɩ ña-takayaɣ kɩkalaɣ",
+	"coll-make_suggestions": "Tɛyɩ takayɩhatʋ maɣzɩm",
+	"coll-make_suggestions_tooltip": "Wɩlɩ maɣzɩm tɛyɩtʋ ndʋ tɩwɛ ña-takayaɣ kɩkalaɣ taa takayɩhatʋ yɔɔ yɔ",
+	"coll-attribution-anons": "Mɛɛsaɣ : $1",
+	"coll-article-attribution": "<b>$1</b> <i>Kiɖe :</i> $2 <i>Nesi ɖʋyaa :</i> $3",
+	"coll-image-attribution": "<b>$1</b> <i>Kiɖe :</i> $2 <i>Waɖɛ haʋ :</i> $3 <i>Nesi ɖʋyaa :</i> $4 <i>Kajalaɣ lɩzɩyʋʋ :</i> $5"
+}

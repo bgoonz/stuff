@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Revi",
+			"Ykhwong"
+		]
+	},
+	"apihelp-antispoof-description": "안티스푸프의 표준화 검사를 사용하여 사용자명을 검사합니다.",
+	"apihelp-antispoof-summary": "안티스푸프의 표준화 검사를 사용하여 사용자명을 검사합니다.",
+	"apihelp-antispoof-param-username": "안티스푸프로 검색할 사용자명",
+	"apihelp-antispoof-example-1": "사용자 이름 \"길동\"을 안티스푸프로 검사",
+	"apihelp-createaccount-param-ignoreantispoof": "스푸핑 체크 무시 (<code>override-antispoof<code> 권한 필요)"
+}

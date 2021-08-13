@@ -1,0 +1,67 @@
+{
+	"name": "Auth_remoteuser",
+	"version": "2.1.1",
+	"requires": {
+		"MediaWiki": ">= 1.31.0"
+	},
+	"config": {
+		"AuthRemoteuserUserName": {
+			"value": null
+		},
+		"AuthRemoteuserUserNameReplaceFilter": {
+			"value": null
+		},
+		"AuthRemoteuserUserNameBlacklistFilter": {
+			"value": null
+		},
+		"AuthRemoteuserUserNameWhitelistFilter": {
+			"value": null
+		},
+		"AuthRemoteuserUserPrefs": {
+			"value": null
+		},
+		"AuthRemoteuserUserPrefsForced": {
+			"value": null
+		},
+		"AuthRemoteuserUserUrls": {
+			"value": null
+		},
+		"AuthRemoteuserAllowUserSwitch": {
+			"value": false
+		},
+		"AuthRemoteuserRemoveAuthPagesAndLinks": {
+			"value": true
+		},
+		"AuthRemoteuserPriority": {
+			"value": 50
+		}
+	},
+	"type": "other",
+	"author": [
+		"[[mw:User:Otheus|Otheus Shelling]]",
+		"[http://www.csh.rit.edu/~gicode Rusty Burchfield]",
+		"[[mw:User:VibroAxe|James Kinsman]]",
+		"Daniel Thomas",
+		"Ian Ward Comfort",
+		"[[mw:User:MarkAHershberger|Mark A. Hershberger]]",
+		"[https://wikitech.wikimedia.org/wiki/User:Enst80 Stefan Engelhardt]"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:Auth_remoteuser",
+	"descriptionmsg": "auth_remoteuser-desc",
+	"MessagesDirs": {
+		"Auth_remoteuser": [
+			"i18n"
+		]
+	},
+	"license-name": "GPL-2.0-or-later",
+	"SessionProviders": {
+		"Auth_remoteuser": {
+			"class": "MediaWiki\\Extension\\Auth_remoteuser\\AuthRemoteuserSessionProvider"
+		}
+	},
+	"AutoloadClasses": {
+		"MediaWiki\\Extension\\Auth_remoteuser\\UserNameSessionProvider": "src/UserNameSessionProvider.php",
+		"MediaWiki\\Extension\\Auth_remoteuser\\AuthRemoteuserSessionProvider": "src/AuthRemoteuserSessionProvider.php"
+	},
+	"manifest_version": 2
+}

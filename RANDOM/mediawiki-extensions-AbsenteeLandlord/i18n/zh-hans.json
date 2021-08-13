@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bencmq",
+			"PhiLiP"
+		]
+	},
+	"absenteelandlord-reason": "由于管理员不活跃，数据库已经被自动锁定。",
+	"absenteelandlord-desc": "在所有管理员在一段时间内都不活跃时，自动锁定此wiki的数据库"
+}

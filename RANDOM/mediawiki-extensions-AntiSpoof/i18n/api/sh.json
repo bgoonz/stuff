@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"apihelp-antispoof-description": "Provjerite korisničko ime uz provjeru normalizacije AntiSpoof.",
+	"apihelp-antispoof-summary": "Provjerite ga korisničko ime uz provjeru normalizacije AntiSpoof.",
+	"apihelp-antispoof-param-username": "Korisničko ime za provjeru AntiSpoof-om.",
+	"apihelp-antispoof-example-1": "Provjeri korisničko ime \"Foo\" pomoću AntiSpoof",
+	"apihelp-createaccount-param-ignoreantispoof": "Zanemari provjeru konfuzije naziva (zahtijeva <code>override-antispoof</code>)."
+}

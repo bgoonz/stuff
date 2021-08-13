@@ -1,0 +1,17 @@
+{{#title?}}
+<div class="cover-page">
+    <header>
+        <h1>{{title}}</h1>
+        {{#subtitle?}}<h2>{{subtitle}}</h2>{{/subtitle?}}
+    </header>
+</div>
+{{/title?}}
+
+<nav class="mw-book-toc">
+    <h1>{{toctitle}}</h1>
+    <ul>
+        {{#tocitems}}
+            {{>tocitem}}
+        {{/tocitems}}
+    </ul>
+</nav>

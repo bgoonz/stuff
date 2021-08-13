@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrumps",
+			"Rail",
+			"Railfail536",
+			"Sp5uhe",
+			"Woytecr"
+		]
+	},
+	"autoproxyblock-desc": "Umożliwia blokowanie użytkownikom korzystającym z OpenProxy wykonywania operacji na wiki",
+	"proxy-blocked": "{{GENDER:|Twój}} adres IP znajduje się na liście serwerów proxy, wykonywane działanie zostało przerwane.",
+	"abusefilter-edit-builder-vars-is-proxy": "Prawda jeżeli ta akcja została wykonana za pośrednictwem proxy",
+	"tag-proxy": "akcja wykonana z OpenProxy",
+	"action-proxyunbannable": "obchodzenia automatycznych blokad proxy",
+	"right-proxyunbannable": "Obejście automatycznych blokad proxy",
+	"action-notagproxychanges": "zabezpieczania przed oznaczaniem edycji za pośrednictwem proxy jako „proxy”",
+	"right-notagproxychanges": "Zabezpiecz przed oznaczaniem edycji za pośrednictwem proxy jako „proxy”",
+	"action-autoproxyblock-log": "podglądu rejestru blokad nałożonych automatycznie w związku z używaniem OpenProxy",
+	"right-autoproxyblock-log": "Podgląd rejestru operacji wykonywanych z proxy, które zostały automatycznie zablokowane",
+	"proxyblock-log-name": "Rejestr blokad automatycznych (OpenProxy)",
+	"proxyblock-log-header": "Lista operacji wykonywanych z OpenProxy, które zostały automatycznie zablokowane.",
+	"proxyblock-logentry-blocked": "działanie „$2” wykonane przez  {{GENDER:$3|użytkownika|użytkowniczkę}} $3 na stronie [[$1]] zostało automatycznie zablokowane."
+}

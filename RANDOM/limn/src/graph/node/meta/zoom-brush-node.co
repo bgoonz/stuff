@@ -1,0 +1,102 @@
+_  = require 'underscore'
+ko = require 'knockout'
+d3 = require 'd3'
+moment = require 'moment'
+
+{ GraphNodeData,
+} = require '../graph-node-data'
+{ GraphNode,
+} = require '../graph-node'
+
+Trait = require '../graph-node-trait'
+
+
+
+/**
+ * @class
+ * @extends GraphNodeData
+ */
+export class ZoomBrushNodeData extends GraphNodeData
+    @registerType 'zoom-brush'
+    
+    defaults: ->
+        options :
+            zoom :
+                allow : 'both'  # := both | x | y -- zoom dimension(s) the user controls
+                max   : null    # := null=Infinity | Number -- maximum zoom
+    
+    attributeTypes: -> {}
+    
+    -> super ...
+
+
+
+/**
+ * @class
+ * @extends GraphNode
+ */
+export class ZoomBrushNode extends GraphNode
+    __bind__ : <[ onBrushEnd onDoubleClick ]>
+    @registerType 'zoom-brush'
+    traits : [
+        Trait.VIS_NODE
+        Trait.SVG
+        Trait.LEAF
+        Trait.FG_LAYER
+    ]
+    
+    
+    -> super ...
+    
+    
+    render: ->
+        return unless viewport   = @viewport()
+        return unless xZoomScale = viewport.xZoomScale()
+        return unless yZoomScale = viewport.yZoomScale()
+        
+        if @brush
+            @brush
+                .x xZoomScale
+                .y yZoomScale
+            @sel.call @brush
+            return
+        
+        @brush = d3.svg.brush()
+            .x xZoomScale
+            .y yZoomScale
+            .on 'brushend', @onBrushEnd
+        
+        @sel.call @brush
+        @sel.select 'rect.background'
+            .attr 'pointer-events', 'all'
+            .on 'dblclick', @onDoubleClick
+    
+    
+    onBrushEnd: ->
+        extent = @brush.extent()
+        # console.log "brushend", JSON.stringify(extent)
+        
+        @hideTrackingCircles() # TODO: LineNode should listen for zoom event
+        if @extentIsSignificant extent
+            @viewport().zoomToData extent
+        @brush.clear()
+        @sel.call @brush
+    
+    
+    onDoubleClick: ->
+        @hideTrackingCircles() # TODO: LineNode should listen for zoom event
+        @viewport().resetZoom()
+        window.getSelection?().removeAllRanges()
+        document.selection?.empty()
+    
+    
+    hideTrackingCircles: ->
+        @viewport().sel.selectAll 'circle.tracking'
+            .attr { cx: -1000, cy: -1000 }
+    
+    
+    extentIsSignificant: (extent) ->
+        [[x0, y0], [x1, y1]] = extent
+        (x1 - x0) > 1000ms
+    
+    

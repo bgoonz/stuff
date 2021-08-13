@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"2nd-player",
+			"Afaz",
+			"Aotake",
+			"Fryed-peach",
+			"JtFuruhata",
+			"Mizusumashi",
+			"Muttley",
+			"Otokoume",
+			"Shirayuki",
+			"Takot",
+			"Yusuke1109"
+		]
+	},
+	"antispoof-desc": "文字体系が混在している利用者名、既存の利用者名と類似していて紛らわしい利用者名のアカウント作成をブロックする",
+	"antispoof-conflict-top": "指定した利用者名「$1」は以下の{{PLURAL:$2|利用者名}}と類似しすぎています:",
+	"antispoof-conflict-bottom": "別の名前を選択してください。",
+	"antispoof-name-illegal": "指定した利用者名「$1」はなりすまし防止のため使用できません: $2。別の名前を使用してください。",
+	"antispoof-bad-char": "「$1」 ($2)",
+	"antispoof-badtype": "データタイプが異常です",
+	"antispoof-empty": "文字列が空です",
+	"antispoof-prohibited": "禁止された文字 $1 を含んでいます",
+	"antispoof-combining": "結合記号 $1 で始まっています",
+	"antispoof-unassigned": "未割り当ての文字 $1 を含んでいます",
+	"antispoof-deprecated": "推奨されない文字 $1 を含んでいます",
+	"antispoof-noletters": "英字を含んでいません",
+	"antispoof-mixedscripts": "一緒に使用できない複数の文字体系が混在しています",
+	"antispoof-tooshort": "正規化した名前が短すぎます",
+	"antispoof-ignore": "なりすましチェックを無効にする",
+	"antispoof-ignore-help": "十分な特権を持つ利用者が、既存のアカウントの名前と同じ名前であってもアカウントを作成できるようにします。",
+	"action-override-antispoof": "なりすましチェックの無視",
+	"right-override-antispoof": "なりすましチェックを無視"
+}

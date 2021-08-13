@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dj",
+			"Misibacsi",
+			"Tacsipacsi"
+		]
+	},
+	"admanager": "Hirdetéskezelő",
+	"admanagerzones": "Hirdetéskezelő zónák",
+	"admanager_invalidtargetpage": "Nem található \"$1\" című oldal.",
+	"admanager_invalidtargetcategory": "Nem található \"$1\" című kategória.",
+	"admanager_notable": "Hiba! A kért adatbázis tábla nem található. Futtassa először az update.php-t!",
+	"admanager_noAdManagerZones": "Hiba! Először fel kell venned hirdetési zónákat. Add meg őket a [[Special:AdManagerZones|Hirdetéskezelő zónáknál]]!",
+	"admanager_labelPage": "Lap címek",
+	"admanager_labelCategory": "Kategórianevek",
+	"admanager_submit": "Elküldés",
+	"admanager_noads": "Reklámok kikapcsolása",
+	"admanager_Page": "Lapok",
+	"admanager_Category": "Kategóriák",
+	"admanager_added": "Változásaid elmentve",
+	"admanager_addedzone": "Hozzáadott zóna: $1",
+	"admanager_zonenum": "Zónaszám: $1",
+	"admanager_zonenotnumber": "Hiba! $1 nem szám.",
+	"admanager_return": "Vissza a [[Special:AdManager|hirdetéskezelőhöz]]",
+	"admanager_gotoads": "[[Special:AdManager|Hirdetés elhelyezés szerkesztése]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Hirdetési zónák szerkesztése]]",
+	"right-admanager": "[[Special:AdManager|Hirdetési konfiguráció kezelése]]"
+}

@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Macofe",
+			"Умар"
+		]
+	},
+	"batchuserrights": "Декъашхочун бакъонашна пакетан урхалладар",
+	"batchuserrights-desc": "Йиш хуьлуьйту тобан чу масийтта декъашхо тӀетоха йа массийта тоба сиха тӀетоха",
+	"batchuserrights-names": "ДӀайаздарш тобан тӀетохар (могӀам чохь цхьац)",
+	"batchuserrights-single-progress-update": "{{PLURAL:$1|ТӀетоьхна тоба}} <strong>$2</strong>.",
+	"batchuserrights-add-groups": "{PLURAL:$1|$1 Декъашхо}} {{PLURAL:$2|$1 тобан|$1 тобанашна}} тӀетохар: <strong>$3</strong>.",
+	"batchuserrights-userload-error": "'''$1''' декъашхо чуоза аьтту цахиллий.",
+	"right-batchuserrights": "Йиш хуьлуьйту тобан чу масийтта декъашхо тӀетоха йа массийта тоба сиха тӀетоха",
+	"action-batchuserrights": "тӀетоха тобан чу масийтта декъашхо йа массийта тоба сиха тӀетоха"
+}

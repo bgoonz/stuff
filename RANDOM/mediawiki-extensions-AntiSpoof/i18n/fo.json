@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"EileenSanda"
+		]
+	},
+	"antispoof-desc": "Blokkerar fyri upprættan av konti við blandaðum teknum, forvirrandi ella líknandi brúkaranøvnum",
+	"antispoof-conflict-top": "Navnið \"$1\" líkist ov nógv fylgjandi {{PLURAL:$2|brúkaranavni|brúkaranøvnum}}:",
+	"antispoof-conflict-bottom": "Vinarliga vel eitt annað navn.",
+	"antispoof-name-illegal": "Navnið \"$1\" er ikki loyvt til tess at fyribyrgja følsk ella forvirrandi brúkaranøvn: $2.",
+	"antispoof-badtype": "Ringt slag av data.",
+	"antispoof-empty": "Tøm strongin",
+	"antispoof-prohibited": "Inniheldur tekn sum eru á svaralista $1",
+	"antispoof-combining": "Byrjar við kombinatións tekni $1",
+	"antispoof-unassigned": "Inniheldur óbrúktar bókstavar $1",
+	"antispoof-deprecated": "Inniheldur ikki loyvda teknið $1",
+	"antispoof-noletters": "Inniheldur ikki nakran bókstav",
+	"antispoof-tooshort": "Navnið er ov stutt",
+	"antispoof-ignore": "Síggj burtur frá \"spoofing\" kanning"
+}

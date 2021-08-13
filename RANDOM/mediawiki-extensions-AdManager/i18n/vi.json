@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"Baonguyen21022003",
+			"Cheers!",
+			"Dinhxuanduyet",
+			"Max20091",
+			"Minh Nguyen",
+			"Withoutaname",
+			"පසිඳු කාවින්ද"
+		]
+	},
+	"admanager": "Quản lý quảng cáo",
+	"admanagerzones": "Khu quản lý quảng cáo",
+	"admanager-desc": "Cung cấp một [[Special:AdManager|trang đặc biệt]] cho phép sysops thiết lập khu vực cho các trang web hoặc danh mục",
+	"admanagerzones_docu": "Nhập từng số vùng quảng cáo trên dòng riêng của chúng.",
+	"admanager_invalidtargetpage": "Không tìm thấy trang với tên “$1”.",
+	"admanager_invalidtargetcategory": "Không tìm thấy thể loại với tên “$1”.",
+	"admanager_notable": "Lỗi: Không tìm thấy một bảng cơ sở dữ liệu cần thiết! Hãy chạy update.php trước tiên.",
+	"admanager_noAdManagerZones": "Lỗi: Bạn phải thêm một số khu vực quảng cáo. Nhập chúng tại [[Special:AdManagerZones|Khu vực quản lý quảng cáo]].",
+	"admanager_labelPage": "Tên trang",
+	"admanager_labelCategory": "Tên thể loại",
+	"admanager_submit": "Đăng",
+	"admanager_noads": "Không hiển thị quảng cáo",
+	"admanager_Page": "Số trang",
+	"admanager_Category": "Thể loại",
+	"admanager_added": "Đã lưu các thay đổi của bạn.",
+	"admanager_addedzone": "Đã thêm khu vực $1.",
+	"admanager_nozonesadded": "Không có vùng nào được thêm vào.",
+	"admanager_nozonesremoved": "Không có vùng nào bị gỡ bỏ.",
+	"admanager_zonenum": "Số khu vực: $1",
+	"admanager_zonenotnumber": "Lỗi! $1 không phải là số.",
+	"admanager_return": "Trở lại [[Special:AdManager|Quản lý quảng cáo]]",
+	"admanager_gotoads": "[[Special:AdManager|Sửa đổi vị trí quảng cáo]]",
+	"admanager_gotozones": "[[Special:AdManagerZones|Sửa đổi các vùng quảng cáo]]"
+}

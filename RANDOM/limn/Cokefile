@@ -1,0 +1,222 @@
+require 'buildtools'
+require 'buildtools/tasks'
+
+{removeSync:remove} = require 'remove'
+
+
+APP_BUNDLE_PATH        = 'var/js/limn.no-deps.js'
+APP_BUNDLE_MIN_PATH    = APP_BUNDLE_PATH.replace /\.js$/, '.min.js'
+BROWSERIFY_PATH        = 'static/vendor/browserify.js'
+VENDOR_BUNDLE_PATH     = 'var/vendor/vendor-bundle.js'
+VENDOR_BUNDLE_MIN_PATH = VENDOR_BUNDLE_PATH.replace /\.js$/, '.min.js'
+DIST_PATH              = 'dist/limn.js'
+DIST_MIN_PATH          = DIST_PATH.replace /\.js$/, '.min.js'
+
+
+{ sources, findSources, MODULES, LIMN_VARDIR, LIMN_DATA
+} = require './sources'
+
+
+task \install 'Install project dependencies.' ->
+    <- sh 'npm install', {-verbose, +errors, +die}
+
+task \setup 'Ensure project is set up for development.' ->
+    err <- sh 'npm install', {-verbose, +errors, +die}
+    throw err if err
+    invoke \update_version
+
+task \update_version ->
+    err, version <- writeVersionFile 'src/version.js'
+    throw err if err
+
+task \server 'Start dev server' ->
+    run './server/server.co'
+
+
+option \vardir 'the base directory where an instance of limn outputs derived files and links to data' \DIR
+option \data 'absolute or relative path to data repository, data LIMN_DATA/*/' \DIR
+option \to 'name of subdirectory to link to, like this: LIMN_DATA/*/name-of-links' \DIR
+
+task \link_data 'Link to data passed in as an argument' (options) ->
+    data = options.data
+    toLink = options.to
+    # FIXME: find a way to read from the LIMN_DATA environment variable
+    vardir = options.vardir
+    unless data and toLink and vardir
+        console.log 'USAGE: coke --vardir limn-var-dir --data path-to-data --to name-of-links link_data'
+        console.log options.toString()
+        console.log '  (* stands for any of: dashboards,datafiles,datasources,graphs,geo)'
+        console.log ''
+        console.log 'coke understood your command like this:'
+        console.log options
+        return
+    
+    datadir = "#vardir/data"
+    sh "mkdir -p #datadir"
+    sh "mkdir -p #datadir/dashboards"
+    sh "mkdir -p #datadir/datafiles"
+    sh "mkdir -p #datadir/datasources"
+    sh "mkdir -p #datadir/graphs"
+    sh "mkdir -p #datadir/geo"
+    
+    # remove links if they exist
+    sh "rm -f #datadir/dashboards/#toLink"
+    sh "rm -f #datadir/datafiles/#toLink"
+    sh "rm -f #datadir/datasources/#toLink"
+    sh "rm -f #datadir/graphs/#toLink"
+    sh "rm -f #datadir/geo/#toLink"
+    
+    # make links
+    sh "ln -sn #data/dashboards #datadir/dashboards/#toLink"
+    sh "ln -sn #data/datafiles #datadir/datafiles/#toLink"
+    sh "ln -sn #data/datasources #datadir/datasources/#toLink"
+    sh "ln -sn #data/graphs #datadir/graphs/#toLink"
+    sh "ln -sn #data/geo #datadir/geo/#toLink"
+    
+    say 'ok\n'
+
+wrapInRequireDefine = (module, infile) ->
+    "require.define('/node_modules/#module', function(require, module, exports, __dirname, __filename, undefined){\n\n" + read(infile) + "\n\n});\n"
+
+task \build 'Build coco sources' ->
+    invoke \update_version
+    coco <[ -bjc package.co ]>
+    
+    browserify              = require 'browserify'
+    Coco                    = require 'coco'
+    Jade                    = require 'jade'
+    Stylus                  = require 'stylus'
+    nib                     = require 'nib'
+    yaml                    = require 'js-yaml'
+    
+    matchExt = /((?:\.min)?)\.mod((?:\.min)?)\.js$/i
+    fullExt  = /(\.(min|mod|amd|jade))*\.js$/i
+    commonjs_sources = sources 'development'
+        .filter -> it.indexOf('browserify') is -1 and it.indexOf('mod.js') is not -1
+        .map -> "static#it"
+    
+    
+    console.log 'Building source...'
+    
+    Seq(commonjs_sources)
+        .seqEach (modfile) ->
+            module = modfile.replace /^static\/vendor\//, '' .replace /\.mod\.js$/, ''
+            infile = "static/vendor/#module.js"
+            outfile = "var/vendor/#module.mod.js"
+            mkdirp dirname outfile
+            if exists modfile
+                console.log "  Writing CommonJS file:\t #modfile \t-->\t #outfile"
+                write outfile, read modfile
+            else
+                console.log "  Writing CommonJS file:\t #infile \t-->\t #outfile"
+                write outfile, wrapInRequireDefine "#module.js", infile
+            
+            @ok()
+        .seq ->
+            console.log '  Bundling Browserify bundle'
+            bundle = browserify exports:<[ require process ]>
+                .require MODULES.browserify
+                .bundle()
+            write BROWSERIFY_PATH, bundle
+            @ok()
+        
+        .set glob 'src/**/*.co', {+sync}
+        .seqEach (infile) ->
+            return @ok() unless exists infile
+            outfile = infile.replace /^src/, 'var/js/limn' .replace /\.co$/, '.js'
+            modfile = outfile.replace /\.js$/, '.mod.js'
+            module = outfile.replace /^var\/js\/limn/, 'limn'
+            console.log "  Compiling Coco to JS and .MOD.JS:\t #infile \t-->\t #outfile"
+            mkdirp dirname outfile
+            write outfile, Coco.compile read(infile), {+bare, filename:infile}
+            write modfile, "require.define('/node_modules/#module', function(require, module, exports, __dirname, __filename, undefined){\n\n" + read(outfile) + "\n\n});\n"
+            @ok()
+        
+        .set glob "css/*.styl", {+sync}
+        .seqEach (infile) ->
+            outfile = "var/#{infile.replace /\.styl$/, '.css'}"
+            console.log "  Compiling Stylus to CSS:\t #infile \t-->\t #outfile"
+            mkdirp dirname outfile
+            stylus = Stylus read infile
+            stylus.set 'filename', infile
+            stylus.use nib()
+            stylus.render (err, css) ~>
+                write outfile, css unless err
+                this err
+        
+        .catch (err) ->
+            console.error "Error! #err", err
+            err = new Error err if typeof err is 'string'
+            throw err
+        .seq ->
+            console.log 'Done!'
+            @ok()
+        
+
+
+task \bundle 'Build application and vendor bundles' ->
+    invoke \bundle_sources
+    invoke \bundle_vendor
+
+task \bundle_sources 'Build application bundle' ->
+    app_sources = findSources null, {pre:'var/js/limn/'}
+    
+    mkdirp dirname APP_BUNDLE_PATH
+    bundle_js APP_BUNDLE_PATH, app_sources, {-minify}
+    print 'Minifying into', APP_BUNDLE_MIN_PATH.magenta.bold, '... '
+    write APP_BUNDLE_MIN_PATH, minify read APP_BUNDLE_PATH
+    say 'ok.\n'
+
+task \bundle_vendor 'Build vendor bundle' ->
+    
+    # FIXME: including vendor dependencies is quite a mess.  Clean this up
+    vendor_sources_no_browserify = sources 'development'
+        .filter -> it.indexOf('browserify') is -1
+    vendor_sources_static = vendor_sources_no_browserify
+        .filter -> it.indexOf('mod.js') is -1
+        .map -> "static#it"
+    vendor_sources_var = vendor_sources_no_browserify
+        .filter -> it.indexOf('mod.js') is not -1
+        .map -> "var#it"
+    vendor_sources = _.flatten [vendor_sources_static, BROWSERIFY_PATH, vendor_sources_var]
+    mkdirp dirname VENDOR_BUNDLE_PATH
+    bundle_js VENDOR_BUNDLE_PATH, vendor_sources, {-minify}
+    print 'Minifying into', VENDOR_BUNDLE_MIN_PATH.magenta.bold, '... '
+    write VENDOR_BUNDLE_MIN_PATH, minify read VENDOR_BUNDLE_PATH
+    say 'ok.\n'
+
+task \bundle_combine 'Combine bundles into dist file' ->
+    print 'Writing dist file', DIST_PATH.magenta.bold , '... '
+    mkdirp dirname DIST_PATH
+    write DIST_PATH, "#{read VENDOR_BUNDLE_PATH}\n#{read APP_BUNDLE_PATH}\n"
+    say 'ok.\n'
+    
+    print 'Writing minified dist file', DIST_MIN_PATH.magenta.bold , '... '
+    mkdirp dirname DIST_MIN_PATH
+    write DIST_MIN_PATH, "#{read VENDOR_BUNDLE_MIN_PATH}\n#{read APP_BUNDLE_MIN_PATH}\n"
+    say 'ok.\n'
+
+
+
+task \clean 'Clean up environment and artifacts' ->
+    invoke \cleanup_tests
+    remove ['var', 'dist'], {+ignoreMissing, +verbose}
+
+task \clean_js 'Clean up environment and artifacts' ->
+    remove ['var/js','var/vendor'], {+ignoreMissing, +verbose}
+
+
+task \list_all 'Print a list of all source-file paths.' ->
+    invoke \list_vendor
+    invoke \list_sources
+
+task \list_sources 'Print a list of limn source-file paths.' ->
+    say do
+        findSources null, {pre:'js/limn/'}
+            .join '\n'
+
+task \list_vendor 'Print a list of vendor source-file paths.' ->
+    say do
+        sources 'development'
+            .map -> it.slice 1
+            .join '\n'
