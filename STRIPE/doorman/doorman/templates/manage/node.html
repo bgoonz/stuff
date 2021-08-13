@@ -1,0 +1,114 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class="body-content">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>{{ node.display_name }} / <a href="{{ url_for('manage.node_activity', node_id=node.id) }}">recent activity</a> / <a href="{{ url_for('manage.node_logs', node_id=node.id) }}">logs</a></h1>
+
+                <div class="row">
+                    <div class="col-md-3">
+
+                        <h2>Details</h2>
+
+                        <table class="table-condensed">
+                            {% if current_app.config.DOORMAN_CAPTURE_NODE_INFO %}
+                            {% for column, label in current_app.config.DOORMAN_CAPTURE_NODE_INFO %}
+                            {% if column in node.node_info %}
+                            <tr>
+                                <th class="text-right">{{ label | lower }}</th>
+                                <td>{{ node.node_info[column] }}</td>
+                            </tr>
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
+                            <tr>
+                                <th class="text-right">last ip address</th>
+                                <td>{{ node.last_ip | default('', true) }}</td>
+                            </tr>
+                            <tr>
+                                <th class="text-right">host identifier</th>
+                                <td>{{ node.host_identifier }}</td>
+                            </tr>
+                            <tr>
+                                <th class="text-right">enrolled</th>
+                                <td>{{ node.enrolled_on }}</td>
+                            </tr>
+                            <tr>
+                                <th class="text-right">last check-in</th>
+                                <td>{{ node.last_checkin }}</td>
+                            </tr>
+                            <tr>
+                                <th class="text-right">active</th>
+                                <td>
+                                    <button class="activate-node glyphicon glyphicon-{{ 'check' if node.is_active else 'unchecked' }}" data-uri="{{ url_for('manage.get_node', node_id=node.id) }}" ></button>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div><!--./col-md-3-->
+
+                    <div class="col-md-9">
+
+                        <h2>Packs</h2>
+
+                        {% if packs is not defined %}
+                        {% set packs = node.packs.all() %}
+                        {% endif %}
+
+                        {% if packs %}
+                        {% include "tables/packs.html" %}
+                        {% else %}
+
+                        <p>No packs currently associated with this node. Use the tag functionality to associate nodes with packs.</p>
+
+                        {% endif %}
+
+                        <h2>Queries</h2>
+
+                        {% if queries is not defined %}
+                        {% set queries = node.queries.all() %}
+                        {% endif %}
+
+                        {% if queries %}
+                        {% include "tables/queries.html" %}
+                        {% else %}
+
+                        <p>No queries currently associated with this node. Use the tag functionality to associate nodes with queries.</p>
+
+                        {% endif %}
+
+                        <h2>File Integrity Monitoring</h2>
+
+                        {% if file_paths is not defined %}
+                        {% set file_paths = node.file_paths.all() %}
+                        {% endif %}
+
+                        {% if file_paths %}
+                        <ul>
+                            {% for file_path in file_paths %}
+                            <li>{{ file_path.category }}</li>
+                            <ul>
+                                {% for path in file_path.get_paths() %}
+                                <li><code>{{ path }}</code></li>
+                                {% endfor %}
+                            </ul>
+                            {% endfor %}
+                        </ul>
+                        {% else %}
+
+                        <p>No files currently being monitored on this node. Use the tag functionality to associate nodes with file paths to monitor.</p>
+
+                        {% endif %}
+
+                        <h2>Tags</h2>
+
+                        <input class="tagsinput" placeholder="Add tags by typing here" value="{{ node.tags | map(attribute='value') | sort | join(',') }}" data-uri="{{ url_for('manage.tag_node', node_id=node.id) }}">
+
+                    </div><!--./col-md-9-->
+                </div><!--./row-->
+            </div><!--./col-md-12-->
+        </div><!--./row-->
+    </div><!--./body-content-->
+
+{% endblock %}

@@ -1,0 +1,259 @@
+# For a detailed guide to building and testing on iOS, read the docs:
+# https://circleci.com/docs/2.0/testing-ios/
+
+version: 2.1
+orbs:
+  slack: circleci/slack@4.1
+commands:
+  prep_bundler_carthage:
+    description: "Prep the build environment, bundler, and carthage"
+    steps:
+      - run: git clone --depth 1 "$CIRCLE_REPOSITORY_URL" --branch "$CIRCLE_BRANCH" .
+      - run: "bundle config set path 'vendor/bundle'"
+      - restore_cache:
+          key: v2-stp-carthage-xcode-125-cache # Update this if Carthage dependencies or Xcode version change
+      - restore_cache:
+          key: v5-stp-bundle-xcode-125-cache # Update this if bundle dependencies or Xcode version change
+      - run: "bundle install"
+      - run: "carthage bootstrap --platform iOS --configuration Release --no-use-binaries --cache-builds --use-xcframeworks"
+      - save_cache:
+          key: v2-stp-carthage-xcode-125-cache
+          paths:
+            - Carthage
+      - save_cache:
+          key: v5-stp-bundle-xcode-125-cache
+          paths:
+            - vendor
+  prep_environment:
+    description: "Prep environment variables to build to local folder"
+    steps:
+      - run: "bundle config set path 'vendor/bundle'"
+      - run: echo "export CONFIGURATION_BUILD_DIR=$CIRCLE_WORKING_DIRECTORY/stpbuild/products" >> $BASH_ENV
+      - run: echo "export CONFIGURATION_TEMP_DIR=$CIRCLE_WORKING_DIRECTORY/stpbuild/intermediates" >> $BASH_ENV
+  archive_logs:
+    description: Archive logs
+    steps:
+      - run:
+          name: Archive test results
+          command: "mkdir -p circle-results && tar -acf circle-results/$CIRCLE_JOB-logs.tar.bz2 build-ci-tests/Logs/Test"
+          when: always # on failure or success
+      - store_artifacts:
+          path: circle-results
+          destination: logs
+
+executors:
+  mac-executor:
+    macos:
+      xcode: 12.5.0
+    resource_class: m2.medium
+
+jobs:
+  ci-builds:
+    executor: mac-executor
+
+    steps:
+      - prep_environment
+      - prep_bundler_carthage
+      - run: "bundle exec fastlane ci_builds"
+      - run: "rm -rf .git" # our repo is huge, don't preserve it between jobs
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
+
+  stripeios-tests:
+    executor: mac-executor
+
+    steps:
+      - attach_workspace:
+          at: .
+      - prep_environment
+      - run: "bundle exec fastlane stripeios_tests"
+      - archive_logs
+
+  stripecore-tests:
+    executor: mac-executor
+
+    steps:
+      - attach_workspace:
+          at: .
+      - prep_environment
+      - run: "bundle exec fastlane stripecore_tests"
+      - archive_logs
+
+  stripeidentity-tests:
+    executor: mac-executor
+
+    steps:
+      - attach_workspace:
+          at: .
+      - prep_environment
+      - run: "bundle exec fastlane stripeidentity_tests"
+      - archive_logs
+
+  e2e-only:
+    executor: mac-executor
+
+    steps:
+      - prep_environment
+      - prep_bundler_carthage
+      - run: "bundle exec fastlane e2e_only"
+      - archive_logs
+      - run:
+          name: Notify on success
+          command: "./ci_scripts/notify.rb pass"
+          when: on_success
+      - run:
+          name: Notify on failure
+          command: "./ci_scripts/notify.rb fail"
+          when: on_fail
+
+  ui-tests:
+    executor: mac-executor
+
+    steps:
+      - attach_workspace:
+          at: .
+      - prep_environment
+      - run: "bundle exec fastlane ui_tests"
+      - archive_logs
+
+  install-tests:
+    executor: mac-executor
+
+    steps:
+      - prep_environment
+      - prep_bundler_carthage
+      - run: "bundle exec fastlane install_tests"
+
+  basic-integration-tests:
+    executor: mac-executor
+
+    steps:
+      - prep_environment
+      - prep_bundler_carthage
+      - run: "bundle exec fastlane basic_integration_tests"
+      - archive_logs
+      - slack/notify:
+          event: fail
+          template: basic_fail_1
+
+  paymentsheet-tests:
+    executor: mac-executor
+
+    steps:
+      - attach_workspace:
+          at: .
+      - prep_environment
+      - run: "bundle exec fastlane paymentsheet_tests"
+      - archive_logs
+
+  integration-all:
+    executor: mac-executor
+
+    steps:
+      - prep_environment
+      - prep_bundler_carthage
+      - run: "bundle exec fastlane integration_all"
+      - archive_logs
+      - slack/notify:
+          event: fail
+          template: basic_fail_1
+
+  linting-tests:
+    executor: mac-executor
+
+    steps:
+      - prep_environment
+      - prep_bundler_carthage
+      - run: "bundle exec fastlane linting_tests"
+      - archive_logs
+
+  test-legacy-11:
+    executor: mac-executor
+
+    steps:
+      - attach_workspace:
+          at: .
+      - prep_environment
+      - run: sudo bundle exec xcversion simulators --install="iOS 11.4" --no-progress || true
+      - run: "bundle exec fastlane legacy_tests_11"
+      - archive_logs
+
+  test-legacy-12:
+    executor: mac-executor
+
+    steps:
+      - attach_workspace:
+          at: .
+      - prep_environment
+      - run: sudo bundle exec xcversion simulators --install="iOS 12.4" --no-progress || true
+      - run: "bundle exec fastlane legacy_tests_12"
+      - archive_logs
+
+  threeds2-tests:
+    executor: mac-executor
+
+    steps:
+      - run: git clone --depth 1 "$CIRCLE_REPOSITORY_URL" --branch "$CIRCLE_BRANCH" .
+      - run: "./stripe3ds2-support/ci_scripts/check_for_new_localized_strings.sh"
+      - run: "./stripe3ds2-support/ci_scripts/run_tests.sh"
+      - run: "./stripe3ds2-support/ci_scripts/run_builds.sh"
+      - run: "./stripe3ds2-support/ci_scripts/run_analyzer.sh"
+
+workflows:
+  version: 2.1
+  build-and-test:
+    jobs:
+      - ci-builds
+      - stripeios-tests:
+          requires:
+            - ci-builds
+      - stripecore-tests:
+          requires:
+            - ci-builds
+      - stripeidentity-tests:
+          requires:
+            - ci-builds
+      - ui-tests:
+          requires:
+            - ci-builds
+      - test-legacy-11:
+          requires:
+            - ci-builds
+      - test-legacy-12:
+          requires:
+            - ci-builds
+      - paymentsheet-tests:
+          requires:
+            - ci-builds
+      - linting-tests
+      - install-tests
+      - threeds2-tests
+  e2e-only:
+    triggers:
+      - schedule:
+          cron: "56 8 * * *" # at 8:56 every day
+          filters:
+            branches:
+              only:
+                - private
+    jobs:
+      - e2e-only:
+          context:
+            - E2EEndpoint
+  integration-all:
+    triggers:
+      - schedule:
+          cron: "51 10 * * *" # at 10:51 every day
+          filters:
+            branches:
+              only:
+                - private
+    jobs:
+      - integration-all:
+          context:
+            - Slack
+      - basic-integration-tests:
+          context:
+            - Slack

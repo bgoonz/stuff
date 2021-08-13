@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "template_version": 0
+  },
+  "fixtures": [
+    {
+      "name": "setup_intent",
+      "expected_error_type": "card_error",
+      "path": "/v1/setup_intents",
+      "method": "post",
+      "params": {
+        "confirm": "true",
+        "description": "(created by Stripe CLI)",
+        "payment_method": "pm_card_chargeDeclined",
+        "payment_method_types": ["card"]
+      }
+    }
+  ]
+}

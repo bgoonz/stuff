@@ -1,0 +1,30 @@
+language: python
+
+python:
+  - "2.7"
+  - "3.4"
+  - "3.5"
+
+env:
+  - ES_VERSION=5.0.2
+  - ES_VERSION=5.1.2
+  - ES_VERSION=5.2.2
+
+os: linux
+
+cache:
+  pip: true
+
+jdk:
+  - oraclejdk8
+
+install:
+  - pip install -r requirements.txt
+  - pip install .
+
+script:
+  - sudo apt-get update && sudo apt-get install oracle-java8-installer
+  - java -version
+  - sudo update-alternatives --set java /usr/lib/jvm/java-8-oracle/jre/bin/java
+  - java -version
+  - ./travis-run.sh

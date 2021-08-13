@@ -1,0 +1,15 @@
+{
+  // Show the path in the top window bar.
+  "window.title": "${rootName}${separator}${activeEditorMedium}",
+
+  // Formatting
+  "editor.formatOnSave": true,
+  "beautify.ignore": ["**/*.js", "**/*.md"],
+
+  // Extension settings
+  "eslint.packageManager": "yarn",
+  "npm.packageManager": "yarn",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}

@@ -1,0 +1,514 @@
+[[filters]]
+= Filters
+
+[partintro]
+--
+
+Filters are the way to select only the indices (or snapshots) you want.
+
+include::inc_filter_chaining.asciidoc[]
+
+The index filtertypes are:
+
+* <<filtertype_alias,alias>>
+* <<filtertype_age,age>>
+* <<filtertype_count,count>>
+* <<filtertype_pattern,pattern>>
+* <<filtertype_space,space>>
+* <<filtertype_kibana,kibana>>
+* <<filtertype_forcemerged,forcemerged>>
+* <<filtertype_closed,closed>>
+* <<filtertype_opened,opened>>
+* <<filtertype_allocated,allocated>>
+* <<filtertype_none,none>>
+
+The snapshot filtertypes are:
+
+* <<filtertype_age,age>>
+* <<filtertype_count,count>>
+* <<filtertype_pattern,pattern>>
+* <<filtertype_state,state>>
+* <<filtertype_none,none>>
+
+Starting in Curator 4.1, you can use <<envvars,environment variables>> in your
+configuration files.
+--
+
+[[filtertype]]
+== filtertype
+
+Each filter is defined first by a `filtertype`.  Each filtertype has its own
+settings, or no settings at all.  In a configuration file, filters are defined
+as follows:
+
+[source,yaml]
+-------------
+- filtertype: *first*
+  setting1: ...
+  ...
+  settingN: ...
+- filtertype: *second*
+  setting1: ...
+  ...
+  settingN: ...
+- filtertype: *third*
+-------------
+
+The `-` indicates in the YAML that this is an array element.  Each filtertype
+declaration must be preceded by a `-` for the filters to be read properly.  This
+is how Curator can chain filters together.  Anywhere filters can be used,
+multiple can be chained together in this manner.
+
+The index filtertypes are:
+
+* <<filtertype_age,age>>
+* <<filtertype_alias,alias>>
+* <<filtertype_count,count>>
+* <<filtertype_pattern,pattern>>
+* <<filtertype_space,space>>
+* <<filtertype_kibana,kibana>>
+* <<filtertype_forcemerged,forcemerged>>
+* <<filtertype_closed,closed>>
+* <<filtertype_opened,opened>>
+* <<filtertype_allocated,allocated>>
+* <<filtertype_none,none>>
+
+The snapshot filtertypes are:
+
+* <<filtertype_age,age>>
+* <<filtertype_count,count>>
+* <<filtertype_pattern,pattern>>
+* <<filtertype_state,state>>
+* <<filtertype_none,none>>
+
+[[filtertype_age]]
+== age
+
+[source,yaml]
+-------------
+ - filtertype: age
+   source: name
+   direction: older
+   timestring: '%Y.%m.%d'
+   unit: days
+   unit_count: 3
+   field:
+   stats_result:
+   epoch:
+   exclude: False
+-------------
+
+NOTE: Empty values and commented lines will result in the default value, if any,
+    being selected.  If a setting is set, but not used by a given
+    <<filtertype,filtertype>>, it may generate an error.
+
+This <<filtertype,filtertype>> will iterate over the actionable list and match
+indices based on their age.  They will remain in, or be removed from the
+actionable list based on the value of <<fe_exclude,exclude>>.
+
+Read more about the different settings for this <<filtertype,filtertype>>:
+
+[float]
+Required settings
+~~~~~~~~~~~~~~~~~
+
+* <<fe_source,source>> (required)
+* <<fe_direction,direction>> (required)
+* <<fe_unit,unit>> (required)
+* <<fe_unit_count,unit_count>> (required)
+
+[float]
+Dependent settings
+~~~~~~~~~~~~~~~~~~
+
+* <<fe_timestring,timestring>> (required if `source` is `name`)
+* <<fe_field,field>> (required if `source` is `field_stats`) [Indices only]
+* <<fe_stats_result,stats_result>> (only used if `source` is `field_stats`) [Indices only]
+
+[float]
+Optional settings
+~~~~~~~~~~~~~~~~~
+
+* <<fe_epoch,epoch>> (optional)
+* <<fe_exclude,exclude>> (default is `False`)
+
+
+[[filtertype_alias]]
+== alias
+
+[source,yaml]
+-------------
+- filtertype: alias
+  aliases:
+  exclude: True
+-------------
+
+NOTE: Empty values and commented lines will result in the default value, if any,
+    being selected.  If a setting is set, but not used by a given
+    <<filtertype,filtertype>>, it may generate an error.
+
+This <<filtertype,filtertype>> will iterate over the actionable list and match
+indices based on whether they are associated with the given
+<<fe_aliases,aliases>>.  They will remain in, or be removed from the actionable
+list based on the value of <<fe_exclude,exclude>>.
+
+[float]
+Required settings
+~~~~~~~~~~~~~~~~~
+* <<fe_aliases,aliases>> (required)
+
+[float]
+Optional settings
+~~~~~~~~~~~~~~~~~
+* <<fe_exclude,exclude>> (default is `False`)
+
+[[filtertype_allocated]]
+== allocated
+
+[source,yaml]
+-------------
+- filtertype: allocated
+  key:
+  value:
+  allocation_type:
+  exclude: True
+-------------
+
+NOTE: Empty values and commented lines will result in the default value, if any,
+    being selected.  If a setting is set, but not used by a given
+    <<filtertype,filtertype>>, it may generate an error.
+
+This <<filtertype,filtertype>> will iterate over the actionable list and match
+indices based on their shard routing allocation settings.  They will remain in,
+or be removed from the actionable list based on the value of
+<<fe_exclude,exclude>>.
+
+[float]
+Required settings
+~~~~~~~~~~~~~~~~~
+
+* <<fe_key,key>> (required)
+* <<fe_value,value>> (required)
+
+[float]
+Optional settings
+~~~~~~~~~~~~~~~~~
+* <<fe_allocation_type,allocation_type>> (has a default value which can optionally be changed)
+* <<fe_exclude,exclude>> (default is `True`)
+
+
+[[filtertype_closed]]
+== closed
+
+[source,yaml]
+-------------
+- filtertype: closed
+  exclude: True
+-------------
+
+This <<filtertype,filtertype>> will iterate over the actionable list and match
+indices which are closed.  They will remain in, or be removed from the
+actionable list based on the value of <<fe_exclude,exclude>>.
+
+[float]
+Optional settings
+~~~~~~~~~~~~~~~~~
+
+* <<fe_exclude,exclude>> (default is `True`)
+
+[[filtertype_count]]
+== count
+
+[source,yaml]
+-------------
+- filtertype: count
+  count: 10
+  reverse: True
+  use_age: False
+  source: creation_date
+  timestring:
+  field:
+  stats_result:
+  exclude: False
+-------------
+
+NOTE: Empty values and commented lines will result in the default value, if any,
+    being selected.  If a setting is set, but not used by a given
+    <<filtertype,filtertype>>, it may generate an error.
+
+This <<filtertype,filtertype>> will iterate over the actionable list of indices
+_or_ snapshots. They are ordered by age, or by alphabet, so as to guarantee
+that the correct items will remain in, or be removed from the actionable list
+based on the values of <<fe_count,count>>, <<fe_exclude,exclude>>, and
+<<fe_reverse,reverse>>.
+
+For use cases, where "like" items are being counted, and their name pattern
+guarantees date sorting is equal to alphabetical sorting, it is unnecessary to
+set <<fe_use_age,use_age>> to `True`, as item names will be sorted in
+<<fe_reverse,reverse>> order by default.  This means that the item count will
+start beginning with the _newest_ indices or snapshots, and proceed through to
+the oldest.
+
+Read more about the different settings for this <<filtertype,filtertype>>:
+
+[float]
+Required settings
+~~~~~~~~~~~~~~~~~
+
+* <<fe_count,count>> (required)
+
+[float]
+Optional settings
+~~~~~~~~~~~~~~~~~
+
+* <<fe_reverse,reverse>> (optional)
+* <<fe_use_age,use_age>> (optional)
+* <<fe_source,source>> (required if `use_age` is `True`)
+* <<fe_timestring,timestring>> (required if `source` is `name`)
+* <<fe_exclude,exclude>> (default is `False`)
+
+[float]
+Index-only settings
+~~~~~~~~~~~~~~~~~~~
+
+* <<fe_field,field>> (required if `source` is `field_stats`)
+* <<fe_stats_result,stats_result>> (only used if `source` is `field_stats`)
+
+
+[[filtertype_forcemerged]]
+== forcemerged
+
+[source,yaml]
+-------------
+- filtertype: forcemerged
+  max_num_segments: 2
+  exclude: True
+-------------
+
+NOTE: Empty values and commented lines will result in the default value, if any,
+    being selected.  If a setting is set, but not used by a given
+    <<filtertype,filtertype>>, it may generate an error.
+
+This <<filtertype,filtertype>> will iterate over the actionable list and match
+indices which have `max_num_segments` segments per shard, or fewer.  They will
+remain in, or be removed from the actionable list based on the value of
+<<fe_exclude,exclude>>.
+
+[float]
+Required settings
+~~~~~~~~~~~~~~~~~
+
+* <<fe_max_num_segments,max_num_segments>> (required)
+
+[float]
+Optional settings
+~~~~~~~~~~~~~~~~~
+
+* <<fe_exclude,exclude>> (default is `True`)
+
+[[filtertype_kibana]]
+== kibana
+
+[source,yaml]
+-------------
+- filtertype: kibana
+  exclude: True
+-------------
+
+This <<filtertype,filtertype>> will remove indices `.kibana`, `.marvel-kibana`,
+`kibana-int`, and `.marvel-es-data` from the list of indices, if present.
+
+This <<filtertype,filtertype>> will iterate over the actionable list and match
+indices `.kibana`, `.marvel-kibana`, `kibana-int`, or `.marvel-es-data`. They
+will remain in, or be removed from the actionable list based on the value of
+<<fe_exclude,exclude>>.
+
+[float]
+Optional settings
+~~~~~~~~~~~~~~~~~
+
+* <<fe_exclude,exclude>> (default is `True`)
+
+
+[[filtertype_none]]
+== none
+
+[source,yaml]
+-------------
+- filtertype: none
+-------------
+
+This <<filtertype,filtertype>> will not filter anything, returning the full
+list of indices or snapshots.
+
+There are no settings for this <<filtertype,filtertype>>.
+
+
+[[filtertype_opened]]
+== opened
+
+[source,yaml]
+-------------
+- filtertype: opened
+  exclude: True
+-------------
+
+This <<filtertype,filtertype>> will iterate over the actionable list and match
+indices which are opened.  They will remain in, or be removed from the
+actionable list based on the value of <<fe_exclude,exclude>>.
+
+[float]
+Optional settings
+~~~~~~~~~~~~~~~~~
+
+* <<fe_exclude,exclude>> (default is `True`)
+
+
+
+
+[[filtertype_pattern]]
+== pattern
+
+[source,yaml]
+-------------
+- filtertype: pattern
+ kind: prefix
+ value: logstash-
+ exclude: False
+-------------
+
+NOTE: Empty values and commented lines will result in the default value, if any,
+    being selected.  If a setting is set, but not used by a given
+    <<filtertype,filtertype>>, it may generate an error.
+
+This <<filtertype,filtertype>> will iterate over the actionable list and match
+indices matching a given pattern.  They will remain in, or be removed from
+the actionable list based on the value of <<fe_exclude,exclude>>.
+
+include::inc_filter_chaining.asciidoc[]
+
+Read more about the different settings for this <<filtertype,filtertype>>:
+
+[float]
+Required settings
+~~~~~~~~~~~~~~~~~
+
+* <<fe_kind,kind>> (required)
+* <<fe_value,value>> (required)
+
+[float]
+Optional settings
+~~~~~~~~~~~~~~~~~
+
+* <<fe_exclude,exclude>> (default is `False`)
+
+
+
+[[filtertype_space]]
+== space
+
+[source,yaml]
+-------------
+- filtertype: space
+  disk_space: 100
+  reverse: True
+  use_age: False
+  source: creation_date
+  timestring:
+  field:
+  stats_result:
+  exclude: False
+-------------
+
+NOTE: Empty values and commented lines will result in the default value, if any,
+    being selected.  If a setting is set, but not used by a given
+    <<filtertype,filtertype>>, it may generate an error.
+
+This <<filtertype,filtertype>> will iterate over the actionable list and match
+indices when their cumulative disk consumption exceeds
+<<fe_disk_space,disk_space>> gigabytes.  They are first ordered by age,
+or by alphabet, so as to guarantee the oldest indices are deleted first. They
+will remain in, or be removed from the actionable list based on the value of
+<<fe_exclude,exclude>>.
+
+[float]
+Deleting Indices By Space
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This <<filtertype,filtertype>> is for those who want to retain indices based on
+disk consumption, rather than by a set number of days. There are some important
+caveats regarding this choice:
+
+* Elasticsearch cannot calculate the size of closed indices. Elasticsearch does
+  not keep tabs on how much disk-space closed indices consume. If you close
+  indices, your space calculations will be inaccurate.
+* Indices consume resources just by existing. You could run into performance
+  and/or operational snags in Elasticsearch as the count of indices climbs.
+* You need to manually calculate how much space across all nodes. The total you
+  give will be the sum of all space consumed across all nodes in your cluster.
+  If you use shard allocation to put more shards or indices on a single node, it
+  will not affect the total space reported by the cluster, but you may still run
+  out of space on that node.
+
+These are only a few of the caveats. This is still a valid use-case, especially
+for those running a single-node test box.
+
+NOTE: The <<fe_reverse,reverse>> option will be ignored if
+    <<fe_use_age,use_age>> is `True`
+
+For use cases, where "like" indices are being counted, and their name pattern
+guarantees date sorting is equal to alphabetical sorting, it is unnecessary to
+set <<fe_use_age,use_age>> to `True`, as index names will be sorted in
+<<fe_reverse,reverse>> order by default.  For this case, this means that disk
+space calculations will start beginning with the _newest_ indices, and
+proceeding through to the oldest.
+
+Read more about the different settings for this <<filtertype,filtertype>>:
+
+[float]
+Required settings
+~~~~~~~~~~~~~~~~~
+
+* <<fe_disk_space,disk_space>> (required)
+
+[float]
+Optional settings
+~~~~~~~~~~~~~~~~~
+
+* <<fe_reverse,reverse>> (optional)
+* <<fe_use_age,use_age>> (optional)
+* <<fe_source,source>> (required if `use_age` is `True`)
+* <<fe_timestring,timestring>> (required if `source` is `name`)
+* <<fe_field,field>> (required if `source` is `field_stats`)
+* <<fe_stats_result,stats_result>> (only used if `source` is `field_stats`)
+* <<fe_exclude,exclude>> (default is `False`)
+
+[[filtertype_state]]
+== state
+
+[source,yaml]
+-------------
+- filtertype: state
+  state: SUCCESS
+  exclude: False
+-------------
+
+NOTE: Empty values and commented lines will result in the default value, if any,
+    being selected.  If a setting is set, but not used by a given
+    <<filtertype,filtertype>>, it may generate an error.
+
+This <<filtertype,filtertype>> will iterate over the actionable list and match
+snapshots based on the value of <<fe_state,state>>.  They will remain in, or be
+removed from the actionable list based on the value of <<fe_exclude,exclude>>.
+
+[float]
+Required settings
+~~~~~~~~~~~~~~~~~
+
+* <<fe_state,state>> (required)
+
+[float]
+Optional settings
+~~~~~~~~~~~~~~~~~
+
+* <<fe_exclude,exclude>> (default is `False`)

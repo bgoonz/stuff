@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class="body-content">
+        <div class="row">
+            <div class="col-md-9">
+
+                {% if pack is defined %}
+                <h1>{{ pack.name }}</h1>
+
+                {% include "_pack.html" %}
+
+                {% else %}
+
+                {% include "forms/pack.html" %}
+
+                {% endif %}
+
+            </div><!--./col-md-9-->
+        </div><!--./row-->
+    </div><!--./body-content-->
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class="body-content">
+        <div class="row">
+            <div class="col-md-9">
+                <h1>queries</h1>
+
+                {% if queries %}
+                {% for query in queries | sort(attribute='name') %}
+                {% include "_query.html" %}
+                {% endfor %}
+                {% else %}
+                <p>No queries created. You may <a href="{{ url_for('manage.add_query') }}">create a new query</a> or <a href="{{ url_for('manage.add_pack') }}">upload a new pack</a>.<p>
+                {% endif %}
+
+            </div>
+
+            <nav class="col-md-3 bs-docs-sidebar">
+                <ul class="nav nav-stacked fixed" id="sidebar">
+                {% if queries %}
+                    {% for query in queries | sort(attribute='name') %}
+                    <li><a href="#{{ query.name }}">{{ query.name }}</a></li>
+                    {% endfor %}
+                {% endif %}
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+
+{% endblock %}

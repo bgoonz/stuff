@@ -1,0 +1,88 @@
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="{{ url_for('manage.index') }}">
+
+      doorman
+
+    </a>
+  </div><!-- /.navbar-header -->
+
+  {% set navigation_bar = [
+
+    (url_for('manage.nodes'), 'manage.nodes', 'nodes'),
+    (url_for('manage.packs'), 'manage.packs', 'packs'),
+    (url_for('manage.queries'), 'manage.queries', 'queries'),
+    (url_for('manage.distributed'), 'manage.distributed', 'distributed'),
+    (url_for('manage.files'), 'manage.files', 'files'),
+    (url_for('manage.tags'), 'manage.tags', 'tags'),
+    (url_for('manage.rules'), 'manage.rules', 'rules'),
+
+  ] %}
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    {% if current_user and current_user.is_authenticated %}
+    <ul class="nav navbar-nav">
+      {% for href, page_id, page_name in navigation_bar %}
+      <li{% if page_id == request.endpoint %} class="active"{% endif %}>
+        <a href="{{ href }}">{{ page_name }}</a>
+      </li>
+      {% endfor %}
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">add <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li>
+            <a href="{{ url_for('manage.add_pack') }}">pack</a>
+          </li>
+          <li>
+            <a href="{{ url_for('manage.add_query') }}">query</a>
+          </li>
+          <li>
+            <a href="{{ url_for('manage.add_distributed') }}">distributed</a>
+          </li>
+          <li>
+            <a href="{{ url_for('manage.add_file') }}">file</a>
+          </li>
+          <li>
+            <a href="{{ url_for('manage.add_tag') }}">tag</a>
+          </li>
+          <li>
+            <a href="{{ url_for('manage.add_rule') }}">rule</a>
+          </li>
+        </ul>
+      </li>
+
+    </ul>
+
+    {% endif %}
+
+    {% if current_user.username %}
+
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+          <p class="navbar-text">
+            logged in as {{ current_user.username }}
+          </p>
+        </li>
+        <li>
+          <a class="navbar-link" href="{{ url_for('users.logout') }}"><i class="fa fa-sign-out"></i></a>
+        </li>
+    </ul>
+
+    {% endif %}
+
+  </div><!-- /.navbar-collapse -->
+  </div><!-- /.container -->
+</nav>
+

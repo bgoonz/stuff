@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package helloworld;
+
+enum FOO {
+  bar = 0;
+}

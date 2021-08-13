@@ -1,0 +1,15 @@
+[tool.black]
+line-length=79
+exclude = '''
+/(
+    \.eggs/
+  | \.git/
+  | \.tox/
+  | \.venv/
+  | _build/
+  | build/
+  | dist/
+  | venv/
+  | stripe/six.py
+)
+'''

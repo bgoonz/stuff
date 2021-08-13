@@ -1,0 +1,12 @@
+{
+  "name": "Example Terminal Backend",
+  "description": "For testing the Stripe Terminal SDK example apps. https://stripe.com/docs/terminal",
+  "repository": "https://github.com/stripe/example-terminal-backend",
+  "keywords": ["ios", "android", "javascript", "stripe", "terminal", "stripe terminal"],
+  "env": {
+    "STRIPE_TEST_SECRET_KEY": {
+      "description": "Find this at https://dashboard.stripe.com/account/apikeys (it'll look like sk_test_****)",
+      "required": true
+    }
+  }
+}

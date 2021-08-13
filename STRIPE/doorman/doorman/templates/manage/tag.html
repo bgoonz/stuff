@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class="body-content">
+        <div class="row">
+            <div class="col-md-12">
+                {% if tag is defined %}
+                
+                <h2>nodes tagged <strong>{{ tag.value }}</strong></h2>
+
+                {% set nodes = tag.nodes %}
+                {% if nodes %}
+                {% include "tables/nodes.html" %}
+                {% else %}
+                <p>No nodes.</p>
+                {% endif %}
+
+                <h2>Packs tagged <strong>{{ tag.value }}</strong></h2>
+
+                {% set packs = tag.packs %}
+                {% if packs %}
+                {% include "tables/packs.html" %}
+                {% else %}
+                <p>No packs.</p>
+                {% endif %}
+
+                <h2>Queries tagged <strong>{{ tag.value }}</strong></h2>
+
+                {% set queries = tag.queries %}
+                {% if queries %}
+                {% include "tables/queries.html" %}
+                {% else %}
+                <p>No queries.</p>
+                {% endif %}
+
+                <h2>File paths tagged <strong>{{ tag.value }}</strong></h2>
+
+                {% set file_paths = tag.file_paths %}
+                {% if file_paths %}
+                {% for file_path in file_paths %}
+                <h2>
+                    <a href="{{ url_for('manage.file_path', file_path_id=file_path.id) }}">{{ file_path.category }}</a>
+                </h2>
+
+                <ul>
+                    {% for path in file_path.get_paths() %}
+                    <li>{{ path }}</li>
+                    {% endfor %}
+                </ul>
+                {% endfor %}
+                {% else %}
+                <p>No files monitored.</p>
+                {% endif %}
+
+                {% else %}
+
+                <div class="col-md-8">
+                    {% include "forms/tag.html" %}
+
+                </div><!--./col-md-8-->
+                {% endif %}
+
+            </div><!--./col-md-12-->
+        </div><!--./row-->
+    </div><!--./body-content-->
+
+{% endblock %}
