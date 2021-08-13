@@ -1,0 +1,352 @@
+syntax = "proto3";
+
+package com.netflix.genie.proto;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+
+option java_multiple_files = true;
+option java_package = "com.netflix.genie.proto";
+option java_outer_classname = "GenieProto";
+
+//--------------------------------------------------------------------
+// Ping Service
+//
+// This service provides a simple ping-pong protocol between a client
+// and a server, it can be used to test connectivity.
+//--------------------------------------------------------------------
+service PingService {
+    rpc ping (PingRequest) returns (PongResponse);
+}
+
+// The Ping request with client metadata.
+message PingRequest {
+    string request_id = 1;
+    string source_name = 2;
+    google.protobuf.Timestamp timestamp = 3;
+    map<string, string> client_metadata = 4;
+}
+
+// The server response with server metadata.
+message PongResponse {
+    string request_id = 1;
+    google.protobuf.Timestamp timestamp = 2;
+    map<string, string> server_metadata = 3;
+}
+
+//--------------------------------------------------------------------
+// Job Service
+//
+// This service handles all functional protocols between agent and
+// server required to successfully execute a job. From reserving an ID
+// to resolving and retrieving a job specification, to job state
+// updates.
+//--------------------------------------------------------------------
+service JobService {
+    rpc handshake (HandshakeRequest) returns (HandshakeResponse);
+    rpc configure (ConfigureRequest) returns (ConfigureResponse);
+    rpc reserveJobId (ReserveJobIdRequest) returns (ReserveJobIdResponse);
+    rpc resolveJobSpecification (JobSpecificationRequest) returns (JobSpecificationResponse);
+    rpc getJobSpecification (JobSpecificationRequest) returns (JobSpecificationResponse);
+    rpc resolveJobSpecificationDryRun (DryRunJobSpecificationRequest) returns (JobSpecificationResponse);
+    rpc claimJob (ClaimJobRequest) returns (ClaimJobResponse);
+    rpc changeJobStatus (ChangeJobStatusRequest) returns (ChangeJobStatusResponse);
+    rpc getJobStatus (GetJobStatusRequest) returns (GetJobStatusResponse);
+    rpc changeJobArchiveStatus (ChangeJobArchiveStatusRequest) returns (ChangeJobArchiveStatusResponse);
+}
+
+message JobMetadata {
+    string id = 1;
+    string name = 2;
+    string user = 3;
+    string version = 4;
+    string description = 5;
+    repeated string tags = 6;
+    string metadata = 7;
+    string email = 8;
+    string grouping = 9;
+    string grouping_instance = 10;
+    string setup_file = 11;
+    repeated string configs = 12;
+    repeated string dependencies = 13;
+    repeated string command_args = 14;
+}
+
+message Criterion {
+    repeated string tags = 1;
+    string id = 2;
+    string name = 3;
+    string status = 4;
+    string version = 5;
+}
+
+message ExecutionResourceCriteria {
+    repeated Criterion cluster_criteria = 1;
+    Criterion command_criterion = 2;
+    repeated string requested_application_id_overrides = 3;
+}
+
+message AgentConfig {
+    bool is_interactive = 1;
+    string job_directory_location = 2;
+    google.protobuf.Int32Value timeout = 3; // Requested timeout in seconds
+    bool archiving_disabled = 4;
+}
+
+message JobArchivalData {
+    option deprecated = true;
+    string requested_archive_location_prefix = 1 [deprecated = true];
+}
+
+message HandshakeRequest {
+    AgentMetadata agent_metadata = 1;
+}
+
+message HandshakeResponse {
+    enum Type {
+        UNKNOWN = 0;
+        ALLOWED = 1;
+        REJECTED = 2;
+        SERVER_ERROR = 3;
+        INVALID_REQUEST = 4;
+    }
+    Type type = 1;
+    string message = 2;
+}
+
+message ReserveJobIdRequest {
+    JobMetadata metadata = 1;
+    ExecutionResourceCriteria criteria = 2;
+    AgentConfig agent_config = 3;
+    AgentMetadata agent_metadata = 4;
+    JobArchivalData job_archival_data = 5 [deprecated = true];
+}
+
+message ReserveJobIdError {
+    enum Type {
+        UNKNOWN = 0;
+        ID_NOT_AVAILABLE = 1;
+        INVALID_REQUEST = 2;
+        SERVER_ERROR = 3;
+    }
+    Type type = 1;
+    string message = 2;
+}
+
+message ReserveJobIdResponse {
+    oneof response {
+        string id = 1;
+        ReserveJobIdError error = 2;
+    }
+}
+
+message JobSpecificationRequest {
+    string id = 1;
+}
+
+message DryRunJobSpecificationRequest {
+    JobMetadata metadata = 1;
+    ExecutionResourceCriteria criteria = 2;
+    AgentConfig agent_config = 3;
+    JobArchivalData job_archival_data = 4;
+}
+
+message ExecutionResource {
+    string id = 1;
+    string setup_file = 2;
+    repeated string configs = 3;
+    repeated string dependencies = 4;
+}
+
+message JobSpecification {
+    // Deprecated by fields 11 & 12. Populated for backward compatibility.
+    repeated string command_args = 1 [deprecated = true];
+    ExecutionResource job = 2;
+    ExecutionResource cluster = 3;
+    ExecutionResource command = 4;
+    repeated ExecutionResource applications = 5;
+    map<string, string> environment_variables = 6;
+    bool is_interactive = 7;
+    string job_directory_location = 8;
+    string archive_location = 9;
+    google.protobuf.Int32Value timeout = 10; // Optional number of seconds from start when the job should timeout
+    repeated string executable_and_args = 11;
+    repeated string job_args = 12;
+}
+
+message JobSpecificationError {
+    enum Type {
+        UNKNOWN = 0;
+        NO_CLUSTER_FOUND = 1;
+        NO_COMMAND_FOUND = 2;
+        NO_APPLICATION_FOUND = 3;
+        NO_JOB_FOUND = 4;
+        NO_SPECIFICATION_FOUND = 5;
+        INVALID_REQUEST = 6;
+        RESOLUTION_FAILED = 7;
+        RUNTIME_ERROR = 8;
+    }
+    Type type = 1;
+    string message = 2;
+}
+
+message JobSpecificationResponse {
+    oneof response {
+        JobSpecification specification = 1;
+        JobSpecificationError error = 2;
+    }
+}
+
+message AgentMetadata {
+    string agent_version = 1;
+    string agent_hostname = 2;
+    int32 agent_pid = 3;
+}
+
+message ClaimJobRequest {
+    string id = 1;
+    AgentMetadata agent_metadata = 2;
+}
+
+message ClaimJobError {
+    enum Type {
+        UNKNOWN = 0;
+        ALREADY_CLAIMED = 1;
+        NO_SUCH_JOB = 2;
+        INVALID_REQUEST = 3;
+        INVALID_STATUS = 4;
+    }
+    Type type = 1;
+    string message = 2;
+}
+
+message ClaimJobResponse {
+    bool successful = 1;
+    ClaimJobError error = 2;
+}
+
+message ChangeJobStatusRequest {
+    string id = 1;
+    string current_status = 2;
+    string new_status = 3;
+    string new_status_message = 4;
+}
+
+message ChangeJobStatusError {
+    enum Type {
+        UNKNOWN = 0;
+        INVALID_REQUEST = 1;
+        INCORRECT_CURRENT_STATUS = 2;
+        NO_SUCH_JOB = 3;
+    }
+    Type type = 1;
+    string message = 2;
+}
+
+message ChangeJobStatusResponse {
+    bool successful = 1;
+    ChangeJobStatusError error = 2;
+}
+
+message GetJobStatusRequest {
+    string id = 1;
+}
+
+message GetJobStatusResponse {
+    string status = 1;
+}
+
+message ConfigureRequest {
+    AgentMetadata agent_metadata = 1;
+}
+
+message ConfigureResponse {
+    map<string, string> properties = 1;
+}
+
+message ChangeJobArchiveStatusRequest {
+    string id = 1;
+    string new_status = 2;
+}
+
+message ChangeJobArchiveStatusResponse {
+}
+
+//--------------------------------------------------------------------
+// HeartBeat Service
+//
+// This service is keeps track of persistent connections from agents
+// to a server, detects disconnections and provides routing
+// information for requests that flow from the cluster to agents.
+//--------------------------------------------------------------------
+
+service HeartBeatService {
+    rpc heartbeat (stream AgentHeartBeat) returns (stream ServerHeartBeat);
+}
+
+message AgentHeartBeat {
+    string claimed_job_id = 1;
+}
+
+message ServerHeartBeat {
+}
+
+//--------------------------------------------------------------------
+// JobKill Service
+//
+// This service allows killing remote agents through the server.
+// The agent makes a long-poll request "Should i stop?", the server
+// parks this request and does not answer until it decides the agent
+// should be killed (requested by user, or for other reasons).
+//--------------------------------------------------------------------
+
+service JobKillService {
+    rpc registerForKillNotification (JobKillRegistrationRequest) returns (JobKillRegistrationResponse);
+}
+
+message JobKillRegistrationRequest {
+    string job_id = 1;
+}
+
+message JobKillRegistrationResponse {
+}
+
+//--------------------------------------------------------------------
+// FileStream Service
+//
+// This service streams file local to an agent back to the server.
+//--------------------------------------------------------------------
+
+service FileStreamService {
+    rpc sync (stream AgentManifestMessage) returns (stream ServerControlMessage);
+    rpc transmit (stream AgentFileMessage) returns (stream ServerAckMessage);
+}
+
+message AgentManifestMessage {
+    string job_id = 1;
+    string manifest_json = 2;
+    bool large_files_supported = 3; // To be removed once all agents are running a recent version
+}
+
+message ServerControlMessage {
+    oneof message {
+        ServerFileRequestMessage server_file_request = 1;
+    }
+}
+
+message ServerFileRequestMessage {
+    string stream_id = 1;
+    string relative_path = 2;
+    int32 deprecated_start_offset = 3 [deprecated = true];
+    int32 deprecated_end_offset = 4   [deprecated = true];
+    int64 start_offset = 5;
+    int64 end_offset = 6;
+}
+
+message AgentFileMessage {
+    string stream_id = 1;
+    bytes data = 2;
+}
+
+message ServerAckMessage {
+}

@@ -1,0 +1,239 @@
+<div class="form-horizontal">
+  <div class="form-group">
+    <label class="control-label col-sm-2">
+      Subject Alternate Names
+    </label>
+    <div class="col-sm-3">
+      <select class="form-control" ng-model="authority.subAltType" ng-init="null" ng-options="item for item in ['DNSName', 'IPAddress', 'IPNetwork', 'uniformResourceIdentifier', 'directoryName','rfc822Name', 'registeredID']"></select>
+    </div>
+    <div class="col-sm-5">
+      <div class="input-group">
+        <input tooltip-trigger="focus" tooltip-placement="top" uib-tooltip="String or Base64-encoded DER ASN.1 structure for the value" class="form-control" name="value" ng-model="authority.subAltValue" placeholder="Value" class="form-control" required/>
+        <span class="input-group-btn">
+          <button ng-click="authority.attachSubAltName()" class="btn btn-info">Add</button>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-8 col-sm-offset-2">
+      <table class="table">
+        <tr ng-repeat="alt in authority.extensions.subAltNames.names track by $index">
+          <td>{{ alt.nameType }}</td>
+          <td>{{ alt.value }}</td>
+          <td>
+            <button type="button" ng-click="authority.removeSubAltName($index)" class="btn btn-danger btn-sm pull-right">Remove</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2">
+      Key Usage
+    </label>
+    <div class="col-sm-3">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" ng-model="authority.extensions.keyUsage.useDigitalSignature">Digital Signature
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" ng-model="authority.extensions.keyUsage.useNonRepudiation">Non Repudiation
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" ng-model="authority.extensions.keyUsage.useKeyEncipherment">Key Encipherment
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" ng-model="authority.extensions.keyUsage.useDataEncipherment">Data Encipherment
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" ng-model="authority.extensions.keyUsage.useKeyCertSign">Key Certificate Signature
+        </label>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" ng-model="authority.extensions.keyUsage.useCRLSign">CRL Sign
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" ng-model="authority.extensions.keyUsage.useKeyAgreement">Key Agreement
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="encipherOrDecipher" ng-model="authority.encipherOrDecipher" value="useEncipherOnly" ng-click="authority.setEncipherOrDecipher('useEncipherOnly')">Encipher Only
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="encipherOrDecipher" ng-model="authority.encipherOrDecipher" value="useDecipherOnly" ng-click="authority.setEncipherOrDecipher('useDecipherOnly')">Decipher Only
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2">
+      Extended Key Usage
+    </label>
+    <div class="col-sm-3">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" ng-model="authority.extensions.extendedKeyUsage.useServerAuthentication">Server Authentication
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" ng-model="authority.extensions.extendedKeyUsage.useClientAuthentication">Client Authentication
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" ng-model="authority.extensions.extendedKeyUsage.useEmailProtection">Email Protection
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" ng-model="authority.extensions.extendedKeyUsage.useTimestamping">Timestamping
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" ng-model="authority.extensions.extendedKeyUsage.useCodeSigning">Code Signing
+        </label>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" ng-model="authority.extensions.extendedKeyUsage.useEapOverLAN">EAP Over LAN
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" ng-model="authority.extensions.extendedKeyUsage.useEapOverPPP">EAP Over PPP
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" ng-model="authority.extensions.extendedKeyUsage.useSmartCardLogon">Smart Card Logon
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" ng-model="authority.extensions.extendedKeyUsage.useOCSPSigning">OCSP Signing
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2">
+      Authority Key Identifier
+    </label>
+    <div class="col-sm-10">
+      <div class="checkbox">
+        <label tooltip-trigger="mouseenter" tooltip-placement="top" uib-tooltip="Put Issuer's keyIdentifier in this extension" >
+          <input type="checkbox" ng-model="authority.extensions.authorityKeyIdentifier.useKeyIdentifier">Key Identifier
+        </label>
+      </div>
+      <div class="checkbox">
+        <label tooltip-trigger="mouseenter" tooltip-placement="top" uib-tooltip="Put Issuer's Name and Serial number" >
+          <input type="checkbox" ng-model="authority.extensions.authorityKeyIdentifier.useAuthorityCert">Authority Certificate
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2">
+      Authority Information Access
+    </label>
+    <div class="col-sm-10">
+      <div class="checkbox">
+        <label tooltip-trigger="mouseenter" tooltip-placement="top" uib-tooltip="Ask CA to include/not include AIA extension" >
+          <input type="checkbox" ng-model="authority.extensions.certificateInfoAccess.includeAIA">Include AIA
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2">
+      Subject Key Identifier
+    </label>
+    <div class="col-sm-10">
+      <div class="checkbox">
+        <label tooltip-trigger="mouseenter" tooltip-placement="top" uib-tooltip="Ask CA to include/not include Subject Key Identifier" >
+          <input type="checkbox" ng-model="authority.extensions.subjectKeyIdentifier.includeSKI">Include SKI
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2">
+      cRL Distribution Points
+    </label>
+    <div class="col-sm-8">
+      <select class="form-control" ng-model="authority.extensions.crlDistributionPoints.includeCrlDp" ng-options="item for item in ['yes', 'no', 'default']"></select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2">
+      Basic Constraints
+    </label>
+    <div class="col-sm-8">
+      <label tooltip-trigger="mouseenter" tooltip-placement="top" uib-tooltip="Maximum number of non-self-issued intermediate certificates that may follow this certificate in a valid certification path." >
+        Path Length: <select class="form-control" ng-model="authority.extensions.basicConstraints.path_length" ng-options="item for item in ['None', 0, 1, 2, 3, 4, 5]"></select>
+      </label>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2">
+      Custom
+    </label>
+    <div class="col-sm-2">
+      <input tooltip-trigger="focus" tooltip-placement="top" uib-tooltip="OID for the custom extension e.g. 1.12.123.12.10" class="form-control" name="oid" ng-model="authority.customOid" placeholder="Oid" class="form-control" required/>
+    </div>
+    <div class="col-sm-2">
+      <select tooltip-trigger="focus" tooltip-placement="top" uib-tooltip="Encoding for value" class="form-control col-sm-2" ng-model="authority.customEncoding" ng-options="item for item in ['b64asn1', 'string', 'ia5string']"></select>
+    </div>
+    <div class="col-sm-4">
+      <div class="input-group">
+        <input tooltip-trigger="focus" tooltip-placement="top" uib-tooltip="String or Base64-encoded DER ASN.1 structure for the value" class="form-control" name="value" ng-model="authority.customValue" placeholder="Value" class="form-control" required/>
+        <span class="input-group-btn">
+          <button ng-click="authority.attachCustom()" class="btn btn-info">Add</button>
+        </span>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" ng-model="authority.customIsCritical">Critical
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-8 col-sm-offset-2">
+      <table class="table">
+        <tr ng-repeat="custom in authority.extensions.custom track by $index">
+          <td>{{ custom.oid }}</td>
+          <td>{{ custom.encoding }}</td>
+          <td>{{ custom.value }}</td>
+          <td>{{ custom.isCritical ? "critical" : "" }}</td>
+          <td>
+            <button type="button" ng-click="authority.removeCustom($index)" class="btn btn-danger btn-sm pull-right">Remove</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,99 @@
+import org.apache.tools.ant.filters.ReplaceTokens
+
+apply plugin: "java-library"
+
+license {
+    exclude "*.yml"
+    exclude "*.xml"
+    exclude "*.txt"
+    exclude "*.test.sh"
+    exclude "META-INF/spring.factories"
+}
+
+dependencies {
+    /*******************************
+     * Annotation Processors
+     *******************************/
+
+    annotationProcessor("org.springframework.boot:spring-boot-autoconfigure-processor")
+    annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
+
+    /*******************************
+     * API Dependencies
+     *******************************/
+
+    api(project(":genie-common-external"))
+    api(project(":genie-common-internal"))
+    api(project(":genie-proto"))
+    api("io.grpc:grpc-stub")
+    api("com.beust:jcommander")
+    api("com.google.protobuf:protobuf-java")
+    api("com.google.protobuf:protobuf-java-util")
+    api("jakarta.validation:jakarta.validation-api")
+    api("org.apache.logging.log4j:log4j-core")
+    api("org.springframework:spring-context")
+    api("org.springframework:spring-core")
+    api("org.springframework.boot:spring-boot")
+
+    /*******************************
+     * Implementation Dependencies
+     *******************************/
+
+    implementation("io.grpc:grpc-netty")
+    implementation("io.zipkin.brave:brave")
+    implementation("io.zipkin.brave:brave-instrumentation-grpc")
+    implementation("org.apache.commons:commons-lang3")
+    implementation("org.hibernate.validator:hibernate-validator")
+    implementation("org.slf4j:slf4j-api")
+    implementation("org.springframework.boot:spring-boot-starter")
+    implementation("org.springframework.boot:spring-boot-starter-log4j2")
+    implementation("org.springframework.boot:spring-boot-starter-validation")
+    implementation("org.springframework.cloud:spring-cloud-starter-aws")
+    implementation("org.springframework.cloud:spring-cloud-starter-sleuth")
+
+    /*******************************
+     * Compile Only Dependencies
+     *******************************/
+
+    /*******************************
+     * Runtime Only Dependencies
+     *******************************/
+
+    /*******************************
+     * Test Dependencies
+     *******************************/
+
+    testImplementation(project(":genie-test"))
+    testImplementation("io.grpc:grpc-testing")
+}
+
+def genieVersion = project.version.toString()
+
+compileJava {
+    if (JavaVersion.current().isJava9Compatible() && project.targetCompatibility != JavaVersion.VERSION_1_8) {
+        options.compilerArgs += [
+                "--add-exports",
+                "jdk.unsupported/sun.misc=ALL-UNNAMED"
+        ]
+    }
+}
+
+jar {
+    manifest {
+        attributes("Implementation-Version": genieVersion)
+    }
+}
+
+javadoc {
+    // Lombok problems with no fix in sight
+    // https://stackoverflow.com/questions/59062830/unable-to-generate-javadoc-on-lombok-setters-getters-with-onmethod-attribute
+    failOnError false
+}
+
+processResources {
+    filesMatching("**/*.txt") {
+        filter ReplaceTokens, tokens: [
+                "genie.version": genieVersion
+        ]
+    }
+}

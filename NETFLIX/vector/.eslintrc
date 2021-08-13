@@ -1,0 +1,23 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "react"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "rules": {
+    "indent": [ "error", 2 ],
+    "react/prop-types": [ 2 ],
+    "no-console": [ "off" ]
+  },
+  "env": {
+    "browser": true,
+    "jasmine": true
+  },
+  "globals": {
+    "module": true,
+    "inject": true
+  }
+}

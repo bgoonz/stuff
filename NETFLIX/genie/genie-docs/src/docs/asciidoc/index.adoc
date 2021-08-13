@@ -1,0 +1,45 @@
+= Genie Reference Guide
+Tom Gianos <NetflixOSS@netflix.com>
+v{revnumber}, {localdate}
+:description: Reference documentation for Netflix OSS Genie
+:keywords: genie, netflix, documentation, big data, cloud, oss, open source software
+:toc: left
+:toclevels: 3
+:doctype: book
+:sectanchors:
+:sectlinks:
+:sectnums:
+:sectnumlevels: 5
+:linkattrs:
+:icons: font
+:stylesheet: rubygems.css
+:stylesdir: stylesheets
+:source-highlighter: highlight.js
+:imagesdir: https://netflix.github.io/genie/images/
+
+== Introduction
+
+This is the reference documentation for Genie version {revnumber}. Here you will find high level concept documentation
+as well as documentation about how to install and configure this Genie version.
+
+NOTE: For more Genie information see the https://netflix.github.io/genie[website].
+
+NOTE: For documentation of the REST API for this version of Genie please see the
+https://netflix.github.io/genie/docs/{revnumber}/rest[API Guide].
+
+NOTE: For a demo of this version of Genie please see the
+https://netflix.github.io/genie/docs/{revnumber}/demo[Demo Guide].
+
+include::_releaseNotes.adoc[]
+
+include::concepts/_concepts.adoc[]
+
+include::features/_features.adoc[]
+
+include::internals/_internals.adoc[]
+
+include::_installation.adoc[]
+
+include::_properties.adoc[]
+
+include::_metrics.adoc[]

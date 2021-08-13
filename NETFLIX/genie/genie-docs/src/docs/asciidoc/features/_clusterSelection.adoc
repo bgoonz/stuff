@@ -1,0 +1,174 @@
+=== Cluster Selection
+
+Genie allows administrators to tag clusters with multiple tags that could reflect any type of domain modeling the
+admins wish to accomplish. Purpose of the cluster, types of data the cluster can access, workload expected are just
+some examples of ways tags could be used to classify clusters. Users submit jobs with a series of tags that help
+Genie identify which cluster to run a job on. Sometimes the tags submitted by the job match multiple clusters. At this
+point Genie needs a mechanism to chose a final runtime target from the set of clusters selected. This is where the
+cluster selection feature of Genie comes into play.
+
+Genie has an interface `ClusterSelector` which can be implemented to provide plugin functionality of algorithms for
+cluster selection. The interface has a single method:
+
+[source,java]
+----
+/**
+ * Return best cluster to run job on.
+ *
+ * @param clusters   An immutable, non-empty list of available clusters to choose from
+ * @param jobRequest The job request these clusters are being considered for
+ * @return the "best" cluster to run job on or null if no cluster selected
+ * @throws GenieException if there is any error
+ */
+@Nullable
+Cluster selectCluster(final List<Cluster> clusters, final JobRequest jobRequest) throws GenieException;
+----
+
+At startup Genie will collect all beans that implement the `ClusterSelector` interface and based on their order
+store them in an invocation order list. Meaning that when multiple clusters are selected from the database based on tags
+Genie will send the list of clusters to the implementations in preference order until one of them returns the cluster to
+use.
+
+Genie currently ships with two implementations of this interface which are described below.
+
+==== RandomizedClusterSelectorImpl
+
+As the name indicates this selector simply uses a random number generator to select a cluster from the list by
+index. There is no intelligence to this selection algorithm but it does provide very close to an equal distribution
+between clusters if the same tags are always used.
+
+This implementation is the "default" implementation. It has the lowest priority order so if all other active
+implementations fail to select a cluster this implementation will be invoked and chose randomly.
+
+==== ScriptClusterSelector
+
+This implementation, first introduced in 3.1.0, allows administrators to provide a script to be invoked at runtime to
+decide which cluster to select. Currently `JavaScript` and `Groovy` are supported out of the box but others (like
+`Python`, `Ruby`, etc) could be supported by adding their implementations of the
+https://docs.oracle.com/javase/8/docs/api/javax/script/ScriptEngine.html[ScriptEngine] interface to the Genie classpath.
+
+===== Configuration
+
+The script selector is disabled by default. To enable it an admin must set the property
+`genie.scripts.cluster-selector.source` to a valid script URI (e.g.: `file:///myscript.js`,
+`classpath:org/my/package/myscript.groovy`, `s3://my-app/scripts/myscript.js`).
+It is also recommended to set `genie.scripts.cluster-selector.auto-load-enabled` to `true` to enable eager loading
+of the script (default behavior is to load and compile lazily).
+
+
+
+Other properties:
+
+|===
+|Property |Description| Default Value
+
+|genie.scripts.cluster-selector.source
+|URI of the script to load. `ScriptClusterSelector` is enabled only if this property is set.
+|null
+
+|genie.scripts.cluster-selector.auto-load-enabled
+|If true, the script eagerly load during startup, as opposed to lazily load on first use.
+|false
+
+|genie.scripts.cluster-selector.timeout
+|Maximum script execution time (in milliseconds). After this time has elapsed, evaluation is shut down.
+|5000
+
+|===
+
+See also `genie.scripts-manager.*` properties, which affect this component.
+
+
+===== Script Contract
+
+The contract between the script and the Java code is as follows:
+
+.Script Inputs
+|===
+|Parameter |Description
+
+|clusters
+|Non-empty JSON array of cluster objects (serialized as a string) of the clusters to be evaluated
+
+|jobRequest
+|JSON object (serialized as a string) of the job request that kicked off this evaluation
+
+|===
+
+.Script Output
+|===
+|Result |Description
+
+|A string
+|The id of the cluster selected by the script algorithm that should be used to run the job
+
+|null
+|No cluster was selected and the evaluation should fall back to another selector algorithm
+
+|===
+
+For most of the script engines the last statement will be the return value.
+
+===== Script Examples
+
+Some simple script examples
+
+====== Javascript
+
+[source,javascript]
+----
+var cJson = JSON.parse(clusters);
+var jJson = JSON.parse(jobRequest);
+
+var index;
+for (index = 0; index < cJson.length; index++) {
+    var cluster = cJson[index];
+    if (cluster.user === "h") {
+        break;
+    }
+}
+
+index < cJson.length ? cJson[index].id : null;
+----
+
+====== Groovy
+
+[source,groovy]
+----
+import groovy.json.JsonSlurper
+
+def jsonSlurper = new JsonSlurper()
+def cJson = jsonSlurper.parseText(clusters)
+def jJson = jsonSlurper.parseText(jobRequest)
+
+def index = cJson.findIndexOf {
+    cluster -> cluster.user == "h"
+}
+
+index == -1 ? null : cJson[index].id
+----
+
+===== Caveats
+
+The script selector provides great flexibility for system administrators to test algorithms for cluster load
+balancing at runtime. Since the script is refreshed periodically it can even be changed after Genie is running. With
+this flexibility comes the trade off that script evaluation is going to be slower than code running direct JVM byte
+code. The selector tries to offset this by compiling and caching the script code in between refresh invocations. It
+is recommended that once an algorithm is well tested it be converted to a true implementation of the
+`ClusterSelector` interface if performance is desired.
+
+Additionally if a script error is made the `ScriptClusterSelector` will swallow the exceptions and simply return `null`
+from all calls to `selectCluster` until the script is fixed and `refresh` is invoked again. The metric
+`genie.jobs.clusters.selectors.script.select.timer` with tag `status` and value `failed` can be used to monitor
+this situation.
+
+Two more metrics are relevant in this context.
+`genie.scripts.load.timer` timer for scripts loading (and reloading) can also be used to monitor unavailable resources,
+ compilation errors, etc.
+`genie.scripts.evaluate.timer` timer for script evaluation, can also be used to monitor evaluation errors, timeouts, etc.
+Both metrics are tagged with `scriptUri` in case multiple scripts are loaded.
+
+==== Wrap Up
+
+This section went over the cluster selection feature of Genie. This interface provides an extension point for
+administrators of Genie to tweak Genie's runtime behavior to suit their needs.

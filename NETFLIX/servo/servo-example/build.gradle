@@ -1,0 +1,41 @@
+dependencies {
+  compile project(':servo-core')
+  compile project(':servo-atlas')
+  compile project(':servo-graphite')
+}
+
+task(run, dependsOn: 'classes', type: JavaExec) {
+  main = 'com.netflix.servo.example.Main'
+  classpath = sourceSets.main.runtimeClasspath
+  args = []
+  systemProperties = [ "servo.pollers": "10000" ]
+}
+
+task(runWithAtlas, dependsOn: 'classes', type: JavaExec) {
+  main = 'com.netflix.servo.example.Main'
+  classpath = sourceSets.main.runtimeClasspath
+  args = []
+  environment([
+    'NETFLIX_CLUSTER': 'localhost-dev'
+  ])
+  systemProperties = [
+    "servo.pollers": "10000",
+    "servo.example.isAtlasObserverEnabled": "true"
+  ]
+}
+
+checkstyle {
+  sourceSets = []
+}
+
+pmd {
+  ignoreFailures = true
+}
+
+jar {
+  manifest {
+    attributes(
+      "Automatic-Module-Name": "com.netflix.servo.example"
+    )
+  }
+}

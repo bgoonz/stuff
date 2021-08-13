@@ -1,0 +1,82 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven { url 'http://clojars.org/repo' }
+    }
+    dependencies {
+        classpath 'com.netflix.nebula:gradle-extra-configurations-plugin:2.2.0'
+        classpath 'com.netflix.nebula:nebula-clojure-plugin:2.2.0'
+    }
+}
+
+plugins {
+    id 'nebula.netflixoss' version '2.2.9'
+}
+
+// Establish version and status
+ext.githubProjectName = rootProject.name // Change if github project name is not the same as the root project's name
+
+subprojects {
+    apply plugin: 'nebula.netflixoss'
+    apply plugin: 'nebula.provided-base'
+    apply plugin: 'nebula-clojure'
+    group = 'com.netflix.pigpen'
+
+    repositories {
+        jcenter()
+        maven { url 'http://clojars.org/repo' }
+        maven { url 'http://conjars.org/repo' }
+    }
+
+    license {
+        mapping('clj', 'SEMICOLON_STYLE')
+    }
+
+    jar {
+       from 'src/main/clojure'
+    }
+
+    tasks.uberjar.enabled=true
+
+    compileClojure {
+        jvmOptions {
+            jvmArgs '-Djava.awt.headless=true'
+        }
+        classpath = project.files(
+            project.compileJava.outputs,
+            classpath
+        )
+    }
+
+    clojuredoc {
+        includeNamespace 'pigpen.core'
+        includeNamespace 'pigpen.fold'
+        codox = [
+            srcDirUri: 'https://github.com/Netflix/PigPen/blob/master/',
+            srcLinenumAnchorPrefix: 'L'
+        ]
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////
+    // Define a task that runs an nrepl server. The port is given with the nreplPort
+    // property:
+    //    gradlew nrepl -PnreplPort=9999
+    // or put the property in ~/.gradle/gradle.properties
+    configurations { nrepl }
+    dependencies {
+      nrepl 'org.clojure:tools.nrepl:0.2.7'
+      nrepl 'org.clojure:clojure:1.6.0'
+    }
+    task nrepl(type: JavaExec) {
+        classpath project.sourceSets.main.clojure.srcDirs,
+                  project.sourceSets.test.clojure.srcDirs,
+                  sourceSets.test.runtimeClasspath,
+                  sourceSets.main.runtimeClasspath,
+                  configurations.nrepl
+
+        main = "clojure.main"
+        args '--eval', "(ns gradle-nrepl (:require [clojure.tools.nrepl.server :refer (start-server stop-server)]))",
+             '--eval', "(println \"Starting nrepl server on port $nreplPort\")",
+             '--eval', "(def server (start-server :port $nreplPort))"
+    }
+}

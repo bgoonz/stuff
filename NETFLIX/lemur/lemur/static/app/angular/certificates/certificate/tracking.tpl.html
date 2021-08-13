@@ -1,0 +1,210 @@
+<form name="trackingForm" novalidate>
+  <div class="form-horizontal">
+    <div class="form-group"
+         ng-class="{'has-error': trackingForm.ownerEmail.$invalid, 'has-success': !trackingForm.$invalid&&trackingForm.ownerEmail.$dirty}">
+      <label class="control-label col-sm-2">
+        Owner
+      </label>
+
+      <div class="col-sm-10">
+        <input type="email" name="ownerEmail" ng-model="certificate.owner" placeholder="TeamDL@example.com"
+               uib-tooltip="This is the certificates team distribution list or main point of contact"
+               class="form-control"
+               required/>
+
+        <p ng-show="trackingForm.ownerEmail.$invalid && !trackingForm.ownerEmail.$pristine" class="help-block">
+          You must enter an Certificate owner</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2">
+        Roles
+      </label>
+      <div class="col-sm-10" ng-model="certificate" role-select></div>
+    </div>
+    <div ng-include="'angular/certificates/certificate/notifications.tpl.html'"></div>
+    <div class="form-group"
+         ng-class="{'has-error': trackingForm.commonName.$invalid, 'has-success': !trackingForm.$invalid&&trackingForm.commonName.$dirty}">
+      <label class="control-label col-sm-2">
+        Common Name
+      </label>
+      <div class="col-sm-10">
+        <input name="commonName"
+               uib-tooltip="If you need a certificate with multiple domains enter your primary domain here and add additional 'DNSName' entries unders 'Subject Alternate Names' below"
+               ng-model="certificate.commonName" placeholder="Common Name" class="form-control"
+               ng-maxlength="64"
+               ng-blur="certificate.attachCommonName()"
+               ng-focus="certificate.removeCommonName()"
+               required/>
+
+        <p ng-show="trackingForm.commonName.$invalid && !trackingForm.commonName.$pristine" class="help-block">
+          You must
+          enter a common name and it must be less than 64 characters</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2">
+        Subject Alternate Names
+      </label>
+      <div class="col-sm-4">
+        <select class="form-control" ng-model="certificate.subAltType"
+                ng-options="item for item in ['DNSName', 'IPAddress', 'IPNetwork', 'uniformResourceIdentifier', 'directoryName','rfc822Name', 'registeredID']"></select>
+      </div>
+      <div class="col-sm-6">
+        <div class="input-group">
+          <input tooltip-trigger="focus" tooltip-placement="top"
+                 uib-tooltip="String or Base64-encoded DER ASN.1 structure for the value" class="form-control"
+                 name="value" ng-model="certificate.subAltValue" placeholder="Value" class="form-control" required/>
+          <span class="input-group-btn">
+          <button ng-click="certificate.attachSubAltName()" class="btn btn-info">Add</button>
+        </span>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-10 col-sm-offset-2">
+        <table class="table">
+          <tr ng-repeat="alt in certificate.extensions.subAltNames.names track by $index">
+            <td>{{ alt.nameType }}</td>
+            <td>{{ alt.value }}</td>
+            <td>
+              <button type="button" ng-click="certificate.removeSubAltName($index)"
+                      class="btn btn-danger btn-sm pull-right">Remove
+              </button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="form-group"
+         ng-class="{'has-error': trackingForm.description.$invalid, 'has-success': !trackingForm.$invalid&&trackingForm.description.$dirty}">
+      <label class="control-label col-sm-2">
+        Description
+      </label>
+
+      <div class="col-sm-10">
+        <textarea name="description" ng-model="certificate.description" placeholder="Something elegant"
+                  class="form-control" required></textarea>
+        <p ng-show="trackingForm.description.$invalid && !trackingForm.description.$pristine"
+           class="help-block">You
+          must give a short description about this certificate will be used for.</p>
+      </div>
+    </div>
+    <div class="form-group"
+         ng-class="{'has-error': trackingForm.selectedAuthority.$invalid, 'has-success': !trackingForm.$invalid&&trackingForm.selectedAuthority.$dirty}">
+      <label class="control-label col-sm-2">
+        Certificate Authority
+      </label>
+      <div class="col-sm-10">
+        <ui-select class="input-md" ng-model="certificate.authority" theme="bootstrap" title="choose an authority" ng-change="clearDatesAndDefaultValidity()">
+          <ui-select-match placeholder="select an authority...">{{$select.selected.name}}</ui-select-match>
+          <ui-select-choices class="form-control" repeat="authority in authorities"
+                             refresh="getAuthoritiesByName($select.search)"
+                             refresh-delay="300">
+            <div ng-bind-html="authority.name | highlight: $select.search"></div>
+            <small>
+              <span ng-bind-html="''+authority.description | highlight: $select.search"></span>
+            </small>
+          </ui-select-choices>
+        </ui-select>
+      </div>
+    </div>
+       <div class="form-group" ng-show="certificate.authority.plugin.slug == 'acme-issuer'">
+           <label class="control-label col-sm-2">
+            Note:
+            </label>
+           <div class="col-sm-10">
+               The selected authority uses the <a target="_blank" href="https://letsencrypt.org/how-it-works/">ACME protocol</a> and works differently than other authorities.
+               Your request will initially be created under the "pending certificates" section. Lemur will attempt to create the certificate for you,
+               and move the final certificate to the "certificates" section. Lemur performs validation by writing a DNS text record. You may choose a specific DNS provider,
+               or allow Lemur to automatically detect the correct provider for you. Requests may take up to ten minutes.
+           </div>
+       </div>
+       <div class="form-group" ng-show="certificate.authority.plugin.slug == 'acme-issuer'">
+        <label class="control-label col-sm-2">
+          DNS Provider:
+        </label>
+
+        <div class="col-sm-10">
+          <select class="form-control" ng-model="certificate.dnsProvider" ng-options="item as item.name for item in dnsProviders.items track by item.id">
+              <option value="">Automatically select for me</option>
+          </select>
+        </div>
+      </div>
+    <div class="form-group" ng-hide="certificate.authority.plugin.slug == 'acme-issuer'">
+      <label class="control-label col-sm-2"
+             uib-tooltip="You can select custom date range; however, we recommend continuing with default validity.">
+        Validity Range <span class="glyphicon glyphicon-question-sign"></span>
+      </label>
+      <div class="col-sm-4">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-info" ng-model="certificate.validityType" uib-btn-radio="'defaultDays'" ng-click="clearDates()">
+              Default ({{certificate.authority.defaultValidityDays}} days)</label>
+          <label class="btn btn-info" ng-model="certificate.validityType" uib-btn-radio="'customDates'" ng-change="clearDates()">Custom</label>
+        </div>
+      </div>
+      <div class="col-sm-3" ng-if="certificate.validityType==='customDates'">
+        <div class="input-group">
+          <input type="text" class="form-control"
+                 uib-tooltip="Start Date (yyyy/MM/dd)"
+                 uib-datepicker-popup="yyyy/MM/dd"
+                 ng-model="certificate.validityStart"
+                 ng-change="certificate.setValidityEndDateRange(certificate.validityStart)"
+                 is-open="popup1.opened"
+                 datepicker-options="dateOptions"
+                 close-text="Close"
+                 max-date="certificate.authority.authorityCertificate.notAfter"
+                 min-date="certificate.authority.authorityCertificate.notBefore"
+                 alt-input-formats="altInputFormats"
+                 placeholder="Start Date"
+                 readonly="true"
+          />
+          <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="open1()"><i
+                          class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+        </div>
+      </div>
+      <div class="col-sm-3" ng-if="certificate.validityType==='customDates'">
+        <div class="input-group">
+          <input type="text" class="form-control"
+                 uib-tooltip="End Date (yyyy/MM/dd)"
+                 uib-datepicker-popup="yyyy/MM/dd"
+                 ng-model="certificate.validityEnd"
+                 is-open="popup2.opened"
+                 datepicker-options="dateOptions"
+                 close-text="Close"
+                 max-date="certificate.authority.authorityCertificate.maxValidityEnd"
+                 min-date="certificate.authority.authorityCertificate.minValidityEnd"
+                 alt-input-formats="altInputFormats"
+                 placeholder="End Date"
+                 readonly="true"
+          />
+          <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="open2()"><i
+                          class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+        </div>
+      </div>
+    </div>
+    <div class="form-group" ng-show="certificate.authority.plugin.slug == 'acme-issuer'">
+      <label class="control-label col-sm-2">
+        Validity Range <span class="glyphicon glyphicon-question-sign"></span>
+      </label>
+        <div class="col-sm-10">
+            Certificates for LetsEncrypt expire 90 days after creation. Enable auto-rotate to have Lemur automatically
+            rotate the certificate and update your endpoints.
+        </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2">Auto Rotate</label>
+      <div class="col-sm-10">
+        <switch ng-model="certificate.rotation" id="active" name="active" class="green small"
+                uib-tooltip="If selected, new certificates will be automatically re-issued and re-deployed onto known endpoints."></switch>
+      </div>
+    </div>
+    <div ng-include="'angular/certificates/certificate/replaces.tpl.html'"></div>
+    <div ng-include="'angular/certificates/certificate/destinations.tpl.html'"></div>
+  </div>
+</form>
+

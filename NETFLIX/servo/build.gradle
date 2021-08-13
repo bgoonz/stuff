@@ -1,0 +1,134 @@
+/*
+ * Copyright (c) 2015. Netflix, Inc.
+ *
+ *     Licensed under the Apache License, Version 2.0 (the "License");
+ *     you may not use this file except in compliance with the License.
+ *     You may obtain a copy of the License at
+ *
+ *         http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *     Unless required by applicable law or agreed to in writing, software
+ *     distributed under the License is distributed on an "AS IS" BASIS,
+ *     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *     See the License for the specific language governing permissions and
+ *     limitations under the License.
+ */
+
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath 'com.netflix.nebula:nebula-dependency-recommender:9.1.1'
+    classpath 'com.netflix.nebula:gradle-netflixoss-project-plugin:9.1.0'
+  }
+}
+
+plugins {
+  id 'me.champeau.gradle.jmh' version '0.5.2'
+  id "com.github.spotbugs" version "4.6.0" apply false
+}
+
+ext {
+  githubProjectName = 'servo'
+}
+
+allprojects {
+  apply plugin: 'nebula.dependency-recommender'
+  apply plugin: 'nebula.netflixoss'
+  apply plugin: 'me.champeau.gradle.jmh'
+}
+
+subprojects {
+  apply plugin: 'java-library'
+  apply plugin: 'com.github.spotbugs'
+  apply plugin: 'checkstyle'
+  apply plugin: 'pmd'
+
+  group = "com.netflix.${githubProjectName}"
+
+  repositories {
+    mavenCentral()
+  }
+
+  sourceCompatibility = '1.8'
+  targetCompatibility = '1.8'
+
+  tasks.withType(JavaCompile) {
+    options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+  }
+
+  test {
+    useTestNG()
+    options.excludeGroups = ['aws']
+    testLogging.showStandardStreams = true
+  }
+
+  task(testWithCloud, type: Test) {
+    useTestNG()
+    group = 'verification'
+    options.excludeGroups = [] as Set
+  }
+
+  dependencyRecommendations {
+    propertiesFile file: new File(rootProject.projectDir, 'dependencies.properties')
+  }
+
+  dependencies {
+    compile 'org.slf4j:slf4j-api'
+    compile 'com.google.guava:guava'
+    compile 'com.netflix.spectator:spectator-api'
+    testCompile 'org.testng:testng:6.1.1'
+    testRuntime 'org.slf4j:slf4j-log4j12'
+    testRuntime 'log4j:log4j:1.2.17'
+    jmh 'org.slf4j:slf4j-simple'
+  }
+
+  jmh {
+    warmupIterations = 2
+    iterations = 10
+    fork = 5
+    profilers = ['STACK']
+    include = ['.*']
+  }
+
+  checkstyle {
+    toolVersion = '8.39'
+    ignoreFailures = false 
+    configFile = rootProject.file('codequality/checkstyle.xml')
+    sourceSets = [sourceSets.main]
+  }
+
+  spotbugs {
+    toolVersion = '4.2.0'
+    excludeFilter = rootProject.file('codequality/findbugs-exclude.xml')
+    ignoreFailures = false
+    spotbugsMain.enabled = true
+    spotbugsTest.enabled = false
+    spotbugsJmh.enabled = false
+  }
+  spotbugsMain {
+    reports {
+      xml.enabled = false
+      html.enabled = true
+    }
+  }
+
+  pmd {
+    toolVersion = '6.30.0'
+    ignoreFailures = false
+    ruleSets = []
+    ruleSetFiles = rootProject.files("codequality/pmd.xml")
+    sourceSets = [sourceSets.main]
+  }
+
+  project.tasks.withType(Javadoc) {
+    if (JavaVersion.current().isJava8Compatible()) {
+      options.addStringOption('Xdoclint:none', '-quiet')
+    }
+  }
+  javadoc {
+    options.addStringOption("sourcepath", "")
+  }
+}
+

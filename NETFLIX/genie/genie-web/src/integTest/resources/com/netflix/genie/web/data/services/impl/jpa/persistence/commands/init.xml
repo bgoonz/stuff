@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright 2015 Netflix, Inc.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<dataset>
+    <files
+        id="1"
+        created="2014-08-08 01:45:00"
+        updated="2014-08-08 01:50:00"
+        entity_version="0"
+        file="s3://some/config/file"
+    />
+    <files
+        id="2"
+        created="2014-08-08 01:45:00"
+        updated="2014-08-08 01:50:00"
+        entity_version="0"
+        file="s3://some/other/config/file"
+    />
+    <files
+        id="3"
+        created="2014-08-08 01:45:00"
+        updated="2014-08-08 01:50:00"
+        entity_version="0"
+        file="tez.jar"
+    />
+    <files
+        id="4"
+        created="2014-08-08 01:45:00"
+        updated="2014-08-08 01:50:00"
+        entity_version="0"
+        file="yarn.jar"
+    />
+    <files
+        id="5"
+        created="2014-08-08 01:45:00"
+        updated="2014-08-08 01:50:00"
+        entity_version="0"
+        file="s3://some/dependency/file"
+    />
+    <files
+        id="6"
+        created="2014-08-08 01:45:00"
+        updated="2014-08-08 01:50:00"
+        entity_version="0"
+        file="s3://some/other/dependency/file"
+    />
+
+    <tags
+        id="0"
+        created="2014-08-08 01:45:00"
+        updated="2014-08-08 01:50:00"
+        entity_version="0"
+        tag="prod"
+    />
+    <tags
+        id="1"
+        created="2014-08-08 01:45:00"
+        updated="2014-08-08 01:50:00"
+        entity_version="0"
+        tag="yarn"
+    />
+    <tags
+        id="2"
+        created="2014-08-08 01:45:00"
+        updated="2014-08-08 01:50:00"
+        entity_version="0"
+        tag="pig"
+    />
+    <tags
+        id="3"
+        created="2014-08-08 01:45:00"
+        updated="2014-08-08 01:50:00"
+        entity_version="0"
+        tag="tez"
+    />
+    <tags
+        id="4"
+        created="2014-08-08 01:45:00"
+        updated="2014-08-08 01:50:00"
+        entity_version="0"
+        tag="hive"
+    />
+    <tags
+        id="5"
+        created="2014-08-08 01:45:00"
+        updated="2014-08-08 01:50:00"
+        entity_version="0"
+        tag="deprecated"
+    />
+
+    <applications
+        id="1"
+        created="2014-08-08 01:45:00"
+        updated="2014-08-08 01:50:00"
+        entity_version="0"
+        unique_id="app1"
+        genie_user="tgianos"
+        name="tez"
+        version="1.2.3"
+        status="ACTIVE"
+    />
+    <applications_configs
+        application_id="1"
+        file_id="1"
+    />
+    <applications_configs
+        application_id="1"
+        file_id="2"
+    />
+    <applications_dependencies
+        application_id="1"
+        file_id="3"
+    />
+    <applications_dependencies
+        application_id="1"
+        file_id="4"
+    />
+    <applications_tags
+        application_id="1"
+        tag_id="0"
+    />
+    <applications_tags
+        application_id="1"
+        tag_id="1"
+    />
+
+    <commands
+        id="1"
+        created="2014-08-08 01:47:00"
+        updated="2014-08-08 01:59:00"
+        entity_version="0"
+        unique_id="command1"
+        genie_user="tgianos"
+        name="pig_13_prod"
+        version="1.2.3"
+        check_delay="18000"
+        status="ACTIVE"
+    />
+    <commands_configs
+        command_id="1"
+        file_id="1"
+    />
+    <commands_configs
+        command_id="1"
+        file_id="2"
+    />
+    <commands_tags
+        command_id="1"
+        tag_id="2"
+    />
+    <commands_tags
+        command_id="1"
+        tag_id="0"
+    />
+    <commands_tags
+        command_id="1"
+        tag_id="3"
+    />
+    <command_executable_arguments
+        command_id="1"
+        argument="pig"
+        argument_order="0"
+    />
+
+    <commands_applications
+        command_id="1"
+        application_id="1"
+        application_order="0"
+    />
+
+    <commands
+        id="2"
+        created="2014-08-08 01:46:00"
+        updated="2014-08-08 03:12:00"
+        entity_version="0"
+        unique_id="command2"
+        genie_user="amsharma"
+        name="hive_11_prod"
+        version="4.5.6"
+        check_delay="19000"
+        status="INACTIVE"
+    />
+    <commands_configs
+        command_id="2"
+        file_id="1"
+    />
+    <commands_dependencies
+        command_id="2"
+        file_id="5"
+    />
+    <commands_tags
+        command_id="2"
+        tag_id="4"
+    />
+    <commands_tags
+        command_id="2"
+        tag_id="0"
+    />
+    <command_executable_arguments
+        command_id="2"
+        argument="hive"
+        argument_order="0"
+    />
+
+    <commands
+        id="3"
+        created="2014-08-08 01:49:00"
+        updated="2014-08-08 02:59:00"
+        entity_version="0"
+        unique_id="command3"
+        genie_user="tgianos"
+        name="pig_11_prod"
+        version="7.8.9"
+        check_delay="20000"
+        status="DEPRECATED"
+        metadata=
+            "{&quot;key1&quot;: &quot;value1&quot;, &quot;key2&quot;: 65, &quot;key3&quot;: [], &quot;key4&quot;: {}}"
+    />
+    <commands_configs
+        command_id="3"
+        file_id="1"
+    />
+    <commands_dependencies
+        command_id="3"
+        file_id="5"/>
+    <commands_dependencies
+        command_id="3"
+        file_id="6"/>
+    <commands_tags
+        command_id="3"
+        tag_id="5"
+    />
+    <commands_tags
+        command_id="3"
+        tag_id="2"
+    />
+    <commands_tags
+        command_id="3"
+        tag_id="0"
+    />
+    <command_executable_arguments
+        command_id="3"
+        argument="pig"
+        argument_order="0"
+    />
+
+    <clusters
+        id="1"
+        created="2014-07-08 01:49:00"
+        updated="2014-07-08 02:59:00"
+        entity_version="0"
+        unique_id="cluster1"
+        genie_user="tgianos"
+        name="h2prod"
+        version="2.4.0"
+        status="UP"
+    />
+    <clusters_configs
+        cluster_id="1"
+        file_id="1"
+    />
+    <clusters_tags
+        cluster_id="1"
+        tag_id="4"
+    />
+    <clusters_tags
+        cluster_id="1"
+        tag_id="2"
+    />
+    <clusters_tags
+        cluster_id="1"
+        tag_id="0"
+    />
+</dataset>

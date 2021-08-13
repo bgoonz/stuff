@@ -1,0 +1,30 @@
+version = "${shortVersion(rootProject.versionIep)}${versionSuffix}"
+
+dependencies {
+  runtime project(':iepshadow-iep-rxhttp')
+  runtime project(':iepshadow-rxnetty')
+  runtime project(':iepshadow-rxnetty-spectator')
+  runtime "io.reactivex:rxjava:${rootProject.versionRxJava}"
+  runtime "com.google.inject:guice:${rootProject.versionGuice}"
+  runtime "com.netflix.archaius:archaius-core:${rootProject.versionArchaius}"
+  runtime "com.netflix.eureka:eureka-client:${rootProject.versionEureka}"
+  runtime "com.jcraft:jzlib:${rootProject.versionJcraft}"
+  runtime "com.netflix.spectator:spectator-api:${rootProject.versionSpectator}"
+  runtime "com.netflix.spectator:spectator-ext-sandbox:${rootProject.versionSpectator}"
+  runtime "org.slf4j:slf4j-api:${rootProject.versionSlf4j}"
+
+  // these dependencies are shaded
+  providedCompile "com.netflix.iep:iep-module-rxnetty:${rootProject.versionIep}"
+  shadow "com.netflix.iep:iep-module-rxnetty:${rootProject.versionIep}"
+}
+
+shadowJar {
+  classifier = null
+  dependencies {
+      include dependency("com.netflix.iep:iep-module-rxnetty:${rootProject.versionIep}")
+  }
+  //exclude 'META-INF/services/com.google.inject.Module'
+  relocate 'io.reactivex', 'iep.io.reactivex'
+  relocate 'com.netflix.iep.http', 'iep.com.netflix.iep.http'
+  relocate 'com.netflix.iep.rxnetty', 'iep.com.netflix.iep.rxnetty'
+}

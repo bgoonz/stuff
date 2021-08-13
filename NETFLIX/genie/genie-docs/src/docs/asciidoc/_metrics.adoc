@@ -1,0 +1,516 @@
+== Metrics
+
+The following is an extensive list of metrics (counters, timers, gauges, ...) published organically by Genie, in addition to metrics published by Spring, JVM and system metrics and statistics.
+
+Metrics are collected using http://micrometer.io/[Micrometer] which allows system admins to plugin a variety of backend collection systems (Atlas, Datadog, Graphite, Ganglia, etc).
+See http://micrometer.io/[website] for more details.
+Genie ships with no backend system compiled in.
+It will have to be added if one is desired otherwise metrics are just published within the local JVM and available on the Actuator `/metrics` endpoint.
+
+[cols=">1m,<10,^1,^1m,^1m",options="header"]
+|===
+|Name |Description |Unit |Source |Tags
+
+|genie.agents.connections.connected.gauge
+|Number of agents connected to the node
+|count
+|AgentRoutingServiceCuratorDiscoveryImpl
+|-
+
+|genie.agents.connections.lookup.timer
+|Timing and count of lookup in Curator's discovery service
+|nanoseconds
+|AgentRoutingServiceCuratorDiscoveryImpl
+|status, exceptionClass, found
+
+|genie.agents.connections.registered.gauge
+|Number of agents connected to the node and registered in discovery
+|count
+|AgentRoutingServiceCuratorDiscoveryImpl
+|-
+
+|genie.agents.connections.zookeeperSessionState.counter
+|Count of Zookeeper session state changes
+|count
+|AgentRoutingServiceCuratorDiscoveryImpl
+|connectionState
+
+|genie.agents.connections.registered.timer
+|Timing and count of registrations of local agent with discovery service
+|nanoseconds
+|AgentRoutingServiceCuratorDiscoveryImpl
+|status, exceptionClass
+
+|genie.agents.connections.unregistered.timer
+|Timing and count of unregistrations of local agent with discovery service
+|nanoseconds
+|AgentRoutingServiceCuratorDiscoveryImpl
+|status, exceptionClass
+
+|genie.agents.connections.connected.counter
+|Count of new agent connections to the local node
+|count
+|AgentRoutingServiceCuratorDiscoveryImpl
+|-
+
+|genie.agents.connections.disconnected.counter
+|Count of new agent disconnections from the local node
+|count
+|AgentRoutingServiceCuratorDiscoveryImpl
+|-
+
+|genie.agents.heartbeating.gauge
+|The number of agents sending heartbeats to the server
+|count
+|GRpcHeartBeatServiceImpl
+|-
+
+|genie.agents.fileTransfers.requested.counter
+|Count of file transfer from remote agents to this node
+|count
+|GRpcAgentFileStreamServiceImpl
+|-
+
+|genie.agents.fileTransfers.rejected.counter
+|Count of attempted file transfers that were rejected because too many transfers are already in progress on this node
+|count
+|GRpcAgentFileStreamServiceImpl
+|-
+
+|genie.agents.fileTransfers.manifestCache.size
+|Size of the manifest cache
+|count
+|GRpcAgentFileStreamServiceImpl
+|-
+
+|genie.agents.fileTransfers.controlStreams.size
+|Number of active agent control streams
+|size
+|GRpcAgentFileStreamServiceImpl
+|-
+
+|genie.agents.fileTransfers.timeout.counter
+|Count of transfers that timed out on this node
+|count
+|GRpcAgentFileStreamServiceImpl
+|-
+
+|genie.agents.fileTransfers.transferSize.summary
+|Number of bytes requested from the agent for a given transfer
+|distribution (bytes)
+|GRpcAgentFileStreamServiceImpl
+|-
+
+|genie.agents.fileTransfers.activeTransfers.size
+|Number of active transfers on this node
+|count
+|GRpcAgentFileStreamServiceImpl
+|-
+
+|genie.agents.launchers.launch.timer
+|Timer recording how long it takes to execute the launch API for that specific implementation
+|nanoseconds
+|LocalAgentLauncherImpl, TitusAgentLauncherImpl
+|status, exceptionClass, launcherClass
+
+|genie.api.v3.jobs.submitJobWithoutAttachments.rate
+|Counts the number of jobs submitted without an attachment
+|count
+|JobRestController
+|-
+
+|genie.api.v3.jobs.submitJobWithAttachments.rate
+|Counts the number of jobs submitted with one or more attachments
+|count
+|JobRestController
+|-
+
+|genie.files.serve.timer
+|Time taken to serve a file
+|nanoseconds
+|JobDirectoryServerServiceImpl
+|status, exceptionClass, archiveStatus
+
+|genie.health.indicator.timer
+|Time taken for each health indicator to report its status
+|nanoseconds
+|HealthCheckMetricsAspect
+|healthIndicatorClass, healthIndicatorStatus
+
+|genie.jobs.active.gauge
+|Number of jobs currently active locally
+|amount
+|LocalAgentLauncherImpl
+|launcherClass
+
+|genie.jobs.agentDisconnected.gauge
+|Current number of agent jobs whose agent is not connected to any node.
+|count
+|AgentJobCleanupTask
+|-
+
+|genie.jobs.agentDisconnected.terminated.counter
+|Counter of jobs terminated because the agent disappeared for too long
+|count
+|AgentJobCleanupTask
+|status, exceptionClass
+
+|genie.jobs.agentLauncher.selectors.script.select.timer
+|Time taken to select the agent launcher for a job
+|count
+|AgentJobCleanupTask
+|status, exceptionClass, agentLauncherClass
+
+|genie.jobs.archiveStatus.cleanup.counter
+|Counter of jobs whose archive status was left in PENDING state after execution completed
+|count
+|ArchiveStatusCleanupTask
+|status, exceptionClass
+
+|genie.jobs.attachments.s3.count.distribution
+|Distribution summary of the number of files attached
+|count
+|S3AttachmentServiceImpl
+|
+
+|genie.jobs.attachments.s3.largestSize.distribution
+|Distribution summary of the size of the largest file attached
+|bytes
+|S3AttachmentServiceImpl
+|
+
+|genie.jobs.attachments.s3.totalSize.distribution
+|Distribution summary of the total size of the files attached
+|bytes
+|S3AttachmentServiceImpl
+|
+
+|genie.jobs.attachments.s3.upload.timer
+|genie.jobs.attachments.s3.upload.timer
+|Time taken to upload job attachments to S3 (only measured for jobs with attachments)
+|nanoseconds
+|S3AttachmentServiceImpl
+|status, exceptionClass
+
+|genie.jobs.clusters.selectors.script.select.timer
+|Time taken by the loaded script to select a cluster among the one passed as input
+|nanoseconds
+|ScriptClusterSelector
+|status, exceptionClass, clusterName, clusterId
+
+|genie.jobs.memory.used.gauge
+|Total amount of memory allocated to local jobs (according to job request)
+|Megabytes
+|LocalJobLauncherImpl
+|launcherClass
+
+|genie.jobs.notifications.final-state.counter
+|Count the number of completed job notifications
+|count
+|JobNotificationMetricPublisher
+|jobFinalState
+
+|genie.jobs.notifications.state-transition.counter
+|Count the number of job transitions notifications
+|count
+|JobNotificationMetricPublisher
+|fromState, toState
+
+|genie.jobs.submit.rejected.jobs-limit.counter
+|Count of jobs rejected by the server because the user is exceeding the maximum number of running jobs
+|count
+|JobRestController
+|user, jobsUserLimit
+
+|genie.launchers.titus.launch.timer
+|Time taken to launch request a job be launched on Titus
+|nanoseconds
+|TitusAgentLauncher
+|status, exceptionClass
+
+|genie.notifications.sns.publish.counter
+|Count the number of notification published to SNS
+|count
+|AbstractSNSPublisher
+|status, type
+
+|genie.rpc.job.handshake.timer
+|Time taken to serve an agent request to handshake
+|nanoseconds
+|GRpcJobServiceImpl
+|status, exceptionClass, agentVersion
+
+|genie.rpc.job.configure.timer
+|Time taken to serve an agent request to obtain runtime configuration
+|nanoseconds
+|GRpcJobServiceImpl
+|status, exceptionClass, agentVersion
+
+|genie.rpc.job.reserve.timer
+|Time taken to serve an agent request to reserve a job
+|nanoseconds
+|GRpcJobServiceImpl
+|status, exceptionClass, agentVersion
+
+|genie.rpc.job.resolve.timer
+|Time taken to serve an agent request to resolve a job request into a job specification
+|nanoseconds
+|GRpcJobServiceImpl
+|status, exceptionClass
+
+|genie.rpc.job.getSpecification.timer
+|Time taken to serve an agent request to obtain a job specification
+|nanoseconds
+|GRpcJobServiceImpl
+|status, exceptionClass
+
+|genie.rpc.job.dryRunResolve.timer
+|Time taken to serve an agent request to resolve a job request into a job specification (dry run mode)
+|nanoseconds
+|GRpcJobServiceImpl
+|status, exceptionClass
+
+|genie.rpc.job.claim.timer
+|Time taken to serve an agent request to claim a job for execution
+|nanoseconds
+|GRpcJobServiceImpl
+|status, exceptionClass, agentVersion
+
+|genie.rpc.job.changeStatus.timer
+|Time taken to serve an agent request to update a job status
+|nanoseconds
+|GRpcJobServiceImpl
+|status, exceptionClass, statusFrom, statusTo
+
+|genie.rpc.job.getStatus.timer
+|Time taken to serve an agent request to obtain a job's status
+|nanoseconds
+|GRpcJobServiceImpl
+|status, exceptionClass
+
+|genie.rpc.job.changeArchiveStatus.timer
+|Time taken to serve an agent request to update a job archive status
+|nanoseconds
+|GRpcJobServiceImpl
+|status, exceptionClass, statusTo
+
+|genie.scripts.load.timer
+|Time taken to load (download, read, compile) a given script
+|nanoseconds
+|ScriptManager
+|status, exceptionClass, scriptUri
+
+|genie.scripts.evaluate.timer
+|Time taken to evaluate a given script (if previously compiled successfully)
+|nanoseconds
+|ScriptManager
+|status, exceptionClass, scriptUri
+
+|genie.services.agentConfiguration.reloadProperties.timer
+|Time taken to retrieve the set of properties forwarded to bootstrapping agents
+|nanoseconds
+|AgentConfigurationServiceImpl
+|status, exceptionClass, numProperties
+
+|genie.services.agentJob.handshake.counter
+|Counter for calls to the 'handshake' protocol of the Genie Agent Job Service
+|count
+|AgentJobServiceImpl
+|status, exceptionClass, agentVersion, agentHost, handshakeDecision
+
+|genie.services.jobLaunch.launchJob.timer
+|Time taken to launch a job (includes record creation and update, job resolution and agent launch)
+|nanoseconds
+|JobLaunchServiceImpl
+|status, exceptionClass, agentLauncherSelectedClass
+
+|genie.services.jobLaunch.selectLauncher.timer
+|Time taken to invoke a selector to choose which agent launcher to use
+|nanoseconds
+|JobLaunchServiceImpl
+|status exceptionClass, numAvailableLaunchers, agentLauncherSelectorClass, agentLauncherSelectedClass
+
+|genie.services.jobResolver.generateClusterCriteriaPermutations.timer
+|Time taken to generate all the permutations for cluster criteria between the command options and the job request
+|nanoseconds
+|JobResolverServiceImpl
+|
+
+|genie.services.jobResolver.resolve.timer
+|Time taken to completely resolve the job
+|nanoseconds
+|JobResolverServiceImpl
+|status, exceptionClass, saved
+
+|genie.services.jobResolver.resolveApplications.timer
+|Time taken to retrieve applications information for this task
+|nanoseconds
+|JobResolverServiceImpl
+|status, exceptionClass
+
+|genie.services.jobResolver.resolveCluster.clusterSelector.counter
+|Counter for cluster selector algorithms invocations
+|count
+|JobResolverServiceImpl
+|class, status, clusterName, clusterId, clusterSelectorClass
+
+|genie.services.jobResolver.resolveCluster.timer
+|Time taken to resolve the cluster to use for a job
+|nanoseconds
+|JobResolverServiceImpl
+|status, clusterName, clusterId, exceptionClass
+
+|genie.services.jobResolver.resolveCommand.timer
+|Time taken to resolve the command to use for a job
+|nanoseconds
+|JobResolverServiceImpl
+|status, commandName, commandId, exceptionClass
+
+|genie.web.services.archivedJobService.getArchivedJobMetadata.timer
+|The time taken to fetch the metadata of an archived job if it isn't already cached
+|nanoseconds
+|ArchivedJobServiceImpl
+|status, exceptionClass
+
+|genie.tasks.archiveStatusCleanup.timer
+|Time taken to execute the cleanup task
+|nanoseconds
+|ArchiveStatusCleanupTask
+|status, exceptionClass
+
+|genie.tasks.databaseCleanup.applicationDeletion.timer
+|Time taken to delete application records from the database
+|nanoseconds
+|DatabaseCleanupTask
+|status, exceptionClass
+
+|genie.tasks.databaseCleanup.clusterDeletion.timer
+|Time taken to delete cluster records from the database
+|nanoseconds
+|DatabaseCleanupTask
+|status, exceptionClass
+
+|genie.tasks.databaseCleanup.commandDeactivation.timer
+|Time taken to deactivate command records in the database
+|nanoseconds
+|DatabaseCleanupTask
+|status, exceptionClass
+
+|genie.tasks.databaseCleanup.commandDeletion.timer
+|Time taken to delete command records from the database
+|nanoseconds
+|DatabaseCleanupTask
+|status, exceptionClass
+
+|genie.tasks.databaseCleanup.fileDeletion.timer
+|Time taken to delete file records from the database
+|nanoseconds
+|DatabaseCleanupTask
+|status, exceptionClass
+
+|genie.tasks.databaseCleanup.tagDeletion.timer
+|Time taken to delete tag records from the database
+|nanoseconds
+|DatabaseCleanupTask
+|status, exceptionClass
+
+|genie.tasks.databaseCleanup.duration.timer
+|Time taken to cleanup database records for jobs that executed over a given amount of time in the past
+|nanoseconds
+|DatabaseCleanupTask
+|status, exceptionClass
+
+|genie.tasks.databaseCleanup.numDeletedApplications.gauge
+|Number of deleted application records purged during the last database cleanup pass
+|amount
+|DatabaseCleanupTask
+|-
+
+|genie.tasks.databaseCleanup.numDeactivatedCommands.gauge
+|Number of command records set to INACTIVE during the last database cleanup pass
+|amount
+|DatabaseCleanupTask
+|-
+
+|genie.tasks.databaseCleanup.numDeletedClusters.gauge
+|Number of terminated cluster records purged during the last database cleanup pass
+|amount
+|DatabaseCleanupTask
+|-
+
+|genie.tasks.databaseCleanup.numDeletedCommands.gauge
+|Number of deleted command records purged during the last database cleanup pass
+|amount
+|DatabaseCleanupTask
+|-
+
+|genie.tasks.databaseCleanup.numDeletedFiles.gauge
+|Number of unused file references purged during the last database cleanup pass
+|amount
+|DatabaseCleanupTask
+|-
+
+|genie.tasks.databaseCleanup.numDeletedJobs.gauge
+|Number of job records purged during the last database cleanup pass
+|amount
+|DatabaseCleanupTask
+|-
+
+|genie.tasks.databaseCleanup.numDeletedTags.gauge
+|Number of unused tag records purged during the last database cleanup pass
+|amount
+|DatabaseCleanupTask
+|-
+
+|genie.tasks.diskCleanup.numberDeletedJobDirs.gauge
+|Number of job folders deleted during the last cleanup pass
+|amount
+|DiskCleanupTask
+|-
+
+|genie.tasks.diskCleanup.numberDirsUnableToDelete.gauge
+|Number of failures deleting job folders during the last cleanup pass
+|amount
+|DiskCleanupTask
+|-
+
+|genie.tasks.diskCleanup.unableToDeleteJobsDir.rate
+|Counts the number of times a local job folder could not be deleted
+|count
+|DiskCleanupTask
+|-
+
+|genie.tasks.diskCleanup.unableToGetJobs.rate
+|Counts the number of times a local job folder is encountered during cleanup and the corresponding job record in the
+database cannot be found
+|count
+|DiskCleanupTask
+|-
+
+|genie.user.active-jobs.gauge
+|Number of active jobs tagged with owner user.
+|count
+|UserMetricsTask
+|-
+
+|genie.user.active-memory.gauge
+|Amount of memory used by active jobs tagged with owner user.
+|Megabytes
+|UserMetricsTask
+|-
+
+|genie.user.active-users.gauge
+|Number of distinct users with at least one job in RUNNING state.
+|count
+|UserMetricsTask
+|-
+
+|genie.web.controllers.exception
+|Counts exceptions returned to the user
+|count
+|GenieExceptionMapper
+|exceptionClass (*)
+
+|===
+
+(*) Source may add additional tags on a case-by-case basis

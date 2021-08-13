@@ -1,0 +1,13 @@
+dependencies {
+  api project(":spectator-api")
+  api "com.amazonaws:aws-java-sdk-core"
+  testImplementation "com.amazonaws:aws-java-sdk-cloudwatch"
+}
+
+jar {
+  manifest {
+    attributes(
+      "Automatic-Module-Name": "com.netflix.spectator.aws"
+    )
+  }
+}

@@ -1,0 +1,15 @@
+description = 'ReactiveSocket Examples'
+apply plugin: 'java'
+apply plugin: 'idea'
+
+repositories {
+    maven { url 'https://oss.jfrog.org/libs-snapshot' }
+}
+
+dependencies {
+  compile 'io.reactivesocket:reactivesocket-websocket-rxnetty:0.0.1-SNAPSHOT'
+  testCompile 'junit:junit-dep:4.10'
+  testCompile 'org.mockito:mockito-core:1.8.5'
+  testCompile 'org.hdrhistogram:HdrHistogram:2.1.7'
+}
+

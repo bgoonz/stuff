@@ -1,0 +1,17 @@
+{
+   "node_template": {
+      "properties": {
+        "name": {
+          "type": "keyword"
+        },
+        "template": {
+          "type": "keyword",
+          "index": true
+        },
+        "view": {
+          "type": "keyword",
+          "index": true
+        }
+      }
+    }
+}

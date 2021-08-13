@@ -1,0 +1,45 @@
+{
+  "name": "falcor-http-datasource",
+  "version": "0.1.3",
+  "description": "This package contains falcor components for use in browsers.",
+  "main": "src/XMLHttpSource.js",
+  "homepage": "https://github.com/Netflix/falcor-http-datasource",
+  "browser": {
+    "./src/getXMLHttpRequest.js": "./src/getXMLHttpRequest.browser.js"
+  },
+  "author": {
+    "name": "Netflix",
+    "url": "https://github.com/Netflix/falcor/authors.txt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Netflix/falcor-http-datasource.git"
+  },
+  "licenses": [
+    {
+      "type": "Apache License, Version 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  ],
+  "scripts": {
+    "build:pretty": "browserify ./src/XMLHttpSource.js > ./dist/XMLHttpSource.js",
+    "build:min": "browserify . | uglifyjs > ./dist/XMLHttpSource.min.js",
+    "build": "npm run build:min && npm run build:pretty",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Falcor",
+    "Browser"
+  ],
+  "dependencies": {
+    "xmlhttprequest": "^1.7.0"
+  },
+  "license": "ALV2",
+  "bugs": {
+    "url": "https://github.com/Netflix/falcor-http-datasource/issues"
+  },
+  "devDependencies": {
+    "browserify": "^11.0.0",
+    "uglifyjs": "^2.4.10"
+  }
+}

@@ -1,0 +1,37 @@
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "gradle.plugin.com.github.blindpirate:gradle-legacy-osgi-plugin:0.0.4"
+    }
+}
+
+plugins {
+    id 'nebula.netflixoss' version '9.1.0'
+}
+
+ext.githubProjectName = rootProject.name // Change if github project name is not the same as the root project's name
+
+apply from: 'dependency-versions.gradle'
+print "Using cassandraVersion=${cassandraVersion}\n"
+
+subprojects {
+    apply plugin: 'nebula.netflixoss'
+    apply plugin: 'java'
+
+    group = "com.netflix.${githubProjectName}"
+
+    repositories {
+        mavenCentral()
+    }
+
+    // Don't stop the build for JavaDoc errors
+    javadoc{
+        options {
+            failOnError = false
+        }
+    }
+}

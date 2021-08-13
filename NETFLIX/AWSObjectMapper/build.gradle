@@ -1,0 +1,85 @@
+
+plugins {
+  id 'nebula.netflixoss' version '9.1.0'
+}
+
+// Establish version and status
+ext.githubProjectName = 'awsobjectmapper'
+
+allprojects {
+  apply plugin: 'nebula.netflixoss'
+  apply plugin: 'java'
+  apply plugin: 'idea'
+}
+
+subprojects {
+
+  repositories {
+    mavenLocal()
+    mavenCentral()
+  }
+
+  group = "com.netflix.${githubProjectName}"
+
+  sourceCompatibility = 1.8
+  targetCompatibility = 1.8
+
+  javadoc {
+    options {
+      links = ['http://docs.oracle.com/javase/8/docs/api/']
+    }
+  }
+
+  test {
+    maxHeapSize = '4G'
+  }
+
+  ext {
+    awsSdkVersion = '1.12.39'
+  }
+
+  dependencies {
+    compile "com.amazonaws:aws-java-sdk-autoscaling:${awsSdkVersion}"
+    compile "com.amazonaws:aws-java-sdk-cloudwatch:${awsSdkVersion}"
+    compile "com.amazonaws:aws-java-sdk-config:${awsSdkVersion}"
+    compile "com.amazonaws:aws-java-sdk-core:${awsSdkVersion}"
+    compile "com.amazonaws:aws-java-sdk-dynamodb:${awsSdkVersion}"
+    compile "com.amazonaws:aws-java-sdk-ec2:${awsSdkVersion}"
+    compile "com.amazonaws:aws-java-sdk-ecs:${awsSdkVersion}"
+    compile "com.amazonaws:aws-java-sdk-efs:${awsSdkVersion}"
+    compile "com.amazonaws:aws-java-sdk-elasticache:${awsSdkVersion}"
+    compile "com.amazonaws:aws-java-sdk-elasticloadbalancing:${awsSdkVersion}"
+    compile "com.amazonaws:aws-java-sdk-elasticloadbalancingv2:${awsSdkVersion}"
+    compile "com.amazonaws:aws-java-sdk-elasticsearch:${awsSdkVersion}"
+    compile "com.amazonaws:aws-java-sdk-iam:${awsSdkVersion}"
+    compile "com.amazonaws:aws-java-sdk-lambda:${awsSdkVersion}"
+    compile "com.amazonaws:aws-java-sdk-rds:${awsSdkVersion}"
+    compile "com.amazonaws:aws-java-sdk-route53:${awsSdkVersion}"
+    compile "com.amazonaws:aws-java-sdk-s3:${awsSdkVersion}"
+    compile "com.amazonaws:aws-java-sdk-ses:${awsSdkVersion}"
+    compile "com.amazonaws:aws-java-sdk-sns:${awsSdkVersion}"
+    compile "com.amazonaws:aws-java-sdk-sqs:${awsSdkVersion}"
+    compile "com.amazonaws:aws-java-sdk-ssm:${awsSdkVersion}"
+    compile "com.amazonaws:aws-java-sdk-sts:${awsSdkVersion}"
+    compile "com.amazonaws:aws-java-sdk-support:${awsSdkVersion}"
+    compile "com.amazonaws:aws-java-sdk-xray:${awsSdkVersion}"
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.12.3'
+    testCompile 'junit:junit:4.10'
+    testCompile 'com.google.guava:guava:18.0'
+    testCompile 'org.jeasy:easy-random-core:4.0.0'
+  }
+}
+
+project(':awsobjectmapper') {
+  apply plugin: AwsMixinGenerator
+
+  compileJava.dependsOn generateAwsMixins
+
+  sourceSets {
+    main {
+      java {
+        srcDir 'build/generated'
+      }
+    }
+  }
+}

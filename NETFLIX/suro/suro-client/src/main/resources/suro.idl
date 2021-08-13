@@ -1,0 +1,46 @@
+namespace java com.netflix.suro.thrift
+namespace csharp Suro.Net.Client.Thrift
+
+enum ServiceStatus {
+  DEAD = 0,
+  STARTING = 1,
+  ALIVE = 2,
+  STOPPING = 3,
+  STOPPED = 4,
+  WARNING = 5,
+}
+
+enum ResultCode
+{
+  OK,
+  STOPPED,
+  CRC_CORRUPTED,
+  QUEUE_FULL,
+  OTHER_ERROR
+}
+
+struct Result
+{
+  1: ResultCode resultCode,
+  2: string message
+}
+
+struct TMessageSet
+{
+  1: string app,
+  2: i32 numMessages,
+  3: byte compression,
+  4: i64 crc,
+  5: binary messages
+}
+
+service SuroService {
+   i64 shutdown();
+   string getName();
+   ServiceStatus getStatus(),
+   string getVersion()
+ }
+
+service SuroServer extends SuroService{
+  Result process(1: TMessageSet messageSet);
+}

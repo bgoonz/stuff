@@ -1,0 +1,26 @@
+{
+  "name": "falcor-path-utils",
+  "version": "0.7.5",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Netflix/falcor-path-utils.git"
+  },
+  "author": "Netflix",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Netflix/falcor-path-utils/issues"
+  },
+  "homepage": "https://github.com/Netflix/falcor-path-utils#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "falcor-json-graph": "^3.2.1",
+    "gulp": "^4.0.2",
+    "gulp-mocha": "^7.0.2",
+    "sinon": "^9.0.2"
+  }
+}

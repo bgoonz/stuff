@@ -1,0 +1,29 @@
+enabled: true
+short_circuit: true
+short_circuit_files:
+  - /usr/sbin/service
+
+# fstab-esque list of mounts for a chroot environment. ordered.
+# [device, type, mount point, options]
+chroot_mounts:
+    - [proc, proc, /proc, null]
+    - [sysfs, sysfs, /sys, null]
+    # Note: on Ubuntu 16.04 and later, bind mounts need the 'private' option
+    # - [/dev, bind, /dev, 'private']
+    - [/dev, bind, /dev, null]
+    - [devpts, devpts, /dev/pts, null]
+    - [binfmt_misc, binfmt_misc, /proc/sys/fs/binfmt_misc, null]
+
+recursive_unmount: false
+
+provision_configs: true
+provision_config_files:
+  - /etc/resolv.conf
+
+policy_file_path: /usr/sbin
+policy_file: policy-rc.d
+policy_file_mode: 0755
+policy_file_content: |
+  #!/bin/sh
+  exit 101
+

@@ -1,0 +1,56 @@
+apply plugin: "java-library"
+
+dependencies {
+    /*******************************
+     * Annotation Processors
+     *******************************/
+
+    annotationProcessor("org.springframework.boot:spring-boot-autoconfigure-processor")
+    annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
+
+    /*******************************
+     * API Dependencies
+     *******************************/
+
+    api(project(":genie-proto"))
+    api(project(":genie-common"))
+    api(project(":genie-common-external"))
+
+    api("com.amazonaws:aws-java-sdk-core")
+    api("com.amazonaws:aws-java-sdk-s3")
+    api("com.amazonaws:aws-java-sdk-sts")
+    api("com.fasterxml.jackson.core:jackson-databind")
+    api("com.github.ben-manes.caffeine:caffeine")
+    api("io.zipkin.brave:brave")
+    api("jakarta.validation:jakarta.validation-api")
+    api("org.springframework:spring-context")
+    api("org.springframework:spring-core")
+    api("org.springframework.cloud:spring-cloud-aws-autoconfigure")
+
+    /*******************************
+     * Implementation Dependencies
+     *******************************/
+
+    implementation("com.google.guava:guava")
+    implementation("com.google.protobuf:protobuf-java")
+    implementation("org.apache.commons:commons-lang3")
+    implementation("org.apache.tika:tika-core")
+    implementation("org.springframework.cloud:spring-cloud-starter-aws")
+    implementation("org.springframework.cloud:spring-cloud-starter-sleuth")
+
+    /*******************************
+     * Compile Only Dependencies
+     *******************************/
+
+    /*******************************
+     * Runtime Only Dependencies
+     *******************************/
+
+    runtimeOnly("org.hibernate.validator:hibernate-validator")
+
+    /*******************************
+     * Test Dependencies
+     *******************************/
+
+    testImplementation(project(":genie-test"))
+}

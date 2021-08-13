@@ -1,0 +1,9 @@
+/**
+ * Optional integration with other commonly-used Netflix OSS modules.
+ */
+dependencies {
+    compile project(':astyanax-core')
+    compile project(':astyanax-thrift')
+    compile 'com.netflix.eureka:eureka-client:1.9.0'
+    compile 'com.netflix.archaius:archaius-core:0.7.6'
+}

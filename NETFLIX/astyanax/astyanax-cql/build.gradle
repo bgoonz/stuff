@@ -1,0 +1,16 @@
+apply plugin: 'com.github.blindpirate.osgi'
+
+/**
+ * CQL protocol implementation of astyanax-core
+ */
+dependencies {
+    compile project(':astyanax-core')
+    compile project(':astyanax-cassandra')
+    compile ("com.datastax.cassandra:cassandra-driver-core:$javaDriverVersion") {
+        transitive = false
+    }
+
+    compile "net.jpountz.lz4:lz4:$lz4Version"
+    compile "com.codahale.metrics:metrics-core:$metricCoreVersion"
+    compile "org.xerial.snappy:snappy-java:$snappyVersion"
+}

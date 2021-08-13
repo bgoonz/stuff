@@ -1,0 +1,92 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
+plugins {
+    id 'nebula.netflixoss' version '3.2.3'
+    id 'net.saliman.cobertura' version '2.2.7'
+    id 'com.github.hierynomus.license' version '0.11.0'
+}
+
+// Establish version and status
+ext.githubProjectName = 'SimianArmy'
+group = "com.netflix.${project.name}"
+apply plugin:'eclipse-wtp'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+apply plugin: 'war'
+apply plugin: 'jetty'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    // for the VMWareClient
+    compile 'com.cloudbees.thirdparty:vijava:5.0.0'
+
+    // for DB support outside of AWS (SimpleDB not available)
+    compile 'org.mapdb:mapdb:0.9.5'
+
+    compile 'com.sun.jersey:jersey-servlet:1.19'
+    compile 'org.slf4j:slf4j-api:1.7.2'
+    compile 'org.codehaus.jackson:jackson-core-asl:1.9.2'
+    compile 'org.codehaus.jackson:jackson-mapper-asl:1.9.2'
+    compile 'com.netflix.eureka:eureka-client:1.4.1'
+    compile 'com.amazonaws:aws-java-sdk:1.11.28'
+    compile 'commons-lang:commons-lang:2.6'
+    compile 'com.google.guava:guava:11.0.2'
+    compile 'org.apache.httpcomponents:httpclient:4.3'
+    compile 'com.google.auto.service:auto-service:1.0-rc2'
+    compile 'org.apache.jclouds.driver:jclouds-jsch:1.9.0'
+    compile 'org.apache.jclouds.driver:jclouds-slf4j:1.9.0'
+    compile 'org.apache.jclouds.api:ec2:1.9.0'
+    compile 'org.apache.jclouds.provider:aws-ec2:1.9.0'
+    compile 'com.netflix.servo:servo-core:0.12.11'
+    compile 'org.springframework:spring-jdbc:4.2.5.RELEASE'
+    compile 'com.zaxxer:HikariCP:2.4.7'
+
+    testCompile 'org.testng:testng:6.3.1'
+    testCompile 'org.mockito:mockito-core:1.8.5'
+
+    runtime 'org.slf4j:slf4j-log4j12:1.6.1'
+
+    providedCompile 'javax.servlet:servlet-api:2.5'
+}
+
+test {
+    useTestNG()
+}
+
+tasks.withType(JavaCompile) {
+    options.compilerArgs << "-Xlint"
+}
+
+license {
+    exclude '**/*.properties'
+    exclude '**/*.json'
+    exclude '**/*.sh'
+}
+
+task coreJar(type: Jar) {
+    from sourceSets.main.output
+    include '**'
+}
+
+publishing {
+    publications {
+        mavenWar(MavenPublication) {
+            from components.web
+            artifact coreJar { classifier "core" }
+        }
+    }
+}
+
+artifactoryPublish {
+    publications('mavenWar')
+}

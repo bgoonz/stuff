@@ -1,0 +1,33 @@
+plugins {
+  id 'com.github.johnrengelman.shadow' version '7.0.0'
+}
+
+dependencies {
+  api project(':spectator-api')
+  api project(':spectator-ext-gc')
+  api project(':spectator-ext-jvm')
+  api project(':spectator-reg-atlas')
+  implementation 'com.netflix.iep:iep-nflxenv'
+  implementation 'com.typesafe:config'
+  implementation 'org.slf4j:slf4j-simple'
+  testImplementation 'com.fasterxml.jackson.core:jackson-databind'
+}
+
+jar {
+  manifest {
+    attributes(
+      'Premain-Class': 'spectator-agent.spectator.agent.Agent',
+      'Automatic-Module-Name': 'com.netflix.spectator.agent'
+    )
+  }
+}
+
+shadowJar {
+  classifier = 'shadow'
+  configurations = [project.configurations.runtimeClasspath]
+  relocate('com.netflix.spectator',    'spectator-agent.spectator')
+  relocate('com.fasterxml',            'spectator-agent.json')
+  relocate('com.typesafe.config',      'spectator-agent.config')
+  relocate('org.slf4j',                'spectator-agent.slf4j')
+}
+

@@ -1,0 +1,141 @@
+<form name="trackingForm" novalidate>
+    <div class="form-horizontal">
+        <div class="form-group"
+             ng-class="{'has-error': trackingForm.name.$invalid, 'has-success': !trackingForm.name.$invalid&&trackingForm.name.$dirty}">
+            <label class="control-label col-sm-2">
+                Name
+            </label>
+            <div class="col-sm-10">
+                <input name="name" ng-model="authority.name" placeholder="Name"
+                       uib-tooltip="This will be the name of your authority, it is the name you will reference when creating new certificates"
+                       class="form-control" ng-pattern="/^[A-Za-z0-9_-]+$/" required/>
+                <p ng-show="trackingForm.name.$invalid && !trackingForm.name.$pristine" class="help-block">You must
+                    enter a valid authority name, spaces are not allowed</p>
+            </div>
+        </div>
+        <div class="form-group"
+             ng-class="{'has-error': trackingForm.owner.$invalid, 'has-success': !trackingForm.$invalid&&trackingForm.owner.$dirty}">
+            <label class="control-label col-sm-2">
+                Owner
+            </label>
+            <div class="col-sm-10">
+                <input type="email" name="owner" ng-model="authority.owner" placeholder="TeamDL@example.com"
+                       uib-tooltip="This is the authorities team distribution list or the main point of contact for this authority"
+                       class="form-control" ng-change="populateSubjectEmail()" required/>
+                <p ng-show="trackingForm.owner.$invalid && !trackingForm.owner.$pristine" class="help-block">You must
+                    enter an Certificate Authority owner</p>
+            </div>
+        </div>
+        <div class="form-group"
+             ng-class="{'has-error': trackingForm.description.$invalid, 'has-success': !trackingForm.$invalid&&trackingForm.description.$dirty}">
+            <label class="control-label col-sm-2">
+                Description
+            </label>
+            <div class="col-sm-10">
+                <textarea name="description" ng-model="authority.description" placeholder="Something elegant"
+                          class="form-control" ng-maxlength="250" required></textarea>
+                <p ng-show="trackingForm.description.$invalid && !trackingForm.description.$pristine"
+                   class="help-block">You must give a short description about this authority will be used for</p>
+            </div>
+        </div>
+        <div class="form-group"
+             ng-class="{'has-error': trackingForm.commonName.$invalid, 'has-success': !trackingForm.$invalid&&trackingForm.commonName.$dirty}">
+            <label class="control-label col-sm-2">
+                Common Name
+            </label>
+            <div class="col-sm-10">
+                <input name="commonName" ng-model="authority.commonName" placeholder="Common Name" class="form-control"
+                       ng-maxlength="64" required/>
+                <p ng-show="trackingForm.commonName.$invalid && !trackingForm.commonName.$pristine" class="help-block">
+                    You must enter a common name and it must be less than 64 characters in length</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">
+                Type
+            </label>
+            <div class="col-sm-10">
+                <select class="form-control" ng-model="authority.type"
+                        ng-options="option for option in ['root', 'subca']" ng-init="authority.type = 'root'"
+                        required></select>
+            </div>
+        </div>
+        <div ng-show="authority.type == 'subca'" class="form-group">
+            <label class="control-label col-sm-2">
+                Parent Authority
+            </label>
+            <div class="col-sm-10">
+                <ui-select class="input-md" ng-model="authority.parent" theme="bootstrap" title="choose an authority">
+                    <ui-select-match placeholder="select an authority...">{{$select.selected.name}}</ui-select-match>
+                    <ui-select-choices class="form-control" repeat="authority in authorities"
+                                       refresh="getAuthoritiesByName($select.search)"
+                                       refresh-delay="300">
+                        <div ng-bind-html="authority.name | highlight: $select.search"></div>
+                        <small>
+                            <span ng-bind-html="''+authority.description | highlight: $select.search"></span>
+                        </small>
+                    </ui-select-choices>
+                </ui-select>
+            </div>
+        </div>
+        <div class="form-group"
+             ng-class="{'has-error': trackingForm.validityEnd.$invalid || trackingForm.validityStart.$invalid, 'has-success': !trackingForm.$invalid&&trackingForm.validityEnd.$dirty&&trackingForm.validityStart.$dirty}">
+            <label class="control-label col-sm-2">
+                Validity Range
+            </label>
+            <div class="col-sm-2">
+                <select ng-model="authority.validityYears" class="form-control">
+                    <option value="">-</option>
+                    <option value="7">7 years</option>
+                    <option value="14">14 years</option>
+                    <option value="20">20 years</option>
+                </select>
+            </div>
+      <span style="padding-top: 15px" class="text-center col-sm-1">
+        <strong>- or -</strong>
+      </span>
+            <div class="col-sm-3">
+                <div class="input-group">
+                    <input type="text" class="form-control"
+                           uib-datepicker-popup="yyyy/MM/dd"
+                           ng-model="authority.validityStart"
+                           is-open="popup1.opened"
+                           datepicker-options="dateOptions"
+                           close-text="Close"
+                           max-date="authority.parent.authorityCertificate.notAfter"
+                           min-date="authority.parent.authorityCertificate.notBefore"
+                           alt-input-formats="altInputFormats" />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="input-group">
+                    <input type="text" class="form-control"
+                           uib-datepicker-popup="yyyy/MM/dd"
+                           ng-model="authority.validityEnd"
+                           is-open="popup2.opened"
+                           datepicker-options="dateOptions"
+                           close-text="Close"
+                           max-date="authority.parent.authorityCertificate.notAfter"
+                           min-date="authority.parent.authorityCertificate.notBefore"
+                           alt-input-formats="altInputFormats" />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-sm-1">
+                <button uib-tooltip="Clear Validity" ng-click="clearDates()" class="btn btn-default"><i class="glyphicon glyphicon-remove"></i></button>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">
+                Roles
+            </label>
+            <div class="col-sm-10" ng-model="authority" role-select></div>
+        </div>
+    </div>
+</form>
+

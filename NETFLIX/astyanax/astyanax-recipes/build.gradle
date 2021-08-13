@@ -1,0 +1,10 @@
+/**
+ * Optional implementations of some common patterns.
+ * Use at your own risk; some of these are popular but not well-suite for Cassandra for many use cases (looking at you, AllRowsReader).
+ */
+dependencies {
+    compile project(':astyanax-core')
+    compile project(':astyanax-cassandra')
+
+    testCompile project(':astyanax-thrift')
+}

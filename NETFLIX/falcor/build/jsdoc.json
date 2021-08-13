@@ -1,0 +1,7 @@
+{
+    "opts": {
+        "template": "falcor-jsdoc-template"
+    },
+    "templates": {},
+    "plugins": ["plugins/markdown"]
+}

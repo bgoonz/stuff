@@ -1,0 +1,24 @@
+{
+  "name": "dialtests",
+  "version": "1.0.0",
+  "description": "Tests for DIAL server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Netflix/dial-reference.git"
+  },
+  "main": "",
+  "scripts": {},
+  "author": "Shruti Ranganathan Jothi",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "keypress": "^0.2.1",
+    "moment": "^2.17.1",
+    "node-ssdp": "^3.2.0",
+    "q": "~1.4.1",
+    "request": "^2.78.0",
+    "sprintf-js": "~1.0.3",
+    "winston": "^2.3.1",
+    "yargs": "^6.3.0"
+  }
+}

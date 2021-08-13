@@ -1,0 +1,205 @@
+import org.apache.tools.ant.filters.ReplaceTokens
+
+apply plugin: "java-library"
+apply plugin: "org.asciidoctor.jvm.convert"
+
+project.parent.tasks.collectDocumentation.dependsOn project.tasks.asciidoctor
+
+ext {
+    metaModelIgnorePattern = "**/com/netflix/genie/web/data/services/impl/jpa/entities/*_.java"
+    snippetsDir = new File(project.buildDir, "generated-snippets")
+}
+
+configurations {
+    genieAgent
+}
+
+dependencies {
+    /*******************************
+     * Annotation Processors
+     *******************************/
+
+    annotationProcessor("javax.annotation:javax.annotation-api")
+    annotationProcessor("org.glassfish.jaxb:jaxb-runtime")
+    annotationProcessor("org.hibernate:hibernate-jpamodelgen")
+    annotationProcessor("org.springframework.boot:spring-boot-autoconfigure-processor")
+    annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
+
+    /*******************************
+     * API Dependencies
+     *******************************/
+
+    api(project(":genie-common"))
+    api(project(":genie-common-external"))
+    api(project(":genie-common-internal"))
+    api(project(":genie-proto"))
+    api("com.amazonaws:aws-java-sdk-sns")
+    api("com.fasterxml.jackson.core:jackson-databind")
+    api("com.github.fge:json-patch")
+    api("com.google.protobuf:protobuf-java")
+    api("io.grpc:grpc-stub")
+    api("io.grpc:grpc-core")
+    api("io.micrometer:micrometer-core")
+    api("jakarta.persistence:jakarta.persistence-api")
+    api("jakarta.validation:jakarta.validation-api")
+    api("org.apache.commons:commons-exec")
+    api("org.apache.curator:curator-framework")
+    api("org.apache.curator:curator-x-discovery")
+    api("org.aspectj:aspectjweaver")
+    api("org.codehaus.groovy:groovy-all")
+    api("org.springframework:spring-beans")
+    api("org.springframework:spring-context")
+    api("org.springframework:spring-context-support")
+    api("org.springframework:spring-core")
+    api("org.springframework:spring-web")
+    api("org.springframework.boot:spring-boot")
+    api("org.springframework.boot:spring-boot-actuator")
+    api("org.springframework.data:spring-data-jpa")
+    api("org.springframework.hateoas:spring-hateoas")
+    api("org.springframework.integration:spring-integration-zookeeper")
+    api("org.springframework.retry:spring-retry")
+
+    /*******************************
+     * Implementation Dependencies
+     *******************************/
+
+    implementation("com.amazonaws:aws-java-sdk-s3")
+    implementation("com.amazonaws:aws-java-sdk-sts")
+    implementation("com.google.guava:guava")
+    implementation("commons-io:commons-io")
+    implementation("commons-validator:commons-validator")
+    implementation("io.grpc:grpc-netty")
+    implementation("io.grpc:grpc-protobuf")
+    implementation("io.zipkin.brave:brave")
+    implementation("io.zipkin.brave:brave-instrumentation-grpc")
+    implementation("org.apache.commons:commons-lang3")
+    implementation("org.glassfish.jaxb:jaxb-runtime")
+    implementation("org.hibernate.validator:hibernate-validator")
+    implementation("org.springframework.boot:spring-boot-starter-actuator")
+    implementation("org.springframework.boot:spring-boot-starter-aop")
+    implementation("org.springframework.boot:spring-boot-starter-cache")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa") {
+        exclude group: "org.hibernate.javax.persistence"
+    }
+    implementation("org.springframework.boot:spring-boot-starter-log4j2")
+    implementation("org.springframework.boot:spring-boot-starter-mail")
+    implementation("org.springframework.boot:spring-boot-starter-hateoas")
+    implementation("org.springframework.boot:spring-boot-starter-integration")
+    implementation("org.springframework.boot:spring-boot-starter-tomcat")
+    implementation("org.springframework.boot:spring-boot-starter-validation")
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.cloud:spring-cloud-starter-aws")
+    implementation("org.springframework.cloud:spring-cloud-starter-aws-messaging")
+    implementation("org.springframework.cloud:spring-cloud-starter-sleuth")
+    implementation("org.springframework.cloud:spring-cloud-starter-zookeeper")
+    implementation("org.springframework.integration:spring-integration-zookeeper")
+    implementation("org.apache.maven:maven-artifact") {
+        transitive = false
+    }
+
+    /*******************************
+     * Compile Only Dependencies
+     *******************************/
+
+    /*******************************
+     * Runtime Only Dependencies
+     *******************************/
+
+    runtimeOnly("com.github.ben-manes.caffeine:caffeine")
+    runtimeOnly("com.h2database:h2")
+    runtimeOnly("org.flywaydb:flyway-core")
+    runtimeOnly("org.mariadb.jdbc:mariadb-java-client")
+    runtimeOnly("org.postgresql:postgresql")
+
+    /*******************************
+     * Test Dependencies
+     *******************************/
+
+    testImplementation(project(":genie-test"))
+    testImplementation(project(":genie-test-web"))
+    testImplementation("net.sf.jtidy:jtidy")
+    testImplementation("org.apache.tomcat:tomcat-jdbc")
+    testImplementation("org.dbunit:dbunit")
+    testImplementation("org.springframework.boot:spring-boot-starter-jetty")
+    integTestImplementation("com.github.ppodgorsek:spring-test-dbunit-core")
+    integTestImplementation("org.apache.curator:curator-test:2.13.0")
+    integTestImplementation("org.springframework.cloud:spring-cloud-contract-wiremock")
+    integTestImplementation("org.springframework.restdocs:spring-restdocs-core")
+    integTestImplementation("org.springframework.restdocs:spring-restdocs-restassured")
+
+    /*******************************
+     * Agent Dependencies
+     *******************************/
+
+    genieAgent(project(path: ":genie-agent-app", configuration: "agentBootJar"))
+}
+
+license {
+    exclude "*.yml"
+    exclude "META-INF/spring.factories"
+    exclude "genie-banner.txt"
+    exclude "db/**/*.sql"
+    exclude "**/com/netflix/genie/web/data/services/impl/jpa/entities/*_.java"
+}
+
+integrationTest {
+    dependsOn project.findProject(":genie-agent-app").tasks.bootJar
+    outputs.dir snippetsDir
+    systemProperty("genie.agent.launcher.local.agent-jar-path", "${configurations.genieAgent.asPath}")
+}
+
+// This is needed cause some things like attributes for asciidoctor don't serialize project.version properly at runtime
+def genieVersion = project.version.toString()
+
+asciidoctor {
+    dependsOn integrationTest
+    baseDirFollowsSourceDir()
+    inputs.dir snippetsDir
+
+    // See: https://github.com/asciidoctor/asciidoctor-gradle-plugin/issues/154
+    def capturedOutput = []
+    def listener = { capturedOutput << it } as StandardOutputListener
+
+    logging.addStandardErrorListener(listener)
+    logging.addStandardOutputListener(listener)
+
+    doLast {
+        logging.removeStandardOutputListener(listener)
+        logging.removeStandardErrorListener(listener)
+        capturedOutput.join('').with { output ->
+            if (output =~ /include file not found:/) {
+                throw new RuntimeException("Include file(s) not found.\n" + output)
+            }
+        }
+    }
+}
+
+asciidoctorj {
+    attributes(["snippets": snippetsDir, "revnumber": genieVersion, "docinfo1": ""])
+}
+
+jar {
+    manifest {
+        attributes(
+                "Implementation-Title": project.name,
+                "Implementation-Version": project.version,
+        )
+    }
+}
+
+//Ignore the generated classes from all our style/coverage/bug finding tools
+tasks.withType(Checkstyle) {
+    exclude metaModelIgnorePattern
+}
+
+tasks.withType(Pmd) {
+    exclude metaModelIgnorePattern
+}
+
+processResources {
+    filesMatching("**/*.yml") {
+        filter ReplaceTokens, tokens: [
+                "genie.version": project.version.toString()
+        ]
+    }
+}

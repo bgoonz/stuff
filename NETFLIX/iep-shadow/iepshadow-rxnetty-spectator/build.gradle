@@ -1,0 +1,18 @@
+version = "${shortVersion(rootProject.versionRxNetty)}${versionSuffix}"
+
+dependencies {
+  runtime project(':iepshadow-rxnetty')
+  runtime "com.netflix.spectator:spectator-api:${rootProject.versionSpectator}"
+
+  // these dependencies are shaded
+  providedCompile "io.reactivex:rxnetty-spectator:${rootProject.versionRxNetty}"
+  shadow "io.reactivex:rxnetty-spectator:${rootProject.versionRxNetty}"
+}
+
+shadowJar {
+  classifier = null
+  dependencies {
+      include dependency("io.reactivex:rxnetty-spectator:${rootProject.versionRxNetty}")
+  }
+  relocate 'io.reactivex', 'iep.io.reactivex'
+}

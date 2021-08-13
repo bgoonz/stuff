@@ -1,0 +1,14 @@
+dependencies {
+  api project(':spectator-api')
+  implementation 'com.google.guava:guava'
+  api 'com.netflix.servo:servo-core'
+  jmh project(':spectator-api')
+}
+
+jar {
+  manifest {
+    attributes(
+      "Automatic-Module-Name": "com.netflix.spectator.servo"
+    )
+  }
+}

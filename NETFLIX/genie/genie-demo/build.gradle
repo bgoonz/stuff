@@ -1,0 +1,76 @@
+apply plugin: "org.asciidoctor.jvm.convert"
+
+project.parent.tasks.collectDocumentation.dependsOn project.tasks.asciidoctor
+
+// This is needed cause some things like attributes for asciidoctor don't serialize project.version properly at runtime
+def genieVersion = project.version.toString()
+
+asciidoctor {
+    baseDirFollowsSourceDir()
+}
+
+asciidoctorj {
+    attributes(["revnumber": genieVersion, "docinfo1": ""])
+}
+
+def apacheImageName = "genie-demo-apache"
+def clientImageName = "genie-demo-client"
+
+task dockerBuildApacheImage(type: Exec, group: "Docker", description: "Build docker image for demo apache") {
+    onlyIf {
+        rootProject.ext.isDockerRunning()
+    }
+    inputs.dir "${project.projectDir}/src/main/docker/apache"
+    workingDir "${project.projectDir}/src/main/docker/apache"
+
+    def commandArgs = new ArrayList<>()
+    commandArgs.add("docker")
+    commandArgs.add("build")
+    commandArgs.add("--force-rm")
+    for (String tag : rootProject.ext.getDockerTags(apacheImageName, project.version.toString())) {
+        commandArgs.add("-t")
+        commandArgs.add(tag)
+    }
+    commandArgs.add(".")
+
+    commandLine commandArgs
+}
+
+task dockerBuildClientImage(type: Exec, group: "Docker", description: "Build docker image for demo client") {
+    onlyIf {
+        rootProject.ext.isDockerRunning()
+    }
+    inputs.dir "${project.projectDir}/src/main/docker/client"
+    workingDir "${project.projectDir}/src/main/docker/client"
+
+    def commandArgs = new ArrayList<>()
+    commandArgs.add("docker")
+    commandArgs.add("build")
+    commandArgs.add("--force-rm")
+    for (String tag : rootProject.ext.getDockerTags(clientImageName, project.version.toString())) {
+        commandArgs.add("-t")
+        commandArgs.add(tag)
+    }
+    commandArgs.add(".")
+
+    commandLine commandArgs
+}
+
+task dockerPush(group: "Docker", description: "Push the demo docker images to docker hub") {
+    dependsOn parent.tasks.dockerLogin, tasks.dockerBuildApacheImage, tasks.dockerBuildClientImage
+    onlyIf {
+        System.env."CI" && rootProject.ext.isDockerRunning()
+    }
+    doLast {
+        for (String tag : rootProject.ext.getDockerTags(apacheImageName, project.version.toString())) {
+            exec {
+                commandLine "docker", "push", tag
+            }
+        }
+        for (String tag : rootProject.ext.getDockerTags(clientImageName, project.version.toString())) {
+            exec {
+                commandLine "docker", "push", tag
+            }
+        }
+    }
+}

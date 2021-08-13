@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright 2015 Netflix, Inc.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<dataset>
+    <files
+        id="0"
+        created="2014-08-08 01:45:00"
+        updated="2014-08-08 01:45:00"
+        entity_version="0"
+        file="s3://some/config/file"
+    />
+    <files
+        id="1"
+        created="2014-08-08 01:45:00"
+        updated="2014-08-08 01:45:00"
+        entity_version="0"
+        file="s3://some/other/config/file"
+    />
+    <files
+        id="2"
+        created="2014-08-08 01:45:00"
+        updated="2014-08-08 01:45:00"
+        entity_version="0"
+        file="tez.jar"
+    />
+    <files
+        id="3"
+        created="2014-08-08 01:45:00"
+        updated="2014-08-08 01:45:00"
+        entity_version="0"
+        file="yarn.jar"
+    />
+    <files
+        id="4"
+        created="2014-08-08 01:45:00"
+        updated="2014-08-08 01:45:00"
+        entity_version="0"
+        file="s3://some/spark/config/file"
+    />
+    <files
+        id="5"
+        created="2014-08-08 01:45:00"
+        updated="2014-08-08 01:45:00"
+        entity_version="0"
+        file="s3://some/other/spark/config/file"
+    />
+    <files
+        id="6"
+        created="2014-08-08 01:45:00"
+        updated="2014-08-08 01:45:00"
+        entity_version="0"
+        file="spark.jar"
+    />
+    <files
+        id="7"
+        created="2014-08-08 01:45:00"
+        updated="2014-08-08 01:45:00"
+        entity_version="0"
+        file="s3://some/storm/config/file"
+    />
+    <files
+        id="8"
+        created="2014-08-08 01:45:00"
+        updated="2014-08-08 01:45:00"
+        entity_version="0"
+        file="storm.jar"
+    />
+
+    <tags
+        id="0"
+        created="2014-08-08 01:45:00"
+        updated="2014-08-08 01:45:00"
+        entity_version="0"
+        tag="prod"
+    />
+    <tags
+        id="1"
+        created="2014-08-08 01:45:00"
+        updated="2014-08-08 01:45:00"
+        entity_version="0"
+        tag="yarn"
+    />
+
+    <applications
+        id="0"
+        created="2014-08-08 01:45:00"
+        updated="2014-08-08 01:50:00"
+        entity_version="0"
+        unique_id="app1"
+        genie_user="tgianos"
+        name="tez"
+        version="1.2.3"
+        status="INACTIVE"
+    />
+    <applications_configs
+        application_id="0"
+        file_id="0"
+    />
+    <applications_configs
+        application_id="0"
+        file_id="1"
+    />
+    <applications_dependencies
+        application_id="0"
+        file_id="2"
+    />
+    <applications_dependencies
+        application_id="0"
+        file_id="3"
+    />
+    <applications_tags
+        application_id="0"
+        tag_id="0"
+    />
+
+    <applications
+        id="1"
+        created="2014-08-09 01:45:00"
+        updated="2014-08-09 01:50:00"
+        entity_version="0"
+        unique_id="app2"
+        genie_user="amsharma"
+        name="spark"
+        version="4.5.6"
+        status="ACTIVE"
+        type="spark"
+    />
+    <applications_configs
+        application_id="1"
+        file_id="4"
+    />
+    <applications_configs
+        application_id="1"
+        file_id="5"
+    />
+    <applications_dependencies
+        application_id="1"
+        file_id="6"
+    />
+    <applications_tags
+        application_id="1"
+        tag_id="0"
+    />
+    <applications_tags
+        application_id="1"
+        tag_id="1"
+    />
+
+    <applications
+        id="2"
+        created="2014-08-10 01:45:00"
+        updated="2014-08-10 01:50:00"
+        entity_version="0"
+        unique_id="app3"
+        genie_user="tgianos"
+        name="storm"
+        version="7.8.9"
+        status="DEPRECATED"
+        type="storm"
+    />
+    <applications_configs
+        application_id="2"
+        file_id="7"
+    />
+    <applications_dependencies
+        application_id="2"
+        file_id="8"
+    />
+    <applications_dependencies
+        application_id="2"
+        file_id="3"
+    />
+    <applications_tags
+        application_id="2"
+        tag_id="0"
+    />
+
+    <commands
+        id="0"
+        created="2014-08-08 01:47:00"
+        updated="2014-08-08 01:59:00"
+        entity_version="0"
+        unique_id="command1"
+        genie_user="tgianos"
+        name="pig_13_prod"
+        version="1.2.3"
+        check_delay="10000"
+        status="INACTIVE"
+    />
+
+    <commands_applications command_id="0" application_id="0" application_order="0"/>
+
+    <command_executable_arguments
+        command_id="0"
+        argument="pig"
+        argument_order="0"
+    />
+</dataset>

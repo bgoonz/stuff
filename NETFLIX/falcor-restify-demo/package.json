@@ -1,0 +1,33 @@
+{
+  "name": "falcor-restify-demo",
+  "version": "1.0.0",
+  "description": "A demo falcor server for restify.",
+  "main": "index.js",
+  "dependencies": {
+    "bunyan": "^1.4.0",
+    "falcor-restify": "1.1.1",
+    "falcor-router-demo": "git+ssh://git@github.com/Netflix/falcor-router-demo.git#master",
+    "restify": "^3.0.3",
+    "restify-cookies": "^0.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js 2>&1 | bunyan"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Netflix/falcor-restify-demo.git"
+  },
+  "keywords": [
+    "falcor",
+    "restify",
+    "netflix",
+    "jsongraph"
+  ],
+  "author": "Netflix",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Netflix/falcor-restify-demo/issues"
+  },
+  "homepage": "https://github.com/Netflix/falcor-restify-demo#readme"
+}

@@ -1,0 +1,18 @@
+plugins {
+    id 'nebula.netflixoss' version '9.1.0'
+    id 'java'
+}
+
+// Establish version and status
+ext.githubProjectName = rootProject.name // Change if github project name is not the same as the root project's name
+group = "com.netflix.nfgraph"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.11'
+}
+
+javadoc.includes << "**/NFGraph.java" << "**/NFBuildGraph.java" << "**/NFCompressedGraph.java" << "**/OrdinalSet.java" << "**/NFBuildGraphOrdinalSet.java" << "**/CompactOrdinalSet.java" << "**/HashSetOrdinalSet.java" << "**/BitSetOrdinalSet.java" << "**/OrdinalIterator.java" << "**/NFBuildGraphOrdinalIterator.java"<< "**/CompactOrdinalIterator.java" << "**/HashSetOrdinalIterator.java" << "**/BitSetOrdinalIterator.java" << "**/NFGraphSpec.java" << "**/NFNodeSpec.java" << "**/NFPropertySpec.java" << "**/OrdinalMap.java" << "**/NFGraphException.java"

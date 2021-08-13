@@ -1,0 +1,18 @@
+plugins {
+    id 'nebula.netflixoss' version '3.2.3'
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'nebula.netflixoss'
+    
+    tasks.withType(Javadoc) {
+        options.addStringOption('Xdoclint:none', '-quiet')
+    }
+
+    repositories {
+        jcenter()
+    }
+
+    group = "com.netflix.${rootProject.name}" // TEMPLATE: Set to organization of project
+}

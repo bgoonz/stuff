@@ -1,0 +1,77 @@
+==== API Docs
+
+===== Request Documentation
+
+====== Headers
+ifdef::request-headers[]
+include::{request-headers}[]
+endif::request-headers[]
+ifndef::request-headers[]
+None
+endif::request-headers[]
+
+====== Path Parameters
+ifdef::request-path-params[]
+include::{request-path-params}[]
+endif::request-path-params[]
+ifndef::request-path-params[]
+None
+endif::request-path-params[]
+
+====== Query Parameters
+ifdef::request-query-params[]
+include::{request-query-params}[]
+endif::request-query-params[]
+ifndef::request-query-params[]
+None
+endif::request-query-params[]
+
+====== Payload Fields
+ifdef::request-fields[]
+include::{request-fields}[]
+endif::request-fields[]
+ifndef::request-fields[]
+None
+endif::request-fields[]
+
+===== Request Examples
+
+====== cURL
+include::{curl-request}[]
+
+====== HTTPie
+include::{httpie-request}[]
+
+===== Response Documentation
+
+====== Headers
+ifdef::response-headers[]
+include::{response-headers}[]
+endif::response-headers[]
+ifndef::response-headers[]
+None
+endif::response-headers[]
+
+====== Payload Fields
+ifdef::response-fields[]
+include::{response-fields}[]
+endif::response-fields[]
+ifndef::response-fields[]
+None
+endif::response-fields[]
+
+====== HATEOAS Links
+ifdef::response-links[]
+include::{response-links}[]
+endif::response-links[]
+ifndef::response-links[]
+None
+endif::response-links[]
+
+===== HTTP Messages
+
+====== Request
+include::{http-request}[]
+
+====== Response
+include::{http-response}[]

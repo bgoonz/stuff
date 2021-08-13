@@ -1,0 +1,38 @@
+ext.githubProjectName = 'ReactiveLab'
+
+//apply from: file('gradle/convention.gradle')
+apply from: file('gradle/maven.gradle')
+
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+    }
+
+    apply from: file('gradle/buildscript.gradle'), to: buildscript
+}
+
+allprojects {
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+    repositories { 
+        mavenLocal()
+        mavenCentral()
+	    jcenter()
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+    group = "io.reactivex.lab"
+}
+
+task startDiscovery() {}
+startDiscovery.dependsOn(":reactive-lab-services:startDiscovery")
+
+task startServices() {}
+startServices.dependsOn(":reactive-lab-services:startServices")
+
+task startGateway() {}
+startGateway.dependsOn(":reactive-lab-gateway:startGateway")

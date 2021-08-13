@@ -1,0 +1,87 @@
+apply plugin: 'java'
+
+animalsniffer { // Don't use apis that require JRE 8
+    signature = "org.codehaus.mojo.signature:java17:+@signature"
+}
+
+sourceCompatibility = 1.6
+
+dependencies {
+  compile      project(':denominator-core')
+  compile     'io.airlift:airline:0.7'
+  compile     'org.yaml:snakeyaml:1.16'
+  compile     'org.bouncycastle:bcpkix-jdk15on:1.51'
+  // TODO: the following should really only be in the fatJar
+  compile      project(':denominator-dynect')
+  compile      project(':denominator-ultradns')
+  compile      project(':denominator-route53')
+  compile      project(':denominator-clouddns')
+  compile      project(':denominator-designate')
+  testCompile  project(':denominator-model').sourceSets.test.output
+  testCompile  project(':denominator-core').sourceSets.test.output
+  testCompile 'junit:junit:4.12'
+  testCompile 'com.squareup.okhttp:mockwebserver:2.5.0'
+  testCompile 'org.assertj:assertj-core:1.7.1' // last version supporting JDK 7
+  testCompile 'com.github.stefanbirkner:system-rules:1.12.1'
+}
+
+// create a self-contained jar that is executable
+// the output is both a 'fat' project artifact and
+// a convenience file named "build/denominator"
+task fatJar(dependsOn: classes, type: Jar) { 
+  classifier 'fat'
+
+  // exclude service provider lookup as updating denominator.cli.Denominator is no big deal
+  def providerFile = "META-INF/services/denominator.Provider"
+  from "supportedProviders.txt"
+  rename "supportedProviders.txt", providerFile
+
+  doFirst {
+    // Delay evaluation until the compile configuration is ready
+    from {
+      configurations.compile.collect { zipTree(it).matching {
+          exclude "**/${providerFile}"
+          // remove all signature files
+          exclude "META-INF/*.SF"
+          exclude "META-INF/*.DSA"
+          exclude "META-INF/*.RSA"
+      } }
+    }
+  }
+
+  from (sourceSets*.output.classesDir) {
+    exclude "**/${providerFile}"
+  }
+
+  // really executable jar
+  // http://skife.org/java/unix/2011/06/20/really_executable_jars.html
+
+  manifest {
+    attributes 'Main-Class': 'denominator.cli.Denominator'
+    attributes("Implementation-Title": "Denominator", "Specification-Version": version, "Implementation-Version": version)
+  }
+
+  // for convenience, we make a file in the build dir named denominator with no extension
+  doLast {
+    def srcFile = new File("${buildDir}/libs/${archiveName}")
+    def shortcutFile = new File("${buildDir}/denominator")
+    shortcutFile.delete()
+    shortcutFile << "#!/usr/bin/env sh\n"
+    shortcutFile << 'exec java -cp 3rdparty/*:$0 denominator.cli.Denominator "$@"' + "\n"
+    shortcutFile << srcFile.bytes
+    shortcutFile.setExecutable(true, true)
+    srcFile.delete()
+    srcFile << shortcutFile.bytes   
+    srcFile.setExecutable(true, true)
+  }
+}
+
+configurations {
+  fat
+}
+
+nebula.plugin.publishing.component.CustomComponentPlugin.addArtifact(project, 'fat', fatJar)
+
+artifacts {
+  archives fatJar
+}

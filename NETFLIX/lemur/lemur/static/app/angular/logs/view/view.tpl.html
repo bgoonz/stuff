@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="featurette-heading">Logs
+      <span class="text-muted"><small>I see what you did there</small></span></h2>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="btn-group">
+          <button ng-model="showFilter" class="btn btn-default" uib-btn-checkbox
+                  btn-checkbox-true="1"
+                  btn-checkbox-false="0">Filter</button>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="table-responsive">
+        <table ng-table="logsTable" class="table table-striped" show-filter="showFilter" template-pagination="angular/pager.html">
+          <tbody>
+          <tr ng-repeat="log in $data track by $index">
+            <td data-title="'Logged'" sortable="'logged_at'">
+              <span uib-tooltip="{{ log.loggedAt }}">
+                {{ momentService.createMoment(log.loggedAt) }}
+              </span>
+            </td>
+            <td data-title="'Certificate'" sortable="'certificate'" filter="{ 'certificate.name': 'text' }">
+              {{ log.certificate.name }}
+            </td>
+            <td data-title="'User'" sortable="'user'" filter="{ 'user.email': 'text' }">
+              {{ log.user.email }}
+            </td>
+            <td data-title="'Type'">
+              {{ log.logType }}
+             </td>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

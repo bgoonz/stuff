@@ -1,0 +1,9 @@
+language: java
+jdk:
+- oraclejdk7
+env:
+  global:
+  - secure: aKtswXDJfu5GKcINYJDPLC1RNogE4L8OXpNeBohGDl7VoqKlKkyMnpcbU4bTiF9N9T3vy7ltcmL6/UrX1Z1uaN/bwW0IW7TdRwbL3bdX2WqcGkYB3/PBMMJ+rz8rT5yQAA6dUwiynk2UbSTFQM/pOpNE7jPmhojdVif04rAMuXk=
+  - secure: CkSqRhlkMP/MuyWzrmXrnGNm1cC9TICaWd4GqGj61NOIlLr7DXLwO1/g9YMDVq/7hSVEndf+IvmUhVjfZdSgMLe1g0TXVV5ZeyOEyj/4Z/USh6QrBr5JSYLb8X7eqUHCF1wZ5bVZxlaSlOL4GjA6p9xa9ukcClPzEqryQZyjiBc=
+  - secure: b1oWjYpSvoN2EPuImLoIPe42f0K/MO4bNG0abijH+yl2QHWtpMFDmO7FiKY569nLeAnCYif2r4chSwE+1C5tlnHextneQDeMt6DIWbGwWgU7+/PgZ/u/U89C04NnZpPOBv0eqR6PJMqXyb1DVOpx7PB+SOPU0xLH9EqGvseIZ4c=
+  - secure: Sp87/ZY2EJpeXfuDHt7WUdL04hCvvxvhVND7XiGVk1yuIagkeBnRDOO4TjfRp4FWh2XBdT+tJBb0L5TmGz8o1oe+ODBIdA7tkSfNdw3vumHkbm/jAiONJ8VRX2m+aY+fJPVhERJH3r3FJYOcN+P530iSSwm6y8ZcGHHlV5xx1gE=

@@ -1,0 +1,55 @@
+apply plugin: "org.springframework.boot"
+//apply plugin: "application"
+
+configurations {
+    agentBootJar
+}
+
+license {
+    exclude "*.yml"
+    exclude "*.xml"
+    exclude "*.txt"
+}
+
+dependencies {
+    /*******************************
+     * Implementation Dependencies
+     *******************************/
+
+    implementation(project(":genie-agent"))
+    implementation("org.springframework.boot:spring-boot-starter")
+
+    /*******************************
+     * Compile Only Dependencies
+     *******************************/
+
+    /*******************************
+     * Runtime Only Dependencies
+     *******************************/
+
+    /*******************************
+     * Test Dependencies
+     *******************************/
+
+    testImplementation(project(":genie-test"))
+}
+
+springBoot {
+    mainClassName = "com.netflix.genie.GenieAgentApplication"
+}
+
+//mainClassName = "com.netflix.genie.GenieAgentApplication"
+//applicationDefaultJvmArgs = ["-noverify", "-XX:TieredStopAtLevel=1"]
+
+def genieVersion = project.version.toString()
+
+jar {
+    manifest {
+        attributes("Implementation-Version": genieVersion)
+    }
+}
+
+// Used to provide convenient way to reference the actual executable jar between projects
+artifacts {
+    agentBootJar bootJar
+}

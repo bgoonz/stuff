@@ -1,0 +1,12 @@
+dist: trusty
+language: node_js
+node_js:
+  - "6"
+before_install:
+  - npm install -g npm@5
+before_script:
+  - npm run dist
+script:
+  - npm test
+after_script:
+    - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js

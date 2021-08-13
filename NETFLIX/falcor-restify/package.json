@@ -1,0 +1,42 @@
+{
+  "name": "falcor-restify",
+  "version": "1.1.2",
+  "description": "Restify Middleware for Hosting Falcor Data Sources.",
+  "main": "lib/index.js",
+  "homepage": "https://github.com/Netflix/falcor-restify",
+  "author": {
+    "name": "Netflix",
+    "url": "https://github.com/Netflix/falcor-restify/authors.txt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Netflix/falcor-restify.git"
+  },
+  "licenses": [
+    {
+      "type": "Apache License, Version 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  ],
+  "keywords": [
+    "falcorjs",
+    "Netflix",
+    "Observable"
+  ],
+  "scripts": {
+    "lint": "gulp lint",
+    "test": "gulp test"
+  },
+  "dependencies": {
+    "restify": "3.0.3"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "eslint": "^0.21.0",
+    "falcor-router": "^0.5.1",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-mocha": "^2.1.3",
+    "sinon": "^1.15.4"
+  }
+}

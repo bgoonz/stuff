@@ -1,0 +1,2804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>components.nf-graph - ember-nf-graph</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="../assets/css/logo.png" title="ember-nf-graph" width="117" height="52"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/components.nf-area.html">components.nf-area</a></li>
+                                <li><a href="../classes/components.nf-area-stack.html">components.nf-area-stack</a></li>
+                                <li><a href="../classes/components.nf-bars.html">components.nf-bars</a></li>
+                                <li><a href="../classes/components.nf-crosshair.html">components.nf-crosshair</a></li>
+                                <li><a href="../classes/components.nf-dot.html">components.nf-dot</a></li>
+                                <li><a href="../classes/components.nf-gg.html">components.nf-gg</a></li>
+                                <li><a href="../classes/components.nf-graph.html">components.nf-graph</a></li>
+                                <li><a href="../classes/components.nf-graph-content.html">components.nf-graph-content</a></li>
+                                <li><a href="../classes/components.nf-horizontal-line.html">components.nf-horizontal-line</a></li>
+                                <li><a href="../classes/components.nf-line.html">components.nf-line</a></li>
+                                <li><a href="../classes/components.nf-plot.html">components.nf-plot</a></li>
+                                <li><a href="../classes/components.nf-range-marker.html">components.nf-range-marker</a></li>
+                                <li><a href="../classes/components.nf-range-markers.html">components.nf-range-markers</a></li>
+                                <li><a href="../classes/components.nf-right-tick.html">components.nf-right-tick</a></li>
+                                <li><a href="../classes/components.nf-selection-box.html">components.nf-selection-box</a></li>
+                                <li><a href="../classes/components.nf-svg-image.html">components.nf-svg-image</a></li>
+                                <li><a href="../classes/components.nf-svg-line.html">components.nf-svg-line</a></li>
+                                <li><a href="../classes/components.nf-svg-path.html">components.nf-svg-path</a></li>
+                                <li><a href="../classes/components.nf-svg-rect.html">components.nf-svg-rect</a></li>
+                                <li><a href="../classes/components.nf-tracker.html">components.nf-tracker</a></li>
+                                <li><a href="../classes/components.nf-vertical-line.html">components.nf-vertical-line</a></li>
+                                <li><a href="../classes/components.nf-x-axis.html">components.nf-x-axis</a></li>
+                                <li><a href="../classes/components.nf-y-axis.html">components.nf-y-axis</a></li>
+                                <li><a href="../classes/components.nf-y-diff.html">components.nf-y-diff</a></li>
+                                <li><a href="../classes/mixins.graph-area-utils.html">mixins.graph-area-utils</a></li>
+                                <li><a href="../classes/mixins.graph-data-graphic.html">mixins.graph-data-graphic</a></li>
+                                <li><a href="../classes/mixins.graph-has-graph-parent.html">mixins.graph-has-graph-parent</a></li>
+                                <li><a href="../classes/mixins.graph-line-utils.html">mixins.graph-line-utils</a></li>
+                                <li><a href="../classes/mixins.graph-registered-graphic.html">mixins.graph-registered-graphic</a></li>
+                                <li><a href="../classes/mixins.graph-requires-scale-source.html">mixins.graph-requires-scale-source</a></li>
+                                <li><a href="../classes/mixins.graph-selectable-graphic.html">mixins.graph-selectable-graphic</a></li>
+                                <li><a href="../classes/utils.nf.graph-event.html">utils.nf.graph-event</a></li>
+                                <li><a href="../classes/utils.nf.graph-mouse-event.html">utils.nf.graph-mouse-event</a></li>
+                                <li><a href="../classes/utils.nf.graph-position.html">utils.nf.graph-position</a></li>
+                                <li><a href="../classes/utils.nf.scroll-area-action-context.html">utils.nf.scroll-area-action-context</a></li>
+                                <li><a href="../classes/utils.parse-property-expression.html">utils.parse-property-expression</a></li>
+                            </ul>
+                
+                            <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/scale-utils.html">scale-utils</a></li>
+                                <li><a href="../modules/utils_nf_array-helpers.html">utils/nf/array-helpers</a></li>
+                                <li><a href="../modules/utils_nf_svg-dom.html">utils/nf/svg-dom</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1>components.nf-graph Class</h1>
+<div class="box meta">
+
+        <div class="extends">
+            Extends Ember.Component
+        </div>
+
+        <div class="foundat">
+            Defined in: <a href="../files/app_components_nf-graph.js.html#l239"><code>app&#x2F;components&#x2F;nf-graph.js:239</code></a>
+        </div>
+
+            Module: <a href="../modules/utils_nf_svg-dom.html">utils/nf/svg-dom</a>
+
+</div>
+
+
+<div class="box intro">
+    <p>A container component for building complex Cartesian graphs.</p>
+<h2>Minimal example</h2>
+<pre class="code prettyprint"><code> {{#nf-graph width=100 height=50}}
+   {{#nf-graph-content}}
+     {{nf-line data=lineData xprop=&quot;foo&quot; yprop=&quot;bar&quot;}}
+   {{/nf-graph-content}}
+ {{/nf-graph}}
+</code></pre>
+<p>The above will create a simple 100x50 graph, with no axes, and a single line
+plotting the data it finds on each object in the array <code>lineData</code> at properties
+<code>foo</code> and <code>bar</code> for x and y values respectively.</p>
+<h2>More advanced example</h2>
+<pre class="code prettyprint"><code> {{#nf-graph width=500 height=300}}
+   {{#nf-x-axis height=&quot;50&quot; as |tick|}}
+     &lt;text&gt;{{tick.value}}&lt;/text&gt;
+   {{/nf-x-axis}}
+
+   {{#nf-y-axis width=&quot;120&quot; as |tick|}}
+     &lt;text&gt;{{tick.value}}&lt;/text&gt;
+   {{/nf-y-axis}}
+
+   {{#nf-graph-content}}
+     {{nf-line data=lineData xprop=&quot;foo&quot; yprop=&quot;bar&quot;}}
+   {{/nf-graph-content}}
+ {{/nf-graph}}
+</code></pre>
+<p>The above example will create a 500x300 graph with both axes visible. The graph will not
+render either axis unless its component is present.</p>
+
+</div>
+
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods extends">
+                            <li class="index-item method private">
+                                <a href="#method__notifyHasRendered">_notifyHasRendered</a>
+
+                            </li>
+                            <li class="index-item method private">
+                                <a href="#method__setup">_setup</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_deselectGraphic">deselectGraphic</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_didAutoUpdateMaxX">didAutoUpdateMaxX</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_didAutoUpdateMaxY">didAutoUpdateMaxY</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_didAutoUpdateMinX">didAutoUpdateMinX</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_didAutoUpdateMinY">didAutoUpdateMinY</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_mousePoint">mousePoint</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_registerGraphic">registerGraphic</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_selectGraphic">selectGraphic</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_unregisterGraphic">unregisterGraphic</a>
+
+                            </li>
+                    </ul>
+                </div>
+
+                <div class="index-section properties">
+                    <h3>Properties</h3>
+
+                    <ul class="index-list properties extends">
+                            <li class="index-item property private">
+                                <a href="#property__xMax">_xMax</a>
+
+                            </li>
+                            <li class="index-item property private">
+                                <a href="#property__xMin">_xMin</a>
+
+                            </li>
+                            <li class="index-item property private">
+                                <a href="#property__yMax">_yMax</a>
+
+                            </li>
+                            <li class="index-item property private">
+                                <a href="#property__yMin">_yMin</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_autoScaleXAction">autoScaleXAction</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_autoScaleYAction">autoScaleYAction</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_brushAction">brushAction</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_brushEndAction">brushEndAction</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_brushStartAction">brushStartAction</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_brushThreshold">brushThreshold</a>
+
+                            </li>
+                            <li class="index-item property private">
+                                <a href="#property_contentClipPathId">contentClipPathId</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_dataExtents">dataExtents</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_graphHeight">graphHeight</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_graphics">graphics</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_graphTransform">graphTransform</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_graphWidth">graphWidth</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_graphX">graphX</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_graphY">graphY</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_hasData">hasData</a>
+
+                            </li>
+                            <li class="index-item property private">
+                                <a href="#property_hasRendered">hasRendered</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_height">height</a>
+
+                            </li>
+                            <li class="index-item property private">
+                                <a href="#property_isGraph">isGraph</a>
+
+                            </li>
+                            <li class="index-item property private">
+                                <a href="#property_isScaleSource">isScaleSource</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_paddingBottom">paddingBottom</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_paddingLeft">paddingLeft</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_paddingRight">paddingRight</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_paddingTop">paddingTop</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_parentController">parentController</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_selected">selected</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_selectMultiple">selectMultiple</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_showFrets">showFrets</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_showLanes">showLanes</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_showXAxis">showXAxis</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_showYAxis">showYAxis</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_width">width</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_xAxis">xAxis</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_xDataExtent">xDataExtent</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_xDomain">xDomain</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_xLogMin">xLogMin</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_xMax">xMax</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_xMaxMode">xMaxMode</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_xMin">xMin</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_xMinMode">xMinMode</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_xOrdinalOuterPadding">xOrdinalOuterPadding</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_xOrdinalPadding">xOrdinalPadding</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_xPowerExponent">xPowerExponent</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_xRange">xRange</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_xScale">xScale</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_xScaleFactory">xScaleFactory</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_xScaleType">xScaleType</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_xUniqueData">xUniqueData</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_yAxis">yAxis</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_yDataExtent">yDataExtent</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_yDomain">yDomain</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_yLogMin">yLogMin</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_yMax">yMax</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_yMaxMode">yMaxMode</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_yMin">yMin</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_yMinMode">yMinMode</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_yOrdinalOuterPadding">yOrdinalOuterPadding</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_yOrdinalPadding">yOrdinalPadding</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_yPowerExponent">yPowerExponent</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_yRange">yRange</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_yScale">yScale</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_yScaleFactory">yScaleFactory</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_yScaleType">yScaleType</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_yUniqueData">yUniqueData</a>
+
+                            </li>
+                    </ul>
+                </div>
+
+
+        </div>
+
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+<div id="method__notifyHasRendered" class="method item private">
+    <h3 class="name"><code>_notifyHasRendered</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+        <span class="flag private">private</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/app_components_nf-graph.js.html#l989"><code>app&#x2F;components&#x2F;nf-graph.js:989</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Sets <code>hasRendered</code> to <code>true</code> on <code>willInsertElement</code>.</p>
+
+    </div>
+
+
+
+
+</div>
+<div id="method__setup" class="method item private">
+    <h3 class="name"><code>_setup</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+        <span class="flag private">private</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/app_components_nf-graph.js.html#l1064"><code>app&#x2F;components&#x2F;nf-graph.js:1064</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>The initialization method. Fired on <code>init</code>.</p>
+
+    </div>
+
+
+
+
+</div>
+<div id="method_deselectGraphic" class="method item">
+    <h3 class="name"><code>deselectGraphic</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>graphic</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/app_components_nf-graph.js.html#l1047"><code>app&#x2F;components&#x2F;nf-graph.js:1047</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>deselects the graphic passed.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">graphic</code>
+                        <span class="type">Ember.Component</span>
+
+
+                    <div class="param-description">
+                        <p>the graph child component to deselect.</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_didAutoUpdateMaxX" class="method item">
+    <h3 class="name"><code>didAutoUpdateMaxX</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/app_components_nf-graph.js.html#l663"><code>app&#x2F;components&#x2F;nf-graph.js:663</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Event handler that is fired for the <code>didAutoUpdateMaxX</code> event</p>
+
+    </div>
+
+
+
+
+</div>
+<div id="method_didAutoUpdateMaxY" class="method item">
+    <h3 class="name"><code>didAutoUpdateMaxY</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/app_components_nf-graph.js.html#l679"><code>app&#x2F;components&#x2F;nf-graph.js:679</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Event handler that is fired for the <code>didAutoUpdateMaxY</code> event</p>
+
+    </div>
+
+
+
+
+</div>
+<div id="method_didAutoUpdateMinX" class="method item">
+    <h3 class="name"><code>didAutoUpdateMinX</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/app_components_nf-graph.js.html#l671"><code>app&#x2F;components&#x2F;nf-graph.js:671</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Event handler that is fired for the <code>didAutoUpdateMinX</code> event</p>
+
+    </div>
+
+
+
+
+</div>
+<div id="method_didAutoUpdateMinY" class="method item">
+    <h3 class="name"><code>didAutoUpdateMinY</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/app_components_nf-graph.js.html#l687"><code>app&#x2F;components&#x2F;nf-graph.js:687</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Event handler that is fired for the <code>didAutoUpdateMinY</code> event</p>
+
+    </div>
+
+
+
+
+</div>
+<div id="method_mousePoint" class="method item">
+    <h3 class="name"><code>mousePoint</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>container</code>
+                </li>
+                <li class="arg">
+                        <code>e</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">Array</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/app_components_nf-graph.js.html#l998"><code>app&#x2F;components&#x2F;nf-graph.js:998</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Gets the mouse position relative to the container</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">container</code>
+                        <span class="type">SVGElement</span>
+
+
+                    <div class="param-description">
+                        <p>the SVG element that contains the mouse event</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">e</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                        <p>the DOM mouse event</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Array</span>:
+                    <p>an array of <code>[xMouseCoord, yMouseCoord]</code></p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_registerGraphic" class="method item">
+    <h3 class="name"><code>registerGraphic</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>graphic</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/app_components_nf-graph.js.html#l858"><code>app&#x2F;components&#x2F;nf-graph.js:858</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Registers a graphic such as <code>nf-line</code> or <code>nf-area</code> components with the graph.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">graphic</code>
+                        <span class="type">Ember.Component</span>
+
+
+                    <div class="param-description">
+                        <p>The component object to register</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_selectGraphic" class="method item">
+    <h3 class="name"><code>selectGraphic</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>graphic</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/app_components_nf-graph.js.html#l1026"><code>app&#x2F;components&#x2F;nf-graph.js:1026</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Selects the graphic passed. If <code>selectMultiple</code> is false, it will deselect the currently
+selected graphic if it's different from the one passed.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">graphic</code>
+                        <span class="type">Ember.Component</span>
+
+
+                    <div class="param-description">
+                        <p>the graph component to select within the graph.</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_unregisterGraphic" class="method item">
+    <h3 class="name"><code>unregisterGraphic</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>graphic</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/app_components_nf-graph.js.html#l869"><code>app&#x2F;components&#x2F;nf-graph.js:869</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Unregisters a graphic such as an <code>nf-line</code> or <code>nf-area</code> from the graph.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">graphic</code>
+                        <span class="type">Ember.Component</span>
+
+
+                    <div class="param-description">
+                        <p>The component to unregister</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+            </div>
+
+            <div id="properties" class="api-class-tabpanel">
+                <h2 class="off-left">Properties</h2>
+
+                    <div id="property__xMax" class="property item private">
+                        <h3 class="name"><code>_xMax</code></h3>
+                        <span class="type">Unknown</span>
+                    
+                    
+                            <span class="flag private">private</span>
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l493"><code>app&#x2F;components&#x2F;nf-graph.js:493</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Backing field for <code>xMax</code></p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property__xMin" class="property item private">
+                        <h3 class="name"><code>_xMin</code></h3>
+                        <span class="type">Unknown</span>
+                    
+                    
+                            <span class="flag private">private</span>
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l486"><code>app&#x2F;components&#x2F;nf-graph.js:486</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Backing field for <code>xMin</code></p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property__yMax" class="property item private">
+                        <h3 class="name"><code>_yMax</code></h3>
+                        <span class="type">Unknown</span>
+                    
+                    
+                            <span class="flag private">private</span>
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l507"><code>app&#x2F;components&#x2F;nf-graph.js:507</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Backing field for <code>yMax</code></p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property__yMin" class="property item private">
+                        <h3 class="name"><code>_yMin</code></h3>
+                        <span class="type">Unknown</span>
+                    
+                    
+                            <span class="flag private">private</span>
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l500"><code>app&#x2F;components&#x2F;nf-graph.js:500</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Backing field for <code>yMin</code></p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_autoScaleXAction" class="property item">
+                        <h3 class="name"><code>autoScaleXAction</code></h3>
+                        <span class="type">String</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l643"><code>app&#x2F;components&#x2F;nf-graph.js:643</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The action to trigger when the graph automatically updates the xScale
+                    due to an &quot;auto&quot; &quot;push&quot; or &quot;push-tick&quot; domainMode.</p>
+                    <p>sends the graph component instance value as the argument.</p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> null</p>
+                    
+                    
+                    </div>
+                    <div id="property_autoScaleYAction" class="property item">
+                        <h3 class="name"><code>autoScaleYAction</code></h3>
+                        <span class="type">String</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l695"><code>app&#x2F;components&#x2F;nf-graph.js:695</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The action to trigger when the graph automatically updates the yScale
+                    due to an &quot;auto&quot; &quot;push&quot; or &quot;push-tick&quot; domainMode.</p>
+                    <p>Sends the graph component instance as the argument.</p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> null</p>
+                    
+                    
+                    </div>
+                    <div id="property_brushAction" class="property item">
+                        <h3 class="name"><code>brushAction</code></h3>
+                        <span class="type">String</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l1090"><code>app&#x2F;components&#x2F;nf-graph.js:1090</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The name of the action to trigger when brushing emits a new value</p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> null</p>
+                    
+                    
+                    </div>
+                    <div id="property_brushEndAction" class="property item">
+                        <h3 class="name"><code>brushEndAction</code></h3>
+                        <span class="type">String</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l1098"><code>app&#x2F;components&#x2F;nf-graph.js:1098</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The name of the action to trigger when brushing ends</p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> null</p>
+                    
+                    
+                    </div>
+                    <div id="property_brushStartAction" class="property item">
+                        <h3 class="name"><code>brushStartAction</code></h3>
+                        <span class="type">String</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l1082"><code>app&#x2F;components&#x2F;nf-graph.js:1082</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The name of the action to trigger when brushing starts</p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> null</p>
+                    
+                    
+                    </div>
+                    <div id="property_brushThreshold" class="property item">
+                        <h3 class="name"><code>brushThreshold</code></h3>
+                        <span class="type">Number</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l1074"><code>app&#x2F;components&#x2F;nf-graph.js:1074</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The amount of leeway, in pixels, to give before triggering a brush start.</p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> 7</p>
+                    
+                    
+                    </div>
+                    <div id="property_contentClipPathId" class="property item private">
+                        <h3 class="name"><code>contentClipPathId</code></h3>
+                        <span class="type">String</span>
+                    
+                    
+                            <span class="flag private">private</span>
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l766"><code>app&#x2F;components&#x2F;nf-graph.js:766</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Gets the DOM id for the content clipPath element.</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_dataExtents" class="property item">
+                        <h3 class="name"><code>dataExtents</code></h3>
+                        <span class="type">Object</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l615"><code>app&#x2F;components&#x2F;nf-graph.js:615</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The data extents for all data in the registered <code>graphics</code>.</p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> {
+                      xMin: Number.MAX_VALUE,
+                      xMax: Number.MIN_VALUE,
+                      yMin: Number.MAX_VALUE,
+                      yMax: Number.MIN_VALUE
+                    }</p>
+                    
+                    
+                    </div>
+                    <div id="property_graphHeight" class="property item">
+                        <h3 class="name"><code>graphHeight</code></h3>
+                        <span class="type">Number</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l963"><code>app&#x2F;components&#x2F;nf-graph.js:963</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The height, in pixels, of the graph content</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_graphics" class="property item">
+                        <h3 class="name"><code>graphics</code></h3>
+                        <span class="type">Array</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l777"><code>app&#x2F;components&#x2F;nf-graph.js:777</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Registry of contained graphic elements such as <code>nf-line</code> or <code>nf-area</code> components.
+                    This registry is used to pool data for scaling purposes.</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_graphTransform" class="property item">
+                        <h3 class="name"><code>graphTransform</code></h3>
+                        <span class="type">String</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l977"><code>app&#x2F;components&#x2F;nf-graph.js:977</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>An SVG transform to position the graph content</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_graphWidth" class="property item">
+                        <h3 class="name"><code>graphWidth</code></h3>
+                        <span class="type">Number</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l949"><code>app&#x2F;components&#x2F;nf-graph.js:949</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The width, in pixels, of the graph content</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_graphX" class="property item">
+                        <h3 class="name"><code>graphX</code></h3>
+                        <span class="type">Number</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l917"><code>app&#x2F;components&#x2F;nf-graph.js:917</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The x coordinate position of the graph content</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_graphY" class="property item">
+                        <h3 class="name"><code>graphY</code></h3>
+                        <span class="type">Number</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l933"><code>app&#x2F;components&#x2F;nf-graph.js:933</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The y coordinate position of the graph content</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_hasData" class="property item">
+                        <h3 class="name"><code>hasData</code></h3>
+                        <span class="type">Boolean</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l907"><code>app&#x2F;components&#x2F;nf-graph.js:907</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Returns <code>true</code> if the graph has data to render. Data is conveyed
+                    to the graph by registered graphics.</p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> false</p>
+                    
+                    
+                    </div>
+                    <div id="property_hasRendered" class="property item private">
+                        <h3 class="name"><code>hasRendered</code></h3>
+                        <span class="type">Unknown</span>
+                    
+                    
+                            <span class="flag private">private</span>
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l327"><code>app&#x2F;components&#x2F;nf-graph.js:327</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_height" class="property item">
+                        <h3 class="name"><code>height</code></h3>
+                        <span class="type">Number</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l350"><code>app&#x2F;components&#x2F;nf-graph.js:350</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The height of the graph in pixels.</p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> 100</p>
+                    
+                    
+                    </div>
+                    <div id="property_isGraph" class="property item private">
+                        <h3 class="name"><code>isGraph</code></h3>
+                        <span class="type">Unknown</span>
+                    
+                    
+                            <span class="flag private">private</span>
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l313"><code>app&#x2F;components&#x2F;nf-graph.js:313</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Allows child compoenents to identify graph parent.</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_isScaleSource" class="property item private">
+                        <h3 class="name"><code>isScaleSource</code></h3>
+                        <span class="type">Unknown</span>
+                    
+                    
+                            <span class="flag private">private</span>
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l320"><code>app&#x2F;components&#x2F;nf-graph.js:320</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Identifies this graph to its children as providing scales.</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_paddingBottom" class="property item">
+                        <h3 class="name"><code>paddingBottom</code></h3>
+                        <span class="type">Number</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l382"><code>app&#x2F;components&#x2F;nf-graph.js:382</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The padding at the bottom of the graph</p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> 0</p>
+                    
+                    
+                    </div>
+                    <div id="property_paddingLeft" class="property item">
+                        <h3 class="name"><code>paddingLeft</code></h3>
+                        <span class="type">Number</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l366"><code>app&#x2F;components&#x2F;nf-graph.js:366</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The padding at the left of the graph</p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> 0</p>
+                    
+                    
+                    </div>
+                    <div id="property_paddingRight" class="property item">
+                        <h3 class="name"><code>paddingRight</code></h3>
+                        <span class="type">Number</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l374"><code>app&#x2F;components&#x2F;nf-graph.js:374</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The padding at the right of the graph</p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> 0</p>
+                    
+                    
+                    </div>
+                    <div id="property_paddingTop" class="property item">
+                        <h3 class="name"><code>paddingTop</code></h3>
+                        <span class="type">Number</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l358"><code>app&#x2F;components&#x2F;nf-graph.js:358</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The padding at the top of the graph</p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> 0</p>
+                    
+                    
+                    </div>
+                    <div id="property_parentController" class="property item">
+                        <h3 class="name"><code>parentController</code></h3>
+                        <span class="type">Ember.Controller</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l1018"><code>app&#x2F;components&#x2F;nf-graph.js:1018</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>A computed property returned the view's controller.</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_selected" class="property item">
+                        <h3 class="name"><code>selected</code></h3>
+                        <span class="type">Array</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l788"><code>app&#x2F;components&#x2F;nf-graph.js:788</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>An array of &quot;selectable&quot; graphics that have been selected within this graph.</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_selectMultiple" class="property item">
+                        <h3 class="name"><code>selectMultiple</code></h3>
+                        <span class="type">Boolean</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l333"><code>app&#x2F;components&#x2F;nf-graph.js:333</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Gets or sets the whether or not multiple selectable graphics may be
+                    selected simultaneously.</p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> false</p>
+                    
+                    
+                    </div>
+                    <div id="property_showFrets" class="property item">
+                        <h3 class="name"><code>showFrets</code></h3>
+                        <span class="type">Boolean</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l399"><code>app&#x2F;components&#x2F;nf-graph.js:399</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Determines whether to display &quot;frets&quot; in the background of
+                    the graph.</p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> false</p>
+                    
+                    
+                    </div>
+                    <div id="property_showLanes" class="property item">
+                        <h3 class="name"><code>showLanes</code></h3>
+                        <span class="type">Boolean</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l390"><code>app&#x2F;components&#x2F;nf-graph.js:390</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Determines whether to display &quot;lanes&quot; in the background of
+                    the graph.</p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> false</p>
+                    
+                    
+                    </div>
+                    <div id="property_showXAxis" class="property item">
+                        <h3 class="name"><code>showXAxis</code></h3>
+                        <span class="type">Boolean</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l804"><code>app&#x2F;components&#x2F;nf-graph.js:804</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Computed property to show xAxis. Returns <code>true</code> if an xAxis is present.</p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> false</p>
+                    
+                    
+                    </div>
+                    <div id="property_showYAxis" class="property item">
+                        <h3 class="name"><code>showYAxis</code></h3>
+                        <span class="type">Boolean</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l796"><code>app&#x2F;components&#x2F;nf-graph.js:796</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Computed property to show yAxis. Returns <code>true</code> if a yAxis is present.</p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> false</p>
+                    
+                    
+                    </div>
+                    <div id="property_width" class="property item">
+                        <h3 class="name"><code>width</code></h3>
+                        <span class="type">Number</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l342"><code>app&#x2F;components&#x2F;nf-graph.js:342</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The width of the graph in pixels.</p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> 300</p>
+                    
+                    
+                    </div>
+                    <div id="property_xAxis" class="property item">
+                        <h3 class="name"><code>xAxis</code></h3>
+                        <span class="type">Unknown</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l478"><code>app&#x2F;components&#x2F;nf-graph.js:478</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The <code>nf-x-axis</code> component is registered here if there is one present</p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> null</p>
+                    
+                    
+                    </div>
+                    <div id="property_xDataExtent" class="property item">
+                        <h3 class="name"><code>xDataExtent</code></h3>
+                        <span class="type">Array</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l707"><code>app&#x2F;components&#x2F;nf-graph.js:707</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Gets the highest and lowest x values of the graphed data in a two element array.</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_xDomain" class="property item">
+                        <h3 class="name"><code>xDomain</code></h3>
+                        <span class="type">Array</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l826"><code>app&#x2F;components&#x2F;nf-graph.js:826</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Gets the domain of x values.</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_xLogMin" class="property item">
+                        <h3 class="name"><code>xLogMin</code></h3>
+                        <span class="type">Number</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l297"><code>app&#x2F;components&#x2F;nf-graph.js:297</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The min value to use for xScaleType &quot;log&quot; if xMin &lt;= 0</p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> 0.1</p>
+                    
+                    
+                    </div>
+                    <div id="property_xMax" class="property item">
+                        <h3 class="name"><code>xMax</code></h3>
+                        <span class="type">Unknown</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l521"><code>app&#x2F;components&#x2F;nf-graph.js:521</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Gets or sets the maximum x domain value to display on the graph.
+                    Behavior depends on <code>xMaxMode</code>.</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_xMaxMode" class="property item">
+                        <h3 class="name"><code>xMaxMode</code></h3>
+                        <span class="type">String</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l561"><code>app&#x2F;components&#x2F;nf-graph.js:561</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Sets the behavior of <code>xMax</code> for the graph.</p>
+                    <h3>Possible values:</h3>
+                    <ul>
+                    <li>'auto': (default) xMax is always equal to the maximum domain value contained in the graphed data. Cannot be set.</li>
+                    <li>'fixed': xMax can be set to an exact value and will not change based on graphed data.</li>
+                    <li>'push': xMax can be set to a specific value, but will update if the maximum x value contained in the graph is greater than
+                    what xMax is currently set to.</li>
+                    <li>'push-tick': xMax can be set to a specific value, but will update to next &quot;nice&quot; tick if the maximum x value contained in
+                    the graph is greater than that xMax is set to.</li>
+                    </ul>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> &#x27;auto&#x27;</p>
+                    
+                    
+                    </div>
+                    <div id="property_xMin" class="property item">
+                        <h3 class="name"><code>xMin</code></h3>
+                        <span class="type">Unknown</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l514"><code>app&#x2F;components&#x2F;nf-graph.js:514</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Gets or sets the minimum x domain value to display on the graph.
+                    Behavior depends on <code>xMinMode</code>.</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_xMinMode" class="property item">
+                        <h3 class="name"><code>xMinMode</code></h3>
+                        <span class="type">String</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l543"><code>app&#x2F;components&#x2F;nf-graph.js:543</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Sets the behavior of <code>xMin</code> for the graph.</p>
+                    <h3>Possible values:</h3>
+                    <ul>
+                    <li>'auto': (default) xMin is always equal to the minimum domain value contained in the graphed data. Cannot be set.</li>
+                    <li>'fixed': xMin can be set to an exact value and will not change based on graphed data.</li>
+                    <li>'push': xMin can be set to a specific value, but will update if the minimum x value contained in the graph is less than
+                    what xMin is currently set to.</li>
+                    <li>'push-tick': xMin can be set to a specific value, but will update to next &quot;nice&quot; tick if the minimum x value contained in
+                    the graph is less than that xMin is set to.</li>
+                    </ul>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> &#x27;auto&#x27;</p>
+                    
+                    
+                    </div>
+                    <div id="property_xOrdinalOuterPadding" class="property item">
+                        <h3 class="name"><code>xOrdinalOuterPadding</code></h3>
+                        <span class="type">Number</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l446"><code>app&#x2F;components&#x2F;nf-graph.js:446</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The padding at the ends of the domain data when <code>xScaleType</code> is <code>'ordinal'</code></p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> 0.1</p>
+                    
+                    
+                    </div>
+                    <div id="property_xOrdinalPadding" class="property item">
+                        <h3 class="name"><code>xOrdinalPadding</code></h3>
+                        <span class="type">Number</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l438"><code>app&#x2F;components&#x2F;nf-graph.js:438</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The padding between value steps when <code>xScaleType</code> is <code>'ordinal'</code></p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> 0.1</p>
+                    
+                    
+                    </div>
+                    <div id="property_xPowerExponent" class="property item">
+                        <h3 class="name"><code>xPowerExponent</code></h3>
+                        <span class="type">Number</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l281"><code>app&#x2F;components&#x2F;nf-graph.js:281</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The exponent to use for xScaleType &quot;pow&quot; or &quot;power&quot;.</p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> 3</p>
+                    
+                    
+                    </div>
+                    <div id="property_xRange" class="property item">
+                        <h3 class="name"><code>xRange</code></h3>
+                        <span class="type">Array</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l896"><code>app&#x2F;components&#x2F;nf-graph.js:896</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The x range of the graph in pixels. The min and max pixel values
+                    in an array form.</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_xScale" class="property item">
+                        <h3 class="name"><code>xScale</code></h3>
+                        <span class="type">Function</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l842"><code>app&#x2F;components&#x2F;nf-graph.js:842</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Gets the current xScale used to draw the graph.</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_xScaleFactory" class="property item">
+                        <h3 class="name"><code>xScaleFactory</code></h3>
+                        <span class="type">Unknown</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l812"><code>app&#x2F;components&#x2F;nf-graph.js:812</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Gets a function to create the xScale</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_xScaleType" class="property item">
+                        <h3 class="name"><code>xScaleType</code></h3>
+                        <span class="type">String</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l408"><code>app&#x2F;components&#x2F;nf-graph.js:408</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The type of scale to use for x values.</p>
+                    <p>Possible Values:</p>
+                    <ul>
+                    <li><code>'linear'</code> - a standard linear scale</li>
+                    <li><code>'log'</code> - a logarithmic scale</li>
+                    <li><code>'power'</code> - a power-based scale (exponent = 3)</li>
+                    <li><code>'ordinal'</code> - an ordinal scale, used for ordinal data. required for bar graphs.</li>
+                    </ul>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> &#x27;linear&#x27;</p>
+                    
+                    
+                    </div>
+                    <div id="property_xUniqueData" class="property item">
+                        <h3 class="name"><code>xUniqueData</code></h3>
+                        <span class="type">Array</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l729"><code>app&#x2F;components&#x2F;nf-graph.js:729</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_yAxis" class="property item">
+                        <h3 class="name"><code>yAxis</code></h3>
+                        <span class="type">Unknown</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l470"><code>app&#x2F;components&#x2F;nf-graph.js:470</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>the <code>nf-y-axis</code> component is registered here if there is one present</p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> null</p>
+                    
+                    
+                    </div>
+                    <div id="property_yDataExtent" class="property item">
+                        <h3 class="name"><code>yDataExtent</code></h3>
+                        <span class="type">Array</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l718"><code>app&#x2F;components&#x2F;nf-graph.js:718</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Gets the highest and lowest y values of the graphed data in a two element array.</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_yDomain" class="property item">
+                        <h3 class="name"><code>yDomain</code></h3>
+                        <span class="type">Array</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l834"><code>app&#x2F;components&#x2F;nf-graph.js:834</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Gets the domain of y values.</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_yLogMin" class="property item">
+                        <h3 class="name"><code>yLogMin</code></h3>
+                        <span class="type">Number</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l305"><code>app&#x2F;components&#x2F;nf-graph.js:305</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The min value to use for yScaleType &quot;log&quot; if yMin &lt;= 0</p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> 0.1</p>
+                    
+                    
+                    </div>
+                    <div id="property_yMax" class="property item">
+                        <h3 class="name"><code>yMax</code></h3>
+                        <span class="type">Unknown</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l535"><code>app&#x2F;components&#x2F;nf-graph.js:535</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Gets or sets the maximum y domain value to display on the graph.
+                    Behavior depends on <code>yMaxMode</code>.</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_yMaxMode" class="property item">
+                        <h3 class="name"><code>yMaxMode</code></h3>
+                        <span class="type">String</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l597"><code>app&#x2F;components&#x2F;nf-graph.js:597</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Sets the behavior of <code>yMax</code> for the graph.</p>
+                    <h3>Possible values:</h3>
+                    <ul>
+                    <li>'auto': (default) yMax is always equal to the maximum domain value contained in the graphed data. Cannot be set.</li>
+                    <li>'fixed': yMax can be set to an exact value and will not change based on graphed data.</li>
+                    <li>'push': yMax can be set to a specific value, but will update if the maximum y value contained in the graph is greater than
+                    what yMax is currently set to.</li>
+                    <li>'push-tick': yMax can be set to a specific value, but will update to next &quot;nice&quot; tick if the maximum y value contained in
+                    the graph is greater than that yMax is set to.</li>
+                    </ul>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> &#x27;auto&#x27;</p>
+                    
+                    
+                    </div>
+                    <div id="property_yMin" class="property item">
+                        <h3 class="name"><code>yMin</code></h3>
+                        <span class="type">Unknown</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l528"><code>app&#x2F;components&#x2F;nf-graph.js:528</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Gets or sets the minimum y domain value to display on the graph.
+                    Behavior depends on <code>yMinMode</code>.</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_yMinMode" class="property item">
+                        <h3 class="name"><code>yMinMode</code></h3>
+                        <span class="type">String</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l579"><code>app&#x2F;components&#x2F;nf-graph.js:579</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Sets the behavior of <code>yMin</code> for the graph.</p>
+                    <h3>Possible values:</h3>
+                    <ul>
+                    <li>'auto': (default) yMin is always equal to the minimum domain value contained in the graphed data. Cannot be set.</li>
+                    <li>'fixed': yMin can be set to an exact value and will not change based on graphed data.</li>
+                    <li>'push': yMin can be set to a specific value, but will update if the minimum y value contained in the graph is less than
+                    what yMin is currently set to.</li>
+                    <li>'push-tick': yMin can be set to a specific value, but will update to next &quot;nice&quot; tick if the minimum y value contained in
+                    the graph is less than that yMin is set to.</li>
+                    </ul>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> &#x27;auto&#x27;</p>
+                    
+                    
+                    </div>
+                    <div id="property_yOrdinalOuterPadding" class="property item">
+                        <h3 class="name"><code>yOrdinalOuterPadding</code></h3>
+                        <span class="type">Number</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l462"><code>app&#x2F;components&#x2F;nf-graph.js:462</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The padding at the ends of the domain data when <code>yScaleType</code> is <code>'ordinal'</code></p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> 0.1</p>
+                    
+                    
+                    </div>
+                    <div id="property_yOrdinalPadding" class="property item">
+                        <h3 class="name"><code>yOrdinalPadding</code></h3>
+                        <span class="type">Number</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l454"><code>app&#x2F;components&#x2F;nf-graph.js:454</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The padding between value steps when <code>xScaleType</code> is <code>'ordinal'</code></p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> 0.1</p>
+                    
+                    
+                    </div>
+                    <div id="property_yPowerExponent" class="property item">
+                        <h3 class="name"><code>yPowerExponent</code></h3>
+                        <span class="type">Number</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l289"><code>app&#x2F;components&#x2F;nf-graph.js:289</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The exponent to use for yScaleType &quot;pow&quot; or &quot;power&quot;.</p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> 3</p>
+                    
+                    
+                    </div>
+                    <div id="property_yRange" class="property item">
+                        <h3 class="name"><code>yRange</code></h3>
+                        <span class="type">Array</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l885"><code>app&#x2F;components&#x2F;nf-graph.js:885</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The y range of the graph in pixels. The min and max pixel values
+                    in an array form.</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_yScale" class="property item">
+                        <h3 class="name"><code>yScale</code></h3>
+                        <span class="type">Function</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l850"><code>app&#x2F;components&#x2F;nf-graph.js:850</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Gets the current yScale used to draw the graph.</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_yScaleFactory" class="property item">
+                        <h3 class="name"><code>yScaleFactory</code></h3>
+                        <span class="type">Unknown</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l819"><code>app&#x2F;components&#x2F;nf-graph.js:819</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Gets a function to create the yScale</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_yScaleType" class="property item">
+                        <h3 class="name"><code>yScaleType</code></h3>
+                        <span class="type">String</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l423"><code>app&#x2F;components&#x2F;nf-graph.js:423</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The type of scale to use for y values.</p>
+                    <p>Possible Values:</p>
+                    <ul>
+                    <li><code>'linear'</code> - a standard linear scale</li>
+                    <li><code>'log'</code> - a logarithmic scale</li>
+                    <li><code>'power'</code> - a power-based scale (exponent = 3)</li>
+                    <li><code>'ordinal'</code> - an ordinal scale, used for ordinal data. required for bar graphs.</li>
+                    </ul>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> &#x27;linear&#x27;</p>
+                    
+                    
+                    </div>
+                    <div id="property_yUniqueData" class="property item">
+                        <h3 class="name"><code>yUniqueData</code></h3>
+                        <span class="type">Array</span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/app_components_nf-graph.js.html#l748"><code>app&#x2F;components&#x2F;nf-graph.js:748</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            
+                        </div>
+                    
+                    
+                    
+                    </div>
+            </div>
+
+
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+[ignore]
+<PROJECT_ROOT>/lib/.*
+<PROJECT_ROOT>/node_modules/conventional-changelog-core/test/.*
+<PROJECT_ROOT>/node_modules/flow-coverage-report/.*

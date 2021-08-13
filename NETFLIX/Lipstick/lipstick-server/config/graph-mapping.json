@@ -1,0 +1,79 @@
+{
+    "graph": {
+      "properties": {
+        "created_at": {
+          "type": "date",
+          "format": "epoch_millis"
+        },
+        "edges": {
+          "properties": {
+            "properties": {
+	    	"type": "object"
+            },
+            "u": {
+              "type": "keyword",
+              "index": true
+            },
+            "v": {
+              "type": "keyword",
+              "index": true
+            }
+          }
+        },
+        "id": {
+          "type": "keyword",
+          "index": true
+        },
+        "name": {
+          "type": "keyword",
+          "index": true
+        },
+        "nodes": {
+          "properties": {
+            "child": {
+              "type": "text"
+            },
+            "id": {
+              "type": "keyword",
+              "index": true
+            },
+            "properties": {
+                  "type": "object"
+            },
+            "type": {
+              "type": "text"
+            }
+          }
+        },
+        "properties": {
+            "type": "object"
+        },
+        "status": {
+          "properties": {
+            "endTime": {
+              "type": "date",
+              "format": "epoch_millis"
+            },
+            "heartbeatTime": {
+              "type": "date",
+              "format": "epoch_millis"
+            },
+            "progress": {
+              "type": "integer"
+            },
+            "startTime": {
+              "type": "date",
+              "format": "epoch_millis"
+            },
+            "statusText": {
+              "type": "keyword"
+            }
+          }
+        },
+        "updated_at": {
+          "type": "date",
+          "format": "epoch_millis"
+        }
+      }
+    }
+}

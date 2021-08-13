@@ -1,0 +1,708 @@
+var ModelRoot = require("./ModelRoot");
+var ModelDataSourceAdapter = require("./ModelDataSourceAdapter");
+
+var RequestQueue = require("./request/RequestQueueV2");
+var ModelResponse = require("./response/ModelResponse");
+var CallResponse = require("./response/CallResponse");
+var InvalidateResponse = require("./response/InvalidateResponse");
+
+var TimeoutScheduler = require("./schedulers/TimeoutScheduler");
+var ImmediateScheduler = require("./schedulers/ImmediateScheduler");
+
+var collectLru = require("./lru/collect");
+var pathSyntax = require("falcor-path-syntax");
+
+var getSize = require("./support/getSize");
+var isObject = require("./support/isObject");
+var isPrimitive = require("./support/isPrimitive");
+var isJSONEnvelope = require("./support/isJSONEnvelope");
+var isJSONGraphEnvelope = require("./support/isJSONGraphEnvelope");
+
+var setCache = require("./set/setPathMaps");
+var setJSONGraphs = require("./set/setJSONGraphs");
+var jsong = require("falcor-json-graph");
+var ID = 0;
+var validateInput = require("./support/validateInput");
+var noOp = function() {};
+var getCache = require("./get/getCache");
+var get = require("./get");
+var GET_VALID_INPUT = require("./response/get/validInput");
+
+module.exports = Model;
+
+Model.ref = jsong.ref;
+Model.atom = jsong.atom;
+Model.error = jsong.error;
+Model.pathValue = jsong.pathValue;
+
+/**
+ * This callback is invoked when the Model's cache is changed.
+ * @callback Model~onChange
+ */
+
+/**
+ * This function is invoked on every JSONGraph Error retrieved from the DataSource. This function allows Error objects
+ * to be transformed before being stored in the Model's cache.
+ * @callback Model~errorSelector
+ * @param {Object} jsonGraphError - the JSONGraph Error object to transform before it is stored in the Model's cache.
+ * @returns {Object} the JSONGraph Error object to store in the Model cache.
+ */
+
+/**
+ * This function is invoked every time a value in the Model cache is about to be replaced with a new value. If the
+ * function returns true, the existing value is replaced with a new value and the version flag on all of the value's
+ * ancestors in the tree are incremented.
+ * @callback Model~comparator
+ * @param {Object} existingValue - the current value in the Model cache.
+ * @param {Object} newValue - the value about to be set into the Model cache.
+ * @returns {Boolean} the Boolean value indicating whether the new value and the existing value are equal.
+ */
+
+/**
+ * @typedef {Object} Options
+ * @property {DataSource} [source] A data source to retrieve and manage the {@link JSONGraph}
+ * @property {JSONGraph} [cache] Initial state of the {@link JSONGraph}
+ * @property {number} [maxSize] The maximum size of the cache before cache pruning is performed. The unit of this value
+ * depends on the algorithm used to calculate the `$size` field on graph nodes by the backing source for the Model's
+ * DataSource. If no DataSource is used, or the DataSource does not provide `$size` values, a naive algorithm is used
+ * where the cache size is calculated in terms of graph node count and, for arrays and strings, element count.
+ * @property {number} [collectRatio] The ratio of the maximum size to collect when the maxSize is exceeded.
+ * @property {number} [maxRetries] The maximum number of times that the Model will attempt to retrieve the value from
+ * its DataSource. Defaults to `3`.
+ * @property {Model~errorSelector} [errorSelector] A function used to translate errors before they are returned
+ * @property {Model~onChange} [onChange] A function called whenever the Model's cache is changed
+ * @property {Model~comparator} [comparator] A function called whenever a value in the Model's cache is about to be
+ * replaced with a new value.
+ * @property {boolean} [disablePathCollapse] Disables the algorithm that collapses paths on GET requests. The algorithm
+ * is enabled by default. This is a relatively computationally expensive feature.
+ * @property {boolean} [disableRequestDeduplication] Disables the algorithm that deduplicates paths across in-flight GET
+ * requests. The algorithm is enabled by default. This is a computationally expensive feature.
+ */
+
+/**
+ * A Model object is used to execute commands against a {@link JSONGraph} object. {@link Model}s can work with a local JSONGraph cache, or it can work with a remote {@link JSONGraph} object through a {@link DataSource}.
+ * @constructor
+ * @param {Options} [o] - a set of options to customize behavior
+ */
+function Model(o) {
+    var options = o || {};
+    this._root = options._root || new ModelRoot(options);
+    this._path = options.path || options._path || [];
+    this._source = options.source || options._source;
+    this._request =
+        options.request || options._request || new RequestQueue(this, options.scheduler || new ImmediateScheduler());
+    this._ID = ID++;
+
+    if (typeof options.maxSize === "number") {
+        this._maxSize = options.maxSize;
+    } else {
+        this._maxSize = options._maxSize || Model.prototype._maxSize;
+    }
+
+    if (typeof options.maxRetries === "number") {
+        this._maxRetries = options.maxRetries;
+    } else {
+        this._maxRetries = options._maxRetries || Model.prototype._maxRetries;
+    }
+
+    if (typeof options.collectRatio === "number") {
+        this._collectRatio = options.collectRatio;
+    } else {
+        this._collectRatio = options._collectRatio || Model.prototype._collectRatio;
+    }
+
+    if (options.boxed || options.hasOwnProperty("_boxed")) {
+        this._boxed = options.boxed || options._boxed;
+    }
+
+    if (options.materialized || options.hasOwnProperty("_materialized")) {
+        this._materialized = options.materialized || options._materialized;
+    }
+
+    if (typeof options.treatErrorsAsValues === "boolean") {
+        this._treatErrorsAsValues = options.treatErrorsAsValues;
+    } else if (options.hasOwnProperty("_treatErrorsAsValues")) {
+        this._treatErrorsAsValues = options._treatErrorsAsValues;
+    } else {
+        this._treatErrorsAsValues = false;
+    }
+
+    if (typeof options.disablePathCollapse === "boolean") {
+        this._enablePathCollapse = !options.disablePathCollapse;
+    } else if (options.hasOwnProperty("_enablePathCollapse")) {
+        this._enablePathCollapse = options._enablePathCollapse;
+    } else {
+        this._enablePathCollapse = true;
+    }
+
+    if (typeof options.disableRequestDeduplication === "boolean") {
+        this._enableRequestDeduplication = !options.disableRequestDeduplication;
+    } else if (options.hasOwnProperty("_enableRequestDeduplication")) {
+        this._enableRequestDeduplication = options._enableRequestDeduplication;
+    } else {
+        this._enableRequestDeduplication = true;
+    }
+
+    this._useServerPaths = options._useServerPaths || false;
+
+    this._allowFromWhenceYouCame = options.allowFromWhenceYouCame || options._allowFromWhenceYouCame || false;
+
+    this._treatDataSourceErrorsAsJSONGraphErrors = options._treatDataSourceErrorsAsJSONGraphErrors || false;
+
+    if (options.cache) {
+        this.setCache(options.cache);
+    }
+}
+
+Model.prototype.constructor = Model;
+
+Model.prototype._materialized = false;
+Model.prototype._boxed = false;
+Model.prototype._progressive = false;
+Model.prototype._treatErrorsAsValues = false;
+Model.prototype._maxSize = Math.pow(2, 53) - 1;
+Model.prototype._maxRetries = 3;
+Model.prototype._collectRatio = 0.75;
+Model.prototype._enablePathCollapse = true;
+Model.prototype._enableRequestDeduplication = true;
+
+/**
+ * The get method retrieves several {@link Path}s or {@link PathSet}s from a {@link Model}. The get method loads each value into a JSON object and returns in a ModelResponse.
+ * @function
+ * @param {...PathSet} path - the path(s) to retrieve
+ * @return {ModelResponse.<JSONEnvelope>} - the requested data as JSON
+ */
+Model.prototype.get = require("./response/get");
+
+/**
+ * _getOptimizedBoundPath is an extension point for internal users to polyfill
+ * legacy soft-bind behavior, as opposed to deref (hardBind). Current falcor
+ * only supports deref, and assumes _path to be a fully optimized path.
+ * @function
+ * @private
+ * @return {Path} - fully optimized bound path for the model
+ */
+Model.prototype._getOptimizedBoundPath = function _getOptimizedBoundPath() {
+    return this._path ? this._path.slice() : this._path;
+};
+
+/**
+ * The get method retrieves several {@link Path}s or {@link PathSet}s from a {@link Model}. The get method loads each value into a JSON object and returns in a ModelResponse.
+ * @function
+ * @private
+ * @param {Array.<PathSet>} paths - the path(s) to retrieve
+ * @return {ModelResponse.<JSONEnvelope>} - the requested data as JSON
+ */
+Model.prototype._getWithPaths = require("./response/get/getWithPaths");
+
+/**
+ * Sets the value at one or more places in the JSONGraph model. The set method accepts one or more {@link PathValue}s, each of which is a combination of a location in the document and the value to place there.  In addition to accepting  {@link PathValue}s, the set method also returns the values after the set operation is complete.
+ * @function
+ * @return {ModelResponse.<JSONEnvelope>} - an {@link Observable} stream containing the values in the JSONGraph model after the set was attempted
+ */
+Model.prototype.set = require("./response/set");
+
+/**
+ * The preload method retrieves several {@link Path}s or {@link PathSet}s from a {@link Model} and loads them into the Model cache.
+ * @function
+ * @param {...PathSet} path - the path(s) to retrieve
+ * @return {ModelResponse.<JSONEnvelope>} - a ModelResponse that completes when the data has been loaded into the cache.
+ */
+Model.prototype.preload = function preload() {
+    var out = validateInput(arguments, GET_VALID_INPUT, "preload");
+    if (out !== true) {
+        return new ModelResponse(function(o) {
+            o.onError(out);
+        });
+    }
+    var args = Array.prototype.slice.call(arguments);
+    var self = this;
+    return new ModelResponse(function(obs) {
+        return self.get.apply(self, args).subscribe(
+            function() {},
+            function(err) {
+                obs.onError(err);
+            },
+            function() {
+                obs.onCompleted();
+            }
+        );
+    });
+};
+
+/**
+ * Invokes a function in the JSON Graph.
+ * @function
+ * @param {Path} functionPath - the path to the function to invoke
+ * @param {Array.<Object>} args - the arguments to pass to the function
+ * @param {Array.<PathSet>} refPaths - the paths to retrieve from the JSON Graph References in the message returned from the function
+ * @param {Array.<PathSet>} extraPaths - additional paths to retrieve after successful function execution
+ * @return {ModelResponse.<JSONEnvelope> - a JSONEnvelope contains the values returned from the function
+ */
+Model.prototype.call = function call() {
+    var args;
+    var argsIdx = -1;
+    var argsLen = arguments.length;
+    args = new Array(argsLen);
+    while (++argsIdx < argsLen) {
+        var arg = arguments[argsIdx];
+        args[argsIdx] = arg;
+        var argType = typeof arg;
+        if (
+            (argsIdx > 1 && !Array.isArray(arg)) ||
+            (argsIdx === 0 && !Array.isArray(arg) && argType !== "string") ||
+            (argsIdx === 1 && !Array.isArray(arg) && !isPrimitive(arg))
+        ) {
+            /* eslint-disable no-loop-func */
+            return new ModelResponse(function(o) {
+                o.onError(new Error("Invalid argument"));
+            });
+            /* eslint-enable no-loop-func */
+        }
+    }
+
+    return new CallResponse(this, args[0], args[1], args[2], args[3]);
+};
+
+/**
+ * The invalidate method synchronously removes several {@link Path}s or {@link PathSet}s from a {@link Model} cache.
+ * @function
+ * @param {...PathSet} path - the  paths to remove from the {@link Model}'s cache.
+ */
+Model.prototype.invalidate = function invalidate() {
+    var args;
+    var argsIdx = -1;
+    var argsLen = arguments.length;
+    args = [];
+    while (++argsIdx < argsLen) {
+        args[argsIdx] = pathSyntax.fromPath(arguments[argsIdx]);
+        if (!Array.isArray(args[argsIdx]) || !args[argsIdx].length) {
+            throw new Error("Invalid argument");
+        }
+    }
+
+    // creates the obs, subscribes and will throw the errors if encountered.
+    new InvalidateResponse(this, args).subscribe(noOp, function(e) {
+        throw e;
+    });
+};
+
+/**
+ * Returns a new {@link Model} bound to a location within the {@link
+ * JSONGraph}. The bound location is never a {@link Reference}: any {@link
+ * Reference}s encountered while resolving the bound {@link Path} are always
+ * replaced with the {@link Reference}s target value. For subsequent operations
+ * on the {@link Model}, all paths will be evaluated relative to the bound
+ * path. Deref allows you to:
+ * - Expose only a fragment of the {@link JSONGraph} to components, rather than
+ *   the entire graph
+ * - Hide the location of a {@link JSONGraph} fragment from components
+ * - Optimize for executing multiple operations and path looksup at/below the
+ *   same location in the {@link JSONGraph}
+ * @method
+ * @param {Object} responseObject - an object previously retrieved from the
+ * Model
+ * @return {Model} - the dereferenced {@link Model}
+ * @example
+var Model = falcor.Model;
+var model = new Model({
+  cache: {
+    users: [
+      Model.ref(["usersById", 32])
+    ],
+    usersById: {
+      32: {
+        name: "Steve",
+        surname: "McGuire"
+      }
+    }
+  }
+});
+
+model.
+    get(['users', 0, 'name']).
+    subscribe(function(jsonEnv) {
+        var userModel = model.deref(jsonEnv.json.users[0]);
+        console.log(model.getPath());
+        console.log(userModel.getPath());
+   });
+});
+
+// prints the following:
+// []
+// ["usersById", 32] - because userModel refers to target of reference at ["users", 0]
+ */
+Model.prototype.deref = require("./deref");
+
+/**
+ * A dereferenced model can become invalid when the reference from which it was
+ * built has been removed/collected/expired/etc etc.  To fix the issue, a from
+ * the parent request should be made (no parent, then from the root) for a valid
+ * path and re-dereference performed to update what the model is bound too.
+ *
+ * @method
+ * @private
+ * @return {Boolean} - If the currently deref'd model is still considered a
+ * valid deref.
+ */
+Model.prototype._hasValidParentReference = require("./deref/hasValidParentReference");
+
+/**
+ * Get data for a single {@link Path}.
+ * @param {Path} path - the path to retrieve
+ * @return {Observable.<*>} - the value for the path
+ * @example
+ var model = new falcor.Model({source: new HttpDataSource("/model.json") });
+
+ model.
+     getValue('user.name').
+     subscribe(function(name) {
+         console.log(name);
+     });
+
+ // The code above prints "Jim" to the console.
+ */
+Model.prototype.getValue = require("./get/getValue");
+
+/**
+ * Set value for a single {@link Path}.
+ * @param {Path} path - the path to set
+ * @param {Object} value - the value to set
+ * @return {Observable.<*>} - the value for the path
+ * @example
+ var model = new falcor.Model({source: new HttpDataSource("/model.json") });
+
+ model.
+     setValue('user.name', 'Jim').
+     subscribe(function(name) {
+         console.log(name);
+     });
+
+ // The code above prints "Jim" to the console.
+ */
+Model.prototype.setValue = require("./set/setValue");
+
+// TODO: Does not throw if given a PathSet rather than a Path, not sure if it should or not.
+// TODO: Doc not accurate? I was able to invoke directly against the Model, perhaps because I don't have a data source?
+// TODO: Not clear on what it means to "retrieve objects in addition to JSONGraph values"
+/**
+ * Synchronously retrieves a single path from the local {@link Model} only and will not retrieve missing paths from the {@link DataSource}. This method can only be invoked when the {@link Model} does not have a {@link DataSource} or from within a selector function. See {@link Model.prototype.get}. The getValueSync method differs from the asynchronous get methods (ex. get, getValues) in that it can be used to retrieve objects in addition to JSONGraph values.
+ * @method
+ * @private
+ * @arg {Path} path - the path to retrieve
+ * @return {*} - the value for the specified path
+ */
+Model.prototype._getValueSync = require("./get/sync");
+
+/**
+ * @private
+ */
+Model.prototype._setValueSync = require("./set/sync");
+
+/**
+ * @private
+ */
+Model.prototype._derefSync = require("./deref/sync");
+
+/**
+ * Set the local cache to a {@link JSONGraph} fragment. This method can be a useful way of mocking a remote document, or restoring the local cache from a previously stored state.
+ * @param {JSONGraph} jsonGraph - the {@link JSONGraph} fragment to use as the local cache
+ */
+Model.prototype.setCache = function modelSetCache(cacheOrJSONGraphEnvelope) {
+    var cache = this._root.cache;
+    if (cacheOrJSONGraphEnvelope !== cache) {
+        var modelRoot = this._root;
+        var boundPath = this._path;
+        this._path = [];
+        this._root.cache = {};
+        if (typeof cache !== "undefined") {
+            collectLru(modelRoot, modelRoot.expired, getSize(cache), 0);
+        }
+        var out;
+        if (isJSONGraphEnvelope(cacheOrJSONGraphEnvelope)) {
+            out = setJSONGraphs(this, [cacheOrJSONGraphEnvelope])[0];
+        } else if (isJSONEnvelope(cacheOrJSONGraphEnvelope)) {
+            out = setCache(this, [cacheOrJSONGraphEnvelope])[0];
+        } else if (isObject(cacheOrJSONGraphEnvelope)) {
+            out = setCache(this, [{ json: cacheOrJSONGraphEnvelope }])[0];
+        }
+
+        // performs promotion without producing output.
+        if (out) {
+            get.getWithPathsAsPathMap(this, out, []);
+        }
+        this._path = boundPath;
+    } else if (typeof cache === "undefined") {
+        this._root.cache = {};
+    }
+    return this;
+};
+
+/**
+ * Get the local {@link JSONGraph} cache. This method can be a useful to store the state of the cache.
+ * @param {...Array.<PathSet>} [pathSets] - The path(s) to retrieve. If no paths are specified, the entire {@link JSONGraph} is returned.
+ * @return {JSONGraph} all of the {@link JSONGraph} data in the {@link Model} cache.
+ * @example
+ // Storing the boxshot of the first 10 titles in the first 10 genreLists to local storage.
+ localStorage.setItem('cache', JSON.stringify(model.getCache("genreLists[0...10][0...10].boxshot")));
+ */
+Model.prototype.getCache = function _getCache() {
+    var paths = Array.prototype.slice.call(arguments);
+    if (paths.length === 0) {
+        return getCache(this._root.cache);
+    }
+
+    var result = [{}];
+    var path = this._path;
+    get.getWithPathsAsJSONGraph(this, paths, result);
+    this._path = path;
+    return result[0].jsonGraph;
+};
+
+/**
+ * Reset cache maxSize. When the new maxSize is smaller than the old force a collect.
+ * @param {Number} maxSize - the new maximum cache size
+ */
+Model.prototype._setMaxSize = function setMaxSize(maxSize) {
+    var oldMaxSize = this._maxSize;
+    this._maxSize = maxSize;
+    if (maxSize < oldMaxSize) {
+        var modelRoot = this._root;
+        var modelCache = modelRoot.cache;
+        // eslint-disable-next-line no-cond-assign
+        var currentVersion = modelCache.$_version;
+        collectLru(
+            modelRoot,
+            modelRoot.expired,
+            getSize(modelCache),
+            this._maxSize,
+            this._collectRatio,
+            currentVersion
+        );
+    }
+};
+
+/**
+ * Retrieves a number which is incremented every single time a value is changed underneath the Model or the object at an optionally-provided Path beneath the Model.
+ * @param {Path?} path - a path at which to retrieve the version number
+ * @return {Number} a version number which changes whenever a value is changed underneath the Model or provided Path
+ */
+Model.prototype.getVersion = function getVersion(pathArg) {
+    var path = (pathArg && pathSyntax.fromPath(pathArg)) || [];
+    if (Array.isArray(path) === false) {
+        throw new Error("Model#getVersion must be called with an Array path.");
+    }
+    if (this._path.length) {
+        path = this._path.concat(path);
+    }
+    return this._getVersion(this, path);
+};
+
+Model.prototype._syncCheck = function syncCheck(name) {
+    if (Boolean(this._source) && this._root.syncRefCount <= 0 && this._root.unsafeMode === false) {
+        throw new Error("Model#" + name + " may only be called within the context of a request selector.");
+    }
+    return true;
+};
+
+/* eslint-disable guard-for-in */
+Model.prototype._clone = function cloneModel(opts) {
+    var clone = new this.constructor(this);
+    for (var key in opts) {
+        var value = opts[key];
+        if (value === "delete") {
+            delete clone[key];
+        } else {
+            clone[key] = value;
+        }
+    }
+    clone.setCache = void 0;
+    return clone;
+};
+/* eslint-enable */
+
+/**
+ * Returns a clone of the {@link Model} that enables batching. Within the configured time period,
+ * paths for get operations are collected and sent to the {@link DataSource} in a batch. Batching
+ * can be more efficient if the {@link DataSource} access the network, potentially reducing the
+ * number of HTTP requests to the server.
+ *
+ * @param {?Scheduler|number} schedulerOrDelay - Either a {@link Scheduler} that determines when to
+ * send a batch to the {@link DataSource}, or the number in milliseconds to collect a batch before
+ * sending to the {@link DataSource}. If this parameter is omitted, then batch collection ends at
+ * the end of the next tick.
+ * @return {Model} a Model which schedules a batch of get requests to the DataSource.
+ */
+Model.prototype.batch = function batch(schedulerOrDelay) {
+    var scheduler;
+    if (typeof schedulerOrDelay === "number") {
+        scheduler = new TimeoutScheduler(Math.round(Math.abs(schedulerOrDelay)));
+    } else if (!schedulerOrDelay || !schedulerOrDelay.schedule) {
+        scheduler = new TimeoutScheduler(1);
+    } else {
+        scheduler = schedulerOrDelay;
+    }
+
+    var clone = this._clone();
+    clone._request = new RequestQueue(clone, scheduler);
+
+    return clone;
+};
+
+/**
+ * Returns a clone of the {@link Model} that disables batching. This is the default mode. Each get operation will be executed on the {@link DataSource} separately.
+ * @name unbatch
+ * @memberof Model.prototype
+ * @function
+ * @return {Model} a {@link Model} that batches requests of the same type and sends them to the data source together
+ */
+Model.prototype.unbatch = function unbatch() {
+    var clone = this._clone();
+    clone._request = new RequestQueue(clone, new ImmediateScheduler());
+    return clone;
+};
+
+/**
+ * Returns a clone of the {@link Model} that treats errors as values. Errors will be reported in the same callback used to report data. Errors will appear as objects in responses, rather than being sent to the {@link Observable~onErrorCallback} callback of the {@link ModelResponse}.
+ * @return {Model}
+ */
+Model.prototype.treatErrorsAsValues = function treatErrorsAsValues() {
+    return this._clone({
+        _treatErrorsAsValues: true
+    });
+};
+
+/**
+ * Adapts a Model to the {@link DataSource} interface.
+ * @return {DataSource}
+ * @example
+var model =
+    new falcor.Model({
+        cache: {
+            user: {
+                name: "Steve",
+                surname: "McGuire"
+            }
+        }
+    }),
+    proxyModel = new falcor.Model({ source: model.asDataSource() });
+
+// Prints "Steve"
+proxyModel.getValue("user.name").
+    then(function(name) {
+        console.log(name);
+    });
+ */
+Model.prototype.asDataSource = function asDataSource() {
+    return new ModelDataSourceAdapter(this);
+};
+
+Model.prototype._materialize = function materialize() {
+    return this._clone({
+        _materialized: true
+    });
+};
+
+Model.prototype._dematerialize = function dematerialize() {
+    return this._clone({
+        _materialized: "delete"
+    });
+};
+
+/**
+ * Returns a clone of the {@link Model} that boxes values returning the wrapper ({@link Atom}, {@link Reference}, or {@link Error}), rather than the value inside it. This allows any metadata attached to the wrapper to be inspected.
+ * @return {Model}
+ */
+Model.prototype.boxValues = function boxValues() {
+    return this._clone({
+        _boxed: true
+    });
+};
+
+/**
+ * Returns a clone of the {@link Model} that unboxes values, returning the value inside of the wrapper ({@link Atom}, {@link Reference}, or {@link Error}), rather than the wrapper itself. This is the default mode.
+ * @return {Model}
+ */
+Model.prototype.unboxValues = function unboxValues() {
+    return this._clone({
+        _boxed: "delete"
+    });
+};
+
+/**
+ * Returns a clone of the {@link Model} that only uses the local {@link JSONGraph} and never uses a {@link DataSource} to retrieve missing paths.
+ * @return {Model}
+ */
+Model.prototype.withoutDataSource = function withoutDataSource() {
+    return this._clone({
+        _source: "delete"
+    });
+};
+
+Model.prototype.toJSON = function toJSON() {
+    return {
+        $type: "ref",
+        value: this._path
+    };
+};
+
+/**
+ * Returns the {@link Path} to the object within the JSON Graph that this Model references.
+ * @return {Path}
+ * @example
+var Model = falcor.Model;
+var model = new Model({
+  cache: {
+    users: [
+      Model.ref(["usersById", 32])
+    ],
+    usersById: {
+      32: {
+        name: "Steve",
+        surname: "McGuire"
+      }
+    }
+  }
+});
+
+model.
+    get(['users', 0, 'name']).
+    subscribe(function(jsonEnv) {
+        var userModel = model.deref(jsonEnv.json.users[0]);
+        console.log(model.getPath());
+        console.log(userModel.getPath());
+   });
+});
+
+// prints the following:
+// []
+// ["usersById", 32] - because userModel refers to target of reference at ["users", 0]
+ */
+Model.prototype.getPath = function getPath() {
+    return this._path ? this._path.slice() : this._path;
+};
+
+/**
+ * This one is actually private.  I would not use this without talking to
+ * jhusain, sdesai, or michaelbpaulson (github).
+ * @private
+ */
+Model.prototype._fromWhenceYouCame = function fromWhenceYouCame(allow) {
+    return this._clone({
+        _allowFromWhenceYouCame: allow === undefined ? true : allow
+    });
+};
+
+Model.prototype._getBoundValue = require("./get/getBoundValue");
+Model.prototype._getVersion = require("./get/getVersion");
+
+Model.prototype._getPathValuesAsPathMap = get.getWithPathsAsPathMap;
+Model.prototype._getPathValuesAsJSONG = get.getWithPathsAsJSONGraph;
+
+Model.prototype._setPathValues = require("./set/setPathValues");
+Model.prototype._setPathMaps = require("./set/setPathMaps");
+Model.prototype._setJSONGs = require("./set/setJSONGraphs");
+Model.prototype._setCache = require("./set/setPathMaps");
+
+Model.prototype._invalidatePathValues = require("./invalidate/invalidatePathSets");
+Model.prototype._invalidatePathMaps = require("./invalidate/invalidatePathMaps");

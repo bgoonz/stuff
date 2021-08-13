@@ -1,0 +1,93 @@
+{
+  "name": "unleash",
+  "version": "2.0.1",
+  "description": "Unleash your code into the wild yonder",
+  "engines": {
+    "node": ">=6.17.0"
+  },
+  "config": {
+    "lint": "./*.js ./lib/*.js --fix",
+    "testunit": "./node_modules/.bin/tape tests/specs/*.js | tap-difflet"
+  },
+  "scripts": {
+    "doc": "esdoc -c ./esdoc.json",
+    "lint": "eslint $npm_package_config_lint && jscs $npm_package_config_lint",
+    "report-deps": "npm-check",
+    "prepublishOnly": "npm run test",
+    "test:unit": "tape tests/specs/*.js | tap-difflet",
+    "test": "npm run lint && npm run test:unit",
+    "test:cover": "istanbul cover --dir=tests/coverage --report=html $npm_package_config_testunit && opn tests/coverage/index.html",
+    "test:single": "tape tests/single-runner.js | tap-difflet",
+    "clean": "git clean -d -f -x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/netflix/unleash"
+  },
+  "bin": {
+    "unleash": "./index.js"
+  },
+  "keywords": [
+    "github",
+    "release",
+    "ship",
+    "code",
+    "release-it",
+    "dry-run",
+    "shipit",
+    "releaseit",
+    "ship",
+    "git",
+    "process",
+    "tool",
+    "npm",
+    "deploy",
+    "deployment",
+    "publish",
+    "push",
+    "ghpages",
+    "run",
+    "tests"
+  ],
+  "author": "James Womack <jwomack@netflix.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "chalk": "1.1.1",
+    "fancy-log": "1.3.0",
+    "fstream-npm": "^1.2.1",
+    "gift": "0.9.0",
+    "glob": "7.0.3",
+    "gulp-bump": "1.0.0",
+    "gulp-filter": "3.0.1",
+    "gulp-git": "2.3.2",
+    "gulp-sourcemaps": "1.6.0",
+    "gulp-tag-version": "github:ikari-pl/gulp-tag-version",
+    "gulp-util": "3.0.7",
+    "lodash.difference": "4.3.0",
+    "lodash.merge": "3.3.2",
+    "nf-conventional-changelog": "1.0.0",
+    "npm": "^6.8.0",
+    "object-values": "1.0.0",
+    "paqman": "1.0.0",
+    "readable-stream": "2.1.4",
+    "rimraf": "2.5.4",
+    "semver": "5.0.3",
+    "undertaker": "1.1.0",
+    "vinyl-fs": "2.4.3",
+    "wrap-promise": "1.0.1",
+    "yargs": "10.0.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "6.1.2",
+    "esdoc": "0.4.8",
+    "esdoc-es7-plugin": "0.0.3",
+    "eslint": "3.1.1",
+    "eslint-config-netflix": "1.0.0-alpha.2",
+    "istanbul": "0.4.5",
+    "jscs": "3.0.7",
+    "npm-check": "^5.9.0",
+    "opn-cli": "3.1.0",
+    "tap-difflet": "^0.7.1",
+    "tape": "^4.10.1"
+  }
+}

@@ -1,0 +1,357 @@
+<!--
+ * Copyright (c) 2014-2018 Netflix, Inc.  All rights reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Example Client</title>
+
+<!-- module and class definition -->
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/util/Module.js"></script>
+
+<!-- clarinet -->
+<script src="../../../../../../core/src/main/javascript/lib/clarinet.js"></script>
+
+<!-- jsrsasign -->
+<script src="../../../../../../core/src/main/javascript/lib/jsrsasign.js"></script>
+
+<!-- libraries -->
+<script src="../../../../../../core/src/main/javascript/lib/asnjwk.js"></script>
+<script src="../../../../../../core/src/main/javascript/lib/promise.js"></script>
+
+<!-- MSL Stack -->
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/util/Arrays.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/util/Class.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/util/PromiseFactory.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/util/TextEncoding.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/util/TextEncodingUtf8.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/crypto/WebCryptoAlgorithm.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/crypto/WebCryptoNamedCurve.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/crypto/WebCryptoUsage.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/MslConstants.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/MslError.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/MslException.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/MslCryptoException.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/MslEncodingException.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/MslEntityAuthException.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/MslErrorResponseException.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/MslInternalException.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/MslInterruptedException.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/MslIoException.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/MslKeyExchangeException.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/MslMasterTokenException.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/MslMessageException.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/MslUserAuthException.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/MslUserIdTokenException.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/util/AsyncExecutor.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/util/InterruptibleExecutor.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/util/BlockingQueue.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/util/ConditionVariable.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/util/Random.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/util/ReadWriteLock.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/util/Semaphore.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/io/InputStream.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/io/OutputStream.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/io/ByteArrayInputStream.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/io/ByteArrayOutputStream.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/io/BufferedInputStream.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/io/MslEncodable.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/io/MslEncoderException.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/io/MslEncoderFormat.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/io/MslArray.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/io/MslObject.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/io/MslTokenizer.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/io/MslEncoderUtils.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/io/MslEncoderFactory.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/crypto/KeyFormat.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/crypto/MslCrypto.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/crypto/SecretKey.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/crypto/PublicKey.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/crypto/PrivateKey.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/crypto/X509.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/crypto/MslCiphertextEnvelope.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/crypto/MslSignatureEnvelope.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/crypto/ICryptoContext.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/crypto/ClientMslCryptoContext.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/crypto/EccCryptoContext.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/crypto/JsonWebEncryptionCryptoContext.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/crypto/NullCryptoContext.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/crypto/RsaCryptoContext.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/crypto/SymmetricCryptoContext.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/crypto/SessionCryptoContext.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/io/ClarinetParser.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/io/JsonMslArray.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/io/JsonMslObject.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/io/JsonMslTokenizer.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/io/DefaultMslEncoderFactory.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/io/Url.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/io/Xhr.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/tokens/MslUser.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/tokens/TokenFactory.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/tokens/MasterToken.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/tokens/UserIdToken.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/tokens/ServiceToken.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/tokens/ClientTokenFactory.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/entityauth/EntityAuthenticationScheme.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/entityauth/EntityAuthenticationData.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/entityauth/EccAuthenticationData.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/entityauth/MasterTokenProtectedAuthenticationData.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/entityauth/KeySetStore.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/entityauth/PresharedAuthenticationData.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/entityauth/PresharedProfileAuthenticationData.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/entityauth/ProvisionedAuthenticationData.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/entityauth/RsaAuthenticationData.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/entityauth/X509AuthenticationData.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/entityauth/UnauthenticatedAuthenticationData.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/entityauth/UnauthenticatedSuffixedAuthenticationData.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/entityauth/EntityAuthenticationFactory.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/entityauth/MasterTokenProtectedAuthenticationFactory.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/entityauth/PresharedAuthenticationFactory.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/entityauth/PresharedProfileAuthenticationFactory.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/entityauth/ProvisionedAuthenticationFactory.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/entityauth/EccStore.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/entityauth/EccAuthenticationFactory.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/entityauth/RsaStore.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/entityauth/RsaAuthenticationFactory.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/entityauth/X509Store.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/entityauth/X509AuthenticationFactory.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/entityauth/UnauthenticatedAuthenticationFactory.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/entityauth/UnauthenticatedSuffixedAuthenticationFactory.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/userauth/UserAuthenticationScheme.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/userauth/UserAuthenticationData.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/userauth/UserAuthenticationFactory.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/userauth/EmailPasswordStore.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/userauth/EmailPasswordAuthenticationData.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/userauth/EmailPasswordAuthenticationFactory.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/userauth/UserIdTokenAuthenticationData.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/userauth/UserIdTokenAuthenticationFactory.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/keyx/KeyExchangeScheme.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/keyx/KeyRequestData.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/keyx/KeyResponseData.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/keyx/KeyExchangeFactory.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/keyx/WrapCryptoContextRepository.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/keyx/AsymmetricWrappedExchange.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/keyx/DhParameterSpec.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/keyx/DiffieHellmanParameters.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/keyx/DiffieHellmanExchange.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/keyx/JsonWebEncryptionLadderExchange.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/keyx/JsonWebKeyLadderExchange.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/keyx/SymmetricWrappedExchange.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/msg/Header.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/msg/ErrorHeader.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/msg/MessageCapabilities.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/msg/MessageHeader.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/msg/PayloadChunk.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/msg/MessageBuilder.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/msg/ResponseMessageBuilder.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/msg/IdempotentResponseMessageBuilder.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/msg/MessageDebugContext.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/msg/MessageServiceTokenBuilder.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/msg/MessageInputStream.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/msg/MessageOutputStream.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/msg/MessageFactory.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/msg/MessageContext.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/msg/NonReplayableMessageContext.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/msg/PublicMessageContext.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/msg/SecretMessageContext.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/msg/ErrorMessageRegistry.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/msg/FilterStreamFactory.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/msg/ConsoleFilterStreamFactory.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/msg/MslControl.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/util/AuthenticationUtils.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/util/Base64.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/util/Base64Secure.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/util/MslCompression.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/util/LzwCompression.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/util/MslContext.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/util/MslStore.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/util/MslUtils.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/util/NullMslStore.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/util/SimpleMslStore.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/util/MslSetup.js"></script>
+<script type="text/javascript" src="../../../../../../core/src/main/javascript/util/WebMslSetup.js"></script>
+<script type="text/javascript">
+	// Setup MSL for a web environment.
+	var setup = new WebMslSetup();
+	MslSetup.execute(setup);
+</script>
+
+<!-- Client Code -->
+<script type="text/javascript" src="SimpleConstants.js"></script>
+<script type="text/javascript" src="keyx/SimpleKeyxManager.js"></script>
+<script type="text/javascript" src="msg/AdvancedRequest.js"></script>
+<script type="text/javascript" src="msg/AdvancedRequestMessageContext.js"></script>
+<script type="text/javascript" src="msg/SimpleRequest.js"></script>
+<script type="text/javascript" src="msg/SimpleEchoRequest.js"></script>
+<script type="text/javascript" src="msg/SimpleLogRequest.js"></script>
+<script type="text/javascript" src="msg/SimpleProfileRequest.js"></script>
+<script type="text/javascript" src="msg/SimpleQueryRequest.js"></script>
+<script type="text/javascript" src="msg/SimpleQuitRequest.js"></script>
+<script type="text/javascript" src="msg/SimpleFilterStreamFactory.js"></script>
+<script type="text/javascript" src="msg/SimpleMessageDebugContext.js"></script>
+<script type="text/javascript" src="msg/SimpleRequestMessageContext.js"></script>
+<script type="text/javascript" src="util/SimpleKeyxMslStore.js"></script>
+<script type="text/javascript" src="util/SimpleMslContext.js"></script>
+<script type="text/javascript" src="SimpleClient.js"></script>
+
+<link href="./style.css" rel="stylesheet" type="text/css"></link>
+</head>
+<body>
+
+<h1>Example JavaScript Client</h1>
+
+<div id="error">
+    <div id="errortext"></div>
+    <form><input id="errorinput" type="button" value="OK"/></form>
+</div>
+
+<form onsubmit="return false;">
+
+<input id="import-rsa" type="button" value="Import RSA Public Key"/>
+<table id="rsa-key-form" style="position: absolute; visibility: hidden">
+    <tr>
+        <td><b>RSA Key Pair ID:</b></td>
+        <td><input id="rsa-key-id" type="text" size="20"></td>
+    </tr>
+    <tr>
+        <td><b>RSA Public Key (Base64):</b></td>
+        <td><textarea id="rsa-pubkey" cols="82" rows="10"></textarea></td>
+    </tr>
+    <tr>
+        <td colspan="2"><input id="rsa-input" type="button" value="Import Key"/></td>
+    </tr>
+</table>
+
+<table class="container">
+    <tr><td colspan="3" class="title">
+        <b>Application Request</b>
+        <input id="reset" type="button" value="Reset State""/>
+    </td></tr>
+    <tr>
+        <td colspan="2">
+        <p>Enter a username and password to send a message as a specific user. Leave the username
+        blank to send a message without associating it with a user.</p>
+        <p>The password is optional if you have already sent a message authenticated as that user.
+        In that case, the password field will be disabled. You may discard a user's authentication
+        credentials and "logout" by clicking on the "Logout" button.</p>
+        </td>
+        <td rowspan="3">
+            <table border="1" cellpadding="4" style="margin-left: 40px; margin-right: 40px" id="users">
+                <caption>User Accounts</caption>
+                <tr><th>Username</th><th>Password</th><th>Admin</th></tr>
+            </table>
+        </td>
+    </tr>
+    <tr><td><b>Username:</b></td><td><input type="text" id="username" name="username" width="10"/></td></tr>
+    <tr><td><b>Password:</b></td><td><input type="text" id="password" name="password" width="10"/><input type="submit" id="logout" value="Logout" disabled="disabled"></td></tr>
+    <tr><td colspan="3">
+        <input type="hidden" id="type" name="type" value=""/>
+        <ul class="tabs">
+            <li id="echo" class="tab">Echo Text</li>
+            <li id="log" class="tab">Log Message</li>
+            <li id="profile" class="tab">Get Profile</li>
+            <li id="query" class="tab">Lookup Word</li>
+            <li id="quit" class="tab">Terminate Server</li>
+            <li id="advanced" class="tab">Advanced</li>
+        </ul>
+        <div class="request">
+            <table>
+	            <tr class="field log" style="position: absolute; visibility: hidden;">
+	                <td><b>Severity:</b></td>
+	                <td><select id="severity">
+	                    <option value="INFO">Informational</option>
+	                    <option value="WARN">Warning</option>
+	                    <option value="ERROR">Error</option>
+	                </select></td>
+	            </tr>
+			    <tr class="field echo log" style="position: absolute; visibility: hidden;">
+			        <td><b>Text:</b></td>
+			        <td><textarea id="text" cols="40" rows="4"></textarea></td>
+			    </tr>
+                <tr class="field profile" style="position: absolute; visibility: hidden">
+                    <td colspan="2">The message user profile will be returned.</td>
+                </tr>
+			    <tr class="field query" style="position: absolute; visibility: hidden;">
+			        <td colspan="2">If a user appears in parenthesis, only that user is authorized to lookup the word.</td>
+	            </tr>
+			    <tr class="field query" style="position: absolute; visibility: hidden;">
+			        <td><b>Word:</b></td>
+			        <td><select id="word"></select></td>
+			    </tr>
+			    <tr class="field quit" style="position: absolute; visibility: hidden">
+			        <td colspan="2">Only the administrator is authorized to terminate the server.</td>
+			    </tr>
+			    <tr class="field advanced" style="position: absolute; visibility: hidden">
+			        <td>
+			        <table>
+			            <tr>
+					        <td><b>Entity Identity:</b></td>
+					        <td>
+                                                    <input id='identity' type='text' size='40'/>
+					        </td>
+					    </tr>
+					    <tr>
+					        <td><b>Recipient:</b></td>
+					        <td><input id="recipient" type="text" size="20"/> (leave blank for no explicit recipient)</td>
+					    </tr>
+                        <tr>
+                            <td><b>Settings:</b></td>
+                            <td>
+                                <label><input id="encrypted" type="checkbox" value="true"/>Encryption</label><br/>
+                                <label><input id="integrity-protected" type="checkbox" value="true"/>Integrity Protection</label><br/>
+                                <label><input id="non-replayable" type="checkbox" value="true"/>Non-Replayable</label><br/>
+                                <label><input id="requesting-tokens" type="checkbox" value="true"/>Requesting Tokens</label><br/>
+                            </td>
+                        </tr>
+					    <tr>
+					        <td><b>Application Data:</b></td>
+					        <td><textarea id="data" cols="80" rows="8"></textarea></td>
+					    </tr>
+					</table>
+				    </td>
+			    </tr>
+		    </table>
+        </div>
+    </td></tr>
+    <tr>
+        <td><input type="button" id="perform" value="Send Request To:" disabled="disabled"/></td>
+        <td>
+            <input type="text" id="url" size="40"/>
+        </td>
+        <td>Change this to point to your example Java server, if the default value is incorrect.</td>
+    </tr>
+</table>
+
+<table class="container">
+    <tr><td colspan="2" class="title"><b>Application Response</b></td></tr>
+    <tr><td colspan="2"><textarea id="response" cols="108" rows="12"></textarea></td></tr>
+</table>
+
+<table cellspacing="4" class="container debug">
+    <tr><td colspan="2" class="title">
+        <b>MSL Messages</b><input id="clear" type="button" value="Clear"/><br/>
+        The raw MSL messages as seen over the wire.
+    </td></tr>
+    <tr>
+        <td><b>Sent:</b><br/><textarea id="sent" cols="50" rows="40" readonly="readonly"></textarea></td>
+        <td><b>Received:</b><br/><textarea id="received" cols="50" rows="40" readonly="readonly"></textarea></td>
+    </tr>
+</table>
+
+</form>
+
+<script type="text/javascript" src="./App.js"></script>
+</body>
+</html>

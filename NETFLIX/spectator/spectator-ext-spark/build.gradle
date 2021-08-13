@@ -1,0 +1,42 @@
+plugins {
+  id 'com.github.johnrengelman.shadow' version '7.0.0'
+}
+
+dependencies {
+  api project(':spectator-api')
+  implementation project(':spectator-ext-gc')
+  implementation project(':spectator-ext-jvm')
+  implementation project(':spectator-reg-stateless')
+  implementation "com.typesafe:config"
+  implementation 'io.dropwizard.metrics:metrics-core:3.1.2'
+  implementation 'org.apache.spark:spark-core_2.10:1.6.1'
+}
+
+jar {
+  manifest {
+    attributes(
+      "Automatic-Module-Name": "com.netflix.spectator.spark"
+    )
+  }
+}
+
+shadowJar {
+  classifier = 'shadow'
+
+  // The dependencies not listed here should come from the spark distribution
+  dependencies {
+    include project(':spectator-api')
+    include project(':spectator-ext-gc')
+    include project(':spectator-ext-ipc')
+    include project(':spectator-ext-jvm')
+    include project(':spectator-reg-stateless')
+    include dependency("com.fasterxml.jackson.core:jackson-core")
+    include dependency("com.typesafe:config")
+  }
+  minimize()
+  exclude('module-info.class')
+  exclude('META-INF/maven/com.fasterxml.jackson.*/**')
+  exclude('META-INF/services/com.fasterxml.*')
+  relocate('com.fasterxml.jackson', 'com.netflix.spectator.spark-shaded.json')
+}
+

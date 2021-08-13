@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>addon/mixins/graph-graphic-with-tracking-dot.js - ember-nf-graph</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="../assets/css/logo.png" title="ember-nf-graph" width="117" height="52"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/components.nf-area.html">components.nf-area</a></li>
+                                <li><a href="../classes/components.nf-area-stack.html">components.nf-area-stack</a></li>
+                                <li><a href="../classes/components.nf-bars.html">components.nf-bars</a></li>
+                                <li><a href="../classes/components.nf-crosshair.html">components.nf-crosshair</a></li>
+                                <li><a href="../classes/components.nf-dot.html">components.nf-dot</a></li>
+                                <li><a href="../classes/components.nf-gg.html">components.nf-gg</a></li>
+                                <li><a href="../classes/components.nf-graph.html">components.nf-graph</a></li>
+                                <li><a href="../classes/components.nf-graph-content.html">components.nf-graph-content</a></li>
+                                <li><a href="../classes/components.nf-horizontal-line.html">components.nf-horizontal-line</a></li>
+                                <li><a href="../classes/components.nf-line.html">components.nf-line</a></li>
+                                <li><a href="../classes/components.nf-plot.html">components.nf-plot</a></li>
+                                <li><a href="../classes/components.nf-range-marker.html">components.nf-range-marker</a></li>
+                                <li><a href="../classes/components.nf-range-markers.html">components.nf-range-markers</a></li>
+                                <li><a href="../classes/components.nf-right-tick.html">components.nf-right-tick</a></li>
+                                <li><a href="../classes/components.nf-selection-box.html">components.nf-selection-box</a></li>
+                                <li><a href="../classes/components.nf-svg-image.html">components.nf-svg-image</a></li>
+                                <li><a href="../classes/components.nf-svg-line.html">components.nf-svg-line</a></li>
+                                <li><a href="../classes/components.nf-svg-path.html">components.nf-svg-path</a></li>
+                                <li><a href="../classes/components.nf-svg-rect.html">components.nf-svg-rect</a></li>
+                                <li><a href="../classes/components.nf-tracker.html">components.nf-tracker</a></li>
+                                <li><a href="../classes/components.nf-vertical-line.html">components.nf-vertical-line</a></li>
+                                <li><a href="../classes/components.nf-x-axis.html">components.nf-x-axis</a></li>
+                                <li><a href="../classes/components.nf-y-axis.html">components.nf-y-axis</a></li>
+                                <li><a href="../classes/components.nf-y-diff.html">components.nf-y-diff</a></li>
+                                <li><a href="../classes/mixins.graph-area-utils.html">mixins.graph-area-utils</a></li>
+                                <li><a href="../classes/mixins.graph-data-graphic.html">mixins.graph-data-graphic</a></li>
+                                <li><a href="../classes/mixins.graph-has-graph-parent.html">mixins.graph-has-graph-parent</a></li>
+                                <li><a href="../classes/mixins.graph-line-utils.html">mixins.graph-line-utils</a></li>
+                                <li><a href="../classes/mixins.graph-registered-graphic.html">mixins.graph-registered-graphic</a></li>
+                                <li><a href="../classes/mixins.graph-requires-scale-source.html">mixins.graph-requires-scale-source</a></li>
+                                <li><a href="../classes/mixins.graph-selectable-graphic.html">mixins.graph-selectable-graphic</a></li>
+                                <li><a href="../classes/utils.nf.graph-event.html">utils.nf.graph-event</a></li>
+                                <li><a href="../classes/utils.nf.graph-mouse-event.html">utils.nf.graph-mouse-event</a></li>
+                                <li><a href="../classes/utils.nf.graph-position.html">utils.nf.graph-position</a></li>
+                                <li><a href="../classes/utils.nf.scroll-area-action-context.html">utils.nf.scroll-area-action-context</a></li>
+                                <li><a href="../classes/utils.parse-property-expression.html">utils.parse-property-expression</a></li>
+                            </ul>
+                
+                            <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/scale-utils.html">scale-utils</a></li>
+                                <li><a href="../modules/utils_nf_array-helpers.html">utils/nf/array-helpers</a></li>
+                                <li><a href="../modules/utils_nf_svg-dom.html">utils/nf/svg-dom</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1 class="file-heading">File: addon/mixins/graph-graphic-with-tracking-dot.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+import Ember from &#x27;ember&#x27;;
+import { getMousePoint } from &#x27;../utils/nf/svg-dom&#x27;;
+import computed from &#x27;ember-new-computed&#x27;;
+
+var { on, observer } = Ember;
+
+export default Ember.Mixin.create({
+  /**
+    Gets or sets the tracking mode of the component.
+
+    Possible values are:
+
+    - &#x27;none&#x27;: no tracking behavior
+    - &#x27;hover&#x27;: only track while mouse hover
+    - &#x27;snap-last&#x27;: track while mouse hover, but snap to the last data element when not hovering
+    - &#x27;snap-first&#x27;: track while mouse hover, but snap to the first data element when not hovering
+    - &#x27;selected-hover&#x27;: The same as &#x60;&#x27;hover&#x27;&#x60; tracking mode, but only when the compononent is 
+    {{#crossLink &quot;mixins.graph-selectable-graphic/selected:property&quot;}}{{/crossLink}}
+    - &#x27;selected-snap-last&#x27;: The same as &#x60;&#x27;snap-last&#x27;&#x60; tracking mode, but only when the compononent is 
+    {{#crossLink &quot;mixins.graph-selectable-graphic/selected:property&quot;}}{{/crossLink}}
+    - &#x27;selected-snap-first&#x27;: The same as &#x60;&#x27;snap-first&#x27;&#x60; tracking mode, but only when the compononent is 
+    {{#crossLink &quot;mixins.graph-selectable-graphic/selected:property&quot;}}{{/crossLink}}
+
+    @property trackingMode
+    @type String
+    @default &#x27;none&#x27;
+  */
+  trackingMode: &#x27;none&#x27;,
+
+  /**
+    The radius of the tracking dot in pixels
+    @property trackingDotRadius
+    @type {number}
+    @default 2.5
+  */
+  trackingDotRadius: 2.5,
+
+  /**
+    The action to send on &#x60;didTrack&#x60;.
+    @property didTrack
+    @type String
+    @default null
+  */
+  didTrack: null,
+
+  /**
+    The value of the data that is being tracked by the component.
+    @property trackedData
+    @type {Object} an object with the following values:  
+      - point: an { x, y } pair for the exact px coordinates inside the graph-content
+      - graphX: domain x value at mouse position
+      - graphY: domain y value at mouse position
+      - x: nearest x data value
+      - y: nearest y data value
+      - data: nearest raw data
+      - renderX: domain x value to render a tracking dot at (stacked areas are offset)
+      - renderY: domain x value to render a tracking dot at (stacked areas are offset)
+      - mouseX: mouse x position in pixels
+      - mouseY: mouse y position in pixels
+    @default null
+  */
+  trackedData: null,
+
+  /**
+    The value of the data that is being tracked by the component, ONLY if the 
+    graph-content is currently being hovered.
+    @property hoverData
+    @type {Object} an object with the following values:  
+      - point: an { x, y } pair for the exact px coordinates inside the graph-content
+      - graphX: domain x value at mouse position
+      - graphY: domain y value at mouse position
+      - x: nearest x data value
+      - y: nearest y data value
+      - data: nearest raw data
+      - renderX: domain x value to render a tracking dot at (stacked areas are offset)
+      - renderY: domain x value to render a tracking dot at (stacked areas are offset)
+      - mouseX: mouse x position in pixels
+      - mouseY: mouse y position in pixels
+    @default null
+  */
+  hoverData: null,
+
+  _showTrackingDot: true,
+
+  /**
+    Gets or sets whether the tracking dot should be shown at all.
+    @property showTrackingDot
+    @type {boolean}
+    @default true
+  */
+  showTrackingDot: computed(&#x27;trackedData&#x27;, {
+    get() {
+      return Boolean(this._showTrackingDot &amp;&amp; this.get(&#x27;trackedData&#x27;));
+    },
+
+    set(value) {
+      this._showTrackingDot = value;
+    }
+  }),
+
+  /**
+    Observes changes to tracked data and sends the
+    didTrack action.
+    @method _trackedDataChanged
+    @private
+  */
+  _trackedDataChanged: Ember.observer(&#x27;trackedData&#x27;, function(){
+    var trackedData = this.get(&#x27;trackedData&#x27;);
+    this.set(&#x27;hoverData&#x27;, this._hovered ? trackedData : null);
+
+    if(this.get(&#x27;didTrack&#x27;)) {
+      this.sendAction(&#x27;didTrack&#x27;, {
+        x: trackedData.x,
+        y: trackedData.y,
+        data: trackedData.data,
+        source: this,
+        graph: this.get(&#x27;graph&#x27;),
+      });
+    }
+  }),
+
+  _cleanup: function(){
+    if(this._onHoverCleanup) {
+      this._onHoverCleanup();
+    }
+    if(this._onEndCleanup) {
+      this._onEndCleanup();
+    }
+  },
+
+  _updateTrackingHandling() {
+    var { trackingMode, selected } = this.getProperties(&#x27;trackingMode&#x27;, &#x27;selected&#x27;);
+
+    this._cleanup();
+
+    switch(trackingMode) {
+      case &#x27;hover&#x27;:
+        this._onHoverTrack();
+        this._onEndUntrack();
+        break;
+      case &#x27;snap-first&#x27;:
+        this._onHoverTrack();
+        this._onEndSnapFirst();
+        break;
+      case &#x27;snap-last&#x27;:
+        this._onHoverTrack();
+        this._onEndSnapLast();
+        break;
+      case &#x27;selected-hover&#x27;:
+        if(selected) {
+          this._onHoverTrack();
+          this._onEndUntrack();
+        }
+        break;
+      case &#x27;selected-snap-first&#x27;:
+        if(selected) {
+          this._onHoverTrack();
+          this._onEndSnapFirst();
+        }
+        break;
+      case &#x27;selected-snap-last&#x27;:
+        if(selected) {
+          this._onHoverTrack();
+          this._onEndSnapLast();
+        }
+        break;
+    }
+  },
+
+  _onHoverTrack() {
+    var content = this._content;
+
+    var mousemoveHandler = e =&gt; {
+      this._hovered = true;
+      var evt = this._getEventObject(e);
+      this.set(&#x27;trackedData&#x27;, evt);
+    };
+
+    content.on(&#x27;mousemove&#x27;, mousemoveHandler);
+
+    this._onHoverCleanup = () =&gt; {
+      content.off(&#x27;mousemove&#x27;, mousemoveHandler);
+    };
+  },
+
+  _hovered: false,
+
+  _onEndUntrack() {
+    var content = this._content;
+
+    var mouseoutHandler = () =&gt; {
+      this.set(&#x27;trackedData&#x27;, null);
+    };
+
+    content.on(&#x27;mouseout&#x27;, mouseoutHandler);
+
+    this._onEndCleanup = () =&gt; {
+      content.off(&#x27;mouseout&#x27;, mouseoutHandler);
+    };
+
+    if(!this._hovered) {
+      this.set(&#x27;trackedData&#x27;, null);
+    }
+  },
+
+  _onEndSnapLast() {
+    var content = this._content;
+
+    var mouseoutHandler = () =&gt; {
+      this._hovered = false;
+      this.set(&#x27;trackedData&#x27;, this.get(&#x27;lastVisibleData&#x27;));
+    };
+
+    var changeHandler = () =&gt; {
+      if(!this._hovered) {
+        this.set(&#x27;trackedData&#x27;, this.get(&#x27;lastVisibleData&#x27;));
+      }
+    };
+
+    content.on(&#x27;mouseout&#x27;, mouseoutHandler);
+    this.addObserver(&#x27;lastVisibleData&#x27;, this, changeHandler);
+
+    this._onEndCleanup = () =&gt; {
+      content.off(&#x27;mouseout&#x27;, mouseoutHandler);
+      this.removeObserver(&#x27;lastVisibleData&#x27;, this, changeHandler);
+    };
+
+    changeHandler();
+  },
+
+  _onEndSnapFirst() {
+    var content = this._content;
+
+    var mouseoutHandler = () =&gt; {
+      this._hovered = false;
+      this.set(&#x27;trackedData&#x27;, this.get(&#x27;firstVisibleData&#x27;));
+    };
+
+    var changeHandler = () =&gt; {
+      if(!this._hovered) {
+        this.set(&#x27;trackedData&#x27;, this.get(&#x27;firstVisibleData&#x27;));
+      }
+    };
+
+    content.on(&#x27;mouseout&#x27;, mouseoutHandler);
+    this.addObserver(&#x27;firstVisibleData&#x27;, this, changeHandler);
+
+    this._onEndCleanup = () =&gt; {
+      content.off(&#x27;mouseout&#x27;, mouseoutHandler);
+      this.removeObserver(&#x27;firstVisibleData&#x27;, this, changeHandler);
+    };
+
+    changeHandler();
+  },
+
+  _trackingModeChanged: on(&#x27;init&#x27;, observer(&#x27;trackingMode&#x27;, &#x27;selected&#x27;, function() {
+    Ember.run.once(this, this._updateTrackingHandling);
+  })),
+
+  _getEventObject(e) {
+    var { xScale, yScale } = this.getProperties(&#x27;xScale&#x27;, &#x27;yScale&#x27;);
+    var content = this._content;
+    var point = getMousePoint(content[0], e);
+    var graphX = xScale.invert(point.x);
+    var graphY = yScale.invert(point.y);
+    var near = this.getDataNearXRange(point.x);
+
+    if(!near) {
+      return {
+        point,
+        graphX,
+        graphY,
+        mouseX: point.x,
+        mouseY: point.y,
+      };
+    }
+
+    var { x, y, data, renderX, renderY } = near;
+    return {
+      point,
+      graphX,
+      graphY,
+      x,
+      y,
+      data,
+      renderX,
+      renderY,
+      mouseX: point.x,
+      mouseY: point.y
+    };
+  },
+
+  didInsertElement() {
+    this._super.apply(arguments);
+    this._content = this.$().parents(&#x27;.nf-graph-content&#x27;);
+  },
+
+  willDestroyElement() {
+    this._super.apply(arguments);
+    this._cleanup();
+  }
+});
+    </pre>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

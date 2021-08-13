@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="featurette-heading">Users
+      <span class="text-muted"><small>what was your name again?</small></span></h2>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="btn-group pull-right">
+          <button ng-click="create()" class="btn btn-primary">Create</button>
+        </div>
+        <div class="btn-group">
+          <button ng-model="showFilter" class="btn btn-default" uib-btn-checkbox
+                  btn-checkbox-true="1"
+                  btn-checkbox-false="0">Filter</button>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="table-responsive">
+        <table ng-table="usersTable" class="table table-striped" show-filter="showFilter" template-pagination="angular/pager.html">
+          <tbody>
+          <tr ng-repeat="user in $data track by $index">
+            <td data-title="'Name'" sortable="'user'" filter="{ 'username': 'text' }">
+              <ul class="list-unstyled">
+                <li>{{ user.username }}</li>
+                <li><span class="text-muted">{{ user.email }}</span></li>
+              </ul>
+            </td>
+            <td data-title="'Active'" sortable="'active'">
+              <i class="glyphicon glyphicon-ok" ng-show="certificate.san == 'true'"></i>
+              <i class="glyphicon glyphicon-remove" ng-show="certificate.san == 'false'"></i>
+              <i ng-show="user.active" class="glyphicon glyphicon-ok"></i><i ng-show="!user.active" class="glyphicon glyphicon-remove"></i>
+            </td>
+            <td data-title="''">
+              <div class="btn-group-vertical pull-right">
+                <button uib-tooltip="Edit User" ng-click="edit(user.id)" class="btn btn-sm btn-info">
+                  Edit
+                </button>
+              </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,113 @@
+.TH DYNOMITE 8 "November 23, 2016" "v0.5.9"
+.SH NAME
+dynomite - a generic dynamo implementation for different key/value storage engines.
+.SH SYNOPSIS
+.B dynomite \-\-help
+.br
+.B dynomite \-\-version
+.br
+.B dynomite
+.RI "[\"
+.B "-c"
+.RI "conf-file]"
+.br
+.B dynomite 
+.RB [\| \-?hVdDt \|]
+.RB [\| \-v
+.IR verbosity-level \|] 
+.RB [\| \-o
+.IR output-file \|]
+.RB [\| -c
+.IR conf-file \|]
+.RB [\-s
+.IR stats-port \|]
+.RB [\-a
+.IR stats-addr \|]
+.RB [\-i
+.IR stats-interval \|]
+.RB [\-p
+.IR pid-file \|]
+.RB [\-m
+.IR mbuf-size \|]
+.RB [\-M
+.IR max-alloc-messages \|]
+.SH DESCRIPTION
+.B Dynomite
+is a thin, distributed Dynamo layer for different storage engines and protocols. Dynomite provides sharding and multi-data center replication. It has a shared nothing architecture with no single point of failure (SPOF) that delivers high availability (HA) even when a server, rack or entire data center goes offline.
+.PP
+Redis is currently the primary backend and protocol supported by Dynomite, while support for Memcached is partially implemented. Future versions of Dynomite will support additional backends.
+.PP
+Dynomite provides the following functionality:
+.IP \[bu]
+Linear scalability
+.IP \[bu]
+High availability (HA)
+.IP \[bu]
+Shared nothing architecture with symmetric nodes
+.IP \[bu]
+Multi-data center (DC) replication
+.IP \[bu]
+Data replication and sharding
+.IP \[bu]
+Support for any Redis client plus a specialized Dyno client for Java
+.IP \[bu]
+Reduced connections to and lower connection overhead on backend storage engines via persistent connections
+.IP \[bu]
+Observability via easily accessible statistics
+.SH OPTIONS
+.TP
+.BR \-h ", " \-\-help
+Show help about dynomite and exit.
+.TP
+.BR \-V ", " \-\-version
+Show dynomite version and exit.
+.TP
+.BR \-t ", " \-\-test-conf
+Test configuration file for syntax errors and exit.
+.TP
+.BR \-g ", " \-\-gossip
+Enable gossip. (default: disable)
+.TP
+.BR \-d ", " \-\-daemonize
+Run dynomite as a daemon in the background.
+.TP
+.BR \-D ", " \-\-describe-stats
+Print statistics description and exit.
+.TP
+.BI \-v\  N \fR,\ \fB\-\-verbosity= N
+Set logging level to
+.IR N .
+(default: 5, min: 0, max: 11)
+.TP
+.BI \-o\  file \fR,\ \fB\-\-output= file
+Set logging file to
+.IR file .
+.TP
+.BI \-c\  file \fR,\ \fB\-\-conf-file= file
+Set the configuration file to
+.IR file .
+.TP
+.BI \-p\  file \fR,\ \fB\-\-pid-file= file
+Set the pid file to
+.IR file .
+.TP
+.BI \-m\  N \fR,\ \fB\-\-mbuf-size= N
+Set mbuf chunk size to
+.IR N
+bytes. (default: 16384)
+.TP
+.BI \-M\  N \fR,\ \fB\-\-max-msgx= N
+Set the maximum number of messages to allocate to
+.IR N .
+(default: 200000)
+.TP
+.BI \-x\  N \fR,\ \fB\-\-admin-operation= N
+Set the size of admin operation to
+.IR N .
+(default: 0)
+.SH SEE ALSO
+.BR memcached (8),
+.BR redis-server (1)
+.br
+.SH AUTHOR
+Dynomite is developed by Netflix, Inc. Dynomite is currently developed by Netflix, Inc. and the open source community. 

@@ -1,0 +1,79 @@
+
+plugins {
+    id 'nebula.netflixoss' version '9.1.0'
+    id 'nebula.dependency-lock' version '10.1.0'
+    id "com.google.osdetector" version "1.6.2"
+    id "me.champeau.gradle.jmh" version "0.5.0"
+}
+
+ext.githubProjectName = rootProject.name
+
+
+idea {
+    project {
+        languageLevel = '1.8'
+    }
+}
+
+configurations.all {
+    exclude group: 'asm', module: 'asm'
+    exclude group: 'asm', module: 'asm-all'
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+}
+
+subprojects {
+    apply plugin: 'nebula.netflixoss'
+    apply plugin: 'java'
+    apply plugin: 'nebula.javadoc-jar'
+    apply plugin: 'nebula.dependency-lock'
+    apply plugin: 'me.champeau.gradle.jmh'
+
+    license {
+        ignoreFailures = false
+        excludes([
+                "**/META-INF/services/javax.annotation.processing.Processor",
+                "**/META-INF/gradle/incremental.annotation.processors",
+                "**/*.cert",
+                "**/*.jks",
+                "**/*.key",
+        ])
+    }
+
+    group = "com.netflix.${githubProjectName}"
+
+    sourceCompatibility = '1.8'
+
+    eclipse {
+        classpath {
+            downloadSources = true
+            downloadJavadoc = true
+        }
+    }
+
+    tasks.withType(Javadoc).each {
+        it.classpath = sourceSets.main.compileClasspath
+        // Ignore Javadoc warnings for now, re-enable after Zuul 3.
+        it.options.addStringOption('Xdoclint:none', '-quiet')
+    }
+
+    ext {
+        libraries = [
+                guava: "com.google.guava:guava:29.0-jre",
+                junit: "junit:junit:4.13",
+                mockito: 'org.mockito:mockito-core:3.+',
+                slf4j: "org.slf4j:slf4j-api:1.7.25",
+                truth: 'com.google.truth:truth:1.0.1'
+        ]
+    }
+
+    test {
+        testLogging {
+            showStandardStreams = true
+        }
+    }
+}

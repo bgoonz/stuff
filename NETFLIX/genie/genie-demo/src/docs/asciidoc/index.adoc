@@ -1,0 +1,284 @@
+= Genie Demo Guide
+Tom Gianos <NetflixOSS@netflix.com>
+v{revnumber}, {localdate}
+:description: Reference documentation for Netflix OSS Genie
+:keywords: genie, netflix, documentation, big data, cloud, oss, open source software
+:toc: left
+:toclevels: 2
+:doctype: book
+:sectanchors:
+:sectlinks:
+:sectnums:
+:linkattrs:
+:icons: font
+:stylesheet: rubygems.css
+:stylesdir: stylesheets
+:source-highlighter: highlight.js
+
+== Introduction
+
+Genie is a complicated service.
+It can be hard to understand the value it brings to a data platform without seeing it in action.
+For this reason this set of demo steps exists to show how Genie fits into a data platform and how it can help both administrators and users.
+
+NOTE: For high level concept documentation please see the https://netflix.github.io/genie[website].
+
+NOTE: For high level information and installation instructions please see the
+https://netflix.github.io/genie/docs/{revnumber}/reference[Reference Guide].
+
+NOTE: For documentation of the REST API for this version of Genie please see the
+https://netflix.github.io/genie/docs/{revnumber}/rest[API Guide].
+
+== Info
+
+=== Prerequisites
+
+* https://docs.docker.com/get-docker/[Docker]
+* https://docs.docker.com/compose/install/[Docker Compose]
+* Memory
+** Probably at least 6 GB
+* Disk Space
+** About ~5.5 GB for 5 images
+* Available Ports on your local machine
+** 8080 (Genie)
+** 8088, 19888, 50070, 50075, 8042 (YARN Prod Cluster)
+** 8089, 19889, 50071, 50076, 8043 (YARN Test Cluster)
+** 9090 (Presto Cluster)
+
+=== Development Environment
+
+For reference here are the machine specs that this demo has been tested on
+
+* Mid-2018 MacBook Pro
+** MacOS Catalina 10.15.5
+* 2.9 GHz 6-Core Intel Core i9
+* 32 GB 2400 MHz DDR4
+* Docker Desktop 2.3.0.3
+** Docker Engine 19.03.8
+** Docker Compose 1.25.5
+** Preferences
+*** 6 CPUs
+*** 6 GB RAM
+*** 1 GB swap
+
+=== Caveats
+
+* Since all this is running locally on one machine it can be slow, much slower than you'd expect production level systems to run
+* Networking is kind of funky within the Hadoop UI due to how DNS is working between the containers.
+Sometimes if you click a link in the UI and it doesn't work try swapping in localhost for the hostname instead.
+
+=== Port Usages
+
+.Genie Endpoints
+|===
+| Endpoint| URL
+
+| UI
+| `http://localhost:8080`
+
+| API
+| `http://localhost:8080/api/v3/`
+
+| Actuator
+| `http://localhost:8080/admin`
+|===
+
+.Hadoop Interfaces
+|===
+| UI| Prod URL| Test URL
+
+| Resource Manager
+| `http://localhost:8088`
+| `http://localhost:8089`
+
+| Job History Server
+| `http://localhost:19888`
+| `http://localhost:19889`
+
+| NameNode
+| `http://localhost:50070`
+| `http://localhost:50071`
+
+| DataNode
+| `http://localhost:50075`
+| `http://localhost:50076`
+
+| Container Logs
+| `http://localhost:8042`
+| `http://localhost:8043`
+|===
+
+.Presto Interfaces
+|===
+|Endpoint
+|URL
+
+|Web UI
+|`http://localhost:9090`
+|===
+
+=== Scripts
+
+.Admin Scripts
+|===
+| Script Name| Invocation| Purpose
+
+|Init
+|`./init_demo.py`
+|Initialize the configuration data in the Genie system for the rest of the demo
+
+|Move Tags
+|`./move_tags.py`
+|Move the production tag `sched:sla` from the prod cluster to the test cluster
+
+|Reset Tags
+|`./reset_tags.py`
+|Move the production tag `sched:sla` back to the test cluster from the production cluster
+|===
+
+.Job Scripts
+|===
+| Job| Invocation| Action
+
+|Hadoop
+|`./run_hadoop_job.py {sla\|test}`
+|Runs grep against input directory in HDFS
+
+|HDFS
+|`./run_hdfs_job.py {sla\|test}`
+|Runs a `dfs -ls` on the input directory on HDFS and stores results in stdout
+
+|Presto
+|`./run_presto_job.py`
+|Sends query (`select * from tpcds.sf1.item limit 100;`) as attachment file to Presto cluster and dumps results to
+stdout
+
+|Spark Shell
+|`./run_spark_shell_job.py {sla\|test}`
+|Simply prints the Spark Shell help output to stdout
+
+|Spark Submit 2.4.x
+|`./run_spark_submit_job.py {sla\|test} 2.4.6`
+|Runs the SparkPi example for Spark 2.4.x with input of 10. Results stored in stdout
+
+|Spark Submit 3.0.x
+|`./run_spark_submit_job.py {sla\|test} 3.0.0`
+|Runs the SparkPi example for Spark 3.0.x with input of 10. Results stored in stdout
+
+|YARN
+|`./run_yarn_job.py {sla\|test}`
+|Lists all yarn applications from the resource manager into stdout
+|===
+
+== Demo Steps
+
+. Open a terminal
+. Download the Docker Compose file
+.. Save the below file as `docker-compose.yml` somewhere on your machine
+.. https://netflix.github.io/genie/docs/{revnumber}/demo/docker-compose.yml[docker-compose.yml]
+. Go to your working directory
+.. Wherever you downloaded the `docker-compose.yml` to
+.. `cd YourWorkDir`
+. Start the demo containers
+.. `docker-compose up -d`
+... The first time you run this it could take quite a while as it has to download 5 large images
+.... https://hub.docker.com/r/netflixoss/genie-app[netflixoss/genie-app:{revnumber}]
+.... https://hub.docker.com/r/netflixoss/genie-demo-apache[netflixoss/genie-demo-apache:{revnumber}]
+.... https://hub.docker.com/r/netflixoss/genie-client[netflixoss/genie-demo-client:{revnumber}]
+.... https://hub.docker.com/r/sequenceiq/hadoop-docker[sequenceiq/hadoop-docker:2.7.1]
+.... https://hub.docker.com/r/prestosql/presto[prestosql/presto:337]
+... This will use docker compose to bring up 6 containers
+.... `genie_demo_app_{revnumber}`
+..... Instantiation of `netflixoss/genie-app:{revnumber}`
+..... Image from official Genie build which runs Genie app server
+..... Maps port 8080 for Genie UI
+.... `genie_demo_apache_{revnumber}`
+..... Instantiation of `netflixoss/genie-demo-apache:{revnumber}`
+..... Extension of apache image which includes files used during demo that Genie will download
+.... `genie_demo_client_{revnumber}`
+..... Instantiation of `netflixoss/genie-demo-client:{revnumber}`
+..... Simulates a client node for Genie which includes several python scripts to configure and run jobs on Genie
+.... `genie_demo_hadoop_prod_{revnumber}` and `genie_demo_hadoop_test_{revnumber}`
+..... Instantiations of `sequenceiq/hadoop-docker:2.7.1`
+..... Simulates having two clusters available and registered with Genie with roles as a production and a test cluster
+..... See `Hadoop Interfaces` table for list of available ports
+.... `genie_demo_presto_{revnumber}`
+..... Instantiation of `prestosql/presto:337`
+..... Single node Presto cluster
+..... Web UI bound to `localhost` port `9090`
+. Wait for all services to start
+.. Verify Genie UI and both Resource Manager UI's are available via your browser
+. Check out the Genie UI
+.. In a browser navigate to the http://localhost:8080[Genie UI] and notice there are no `Jobs`, `Clusters`,
+`Commands` or `applications` currently
+.. These are available by clicking on the tabs in the top left of the UI
+. Login to the client container
+.. From terminal `docker exec -it genie_demo_client_{revnumber} /bin/bash`
+... This should put you into a bash shell in `/apps/genie/example` within the running container
+. Initialize the System
+.. Back in the terminal initialize the configurations for the two clusters (prod and test), 5 commands (hadoop, hdfs, yarn, spark-submit, spark-shell) and two application (hadoop, spark)
+.. `./init_demo.py`
+.. Feel free to `cat` the contents of this script to see what is happening
+. Verify Configurations Loaded
+.. In the browser browse the Genie UI again and verify that now `Clusters`, `Commands` and `Applications` have data in them
+. Run some jobs
+.. See the `Job Scripts` table for available commands
+.. For example:
+... `./run_hadoop_job.py test`
+... `./run_yarn_job.py test`
+... `./run_hdfs_job.py test`
+... `./run_spark_submit_job.py sla 2.1.3`
+... `./run_presto_job.py`
+.. Replace `test` with, `sla` to run the jobs against the Prod cluster
+.. If any of the Docker container crashes, you may need to increase the default memory available in the Docker preferences.
+The current default for a fresh install is 2GB, which is not sufficient for this demo.
+Use `docker stats`
+to verify the limit is 4GB or higher.
+. For each of these jobs you can see their status, output and other information via the UI's
+.. In the `Jobs` tab of the Genie UI you can see all the job history
+... Clicking any row will expand that job information and provide more links
+... Clicking the folder icon will bring you to the working directory for that job
+.. Go to the respective cluster Resource Manager UI's and verify the jobs ran on their respective cluster
+. Move load from prod to test
+.. Lets say there is something wrong with the production cluster.
+You don't want to interfere with users but you need to fix the prod cluster.
+Let's switch the load over to the test cluster temporarily using Genie
+.. In terminal switch the prod tag `sched:sla` from Prod to Test cluster
+... `./move_tags.py`
+.. Verify in Genie UI `Clusters` tab that the `sched:sla` tag only appears on the `GenieDemoTest` cluster
+. Run more of the available jobs
+.. Verify that all jobs went to the `GenieDemoTest` cluster and none went to the `GenieDemoProd` cluster regardless of which `env` you passed into the Gradle commands above
+. Reset the system
+.. You've resolved the issues with your production cluster.
+Move the `sched:sla` tag back
+.. `./reset_tags.py`
+.. Verify in Genie UI `Clusters` tab that `sched:sla` tag only appears on `GenieDemoProd` cluster
+. Run some jobs
+.. Verify jobs are again running on `Prod` and `Test` cluster based on environment
+. Explore the scripts
+.. Look through the scripts to get a sense of what is submitted to Genie
+. Log out of the container
+.. `exit`
+. Login to the main Genie app container (which it contains the agent CLI )
+.. From terminal `docker exec -it genie_demo_app_{revnumber} /bin/bash`
+. Verify you can launch the agent
+.. `java -jar /usr/local/bin/genie-agent.jar help`
+. Verify the agent can connect to the local Genie server
+.. `java -jar /usr/local/bin/genie-agent.jar ping --serverHost localhost --serverPort 9090`
+. Launch a Genie job, similar to the ones above
+.. `java -jar /usr/local/bin/genie-agent.jar exec --serverHost localhost --serverPort 9090 --jobName 'Genie Demo CLI Presto Job' --commandCriterion 'TAGS=type:presto' --clusterCriterion 'TAGS=sched:adhoc,type:presto' -- --execute 'select * from tpcds.sf1.item limit 100;'`
+.. `java -jar /usr/local/bin/genie-agent.jar exec --serverHost localhost --serverPort 9090 --jobName 'Genie Demo CLI Spark Shell Interactive Job' --commandCriterion 'TAGS=type:spark-shell' --clusterCriterion 'TAGS=sched:sla,type:yarn' --interactive`
+... This starts an interactive Spark shell. Hit `ctrl-d` to exit gracefully
+. In the http://localhost:8080[Genie UI], explore the two jobs
+.. Notice how the first one (non-interactive) dumped the query results in a `stdout`
+.. Notice how the second one (interactive) does not create `stdout` and `stderr` files, since the streams are presented directly in the shell
+. Log out of the container
+.. `exit`
+. Once you're done trying everything out you can shut down the demo
+.. `docker-compose down`
+.. This will stop and remove all the containers from the demo.
+The images will remain on disk and if you run the demo again it will startup much faster since nothing needs to be downloaded or built.
+
+== Feedback
+
+If you have any feedback about this demo feel free to reach out to the Genie team via any of the communication methods listed in the https://netflix.github.io/genie/contact/[Contact] page.

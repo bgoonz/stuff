@@ -1,0 +1,90 @@
+##
+#
+#  Copyright 2019 Netflix, Inc.
+#
+#     Licensed under the Apache License, Version 2.0 (the "License");
+#     you may not use this file except in compliance with the License.
+#     You may obtain a copy of the License at
+#
+#         http://www.apache.org/licenses/LICENSE-2.0
+#
+#     Unless required by applicable law or agreed to in writing, software
+#     distributed under the License is distributed on an "AS IS" BASIS,
+#     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#     See the License for the specific language governing permissions and
+#     limitations under the License.
+#
+##
+
+cloud:
+  aws:
+    credentials:
+      useDefaultAwsCredentialsChain: true
+    region:
+      auto: false
+      static: us-east-1
+    stack:
+      auto: false
+
+genie:
+  smoke: true
+  jobs:
+    files:
+      filter:
+        directory-reject-patterns:
+          - '.*/tmp'
+          - '.*/temp'
+        directory-traversal-reject-patterns:
+          - '.*/genie/.*/dependencies'
+  agent:
+    runtime:
+      emergency-shutdown-delay: 5m
+      force-manifest-refresh-timeout: 5s
+      file-stream-service:
+        error-back-off:
+          delay-type: FROM_PREVIOUS_EXECUTION_BEGIN
+          min-delay: 1s
+          max-delay: 10s
+          factor: 1.1
+        enable-compression: true
+        data-chunk-max-size: 1MB
+        max-concurrent-streams: 5
+        drain-timeout: 15s
+      heart-beat-service:
+        interval: 2s
+        error-retry-delay: 1s
+      job-kill-service:
+        response-check-back-off:
+          delay-type: FROM_PREVIOUS_EXECUTION_COMPLETION
+          min-delay: 500ms
+          max-delay: 5s
+          factor: 1.2
+      job-monitor-service:
+        check-interval: 1m
+        max-files: 64000
+        max-file-size: 8GB
+        max-total-size: 16GB
+        check-remote-job-status: true
+      job-setup-service:
+        environment-dump-filter-expression: '.*'
+        environment-dump-filter-inverted: false
+      shutdown:
+        execution-completion-leeway: 60s
+        internal-executors-leeway: 30s
+        internal-schedulers-leeway: 30s
+        system-executor-leeway: 60s
+        system-scheduler-leeway: 60s
+
+spring:
+  banner:
+    location: classpath:genie-agent-banner.txt
+    charset: UTF-8
+  jmx:
+    enabled: false
+  main:
+    web-application-type: none
+    banner-mode: log
+
+logging:
+  level:
+    root: INFO

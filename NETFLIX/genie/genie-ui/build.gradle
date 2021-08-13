@@ -1,0 +1,77 @@
+apply plugin: "java-library"
+apply plugin: "nebula.node"
+
+dependencies {
+    /*******************************
+     * API Dependencies
+     *******************************/
+
+    /*******************************
+     * Implementation Dependencies
+     *******************************/
+
+    implementation(project(":genie-web"))
+    implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
+    implementation("org.springframework.boot:spring-boot-starter-web")
+
+    /*******************************
+     * Compile Only Dependencies
+     *******************************/
+
+    /*******************************
+     * Runtime Only Dependencies
+     *******************************/
+
+    /*******************************
+     * Test Dependencies
+     *******************************/
+
+    testImplementation(project(":genie-test"))
+    testImplementation(project(":genie-test-web"))
+
+    integTestImplementation("commons-io:commons-io")
+}
+
+license {
+    exclude "*.yml"
+    exclude "templates/*"
+}
+
+node {
+    version = "8.11.1"
+    npmVersion = "5.8.0"
+    download = true
+}
+
+task bundle(type: NpmTask) {
+    inputs.dir("${projectDir}/node_modules")
+    inputs.dir("${projectDir}/src/main/web")
+    inputs.file("npm-shrinkwrap.json")
+    inputs.file("package.json")
+    inputs.file("server.js")
+    inputs.file("webpack.config.js")
+
+    outputs.dir("${project.buildDir}/web/bundle")
+
+    dependsOn npmInstall
+    args = ["run", "build"]
+}
+
+jar {
+    dependsOn bundle
+
+    from(file("${project.buildDir}/web/bundle")) {
+        into "META-INF/resources/webjars/${project.name}"
+    }
+
+    from(file("${project.projectDir}/src/main/web/images")) {
+        into "META-INF/resources/webjars/${project.name}/images"
+    }
+
+    manifest {
+        attributes(
+                "Implementation-Title": project.name,
+                "Implementation-Version": project.version,
+        )
+    }
+}

@@ -1,0 +1,6 @@
+apply plugin: 'java'
+
+dependencies {
+    compile    project(':governator-test')
+    compile    'junit:junit:4.12'
+}

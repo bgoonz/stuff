@@ -1,0 +1,128 @@
+plugins {
+  id 'com.github.ben-manes.versions' version '0.39.0'
+  id 'com.github.spotbugs' version '4.7.2' apply false
+  id 'me.champeau.jmh' version '0.6.5'
+  id 'nebula.dependency-recommender' version '10.0.1'
+  id 'nebula.netflixoss' version '10.0.0'
+}
+
+// Establish version and status
+ext.githubProjectName = 'spectator'
+
+allprojects {
+  apply plugin: 'nebula.dependency-recommender'
+  apply plugin: 'project-report'
+  apply plugin: 'me.champeau.jmh'
+  apply plugin: 'com.github.ben-manes.versions'
+  apply plugin: 'nebula.netflixoss'
+}
+
+subprojects {
+  apply plugin: 'java-library'
+  apply plugin: 'build-dashboard'
+  apply plugin: 'com.github.spotbugs'
+  apply plugin: 'checkstyle'
+  apply plugin: 'pmd'
+
+  repositories {
+    mavenCentral()
+    mavenLocal()
+  }
+
+  group = "com.netflix.${githubProjectName}"
+
+  sourceCompatibility = 1.8
+  targetCompatibility = 1.8
+
+  tasks {
+    compileJava {
+      options.encoding = 'UTF-8'
+      // Generate java8 bytecode and compile against the java8 class
+      // libraries.
+      if (JavaVersion.current().isJava9Compatible()) {
+        options.release = 8
+      }
+    }
+    compileTestJava {
+      options.encoding = 'UTF-8'
+      if (JavaVersion.current().isJava9Compatible()) {
+        options.release = JavaVersion.current().majorVersion.toInteger()
+      }
+    }
+
+    javadoc {
+      if (JavaVersion.current().isJava8Compatible()) {
+        options.addStringOption('Xdoclint:none', '-quiet')
+      }
+      if (JavaVersion.current().isJava9Compatible()) {
+        options.addStringOption('-release', '8')
+      }
+    }
+  }
+
+  javadoc {
+    options {
+      links = ['https://docs.oracle.com/javase/8/docs/api/']
+    }
+  }
+
+  dependencyRecommendations {
+    propertiesFile file: new File(rootProject.projectDir, 'dependencies.properties')
+  }
+
+  dependencies {
+    implementation "org.slf4j:slf4j-api"
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine'
+    testImplementation 'nl.jqno.equalsverifier:equalsverifier'
+    jmh "org.slf4j:slf4j-simple"
+    jmh "org.openjdk.jmh:jmh-core:1.32"
+    jmh "org.openjdk.jmh:jmh-generator-annprocess:1.32"
+  }
+
+  test {
+    useJUnitPlatform()
+  }
+
+  jmh {
+    jmhVersion = '1.32'
+    warmupIterations = 2
+    iterations = 5
+    fork = 1
+    //threads = 1
+    profilers = ['stack', 'gc']
+    includeTests = false
+    duplicateClassesStrategy = DuplicatesStrategy.WARN
+    includes = ['.*PathSanitizerBench.*']
+  }
+
+  checkstyle {
+    toolVersion = '8.45'
+    ignoreFailures = false 
+    configFile = rootProject.file('codequality/checkstyle.xml')
+    sourceSets = [sourceSets.main]
+  }
+  
+  spotbugs {
+    toolVersion = '4.3.0'
+    excludeFilter = rootProject.file('codequality/findbugs-exclude.xml')
+    ignoreFailures = false
+    spotbugsMain.enabled = true
+    spotbugsTest.enabled = false
+    spotbugsJmh.enabled = false
+  }
+  spotbugsMain {
+    reports {
+      xml.enabled = false
+      html.enabled = true
+    }
+  }
+
+  pmd {
+    toolVersion = '6.37.0'
+    ignoreFailures = false
+    sourceSets = [sourceSets.main]
+    ruleSets = []
+    ruleSetFiles = rootProject.files("codequality/pmd.xml")
+  }
+}
+

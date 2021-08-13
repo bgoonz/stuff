@@ -1,0 +1,1158 @@
+== Properties
+
+== Genie Web
+
+This section describes the various properties that can be set to control the behavior of your Genie node and cluster.
+For more information on Spring properties you should see the
+http://docs.spring.io/spring-boot/docs/{springBootVersion}/reference/htmlsingle/[Spring Boot] reference documentation and the http://cloud.spring.io/spring-cloud-static/{springCloudVersion}/[Spring Cloud] documentation.
+The Spring properties described here are ones that we have overridden from Spring defaults.
+
+=== Default Properties
+
+==== Genie Properties
+
+Properties marked 'dynamic' reflect change of property value in the environment happening at runtime.
+Whereas static properties values are bound during application startup and do not change after the application is up and running.
+
+|===
+|Property |Description |Default Value |Dynamic
+
+|genie.agent.connection-tracking.cleanup-interval
+|Interval at which the cleanup task runs
+|2s
+|no
+
+|genie.agent.connection-tracking.connection-expiration-period
+|How long after the last heartbeat an agent connection is marked expired
+|10s
+|no
+
+|genie.agent.configuration.cache-refresh-interval
+|Interval for after which the agent properties cache is refreshed
+|1m
+|no
+
+|genie.agent.filestream.max-concurrent-transfers
+|Maximum number of concurrent file transfers that a server allows
+|100
+|no
+
+|genie.agent.filestream.unclaimed-stream-start-timeout
+|Interval after which a transfer stream is shut down if it didn't send the first chunk of data
+|10s
+|no
+
+|genie.agent.filestream.stalled-transfer-timeout
+|Interval after which a transfer stream is shut down if it didn't send any more data
+|20s
+|no
+
+|genie.agent.filestream.stalled-transfer-check-interval
+|Interval for checking on stalled downloads
+|5s
+|no
+
+|genie.agent.filestream.write-retry-delay
+|Interval between attempts to write data into a stream buffer
+|300ms
+|no
+
+|genie.agent.filter.enabled
+|If set to `true`, enables the built-in agent filter service. The filter behavior is controlled by other active `genie.agent.filter.*` properties.
+|
+|no
+
+|genie.agent.filter.version.blacklist
+|A regex matched against agent version (e.g., `1\.2\..*`), matching agents are rejected. The filter needs to be enabled for this to take effect.
+|
+|yes
+
+|genie.agent.filter.version.minimum
+|The minimum version an agent needs to be (e.g., `1.2.3`) in order to communicate with this server. The filter needs to be enabled for this to take effect.
+|
+|yes
+
+|genie.agent.filter.version.whitelist
+|A regex matched against agent version (e.g., `1\.2\..*`), agents not matching are rejected. The filter needs to be enabled for this to take effect.
+|
+|yes
+
+|genie.agent.heart-beat.send-interval
+|Interval for sending heartbeats to all connected clients.
+|5s
+|no
+
+|genie.agent.launcher.local.additional-environment
+|Environment variables to set when spawning an agent (in addition to the inherited server environment)
+|
+|no
+
+|genie.agent.launcher.local.agent-jar-path
+|The location of the agent jar. The value is substituted in the command template if the corresponding placeholder is present.
+|/tmp/genie-agent.jar
+|no
+
+|genie.agent.launcher.local.enabled
+|Enable or disable the corresponding launcher.
+|true
+|no
+
+|genie.agent.launcher.local.host-info-expire-after
+|How long after the job information for this host is written into a local cache is it evicted. See
+https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config-conversion[Spring Docs]
+for Duration conversion details.
+|1m
+|no
+
+|genie.agent.launcher.local.host-info-refresh-after
+|How long after the job information for this host is written should it be automatically refreshed from the underlying
+data source. See
+https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config-conversion[Spring Docs]
+ for Duration conversion details.
+|30s
+|no
+
+|genie.agent.launcher.local.launch-command-template
+|The system command that the launcher should use to launch an agent process. Ordered list of arguments. Contains placeholders that will be replaced at runtime.
+|java -jar <AGENT_JAR_PLACEHOLDER> exec --server-host 127.0.0.1 --server-port <SERVER_PORT_PLACEHOLDER> --api-job --job-id <JOB_ID_PLACEHOLDER>
+|no
+
+|genie.agent.launcher.local.max-job-memory
+|The maximum amount of memory, in megabytes, that a job can be allocated while using the local launcher
+|10240
+|no
+
+|genie.agent.launcher.local.max-total-job-memory
+|The total number of MB out of the system memory that Genie can use for running agents
+|30720
+|no
+
+|genie.agent.launcher.local.process-output-capture-enabled
+|Whether to capture stdout and stderr from the forked agent subprocess to a file for debugging purposes
+|false
+|no
+
+|genie.agent.launcher.local.run-as-user-enabled
+|Whether to launch the agent subprocess as the user specified in the job request
+|false
+|no
+
+|genie.agent.launcher.local.server-hostname
+|The hostname to connect to. This value is used if the command-line template references the server hostname placeholder
+|127.0.0.1
+|no
+
+|genie.agent.launcher.titus.application-name
+|The name of the application that launches the Titus job
+|genie
+|no
+
+|genie.agent.launcher.titus.additional-bandwidth
+|An additional amount of overhead bandwidth that should be added to whatever the job originally requested
+|0B
+|yes
+
+|genie.agent.launcher.titus.additional-cpu
+|An additional number of CPUs that should be added to whatever the job originally requested
+|1
+|yes
+
+|genie.agent.launcher.titus.additional-disk-size
+|An additional amount of disk space that should be added to whatever the job originally requested
+|1GB
+|yes
+
+|genie.agent.launcher.titus.additional-environment
+|Map of additional environment variables to set for the job
+|empty
+|yes
+
+|genie.agent.launcher.titus.additional-gpu
+|An additional number of GPUs that should be added to whatever the job originally requested
+|0
+|yes
+
+|genie.agent.launcher.titus.additional-job-attributes
+|Map of attributes to send with the Titus request in addition to whatever defaults there are
+|empty
+|yes
+
+|genie.agent.launcher.titus.additional-memory
+|An additional amount of memory that should be added to whatever the job originally requested
+|2GB
+|yes
+
+|genie.agent.launcher.titus.capacity-group
+|The name of the capacity group to target
+|default
+|yes
+
+|genie.agent.launcher.titus.command-template
+|The container command array, placeholder values are substituted at runtime
+|[exec, --api-job, --launchInJobDirectory, --job-id, <JOB_ID>, --server-host, <SERVER_HOST>, --server-port, <SERVER_PORT>]
+|no
+
+|genie.agent.launcher.titus.container-attributes
+|Map attributes to send to Titus specific to the container
+|empty
+|yes
+
+|genie.agent.launcher.titus.detail
+|The detail (jobGroupInfo) within the application space for Titus request
+|empty string
+|no
+
+|genie.agent.launcher.titus.enabled
+|Whether the Titus agent launcher is active or not
+|false
+|no
+
+|genie.agent.launcher.titus.endpoint
+|The Titus API endpoint URI
+|https://example-titus-endpoint.tld:1234
+|no
+
+|genie.agent.launcher.titus.entry-point-template
+|The container entry point array, placeholder values are substituted at runtime
+|[/bin/genie-agent]
+|no
+
+|genie.agent.launcher.titus.genie-server-host
+|The hostname of the Genie server or cluster for the agent to connect to
+|example.genie.tld
+|no
+
+|genie.agent.launcher.titus.genie-server-port
+|The port number of the Genie server or cluster for the agent to connect to
+|9090
+|no
+
+|genie.agent.launcher.titus.healthIndicator-max-size
+|Maximum number of recently launched jobs displayed in the health indicator details
+|100
+|no
+
+|genie.agent.launcher.titus.health-indicator-expiration
+|Maximum time a job is displayed in the health indicator details after launch
+|30m
+|no
+
+|genie.agent.launcher.titus.i-am-role
+|The IAM role to launch the job as
+|arn:aws:iam::000000000:role/SomeProfile
+|no
+
+|genie.agent.launcher.titus.image-name
+|The name of the container image
+|image-name
+|yes
+
+|genie.agent.launcher.titus.image-tag
+|The image tag
+|latest
+|yes
+
+|genie.agent.launcher.titus.minimum-bandwidth
+|The minimum network bandwidth to allocate to the container
+|7MB
+|yes
+
+|genie.agent.launcher.titus.minimum-cpu
+|The minimum number of CPUs any container should launch with
+|1
+|yes
+
+|genie.agent.launcher.titus.minimum-disk-size
+|The minimum size of the disk volume to attach to the job container
+|10GB
+|yes
+
+|genie.agent.launcher.titus.minimum-gpu
+|The minimum number of GPUs any container should launch with
+|0
+|yes
+
+|genie.agent.launcher.titus.minimum-memory
+|The minimum amount of memory a container should be allocated
+|2GB
+|yes
+
+|genie.agent.launcher.titus.owner-email
+|The team email of the owners of the Titus job
+|owners@genie.tld
+|no
+
+|genie.agent.launcher.titus.retries
+|How many times to retry launch if the job fails
+|0
+|yes
+
+|genie.agent.launcher.titus.runtime-limit
+|The maximum runtime of the job
+|12H
+|no
+
+|genie.agent.launcher.titus.security-attributes
+|A map of security attributes
+|empty map
+|no
+
+|genie.agent.launcher.titus.security-groups
+|A list of security groups for the job
+|empty list
+|no
+
+|genie.agent.launcher.titus.sequence
+|The sequence (jobGroupInfo) within the application space for Titus request
+|empty string
+|no
+
+|genie.agent.launcher.titus.stack
+|The stack (jobGroupInfo) within the application space for Titus request
+|empty string
+|no
+
+|genie.agent.routing.refresh-interval
+|Interval at which individual connections are refreshed
+|3s
+|no
+
+|genie.agent.configuration.dynamic.*
+|Properties with this prefix are forwarded to each agent during startup (with the prefix stripped)
+|
+|yes
+
+|genie.aws.credentials.role
+|The AWS role ARN to assume when connecting to S3. If this is set Genie will create a credentials provider that will
+attempt to assume this role on the host Genie is running on
+|
+|no
+
+|genie.aws.s3.buckets.[bucketName].roleARN
+|For the bucket with name `bucketName` the ARN of the role to assume to read/write to that bucket. If a bucket is used
+that isn't listed in this map the default credentials configured will be used
+|
+|no
+
+|genie.aws.s3.buckets.[bucketName].region
+|The AWS region the bucket with `bucketName` is in. Clients to talk to this bucket will be created in this region. If
+no value is specified the bucket is assumed to be in the same region as the Genie process.
+|
+|no
+
+|genie.grpc.server.services.job-file-sync.ackIntervalMilliseconds
+|How many milliseconds to wait between checks whether some acknowledgement should be sent to the agent regardless of
+whether the `maxSyncMessages` threshold has been reached or not
+|30,000
+|no
+
+|genie.grpc.server.services.job-file-sync.maxSyncMessages
+|How many messages to receive from the agent before an acknowledgement message is sent back from the server
+|10
+|no
+
+|genie.health.maxCpuLoadConsecutiveOccurrences
+|Defines the threshold of consecutive occurrences of CPU load crossing the <maxCpuLoadPercent>.
+Health of the system is marked unhealthy if the CPU load of a system goes beyond the threshold 'maxCpuLoadPercent'
+for 'maxCpuLoadConsecutiveOccurrences' consecutive times.
+|3
+|no
+
+|genie.health.maxCpuLoadPercent
+|Defines the threshold for the maximum CPU load percentage to consider for an instance to be unhealthy.
+Health of the system is marked unhealthy if the CPU load of a system goes beyond this threshold for
+'maxCpuLoadConsecutiveOccurrences' consecutive times.
+|80
+|no
+
+|genie.http.connect.timeout
+|The number of milliseconds before HTTP calls between Genie nodes should time out on connection
+|2000
+|no
+
+|genie.http.read.timeout
+|The number of milliseconds before HTTP calls between Genie nodes should time out on attempting to read data
+|10000
+|no
+
+|genie.jobs.active-limit.count
+|The maximum number of active jobs a user is allowed to have. Once a user hits this limit, jobs submitted are rejected. This is property is ignored unless `genie.jobs.users.active-limit.enabled` is set to true. This limit applies to users that don't have an override set via `genie.jobs.users.active-limit.overrides.<user-name>`.
+|100
+|no
+
+|genie.jobs.active-limit.enabled
+|Enables the per-user active job limit. The number of jobs is controlled by the `genie.jobs.users.active-limit.count` property.
+|false
+|no
+
+|genie.jobs.active-limit.overrides.<user-name>
+|The maximum number of active jobs that user 'user-name' is allowed to have. This is property is ignored unless `genie.jobs.users.active-limit.enabled` is set to true.
+|-
+|yes
+
+|genie.jobs.attachments.location-prefix
+|Common prefix where attachments are stored
+|s3://genie/attachments
+|no
+
+|genie.jobs.attachments.max-size
+|Maximum size of an attachment
+|100MB
+|no
+
+|genie.jobs.attachments.max-total-size
+|Maximum size of all attachments combined (Spring and Tomcat may also independently limit the size of upload)
+|150MB
+|no
+
+|genie.jobs.files.filter.case-sensitive-matching
+|Whether the regular expressions defined in `genie.jobs.files.filter.*` are case-sensitive or not.
+|true
+|no
+
+|genie.jobs.files.filter.directory-traversal-reject-patterns
+|List of regex patterns, if a directory matches any, then its contents are not included in the job files manifest
+|[]
+|no
+
+|genie.jobs.files.filter.directory-reject-patterns
+|List of regex patterns, if a directory matches any, then it is not included in the job files manifest
+|[]
+|no
+
+|genie.jobs.files.filter.file-reject-patterns
+|List of regex patterns, if a file matches any, then it is not included in the job files manifest
+|[]
+|no
+
+|genie.jobs.forwarding.enabled
+|Whether to attempt to forward kill and get output requests for jobs
+|true
+|no
+
+|genie.jobs.forwarding.port
+|The port to forward requests to as it could be different than ELB port
+|8080
+|no
+
+|genie.jobs.forwarding.scheme
+|The connection protocol to use (http or https)
+|http
+|no
+
+|genie.jobs.locations.archives
+|The default root location where job archives should be stored. Scheme should be included. Created if doesn't exist.
+|file://${java.io.tmpdir}genie/archives/
+|no
+
+|genie.jobs.locations.jobs
+|The default root location where job working directories will be placed. Created by system if doesn't exist.
+|file://${java.io.tmpdir}genie/jobs/
+|no
+
+|genie.jobs.memory.maxSystemMemory
+|The total number of MB out of the system memory that Genie can use for running jobs
+|30720
+|no
+
+|genie.jobs.memory.defaultJobMemory
+|The total number of megabytes Genie will assume a job is allocated if not overridden by a command or user at runtime
+|1024
+|no
+
+|genie.jobs.memory.maxJobMemory
+|The maximum amount of memory, in megabytes, that a job client can be allocated
+|10240
+|no
+
+|genie.jobs.submission.enabled
+|Whether new job submission is enabled (`true`) or disabled (`false`)
+|true
+|yes
+
+|genie.jobs.submission.disabledMessage
+|A message to return to the users when new job submission is disabled
+|Job submission is currently disabled. Please try again later.
+|yes
+
+|genie.jobs.users.runAsUserEnabled
+|Whether Genie should run the jobs as the user who submitted the job or not. Genie user must have sudo rights for this
+to work.
+|false
+|no
+
+|genie.leader.enabled
+|Whether this node should be the leader of the cluster or not. Should only be used if leadership is not being
+determined by Zookeeper or other mechanism via Spring
+|false
+|no
+
+|genie.notifications.sns.enabled
+|Wether to enable SNS publishing of events
+|-
+|no
+
+|genie.notifications.sns.topicARN
+|The SNS topic to publish to
+|-
+|no
+
+|genie.notifications.sns.additionalEventKeys.<KEY>
+|Map of KEYs and corresponding values to be added to the SNS messages published
+|-
+|no
+
+|genie.redis.enabled
+|Whether to enable storage of HTTP sessions inside Redis via http://projects.spring.io/spring-session/[Spring Session]
+|false
+|no
+
+|genie.retry.archived-job-get-metadata.initialDelay
+|The initial interval between retries to get archived job metadata. Milliseconds
+|1000
+|no
+
+|genie.retry.archived-job-get-metadata.multiplier
+|The amount the delay should increase on every retry. e.g. start at 1 second -> 2 seconds -> 4 seconds with a value
+of 2.0
+|2.0
+|no
+
+|genie.retry.archived-job-get-metadata.noOfRetries
+|The number of times to retry requests to get archived job metadata before failure
+|5
+|no
+
+|genie.retry.initialInterval
+|The amount of time to wait after initial failure before retrying the first time in milliseconds
+|10000
+|no
+
+|genie.retry.maxInterval
+|The maximum amount of time to wait between retries for the final retry in the back-off policy
+|60000
+|no
+
+|genie.retry.noOfRetries
+|The number of times to retry requests to before failure
+|5
+|no
+
+|genie.retry.s3.noOfRetries
+|The number of times to retry requests to S3 before failure
+|5
+|no
+
+|genie.retry.sns.noOfRetries
+|The number of times to retry requests to SNS before failure
+|5
+|no
+
+|genie.scripts-manager.refresh-interval
+|Interval for the script manager to reload and recompile known scripts (in milliseconds)
+|300000
+|no
+
+|genie.scripts.agent-launcher-selector.properties-refresh-interval
+|Interval for refreshing property values passed to the script.
+|5m
+|no
+
+|genie.scripts.agent-launcher-selector.source
+|URI of the script to load. `AgentLauncherSelectorManagedScript` is enabled only if this property is set.
+|null
+|no
+
+|genie.scripts.agent-launcher-selector.auto-load-enabled
+|If true, the script eagerly load during startup, as opposed to lazily load on first use.
+|false
+|no
+
+|genie.scripts.agent-launcher-selector.timeout
+|Maximum script execution time (in milliseconds). After this time has elapsed, evaluation is shut down.
+|5000
+|no
+
+|genie.scripts.cluster-selector.properties-refresh-interval
+|Interval for refreshing property values passed to the script.
+|5m
+|no
+
+|genie.scripts.cluster-selector.source
+|URI of the script to load. `ScriptClusterSelector` is enabled only if this property is set.
+|null
+|no
+
+|genie.scripts.cluster-selector.auto-load-enabled
+|If true, the script eagerly load during startup, as opposed to lazily load on first use.
+|false
+|no
+
+|genie.scripts.cluster-selector.timeout
+|Maximum script execution time (in milliseconds). After this time has elapsed, evaluation is shut down.
+|5000
+|no
+
+|genie.scripts.command-selector.properties-refresh-interval
+|Interval for refreshing property values passed to the script.
+|5m
+|no
+
+|genie.scripts.command-selector.source
+|URI of the script to load. `ScriptCommandSelector` is enabled only if this property is set.
+|null
+|no
+
+|genie.scripts.command-selector.auto-load-enabled
+|If true, the script eagerly load during startup, as opposed to lazily load on first use.
+|false
+|no
+
+|genie.scripts.command-selector.timeout
+|Maximum script execution time (in milliseconds). After this time has elapsed, evaluation is shut down.
+|5000
+|no
+
+|genie.tasks.agent-cleanup.enabled
+|Whether to enable the task that detects jobs whose agent has gone AWOL, and marks them failed
+|true
+|no
+
+|genie.tasks.agent-cleanup.launchTimeLimit
+|How long a job can stay in ACCEPTED state, waiting for the agent to claim it, before the job is marked failed, in milliseconds
+|240000
+|no
+
+|genie.tasks.agent-cleanup.refreshInterval
+|How often the AWOL agent tasks executed, in milliseconds
+|10000
+|no
+
+|genie.tasks.agent-cleanup.reconnectTimeLimit
+|How long of a leeway to give a job after its agent disconnected and before the job is marked failed, in milliseconds
+|120000
+|no
+
+|genie.tasks.archive-status-cleanup.enabled
+|Whether to enable the task that detects jobs whose archive status was left in PENDING state
+|true
+|no
+
+|genie.tasks.archive-status-cleanup.check-interval
+|How often the archive status tasks executed
+|10s
+|no
+
+|genie.tasks.archive-status-cleanup.gracePeriod
+|How much time since the final status update to give to jobs before marking the status as UNKNOWN
+|2m
+|no
+
+|genie.tasks.database-cleanup.batch-size
+|The max number of entities to delete per transaction (applies to files, clusters, commands, tags, applications)
+|1000
+|yes
+
+|genie.tasks.database-cleanup.application-cleanup.skip
+|Skip the Applications table when performing database cleanup
+|false
+|yes
+
+|genie.tasks.database-cleanup.cluster-cleanup.skip
+|Skip the Clusters table when performing database cleanup
+|false
+|yes
+
+|genie.tasks.database-cleanup.command-cleanup.skip
+|Skip the Commands table when performing database cleanup
+|false
+|yes
+
+|genie.tasks.database-cleanup.command-deactivation.commandCreationThreshold
+|The number of days before the current cleanup run that a command must have been created before in the system to be
+considered for deactivation.
+|false
+|yes
+
+|genie.tasks.database-cleanup.command-deactivation.jobCreationThreshold
+|The number of days before the current cleanup run that command must not have been used in a job for that command to be
+considered for deactivation.
+|false
+|yes
+
+|genie.tasks.database-cleanup.command-deactivation.skip
+|Skip deactivating Commands when performing database cleanup
+|false
+|yes
+
+|genie.tasks.database-cleanup.enabled
+|Whether or not to delete old and unused records from the database at a scheduled interval.
+See: `genie.tasks.database-cleanup.expression`
+|true
+|no
+
+|genie.tasks.database-cleanup.expression
+|The cron expression for how often to run the database cleanup task
+|0 0 0 * * *
+|yes
+
+|genie.tasks.database-cleanup.file-cleanup.skip
+|Skip the Files table when performing database cleanup
+|false
+|yes
+
+|genie.tasks.database-cleanup.job-cleanup.skip
+|Skip the Jobs table when performing database cleanup
+|false
+|yes
+
+|genie.tasks.database-cleanup.job-cleanup.pageSize
+|The max number of jobs to delete per transaction
+|1000
+|yes
+
+|genie.tasks.database-cleanup.job-cleanup.retention
+|The number of days to retain jobs in the database
+|90
+|yes
+
+|genie.tasks.database-cleanup.tag-cleanup.skip
+|Skip the Tags table when performing database cleanup
+|false
+|yes
+
+|genie.tasks.disk-cleanup.enabled
+|Whether or not to remove old job directories on the Genie node or not
+|true
+|no
+
+|genie.tasks.disk-cleanup.expression
+|How often to run the disk cleanup task as a cron expression
+|0 0 0 * * *
+|no
+
+|genie.tasks.disk-cleanup.retention
+|The number of days to leave old job directories on disk
+|3
+|no
+
+|genie.tasks.executor.pool.size
+|The number of executor threads available for tasks to be run on within the node in an adhoc manner. Best to set to the
+number of CPU cores x 2 + 1
+|1
+|no
+
+|genie.tasks.scheduler.pool.size
+|The number of available threads for the scheduler to use to run tasks on the node at scheduled intervals. Best to set
+to the number of CPU cores x 2 + 1
+|1
+|no
+
+|genie.tasks.user-metrics.enabled
+|Whether or not to publish user-tagged metrics
+|true
+|no
+
+|genie.tasks.user-metrics.refresh-interval
+|Publish/refresh interval in milliseconds
+|30000
+|no
+
+|genie.zookeeper.discovery-path
+|The namespace to use for Genie discovery service (maps agents to the node they're connected to)
+|/genie/discovery/
+|no
+
+|genie.zookeeper.leader-path
+|The namespace to use for Genie leadership election of a given cluster
+|/genie/leader/
+|no
+
+|===
+
+==== Spring Properties
+
+http://docs.spring.io/spring-boot/docs/{springBootVersion}/reference/htmlsingle/#common-application-properties[Spring Properties]
+
+|===
+|Property |Description| Default Value
+
+|info.genie.version
+|The Genie version to be displayed by the UI and returned by the actuator /info endpoint. Set by the build.
+|Current build version
+
+|management.endpoints.web.base-path
+|The default base path for the Spring Actuator[https://docs.spring.io/spring-boot/docs/current/actuator-api/html/]
+management endpoints. Switched from default `/actuator`
+|/admin
+
+|spring.application.name
+|The name of the application in the Spring context
+|genie
+
+|spring.banner.location
+|Banner file location
+|genie-banner.txt
+
+|spring.data.redis.repositories.enabled
+|Whether Spring data repositories should attempt to be created for Redis
+|false
+
+|spring.datasource.url
+|JDBC URL of the database
+|jdbc:h2:mem:genie
+
+|spring.datasource.username
+|Username for the datasource
+|root
+
+|spring.datasource.password
+|Database password
+|
+
+|spring.datasource.hikari.leak-detection-threshold
+|How long to wait (in milliseconds) before a connection should be considered leaked out of the pool if it hasn't been
+returned
+|30000
+
+|spring.datasource.hikari.pool-name
+|The name of the connection pool. Will show up in logs under this name.
+|genie-hikari-db-pool
+
+|spring.flyway.baselineDescription
+|Description for the initial baseline of a database instance
+|Base Version
+
+|spring.flyway.baselineOnMigrate
+|Whether or not to baseline when Flyway is present and the datasource targets a DB that isn't managed by Flyway
+|true
+
+|spring.flyway.baselineVersion
+|Initial DB version (When Genie migrated to Flyway is current setting. Shouldn't touch)
+|3.2.0
+
+|spring.flyway.locations
+|Where flyway should look for database migration files
+|classpath:db/migration/{vendor}
+
+|spring.jackson.serialization.write-dates-as-timestamps
+|Whether to serialize instants as timestamps or ISO8601 strings
+|false
+
+|spring.jackson.time-zone
+|Time zone used when formatting dates. For instance `America/Los_Angeles`
+|UTC
+
+|spring.jpa.hibernate.ddl-auto
+|DDL mode. This is actually a shortcut for the "hibernate.hbm2ddl.auto" property.
+|validate
+
+|spring.jpa.hibernate.properties.hibernate.jdbc.time_zone
+|The timezone to use when writing dates to the database
+https://moelholm.com/2016/11/09/spring-boot-controlling-timezones-with-hibernate/[see article]
+|UTC
+
+|spring.profiles.active
+|The default active profiles when Genie is run
+|dev
+
+|spring.mail.host
+|The hostname of the mail server
+|
+
+|spring.mail.testConnection
+|Whether to check the connection to the mail server on startup
+|false
+
+|spring.redis.host
+|Endpoint for the Redis cluster used to store HTTP session information
+|
+
+|spring.servlet.multipart.max-file-size
+|Max attachment file size. Values can use the suffixed "MB" or "KB" to indicate a Megabyte or Kilobyte size.
+|100MB
+
+|spring.servlet.multipart.max-request-size
+|Max job request size. Values can use the suffixed "MB" or "KB" to indicate a Megabyte or Kilobyte size.
+|200MB
+
+|spring.session.store-type
+|The back end storage system for Spring to store HTTP session information. See
+http://docs.spring.io/spring-boot/docs/{springBootVersion}/reference/htmlsingle/#boot-features-session[Spring Boot Session]
+for more information. Currently on classpath only none, redis and jdbc will work.
+|none
+
+|===
+
+==== Spring Cloud Properties
+
+Properties set by default to manipulate various https://projects.spring.io/spring-cloud/[Spring Cloud] libraries.
+
+|===
+|Property |Description| Default Value
+
+|cloud.aws.credentials.useDefaultAwsCredentialsChain
+|Whether to attempt creation of a standard AWS credentials chain.
+See https://cloud.spring.io/spring-cloud-aws/[Spring Cloud AWS] for more information.
+|true
+
+|cloud.aws.region.auto
+|Whether the AWS region will be attempted to be auto recognized via the AWS metadata services on EC2.
+See https://cloud.spring.io/spring-cloud-aws/[Spring Cloud AWS] for more information.
+|false
+
+|cloud.aws.region.static
+|The default AWS region. See https://cloud.spring.io/spring-cloud-aws/[Spring Cloud AWS] for more information.
+|us-east-1
+
+|cloud.aws.stack.auto
+|Whether auto stack detection is enabled.
+See https://cloud.spring.io/spring-cloud-aws/[Spring Cloud AWS] for more information.
+|false
+
+|spring.cloud.zookeeper.enabled
+|Whether to enable zookeeper functionality or not
+|false
+
+|spring.cloud.zookeeper.connectString
+|The connection string for the zookeeper cluster
+|localhost:2181
+
+|===
+
+==== gRPC Server properties
+
+|===
+|Property |Description| Default Value
+|grpc.server.port
+|The port on which to bind the gRPC server, if enabled.
+|9090
+
+|grpc.server.address
+|The address on which to bind the gRPC server, if enabled.
+|0.0.0.0
+
+|===
+
+=== Profile Specific Properties
+
+==== Prod Profile
+
+|===
+|Property |Description| Default Value
+
+|spring.datasource.url
+|JDBC URL of the database
+|jdbc:mysql://127.0.0.1/genie?useUnicode=yes&characterEncoding=UTF-8&useLegacyDatetimeCode=false
+
+|spring.datasource.username
+|Username for the datasource
+|root
+
+|spring.datasource.password
+|Database password
+|
+
+|spring.datasource.hikari.data-source-properties.cachePrepStmts
+|https://github.com/brettwooldridge/HikariCP/wiki/MySQL-Configuration[MySQL Tuning]
+|true
+
+|spring.datasource.hikari.data-source-properties.prepStmtCacheSize
+|https://github.com/brettwooldridge/HikariCP/wiki/MySQL-Configuration[MySQL Tuning]
+|250
+
+|spring.datasource.hikari.data-source-properties.prepStmtCacheSqlLimit
+|https://github.com/brettwooldridge/HikariCP/wiki/MySQL-Configuration[MySQL Tuning]
+|2048
+
+|spring.datasource.hikari.data-source-properties.serverTimezone
+|https://github.com/brettwooldridge/HikariCP/wiki/MySQL-Configuration[MySQL Tuning]
+|UTC
+
+|spring.datasource.hikari.data-source-properties.userServerPrepStatements
+|https://github.com/brettwooldridge/HikariCP/wiki/MySQL-Configuration[MySQL Tuning]
+|true
+
+|===
+
+== Genie Agent
+
+This section describes the various properties that can be set to control the behavior of the Genie agent.
+
+Unless otherwise noted, properties are loaded from the standard sources (defaults, profiles, other files).
+The server also has a chance to override them during the 'Agent Configuration' execution stage.
+
+=== Properties forwarding
+
+Server-side properties that match a given prefix are forwarded to all agents during agent configuration stage.
+For a property to be forwarded, it needs to be prefixed with `genie.agent.configuration.dynamic.`.
+
+Example:
+Set property `genie.agent.configuration.dynamic.genie.agent.runtime.emergency-shutdown-delay` on the server to have it
+forwarded to all agents as `genie.agent.runtime.emergency-shutdown-delay`.
+
+|===
+|Property |Description |Default Value | Notes
+
+| `genie.agent.runtime.emergency-shutdown-delay`
+| Time allowed to the agent to shut down cleanly (archive, cleanup, ...) before the JVM is forcefully shut down
+| 5m
+|
+
+| `genie.agent.runtime.force-manifest-refresh-timeout`
+| Maximum time block when trying to forcefully push a manifest update
+| 5s
+|
+
+| `genie.agent.runtime.file-stream-service.error-back-off.delay-type`
+| Scheduling policy for backoff in case of error during file streaming
+| FROM_PREVIOUS_EXECUTION_BEGIN
+|
+
+| `genie.agent.runtime.file-stream-service.error-back-off.min-delay`
+| Minimum delay before another attempt during file streaming
+| 1s
+|
+
+| `genie.agent.runtime.file-stream-service.error-back-off.max-delay`
+| Maximum delay before another attempt during file streaming
+| 10s
+|
+
+| `genie.agent.runtime.file-stream-service.error-back-off.factor`
+| Multiplication factor for retry delay before another attempt during file streaming
+| 1.1
+|
+
+| `genie.agent.runtime.file-stream-service.enable-compression`
+| Wether to enable compression when transmitting file chunks to the server
+| true
+|
+
+| `genie.agent.runtime.file-stream-service.data-chunk-max-size`
+| Max size of a file chunk sent to the server
+| 1MB
+|
+
+| `genie.agent.runtime.file-stream-service.max-concurrent-streams`
+| Maximum number of files transmitted concurrently to the server
+| 5
+|
+
+| `genie.agent.runtime.file-stream-service.drain-timeout`
+| Maximum time a file transfer is allowed to complete before it is terminated during agent shutdown
+| 15s
+| Should be lower then `genie.agent.runtime.emergency-shutdown-delay`
+
+| `genie.agent.runtime.heart-beat-service.interval`
+| Interval between heartbeats
+| 2s
+|
+
+| `genie.agent.runtime.heart-beat-service.error-retry-delay`
+| Interval to wait before re-establishing the heartbeat stream
+| 1s
+|
+
+| `genie.agent.runtime.job-kill-service.response-check-back-off.delay-type`
+| Scheduling policy for backoff in case of error during kill request
+| FROM_PREVIOUS_EXECUTION_COMPLETION
+|
+
+| `genie.agent.runtime.job-kill-service.response-check-back-off.min-delay`
+| Minimum delay before another attempt during kill request
+| 500ms
+|
+
+| `genie.agent.runtime.job-kill-service.response-check-back-off.max-delay`
+| Maximium delay before another attempt during kill request
+| 5s
+|
+
+| `genie.agent.runtime.job-kill-service.response-check-back-off.factor`
+| Multiplication factor for retry delay before another attempt during kill request
+| 1.2
+|
+
+| `genie.agent.runtime.job-monitor-service.check-remote-job-status`
+| Whether to periodically poll the running job status from the server, and to shut down in case the job is marked failed
+| true
+|
+
+| `genie.agent.runtime.job-monitor-service.check-interval`
+| How often to check for files limits
+| 1m
+|
+
+| `genie.agent.runtime.job-monitor-service.max-files`
+| Maximum number of files in the job directory
+| 64000
+|
+
+| `genie.agent.runtime.job-monitor-service.max-file-size`
+| Maximum size of the largest file in the job directory
+| 8GB
+|
+
+| `genie.agent.runtime.job-monitor-service.max-total-size`
+| Maximum total size of the job directory
+| 16GB
+|
+
+| `genie.agent.runtime.job-setup-service.environment-dump-filter-expression`
+| Grep regular expression (ERE syntax) filter applied to environment variable dumped into env.log before job execution
+| .*
+|
+
+| `genie.agent.runtime.job-setup-service.environment-dump-filter-inverted`
+| Wether to invert environment-dump-filter-expression such that environment entries NOT matching the expression are logged
+| false
+|
+
+| `genie.agent.runtime.shutdown.execution-completion-leeway`
+| Time allowed to the job execution state machine to shut down cleanly before the JVM is shut down
+| 60s
+|
+
+| `genie.agent.runtime.shutdown.internal-executors-leeway`
+| Time allowed on task running on internal task executors to complete before the agent terminates
+| 30s
+| This property is bound during initialization and cannot be modified at runtime by the server.
+
+| `genie.agent.runtime.shutdown.internal-schedulers-leeway`
+| Time allowed on task running on internal task schedulers to complete before the agent terminates
+| 30s
+| This property is bound during initialization and cannot be modified at runtime by the server.
+
+| `genie.agent.runtime.shutdown.system-executor-leeway`
+| Time allowed on task running on Spring's system task executor to complete before the agent terminates
+| 60s
+| This property is bound during initialization and cannot be modified at runtime by the server.
+
+| `genie.agent.runtime.shutdown.system-scheduler-leeway`
+| Time allowed on task running on Spring's system task scheduler to complete before the agent terminates
+| 60s
+| This property is bound during initialization and cannot be modified at runtime by the server.
+
+|===
+
+
+== Selector Script Properties
+
+Properties with a special prefix are forwarded to the script selector runtime (with the prefix stripped).
+
+For example, server property `cluster-selector.canary` is passed to the script runtime as `canary`.
+
+|===
+|Selector Script | Prefix
+
+| Cluster Selector Script
+| `cluster-selector.`
+
+| Command Selector Script
+| `command-selector.`
+
+| Agent Launcher Selector Script
+| `agent-launcher-selector.`
+
+|===

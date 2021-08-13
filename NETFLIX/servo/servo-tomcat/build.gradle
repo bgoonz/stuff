@@ -1,0 +1,15 @@
+dependencies {
+  compile project(':servo-core')
+}
+
+pmd {
+  ignoreFailures = true
+}
+
+jar {
+  manifest {
+    attributes(
+      "Automatic-Module-Name": "com.netflix.servo.tomcat"
+    )
+  }
+}

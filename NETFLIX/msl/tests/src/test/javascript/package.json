@@ -1,0 +1,33 @@
+{
+  "name": "msl-tests-exec",
+  "version": "1.2226.0",
+  "description": "Message Security Layer Tests Execution",
+  "keywords": [
+    "msl",
+    "message security layer",
+    "netflix"
+  ],
+  "homepage": "https://github.com/Netflix/msl",
+  "bugs": {
+    "url": "https://github.com/Netflix/msl/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:Netflix/msl.git"
+  },
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "find . -type f -name '*.js' ! -regex '.*/node_modules/.*' | xargs -n1 jasmine-node --matchall --forceexit --captureExceptions ./node_modules/msl-tests/lib/jasmine/msl-helpers.js"
+  },
+  "dependencies": {
+    "msl-core": "^1.2226.0",
+    "msl-tests": "^1.2226.0"
+  },
+  "devDependencies": {
+    "ec-key": "0.0.2",
+    "elliptic": "^6.4.0",
+    "jshint": "^2.11.1",
+    "jsrsasign": "^8.0.15",
+    "ursa": "^0.9.4"
+  }
+}

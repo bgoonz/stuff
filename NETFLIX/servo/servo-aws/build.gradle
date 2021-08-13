@@ -1,0 +1,17 @@
+dependencies {
+  compile project(':servo-core')
+  compile('com.amazonaws:aws-java-sdk-autoscaling')
+  compile('com.amazonaws:aws-java-sdk-cloudwatch')
+}
+
+checkstyle {
+  sourceSets = []
+}
+
+jar {
+  manifest {
+    attributes(
+      "Automatic-Module-Name": "com.netflix.servo.aws"
+    )
+  }
+}

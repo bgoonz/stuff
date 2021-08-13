@@ -1,0 +1,5 @@
+rootProject.name='astyanax'
+include 'astyanax', 'astyanax-core', 'astyanax-cassandra', 'astyanax-cassandra-all-shaded',
+        'astyanax-thrift', 'astyanax-cql', 'astyanax-recipes', 'astyanax-queue', 'astyanax-entity-mapper',
+        'astyanax-contrib', 'astyanax-examples', 'astyanax-test'
+

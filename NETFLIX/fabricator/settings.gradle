@@ -1,0 +1,4 @@
+rootProject.name='fabricator'
+include 'fabricator-core'
+include 'fabricator-guice'
+include 'fabricator-archaius'

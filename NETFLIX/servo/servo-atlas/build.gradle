@@ -1,0 +1,20 @@
+dependencies {
+  compile project(':servo-core')
+  compile 'com.netflix.archaius:archaius2-core'
+  compile 'com.netflix.iep-shadow:iepshadow-rxnetty'
+  compile 'com.netflix.iep-shadow:iepshadow-iep-rxhttp'
+  compile "com.fasterxml.jackson.core:jackson-databind"
+  compile "com.fasterxml.jackson.dataformat:jackson-dataformat-smile"
+  compile 'io.netty:netty-buffer'
+  compile 'io.netty:netty-codec-http'
+  compile 'io.reactivex:rxjava'
+  jmh project(':servo-core')
+}
+
+jar {
+  manifest {
+    attributes(
+      "Automatic-Module-Name": "com.netflix.servo.atlas"
+    )
+  }
+}

@@ -1,0 +1,27 @@
+elasticsearch index:
+
+GET http://elasticsearch:9200/osstracker
+
+Must configure the index first, or queries will fail:
+
+PUT http://elasticsearch:9200/osstracker
+
+{
+    "mappings": {
+        "repo_stats" : {
+            "properties": {
+                "repo_name": {
+                    "type": "text",
+                    "index": "false"
+                },
+                "osslifecycle": {
+                    "type": "text",
+                    "index": "false"
+                }
+            }
+        }
+    }
+}
+
+See the size of the index:
+GET http://elasticsearch:9200/osstracker/repo_stats/_count

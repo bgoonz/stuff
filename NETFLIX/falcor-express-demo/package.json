@@ -1,0 +1,34 @@
+{
+  "name": "falcor-express-demo",
+  "version": "0.0.1",
+  "description": "A falcor server for express demo.",
+  "homepage": "https://github.com/Netflix/falcor-express-demo",
+  "author": {
+    "name": "Netflix",
+    "url": "https://github.com/Netflix/falcor-express-demo/authors.txt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Netflix/falcor-express-demo.git"
+  },
+  "licenses": [
+    {
+      "type": "Apache License, Version 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  ],
+  "scripts": {
+    "start": "node_modules/.bin/nodemon -w index.js & node watch.js"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "body-parser": "^1.14.1",
+    "falcor-router-demo": "^1.0.4",
+    "falcor-express": "^0.1.2"
+  },
+  "devDependencies": {
+    "eslint": "^1.7.1",
+    "livereload": "^0.4.1",
+    "nodemon": "^1.8.0"
+  }
+}

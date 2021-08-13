@@ -1,0 +1,68 @@
+{
+  "name": "ember-nf-graph",
+  "version": "2.0.0-beta.1",
+  "description": "A graphing/charting DSL for Ember.js",
+  "files": [
+    "LICENSE.md",
+    "README.md",
+    "addon/",
+    "app/",
+    "blueprints/",
+    "index.js",
+    "vendor/"
+  ],
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "ember build",
+    "lint:js": "eslint ./*.js addon addon-test-support app config lib server test-support tests",
+    "start": "ember serve",
+    "test": "ember try:each"
+  },
+  "repository": "https://github.com/netflix/ember-nf-graph.git",
+  "engines": {
+    "node": "^4.5 || 6.* || >= 7.*"
+  },
+  "author": "Ben Lesh <blesh@netflix.com> and contributors",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "d3": "~3.5.17",
+    "ember-cli-babel": "^6.6.0",
+    "ember-cli-htmlbars": "^1.1.1",
+    "ember-cli-update": "^0.13.2",
+    "ember-cli-node-assets": "^0.2.2",
+    "rx": "~4.1.0"
+  },
+  "devDependencies": {
+    "benchpress": "^2.0.0-alpha.16",
+    "broccoli-asset-rev": "^2.4.5",
+    "ember-cli": "~2.18.0",
+    "ember-cli-app-version": "^1.0.0",
+    "ember-cli-dependency-checker": "^2.0.0",
+    "ember-cli-eslint": "^4.2.1",
+    "ember-cli-htmlbars-inline-precompile": "^1.0.0",
+    "ember-cli-inject-live-reload": "^1.4.1",
+    "ember-cli-qunit": "^4.1.1",
+    "ember-cli-release": "0.2.8",
+    "ember-cli-shims": "^1.2.0",
+    "ember-cli-sri": "^2.1.0",
+    "ember-cli-uglify": "^2.0.0",
+    "ember-disable-prototype-extensions": "^1.1.2",
+    "ember-export-application-global": "^2.0.0",
+    "ember-load-initializers": "^1.0.0",
+    "ember-resolver": "^4.0.0",
+    "ember-source": "~2.18.0",
+    "eslint-plugin-ember": "^5.0.0",
+    "eslint-plugin-node": "^5.2.1",
+    "loader.js": "^4.2.3"
+  },
+  "keywords": [
+    "ember-addon"
+  ],
+  "ember-addon": {
+    "configPath": "tests/dummy/config",
+    "demoURL": "https://netflix.github.io/ember-nf-graph-examples/dist/"
+  }
+}

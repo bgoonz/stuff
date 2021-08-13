@@ -1,0 +1,21 @@
+version = "${shortVersion(rootProject.versionRxNetty)}${versionSuffix}"
+
+dependencies {
+  runtime "io.reactivex:rxjava:${rootProject.versionRxJava}"
+  runtime "io.netty:netty-handler:${rootProject.versionIoNetty}"
+  runtime "io.netty:netty-codec-http:${rootProject.versionIoNetty}"
+  runtime "io.netty:netty-transport-native-epoll:${rootProject.versionIoNetty}"
+  runtime "org.slf4j:slf4j-api:${rootProject.versionSlf4j}"
+
+  // these dependencies are shaded
+  providedCompile "io.reactivex:rxnetty:${rootProject.versionRxNetty}"
+  shadow "io.reactivex:rxnetty:${rootProject.versionRxNetty}"
+}
+
+shadowJar {
+  classifier = null
+  dependencies {
+      include dependency("io.reactivex:rxnetty:${rootProject.versionRxNetty}")
+  }
+  relocate 'io.reactivex', 'iep.io.reactivex'
+}

@@ -1,0 +1,26 @@
+=== Get the Commands for a Cluster
+
+WARNING: Deprecated
+
+NOTE: As of Genie 4.0.0 commands are no longer hard linked to clusters, instead they are dynamically linked by
+resolving a command's cluster criteria against the current set of `UP` clusters. This API is now a no-op.
+
+==== Endpoint
+
+`GET /api/v3/clusters/{id}/commands`
+
+:snippet-base: {snippets}/cluster-rest-controller-integration-test/can-add-commands-for-a-cluster/3
+:id-base: get-commands-for-cluster
+:!request-headers:
+:request-path-params: {snippet-base}/path-parameters.adoc
+:request-query-params: {snippet-base}/request-parameters.adoc
+:!request-fields:
+:curl-request: {snippet-base}/curl-request.adoc
+:httpie-request: {snippet-base}/httpie-request.adoc
+:!response-headers:
+:!response-fields:
+:!response-links:
+:http-request: {snippet-base}/http-request.adoc
+:http-response: {snippet-base}/http-response.adoc
+
+include::../_apiTemplate.adoc[]

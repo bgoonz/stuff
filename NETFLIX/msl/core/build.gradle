@@ -1,0 +1,86 @@
+apply plugin: 'java'
+apply plugin: 'eclipse-wtp'
+
+targetCompatibility = '1.7' // Android maximum supported language level
+sourceCompatibility = '1.7' // Android maximum supported language level
+
+dependencies {
+    compile 'org.bouncycastle:bcprov-jdk15on:1.46'
+    compile 'org.json:json:20140107'
+}
+
+task my_javadoc(type: Javadoc) {
+    options.overview = "overview.html"
+    options.links = [
+        "http://docs.oracle.com/javase/7/docs/api/",
+        "http://junit.org/javadoc/4.11/",
+        "http://www.bouncycastle.org/docs/docs1.5on/"
+    ]
+    source = sourceSets.main.allJava
+}
+
+task my_javadoc_public(type: Javadoc) {
+    destinationDir = file("$docsDir/javadoc-public")
+    options.overview = "overview-public.html"
+    options.links = [
+        "http://docs.oracle.com/javase/7/docs/api/",
+        "http://junit.org/javadoc/4.11/",
+        "http://www.bouncycastle.org/docs/docs1.5on/"
+    ]
+    source = sourceSets.main.allJava
+    includes = [
+        "**/Base64.java",
+        "**/EntityAuthenticationData.java",
+        "**/EntityAuthenticationFactory.java",
+        "**/EntityAuthenticationScheme.java",
+        "**/ErrorHeader.java",
+        "**/ErrorMessageRegistry.java",
+        "**/FilterStreamFactory.java",
+        "**/Header.java",
+        "**/ICryptoContext.java",
+        "**/KeyExchangeFactory.java",
+        "**/KeyExchangeScheme.java",
+        "**/KeyRequestData.java",
+        "**/KeyResponseData.java",
+        "**/MasterToken.java",
+        "**/MessageCapabilities.java",
+        "**/MessageContext.java",
+        "**/MessageDebugContext.java",
+        "**/MessageHeader.java",
+        "**/MessageInputStream.java",
+        "**/MessageOutputStream.java",
+        "**/MessageServiceTokenBuilder.java",
+        "**/MessageFactory.java",
+        "**/MslArray.java",
+        "**/MslConstants.java",
+        "**/MslContext.java",
+        "**/MslControl.java",
+        "**/MslCryptoException.java",
+        "**/MslEncode.java",
+        "**/MslEncoderException.java",
+        "**/MslEncoderFactory.java",
+        "**/MslEncodingFormat.java",
+        "**/MslEncodingException.java",
+        "**/MslEntityAuthException.java",
+        "**/MslError.java",
+        "**/MslErrorResponseException.java",
+        "**/MslException.java",
+        "**/MslInternalException.java",
+        "**/MslKeyExchangeException.java",
+        "**/MslMasterTokenException.java",
+        "**/MslMessageException.java",
+        "**/MslObject.java",
+        "**/MslStore.java",
+        "**/MslTokenizer.java",
+        "**/MslUser.java",
+        "**/MslUserAuthException.java",
+        "**/MslUserIdTokenException.java",
+        "**/ServiceToken.java",
+        "**/TokenFactory.java",
+        "**/Url.java",
+        "**/UserAuthenticationData.java",
+        "**/UserAuthenticationFactory.java",
+        "**/UserAuthenticationScheme.java",
+        "**/UserIdToken.java"
+    ]
+}

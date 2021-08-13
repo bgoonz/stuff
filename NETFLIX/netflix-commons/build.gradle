@@ -1,0 +1,92 @@
+plugins {
+  id 'nebula.netflixoss' version '2.2.5'
+}
+ 
+subprojects {
+    group = "com.netflix.netflix-commons"
+    apply plugin: 'nebula.netflixoss'
+    apply plugin: 'java'
+ 
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        compile 'org.slf4j:slf4j-api:1.6.4'
+        testCompile 'junit:junit:4.10'
+        testCompile 'log4j:log4j:1.2.16'
+    }
+}
+
+project(':netflix-commons-util') {
+    dependencies {
+        compile 'javax.inject:javax.inject:1'
+    }
+}
+
+project(':netflix-lifecycle') {
+    dependencies {
+        compile 'com.netflix.governator:governator:1.2.7'
+    }
+}
+
+project(':netflix-infix') {
+    dependencies {
+        compile 'commons-jxpath:commons-jxpath:1.3'
+        compile 'joda-time:joda-time:2.3'
+        compile 'javax.servlet:servlet-api:2.5'
+        compile 'org.antlr:antlr-runtime:3.4'
+        compile 'com.google.code.findbugs:jsr305:3.0.1'
+        compile 'com.google.guava:guava:14.0.1'
+        compile 'com.google.code.gson:gson:2.1'
+        testCompile 'org.mockito:mockito-core:1.8.5'
+    }        
+}
+
+project(':netflix-eventbus') {
+    dependencies {
+        compile project(':netflix-infix')
+        
+        compile 'com.netflix.servo:servo-core:0.5.3'
+        compile 'com.netflix.archaius:archaius-core:0.3.3'
+        compile 'org.apache.commons:commons-math:2.2'
+    }
+}
+
+project(':netflix-eventbus-bridge') {
+    dependencies {
+        compile project(':netflix-eventbus')
+        
+        compile "com.google.inject:guice:3.0"
+    }
+}
+
+project(':netflix-eventbus-rx') {
+    dependencies {
+        compile project(':netflix-eventbus')
+        
+        compile "com.google.inject:guice:3.0"
+        compile "com.netflix.rxjava:rxjava-core:0.17.2"
+    }
+}
+
+project(':netflix-statistics') {
+    dependencies {
+        compile 'com.google.code.findbugs:jsr305:3.0.1'
+    }
+}
+
+project(':netflix-jersey-guice') {
+    dependencies {
+        compile "com.google.inject:guice:3.0"
+        compile "com.sun.jersey:jersey-core:1.11"
+        compile "com.sun.jersey:jersey-json:1.11"
+        compile "com.sun.jersey:jersey-server:1.11"
+        compile "javax.servlet:servlet-api:2.5"
+        compile 'com.google.code.gson:gson:2.1'
+    }
+}
+
+subprojects {
+    task globalDependencyInsight(type: DependencyInsightReportTask) {}
+}

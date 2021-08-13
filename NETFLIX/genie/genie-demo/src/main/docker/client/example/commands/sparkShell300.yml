@@ -1,0 +1,16 @@
+name: Spark Shell
+user: genieDemo
+description: Spark Shell Command
+status: ACTIVE
+setupFile: http://genie-apache/commands/spark/3.0.0/setupShell.sh
+configs: []
+executable: ${SPARK_HOME}/bin/spark-shell
+version: 3.0.0
+tags:
+  - type:spark-shell
+  - ver:3.0.0
+  - ver:3.0
+checkDelay: 5000
+clusterCriteria:
+  - tags:
+      - type:yarn

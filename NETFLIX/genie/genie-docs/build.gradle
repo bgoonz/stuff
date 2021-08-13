@@ -1,0 +1,23 @@
+apply plugin: "org.asciidoctor.jvm.convert"
+
+project.parent.tasks.collectDocumentation.dependsOn project.tasks.asciidoctor
+
+// This is needed cause some things like attributes for asciidoctor don't serialize project.version properly at runtime
+def genieVersion = project.version.toString()
+def isSnapshot = genieVersion.contains("SNAPSHOT")
+
+asciidoctor {
+    baseDirFollowsSourceDir()
+}
+
+asciidoctorj {
+    attributes(
+            [
+                    "revnumber"         : genieVersion,
+                    "docinfo1"          : "",
+                    "isSnapshot"        : isSnapshot,
+                    "springBootVersion" : "${spring_boot_version}",
+                    "springCloudVersion": "${spring_cloud_version}"
+            ]
+    )
+}

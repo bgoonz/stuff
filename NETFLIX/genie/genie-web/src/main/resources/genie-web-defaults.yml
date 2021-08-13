@@ -1,0 +1,178 @@
+##
+#
+#  Copyright 2019 Netflix, Inc.
+#
+#     Licensed under the Apache License, Version 2.0 (the "License");
+#     you may not use this file except in compliance with the License.
+#     You may obtain a copy of the License at
+#
+#         http://www.apache.org/licenses/LICENSE-2.0
+#
+#     Unless required by applicable law or agreed to in writing, software
+#     distributed under the License is distributed on an "AS IS" BASIS,
+#     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#     See the License for the specific language governing permissions and
+#     limitations under the License.
+#
+##
+
+cloud:
+  aws:
+    credentials:
+      useDefaultAwsCredentialsChain: true
+    region:
+      auto: false
+      static: us-east-1
+    stack:
+      auto: false
+
+genie:
+  agent:
+    connection-tracking:
+      cleanup-interval: 2s
+      connection-expiration-period: 10s
+    configuration:
+      agent-properties-filter-pattern: ^genie\.agent\.runtime\..*
+      cache-refresh-interval: 1m
+    filestream:
+      max-concurrent-transfers: 100
+      unclaimed-stream-start-timeout: 10s
+      stalled-transfer-timeout: 20s
+      stalled-transfer-check-interval: 5s
+      write-retry-delay: 300ms
+    heart-beat:
+      send-interval: 5s
+    launcher:
+      local:
+        enabled: true
+      titus:
+        enabled: false
+    routing:
+      refresh-interval: 3s
+  health:
+    maxCpuLoadPercent: 80
+  jobs:
+    attachments:
+      location-prefix: file://${java.io.tmpdir:/tmp}/genie/attachments
+      max-size: 100MB
+      max-total-size: 150MB
+    forwarding:
+      enabled: true
+      port: 8080
+      scheme: http
+    locations:
+      archives: file://${java.io.tmpdir:/tmp}/genie/archives/
+      jobs: file://${java.io.tmpdir:/tmp}/genie/jobs/
+    memory:
+      maxSystemMemory: 30720
+      defaultJobMemory: 1024
+      maxJobMemory: 10240
+    users:
+      runAsUserEnabled: false
+    active-limit:
+      enabled: false
+      count: 100
+  leader:
+    enabled: false
+  redis:
+    enabled: false
+  retry:
+    s3:
+      noOfRetries: 5
+  scripts:
+    command-selector:
+      properties-pattern: ^command-selector\..*
+    cluster-selector:
+      properties-pattern: ^cluster-selector\..*
+    agent-launcher-selector:
+      properties-pattern: ^agent-launcher-selector\..*
+  scripts-manager:
+    refresh-interval: 300000
+  smoke: true
+  tasks:
+    agent-cleanup:
+      enabled: true
+    archive-status-cleanup:
+      enabled: true
+    database-cleanup:
+      enabled: true
+      expression: 0 0 0 * * *
+      job-cleanup:
+        retention: 90
+    disk-cleanup:
+      enabled: true
+      expression: 0 0 0 * * *
+      retention: 3
+    executor:
+      pool:
+        size: 5
+    scheduler:
+      pool:
+        size: 5
+    user-metrics:
+      enabled: true
+
+info:
+  genie:
+    version: @genie.version@
+
+management:
+  endpoints:
+    web:
+      base-path: /admin
+  endpoint:
+    health:
+      show-components: always
+      show-details: always
+
+spring:
+  application:
+    name: genie
+  banner:
+    location: genie-banner.txt
+  cache:
+    caffeine:
+      spec: maximumSize=100,expireAfterAccess=600s
+  cloud:
+    zookeeper:
+      enabled: false
+  data:
+    redis:
+      repositories:
+        enabled: false
+  datasource:
+    url: jdbc:h2:mem:genie
+    username: root
+    password:
+    hikari:
+      leak-detection-threshold: 30000
+      pool-name: genie-hikari-db-pool
+  flyway:
+    locations: classpath:db/migration/{vendor}
+    baselineDescription: Base Version
+    baselineOnMigrate: true
+    baselineVersion: 3.2.0
+  jackson:
+    mapper:
+      accept-case-insensitive-enums: true
+    serialization:
+      write-dates-as-timestamps: false
+    time-zone: UTC
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC # SEE: https://moelholm.com/2016/11/09/spring-boot-controlling-timezones-with-hibernate/
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 200MB
+  session:
+    store-type: none
+
+grpc:
+  server:
+    port: 9090
+    address: 0.0.0.0

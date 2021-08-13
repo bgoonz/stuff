@@ -1,0 +1,35 @@
+apply plugin: "java-library"
+
+dependencies {
+    /*******************************
+     * API Dependencies
+     *******************************/
+
+    api("com.fasterxml.jackson.core:jackson-databind")
+    api("jakarta.validation:jakarta.validation-api")
+
+    /*******************************
+     * Implementation Dependencies
+     *******************************/
+
+    implementation("com.google.guava:guava")
+    implementation("com.fasterxml.jackson.datatype:jackson-datatype-jdk8")
+    implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
+    implementation("org.apache.commons:commons-lang3")
+
+    /*******************************
+     * Compile Only Dependencies
+     *******************************/
+
+    /*******************************
+     * Runtime Only Dependencies
+     *******************************/
+
+    runtimeOnly("org.hibernate.validator:hibernate-validator")
+
+    /*******************************
+     * Test Dependencies
+     *******************************/
+
+    testImplementation(project(":genie-test"))
+}

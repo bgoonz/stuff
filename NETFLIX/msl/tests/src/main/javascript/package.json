@@ -1,0 +1,55 @@
+{
+  "name": "msl-tests",
+  "version": "1.2226.0",
+  "description": "Message Security Layer Tests",
+  "keywords": [
+    "msl",
+    "message security layer",
+    "netflix"
+  ],
+  "homepage": "https://github.com/Netflix/msl",
+  "bugs": {
+    "url": "https://github.com/Netflix/msl/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:Netflix/msl.git"
+  },
+  "license": "Apache-2.0",
+  "scripts": {
+    "lint": "find -E ../.. -type f -name '*.js' ! -regex '.*/(jasmine|jasmine\\-html)\\.js' ! -regex '.*/node_modules/.*' | xargs jshint --verbose",
+    "version": "echo `git describe --dirty`",
+    "jsdoc": "rm -rf ./jsdoc && jsdoc ./* -c ./jsdoc_conf.json || echo $?"
+  },
+  "jshintConfig": {
+    "sub": true,
+    "esversion": 5,
+    "expr": true,
+    "undef": true,
+    "typed": true,
+    "jasmine": true,
+    "predef": [
+      "window",
+      "console",
+      "setTimeout",
+      "clearTimeout",
+      "require",
+      "module",
+      "mkmodule",
+      "Promise",
+      "parameterize",
+      "process",
+      "Buffer"
+    ]
+  },
+  "dependencies": {
+    "msl-core": "^1.2226.0"
+  },
+  "devDependencies": {
+    "ec-key": "0.0.2",
+    "elliptic": "^6.4.1",
+    "jshint": "^2.11.1",
+    "jsrsasign": "^8.0.15",
+    "ursa": "^0.9.4"
+  }
+}

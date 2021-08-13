@@ -1,0 +1,153 @@
+plugins {
+  id 'java'
+  id 'com.github.johnrengelman.shadow' version '1.2.0'
+}
+
+allprojects {
+  repositories {
+    jcenter()
+    mavenCentral()
+    maven { url 'http://oss.jfrog.org/oss-snapshot-local' }
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+  }
+}
+
+status = (project.hasProperty('preferredStatus')) ? project.preferredStatus : 'snapshot'
+
+ext {
+  shortVersion = { v ->
+    if (v.endsWith("-SNAPSHOT")) {
+      if (rootProject.status != 'snapshot') {
+        throw new IllegalArgumentException("must use release version: ${v}")
+      }
+      return v.substring(0, v.length() - 9)
+    }
+    return v
+  }
+  versionDot = ".29"
+  versionSuffix = (rootProject.status == 'snapshot') ? "${versionDot}-SNAPSHOT" : versionDot
+  versionGuice = '4.1.0'
+  versionRxJava = '1.2.9'
+  versionRxNetty = '0.4.20'
+  versionIoNetty = '4.1.6.Final'
+  versionSlf4j = '1.7.25'
+  versionServo = '0.12.15'
+  versionSpectator = '0.53.0'
+  versionEureka = '1.6.2'
+  versionArchaius = '0.7.4'
+  versionArchaius2 = '2.1.12'
+  versionJcraft = '1.1.3'
+  versionIep = '0.4.18'
+  githubProjectName = 'iep-shadow'
+  sonatypeUsername = rootProject.hasProperty('sonatypeUsername')?rootProject.sonatypeUsername:''
+  sonatypePassword = rootProject.hasProperty('sonatypePassword')?rootProject.sonatypePassword:''
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.2.1'
+}
+
+subprojects {
+  apply plugin: 'java'
+  apply plugin: 'war'
+  apply plugin: 'com.github.johnrengelman.shadow'
+  apply plugin: 'maven'
+  apply plugin: 'signing'
+
+  group = "com.netflix.${rootProject.githubProjectName}"
+
+  sourceCompatibility = 1.7
+  targetCompatibility = 1.7
+
+  status = rootProject.status
+
+  task sourcesJar(type: Jar, dependsOn:classes) {
+    from sourceSets.main.allSource
+    classifier 'sources'
+    extension 'jar'
+  }
+
+  task javadocJar(type: Jar, dependsOn:javadoc) {
+    from javadoc.destinationDir
+    classifier 'javadoc'
+    extension 'jar'
+  }
+
+  artifacts {
+    archives sourcesJar
+    archives javadocJar
+    archives shadowJar
+  }
+
+  configurations.archives.artifacts.removeAll { it.archiveTask.is war } 
+
+  signing {
+    required { gradle.taskGraph.hasTask("uploadArchives") }
+    sign configurations.archives
+  }
+
+  if (System.getProperty("java.version").startsWith("1.8.")) {
+    tasks.withType(Javadoc) {
+      // http://blog.joda.org/2014/02/turning-off-doclint-in-jdk-8-javadoc.html
+      options.addStringOption('Xdoclint:none', '-quiet')
+    }
+  }
+
+  javadoc {
+    options {
+      links = ['http://docs.oracle.com/javase/7/docs/api/']
+    }
+  }
+
+  uploadArchives {
+    configuration = configurations.archives
+    onlyIf { ['release', 'snapshot'].contains(project.status) }
+    repositories.mavenDeployer {
+      beforeDeployment { signing.signPom(it) }
+
+      // To test deployment locally, use the following instead of oss.sonatype.org
+      //repository(url: "file://localhost/${rootProject.rootDir}/repo")
+
+      repository(url: 'https://oss.sonatype.org/service/local/staging/deploy/maven2') {
+        authentication(userName: rootProject.sonatypeUsername, password: rootProject.sonatypePassword)
+      }
+
+      snapshotRepository(url: 'https://oss.sonatype.org/content/repositories/snapshots/') {
+        authentication(userName: rootProject.sonatypeUsername, password: rootProject.sonatypePassword)
+      }
+
+      // Prevent datastamp from being appending to artifacts during deployment
+      uniqueVersion = false
+
+      // Closure to configure all the POM with extra info, common to all projects
+      pom.project {
+        name "${project.name}"
+        description "${project.name} developed by Netflix"
+        developers {
+          developer {
+            id 'netflixgithub'
+            name 'Netflix Open Source Development'
+            email 'talent@netflix.com'
+          }
+        }
+        licenses {
+          license {
+            name 'The Apache Software License, Version 2.0'
+            url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+            distribution 'repo'
+          }
+        }
+        url "https://github.com/Netflix/${rootProject.githubProjectName}"
+        scm {
+          connection "scm:git:git@github.com:Netflix/${rootProject.githubProjectName}.git"
+          url "scm:git:git@github.com:Netflix/${rootProject.githubProjectName}.git"
+          developerConnection "scm:git:git@github.com:Netflix/${rootProject.githubProjectName}.git"
+        }
+        issueManagement {
+          system 'github'
+          url "https://github.com/Netflix/${rootProject.githubProjectName}/issues"
+        }
+      }
+    }
+  }
+}

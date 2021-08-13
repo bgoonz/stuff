@@ -1,0 +1,47 @@
+<div class="body" ng-class="{concealed: deployment === undefined}">
+  <h1>Deployment</h1>
+
+  <div class="buttons" ng-hide="deployment.done">
+    <button class="stop" ng-click="stopDeployment()"><div>Stop Deployment</div></button>
+  </div>
+
+  <div class="deployment twbs">
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-4">Return to Cluster:</div>
+          <div class="col-sm-8">
+            <a href="{{deployment.region.code}}/cluster/show/{{deployment.clusterName}}"
+               title="Show all the auto scaling groups in this cluster" class="cluster">{{deployment.clusterName}}</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">Region:</div>
+          <div class="col-sm-8">{{deployment.regionCode}}</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">Status:</div>
+            <div class="col-sm-8"><span id="taskStatus">{{deployment.status}}</span></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">Duration:</div>
+            <div class="col-sm-8"><span id="taskDurationString">{{deployment.durationString}}</span></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">Owner:</div>
+            <div class="col-sm-8">{{deployment.owner}}</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+              <div class="deploymentOptions steps" ng-repeat="step in deployment.steps">
+                <div ng-if="step.type" class="step panel"
+                     ng-class="{'panel-success': getStepStatus($index) === 'success',
+                     'panel-danger': getStepStatus($index) === 'failure',
+                     'panel-primary': getStepStatus($index) === 'running',
+                     'panel-default': getStepStatus($index) === 'queued'}"
+                     ng-include="stepUrl(step.type)"></div>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

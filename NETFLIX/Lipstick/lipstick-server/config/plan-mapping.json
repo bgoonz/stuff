@@ -1,0 +1,89 @@
+{
+      "properties": {
+        "id": {
+          "type": "keyword"
+        },
+        "jobName": {
+          "type": "keyword",
+          "index": true
+        },
+        "optimized": {
+          "properties": {
+            "id": {
+              "type": "keyword"
+            },
+            "plan": {
+              "type": "object",
+              "enabled": false
+            },
+            "svg": {
+              "type": "text",
+              "index": false
+            }
+          }
+        },
+        "scripts": {
+          "properties": {
+            "id": {
+              "type": "keyword"
+            },
+            "script": {
+              "type": "text"
+            }
+          }
+        },
+        "status": {
+          "properties": {
+            "endTime": {
+              "type": "date",
+              "format": "epoch_millis"
+            },
+            "heartbeatTime": {
+              "type": "date",
+              "format": "epoch_millis"
+            },
+            "id": {
+              "type": "keyword"
+            },
+            "jobStatusMap": {
+              "type": "object",
+              "enabled": false
+            },
+            "progress": {
+              "type": "integer"
+            },
+            "startTime": {
+              "type": "date",
+              "format": "epoch_millis"
+            },
+            "statusText": {
+              "type": "keyword",
+              "index": true
+            }
+          }
+        },
+        "unoptimized": {
+          "properties": {
+            "id": {
+              "type": "keyword"
+            },
+            "plan": {
+              "type": "object",
+              "enabled": false
+            },
+            "svg": {
+              "type": "text",
+              "index": false
+            }
+          }
+        },
+        "userName": {
+          "type": "keyword",
+          "index": true
+        },
+        "uuid": {
+          "type": "keyword",
+          "index": true
+        }
+      }
+}

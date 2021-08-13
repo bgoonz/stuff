@@ -1,0 +1,83 @@
+=== Netflix Deployment
+
+This section gives an overview of how Genie is configured and deployed at Netflix.
+
+==== Genie OSS vs Genie Netflix
+
+Genie leverages Spring Boot to enable customization for our internal deployment, allowing deep integration with the rest of the internal Netflix ecosystem.
+
+Some examples of the additional component we use:
+
+ - https://github.com/Netflix/eureka[Eureka] for service discovery and routing
+ - https://github.com/Netflix/atlas[Atlas] for metrics
+ - https://github.com/Netflix/archaius[Archaius] for dynamic configuration
+ - https://netflix.github.io/titus/[Titus] for job containers
+ - And many other Netflix-internal components related to security, monitoring, observability, log indexing, etc.
+
+We augment the open-source Genie components with internal ones by injecting the latter via Spring Boot, without having to change a line of upstream code.
+
+This pattern works well for Genie server, client, and agent CLI, all of which get injected with additional Netflix components for internal use.
+
+==== Deployment overview
+
+.Genie Netflix Deployment
+image::4.0.0/netflix-deployment.png[Netflix Deployment, link="{imagesdir}/4.0.0/netflix-deployment.png"]
+
+===== EC2 instances and Auto Scaling Group (ASG)
+
+The size of a the Genie cluster can be scaled up and down in response to load.
+
+When a new build is deployed, a new ASG is created and the old one disabled.
+This allows continuous deployment without any user disruption.
+
+The ASG is set to auto scale when the average amount of used job memory, that 80% of the system memory, exceeds 60% of
+the available.
+
+===== Elastic Load Balancer
+
+A TCP https://aws.amazon.com/elasticloadbalancing/[Elastic Load Balancer] (ELB) sits in front of the Genie server instances.
+And it is assigned a mnemonic domain name via https://aws.amazon.com/route53/[Route 53] entry.
+
+All clients use this load balancer as single entry point: REST API clients talk HTTPS with a random instance in the cluster, and agents talk gRPC.
+The latter is true for both agents launched outside the cluster as CLI-initiated jobs, and agents launched by the cluster itself, in response to a REST API job request.
+
+===== Relational Database (RDS)
+
+We currently use an https://aws.amazon.com/rds/aurora/[Amazon Aurora] cluster.
+
+Our Genie production cluster has a dedicated RDS, while the various test and development clusters share access to a different one.
+
+The RDS only stores job metadata, which often requires strong consistency (e.g., avoid giving the same unique identifier to two jobs) and entities configurations.
+
+===== Zookeeper
+
+We use an https://zookeeper.apache.org/[Apache Zookeeper] cluster for leadership election within our Genie ASG.
+The leader only performs background cleanup task for the entire cluster.
+
+Zookeeper is also used for ephemeral routing information (which agent is currently connected to which server instance).
+
+===== S3
+
+Genie relies on S3 to store all data beside job metadata:
+
+ - Job dependencies (binaries, libraries, configuration files, setup scripts, ...)
+ - Job outputs and logs archives
+ - Job attachments
+
+===== Titus
+
+Each jobs submitted via REST API is launched into its own private https://netflix.github.io/titus/[Titus] container.
+
+The agent running inside the container connects back to the cluster over gRPC via the load balancer.
+
+===== Spinnaker
+
+Genie is deployed using http://www.spinnaker.io/[Spinnaker]. We currently have a few stacks (prod, test, dev, load,
+stage, etc) that we use for different purposes. Spinnaker handles all this for us after we configure the pipelines.
+See the Spinnaker site for more information.
+
+==== Wrap Up
+
+This section focused on how Genie is deployed within Netflix. Hopefully it helps bring clarity to a way that Genie can
+be deployed. Genie certainly is not limited to this deployment model and you are free to come up with your own this
+should only serve as a template or example.

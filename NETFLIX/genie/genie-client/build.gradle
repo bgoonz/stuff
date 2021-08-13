@@ -1,0 +1,41 @@
+apply plugin: "java-library"
+
+dependencies {
+    /*******************************
+     * API Dependencies
+     *******************************/
+
+    api(project(":genie-common"))
+    api(project(":genie-common-external"))
+    api("com.fasterxml.jackson.core:jackson-databind")
+    api("com.github.fge:json-patch")
+    api("com.squareup.okhttp3:okhttp")
+    api("com.squareup.retrofit2:retrofit")
+    api("com.squareup.retrofit2:converter-jackson")
+
+    /*******************************
+     * Implementation Dependencies
+     *******************************/
+
+    implementation("org.apache.commons:commons-lang3")
+    implementation("org.slf4j:slf4j-api")
+
+    /*******************************
+     * Compile Only Dependencies
+     *******************************/
+
+    /*******************************
+     * Runtime Only Dependencies
+     *******************************/
+
+    /*******************************
+     * Test Dependencies
+     *******************************/
+
+    testImplementation(project(":genie-test"))
+    testImplementation("com.squareup.okhttp3:mockwebserver")
+
+    integTestImplementation("commons-io:commons-io")
+    integTestImplementation("org.testcontainers:testcontainers")
+    integTestImplementation("org.testcontainers:junit-jupiter")
+}

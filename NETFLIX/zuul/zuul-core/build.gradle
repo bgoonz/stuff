@@ -1,0 +1,67 @@
+apply plugin: "com.google.osdetector"
+apply plugin: "java-library"
+
+dependencies {
+
+    implementation libraries.guava
+    // TODO(carl-mastrangelo): this can be implementation; remove Logger from public api points.
+    api libraries.slf4j
+    implementation 'org.bouncycastle:bcprov-jdk15on:1.+'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.12.1'
+    api 'com.fasterxml.jackson.core:jackson-databind:2.12.1'
+
+    api "com.netflix.archaius:archaius-core:0.7.5"
+    api "com.netflix.spectator:spectator-api:0.123.1"
+    api "com.netflix.netflix-commons:netflix-commons-util:0.3.0"
+
+    api project(":zuul-discovery")
+
+    api "com.netflix.ribbon:ribbon-core:${versions_ribbon}"
+    api "com.netflix.ribbon:ribbon-archaius:${versions_ribbon}"
+
+    api "com.netflix.eureka:eureka-client:1.9.18"
+    api "io.reactivex:rxjava:1.2.1"
+
+    // TODO(carl-mastrangelo): some of these could probably be implementation.   Do a deeper check.
+    api "io.netty:netty-common:${versions_netty}"
+    api "io.netty:netty-buffer:${versions_netty}"
+    api "io.netty:netty-codec-http:${versions_netty}"
+    api "io.netty:netty-codec-http2:${versions_netty}"
+    api "io.netty:netty-handler:${versions_netty}"
+    api "io.netty:netty-transport:${versions_netty}"
+
+    implementation "io.netty:netty-codec-haproxy:${versions_netty}"
+    implementation "io.netty:netty-transport-native-epoll:${versions_netty}:linux-x86_64"
+    implementation "io.netty:netty-transport-native-kqueue:${versions_netty}:osx-x86_64"
+    runtimeOnly "io.netty:netty-tcnative-boringssl-static:2.0.40.Final"
+
+    implementation 'io.perfmark:perfmark-api:0.24.0'
+    implementation 'javax.inject:javax.inject:1'
+
+    testImplementation libraries.junit,
+            libraries.mockito,
+            libraries.truth
+    testRuntimeOnly 'org.slf4j:slf4j-simple:1.7.29'
+
+    jmh 'org.openjdk.jmh:jmh-core:1.+'
+    jmh 'org.openjdk.jmh:jmh-generator-annprocess:1.+'
+}
+
+// Silences log statements during tests.   This still allows normal failures to be printed.
+test {
+    testLogging {
+        showStandardStreams = false
+    }
+}
+
+// ./gradlew --no-daemon clean :zuul-core:jmh
+jmh {
+    profilers = ["gc"]
+    timeOnIteration = "1s"
+    warmup = "1s"
+    fork = 1
+    warmupIterations = 10
+    iterations 5
+    // Not sure why duplicate classes are aon the path.  Something Nebula related I think.
+    duplicateClassesStrategy = 'EXCLUDE'
+}

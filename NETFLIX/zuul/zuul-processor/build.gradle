@@ -1,0 +1,17 @@
+apply plugin: "java"
+
+dependencies {
+    implementation libraries.guava
+    implementation project(":zuul-core")
+
+    testImplementation libraries.junit,
+            libraries.truth
+    testAnnotationProcessor project(":zuul-processor")
+}
+
+// Silences log statements during tests.   This still allows normal failures to be printed.
+test {
+    testLogging {
+        showStandardStreams = false
+    }
+}

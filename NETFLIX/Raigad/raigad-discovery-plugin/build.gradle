@@ -1,0 +1,18 @@
+task createZip(type: Zip, dependsOn: jar) {
+    into("elasticsearch") {
+        from("src/main/resources/plugin-metadata") {
+            filesMatching("plugin-descriptor.properties") {
+                expand("version": project.version, "elasticsearchVersion": elasticsearchVersion, "javaVersion": targetCompatibility)
+            }
+        }
+        from jar
+    }
+}
+
+publishing {
+    publications {
+        nebula(MavenPublication) {
+            artifact createZip
+        }
+    }
+}

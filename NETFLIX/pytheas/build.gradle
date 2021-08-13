@@ -1,0 +1,110 @@
+buildscript {
+    repositories { jcenter() }
+}
+
+plugins {
+    id 'nebula.netflixoss' version '3.3.0'
+}
+
+// Establish version and status
+ext.githubProjectName = rootProject.name // Change if github project name is not the same as the root project's name
+
+subprojects {
+    apply plugin: 'nebula.netflixoss'
+    apply plugin: 'java'
+
+    repositories {
+        jcenter()
+    }
+
+    group = "com.netflix.${githubProjectName}" // TEMPLATE: Set to organization of project
+
+    dependencies {
+        compile 'javax.ws.rs:jsr311-api:1.1.1'
+        compile 'com.sun.jersey.contribs:jersey-guice:1.19'
+        compile 'com.sun.jersey:jersey-core:1.19'
+        compile 'com.sun.jersey:jersey-json:1.19'
+        compile 'com.sun.jersey:jersey-servlet:1.19'
+
+        compile 'org.slf4j:slf4j-api:1.7.13'
+        testCompile 'junit:junit:4.10'
+        testCompile 'org.mockito:mockito-core:1.8.5'
+    }
+
+}
+
+project(':pytheas-core') {
+    dependencies {
+        compile project(':pytheas-api')
+        
+        compile 'javax.servlet:servlet-api:2.5'
+    
+        compile 'commons-configuration:commons-configuration:1.8'
+        
+        compile 'com.google.guava:guava:18.0'
+        compile 'com.google.inject.extensions:guice-servlet:4.0'
+        compile 'com.google.code.findbugs:annotations:2.0.0'
+        
+        compile 'com.sun.jersey:jersey-server:1.19'
+        
+        compile 'org.codehaus.jackson:jackson-mapper-asl:1.9.13'
+        
+        compile 'org.freemarker:freemarker:2.3.15'
+        
+        compile 'com.netflix.archaius:archaius-core:0.7.3'
+        compile 'com.netflix.governator:governator:1.14.2'
+
+        compile 'commons-collections:commons-collections:3.2.1'
+        compile 'commons-codec:commons-codec:1.7'
+        compile 'commons-beanutils:commons-beanutils:1.9.1'
+        compile 'commons-io:commons-io:2.4'
+
+        runtime 'com.sun.jersey:jersey-servlet:1.19'
+    }
+}
+
+project(':pytheas-api') {
+    dependencies {
+        compile 'commons-configuration:commons-configuration:1.8'
+        compile 'com.google.guava:guava:18.0'
+    }
+}
+
+project(':pytheas-karyon') {
+    dependencies {
+        compile project(':pytheas-core')
+        compile 'com.netflix.karyon:karyon-core:1.0.28'
+    }
+}
+
+
+project(':pytheas-helloworld') {
+
+    apply plugin: 'jetty'
+    apply plugin: 'war'
+
+    dependencies {
+        compile project(':pytheas-karyon')
+        compile 'com.netflix.karyon:karyon-extensions:1.0.28'
+        runtime 'org.slf4j:slf4j-simple:1.7.13'
+        testCompile 'org.eclipse.jetty:jetty-server:7.6.7.v20120910'
+        testCompile 'org.eclipse.jetty:jetty-servlet:7.6.7.v20120910'
+    }
+
+    jettyRun.doFirst {
+        System.setProperty("archaius.deployment.applicationId","helloworld-app")
+        System.setProperty("archaius.deployment.environment","dev")
+    }
+
+    war {
+        from('resources')  {
+            include '*.properties'
+            into 'WEB-INF/classes/'
+        }
+        webXml = file('src/main/webapp/WEB-INF/web.xml')
+    }
+
+    jettyRun {
+        httpPort = 8989
+    }
+}

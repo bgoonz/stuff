@@ -1,0 +1,334 @@
+{
+  "settings": {
+    "index": {
+      "number_of_shards": 5,
+      "max_result_window": 2147483647
+    },
+    "analysis": {
+      "analyzer": {
+        "paths": {
+          "tokenizer": "path_hierarchy"
+        },
+        "path": {
+          "type": "pattern",
+          "pattern": "/"
+        }
+      }
+    }
+  },
+  "mappings": {
+    "_default_": {
+      "_all": {
+        "enabled": true
+      },
+      "properties": {
+        "audit": {
+          "properties": {
+            "createdBy": {
+              "type": "keyword",
+              "index": true
+            },
+            "lastModifiedBy": {
+              "type": "keyword",
+              "index": true
+            }
+          }
+        },
+        "serde": {
+          "properties": {
+            "inputFormat": {
+              "type": "text",
+              "index": true,
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "outputFormat": {
+              "type": "text",
+              "index": true,
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "owner": {
+              "type": "text",
+              "index": true,
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "serializationLib": {
+              "type": "text",
+              "index": true,
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "serdeInfoParameters": {
+              "type": "object",
+              "enabled": false
+            },
+            "uri": {
+              "type": "keyword",
+              "index": true,
+              "fields": {
+                "tree": {
+                  "type": "text",
+                  "analyzer": "paths"
+                }
+              }
+            }
+          }
+        },
+        "searchableDefinitionMetadata": {
+          "properties": {
+            "job": {
+              "properties": {
+                "name": {
+                  "type": "keyword",
+                  "index": true
+                }
+              }
+            },
+            "owner": {
+              "properties": {
+                "name": {
+                  "type": "keyword",
+                  "index": true
+                },
+                "team": {
+                  "type": "keyword",
+                  "index": true
+                },
+                "userId": {
+                  "type": "keyword",
+                  "index": true
+                }
+              }
+            },
+            "tags": {
+              "type": "keyword",
+              "index": true
+            },
+            "data_hygiene": {
+              "properties": {
+                "delete_column": {
+                  "type": "keyword",
+                  "index": true
+                },
+                "delete_method": {
+                  "type": "keyword",
+                  "index": true
+                }
+              }
+            },
+            "data_management": {
+              "properties": {
+                "campaign": {
+                  "type": "nested",
+                  "properties": {
+                    "created_utc_date": {
+                      "type": "date"
+                    },
+                    "updated_utc_date": {
+                      "type": "date"
+                    },
+                    "name": {
+                      "type": "keyword"
+                    },
+                    "action": {
+                      "type": "text"
+                    }
+                  }
+                }
+              }
+            },
+            "lifetime": {
+              "properties": {
+                "partitionedBy": {
+                  "type": "keyword",
+                  "index": true
+                },
+                "user": {
+                  "type": "text",
+                  "index": true,
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                }
+              }
+            },
+            "extendedSchema": {
+              "type": "object",
+              "enabled": false
+            },
+            "data_dependency": {
+              "type": "object",
+              "enabled": false
+            },
+            "table_cost": {
+              "type": "object",
+              "enabled": false
+            }
+          }
+        },
+        "definitionMetadata": {
+          "type": "object",
+          "enabled": false
+        },
+        "dataMetadata": {
+          "type": "object",
+          "enabled": false
+        },
+        "metadata": {
+          "type": "object",
+          "enabled": false
+        },
+        "name": {
+          "properties": {
+            "catalogName": {
+              "type": "keyword",
+              "index": true
+            },
+            "databaseName": {
+              "type": "keyword",
+              "index": true
+            },
+            "qualifiedName": {
+              "type": "keyword",
+              "index": true,
+              "fields": {
+                "tree": {
+                  "type": "text",
+                  "analyzer": "paths"
+                }
+              }
+            },
+            "tableName": {
+              "type": "keyword",
+              "index": true
+            },
+            "viewName": {
+              "type": "keyword",
+              "index": true
+            },
+            "partitionName": {
+              "type": "keyword",
+              "index": true,
+              "fields": {
+                "keys": {
+                  "type": "text",
+                  "analyzer": "path"
+                }
+              }
+            }
+          }
+        },
+        "timestamp": {
+          "type": "date",
+          "format": "epoch_millis",
+          "index": true
+        },
+        "user_": {
+          "type": "keyword",
+          "index": true
+        },
+        "type": {
+          "type": "keyword",
+          "index": true
+        },
+        "refreshMarker_": {
+          "type": "keyword",
+          "index": true
+        }
+      }
+    },
+    "table": {
+      "properties": {
+        "fields": {
+          "properties": {
+            "name": {
+              "type": "keyword",
+              "index": true
+            },
+            "type": {
+              "type": "keyword",
+              "index": true
+            },
+            "jsonType": {
+              "type": "object",
+              "enabled": false
+            },
+            "source_type": {
+              "type": "keyword",
+              "index": true
+            }
+          }
+        }
+      }
+    },
+    "mview": {
+      "properties": {
+        "fields": {
+          "properties": {
+            "name": {
+              "type": "keyword",
+              "index": true
+            },
+            "type": {
+              "type": "keyword",
+              "index": true
+            },
+            "jsonType": {
+              "type": "object",
+              "enabled": false
+            }
+          }
+        }
+      }
+    },
+    "metacat-log": {
+      "properties": {
+        "qname": {
+          "type": "keyword",
+          "index": true
+        },
+        "method": {
+          "type": "keyword",
+          "index": true
+        },
+        "type": {
+          "type": "keyword",
+          "index": true
+        },
+        "data": {
+          "type": "keyword",
+          "index": true
+        },
+        "message": {
+          "type": "keyword",
+          "index": true
+        },
+        "details": {
+          "type": "keyword",
+          "index": true
+        }
+      }
+    }
+  }
+}

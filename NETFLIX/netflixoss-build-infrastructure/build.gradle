@@ -1,0 +1,32 @@
+plugins {
+  id "nebula.netflixoss" version "9.0.0"
+}
+
+allprojects {
+  group = 'com.netflix.buildinfrastructure'
+  apply plugin: 'nebula.netflixoss' 
+}
+
+subprojects {   
+  contacts {
+    "rperezalcolea@netflix.com" {
+      moniker "Roberto Perez Alcolea"
+      github "rpalcolea"
+    }
+  }
+
+  repositories {
+    jcenter()
+  }
+}
+
+tasks.register('myTask') {
+  doLast {
+    String secretFromCommandLine = project.getProperty('testSecret')
+    if ( secretFromCommandLine == 'my test secret' ) {
+      println "secret matches"
+    } else {
+      println "secret doesn't match"
+    }
+  }
+}

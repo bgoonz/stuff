@@ -1,0 +1,14 @@
+dependencies {
+  api project(':spectator-api')
+  api project(':spectator-reg-atlas')
+  api project(':spectator-reg-servo')
+  implementation 'org.openjdk.jol:jol-core:0.16'
+}
+
+jar {
+  manifest {
+    attributes(
+      "Automatic-Module-Name": "com.netflix.spectator.perf"
+    )
+  }
+}

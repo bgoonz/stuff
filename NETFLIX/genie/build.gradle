@@ -1,0 +1,488 @@
+import com.github.spotbugs.snom.SpotBugsTask
+import org.springframework.boot.gradle.plugin.SpringBootPlugin
+
+buildscript {
+    repositories {
+        mavenCentral()
+        gradlePluginPortal()
+    }
+
+    dependencies {
+        classpath "com.netflix.nebula:gradle-aggregate-javadocs-plugin:3.0.1"
+    }
+}
+
+plugins {
+    id "com.github.kt3k.coveralls" version "2.10.2"
+    id "nebula.netflixoss" version "9.2.2"
+    id "org.ajoberstar.grgit" version "4.1.0"
+    id "org.ajoberstar.git-publish" version "3.0.0"
+    id "org.springframework.boot" version "${spring_boot_version}" apply false
+    id "org.asciidoctor.jvm.convert" version "3.3.0" apply false
+    id "com.gorylenko.gradle-git-properties" version "2.2.4" apply false
+    id "com.google.protobuf" version "0.8.14" apply false
+    id "io.franzbecker.gradle-lombok" version "4.0.0" apply false
+    id "nebula.node" version "1.4.1" apply false
+    id "com.github.spotbugs" version "4.6.0" apply false
+}
+
+apply plugin: "nebula-aggregate-javadocs"
+
+ext.githubProjectName = rootProject.name
+
+def javaProjects = subprojects.findAll {
+    it.name != "genie-demo" && it.name != "genie-ddl" && it.name != "genie-docs"
+}
+
+allprojects {
+    apply plugin: "jacoco"
+    apply plugin: "idea"
+    apply plugin: "eclipse"
+
+    repositories {
+        mavenCentral()
+    }
+}
+
+idea {
+    project {
+        jdkName = "1.8"
+        languageLevel = "8"
+        vcs = "Git"
+    }
+}
+
+configure(javaProjects) {
+    apply plugin: "nebula.netflixoss"
+    apply plugin: "java"
+    apply plugin: "checkstyle"
+    apply plugin: "com.github.spotbugs"
+    apply plugin: "io.spring.dependency-management"
+    apply plugin: "com.gorylenko.gradle-git-properties"
+    apply plugin: "groovy"
+    apply plugin: "io.franzbecker.gradle-lombok"
+    apply plugin: "nebula.facet"
+
+    group = "com.netflix.${githubProjectName}"
+
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+
+    facets {
+        smokeTest {
+            parentSourceSet = "test"
+            // includeInCheckLifecycle = false
+        }
+        integTest {
+            parentSourceSet = "test"
+            testTaskName = "integrationTest"
+            // includeInCheckLifecycle = false
+        }
+    }
+
+    dependencyManagement {
+        imports {
+            mavenBom SpringBootPlugin.BOM_COORDINATES
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:${spring_cloud_version}"
+            mavenBom "com.google.protobuf:protobuf-bom:${protobuf_version}"
+            mavenBom "com.squareup.okhttp3:okhttp-bom:4.9.0"
+            mavenBom "io.grpc:grpc-bom:1.33.1"
+            mavenBom "org.spockframework:spock-bom:2.0-M4-groovy-2.5"
+            mavenBom "org.testcontainers:testcontainers-bom:1.15.0"
+        }
+        dependencies {
+            dependency("com.beust:jcommander:1.81")
+            dependency("cglib:cglib-nodep:3.3.0")
+            dependency("com.github.fge:json-patch:1.9")
+            dependency("com.github.ppodgorsek:spring-test-dbunit-core:5.2.0")
+            dependency("com.github.spotbugs:spotbugs-annotations:4.2.0")
+            dependencySet(group: "com.squareup.retrofit2", version: "2.8.1") {
+                entry "retrofit"
+                entry "converter-jackson"
+            }
+            dependency("com.google.guava:guava:20.0")
+            dependency("commons-io:commons-io:2.6")
+            dependency("commons-validator:commons-validator:1.7")
+            dependency("io.springfox:springfox-boot-starter:3.0.0")
+            dependency("jakarta.el:jakarta.el-api:3.0.3")
+            dependency("net.sf.jtidy:jtidy:r938")
+            dependency("net.jcip:jcip-annotations:1.0")
+            dependency("org.apache.commons:commons-configuration2:2.7")
+            dependency("org.apache.commons:commons-exec:1.3")
+            dependency("org.apache.commons:commons-text:1.8")
+            dependency("org.apache.tika:tika-core:1.25")
+            dependency("org.apache.maven:maven-artifact:3.6.3")
+            dependency("org.apache.zookeeper:zookeeper:3.5.8")
+            dependency("org.codehaus.groovy:groovy-all:2.5.13")
+            dependency("org.codehaus.janino:janino:3.1.2")
+            dependency("org.dbunit:dbunit:2.7.0")
+        }
+    }
+
+    ext {
+        generatedSourcesDir = file("${buildDir}/generated/sources")
+        generatedSourcesJavaDir = file("${project.generatedSourcesDir}/main/java")
+    }
+
+    sourceSets {
+        main {
+            java {
+                srcDir project.generatedSourcesJavaDir
+            }
+        }
+    }
+
+    idea.module {
+        sourceDirs += project.generatedSourcesJavaDir
+        generatedSourceDirs += project.generatedSourcesJavaDir
+    }
+
+    configurations {
+        all*.exclude group: "javax.servlet", module: "servlet-api"
+        all*.exclude group: "org.springframework.boot", module: "spring-boot-starter-logging"
+    }
+
+    dependencies {
+        /*******************************
+         * Annotation Processors
+         *******************************/
+
+        annotationProcessor("net.jcip:jcip-annotations")
+        annotationProcessor("com.github.spotbugs:spotbugs-annotations")
+
+        /*******************************
+         * Compile Dependencies
+         *******************************/
+
+        /*******************************
+         * Compile Only Dependencies
+         *******************************/
+
+        compileOnly("net.jcip:jcip-annotations")
+        compileOnly("com.github.spotbugs:spotbugs-annotations")
+
+        /*******************************
+         * Runtime Only Dependencies
+         *******************************/
+
+        /*******************************
+         * Test Dependencies
+         *******************************/
+
+        testAnnotationProcessor("net.jcip:jcip-annotations")
+        testAnnotationProcessor("com.github.spotbugs:spotbugs-annotations")
+
+        testImplementation("cglib:cglib-nodep")
+        testImplementation("org.spockframework:spock-core")
+        // Needed to support JUnit 4 Rules that we still can't get away from (e.g. GRpcServerRule) in test files
+        testImplementation("org.spockframework:spock-junit4")
+        testImplementation("org.spockframework:spock-spring")
+        testImplementation("org.springframework.boot:spring-boot-starter-test")
+        testImplementation("org.junit.jupiter:junit-jupiter-api")
+        testImplementation("org.junit.jupiter:junit-jupiter-params")
+
+        testCompileOnly("net.jcip:jcip-annotations")
+        testCompileOnly("com.github.spotbugs:spotbugs-annotations")
+
+        testRuntimeOnly("jakarta.el:jakarta.el-api")
+        testRuntimeOnly("org.glassfish:jakarta.el")
+        testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+    }
+
+    task removeGeneratedSources(type: Delete) {
+        project.generatedSourcesDir.deleteDir()
+    }
+
+    task removeIdeaOutDirectory(type: Delete) {
+        file("${projectDir}/out").deleteDir()
+    }
+
+    clean {
+        dependsOn(removeIdeaOutDirectory)
+    }
+
+    compileJava {
+        options.annotationProcessorGeneratedSourcesDirectory = project.generatedSourcesJavaDir
+        options.compilerArgs += [
+                "-Xlint:unchecked",
+                "-Xlint:deprecation",
+                "-s",
+                project.generatedSourcesJavaDir
+        ]
+    }
+
+    compileTestJava {
+        options.compilerArgs += [
+                "-Xlint:unchecked",
+                "-Xlint:deprecation"
+        ]
+    }
+
+    tasks.withType(Test) {
+        task ->
+            // Use JUnit 5 with Jupiter
+            useJUnitPlatform()
+            // set heap size for the test JVM(s)
+            minHeapSize = "256m"
+            maxHeapSize = "2g"
+
+            // Environment properties to be forwarded to the test runtime
+            [
+                    "CI",
+                    "INTEGRATION_TEST_DB",
+            ].each { envVariableName ->
+                if (System.getenv(envVariableName) != null) {
+                    systemProperty envVariableName, System.getenv(envVariableName)
+                }
+            }
+
+            if (System.env."TRAVIS" == "true") {
+                systemProperty "spring.profiles.include", "travisci"
+            }
+
+            reports.html.setDestination(new File("${reporting.baseDir}/test/${task.name}"))
+            jacocoTestReport.getExecutionData().plus(files("$buildDir/jacoco/${task.name}.exec"))
+
+            // Customize test logging on CI and everywhere else
+            testLogging {
+                if (System.getenv("CI") != null) {
+                    events "passed", "skipped", "failed"
+                    exceptionFormat "full"
+                } else {
+                    events "failed"
+                }
+            }
+    }
+
+    license {
+        ignoreFailures false
+    }
+
+    checkstyle {
+        toolVersion = "8.27"
+    }
+
+    spotbugs {
+        excludeFilter = new File("$rootProject.projectDir/config/spotbugs/excludeFilter.xml")
+    }
+    spotbugsTest.enabled = false
+    spotbugsIntegTest.enabled = false
+    spotbugsSmokeTest.enabled = false
+
+    tasks.withType(SpotBugsTask) {
+        reports {
+            xml.enabled = false
+            html.enabled = true
+        }
+    }
+
+    jacocoTestReport {
+        reports {
+            html.enabled = true
+            xml.enabled = true
+            csv.enabled = false
+        }
+    }
+}
+
+/**********************************
+ * Coverage Tasks
+ **********************************/
+
+task codeCoverageReport(type: JacocoReport, group: "Coverage reports") {
+    executionData fileTree(project.rootDir.absolutePath).include("**/build/jacoco/*.exec")
+
+    dependsOn javaProjects*.test
+
+    javaProjects.each {
+        sourceSets it.sourceSets.main
+    }
+
+    reports {
+        xml.enabled = true
+        xml.destination new File("${buildDir}/reports/jacoco/report.xml")
+        html.enabled = true
+        html.destination new File("${buildDir}/reports/jacoco/html")
+        csv.enabled = false
+    }
+    afterEvaluate {
+        // Exclude generated files from top-level coverage report
+        classDirectories.setFrom(
+                files(
+                        classDirectories.files.collect {
+                            fileTree(
+                                    dir: it,
+                                    exclude: [
+                                            "**/com/netflix/genie/proto/**",
+                                            "**/com/netflix/genie/web/data/entities/*_*",
+                                    ]
+                            )
+                        }
+                )
+        )
+    }
+}
+
+coveralls {
+    sourceDirs = javaProjects.sourceSets.main.allSource.srcDirs.flatten()
+    jacocoReportPath = "${project.buildDir}/reports/jacoco/report.xml"
+}
+
+tasks.coveralls {
+    group = "Coverage reports"
+    description = "Uploads the aggregated coverage report to Coveralls"
+
+    dependsOn codeCoverageReport
+    onlyIf {
+        System.env."CI"
+    }
+}
+
+/**********************************
+ * Github Pages Tasks
+ **********************************/
+
+task collectDocumentation(group: "documentation", description: "Copy the documentation from sub-projects") {
+    dependsOn "aggregateJavadocs"
+
+    def restDocs = new File(project(":genie-web").buildDir, "docs/asciidoc")
+    def referenceDocs = new File(project(":genie-docs").buildDir, "docs/asciidoc")
+    def demoDocs = new File(project(":genie-demo").buildDir, "docs/asciidoc")
+    def dockerCompose = new File(project(":genie-demo").projectDir, "src/main/docker/docker-compose.yml")
+    def docsDir = new File(project.buildDir, "docs")
+
+    inputs.dir restDocs
+    inputs.dir referenceDocs
+    inputs.dir demoDocs
+    inputs.file dockerCompose
+    outputs.dir docsDir
+
+    doLast {
+        copy {
+            from dockerCompose
+            into new File(docsDir, "demo")
+            filter {
+                it.replace('${GENIE_VERSION}', project.version.toString())
+            }
+        }
+        copy {
+            from restDocs
+            into new File(docsDir, "rest")
+        }
+        copy {
+            from referenceDocs
+            into new File(docsDir, "reference")
+        }
+        copy {
+            from demoDocs
+            into new File(docsDir, "demo")
+        }
+    }
+}
+
+gitPublish {
+
+    branch = "gh-pages"
+
+    contents {
+        into("docs/${project.version}/") {
+            from "${project.buildDir}/docs/"
+        }
+        into("_releases") {
+            from new File(project(":genie-docs").projectDir, "src/templates/releaseTemplate.md")
+            rename {
+                String fileName -> fileName.replace("releaseTemplate", "${project.version}")
+            }
+            filter {
+                it.replace("GENIE_VERSION", project.version.toString())
+            }
+        }
+    }
+
+    preserve {
+        include "**/*"
+        exclude "docs/${project.version}/"
+    }
+
+    commitMessage = "Documentation generated for ${project.version} by Travis Build ${System.env.TRAVIS_BUILD_NUMBER}".toString()
+}
+
+gitPublishCopy {
+    // This also depends on asciidoctor task for some sub-projects but that dependency is reverse mapped in the
+    // pertinent sub-project build file
+    dependsOn tasks.collectDocumentation
+}
+
+gitPublishPush {
+    onlyIf {
+        System.env."CI"
+    }
+}
+
+/**********************************
+ * Docker Tasks
+ **********************************/
+
+ext.isDockerRunning = {
+    def dummyOutputStream = new OutputStream() {
+        @Override
+        void write(int b) {}
+    }
+    // See: https://docs.docker.com/config/daemon/#check-whether-docker-is-running
+    def dockerRunning = exec {
+        executable "docker"
+        args "info"
+        ignoreExitValue true
+        standardOutput dummyOutputStream
+        errorOutput dummyOutputStream
+    }
+    if (dockerRunning.exitValue != 0) {
+        println("Docker not running.")
+    }
+    return dockerRunning.exitValue == 0
+}
+
+ext.getDockerTags = { String appName, String projectVersion ->
+    def tags = ["netflixoss/${appName}:${projectVersion}"]
+    if (!projectVersion.contains("SNAPSHOT") && !projectVersion.contains("-rc.")) {
+        tags.add("netflixoss/${appName}:latest")
+        tags.add("netflixoss/${appName}:latest.release")
+    } else if (projectVersion.contains("-rc.")) {
+        tags.add("netflixoss/${appName}:latest.candidate")
+    } else {
+        tags.add("netflixoss/${appName}:latest.snapshot")
+    }
+    return tags
+}
+
+task dockerLogout(type: Exec, group: "Docker", description: "Logout of docker hub") {
+    onlyIf {
+        rootProject.ext.isDockerRunning()
+    }
+    commandLine "docker", "logout"
+}
+
+task dockerLogin(type: Exec, group: "Docker", description: "Login to docker hub using DOCKER_USER and DOCKER_PASSWORD environment variables") {
+    onlyIf {
+        rootProject.ext.isDockerRunning()
+    }
+    dependsOn tasks.dockerLogout
+    commandLine "docker", "login", "-u", System.getenv("DOCKER_USER") ?: "", "-p", System.getenv("DOCKER_PASSWORD") ?: ""
+}
+
+task dockerBuildAllImages(group: "Docker", description: "Container task for all docker image builds") {
+    onlyIf {
+        rootProject.ext.isDockerRunning()
+    }
+    dependsOn ":genie-app:dockerBuildAppImage"
+    dependsOn ":genie-demo:dockerBuildApacheImage"
+    dependsOn ":genie-demo:dockerBuildClientImage"
+}
+
+gradleEnterprise {
+    buildScan {
+        publishAlways()
+        termsOfServiceUrl = "https://gradle.com/terms-of-service"
+        termsOfServiceAgree = "yes"
+    }
+}

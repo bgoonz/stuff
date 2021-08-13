@@ -1,0 +1,18 @@
+version = "${shortVersion(rootProject.versionRxNetty)}${versionSuffix}"
+
+dependencies {
+  runtime project(':iepshadow-rxnetty')
+  runtime "com.netflix.servo:servo-core:${rootProject.versionServo}"
+
+  // these dependencies are shaded
+  providedCompile "io.reactivex:rxnetty-servo:${rootProject.versionRxNetty}"
+  shadow "io.reactivex:rxnetty-servo:${rootProject.versionRxNetty}"
+}
+
+shadowJar {
+  classifier = null
+  dependencies {
+      include dependency("io.reactivex:rxnetty-servo:${rootProject.versionRxNetty}")
+  }
+  relocate 'io.reactivex', 'iep.io.reactivex'
+}

@@ -1,0 +1,13 @@
+apply plugin: 'com.github.blindpirate.osgi'
+
+/**
+ * Queue implementation backed by Cassandra storage.
+ * Use at your own risk -- Cassandra can be a *very bad* storage engine for queues.
+ * If you insist on using Cassandra for queues, set a very short TTL and use DateTieredCompactionStrategy (DTCS).
+ */
+dependencies {
+    compile  project(':astyanax-core')
+    compile  project(':astyanax-cassandra')
+    runtime  project(':astyanax-thrift')
+    compile  project(':astyanax-recipes')
+}

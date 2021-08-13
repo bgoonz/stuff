@@ -1,0 +1,103 @@
+apply plugin: "org.springframework.boot"
+
+configurations {
+    genieAgent
+}
+
+dependencies {
+    /*******************************
+     * Implementation Dependencies
+     *******************************/
+
+    implementation(project(":genie-swagger"))
+    implementation(project(":genie-web"))
+    implementation(project(":genie-ui"))
+    implementation("org.springframework.boot:spring-boot-starter")
+    implementation("org.springframework.boot:spring-boot-starter-web")
+
+    /*******************************
+     * Compile Only Dependencies
+     *******************************/
+
+    /*******************************
+     * Runtime Only Dependencies
+     *******************************/
+
+    /*******************************
+     * Test Dependencies
+     *******************************/
+
+    testImplementation(project(":genie-test"))
+    testImplementation(project(":genie-test-web"))
+
+    /*******************************
+     * Agent Dependencies
+     *******************************/
+
+    genieAgent(project(path: ":genie-agent-app", configuration: "agentBootJar"))
+}
+
+bootJar {
+    manifest {
+        attributes("Implementation-Title": project.name)
+        attributes("Implementation-Version": project.version)
+    }
+}
+
+springBoot {
+    mainClassName = "com.netflix.genie.GenieApp"
+    buildInfo()
+}
+
+def dockerDir = new File(project.buildDir, "/docker")
+
+task dockerCreateInputDir(type: Copy, group: "Docker", description: "Stage all the necessary files docker image") {
+    dependsOn tasks.jar, tasks.bootJar, project.findProject(":genie-agent-app").tasks.bootJar
+    from tasks.jar
+    from new File(project.projectDir, "src/main/docker/Dockerfile")
+    from "${configurations.genieAgent.asPath}"
+    into dockerDir
+}
+
+task dockerBuildAppImage(type: Exec, group: "Docker", description: "Build docker image for the Genie App") {
+    onlyIf {
+        rootProject.ext.isDockerRunning()
+    }
+    inputs.dir(dockerDir)
+    dependsOn tasks.dockerCreateInputDir
+    workingDir dockerDir
+
+    def serverName = tasks.jar.getArchiveBaseName().get()
+    def agentName = project.findProject(":genie-agent-app").tasks.jar.getArchiveBaseName().get()
+
+    def commandArgs = new ArrayList<>()
+    commandArgs.add("docker")
+    commandArgs.add("build")
+    commandArgs.add("--force-rm")
+    commandArgs.add("--build-arg")
+    commandArgs.add("SERVER_JAR=${serverName}-${project.version}.jar")
+    commandArgs.add("--build-arg")
+    commandArgs.add("AGENT_JAR=${agentName}-${project.version}.jar")
+    for (String tag : rootProject.ext.getDockerTags(serverName, project.version.toString())) {
+        commandArgs.add("-t")
+        commandArgs.add(tag)
+    }
+    commandArgs.add(".")
+
+    commandLine commandArgs
+}
+
+task dockerPush(group: "Docker", description: "Push the built docker app image to Docker Hub") {
+    dependsOn parent.tasks.dockerLogin, tasks.dockerBuildAppImage
+    onlyIf {
+        System.env."CI" && rootProject.ext.isDockerRunning()
+    }
+    doLast {
+        def appName = tasks.jar.archiveBaseName.get()
+        for (String tag : rootProject.ext.getDockerTags(appName, project.version.toString())) {
+            exec {
+                commandLine "docker", "push", tag
+            }
+        }
+    }
+}

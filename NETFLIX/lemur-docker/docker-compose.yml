@@ -1,0 +1,59 @@
+version: '3.7'
+
+volumes:
+  pg_data: { }
+  app_data: { }
+
+networks:
+  appnet:
+    driver: bridge
+
+services:
+  postgres:
+    image: "postgres:12-alpine" # default version of Ubuntu 20.02, apt-cache show postgresql
+    restart: on-failure
+    networks:
+      - appnet
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    env_file:
+      - .pgsql.env
+
+  redis:
+    image: "redis:5.0-alpine" # default version of Ubuntu 20.02, apt-cache show redis-server
+    restart: on-failure
+    networks:
+      - appnet
+
+  nginx:
+    build:
+      context: ./nginx
+    #container_name: lemur-nginx
+    networks:
+      - appnet
+    volumes:
+      - app_data:/opt/lemur/lemur/static/dist:ro
+    restart: on-failure
+    depends_on:
+      - lemur
+    ports:
+      - 87:80
+      - 447:443
+
+  lemur:
+    image: netlix-lemur:latest
+    build:
+      context: ./lemur-build-docker
+    #container_name: lemur
+    restart: on-failure
+    networks:
+      - appnet
+    depends_on:
+      - postgres
+      - redis
+    env_file:
+      - .lemur.env
+      - .pgsql.env
+    volumes:
+      - ./lemur.conf.py:/home/lemur/.lemur/lemur.conf.py:ro
+      - app_data:/opt/lemur/lemur/static/dist:ro

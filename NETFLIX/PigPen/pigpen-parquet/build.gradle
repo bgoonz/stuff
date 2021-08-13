@@ -1,0 +1,21 @@
+dependencies {
+    compile project(':pigpen')
+    compile project(':pigpen-hadoop')
+
+    compile 'com.twitter:parquet-tools:1.5.0'
+
+    testCompile project(path: ':pigpen', configuration: 'testOutput')
+}
+
+configurations {
+    testOutput.extendsFrom (testCompile)
+}
+
+task jarTest (type: Jar, dependsOn: testClasses) {
+    from sourceSets.test.clojure.srcDirs
+    classifier = 'test'
+}
+
+artifacts {
+    testOutput jarTest
+}

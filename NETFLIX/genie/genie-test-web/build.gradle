@@ -1,0 +1,39 @@
+import org.apache.tools.ant.filters.ReplaceTokens
+
+apply plugin: "java-library"
+
+dependencies {
+    /*******************************
+     * API Dependencies
+     *******************************/
+
+    /*******************************
+     * Implementation Dependencies
+     *******************************/
+
+    implementation(project(":genie-test"))
+    implementation("com.google.guava:guava")
+    implementation("commons-io:commons-io")
+    implementation("org.springframework.boot:spring-boot-starter-aop")
+    implementation("org.springframework.boot:spring-boot-starter-test")
+
+    /*******************************
+     * Compile Only Dependencies
+     *******************************/
+
+    /*******************************
+     * Runtime Only Dependencies
+     *******************************/
+
+    /*******************************
+     * Test Dependencies
+     *******************************/
+}
+
+processResources {
+    filesMatching("**/*.yml") {
+        filter ReplaceTokens, tokens: [
+                "genie.version": project.version.toString()
+        ]
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "properties": {
+    "repo_name": {
+      "type": "keyword",
+      "index": "true"
+    },
+    "osslifecycle": {
+      "type": "keyword",
+      "index": "true"
+    }
+  }
+}

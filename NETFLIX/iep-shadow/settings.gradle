@@ -1,0 +1,5 @@
+include 'iepshadow-rxnetty',
+        'iepshadow-rxnetty-servo',
+        'iepshadow-rxnetty-spectator',
+        'iepshadow-iep-module-rxnetty',
+        'iepshadow-iep-rxhttp'

@@ -1,0 +1,39 @@
+plugins {
+  id 'nebula.netflixoss' version '2.2.5'
+}
+
+ext.githubProjectName = rootProject.name
+
+allprojects {
+    
+}
+
+subprojects {
+  apply plugin: 'nebula.netflixoss'
+  apply plugin: 'java'
+  apply plugin: 'project-report'
+
+  group = "com.netflix.${githubProjectName}"
+
+  repositories { 
+    jcenter()
+    maven{
+      name 'github.release.repo'
+      url 'https://raw.github.com/bulldog2011/bulldog-repo/master/repo/releases/'
+    }
+  }
+
+  configurations {
+    all*.exclude group: 'org.codehaus.jackson', module: 'jackson-mapper'
+    all*.exclude group: 'org.codehaus.jackson', module: 'jackson-core'
+  }
+
+  test {
+    forkEvery = 1
+    maxParallelForks = 1
+    testLogging {
+      events 'failed', 'skipped', 'started'
+      exceptionFormat 'full'
+    }
+  }
+}

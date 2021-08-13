@@ -1,0 +1,2 @@
+pullrequest=false
+environment_variables=GRADLE_OPTS=-Xmx1g -XX:MaxPermSize=512m

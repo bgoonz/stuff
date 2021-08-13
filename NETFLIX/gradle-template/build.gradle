@@ -1,0 +1,15 @@
+plugins {
+    id 'nebula.netflixoss' version '8.8.1'
+}
+
+// Establish version and status
+ext.githubProjectName = rootProject.name // Change if github project name is not the same as the root project's name
+
+subprojects {
+    apply plugin: 'nebula.netflixoss'
+    group = "com.netflix.${githubProjectName}" // TEMPLATE: Set to organization of project
+
+    repositories {
+        jcenter()
+    }
+}

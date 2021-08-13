@@ -1,0 +1,8 @@
+apply plugin: 'java'
+
+dependencies {
+    compile     project(':governator')
+    compile     'com.netflix.archaius:archaius-core:0.5.12'
+
+    testCompile project(':governator').sourceSets.test.output
+}
