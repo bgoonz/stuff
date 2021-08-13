@@ -1,0 +1,283 @@
+#!/usr/bin/env bash
+# Usage: . ghe-backup-config
+# GitHub Enterprise backup shell configuration.
+#
+# This file is sourced by the various utilities under bin and share/github-backup-utils to
+# load in backup configuration and ensure things are configured properly.
+#
+# All commands in share/github-backup-utils/ should start with the following:
+#
+#     . $( dirname "${BASH_SOURCE[0]}" )/ghe-backup-config
+#
+# And all commands in bin/ should start with the following:
+#
+#     . $( dirname "${BASH_SOURCE[0]}" )/../share/github-backup-utils/ghe-backup-config
+#
+
+# Assume this script lives in share/github-backup-utils/ when setting the root
+GHE_BACKUP_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../.." && pwd )"
+
+# Get the version from the version file.
+BACKUP_UTILS_VERSION="$(cat $GHE_BACKUP_ROOT/share/github-backup-utils/version)"
+
+# Add the bin and share/github-backup-utils dirs to PATH
+PATH="$GHE_BACKUP_ROOT/bin:$GHE_BACKUP_ROOT/share/github-backup-utils:$PATH"
+
+. $GHE_BACKUP_ROOT/share/github-backup-utils/bm.sh
+
+# Parse out -v (verbose) argument
+if [ "$1" = "-v" ]; then
+    GHE_VERBOSE=true
+    shift
+fi
+export GHE_VERBOSE
+
+# If verbose logging is enabled, redirect fd 3 to stdout; otherwise, redirect it
+# to /dev/null. Write verbose output to fd 3.
+if [ -n "$GHE_VERBOSE" ]; then
+    exec 3>&1
+else
+    exec 3>/dev/null
+fi
+
+# Save off GHE_HOSTNAME from the environment since we want it to override the
+# backup.config value when set.
+GHE_HOSTNAME_PRESERVE="$GHE_HOSTNAME"
+
+# Source in the backup config file from the copy specified in the environment
+# first and then fall back to the backup-utils root, home directory and system.
+config_found=false
+for f in "$GHE_BACKUP_CONFIG" "$GHE_BACKUP_ROOT/backup.config" \
+  "$HOME/.github-backup-utils/backup.config" "/etc/github-backup-utils/backup.config"; do
+    if [ -f "$f" ]; then
+        GHE_BACKUP_CONFIG="$f"
+        . "$GHE_BACKUP_CONFIG"
+        config_found=true
+        break
+    fi
+done
+
+# Check that the config file exists before we source it in.
+if ! $config_found; then
+    echo "Error: No backup configuration file found. Tried:" 1>&2
+    [ -n "$GHE_BACKUP_CONFIG" ] && echo " - $GHE_BACKUP_CONFIG" 1>&2
+    echo " - $GHE_BACKUP_ROOT/backup.config" 1>&2
+    echo " - $HOME/.github-backup-utils/backup.config" 1>&2
+    echo " - /etc/github-backup-utils/backup.config" 1>&2
+    exit 2
+fi
+
+# Restore saved off hostname.
+[ -n "$GHE_HOSTNAME_PRESERVE" ] && GHE_HOSTNAME="$GHE_HOSTNAME_PRESERVE"
+
+# Check that the GHE hostname is set.
+if [ -z "$GHE_HOSTNAME" ]; then
+    echo "Error: GHE_HOSTNAME not set in config file." 1>&2
+    exit 2
+fi
+
+# Convert the data directory path to an absolute path, basing any relative
+# paths on the backup-utils root, and using readlink, if available, to
+# canonicalize the path.
+if [ ${GHE_DATA_DIR:0:1} != "/" ]; then
+  GHE_DATA_DIR="$( cd "$GHE_BACKUP_ROOT" && readlink -m "$GHE_DATA_DIR" 2> /dev/null || echo "$GHE_BACKUP_ROOT/$GHE_DATA_DIR" )"
+fi
+
+GHE_CREATE_DATA_DIR=${GHE_CREATE_DATA_DIR:-yes}
+
+# Check that the data directory is set and create it if it doesn't exist.
+if [ ! -d "$GHE_DATA_DIR" ] && [ "$GHE_CREATE_DATA_DIR" = "yes" ]; then
+    echo "Creating the backup data directory ..." 1>&3
+    mkdir -p "$GHE_DATA_DIR"
+fi
+
+if [ ! -d "$GHE_DATA_DIR" ]; then
+    echo "Error: GHE_DATA_DIR $GHE_DATA_DIR does not exist." >&2
+    exit 8
+fi
+
+# Set some defaults if needed.
+: ${GHE_NUM_SNAPSHOTS:=10}
+
+# Generate a backup timestamp if one has not already been generated.
+# We export the variable so the process group shares the same value.
+: ${GHE_SNAPSHOT_TIMESTAMP:=$(date +"%Y%m%dT%H%M%S")}
+export GHE_SNAPSHOT_TIMESTAMP
+
+# Set the current snapshot directory to <data-dir>/<timestamp>. This is where
+# all backups should be written for the current invocation.
+GHE_SNAPSHOT_DIR="$GHE_DATA_DIR"/"$GHE_SNAPSHOT_TIMESTAMP"
+
+# The root filesystem location. This must be used so that tests can override
+# the root as a local directory location.
+: ${GHE_REMOTE_ROOT_DIR:=""}
+
+# The root location of persistent data and applications on the remote side. This
+# is always "/data" for GitHub instances. Use of this variable allows
+# the location to be overridden in tests.
+: ${GHE_REMOTE_DATA_DIR:="/data"}
+
+# The root location of user data stores such as git repositories, pages sites,
+# elasticsearch indices, etc. This is "/data" under 1.x filesystem layouts and
+# "/data/user" under the 2.x filesystem layout. The location is adjusted
+# dynamically in ghe_remote_version_config() immediately after obtaining the
+# remote version. Utilities that transfer data in and out of the appliance
+# should use this variable to ensure proper behavior under different versions.
+: ${GHE_REMOTE_DATA_USER_DIR:="$GHE_REMOTE_DATA_DIR"}
+
+# The location of the license file on the remote side. This is always
+# "/data/enterprise/enterprise.ghl" for GitHub instances. Use of this variable
+# allows the location to be overridden in tests.
+: ${GHE_REMOTE_LICENSE_FILE:="$GHE_REMOTE_DATA_DIR/enterprise/enterprise.ghl"}
+
+# The legacy location of the metadata file on the remote side. Only used if
+# the newer "ghe-negotiate-version" script cannot be found or fails. This was
+# "/data/enterprise/metadata.json" for GitHub instances. Use of this variable
+# allows the location to be overridden in tests.
+: ${GHE_REMOTE_METADATA_FILE:="$GHE_REMOTE_DATA_DIR/enterprise/chef_metadata.json"}
+
+# CPU and IO throttling to keep backups and restores from thrashing around.
+: ${GHE_NICE:="nice -n 19"}
+: ${GHE_IONICE:="ionice -c 3"}
+
+# The number of seconds to wait for in progress git-gc processes to complete
+# before starting the sync of git data. See share/github-backup-utils/ghe-backup-repositories-rsync
+# for more information. Default: 10 minutes.
+: ${GHE_GIT_COOLDOWN_PERIOD:=600}
+
+# Set "true" to get verbose logging of all ssh commands on stderr
+: ${GHE_VERBOSE_SSH:=false}
+
+# The location of the cluster configuration file file on the remote side.
+# This is always "/data/user/common/cluster.conf" for GitHub Cluster instances.
+# Use of this variable allows the location to be overridden in tests.
+: ${GHE_REMOTE_CLUSTER_CONF_FILE:="$GHE_REMOTE_DATA_DIR/user/common/cluster.conf"}
+
+# The location of the file used to disable GC operations on the remote side.
+: ${SYNC_IN_PROGRESS_FILE:="$GHE_REMOTE_DATA_USER_DIR/repositories/.sync_in_progress"}
+
+###############################################################################
+### Dynamic remote version config
+
+# Adjusts remote paths based on the version of the remote appliance. This is
+# called immediately after the remote version is obtained by
+# ghe_remote_version_required(). Child processes inherit the values set here.
+ghe_remote_version_config () {
+    if [ "$GHE_VERSION_MAJOR" -gt 1 ]; then
+        GHE_REMOTE_DATA_USER_DIR="$GHE_REMOTE_DATA_DIR/user"
+    fi
+    export GHE_REMOTE_DATA_DIR GHE_REMOTE_DATA_USER_DIR
+    export GHE_REMOTE_LICENSE_FILE GHE_REMOTE_METADATA_FILE
+}
+
+###############################################################################
+### Utility functions
+
+# Function to print usage embedded in a script's opening doc comments.
+print_usage () {
+    grep '^#/' <"$0" | cut -c 4-
+    exit ${1:-1}
+}
+
+# Check for a "--help" arg and show usage
+for a in "$@"; do
+    if [ "$a" = "--help" ]; then
+        print_usage
+    fi
+done
+
+# If we don't have a readlink command, parse ls -l output.
+if ! type readlink 1>/dev/null 2>&1; then
+    readlink () {
+        if [ -x "$1" ]; then
+            ls -ld "$1" | sed 's/.*-> //'
+        else
+            return 1
+        fi
+    }
+fi
+
+# Run ghe-host-check and establish the version of the remote GitHub instance in
+# the exported GHE_REMOTE_VERSION variable. If the remote version has already
+# been established then don't perform the host check again. Utilities in share/github-backup-utils
+# that need the remote version should use this function instead of calling
+# ghe-host-check directly to reduce ssh roundtrips. The top-level ghe-backup and
+# ghe-restore commands establish the version for all subcommands.
+ghe_remote_version_required () {
+    if [ -z "$GHE_REMOTE_VERSION" ]; then
+        _out=$(ghe-host-check "$@")
+        echo "$_out"
+
+        # override hostname w/ ghe-host-check output because the port could have
+        # been autodetected to 122.
+        GHE_HOSTNAME=$(echo "$_out" | sed 's/Connect \(.*:[0-9]*\) OK.*/\1/')
+        export GHE_HOSTNAME
+
+        GHE_REMOTE_VERSION=$(echo "$_out" | sed 's/.*(\(.*\))/\1/')
+        export GHE_REMOTE_VERSION
+
+        ghe_parse_remote_version "$GHE_REMOTE_VERSION"
+        ghe_remote_version_config "$GHE_REMOTE_VERSION"
+    fi
+    true
+}
+
+# Parse major, minor, and patch parts of the remote appliance version and store
+# in GHE_VERSION_MAJOR, GHE_VERSION_MINOR, and GHE_VERSION_PATCH variables. All
+# parts are numeric. This is called automatically from
+# ghe_remote_version_required so shouldn't be used directly.
+#
+# Scripts use these variables to alter behavior based on what's supported on the
+# appliance version. The version parts are modified somewhat to make dealing
+# with the 11.10.x version scheme more sane. The "11.10" part of the remote
+# version is normalized to "1.0" so "11.10.340" would have parts "1.0.340".
+ghe_parse_remote_version () {
+    GHE_VERSION_MAJOR=$(echo "${1#v}" | cut -f 1 -d .)
+    GHE_VERSION_MINOR=$(echo "$1"     | cut -f 2 -d .)
+    GHE_VERSION_PATCH=$(echo "$1"     | cut -f 3 -d .)
+    GHE_VERSION_PATCH=${GHE_VERSION_PATCH%%[a-zA-Z]*}
+
+    if [ "$GHE_VERSION_MAJOR.$GHE_VERSION_MINOR" = "11.10" ]; then
+        GHE_VERSION_MAJOR=1
+        GHE_VERSION_MINOR=0
+    fi
+
+    export GHE_VERSION_MAJOR GHE_VERSION_MINOR GHE_VERSION_PATCH
+}
+
+# Parses the <host> part out of a "<host>:<port>" or just "<host>" string.
+# This is used primarily to break hostspecs with non-standard ports down for
+# rsync commands.
+ssh_host_part () {
+    [ "${1##*:}" = "$1" ] && echo "$1" || echo "${1%:*}"
+}
+
+# Parses the <port> part out of a "<host>:<port>" or just "<host>" string.
+# This is used primarily to break hostspecs with non-standard ports down for
+# rsync commands.
+ssh_port_part () {
+    [ "${1##*:}" = "$1" ] && echo 22 || echo "${1##*:}"
+}
+
+# Usage: ghe_remote_logger <message>...
+# Log a message to /var/log/syslog on the remote instance.
+# Note: Use sparingly. Remote logging requires an ssh connection per invocation.
+ghe_remote_logger () {
+    echo "$@" |
+    ghe-ssh "$GHE_HOSTNAME" -- logger -t backup-utils || true
+}
+
+# Usage: ghe_cluster_online_nodes role
+# Returns the online nodes with a certain role in cluster
+ghe_cluster_online_nodes () {
+    role=$1
+    echo "ghe-config --get-regexp cluster.*.$role | egrep 'true$' | awk '{ print \$1; }' | awk 'BEGIN { FS=\".\" }; { print \$2 };' | xargs -I{} -n1 bash -c 'if [ \"\$(ghe-config cluster.\$hostname.offline)\" != true ]; then ghe-config cluster.{}.hostname; fi'" | ghe-ssh "$GHE_HOSTNAME" /bin/bash
+}
+
+# Usage: ghe_verbose <message>
+# Log if verbose mode is enabled (GHE_VERBOSE or `-v`).
+ghe_verbose() {
+  if [ -n "$GHE_VERBOSE" ]; then
+    echo "$@" 1>&3
+  fi
+}

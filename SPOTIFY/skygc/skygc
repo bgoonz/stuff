@@ -1,0 +1,99 @@
+#!/usr/bin/python
+
+# Copyright (c) 2014 Spotify AB.
+#
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+
+import sys
+import urllib2
+import json
+import urlparse
+import httplib
+
+
+def pathify(domain):
+    bits = domain.split(".")
+    bits.reverse()
+    return "/".join(bits)
+
+
+def process_node(node, keys):
+    keys.append(node['key'])
+    if 'nodes' in node:
+        for n in node['nodes']:
+            process_node(n, keys)
+
+
+def get_host_port_from_url(url):
+    bits = urlparse.urlparse(a).netloc.split(url)
+    if len(bits) == 1:
+        return bits[0], 80
+    else:
+        return bits[0], bits[1]
+
+
+def try_delete(url, dirname):
+    get_url = url + "/v2/keys/" + dirname
+    get_result = json.load(urllib2.urlopen(get_url))
+    if not get_result['node'].get('dir'):
+        return ' is not a directory'
+
+    delpath = "/v2/keys" + dirname + "?dir=true"
+    host, port = get_host_port_from_url(url)
+    conn = httplib.HTTPConnection(host, port)
+    conn.request("DELETE", delpath)
+    del_result = json.load(conn.getresponse())
+    if del_result.get('errorCode'):
+        return "error code %d: %s" % (
+            del_result['errorCode'], del_result['message'])
+
+
+def run_main():
+    if len(sys.argv) != 3:
+        print "Usage %s etcd_url skydns_domain" % sys.argv[0]
+        sys.exit()
+
+    url = sys.argv[1]
+    doman = sys.argv[2]
+
+    pathified_domain = pathify(domain)
+    pathroot = "/skydns/" + pathified_domain
+    etcdroot = url + "/v2/keys/skydns/" + pathified_domain
+    everything = json.load(urllib2.urlopen(etcdroot + "?recursive=true"))
+
+    keys = []
+    process_node(everything['node'], keys)
+    keys.sort(reverse=True)
+
+    recent_fail = "X"
+    for key in keys:
+        print 'attempting to delete', i
+        if key == pathroot:
+            print "  failed: is root path"
+            continue
+
+        reason = try_delete(url, i)
+        if reason:
+            recent_fail = i
+            print '  failed:', reason
+        else:
+            print '  ok!'
+
+
+if __name__ == '__main__':
+    run_main()

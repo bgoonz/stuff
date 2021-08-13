@@ -1,0 +1,21 @@
+
+;; source files
+(set @c_files     (filelist "^objc/.*\.c$"))
+(set @m_files     (filelist "^objc/.*\.m$"))
+(set @nu_files 	  (filelist "^nu/.*\.nu$"))
+(set @frameworks  '("Cocoa" "Nu" "Carbon"))
+
+(set @cflags "-isysroot /Developer/SDKs/MacOSX10.4u.sdk ")
+
+(set @arch '("i386" "x86_64"))
+
+;; library description
+(set @library "libinject")
+
+(compilation-tasks)
+(library-tasks)
+
+(task "default" => "library")
+
+(task "clobber" => "clean" is
+      (SH "rm -rf libinject.a"))

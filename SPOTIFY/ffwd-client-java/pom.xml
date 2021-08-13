@@ -1,0 +1,196 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.spotify.ffwd</groupId>
+  <artifactId>ffwd-parent</artifactId>
+  <version>0.2.5-SNAPSHOT</version>
+
+  <modules>
+    <module>opencensus-exporter</module>
+    <module>ffwd-client</module>
+    <module>perf</module>
+  </modules>
+
+  <packaging>pom</packaging>
+  <name>FastForward Parent POM</name>
+  <description>FastForward client for Java.</description>
+  <url>https://github.com/spotify/ffwd-client-java</url>
+
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+
+  <parent>
+    <groupId>com.spotify</groupId>
+    <artifactId>foss-root</artifactId>
+    <version>10</version>
+  </parent>
+
+  <scm>
+    <connection>scm:git:git@github.com:spotify/ffwd-client-java</connection>
+    <developerConnection>scm:git:git@github.com:spotify/ffwd-client-java</developerConnection>
+    <url>https://github.com/spotify/ffwd-client-java</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <junit-jupiter.version>5.5.2</junit-jupiter.version>
+    <opencensus.version>0.24.0</opencensus.version>
+    <auto.value.version>1.2</auto.value.version>
+    <mockito-junit.jupiter.version>3.4.3</mockito-junit.jupiter.version>
+  </properties>
+
+  <profiles>
+    <profile>
+      <id>jdk8</id>
+      <activation>
+        <jdk>1.8</jdk>
+      </activation>
+      <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+      </properties>
+    </profile>
+    <profile>
+      <id>jdk9+</id>
+      <activation>
+        <jdk>[9,)</jdk>
+      </activation>
+      <properties>
+        <!-- Javac introduced the "release" option only in Java 9+.  It
+			properly sets up source, target and boot classpath for the best
+			compatibility with different versions of Java. -->
+        <maven.compiler.release>8</maven.compiler.release>
+      </properties>
+    </profile>
+  </profiles>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.google.auto.value</groupId>
+        <artifactId>auto-value</artifactId>
+        <version> ${auto.value.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.opencensus</groupId>
+        <artifactId>opencensus-api</artifactId>
+        <version>${opencensus.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.opencensus</groupId>
+        <artifactId>opencensus-exporter-metrics-util</artifactId>
+        <version>${opencensus.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>1.7.28</version>
+      </dependency>
+      <dependency>
+        <groupId>args4j</groupId>
+        <artifactId>args4j</artifactId>
+        <version>2.0.29</version>
+      </dependency>
+
+      <!-- Test Dependencies -->
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>${junit-jupiter.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>${junit-jupiter.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-junit-jupiter</artifactId>
+        <version>${mockito-junit.jupiter.version}</version>
+        <scope>test</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <build>
+    <extensions>
+      <extension>
+        <groupId>kr.motd.maven</groupId>
+        <artifactId>os-maven-plugin</artifactId>
+        <version>1.6.0</version>
+      </extension>
+    </extensions>
+
+    <plugins>
+      <plugin>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>3.0.0</version>
+        <dependencies>
+          <dependency>
+            <groupId>com.spotify.checkstyle</groupId>
+            <artifactId>spotify-checkstyle-config</artifactId>
+            <version>1.0.7</version>
+          </dependency>
+          <dependency>
+            <groupId>com.puppycrawl.tools</groupId>
+            <artifactId>checkstyle</artifactId>
+            <version>8.18</version>
+          </dependency>
+        </dependencies>
+        <configuration>
+          <sourceDirectories>
+            <sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>
+          </sourceDirectories>
+          <configLocation>spotify_checks.xml</configLocation>
+          <consoleOutput>true</consoleOutput>
+          <!-- Remove or switch to false to keep building even with checkstyle errors -->
+          <failOnViolation>true</failOnViolation>
+          <logViolationsToConsole>true</logViolationsToConsole>
+          <!-- change to 'warning' to be more strict about following checkstyle conventions -->
+          <violationSeverity>warning</violationSeverity>
+        </configuration>
+        <executions>
+          <execution>
+            <id>validate</id>
+            <phase>validate</phase>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <artifactId>maven-enforcer-plugin</artifactId>
+      </plugin>
+
+      <plugin>
+        <artifactId>maven-failsafe-plugin</artifactId>
+      </plugin>
+
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.21.0</version>
+        <dependencies>
+          <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-surefire-provider</artifactId>
+            <version>1.2.0</version>
+          </dependency>
+          <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit-jupiter.version}</version>
+          </dependency>
+        </dependencies>
+      </plugin>
+    </plugins>
+  </build>
+</project>

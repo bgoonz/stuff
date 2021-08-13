@@ -1,0 +1,152 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".PlayerActivity" >
+    
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/playerbar"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical" >
+        
+        <TextView
+            android:id="@+id/track_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Loading the latest album!"
+        android:singleLine="true"
+        android:textColor="#fff" />
+        <TextView
+            android:id="@+id/track_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:text="..."
+        android:textColor="#fff" />
+
+        <ImageView
+            android:id="@+id/cover_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/cover_mock" />
+
+        <LinearLayout
+            android:id="@+id/topbar"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/player_star"
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state"
+                android:clickable="true"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/star_image"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/star_disabled_state" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/player_next_album"
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state"
+                android:clickable="true"
+                android:gravity="center" >
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/player_next_album_state" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/playerbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        
+        android:orientation="vertical" >
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/player_prev"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state"
+                android:clickable="true"
+                android:gravity="center" >
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/player_prev_state" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/player_play_pause"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state"
+                android:clickable="true"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/player_play_pause_image"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/player_play_state"
+                    android:duplicateParentState="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/player_next"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state"
+                android:clickable="true"
+                android:gravity="center" >
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/player_next_state" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

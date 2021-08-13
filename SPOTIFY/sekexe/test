@@ -1,0 +1,48 @@
+#!/bin/bash
+
+REQUIREMENTS="/usr/bin/shunit2 /bin/nc"
+for R in $REQUIREMENTS
+do
+	[ -x $R ] || {
+		echo "Requirement $R not found. Aborting."
+		exit 1
+	}
+done
+
+handleSigTerm()
+{
+    echo SIGTERM
+}
+
+oneTimeSetUp()
+{
+    trap "handleSigTerm" TERM
+}
+
+testSlirpRedirNeedsHostIp()
+{
+    HOST_IP='' SLIRP_PORTS=12345 ./run true
+
+    assertNotEquals "Providing SLIRP_PORTS should require HOST_IP" 0 $?
+}
+
+testGuestReachableViaSlirp()
+{
+    # for an address to bind to, try both eth0 and venet0:0 (used by travis ci)
+    host_ip=$( (/sbin/ifconfig eth0 || /sbin/ifconfig venet0:0) | \
+        grep 'inet addr' | awk -F: '{print $2}' | awk '{print $1}')
+    port=12345
+
+    HOST_IP="$host_ip" SLIRP_PORTS=$port ./run "nc -l $port" &
+    UML_PID=$!
+
+    # give uml a little time to start
+    sleep 5
+
+    nc -w 5 -z $host_ip $port
+    assertEquals "Service should be reachable via slirp" 0 $?
+
+    /bin/kill $UML_PID >/dev/null 2>/dev/null
+}
+
+. /usr/bin/shunit2

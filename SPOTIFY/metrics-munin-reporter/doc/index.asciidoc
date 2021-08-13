@@ -1,0 +1,133 @@
+Project book for metrics-munin-reporter
+=======================================
+Niklas Gustavsson <ngn@spotify.com>
+$Id$
+
+metrics-munin-reporter is a small library used to expose Java metrics (from
+Coda Hale's Metrics library) as a Munin node. It allows for defining and
+configuring graphs and data sources.
+
+The exposed Munin node can than be polled by Munin servers, or aggregated into
+an aggregating Munin node.
+
+This document does not cover the Metrics library, instead please refer to the
+excellent User manual for the library: http://metrics.codahale.com/manual/
+
+Java graph API
+--------------
+
+The Java graph API is used to define and configure graphs and data sources.
+
+Configuration starts out with creating a MuninReporterConfig object:
+
+----
+MuninReporterConfig config = new MuninReporterConfig();
+----
+
+The configuration object can then be used to define +categories+, these
+directly represent the categories seen in the Munin UI.
+
+----
+MuninGraphCategoryConfig category = config.category("My service");
+----
+
+Using the category, graphs can be configured:
+
+----
+category.graph("Foos per second");
+----
+
+A graph represent one graphical graph in the Munin UI.
+
+The graph configuration uses a fluent API style, for example, to create a data
+source for a graph, the simplest way is to continue the above statement:
+
+----
+category.graph("Foos per second")
+    .dataSource(metricName, "Foos");
+----
+
++metricName+ in this example would refer the the +MetricName+ for the metric
+used to measure the rate of foos.
+
+A graph can have any number of data sources coupled to it.
+
+Each metric type has a default property that is used for the datasource:
+
+* Counter: the value of +Counter.count()+
+* Gauge: the value of +Gauge.value()+
+* Timer: the value of +Timer.median()+
+* Meter: the value of +Meter.fiveMinuteRate()+
+* Histogram: the value of +Histogram.median()+
+
+However, the property to use for a data source can be configured when defining
+the data source. E.g., the include both the median and 95% percentile in a
+graph:
+
+----
+category.graph("Response time")
+    .dataSource(metricName, "Median", TimerProperty.MEDIAN)
+    .dataSource(metricName, "95%", TimerProperty.PERCENTILE95);
+----
+
+When using dynamically generated metrics, e.g. based on user input, it might
+not be possible to know the full metric name beforehand. For such cases, there
+are wildcard datasources. They are defined using the group and type parts of
+the +MetricName+ and will include all metrics that matches these. For example:
+
+----
+category.graph("Input types")
+    .wildcardDataSource(inputGroup, inputType, "Type {}");
+----
+
+The +{}+ placeholder above will be replaced by the +MetricName.getName()+
+value.
+
+It's possible to provide further configuration for a data source using the
+MuninDataSourceConfig class. Theses configurations are not described in detail
+in this document, please refer to the Javadoc or the Munin documentation at
+http://munin-monitoring.org/wiki/protocol-config
+
+Last, to actually start the munin node, use:
+
+----
+MuninReporter munin = new MuninReporter(registry, config);
+munin.start();
+----
+
+You're now good to go and should be able to +telnet localhost 4951+ to view
+your beautiful graph configuration and values in all their ASCII glory.
+
+JVM metrics
+~~~~~~~~~~~
+
+The Metric library provides some built in metrics for various JVM checks, such
+as the memory usage, number of threads, thread stats and file descriptors. To
+ease using these, metrics-munin-reporter comes with a predefined set of graphs
+for these metrics. To use it, simply use:
+
+----
+JvmMetrics.register(registry, config.category("JVM"));
+----
+
+
+Munin node
+----------
+
+The Munin node will be default bind to the loopback interface on port 4951.
+These can be configured when creating the
++com.spotify.statistics.MuninReporter+ instance.
+
+The network API, e.g. by using +telnet localhost 4951+, supports a basic set of
+Munin node commands:
+
+* +list+: list all graph names
+* +config <graph name>+: show configuration for the provided graph
+* +fetch <graph name>+: fetch the current values for the provided graph
+* +quit+: exit and disconnect from the Munin node
+
+
+Additional information
+----------------------
+
+- http://metrics.codahale.com/manual/[Metrics library]

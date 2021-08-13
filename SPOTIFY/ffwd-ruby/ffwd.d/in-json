@@ -1,0 +1,6 @@
+:input:
+  - :type: "json"
+    :protocol: udp
+    :kind: :frame
+  - :type: "json"
+    :protocol: "tcp"

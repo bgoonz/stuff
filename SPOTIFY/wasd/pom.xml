@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.spotify.wasd</groupId>
+    <artifactId>wasd-parent</artifactId>
+    <version>2.0</version>
+    <packaging>pom</packaging>
+
+    <scm>
+        <connection>scm:git:https://github.com/spotify/wasd</connection>
+    </scm>
+
+    <organization>
+        <name>Spotify</name>
+        <url>http://www.spotify.com/</url>
+    </organization>
+
+    <developers>
+        <developer>
+            <id>tommie</id>
+            <name>Tommie Gannert</name>
+        </developer>
+        <developer>
+            <id>pierre</id>
+            <name>Pierre Carrier</name>
+        </developer>
+        <developer>
+            <id>krka</id>
+            <name>Kristofer Karlsson</name>
+        </developer>
+    </developers>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <deps.guava.version>13.0</deps.guava.version>
+        <deps.config.version>1.0.0</deps.config.version>
+        <deps.lombok-pg.version>0.11.3</deps.lombok-pg.version>
+    </properties>
+
+    <modules>
+        <module>wasd-http</module>
+        <module>wasd-db</module>
+        <module>wasd-all</module>
+    </modules>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>2.5.1</version>
+                    <configuration>
+                        <source>1.6</source>
+                        <target>1.6</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>

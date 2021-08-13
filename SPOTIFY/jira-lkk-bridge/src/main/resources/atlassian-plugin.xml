@@ -1,0 +1,40 @@
+<atlassian-plugin key="${project.groupId}.${project.artifactId}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+    </plugin-info>
+    <resource type="i18n" name="i18n" location="atlassian-plugin"/>
+
+    <component-import key="eventPublisher" interface="com.atlassian.event.api.EventPublisher"/>
+    <component key="eventListener" class="com.spotify.jira_lkk_bridge.LeanKitKanbanBridge">
+	<description>Class that processes the incoming JIRA issue events.</description>
+    </component>
+
+    <component-import key="template-renderer"
+                      interface="com.atlassian.templaterenderer.velocity.one.six.VelocityTemplateRenderer"/>
+    <component-import key="application-properties" interface="com.atlassian.sal.api.ApplicationProperties"/>
+    <component-import key="pluginSettingsFactory"
+                      interface="com.atlassian.sal.api.pluginsettings.PluginSettingsFactory"/>
+    <component name="Configuration Manager" key="configurationManager"
+               class="com.spotify.jira_lkk_bridge.ConfigurationManager">
+        <description>Stores the details of the configured settings in Bandana</description>
+    </component>
+
+    <webwork1 key="actions" class="java.lang.Object">
+        <actions>
+            <action name="com.spotify.jira_lkk_bridge.Configuration"
+                    alias="LkkBridgeConfiguration">
+                <view name="success">/admin.vm</view>
+                <view name="input">/admin.vm</view>
+            </action>
+        </actions>
+    </webwork1>
+
+    <web-item name="LeanKit Kanban Bridge Configuration" i18n-name-key="lkk-bridge.config" key="lkk-bridge-config"
+	    section="admin_plugins_menu/integrations_section" weight="150" application="jira">
+        <description key="lkk-bridge.config">LeanKit Kanban Bridge Configuration</description>
+        <label key="lkk-bridge.config">LeanKit Kanban Bridge Configuration</label>
+        <link linkId="lkk-bridge.config.link">/secure/admin/LkkBridgeConfiguration!default.jspa</link>
+    </web-item>
+</atlassian-plugin>

@@ -1,0 +1,14 @@
+{
+    "lockfile": "./certcheck.lock",
+    "warn_treshold": 30,
+    "critical_treshold": 15,
+    "riemann_hosts": [
+        "127.0.0.1:1234",
+        "127.0.0.1:5678"
+    ],
+    "riemann_tags": [
+        "abc",
+        "def"
+    ],
+    "scan_dir" "./certs/"
+}

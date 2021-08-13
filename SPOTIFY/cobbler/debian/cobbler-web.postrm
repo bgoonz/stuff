@@ -1,0 +1,20 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "purge" ] ; then
+
+    rm /var/www/cobbler_webui_content
+    rm /var/www/cobbler
+
+    # now that configuration is gone, restart apache w/o it
+    if [ -f /etc/init.d/apache2 ]; then
+	if [ -x /usr/sbin/invoke-rc.d ]; then
+		invoke-rc.d apache2 restart || true
+	else
+		/etc/init.d/apache2 restart || true
+	fi
+    fi
+fi
+
+#DEBHELPER#

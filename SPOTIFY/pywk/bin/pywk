@@ -1,0 +1,175 @@
+#!/usr/bin/env python
+
+# Copyright (c) 2012 Spotify AB
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#  http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import collections
+import sys
+import re
+
+def catch(func):
+    try:
+        return func()
+    except Exception, e:
+        print >> sys.stderr, str(e)
+    return None
+
+def pattern_expand(body):
+    """ Awk-like pattern expander """
+    # HACK: Check body for awk-like patterns by assuming a python syntax error
+    try:
+        compile(body, '<pywk-syntax-check>', 'exec')
+        return body
+    except SyntaxError, e:
+        pass
+    #PAT = re.compile(r'([^{]*){([^}]+)}(.*)', re.S)
+    def find_group(s): # match braces
+        i = 0
+        depth = 0
+        first = None
+        for c in s:
+            if c == '{':
+                if depth == 0:
+                    first = i
+                depth += 1
+            elif c == '}':
+                depth -= 1
+                if depth == 0:
+                    return s, s[:first], s[first + 1:i], s[i + 1:]
+            i += 1
+        return None
+    ret = ''
+    while True:
+        #m = PAT.match(body)
+        m = find_group(body)
+        if not m:
+            ret += body
+            break
+        pat = m[1].strip() or 'True'
+        block = '\n'.join(' ' + s for s in m[2].strip().split('\n'))
+        body = m[3]
+        inv = pat.startswith('!') and 'not ' or ''
+        if inv:
+            pat = pat[1:].lstrip()
+        if pat.startswith('/') and pat.endswith('/'):
+            ret += "if " + inv + "re.search(r'" + pat[1:-1] + "', line):\n"
+            ret += block + '\n'
+        else:
+            ret += "if " + inv + pat + ":\n" + block + '\n'
+    # debug feature
+    if ret.endswith('?'):
+        print 'Expanded body:'
+        print ret[:-1]
+        sys.exit(1)
+    return ret
+
+class Splitter(collections.defaultdict):
+    """ Split the line on-demand, when awk-like variables are requested.
+    The following variables are generated: _, _0, _1, _2, ..., NF, _NF
+    (FS and NR are set in main() below)
+    """
+    parts = None
+    def __init__(self, *args, **kwargs):
+        collections.defaultdict.__init__(self, None, *args, **kwargs)
+    def __missing__(self, key):
+        if self.parts is None and self['line']:
+            self.parts = self['line'].split(self['FS'])
+        if key == '_':
+            return tuple([self['line']] + self.parts)
+        if key.startswith('_'):
+            try:
+                n = int(key[1:])
+                if n > 0:
+                    if n <= len(self.parts):
+                        return self.parts[n - 1]
+                    else:
+                        return ''
+                elif n == 0:
+                    return self.parts
+            except ValueError, e:
+                if key == '_NF':
+                    return self.parts[-1]
+        if key == 'NF':
+            return len(self.parts)
+        raise KeyError(key)
+
+def main():
+    pre, body, post = '', '', ''
+    help = set(['-h', '--help']).intersection(sys.argv[1:])
+    if len(sys.argv) == 2 and not help:
+        body = sys.argv[1]
+    elif len(sys.argv) == 4:
+        pre, body, post = sys.argv[1], sys.argv[2], sys.argv[3]
+    else:
+        print >> sys.stderr, 'usage:'
+        print >> sys.stderr, '    %s PRE BODY POST' % (sys.argv[0],)
+        print >> sys.stderr, '    %s BODY' % (sys.argv[0],)
+        print >> sys.stderr, '    %s -h | --help' % (sys.argv[0],)
+        if help:
+            print >> sys.stderr, '''
+BODY is executed with the variable 'line' bound to each input line.
+
+The following awk-like variables are available:
+  _1, _2, ... for parts of the line split by the field separator FS
+  _0 for the whole line
+  NF for the number of fields and _NF for the last field
+  NR for the number of records
+The variable _ is the list of [line, _1, _2, ...], useful for slicing.
+The function p prints its arguments joined by the output field separator OFS.
+To simplify writing complex statements, ';;' is replaced by newline.
+
+Awk-like patterns of /regex/ { } or python expression { } form can be used.
+Append a '?' to the body to see the expansion for debugging.
+
+Examples:
+  # print line number, number of :-separated fields, and the first and last one:
+  pywk 'FS=":"' 'print NR, FS, _1, _FS' ''
+  # print the 1st, and 3rd to 7th field:
+  pywk 'p(_1, *_[3:8])'
+  # reverse every other line
+  pywk 'if NR % 2: print line;;else: print "".join(reversed(line))'
+  # print lines missing x or with more x:s than y:s
+  pywk '! /x/ { p(line) }  line.count("x") > line.count("y") { p(line) }'
+'''
+        sys.exit(1)
+    # Replace ;; with newlines to simplify writing complex statements
+    pre, body, post = [expr.replace(';;', '\n') for expr in pre, body, post]
+    # Support awk-like pattern matching blocks
+    body = pattern_expand(body)
+
+    FS = None  # Field separator, like in awk
+    NR = 0     # Number of Records
+    line = None
+    OFS = ' '
+    # Utility print function
+    def p(*args):
+        print splitter['OFS'].join(map(str, args))
+    splitter = Splitter(locals())
+
+    exec pre in globals(), splitter
+
+    body_code = compile(body, '<pywk>', 'exec')
+
+    for line in sys.stdin:
+        splitter['NR'] += 1
+        splitter['line'] = line.rstrip('\n')
+        try:
+            exec body_code in globals(), splitter
+        except Exception, e:
+            print >> sys.stderr, str(e)
+        splitter.parts = None
+    exec post in globals(), splitter
+
+if __name__ == '__main__':
+    main()

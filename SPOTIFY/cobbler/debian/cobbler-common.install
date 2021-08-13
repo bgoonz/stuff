@@ -1,0 +1,3 @@
+etc/cobbler/*
+usr/share/man/man1/cobbler.1.gz
+var/lib/cobbler

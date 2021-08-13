@@ -1,0 +1,22 @@
+---
+lockfile: ./certcheck.lock
+warn_treshold: 30
+critical_treshold: 15
+riemann_hosts:
+  - 127.0.0.1
+  - 127.0.0.2
+riemann_port: 1234
+riemann_tags:
+  - abc
+  - def
+repo_host: git.foo.net
+repo_port: 22
+repo_url: /foo-puppet
+repo_masterbranch: refs/heads/foo
+repo_localdir: /tmp/foo
+repo_user: foo
+repo_pubkey: ./foo
+# sha1sum ./certificate_to_be_ignored
+# format - dict, hash as a key, and value as a comment
+ignored_certs:
+  42b270cbd03eaa8c16c386e66f910195f769f8b1: "certificate used during unit-tests"

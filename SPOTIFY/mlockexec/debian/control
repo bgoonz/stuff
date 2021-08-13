@@ -1,0 +1,14 @@
+Source: mlockexec
+Section: python
+Priority: extra
+Maintainer: Kristofer Karlsson <krka@spotify.com>
+Build-Depends: debhelper (>= 8), python(>= 2.6.6-3~), python-setuptools, python-lockfile
+Standards-Version: 3.9.5
+Homepage: http://www.github.com/spotify/mlockexec
+X-Python-Version: >= 2.6
+
+Package: mlockexec
+Architecture: all
+Depends: ${python:Depends}, ${misc:Depends}, python-lockfile
+Description: Commandline tool for running processes with specific files locked in memory.
+

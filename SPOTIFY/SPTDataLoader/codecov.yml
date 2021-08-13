@@ -1,0 +1,13 @@
+coverage:
+  ignore:
+    - build
+    - demo
+    - other
+    - Tests
+  status:
+    patch:
+      default:
+        target: "80"
+    project:
+      default:
+        target: auto

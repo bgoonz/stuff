@@ -1,0 +1,42 @@
+INSTALLING NU
+=============
+
+These are the instructions for installing Nu on a Macintosh.  See the other files
+in this directory for other operating systems.
+
+If you're installed Nu previously using a package manager (e.g. Fink, MacPorts), 
+start by using the package manager to uninstall the old version.
+
+BUILD NU
+--------
+
+1. Use make to build mininush, a minimal version of the Nu shell.
+
+% make
+
+2. Now use mininush to run nuke to complete the Nu build process.
+   This builds Nu.framework and nush, the Nu shell.
+ 
+% ./mininush tools/nuke
+
+INSTALL AND TEST NU
+-------------------
+
+3. Use mininush again to install Nu, nush, and the Nu tools.
+
+% ./mininush tools/nuke install
+
+Since the copying step uses "sudo", you will be prompted for your password.
+
+4. Test your installation.
+
+% nuke test
+
+From now on, you can use the installed nush to run nuke. To see for
+yourself, rebuild everything from scratch:
+
+% nuke clobber
+% nuke
+% nuke install
+
+See the Nukefile for other useful tasks.

@@ -1,0 +1,111 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# Copyright (c) 2013-2014 Spotify AB
+
+# This file is part of dh-virtualenv.
+
+# dh-virtualenv is free software: you can redistribute it and/or
+# modify it under the terms of the GNU General Public License as
+# published by the Free Software Foundation, either version 2 of the
+# License, or (at your option) any later version.
+
+# dh-virtualenv is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with dh-virtualenv. If not, see
+# <http://www.gnu.org/licenses/>.
+
+import inspect
+import logging
+import os
+import sys
+
+from dh_virtualenv import Deployment
+from dh_virtualenv.cmdline import get_default_parser
+from dh_virtualenv.debhelper import DebHelper
+
+logging.basicConfig(format='%(levelname).1s: %(module)s:%(lineno)d: '
+                    '%(message)s')
+log = logging.getLogger(__name__)
+
+
+def _shell_vars(**kwargs):
+    """Convert the given values into the equivalent shell snippet defining them."""
+    return '\n'.join("dh_venv_{0}='{1}'".format(k, v.replace("'", r"'\''"))
+                     for k, v in sorted(kwargs.items()))
+
+
+def main():
+    parser = get_default_parser()
+    options, args = parser.parse_args()
+    options.compile_all = False  # for DebHelper.save()
+
+    # TODO: Reduce redundancy with this and the Deployment.from_options
+    verbose = options.verbose or os.environ.get('DH_VERBOSE') == '1'
+    if verbose:
+        log.setLevel(logging.DEBUG)
+
+    if 'nocheck' in os.environ.get('DEB_BUILD_OPTIONS', ''):
+        do_test = False
+    else:
+        do_test = options.setuptools_test
+
+    # Older DebHelpers, like the one on Debian Squeeze, expect to be
+    # passed the packages keyword argument. Newer (like Ubuntu
+    # Precise) expect the whole options to be passed.
+
+    arguments = inspect.getargspec(DebHelper.__init__).args
+    if 'packages' in arguments:
+        dh = DebHelper(packages=options.package or None)
+    else:
+        dh = DebHelper(options)
+    if hasattr(sys, 'real_prefix'):
+        log.error('Already in a virtualenv. This is likely to generate an '
+                  'invalid package (run "deactivate" first?)')
+        return 1
+    for package, details in dh.packages.items():
+        def _info(msg):
+            log.info('{0}: {1}'.format(package, msg))
+
+        _info('Processing package...')
+        deploy = Deployment.from_options(package, options)
+
+        if options.autoscripts:
+            _info('Adding autoscripts...')
+            dh.autoscript(package, 'postinst', 'postinst-dh-virtualenv', _shell_vars(
+                package=package,
+                install_dir=deploy.virtualenv_install_dir,
+            ))
+            dh.autoscript(package, 'prerm', 'prerm-dh-virtualenv', _shell_vars(
+                package=package,
+                install_dir=deploy.virtualenv_install_dir,
+            ))
+
+        _info('Creating virtualenv')
+        deploy.create_virtualenv()
+
+        _info('Installing dependencies')
+        deploy.install_dependencies()
+
+        _info('Installing package')
+        deploy.install_package()
+        if do_test:
+            _info('Running tests')
+            deploy.run_tests()
+        else:
+            _info('Skipped tests')
+
+        _info('Fixing paths')
+        deploy.fix_activate_path()
+        deploy.fix_shebangs()
+        deploy.fix_local_symlinks()
+
+        _info('dh-virtualenv: All done!')
+
+    dh.save()
+
+if __name__ == '__main__':
+    sys.exit(main() or 0)

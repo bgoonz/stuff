@@ -1,0 +1,27 @@
+Source: dh-virtualenv
+Section: python
+Priority: optional
+Maintainer: Jyrki Pulliainen <jyrki@dywypi.org>
+Build-Depends: debhelper-compat (= 12), python3,
+ python3-setuptools, python3-sphinx, python3-mock, dh-exec,
+ dh-python, libjs-jquery, libjs-underscore,
+# python-sphinx-rtd-theme doesn't exist in distributions
+# predating Debian Jessie and Ubuntu Xenial. On these legacy
+# systems:
+# 1. Comment the dependency below.
+# 2. pip install sphinx_rtd_theme.
+# 3. Proceed with your build process (typically dpkg-build).
+# See https://github.com/spotify/dh-virtualenv/issues/230
+ python3-sphinx-rtd-theme
+Standards-Version: 4.5.0
+Homepage: https://www.github.com/spotify/dh-virtualenv
+Rules-Requires-Root: no
+
+Package: dh-virtualenv
+Architecture: all
+Depends: ${python3:Depends}, ${perl:Depends}, ${misc:Depends}, ${sphinxdoc:Depends},
+ virtualenv | python3-virtualenv (>= 1.7) | python${pyversion}-venv
+Built-Using: ${sphinxdoc:Built-Using}
+Description: wrap and build Python packages using virtualenv
+ This package provides a dh sequencer that helps you to deploy your
+ virtualenv wrapped installation inside a Debian package.

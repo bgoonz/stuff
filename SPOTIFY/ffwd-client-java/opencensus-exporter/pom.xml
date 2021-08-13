@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>ffwd-parent</artifactId>
+        <groupId>com.spotify.ffwd</groupId>
+        <version>0.2.5-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>opencensus-exporter</artifactId>
+    <version>0.2.5-SNAPSHOT</version>
+    <name>FastForward OpenCensus Exporter</name>
+    <description>Export OpenCensus metrics to ffwd.</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.spotify.ffwd</groupId>
+            <artifactId>ffwd-client</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.opencensus</groupId>
+            <artifactId>opencensus-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.opencensus</groupId>
+            <artifactId>opencensus-exporter-metrics-util</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+
+        <!-- Test Dependencies -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>

@@ -1,0 +1,62 @@
+Nu contains a few interesting hacks, some of which are described here.
+  
+NSVIEW: STOP COMPLAINING; I MEANT TO DO THAT.
+=============================================
+
+Many Cocoa programmers have encountered this warning message:
+
+"NSView not correctly initialized. Did you forget to call super?”
+
+It's a reminder from the framework to "cross all your t's" and not use any objects without properly initializing them.  It seems odd that it's not done for any classes besides NSViews (that I have found), but perhaps long ago it was some manager's response to some important person's broken code.
+
+At times this warning can expose real errors, but it causes a problem for language bridges.
+
+It appears to be generated whenever a retain message is sent to an allocated but not initialized NSView (or subclass), like this:
+
+	id view = [NSView alloc];
+	[view retain]; // generates the warning
+
+Apple's recommendation is "don't do that", but I have found that in Nu there are some good reasons to do it.  The most obvious one occurs when a nib file contains a view whose initialization method is written in Nu.  When the allocated but not initialized view object is passed into the initialization method's block (a NuBlock), it is inserted into the method context (an NSDictionary) associated with the "self" symbol (the dictionary key).  A Nu context is an NSDictionary, and NSDictionaries retain their content objects.  So the view is retained and the message is generated.
+
+In my past work (on RubyCocoa and RubyObjC), I asked people at Apple about this warning and was told that in cases like this, it is benign and can be ignored.  Unfortunately, though, it scares people and is a regular source of questions.  Both of those bridges do special things to avoid generating the message, but because Nu uses Objective-C classes throughout, a more direct approach is needed.
+
+My first preference would be for Apple to change NSView to stop generating these messages, or at least provide a programmatic way to turn them off. But in lieu of that, I dug around found a way to turn them off for Nu. 
+
+mach_override is a package by Jonathan Rentzsch (http://rentzsch.com) that allows us to modify C functions at runtime. Quoting Jonathan:
+
+> This package, coded in C to the Mach API, allows you to override ("patch")
+> program- and system-supplied functions at runtime. You can fully replace
+> functions with your implementations, or merely head- or tail-patch the
+> original implementations.
+
+We can use mach_override to replace NSLog with a custom version that we can switch on and off through an API. See objc/overrides.m for the details.
+
+That's half of the trick I used to get rid of the message.  The other half is "method swizzling", the programmatic exchange of methods in Objective-C class descriptions.
+
+Here's the code, first some Objective-C:
+
+@implementation NSView (Nu)
+
+- (id) nuRetain
+{
+    extern void nu_disableNSLog();
+    extern void nu_enableNSLog();
+
+    nu_disableNSLog();
+    id result = [self nuRetain];
+    nu_enableNSLog();
+    return result;
+}
+
+@end
+
+The rest can be done in Nu:
+
+(NSView exchangeInstanceMethod:"retain" withMethod:"nuRetain")
+
+Here I'm calling a method-swizzling method that I added to NSObject as part of Nu.  
+
+If you want to turn this off, the exchangeInstanceMethod method send are now in the NuMain() function in nu.m.  
+	[NSView exchangeInstanceMethod:@selector(retain)  withMethod:@selector(nuRetain)];
+	
+Just comment it out and your AppKit warranty will be valid again :-).

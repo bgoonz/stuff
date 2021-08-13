@@ -1,0 +1,49 @@
+#!/usr/bin/env nush
+#
+# @file nutest
+# The Nu testing tool.
+#
+# @copyright Copyright (c) 2007 Tim Burks, Radtastical Inc.
+#
+#   Licensed under the Apache License, Version 2.0 (the "License");
+#   you may not use this file except in compliance with the License.
+#   You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+#   Unless required by applicable law or agreed to in writing, software
+#   distributed under the License is distributed on an "AS IS" BASIS,
+#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#   See the License for the specific language governing permissions and
+#   limitations under the License.
+
+(load "Nu:test")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;; main program
+;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(set $willThrow nil)
+(set argv ((NuApplication sharedApplication) arguments))
+
+(if (> (argv count) 0)
+    (then
+        (if (argv containsObject:"-t")
+          (then
+            (set $willThrow t)
+            (argv removeObjectAtIndex:(argv indexOfObject:"-t"))
+          )
+        )
+         (if (eq (argv 0) "-v")
+             (then
+                  (system "nush -v"))
+             (else
+                  (set tests argv)
+                  (tests each:
+                         (do (test)
+                             (load test)))
+                  (NuTestCase runAllTests))))
+    (else
+         (puts "usage: nutest <sourcefile>")))
+         
+(if (and (eq $willThrow t) (or (!= $failures 0) (!= $errors 0))) (then (throw 1)))

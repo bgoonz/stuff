@@ -1,0 +1,250 @@
+"use strict";
+
+var chalk = require("chalk");
+var vfs = require("vinyl-fs");
+var path = require("path");
+var EventEmitter = require("events").EventEmitter;
+
+var defaultConfig = require("./defaults/config");
+var log = require("./utils/log");
+var Environment = require("./environment");
+var ProcessorStore = require("./models/processorStore");
+var defaultProcessors = require("./defaults/defaultProcessors");
+var help = require("./utils/help");
+var streamHelper = require("./utils/stream");
+var buildTask = require("./tasks/build");
+var cleanTask = require("./tasks/clean");
+var serverTask = require("./tasks/server");
+var staticServerTask = require("./tasks/static");
+
+var Builder = require("./builder");
+
+var Lingon = function (rootPath, argv) {
+  this.eventEmitter = new EventEmitter();
+
+  this.rootPath = rootPath;
+
+  // Configuration defaults
+  this.config = defaultConfig;
+
+  //Expose features for plugins
+  this.argv = argv;
+  this.log = log;
+
+  this.server = null;
+
+  this.global = {};
+
+  this.preProcessors = new ProcessorStore(defaultProcessors.pre);
+  this.postProcessors = new ProcessorStore(defaultProcessors.post);
+
+  // Tasks
+  this.defaultTask = null;
+  this.task = null;
+  this.taskCallbacks = {};
+  this.taskQueue = [];
+
+  // Set up default tasks
+  buildTask(this);
+  serverTask(this);
+  staticServerTask(this);
+  cleanTask(this);
+
+  // Set up default help
+  help.describe("help", {
+    message: "Shows this list",
+  });
+
+  help.describe("version", {
+    message: "Display Lingon version",
+  });
+};
+
+Lingon.prototype.getEnvironment = function () {
+  if (!this.__environment) {
+    this.__environment = new Environment({
+      rootPath: this.rootPath,
+      sourcePath: this.config.sourcePath,
+      ignorePrefixPattern: this.config.ignorePrefixPattern,
+    });
+  }
+
+  return this.__environment;
+};
+
+Lingon.prototype.registerTask = function (task, callback, description) {
+  help.describe(task, description);
+
+  this.taskCallbacks[task] = function () {
+    callback.call(
+      this,
+      function () {
+        this.task = null;
+        this.run();
+      }.bind(this)
+    );
+  }.bind(this);
+};
+
+Lingon.prototype.run = function (tasks) {
+  if (tasks) {
+    this.taskQueue = this.taskQueue.concat(tasks);
+  }
+
+  if (this.task) {
+    return;
+  }
+
+  var task = this.taskQueue.shift();
+  if (task) {
+    var taskCallback = this.taskCallbacks[task];
+
+    if (!taskCallback) {
+      console.error(
+        "[ " +
+          chalk.red("Lingon") +
+          " ] " +
+          chalk.yellow('[Error] Unknown task "' + task + '"')
+      );
+      process.exit(1);
+    }
+
+    this.task = task;
+    taskCallback.call(this);
+  } else {
+    var streamErrors = streamHelper.getErrors();
+    process.exit(streamErrors.length ? 1 : 0);
+  }
+};
+
+Lingon.prototype.build = function (params) {
+  var _this = this;
+
+  // Build only requested path if defined (used to optimize server mode).
+  var requestPath = params.requestPath;
+
+  this.trigger("beforeBuild");
+
+  this.getEnvironment().getSourceFiles(
+    requestPath ? [requestPath] : [],
+    function (sourceFiles) {
+      _this.buildWithSourceFiles(params, sourceFiles);
+    }
+  );
+};
+
+Lingon.prototype.buildWithSourceFiles = function (params, sourceFiles) {
+  var _this = this;
+  var callback = params.callback || null;
+
+  // If no files are found, let's callback to allow the server
+  // to process the next middleware (if the server is running).
+  if (sourceFiles.length === 0) {
+    if (!!callback) {
+      callback([null]);
+    }
+
+    return;
+  }
+
+  // Pipeline functions that will be executed last.
+  // By default, terminate the pipeline by writing files to disk.
+
+  var pipelineTerminators = params.pipelineTerminators || [Builder.writeFile];
+
+  if (!(pipelineTerminators instanceof Array)) {
+    pipelineTerminators = [pipelineTerminators];
+  }
+
+  // Create a build pipeline for each source file
+  sourceFiles = sourceFiles.map(function (sourceFile) {
+    sourceFile.targetPath =
+      params.targetPath ||
+      path.dirname(
+        sourceFile.path.replace(_this.config.sourcePath, _this.config.buildPath)
+      );
+
+    return Builder.createPipeline.apply(
+      this,
+      [
+        // The input source file instance
+        sourceFile,
+
+        // First, create the source stream by reading the file from disk.
+        Builder.source(vfs.src(sourceFile.path)),
+
+        // Parse directives and apply pre-concatenation processors on all files found.
+        Builder.preProcess({
+          rootPath: _this.rootPath,
+          processorStore: _this.preProcessors,
+          extensionMap: _this.config.extensionRewrites,
+          config: _this.config,
+          global: _this.global,
+        }),
+
+        // Apply post-concatenation processors
+        Builder.postProcess({
+          processorStore: _this.postProcessors,
+          global: _this.global,
+        }),
+
+        // Rewrite the extension of the file based on it's input filename
+        Builder.rewriteExtension({
+          extensionMap: _this.config.extensionRewrites,
+          processorStores: [_this.preProcessors, _this.postProcessors],
+        }),
+
+        // Normalize the file path relative to the target path
+        Builder.normalizeFilePath,
+
+        // Print the processed file to stdout
+        Builder.print,
+
+        // Apply terminator functions (write to disk, etc).
+      ].concat(pipelineTerminators)
+    );
+  });
+
+  // Aggregate produced streams and wait for all to finish
+  var allStreams = Builder.aggregateStreams(sourceFiles);
+
+  if (!!callback) {
+    var fileBuffer = [];
+
+    allStreams.on("data", function (file) {
+      fileBuffer.push(file);
+    });
+
+    allStreams.on("end", function () {
+      callback(fileBuffer);
+    });
+  }
+
+  this.trigger("afterBuild");
+};
+
+Lingon.prototype.rewriteExtension = function (ext, rewrite, opts) {
+  this.config.extensionRewrites[ext] = { rewrite: rewrite, opts: opts };
+};
+
+Lingon.prototype.clearExtensionRewrite = function (ext) {
+  delete this.config.extensionRewrites[ext];
+};
+
+Lingon.prototype.bind = Lingon.prototype.on = function () {
+  this.eventEmitter.on.apply(this.eventEmitter, [].slice.call(arguments));
+};
+
+Lingon.prototype.unbind = Lingon.prototype.off = function () {
+  this.eventEmitter.off.apply(this.eventEmitter, [].slice.call(arguments));
+};
+
+Lingon.prototype.one = function () {
+  this.eventEmitter.once.apply(this.eventEmitter, [].slice.call(arguments));
+};
+
+Lingon.prototype.trigger = Lingon.prototype.emit = function () {
+  this.eventEmitter.emit.apply(this.eventEmitter, [].slice.call(arguments));
+};
+
+module.exports = Lingon;

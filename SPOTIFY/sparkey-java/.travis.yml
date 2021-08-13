@@ -1,0 +1,9 @@
+language: java
+
+jdk:
+  - oraclejdk11
+
+install:
+  - mvn -B install -DskipTests=true -Dgpg.skip=true
+
+sudo: false
