@@ -1,0 +1,151 @@
+/********************************************************************************
+ * Copyright (C) 2017 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+
+ /*
+  * Open and Save file dialogs
+  */
+
+.dialogContent .theia-FileDialog,
+.dialogContent .theia-SaveFileDialog {
+    width: 500px;
+}
+
+.dialogContent .theia-FileDialog {
+    height: 500px;
+}
+
+.dialogContent .theia-SaveFileDialog {
+    height: 450px;
+}
+
+.dialogContent .theia-NavigationPanel,
+.dialogContent .theia-FiltersPanel,
+.dialogContent .theia-FileNamePanel {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.dialogContent .theia-NavigationPanel,
+.dialogContent .theia-FiltersPanel {
+    min-height: 27px;
+}
+
+.dialogContent .theia-FileNamePanel {
+    height: 31px;
+}
+
+/*
+ * Navigation panel items
+ */
+
+.dialogContent .theia-NavigationBack,
+.dialogContent .theia-NavigationForward,
+.dialogContent .theia-NavigationHome {
+    position: absolute;
+    top: 0px;
+    line-height: 23px;
+    cursor: pointer;
+    outline: none;
+}
+
+.dialogContent .theia-NavigationBack:focus,
+.dialogContent .theia-NavigationForward:focus,
+.dialogContent .theia-NavigationHome:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.dialogContent .theia-NavigationBack {
+    left: auto;
+}
+
+.dialogContent .theia-NavigationForward {
+    left: 21px;
+}
+
+.dialogContent .theia-NavigationHome {
+    left: 41px;
+}
+
+.dialogContent .theia-LocationListPanel {
+    position: absolute;
+    left: 72px;
+    top: 1px;
+}
+
+.dialogContent .theia-LocationList {
+    width: 427px;
+    height: 21px;
+    background: var(--theia-layout-color2)!important;
+}
+
+/*
+ * Filters panel items
+ */
+
+.dialogContent .theia-FiltersLabel {
+    position: absolute;
+    left: 1px;
+    top: 0px;
+    line-height: 27px;
+}
+
+.dialogContent .theia-FiltersListPanel {
+    position: absolute;
+    left: 72px;
+    top: 3px;
+}
+
+.dialogContent .theia-FileTreeFiltersList {
+    width: 427px;
+    height: 21px;
+    background: var(--theia-layout-color2)!important;
+}
+
+/*
+ * File name panel items
+ */
+
+.dialogContent .theia-FileNameLabel {
+    position: absolute;
+    left: 1px;
+    top: 0px;
+    line-height: 23px;
+}
+
+.dialogContent .theia-FileNameTextField {
+    position: absolute;
+    left: 72px;
+    top: 0px;
+    width: 420px;
+}
+
+/*
+ * Control panel items
+ */
+
+.dialogContent .theia-ControlPanel {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 0px;
+}
+
+.dialogContent .theia-ControlPanel > * {
+    margin-left: 4px;
+}

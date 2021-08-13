@@ -1,0 +1,76 @@
+#!/usr/bin/env bash
+set -eEu
+set -o pipefail
+
+################################################################################
+# Prepare the local dev environment.
+# Invoke from the root of the git repo as "ci/bootstrap".
+################################################################################
+
+trap finish EXIT
+. ci/ansi
+
+main() {
+  setup_python_path
+  install_precommit
+  add_upstream_git_remote
+  fetch_upstream
+}
+
+finish() {
+  declare -ri RC=$?
+
+  if [[ $RC -eq 0 ]]; then
+    pass "$0 OK"
+  else
+    err "$0 failed with exit status $RC"
+  fi
+}
+
+setup_python_path() {
+  PYTHON_PATH="$(python3 -c "import site; print(site.USER_BASE)")"
+  readonly PYTHON_PATH
+
+  if ! grep "${PYTHON_PATH}/bin" <(printenv PATH) &>/dev/null; then
+    export PATH="${PATH}:${PYTHON_PATH}/bin"
+  fi
+}
+
+install_precommit() {
+  if ! command -v pre-commit &>/dev/null; then
+    pip install --user -Iv --compile --no-cache-dir pre-commit
+  fi
+
+  pre-commit install-hooks
+}
+
+err() {
+  ansi --red --bold --newline "[ERROR] $*" >&2
+}
+
+info() {
+  ansi --faint --newline "[INFO] $*" >&2
+}
+
+pass() {
+  ansi --green --bold --newline "[PASS] $*" >&2
+  echo
+}
+
+run() {
+  ansi --yellow --bold --newline "[RUN] $*" >&2
+  "$@"
+  echo
+}
+
+add_upstream_git_remote() {
+  if ! git remote show upstream &>/dev/null; then
+    git remote add upstream https://github.com/jumanjihouse/pre-commit-hooks.git
+  fi
+}
+
+fetch_upstream() {
+  git fetch upstream
+}
+
+main

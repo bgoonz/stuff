@@ -1,0 +1,175 @@
+/********************************************************************************
+ * Copyright (C) 2017, 2018 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+
+/*-----------------------------------------------------------------------------
+| Variables
+|----------------------------------------------------------------------------*/
+
+:root {
+  --theia-private-sidebar-tab-width: 32px;
+  --theia-private-sidebar-scrollbar-rail-width: 7px;
+  --theia-private-sidebar-scrollbar-width: 5px;
+}
+
+
+/*-----------------------------------------------------------------------------
+| SideBars (left and right)
+|----------------------------------------------------------------------------*/
+
+.p-TabBar.theia-app-sides {
+  display: block;
+  color: var(--theia-ui-font-color1);
+  background: var(--theia-layout-color2);
+  font-size: var(--theia-ui-font-size1);
+  min-width: var(--theia-private-sidebar-tab-width); 
+  max-width: var(--theia-private-sidebar-tab-width);
+}
+
+.p-TabBar.theia-app-sides .p-TabBar-content {
+  z-index: 1;
+}
+
+.p-TabBar.theia-app-sides .p-TabBar-tab {
+  position: relative;
+  padding: 12px 8px;
+  background: var(--theia-layout-color2);
+  flex-direction: column;
+}
+
+.p-TabBar.theia-app-left .p-TabBar-tab {
+  border-left: var(--theia-panel-border-width) solid var(--theia-layout-color2);
+}
+
+.p-TabBar.theia-app-right .p-TabBar-tab {
+  border-right: var(--theia-panel-border-width) solid var(--theia-layout-color2);
+}
+
+.p-TabBar.theia-app-sides .p-TabBar-tab.p-mod-current {
+  color: var(--theia-ui-font-color0);
+  background: var(--theia-layout-color0);
+}
+
+.p-TabBar.theia-app-left .p-TabBar-tab.p-mod-current.theia-mod-active {
+  border-left-color: var(--theia-accent-color2);
+  border-top-color: transparent;
+}
+
+.p-TabBar.theia-app-right .p-TabBar-tab.p-mod-current.theia-mod-active {
+  border-right-color: var(--theia-accent-color2);
+  border-top-color: transparent;
+}
+
+.p-TabBar.theia-app-sides .p-TabBar-tab:hover {
+  background: var(--theia-accent-color3);
+}
+
+.p-TabBar.theia-app-sides .p-TabBar-tabIcon,
+.p-TabBar.theia-app-sides .p-TabBar-tabCloseIcon {
+  display: none;
+}
+
+.p-TabBar.theia-app-sides .p-TabBar-tabLabel {
+  position: absolute;
+  min-height: var(--theia-private-sidebar-tab-width);
+  max-height: var(--theia-private-sidebar-tab-width);
+  align-items: flex-start;
+}
+
+.p-TabBar.theia-app-sides .p-TabBar-tabIcon {
+  transform: scale(1.5);
+  max-height: 15px;
+}
+
+.p-TabBar.theia-app-left .p-TabBar-tabLabel {
+  transform-origin: top left 0;
+  transform: rotate(-90deg) translateX(-100%);
+}
+
+.p-TabBar.theia-app-right .p-TabBar-tabLabel {
+  transform-origin: top left 0;
+  transform: rotate(90deg) translateY(-50%);
+}
+
+#theia-left-content-panel.theia-mod-collapsed,
+#theia-right-content-panel.theia-mod-collapsed {
+  max-width: var(--theia-private-sidebar-tab-width);
+}
+
+#theia-left-side-panel {
+  border-right: var(--theia-panel-border-width) solid var(--theia-border-color1);
+}
+
+#theia-right-side-panel {
+  border-left: var(--theia-panel-border-width) solid var(--theia-border-color1);
+}
+
+
+/*-----------------------------------------------------------------------------
+| Perfect scrollbar
+|----------------------------------------------------------------------------*/
+
+.p-TabBar.theia-app-sides > .ps__rail-y {
+  width: var(--theia-private-sidebar-scrollbar-rail-width);
+  z-index: 1000;
+}
+
+.p-TabBar.theia-app-sides > .ps__rail-y  >.ps__thumb-y {
+  width: var(--theia-private-sidebar-scrollbar-width);
+  right: calc((var(--theia-private-sidebar-scrollbar-rail-width) - var(--theia-private-sidebar-scrollbar-width)) / 2);
+}
+
+.p-TabBar.theia-app-sides > .ps__rail-y:hover,
+.p-TabBar.theia-app-sides > .ps__rail-y:focus {
+  width: var(--theia-private-sidebar-scrollbar-rail-width);
+}
+
+.p-TabBar.theia-app-sides > .ps__rail-y:hover > .ps__thumb-y,
+.p-TabBar.theia-app-sides > .ps__rail-y:focus > .ps__thumb-y {
+  width: var(--theia-private-sidebar-scrollbar-width);
+  right: calc((var(--theia-private-sidebar-scrollbar-rail-width) - var(--theia-private-sidebar-scrollbar-width)) / 2);
+}
+
+
+/*-----------------------------------------------------------------------------
+| Bottom content panel
+|----------------------------------------------------------------------------*/
+
+#theia-bottom-content-panel {
+  border-top: var(--theia-panel-border-width) solid var(--theia-border-color1);
+}
+
+
+/*-----------------------------------------------------------------------------
+| Hidden tab bars used for rendering vertical side bars
+|----------------------------------------------------------------------------*/
+
+.theia-TabBar-hidden-content {
+  display: flex;
+  position: absolute;
+  visibility: hidden;
+}
+
+.p-TabBar.theia-app-sides > .theia-TabBar-hidden-content .p-TabBar-tab {
+  line-height: var(--theia-private-sidebar-tab-width);
+}
+
+.p-TabBar.theia-app-left > .theia-TabBar-hidden-content .p-TabBar-tabLabel {
+  transform: none;
+}
+
+.p-TabBar.theia-app-right > .theia-TabBar-hidden-content .p-TabBar-tabLabel {
+  transform: none;
+}

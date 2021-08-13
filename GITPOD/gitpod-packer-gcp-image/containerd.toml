@@ -1,0 +1,36 @@
+version = 2
+
+# debug configuration
+[debug]
+  address = "/run/containerd/debug.sock"
+  # socket uid
+  uid = 0
+  # socket gid
+  gid = 0
+  # debug level
+  level = "info"
+
+# metrics configuration
+#[metrics]
+#  # tcp address!
+#  address = "127.0.0.1:1234"
+
+[plugins."io.containerd.grpc.v1.cri".containerd]
+  default_runtime_name = "runc"
+  #snapshotter = "stargz"
+  disable_snapshot_annotations = false
+
+[plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc]
+  runtime_type = "io.containerd.runc.v2"
+
+  [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc.options]
+    SystemdCgroup = false
+
+[plugins."io.containerd.grpc.v1.cri".containerd.runtimes.test-handler]
+  runtime_type = "io.containerd.runc.v2"
+
+# Use stargz snapshotter
+#[proxy_plugins]
+#  [proxy_plugins.stargz]
+#    type = "snapshot"
+#    address = "/run/containerd-stargz-grpc/containerd-stargz-grpc.sock"

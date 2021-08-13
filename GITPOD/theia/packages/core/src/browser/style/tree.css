@@ -1,0 +1,122 @@
+/********************************************************************************
+ * Copyright (C) 2017, 2018 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+
+.theia-Tree {
+    overflow: hidden;
+    color: var(--theia-ui-font-color1);
+    background: var(--theia-layout-color0);
+    font-size: var(--theia-ui-font-size1);
+    max-height: calc(100% - var(--theia-border-width));
+    position: relative;
+}
+
+.theia-Tree:focus,
+.theia-TreeContainer .ReactVirtualized__List:focus {
+    outline: 0;
+    box-shadow: none;
+    border: none;
+}
+
+.theia-TreeContainer {
+    height: 100%;
+}
+
+.theia-TreeNode {
+    line-height: var(--theia-private-horizontal-tab-height);
+    display: flex;
+}
+
+.theia-TreeNode:hover {
+    background: var(--theia-accent-color4);
+    cursor: pointer;
+}
+
+.theia-TreeNodeContent {
+    display: flex;
+    align-items: baseline;
+    width: calc(100% - var(--theia-scrollbar-rail-width));
+}
+
+.theia-ExpansionToggle {
+    padding-right: var(--theia-ui-padding);
+    min-width: 8px;
+}
+
+.theia-ExpansionToggle:hover {
+    cursor: pointer;
+}
+
+.theia-ExpansionToggle.theia-mod-collapsed::before {
+    font-family: FontAwesome;
+    font-size: calc(var(--theia-content-font-size) * 0.8);
+    content: "\f0da";
+}
+
+.theia-ExpansionToggle:not(.theia-mod-collapsed)::before {
+    font-family: FontAwesome;
+    font-size: calc(var(--theia-content-font-size) * 0.8);
+    content: "\f0d7";
+}
+
+.theia-Tree:focus .theia-TreeNode.theia-mod-selected,
+.theia-Tree .ReactVirtualized__List:focus .theia-TreeNode.theia-mod-selected {
+    background: var(--theia-accent-color3);
+}
+
+.theia-Tree .theia-TreeNode.theia-mod-selected {
+    background: var(--theia-accent-color4);
+}
+
+.theia-TreeNode.theia-mod-not-selectable {
+    color: var(--theia-ui-font-color2);
+}
+.theia-TreeNode.theia-mod-not-selectable:hover {
+    background: none;
+    cursor: default;
+}
+
+.theia-TreeNodeSegment {
+    flex-grow: 0;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.theia-TreeNodeSegmentGrow {
+    flex-grow: 1 !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.theia-TreeNodeTail {
+    min-width: 1rem;
+    text-align: center;
+}
+
+.theia-TreeNodeSegment mark {
+    background-color: var(--theia-word-highlight-match-color1);
+    color: var(--theia-ui-font-color1);
+}
+
+.theia-tree-source-node-placeholder {
+    text-align: center;
+    font-style: italic;
+    opacity: 0.4;
+}
+
+.theia-tree-element-node {
+    width: 100%
+}

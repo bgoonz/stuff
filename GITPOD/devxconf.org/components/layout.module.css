@@ -1,0 +1,163 @@
+/**
+ * Copyright 2020 Vercel Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.background {
+  background: var(--black);
+  min-height: 100vh;
+  min-height: var(--100vh);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  margin-top: calc(var(--gutter-huge) + var(--header-height));
+}
+
+.full {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.wrapper {
+  padding: 0 var(--gutter-normal);
+}
+
+.header-container { 
+  background: var(--black);
+  position: fixed;
+  height: var(--header-height);
+  width: 100%;
+  z-index: 2;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+  margin-bottom: var(--gutter-huge);
+  color: var(--grey);
+}
+
+.header-logos {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: var(--space-2x) 0;
+}
+
+.header-right {
+  margin: var(--space-2x) var(--space-16x);
+  display: none;
+}
+
+
+@media screen and (min-width: 770px) {
+  .header-logos {
+    padding: var(--space-3x) 0;
+  }
+  
+  .header-right {
+    display: initial;
+  }
+}
+
+.tabs {
+  height: 100%;
+  display: none;
+}
+
+@media screen and (min-width: 1210px) {
+  .header-logos {
+    max-width: 200px;
+  }
+
+  .tabs {
+    display: initial;
+  }
+
+  .tabs > a:nth-child(2),
+  .tabs > a:nth-child(3),
+  .tabs > a:nth-child(4) {
+    display: inline-flex;
+  }
+}
+
+.tab {
+  text-transform: uppercase;
+  font-size: var(--text-sm);
+  color: var(--secondary-color);
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing);
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.tab:not(:last-child) {
+  margin-right: var(--gutter-normal);
+}
+
+.tab-active,
+.tab:hover,
+.tab:focus,
+.tab:active {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.logo {
+  display: flex;
+  width: 120px;
+  height: 62px;
+}
+
+@media(max-width: 767px) {
+  .header-container { 
+    background: var(--black);
+    position: fixed;
+    height: var(--header-height-mobile);
+    width: 100%;
+    z-index: 2;
+  }
+
+  .wrapper {
+    padding: 0 var(--gutter-small-mobile);
+  }
+
+  .main {
+    margin-top: calc(var(--gutter-large-mobile) + var(--header-height-mobile) + 72px);
+  }
+
+  .logo {
+    height: 40px;
+  }
+}

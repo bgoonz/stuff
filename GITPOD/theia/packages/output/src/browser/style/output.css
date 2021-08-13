@@ -1,0 +1,84 @@
+/********************************************************************************
+ * Copyright (C) 2018 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+
+ #outputView {
+	font-size: var(--theia-ui-font-size1);
+    color: var(--theia-ui-font-color1);
+}
+
+#outputView #outputContents {
+    overflow: auto;
+    height: inherit;
+    padding: 6px;
+    box-sizing: border-box;
+}
+
+#outputView #outputOverlay {
+    position: absolute;
+    right: 24px;
+    margin: 6px;
+    display: flex;
+}
+
+#outputView #outputOverlay > * {
+    /* Separation between elements.  */
+    margin-left: 6px;
+
+    height: 21px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--theia-border-color1);
+    box-sizing: border-box;
+
+    background: var(--theia-layout-color2);
+}
+
+#outputView #outputChannelList {
+    line-height: var(--theia-content-line-height);
+    font-size: var(--theia-ui-font-size1);
+    color: var(--theia-ui-font-color1);
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, var(--theia-ui-font-color1) 50%), linear-gradient(135deg, var(--theia-ui-font-color1) 50%, transparent 50%);
+    background-position: calc(100% - 6px) 8px, calc(100% - 2px) 8px, 100% 0;
+    background-size: 4px 5px;
+    background-repeat: no-repeat;
+    padding-left: 3px;
+    padding-right: 15px;
+}
+
+#outputView #outputClear {
+    background-image: var(--theia-icon-clear);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 21px;
+    opacity: 0.25;
+}
+
+#outputView #outputClear.enabled {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#outputView #outputClear.enabled:hover {
+    opacity: 1;
+}
+
+.output-tab-icon::before {
+    content: "\f024"
+}

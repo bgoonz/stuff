@@ -1,0 +1,75 @@
+{
+  "private": true,
+  "name": "@theia/example-browser",
+  "version": "0.3.19",
+  "theia": {
+    "frontend": {
+      "config": {
+        "applicationName": "Theia Browser Example"
+      }
+    }
+  },
+  "dependencies": {
+    "@theia/callhierarchy": "^0.3.19",
+    "@theia/console": "^0.3.19",
+    "@theia/core": "^0.3.19",
+    "@theia/cpp": "^0.3.19",
+    "@theia/debug": "^0.3.19",
+    "@theia/debug-nodejs": "^0.3.19",
+    "@theia/editor": "^0.3.19",
+    "@theia/editor-preview": "^0.3.19",
+    "@theia/editorconfig": "^0.3.19",
+    "@theia/extension-manager": "^0.3.19",
+    "@theia/file-search": "^0.3.19",
+    "@theia/filesystem": "^0.3.19",
+    "@theia/getting-started": "^0.3.19",
+    "@theia/git": "^0.3.19",
+    "@theia/java": "^0.3.19",
+    "@theia/java-debug": "^0.3.19",
+    "@theia/json": "^0.3.19",
+    "@theia/keymaps": "^0.3.19",
+    "@theia/languages": "^0.3.19",
+    "@theia/markers": "^0.3.19",
+    "@theia/merge-conflicts": "^0.3.19",
+    "@theia/messages": "^0.3.19",
+    "@theia/metrics": "^0.3.19",
+    "@theia/mini-browser": "^0.3.19",
+    "@theia/monaco": "^0.3.19",
+    "@theia/navigator": "^0.3.19",
+    "@theia/outline-view": "^0.3.19",
+    "@theia/output": "^0.3.19",
+    "@theia/plugin-ext": "^0.3.19",
+    "@theia/plugin-ext-vscode": "^0.3.19",
+    "@theia/preferences": "^0.3.19",
+    "@theia/preview": "^0.3.19",
+    "@theia/process": "^0.3.19",
+    "@theia/python": "^0.3.19",
+    "@theia/search-in-workspace": "^0.3.19",
+    "@theia/task": "^0.3.19",
+    "@theia/terminal": "^0.3.19",
+    "@theia/textmate-grammars": "^0.3.19",
+    "@theia/tslint": "^0.3.19",
+    "@theia/typescript": "^0.3.19",
+    "@theia/userstorage": "^0.3.19",
+    "@theia/variable-resolver": "^0.3.19",
+    "@theia/workspace": "^0.3.19"
+  },
+  "scripts": {
+    "prepare": "yarn run clean && yarn build",
+    "clean": "theia clean && rimraf errorShots",
+    "build": "theiaext compile && theia build --mode development",
+    "watch": "concurrently -n compile,bundle \"theiaext watch --preserveWatchOutput\" \"theia build --watch --mode development\"",
+    "start": "export THEIA_DEFAULT_PLUGINS=local-dir:../../plugins && theia start",
+    "start:debug": "yarn start --log-level=debug",
+    "test": "wdio --max-old-space-size=4096 wdio.conf.js",
+    "test-non-headless": "wdio wdio-non-headless.conf.js",
+    "coverage:compile": "yarn build --config coverage-webpack.config.js",
+    "coverage:remap": "remap-istanbul -i coverage/coverage.json -o coverage/coverage-final.json --exclude 'frontend/index.js' && rimraf coverage/coverage.json",
+    "coverage:report:html": "istanbul report --root coverage --format html",
+    "coverage:report:lcov": "istanbul report --root coverage --format lcov",
+    "coverage": "yarn coverage:compile && yarn test && yarn coverage:remap && yarn coverage:report:lcov && yarn coverage:report:html"
+  },
+  "devDependencies": {
+    "@theia/cli": "^0.3.19"
+  }
+}

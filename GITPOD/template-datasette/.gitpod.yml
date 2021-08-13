@@ -1,0 +1,14 @@
+ports:
+  - port: 3000
+    onOpen: open-preview
+
+tasks:
+  - init: |
+      ./install.sh
+    command: |
+      sudo apt-get install entr
+      ls *.csv *.json *.sh | entr -r ./start.sh
+
+vscode:
+  extensions:
+    - ms-python.python

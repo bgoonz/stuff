@@ -1,0 +1,7 @@
+ports:
+  - port: 3333
+
+tasks:
+  - command: >
+        npm install &&
+        npm run dev

@@ -1,0 +1,7 @@
+a.highlighted {
+    @apply relative;
+    &::after {
+        content: url("/indicator.svg");
+        @apply absolute -top-3 -right-2;
+    }
+}

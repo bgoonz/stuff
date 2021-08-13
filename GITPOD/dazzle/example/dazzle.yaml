@@ -1,0 +1,10 @@
+combiner:
+  combinations:
+  - name: all
+    chunks:
+    - golang:1.16.3
+    - node:14.17.0
+    - unversioned
+  envvars:
+    - name: PATH
+      action: merge-unique

@@ -1,0 +1,15 @@
+gitpod:
+  db:
+    # 
+    password: YourPasswordGoesHere
+
+  components:
+    db:
+      gcloudSqlProxy:
+        enabled: true
+        # Set it to the name of your CloudSQL instance.
+        instance: YourDBConnectionStringGoesHere
+        credentials: secrets/your-key-file.json
+
+  mysql:
+    enabled: false

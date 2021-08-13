@@ -1,0 +1,19 @@
+name: CI
+on:
+  push:
+    branches:
+      - '**'      # matches every branch
+      - '!main'   # excludes main
+jobs:
+  build:
+    name: Build & Publish Next
+    runs-on: ubuntu-latest
+    env:
+      NPM_TOKEN:  ${{ secrets.NPM_AUTH_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2.0.0
+      - run: |
+          echo "//registry.yarnpkg.com/:_authToken=$NPM_TOKEN" >>~/.npmrc
+          yarn install
+          yarn build
+          yarn publish --tag next --new-version $(cat package.json | jq -r .version)-$(date +%s) --non-interactive --no-git-tag-version

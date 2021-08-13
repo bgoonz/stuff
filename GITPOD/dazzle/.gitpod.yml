@@ -1,0 +1,21 @@
+image:
+  file: .gitpod.Dockerfile
+
+checkoutLocation: dazzle
+workspaceLocation: dazzle
+tasks:
+  - command: sudo buildkitd --group gitpod
+  - command: docker run -p 5000:5000 --name registry --rm registry:2
+    openMode: split-right
+  - init: go get -v ./...
+    openMode: tab-after
+    command: |
+      go generate -v ./...
+      echo "Use example.sh to build and test the example"
+ports:
+  - port: 5000
+    visibility: private
+    onOpen: ignore
+vscode:
+  extensions:
+    - golang.go

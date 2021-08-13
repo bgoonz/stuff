@@ -1,0 +1,3 @@
+tasks:
+- command: cd arduino-cli && go get -v
+checkoutLocation: arduino-cli

@@ -1,0 +1,40 @@
+args:
+- name: namespace
+  desc: "The namespace to remove - if left empty this job removes all preview environments"
+  required: false
+pod:
+  serviceAccount: werft
+  nodeSelector:
+    dev/workload: workload
+  imagePullSecrets:
+  - name: eu-gcr-io-pull-secret
+  volumes:
+  - name: gcp-sa
+    secret:
+      secretName: gcp-sa-gitpod-dev-deployer
+  containers:
+  - name: wipe-devstaging
+    image: eu.gcr.io/gitpod-core-dev/dev/dev-environment:geropl-move-qemu-image-build-to-4945.3
+    workingDir: /workspace
+    imagePullPolicy: Always
+    volumeMounts:
+    - name: gcp-sa
+      mountPath: /mnt/secrets/gcp-sa
+      readOnly: true
+    command:
+    - bash
+    - -c
+    - |
+      sleep 1
+      set -Eeuo pipefail
+
+      werft log phase prepare
+      gcloud auth activate-service-account --key-file /mnt/secrets/gcp-sa/service-account.json
+      gcloud container clusters get-credentials dev --zone europe-west1-b --project gitpod-core-dev
+
+      export NAMESPACE="{{ .Annotations.namespace }}"
+      sudo chown -R gitpod:gitpod /workspace
+      kubectl get secret k3sdev -n werft -ojsonpath='{.data}' | jq -r .[] | base64 -d > /workspace/k3s-external.yaml
+
+      npm install shelljs semver ts-node typescript @types/shelljs @types/node @types/semver
+      npx ts-node .werft/wipe-devstaging.ts

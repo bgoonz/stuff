@@ -1,0 +1,5 @@
+tasks:
+- init: yarn && yarn compile && yarn test
+gitConfig:
+  core.autocrlf: input
+  core.eol: lf

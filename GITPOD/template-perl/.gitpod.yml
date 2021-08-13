@@ -1,0 +1,9 @@
+image:
+  file: .gitpod.Dockerfile
+tasks:
+  - init: |
+      cpanm --installdeps .
+
+vscode:
+  extensions:
+    - richterger.perl

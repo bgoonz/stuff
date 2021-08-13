@@ -1,0 +1,78 @@
+{
+  "name": "@theia/git",
+  "version": "0.3.19",
+  "description": "Theia - Git Integration",
+  "dependencies": {
+    "@theia/core": "^0.3.19",
+    "@theia/editor": "^0.3.19",
+    "@theia/filesystem": "^0.3.19",
+    "@theia/languages": "^0.3.19",
+    "@theia/navigator": "^0.3.19",
+    "@theia/workspace": "^0.3.19",
+    "@types/diff": "^3.2.2",
+    "@types/fs-extra": "^4.0.2",
+    "@types/p-queue": "^2.3.1",
+    "diff": "^3.4.0",
+    "dugite-extra": "0.1.9",
+    "find-git-exec": "^0.0.1-alpha.2",
+    "find-git-repositories": "^0.1.0",
+    "fs-extra": "^4.0.2",
+    "moment": "^2.21.0",
+    "octicons": "^7.1.0",
+    "p-queue": "^2.4.2",
+    "ts-md5": "^1.2.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "theiaExtensions": [
+    {
+      "frontend": "lib/browser/git-frontend-module",
+      "backend": "lib/node/git-backend-module"
+    },
+    {
+      "backend": "lib/node/env/git-env-module",
+      "backendElectron": "lib/electron-node/env/electron-git-env-module"
+    },
+    {
+      "backend": "lib/node/init/git-init-module",
+      "backendElectron": "lib/electron-node/init/electron-git-init-module"
+    },
+    {
+      "frontend": "lib/browser/prompt/git-prompt-module",
+      "frontendElectron": "lib/electron-browser/prompt/electron-git-prompt-module"
+    }
+  ],
+  "keywords": [
+    "theia-extension"
+  ],
+  "license": "EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theia-ide/theia.git"
+  },
+  "bugs": {
+    "url": "https://github.com/theia-ide/theia/issues"
+  },
+  "homepage": "https://github.com/theia-ide/theia",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "prepare": "yarn run clean && yarn run build",
+    "clean": "theiaext clean",
+    "build": "theiaext build",
+    "watch": "theiaext watch",
+    "test": "theiaext test",
+    "test:watch": "theiaext test:watch",
+    "docs": "theiaext docs"
+  },
+  "devDependencies": {
+    "@theia/ext-scripts": "^0.3.19",
+    "upath": "^1.0.2"
+  },
+  "nyc": {
+    "extends": "../../configs/nyc.json"
+  }
+}

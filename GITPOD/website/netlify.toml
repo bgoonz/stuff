@@ -1,0 +1,352 @@
+[build]
+  command = "npm run deploy"
+  publish = "build/"
+  functions = "src/functions"
+
+[[redirects]]
+  from = "/security"
+  to = "/.well-known/security.txt"
+
+[[redirects]]
+  from = "/chat"
+  to = "https://discord.gg/ZZ8wxgHtc6"
+  status = 301
+
+[[redirects]]
+  from = "/code-of-conduct"
+  to = "https://github.com/gitpod-io/gitpod/blob/main/CODE_OF_CONDUCT.md"
+
+[[redirects]]
+  from = "/direction"
+  to = "https://www.notion.so/gitpod/Gitpod-s-Direction-be35d064c0704fbda61c542b84e07ef6"
+  status = 301
+
+[[redirects]]
+  from = "/roadmap"
+  to = "https://github.com/gitpod-io/roadmap"
+  status = 301
+
+[[redirects]]
+  from = "/docs/changelog"
+  to = "/changelog"
+  status = 301
+
+[[redirects]]
+  from = "/references/changelog"
+  to = "/changelog"
+  status = 301
+
+[[redirects]]
+  from = "/docs/self-hosted/latest/self-hosted"
+  to = "/docs/self-hosted/latest"
+  status = 301
+
+[[redirects]]
+  from = "/gitpod-business.html"
+  to = "/pricing"
+  status = 301
+
+[[redirects]]
+  from = "/media"
+  to = "/blog/next-chapter-for-gitpod"
+  status = 301
+
+[[redirects]]
+  from = "/docs/index.html"
+  to = "/docs"
+  status = 301
+
+[[redirects]]
+  from = "/docs/45_Config_Go"
+  to = "/docs/checkout-location"
+  status = 301
+
+[[redirects]]
+  from = "/privacy/terms.html"
+  to = "/terms"
+  status = 301
+
+[[redirects]]
+  from = "/docs/20_Browser_Extension"
+  to = "/docs/browser-extension"
+  status = 301
+
+[[redirects]]
+  from = "/docs/20_browser_extension"
+  to = "/docs/browser-extension"
+  status = 301
+
+[[redirects]]
+  from = "/docs/45_Checkout_Location"
+  to = "/docs/checkout-location"
+  status = 301
+
+[[redirects]]
+  from = "/docs/45_checkout_location"
+  to = "/docs/checkout-location"
+  status = 301
+
+[[redirects]]
+  from = "/docs/59_code_review"
+  to = "/docs/code-review"
+  status = 301
+
+[[redirects]]
+  from = "/docs/34_command_line_interface"
+  to = "/docs/command-line-interface"
+  status = 301
+
+ [[redirects]]
+  from = "/docs/42_config_docker"
+  to = "/docs/config-docker"
+  status = 301
+
+[[redirects]]
+  from = "/docs/languages/pandas"
+  to = "/docs/languages/python#pandas"
+  status = 301
+
+[[redirects]]
+  from = "/docs/41_Config_Gitpod_File"
+  to = "/docs/config-gitpod-file"
+  status = 301
+
+[[redirects]]
+  from = "/docs/41_config_gitpod_file"
+  to = "/docs/config-gitpod-file"
+  status = 301
+
+[[redirects]]
+  from = "/docs/43_config_ports"
+  to = "/docs/config-ports"
+  status = 301
+
+[[redirects]]
+  from = "/docs/44_config_start_tasks"
+  to = "/docs/config-start-tasks"
+  status = 301
+
+[[redirects]]
+  from = "/docs/configuration"
+  to = "/docs/configure"
+  status = 301
+
+[[redirects]]
+  from = "/docs/40_Configuration"
+  to = "/docs/configure"
+  status = 301
+
+[[redirects]]
+  from = "/docs/40_configuration"
+  to = "/docs/configure"
+  status = 301
+
+ [[redirects]]
+  from = "/docs/31_context_urls"
+  to = "/docs/context-urls"
+  status = 301
+
+ [[redirects]]
+  from = "/docs/60_dashboard"
+  to = "/docs/dashboard"
+  status = 301
+
+[[redirects]]
+  from = "/docs/47_Environment_Variables"
+  to = "/docs/environment-variables"
+  status = 301
+
+[[redirects]]
+  from = "/docs/47_environment_variables"
+  to = "/docs/environment-variables"
+  status = 301
+
+[[redirects]]
+  from = "/docs/10_Getting_Started"
+  to = "/docs/getting-started"
+  status = 301
+
+[[redirects]]
+  from = "/docs/10_getting_started"
+  to = "/docs/getting-started"
+  status = 301
+
+[[redirects]]
+  from = "/docs/54_git"
+  to = "/docs/git"
+  status = 301
+
+[[redirects]]
+  from = "/docs/go_in_gitpod"
+  to = "/docs/go-in-gitpod"
+  status = 301
+
+ [[redirects]]
+  from = "/docs/50_ide"
+  to = "/docs/ide"
+  status = 301
+
+[[redirects]]
+  from = "/docs/java_in_gitpod"
+  to = "/docs/java-in-gitpod"
+  status = 301
+
+[[redirects]]
+  from = "/docs/julia_in_gitpod"
+  to = "/docs/julia-in-gitpod"
+  status = 301
+
+[[redirects]]
+  from = "/docs/languages_and_frameworks"
+  to = "/docs/languages-and-frameworks"
+  status = 301
+
+ [[redirects]]
+  from = "/docs/32_Life_of_Workspace"
+  to = "/docs/life-of-workspace"
+  status = 301
+
+ [[redirects]]
+  from = "/docs/32_life_of_workspace"
+  to = "/docs/life-of-workspace"
+  status = 301
+
+ [[redirects]]
+  from = "/docs/46_prebuilds"
+  to = "/docs/prebuilds"
+  status = 301
+
+[[redirects]]
+  from = "/docs/58_pull_requests"
+  to = "/docs/pull-requests"
+  status = 301
+
+[[redirects]]
+  from = "/docs/58_Pull_Requests"
+  to = "/docs/pull-requests"
+  status = 301
+
+[[redirects]]
+  from = "/docs/python_in_gitpod"
+  to = "/docs/python-in-gitpod"
+  status = 301
+
+[[redirects]]
+  from = "/docs/80_release_notes"
+  to = "/docs/release-notes"
+  status = 301
+
+[[redirects]]
+  from = "/docs/56_search"
+  to = "/docs/search"
+  status = 301
+
+ [[redirects]]
+  from = "/docs/33_Sharing_and_Collaboration"
+  to = "/docs/sharing-and-collaboration"
+  status = 301
+
+ [[redirects]]
+  from = "/docs/33_sharing_and_collaboration"
+  to = "/docs/sharing-and-collaboration"
+  status = 301
+
+ [[redirects]]
+  from = "/docs/70_subscription"
+  to = "/docs/subscription"
+  status = 301
+
+[[redirects]]
+  from = "/docs/52_tips_and_tricks"
+  to = "/docs/tips-and-tricks"
+  status = 301
+
+[[redirects]]
+  from = "/docs/30_workspaces"
+  to = "/docs/workspaces"
+  status = 301
+
+[[redirects]]
+  from = "/docs/bash-in-gitpod"
+  to = "/docs/languages/bash"
+  status = 301
+
+[[redirects]]
+  from = "/docs/cpp-in-gitpod"
+  to = "/docs/languages/cpp"
+  status = 301
+
+[[redirects]]
+  from = "/docs/dotnet-in-gitpod"
+  to = "/docs/languages/dotnet"
+  status = 301
+
+[[redirects]]
+  from = "/docs/go-in-gitpod"
+  to = "/docs/languages/go"
+  status = 301
+
+[[redirects]]
+  from = "/docs/html-in-gitpod"
+  to = "/docs/languages/html"
+  status = 301
+
+[[redirects]]
+  from = "/docs/java-in-gitpod"
+  to = "/docs/languages/java"
+  status = 301
+
+[[redirects]]
+  from = "/docs/julia-in-gitpod"
+  to = "/docs/languages/julia"
+  status = 301
+
+[[redirects]]
+  from = "/docs/php-in-gitpod"
+  to = "/docs/languages/php"
+  status = 301
+
+[[redirects]]
+  from = "/docs/python-in-gitpod"
+  to = "/docs/languages/python"
+  status = 301
+
+[[redirects]]
+  from = "/docs/r-in-gitpod"
+  to = "/docs/languages/r"
+  status = 301
+
+[[redirects]]
+  from = "/docs/ruby-in-gitpod"
+  to = "/docs/languages/ruby"
+  status = 301
+
+[[redirects]]
+  from = "/docs/rust-in-gitpod"
+  to = "/docs/languages/rust"
+  status = 301
+
+[[redirects]]
+  from = "/docs/vue-in-gitpod"
+  to = "/docs/languages/vue"
+  status = 301
+
+[[redirects]]
+  from = "/blog/gitlab-integration/+"
+  to = "/blog/gitlab-integration"
+  status = 301
+
+[[redirects]]
+  from = "/gitpod-vs-codespaces"
+  to = "/gitpod-vs-github-codespaces"
+  status = 301
+
+[[redirects]]
+  from = "/education"
+  to = "/pricing#do-you-offer-discounts-for-students-and-educational-institutions?"
+  status = 301
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/render"
+  status = 200

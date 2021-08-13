@@ -1,0 +1,576 @@
+apiVersion: troubleshoot.sh/v1beta2
+kind: SupportBundle
+metadata:
+  name: gitpod
+spec:
+  collectors:
+    - clusterInfo: {}
+    - clusterResources: {}
+    - logs:
+        selector:
+          - app=gitpod
+          - component=agent-smith
+        namespace: default
+        name: agent-smith/container/logs
+        limits:
+          maxAge: 720h
+          maxLines: 10000
+    - logs:
+        selector:
+          - app=gitpod
+          - component=blobserve
+        namespace: default
+        name: blobserve/container/logs
+        limits:
+          maxAge: 720h
+          maxLines: 10000
+    - logs:
+        selector:
+          - app=gitpod
+          - component=content-service
+        namespace: default
+        name: content-service/container/logs
+        limits:
+          maxAge: 720h
+          maxLines: 10000
+    - logs:
+        selector:
+          - app=gitpod
+          - component=dashboard
+        namespace: default
+        name: dashboard/container/logs
+        limits:
+          maxAge: 720h
+          maxLines: 10000
+    - logs:
+        selector:
+          - app=gitpod
+          - component=ws-scheduler
+        namespace: default
+        name: ws-scheduler/container/logs
+        limits:
+          maxAge: 720h
+          maxLines: 10000
+    - logs:
+        selector:
+          - app=gitpod
+          - component=proxy
+        namespace: default
+        name: proxy/container/logs
+        limits:
+          maxAge: 720h
+          maxLines: 10000
+    - logs:
+        selector:
+          - app=gitpod
+          - component=ws-proxy
+        namespace: default
+        name: ws-proxy/container/logs
+        limits:
+          maxAge: 720h
+          maxLines: 10000
+    - logs:
+        selector:
+          - app=gitpod
+          - component=ws-manager-bridge
+        namespace: default
+        name: ws-manager-bridge/container/logs
+        limits:
+          maxAge: 720h
+          maxLines: 10000
+    - logs:
+        selector:
+          - app=gitpod
+          - component=server
+        namespace: default
+        name: server/container/logs
+        limits:
+          maxAge: 720h
+          maxLines: 10000
+    - logs:
+        selector:
+          - app=gitpod
+          - component=registry-facade
+        namespace: default
+        name: registry-facade/container/logs
+        limits:
+          maxAge: 720h
+          maxLines: 10000
+    - logs:
+        selector:
+          - app=gitpod
+          - component=ws-daemon
+        namespace: default
+        name: ws-daemon/container/logs
+        limits:
+          maxAge: 720h
+          maxLines: 10000
+    - logs:
+        selector:
+          - app=gitpod
+          - component=image-builder
+        namespace: default
+        name: image-builder/container/logs
+        limits:
+          maxAge: 720h
+          maxLines: 10000
+    - logs:
+        selector:
+          - app=gitpod
+          - component=content-service
+        namespace: default
+        name: content-service/container/logs
+        limits:
+          maxAge: 720h
+          maxLines: 10000
+    - logs:
+        selector:
+          - app=gitpod
+          - component=dashboard
+        namespace: default
+        name: dashboard/container/logs
+        limits:
+          maxAge: 720h
+          maxLines: 10000
+
+    - run:
+        collectorName: "ping-gitpod"
+        image: busybox:latest
+        name: network-connectivity
+        namespace: default
+        command: ["ping"]
+        args: ["-w", "10", "-c", "10", "-i", "0.3", "gitpod.io"]
+        imagePullPolicy: IfNotPresent
+
+    - run:
+        collectorName: "https-gitpod"
+        image: curlimages/curl:latest
+        name: network-connectivity
+        namespace: default
+        command: ["curl"]
+        args: ["https://gitpod.io/robots.txt"]
+        imagePullPolicy: IfNotPresent
+
+    - run:
+        collectorName: "ping-letsencrypt"
+        image: busybox:latest
+        name: network-connectivity
+        namespace: default
+        command: ["ping"]
+        args: ["-w", "10", "-c", "10", "-i", "0.3", "acme-v02.api.letsencrypt.org"]
+        imagePullPolicy: IfNotPresent
+        
+    - run:
+        collectorName: "https-letsencrypt"
+        image: curlimages/curl:latest
+        name: network-connectivity
+        namespace: default
+        command: ["curl"]
+        args: ["https://acme-v02.api.letsencrypt.org/"]
+        imagePullPolicy: IfNotPresent
+
+    - copyFromHost:
+        collectorName: "copy /usr/lib/os-release"
+        image: busybox:latest
+        hostPath: "/usr/lib/os-release"
+        extractArchive: true
+        imagePullPolicy: IfNotPresent
+
+    - copyFromHost:
+        collectorName: "copy /etc/containerd/config.toml"
+        image: busybox:latest
+        hostPath: "/etc/containerd/config.toml"
+        extractArchive: true
+        imagePullPolicy: IfNotPresent
+
+    - copyFromHost:
+        collectorName: "copy /etc/kubernetes/kubelet.conf"
+        image: busybox:latest
+        hostPath: "/etc/kubernetes/kubelet.conf"
+        extractArchive: true
+        imagePullPolicy: IfNotPresent
+
+    - copyFromHost:
+        collectorName: "copy /var/lib/kubelet/config.yaml"
+        image: busybox:latest
+        hostPath: "/var/lib/kubelet/config.yaml"
+        extractArchive: true
+        imagePullPolicy: IfNotPresent
+
+    - copyFromHost:
+        collectorName: "copy /var/lib/rancher/k3s/agent/etc/containerd/config.toml"
+        image: busybox:latest
+        hostPath: "/var/lib/rancher/k3s/agent/etc/containerd/config.toml"
+        extractArchive: true
+        imagePullPolicy: IfNotPresent
+
+    - copyFromHost:
+        collectorName: "copy /var/lib/rancher/k3s/agent/k3scontroller.kubeconfig"
+        image: busybox:latest
+        hostPath: "/var/lib/rancher/k3s/agent/k3scontroller.kubeconfig"
+        extractArchive: true
+        imagePullPolicy: IfNotPresent
+
+    - copyFromHost:
+        collectorName: "copy /var/lib/rancher/k3s/agent/kubelet.kubeconfig"
+        image: busybox:latest
+        hostPath: "/var/lib/rancher/k3s/agent/kubelet.kubeconfig"
+        extractArchive: true
+        imagePullPolicy: IfNotPresent
+
+    - copyFromHost:
+        collectorName: "copy /var/lib/rancher/k3s/agent/kubeproxy.kubeconfig"
+        image: busybox:latest
+        hostPath: "/var/lib/rancher/k3s/agent/kubeproxy.kubeconfig"
+        extractArchive: true
+        imagePullPolicy: IfNotPresent
+
+    - copyFromHost:
+        collectorName: "copy /var/lib/rancher/k3s/agent/server-ca.crt"
+        image: busybox:latest
+        hostPath: "/var/lib/rancher/k3s/agent/server-ca.crt"
+        extractArchive: true
+        imagePullPolicy: IfNotPresent
+
+    - copyFromHost:
+        collectorName: "copy /var/lib/rancher/k3s/agent/client-k3s-controller.crt"
+        image: busybox:latest
+        hostPath: "/var/lib/rancher/k3s/agent/client-k3s-controller.crt"
+        extractArchive: true
+        imagePullPolicy: IfNotPresent
+
+    - secret:
+        namespace: default
+        name: https-certificates
+        includeValue: false
+        key: https-certificates
+
+    - configMap:
+        namespace: default
+        name: agent-smith-config
+        includeValue: true
+        key: config.json
+        includeAllData: true
+
+    - configMap:
+        namespace: default
+        name: auth-providers-config
+        includeValue: true
+        key: auth-providers.json
+        includeAllData: true
+
+    - configMap:
+        namespace: default
+        name: auth-providers-config
+        includeValue: true
+        key: auth-providers.json
+        includeAllData: true
+
+    - configMap:
+        namespace: default
+        name: blobserve-config
+        includeValue: true
+        key: config.json
+        includeAllData: true
+
+    - configMap:
+        namespace: default
+        name: content-service-config
+        includeValue: true
+        key: config.json
+        includeAllData: true
+
+    - configMap:
+        namespace: default
+        name: db-init-scripts
+        includeValue: true
+        key: init.sql
+        includeAllData: true
+
+    - configMap:
+        namespace: default
+        name: db-sync-config
+        includeValue: true
+        key: db-sync-gitpod.json
+        includeAllData: true
+
+    - configMap:
+        namespace: default
+        name: db-sync-config
+        includeValue: true
+        key: db-sync-sessions.json
+        includeAllData: true
+
+    - configMap:
+        namespace: default
+        name: image-builder-config
+        includeValue: true
+        key: image-builder.json
+        includeAllData: true
+
+    - configMap:
+        namespace: default
+        name: kedge-config
+        includeValue: true
+        key: config.json
+        includeAllData: true
+
+    - configMap:
+        namespace: default
+        name: proxy-config
+        includeValue: true
+        key: vhost.docker-registry
+        includeAllData: true
+
+    - configMap:
+        namespace: default
+        name: proxy-config
+        includeValue: true
+        key: vhost.minio
+        includeAllData: true
+
+    - configMap:
+        namespace: default
+        name: proxy-config
+        includeValue: true
+        key: vhost.kedge
+        includeAllData: true
+
+    - configMap:
+        namespace: default
+        name: proxy-config
+        includeValue: true
+        key: vhost.payment-endpoint
+        includeAllData: true
+
+    - configMap:
+        namespace: default
+        name: registry-facade-config
+        includeValue: true
+        key: config.json
+        includeAllData: true
+    
+    - configMap:
+        namespace: default
+        name: restarter-scripts
+        includeValue: true
+        key: run.sh
+        includeAllData: true
+
+    - configMap:
+        namespace: default
+        name: ws-daemon-config
+        includeValue: true
+        key: config.json
+        includeAllData: true
+
+    - configMap:
+        namespace: default
+        name: ws-manager-bridge-config
+        includeValue: true
+        key: ws-manager-bridge.json
+        includeAllData: true
+
+    - configMap:
+        namespace: default
+        name: ws-manager-config
+        includeValue: true
+        key: config.json
+        includeAllData: true
+
+    - configMap:
+        namespace: default
+        name: ws-proxy-config
+        includeValue: true
+        key: config.json
+        includeAllData: true
+
+    - configMap:
+        namespace: default
+        name: ws-scheduler-config
+        includeValue: true
+        key: config.json
+        includeAllData: true
+
+    - configMap:
+        namespace: default
+        name: minio
+        includeValue: true
+        key: initialize
+        includeAllData: true
+
+    - configMap:
+        namespace: default
+        name: registry-config
+        includeValue: true
+        key: config.yml
+        includeAllData: true
+
+    - configMap:
+        namespace: default
+        name: mysql
+        includeValue: true
+        key: my.cnf
+        includeAllData: true
+
+    - configMap:
+        namespace: default
+        name: messagebus-config
+        includeValue: true
+        key: rabbitmq.conf
+        includeAllData: true
+
+    - registryImages:
+        namespace: default
+        images:
+          - "busybox:latest"
+          - "gitpod/workspace-base:latest"
+          - "gitpod/workspace-full:latest"
+          - "gitpod/workspace-full-vnc:latest"
+
+analyzers:
+    ##
+    # Verify the version of Kubernetes is supported
+    - clusterVersion:
+        checkName: Is a supported version of Kubernetes.
+        outcomes:
+          - fail:
+              when: "< 1.18.0"
+              message: This application requires at least Kubernetes 1.18.0 or later, and recommends 1.20.0.
+              uri: https://www.gitpod.io/docs/self-hosted/latest/requirements
+          - warn:
+              when: "< 1.18.0"
+              message: Your cluster meets the minimum version of Kubernetes, but we recommend you update to 1.18.0 or later.
+              uri: https://www.gitpod.io/docs/self-hosted/latest/requirements
+          - pass:
+              when: ">= 1.20.0"
+              message: Your cluster meets the recommended and required versions of Kubernetes.
+  
+    ##
+    # Verify that distribution of Kubernetes is supported
+    - distribution:
+        checkName: Is a supported distribution of Kubernetes.
+        outcomes:
+          - warn:
+              when: "== docker-desktop"
+              message: The application is not tested with Docker Desktop Clusters
+              uri: https://www.gitpod.io/docs/self-hosted/latest/requirements
+          - warn:
+              when: "== microk8s"
+              message: The application is not tested with Microk8s Clusters
+              uri: https://www.gitpod.io/docs/self-hosted/latest/requirements
+          - warn:
+              when: "== minikube"
+              message: The application is not tested with Minikube Clusters
+              uri: https://www.gitpod.io/docs/self-hosted/latest/requirements
+          - warn:
+              when: "== aks"
+              message: The application is not tested with AKS Clusters
+              uri: https://www.gitpod.io/docs/self-hosted/latest/requirements
+          - warn:
+              when: "== kurl"
+              message:  The application is not tested with KURL Clusters
+              uri: https://www.gitpod.io/docs/self-hosted/latest/requirements
+          - warn:
+              when: "== digitalocean"
+              message: The application is not tested with DigitalOcean Clusters
+              uri: https://www.gitpod.io/docs/self-hosted/latest/requirements
+          - warn:
+              when: "== rke2"
+              message: The application is not tested with RKE2 Clusters
+              uri: https://www.gitpod.io/docs/self-hosted/latest/requirements
+          - pass:
+              when: "== eks"
+              message: EKS is a supported distribution
+          - pass:
+              when: "== gke"
+              message: GKE is a supported distribution
+          - pass:
+              when: "== k3s"
+              message: K3S is a supported distribution
+          - warn:
+              message: Unable to determine the distribution of Kubernetes
+              uri: https://www.gitpod.io/docs/self-hosted/latest/requirements
+
+    ##
+    # Verify that container runtime is supported.
+    - containerRuntime:
+        checkName: Is a supported container runtime.
+        outcomes:
+        - fail:
+            when: "== cri-o"
+            message: The application does not support CRI-O
+            uri: https://www.gitpod.io/docs/self-hosted/latest/requirements
+        - fail:
+            when: "== docker"
+            message: The application does not support docker
+            uri: https://www.gitpod.io/docs/self-hosted/latest/requirements
+        - fail:
+            when: "== gvisor"
+            message: The application does not support gvisor
+            uri: https://www.gitpod.io/docs/self-hosted/latest/requirements
+        - pass:
+            pass: "== containerd"
+            message: This application supports containerd.
+            uri: https://www.gitpod.io/docs/self-hosted/latest/requirements
+        - pass:
+            message: This cluster has enough nodes.    
+    ##
+    # Verify that there are enough nodes in the Kubernetes cluster
+    - nodeResources:
+        checkName: Must have at least 1 nodes in the cluster, with 2 recommended
+        outcomes:
+        - fail:
+            when: "count() < 1"
+            message: This application requires at least 1 nodes.
+            uri: https://www.gitpod.io/docs/self-hosted/latest/requirements
+        - warn:
+            when: "count() < 2"
+            message: This application recommends at last 2 nodes.
+            uri: https://www.gitpod.io/docs/self-hosted/latest/requirements
+        - pass:
+            message: This cluster has enough nodes.
+    
+    ##
+    # Verify that there are enough memory in the nodes that make up the Kubernetes cluster
+    - nodeResources:
+        checkName: Every node in the cluster must have at least 4 GB of memory, with 16 GB recommended
+        outcomes:
+        - fail:
+            when: "min(memoryCapacity) < 4Gi"
+            message: All nodes must have at least 4 GB of memory.
+            uri: https://www.gitpod.io/docs/self-hosted/latest/requirements
+        - warn:
+            when: "min(memoryCapacity) < 16Gi"
+            message: All nodes are recommended to have at least 16 GB of memory.
+            uri: https://www.gitpod.io/docs/self-hosted/latest/requirements
+        - pass:
+            message: All nodes have at least 16 GB of memory.
+
+    ##
+    # Verify that there are enough CPU cores in the nodes that make up the Kubernetes cluster
+    - nodeResources:
+        checkName: Total CPU Cores in the cluster is 2 or greater
+        outcomes:
+          - fail:
+              when: "sum(cpuCapacity) < 2"
+              message: The cluster must contain at least 2 cores
+              uri: https://www.gitpod.io/docs/self-hosted/latest/requirements
+          - pass:
+              message: There are at least 4 cores in the cluster
+
+    ##
+    # Verify that there is ephemeral storage in the nodes that make up the Kubernetes cluster
+    - nodeResources:
+        checkName: Every node in the cluster must have at least 32 GB of ephemeral storage, with 100 GB recommended
+        outcomes:
+        - fail:
+            when: "min(ephemeralStorageCapacity) < 32Gi"
+            message: All nodes must have at least 32 GB of ephemeral storage.
+            uri: https://www.gitpod.io/docs/self-hosted/latest/requirements
+        - warn:
+            when: "min(ephemeralStorageCapacity) < 100Gi"
+            message: All nodes are recommended to have at least 100 GB of ephemeral storage.
+            uri: https://www.gitpod.io/docs/self-hosted/latest/requirements
+        - pass:
+            message: All nodes have at least 100 GB of ephemeral storage.

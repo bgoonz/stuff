@@ -1,0 +1,160 @@
+/**
+ * Copyright 2020 Vercel Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.video {
+  height: 100%;
+  min-height: 280px;
+  width: 100%;
+  margin-top: var(--gutter-small);
+}
+
+.layout {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100%;
+  margin: var(--gutter-large) 0  var(--gutter-huge);
+}
+
+.container {
+  display: block;
+  min-width: initial;
+  padding-right: var(--gutter-medium);
+  flex: 0 0 40%;
+}
+
+.yt {
+  max-height: 400px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.yt img {
+  max-width: 600px;
+  width: 100%;
+}
+
+@media (max-width: 1160px) {
+  .container {
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 1080px) {
+  .layout {
+    flex-direction: column;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .yt {
+    justify-content: center;
+    margin-bottom: var(--gutter-medium);
+  }
+
+  .container {
+    padding-right: 0;
+  }
+}
+
+.img-container {
+  margin-bottom: var(--gutter-small);
+  max-width: 250px;
+}
+
+.img-container img {
+  width: 100%;
+}
+
+.sponsor-details {
+  margin-top: var(--gutter-medium);
+  padding: var(--space-4x) 0 24px 0;
+  display: flex;
+  flex-direction: column;
+  color: var(--accents-2);
+  border-bottom: 1px solid var(--accents-7);
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.button-link {
+  background: #000;
+  color: #fff;
+  border: none;
+}
+
+.description {
+  color: var(--grey-1);
+}
+
+.pattern {
+  display: block;
+  margin: var(--gutter-medium) 0;
+}
+
+.resources {
+  display: flex;
+  flex-direction: column;
+}
+
+.resources a:not(:last-child) {
+  margin-bottom: var(--gutter-medium);
+}
+
+.resources-title {
+  margin-bottom: var(--gutter-medium);
+}
+
+.sponsor-details {
+  flex-direction: column;
+  padding: var(--space-4x) 0 var(--space-8x) 0;
+}
+
+.sponsor-details a:not(:last-child) {
+  margin-bottom: var(--gutter-medium);
+}
+
+@media(max-width: 767px) {
+  .layout {
+    margin: var(--gutter-medium-mobile) 0  var(--gutter-large);
+  }   
+
+  .container {
+    padding-right: var(--gutter-medium-mobile);
+  }
+
+  .pattern {
+    margin: var(--gutter-medium-mobile) 0;
+  }
+
+  .resources a:not(:last-child) {
+    margin-bottom: var(--gutter-medium-mobile);
+  }
+
+  .sponsor-details {
+    margin-top: var(--gutter-medium);
+  }
+  
+  .sponsor-details a:not(:last-child) {
+    margin-bottom: var(--gutter-medium-mobile);
+  }
+}

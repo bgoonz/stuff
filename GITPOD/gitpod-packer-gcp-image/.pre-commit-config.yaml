@@ -1,0 +1,11 @@
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.0.0
+  hooks:
+    - id: end-of-file-fixer
+    - id: trailing-whitespace
+    - id: check-toml
+- repo: https://github.com/cisagov/pre-commit-packer
+  rev: v0.0.2
+  hooks:
+    - id: packer_validate

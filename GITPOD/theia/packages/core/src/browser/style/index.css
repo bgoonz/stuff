@@ -1,0 +1,186 @@
+/********************************************************************************
+ * Copyright (C) 2017, 2018 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+
+@import url('~@phosphor/widgets/style/index.css');
+@import url('~font-awesome/css/font-awesome.min.css');
+
+/*-----------------------------------------------------------------------------
+| General
+|----------------------------------------------------------------------------*/
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: var(--theia-ui-font-family);
+  background: var(--theia-layout-color0);
+}
+
+.theia-ApplicationShell {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--theia-layout-color0);
+}
+
+.theia-preload {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50000;
+  background: var(--theia-layout-color0);
+  background-image: var(--theia-preloader);
+  background-size: 60px 60px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  transition: opacity 0.8s;
+}
+
+.theia-preload.theia-hidden {
+  opacity: 0;
+}
+
+.theia-icon {
+  width: 18px;
+  height: 18px;
+  margin: 5px;
+  margin-left: 8px;
+}
+
+.theia-mod-disabled {
+  opacity: 0.4;
+}
+
+.theia-header {
+  text-transform: uppercase;
+  font-size: var(--theia-ui-font-size0);
+  font-weight: 800;
+  margin: 10px 0 5px 0;
+}
+
+.p-Widget {
+  font-size: var(--theia-ui-font-size1);
+}
+
+.p-Widget.p-mod-hidden {
+  display: none !important;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+:focus {
+  outline: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--theia-accent-color3);
+}
+
+::selection {
+    background: var(--theia-selected-text-background);
+}
+
+.p-Widget:focus {
+    border: none;
+}
+
+button, .theia-button {
+    border: none;
+    color: var(--theia-ui-button-font-color);
+    background-color: var(--theia-ui-button-color);
+    min-width: 65px;
+    outline: none;
+    cursor: pointer;
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: calc(var(--theia-ui-padding)*2);
+    border-radius: 1px;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 1px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 1px -2px rgba(0, 0, 0, 0.12);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+button:hover, .theia-button:hover {
+  background-color: var(--theia-ui-button-color-hover);
+}
+
+button.secondary, .theia-button.secondary {
+  color: var(--theia-ui-button-font-color-secondary);
+  background-color: var(--theia-ui-button-color-secondary);
+}
+
+button.secondary:hover, .theia-button.secondary:hover {
+  background-color: var(--theia-ui-button-color-secondary-hover);
+}
+
+button[disabled], .theia-button[disabled] {
+  opacity: 0.6;
+  color: var(--theia-ui-button-font-color-disabled);
+  background-color: var(--theia-ui-button-color-disabled);
+  cursor: default;
+}
+
+button.secondary[disabled], .theia-button.secondary[disabled] {
+    color: var(--theia-ui-button-font-color-secondary-disabled);
+    background-color: var(--theia-ui-button-color-secondary-disabled);
+}
+
+.p-Widget select {
+    color: var(--theia-ui-font-color1);
+    font-size: var(--theia-ui-font-size1);
+    border-radius: 0;
+    border: 1px solid var(--theia-border-color1);
+    background: var(--theia-layout-color2);
+    outline: none;
+}
+
+textarea {
+  font-family: var(--theia-ui-font-family);
+}
+
+/*-----------------------------------------------------------------------------
+| Import children style files
+|----------------------------------------------------------------------------*/
+
+@import './dockpanel.css';
+@import './dialog.css';
+@import './menus.css';
+@import './sidepanel.css';
+@import './tabs.css';
+@import './materialcolors.css';
+@import './scrollbars.css';
+@import './tree.css';
+@import './status-bar.css';
+@import './tree-decorators.css';
+@import './about.css';
+@import './search-box.css';
+@import './ansi.css';
+@import './view-container.css';
+@import './notification.css';
+@import './alert-messages.css';

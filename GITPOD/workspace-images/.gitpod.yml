@@ -1,0 +1,17 @@
+image: gitpod/workspace-full
+
+tasks:
+  - command: docker
+
+vscode:
+  extensions:
+    - ms-azuretools.vscode-docker
+
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true
+    pullRequestsFromForks: true
+    addCheck: true
+    addComment: true

@@ -1,0 +1,48 @@
+.section {
+    position: relative;
+}
+
+.follow-us {
+    max-width: 520px;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.handle {
+    display: flex;
+    align-items: center;
+    color: #9E9E9E;
+    transition: all .2s;
+}
+
+.handle:hover,
+.handle:focus {
+    color: var(--white);
+}
+
+.handle:hover .icon,
+.handle:focus .icon {
+    fill: var(--white);
+} 
+
+.icon {
+    width: 42px;
+    height: 42px;
+    fill: #9E9E9E;
+    margin-right: var(--gutter-small-x);
+    transition: all .2s;
+}
+
+@media(max-width: 767px) {
+    .follow-us {
+        text-align: center;
+    }
+
+    .pattern {
+        display: none;
+    }
+
+    .handle {
+        display: inline-flex;
+    }
+}

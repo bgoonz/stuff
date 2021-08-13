@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Get the latest Ubuntu 2104 image id from gcloud
+UBUNTU_IMAGE=$(gcloud compute images describe-from-family ubuntu-2104 --project=ubuntu-os-cloud --format 'value(name)')
+
+packer build \
+    -var zone="$ZONE" \
+    -var project_id="$PROJECT_ID" \
+    -var source_image="$UBUNTU_IMAGE" \
+    -var image_name="$IMAGE_ID" \
+    packer.pkr.hcl
+
+echo "The image $IMAGE_ID is ready"

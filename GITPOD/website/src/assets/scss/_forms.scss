@@ -1,0 +1,110 @@
+input,
+textarea,
+select {
+  all: unset;
+  font: inherit;
+  color: var(--dark-grey);
+  box-sizing: border-box;
+}
+[type="radio"],
+[type="checkbox"] {
+  position: absolute;
+}
+[type] + label {
+  cursor: pointer;
+}
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("/arrow-grey.svg"),
+    linear-gradient(to bottom, #ffffff 0%, #f9f9f9 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: right 1em top 50%, 0 0;
+  background-size: 1.25em auto, 100%;
+  width: 100%;
+}
+label,
+legend,
+[type="email"],
+[type="text"] {
+  display: block;
+  color: var(--dark-grey);
+  margin-bottom: 0.5rem;
+}
+[type="email"],
+[type="text"],
+textarea {
+  width: 100%;
+}
+form li {
+  margin-bottom: 2rem;
+}
+fieldset,
+[type="checkbox"] + label {
+  display: flex;
+}
+fieldset {
+  flex-flow: row wrap;
+}
+legend {
+  flex: 100%;
+}
+[type="email"],
+[type="text"],
+[type="number"],
+[type="radio"] + label,
+textarea,
+select {
+  border: 1px solid var(--divider);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5em;
+}
+
+[type="checkbox"] + label::before {
+  content: "";
+  @apply block h-6 rounded text-center mr-micro transition border border-solid border-divider;
+  flex: 0 0 24px;
+  line-height: 1.1;
+}
+
+[type="checkbox"] + label::before,
+.error.error.error [type="checkbox"] + label::before {
+  color: transparent;
+}
+.error,
+.error *,
+.error :not(:checked) + label::before {
+  border-color: var(--error);
+  color: var(--error);
+}
+.error.error [type] + label {
+  color: var(--dark-grey);
+}
+[type="checkbox"]:checked + label::before,
+[type="radio"]:checked + label {
+  color: var(--black);
+  @apply border border-solid border-orange-900 bg-orange-900;
+}
+[type="checkbox"]:checked + label::before {
+  background-image: url("/tick-dark.svg");
+  @apply bg-center;
+}
+[type="checkbox"] + label:hover::before,
+[type="checkbox"] + label:focus::before,
+[type="radio"]:hover + label,
+[type="radio"]:focus + label {
+  border-color: var(--dark-grey);
+}
+[type="radio"]:checked + label {
+  @apply border-orange-900;
+}
+[class|="btn"]:disabled {
+  background-color: var(--sand-dark);
+  color: var(--dark-gray);
+  cursor: default;
+}
+
+::placeholder {
+  @apply text-light-grey !important;
+}

@@ -1,0 +1,6 @@
+ports:
+  - port: 3000
+tasks:
+  - command: >
+        yarn install &&
+        yarn dev

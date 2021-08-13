@@ -1,0 +1,6 @@
+ports:
+  - port: 8080
+tasks:
+  - command: >
+      cd complete &&
+      ./gradlew clean build bootRun

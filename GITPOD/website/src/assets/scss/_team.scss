@@ -1,0 +1,49 @@
+.redirector {
+  max-width: 900px;
+  margin: 3rem auto;
+}
+@media (min-width: 900px) {
+  .redirector {
+    margin: 7.5rem auto;
+  }
+}
+.redirector p {
+  font-size: var(--p-large);
+}
+.redirector .btn-otherbrand {
+  display: inline-flex;
+  margin-right: 1rem;
+}
+.btn-otherbrand .arrow {
+  display: inline-block;
+  margin: 0 0.5rem;
+  height: 12px;
+  width: 12px;
+}
+.hilited.redirector {
+  margin-top: 3rem;
+}
+.othercompanies span {
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.75rem;
+  background: var(--brand-light);
+}
+.cardlike li {
+  padding: 1rem;
+  flex: 0 0 50%;
+  min-width: 300px;
+  text-align: center;
+  margin-bottom: 0;
+}
+.cardlike a {
+  display: block;
+  background: var(--white);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.cardlike img {
+  display: inline;
+}
+.imageCarousel img {
+  border-radius: 1rem;
+}

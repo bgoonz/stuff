@@ -1,0 +1,13 @@
+image:
+  file: .gitpod.Dockerfile
+tasks:
+- init: cargo build
+  command: cargo test --all
+- command: cargo watch -x check
+  openIn: bottom
+  openMode: split-right
+vscode:
+  extensions:
+    - bungcip.better-toml
+    - vadimcn.vscode-lldb
+    - rust-lang.rust

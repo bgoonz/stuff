@@ -1,0 +1,16 @@
+- desc: "it should demonstrate tests"
+  command: ["echo", "hello world"]
+  assert:
+  - status == 0
+  - stdout.indexOf("hello") != -1
+  - stderr.length == 0
+- desc: "it should handle exit codes"
+  command: ["sh", "-c", "exit 1"]
+  assert:
+  - status == 1
+- desc: "it should have environment variables"
+  command: ["sh", "-c", "echo $MESSAGE"]
+  env:
+  - MESSAGE=foobar
+  assert:
+  - stdout.trim() == "foobar"

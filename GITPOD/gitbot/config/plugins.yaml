@@ -1,0 +1,130 @@
+approve:
+  - repos:
+      - gitpod-io/gitbot
+    require_self_approval: true
+    lgtm_acts_as_approve: true
+    commandHelpLink: https://prow.gitpod-dev.com/command-help
+  - repos:
+      - gitpod-io/gitpod
+    require_self_approval: true
+    lgtm_acts_as_approve: true
+    issue_required: true
+    commandHelpLink: https://prow.gitpod-dev.com/command-help
+
+lgtm:
+  - repos:
+      - gitpod-io/gitbot
+      - gitpod-io/gitpod
+      - gitpod-io/gitpod-test-repo
+    review_acts_as_lgtm: true
+    store_tree_hash: true
+
+plugins:
+  gitpod-io/gitbot:
+    plugins:
+    - config-updater
+    - approve
+    - assign
+    - blunderbuss
+    - cat
+    - dog
+    - help
+    - heart
+    - hold
+    - label
+    - lgtm
+    - size
+    - verify-owners
+    - wip
+    - yuks
+  gitpod-io/gitpod:
+    plugins:
+    - approve
+    - assign
+    - blunderbuss
+    - cat
+    - dog
+    - help
+    - heart
+    - hold
+    - label
+    - lgtm
+    - size
+    - verify-owners
+    - wip
+    - yuks
+  gitpod-io/gitpod-test-repo:
+    plugins:
+    - approve
+    - assign
+    - blunderbuss
+    - cat
+    - dog
+    - goose
+    - help
+    - heart
+    - hold
+    - lgtm
+    - size
+    - verify-owners
+    - wip
+    - yuks
+
+external_plugins:
+  "gitpod-io/gitpod":
+  - name: groundwork
+    endpoint: http://groundwork.prow.svc.cluster.local:8787
+    events:
+    - issues
+    - issue_comment
+    - pull_request
+  - name: projectmanager
+    endpoint: http://projectmanager.prow.svc.cluster.local:8787
+    events:
+    - issues
+  "gitpod-io/gitpod-test-repo":
+  - name: groundwork
+    endpoint: http://groundwork.prow.svc.cluster.local:8787
+    events:
+    - issues
+    - pull_request
+    - issue_comment
+  - name: projectmanager
+    endpoint: http://projectmanager.prow.svc.cluster.local:8787
+    events:
+    - issues
+  - name: customlabels
+    endpoint: http://customlabels.prow.svc.cluster.local:8787
+    events:
+    - issues
+    - issue_comment
+    - pull_request
+  - name: willkommen
+    endpoint: http://willkommen.prow.svc.cluster.local:8787
+    events:
+    - pull_request
+    - issue_comment
+
+config_updater:
+  maps:
+    config/config.yaml:
+      name: config
+    config/plugins.yaml:
+      name: plugins
+    config/projectmanager.yaml:
+      name: projectmanager
+    config/groundwork.yaml:
+      name: groundwork
+    config/customlabels.yaml:
+      name: customlabels
+
+blunderbuss:
+  request_count: 1
+  use_status_availability: true
+
+size:
+  s: 10
+  m: 30
+  l: 90
+  xl: 270
+  xxl: 520

@@ -1,0 +1,116 @@
+---
+# This file configures https://pre-commit.com/
+# to use specific hooks and options.
+
+fail_fast: false
+
+repos:
+  - repo: https://github.com/frnmst/md-toc
+    rev: 7.0.2
+    hooks:
+      - id: md-toc
+        args: [-p, --skip-lines, '1', commonmarker]
+
+  - repo: https://github.com/jumanjihouse/pre-commit-hooks
+    rev: 2.1.0
+    hooks:
+      - id: forbid-binary
+        exclude: >
+          (?x)^(
+            ci/fixtures/one-byte-binary
+          )$
+      - id: git-check  # Configure in .gitattributes
+      - id: git-dirty  # Configure in .gitignore
+      - id: shellcheck
+
+  - repo: local
+    hooks:
+      - id: check-mailmap
+        name: Detect if an email address needs to be added to mailmap
+        language: script
+        entry: pre_commit_hooks/check-mailmap
+        always_run: true  # Run on every commit.
+        exclude: .*       # Otherwise runs once per file.
+
+      - id: forbid-binary
+        name: forbid-binary (local)
+        language: script
+        entry: pre_commit_hooks/forbid-binary
+        types: ['binary']
+        exclude: >
+          (?x)^(
+            ci/fixtures/one-byte-binary
+          )$
+
+      - id: forbid-space-in-indent
+        name: forbid-space-in-indent (local)
+        language: script
+        entry: pre_commit_hooks/forbid-space-in-indent
+        exclude: ^.*$
+
+      - id: git-dirty
+        name: git-dirty (local)
+        language: script
+        entry: pre_commit_hooks/git-dirty
+
+      - id: require-ascii
+        name: file encoding (local)
+        description: Ensure file is ascii-encoded
+        entry: pre_commit_hooks/require-ascii.py
+        language: python
+        types: [text]
+        exclude: ^ci/ansi$  # 3rd-party script
+
+      - id: shellcheck
+        name: shellcheck (local)
+        language: script
+        entry: pre_commit_hooks/shellcheck
+        types: [shell]
+        args: [-e, SC1091]
+
+      - id: shfmt
+        name: shfmt (local)
+        language: script
+        entry: pre_commit_hooks/shfmt
+        types: [shell]
+        additional_dependencies: [shfmt]
+        exclude: ci/ansi
+
+  - repo: https://github.com/adrienverge/yamllint.git
+    rev: v1.23.0
+    hooks:
+      - id: yamllint
+        args: ['--format', 'parsable', '--strict']
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.1.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-byte-order-marker
+      - id: check-case-conflict
+      - id: check-executables-have-shebangs
+      - id: check-json
+      - id: detect-private-key
+
+  - repo: https://gitlab.com/pycqa/flake8
+    rev: 3.8.2
+    hooks:
+      - id: flake8
+
+  - repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.1.7
+    hooks:
+      - id: forbid-crlf
+      - id: forbid-tabs
+
+  - repo: https://github.com/jorisroovers/gitlint
+    rev: v0.13.1
+    hooks:
+      - id: gitlint
+        stages: [commit-msg]
+
+      - id: gitlint
+        entry: gitlint --commits upstream/master..
+        exclude: .*
+        always_run: true
+        stages: [manual]
