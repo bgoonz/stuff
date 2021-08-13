@@ -1,0 +1,88 @@
+/**
+ * Copyright (c) 2021 Gitpod GmbH. All rights reserved.
+ * Licensed under the GNU Affero General Public License (AGPL).
+ * See License-AGPL.txt in the project root for license information.
+ */
+import { PrebuiltWorkspaceState } from "./protocol";
+export interface ProjectConfig {
+    '.gitpod.yml': string;
+}
+export interface Project {
+    id: string;
+    name: string;
+    cloneUrl: string;
+    teamId?: string;
+    userId?: string;
+    appInstallationId: string;
+    config?: ProjectConfig;
+    creationTime: string;
+    /** This is a flag that triggers the HARD DELETION of this entity */
+    deleted?: boolean;
+    markedDeleted?: boolean;
+}
+export declare namespace Project {
+    const create: (project: Omit<Project, 'id' | 'creationTime'>) => Project;
+    interface Overview {
+        branches: BranchDetails[];
+    }
+    interface BranchDetails {
+        name: string;
+        url: string;
+        isDefault: boolean;
+        changeTitle: string;
+        changeDate?: string;
+        changeAuthor?: string;
+        changeAuthorAvatar?: string;
+        changePR?: string;
+        changeUrl?: string;
+        changeHash: string;
+    }
+}
+export interface PrebuildInfo {
+    id: string;
+    teamId: string;
+    projectName: string;
+    cloneUrl: string;
+    branch: string;
+    branchPrebuildNumber: string;
+    buildWorkspaceId: string;
+    startedAt: string;
+    startedBy: string;
+    startedByAvatar?: string;
+    status: PrebuiltWorkspaceState;
+    changeTitle: string;
+    changeDate: string;
+    changeAuthor: string;
+    changeAuthorAvatar?: string;
+    changePR?: string;
+    changeUrl?: string;
+    changeHash: string;
+}
+export interface Team {
+    id: string;
+    name: string;
+    slug: string;
+    creationTime: string;
+    /** This is a flag that triggers the HARD DELETION of this entity */
+    deleted?: boolean;
+}
+export declare type TeamMemberRole = "owner" | "member";
+export interface TeamMemberInfo {
+    userId: string;
+    fullName?: string;
+    primaryEmail?: string;
+    avatarUrl?: string;
+    role: TeamMemberRole;
+    memberSince: string;
+}
+export interface TeamMembershipInvite {
+    id: string;
+    teamId: string;
+    role: TeamMemberRole;
+    creationTime: string;
+    invalidationTime: string;
+    invitedEmail?: string;
+    /** This is a flag that triggers the HARD DELETION of this entity */
+    deleted?: boolean;
+}
+//# sourceMappingURL=teams-projects-protocol.d.ts.map

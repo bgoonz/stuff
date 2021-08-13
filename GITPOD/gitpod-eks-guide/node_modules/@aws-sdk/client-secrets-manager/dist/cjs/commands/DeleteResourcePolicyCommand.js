@@ -1,0 +1,84 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteResourcePolicyCommand = void 0;
+const models_0_1 = require("../models/models_0");
+const Aws_json1_1_1 = require("../protocols/Aws_json1_1");
+const middleware_serde_1 = require("@aws-sdk/middleware-serde");
+const smithy_client_1 = require("@aws-sdk/smithy-client");
+/**
+ * <p>Deletes the resource-based permission policy attached to the secret.</p>
+ *          <p>
+ *             <b>Minimum permissions</b>
+ *          </p>
+ *          <p>To run this command, you must have the following permissions:</p>
+ *          <ul>
+ *             <li>
+ *                <p>secretsmanager:DeleteResourcePolicy</p>
+ *             </li>
+ *          </ul>
+ *          <p>
+ *             <b>Related operations</b>
+ *          </p>
+ *          <ul>
+ *             <li>
+ *                <p>To attach a resource policy to a secret, use <a>PutResourcePolicy</a>.</p>
+ *             </li>
+ *             <li>
+ *                <p>To retrieve the current resource-based policy attached to a secret, use <a>GetResourcePolicy</a>.</p>
+ *             </li>
+ *             <li>
+ *                <p>To list all of the currently available secrets, use <a>ListSecrets</a>.</p>
+ *             </li>
+ *          </ul>
+ * @example
+ * Use a bare-bones client and the command you need to make an API call.
+ * ```javascript
+ * import { SecretsManagerClient, DeleteResourcePolicyCommand } from "@aws-sdk/client-secrets-manager"; // ES Modules import
+ * // const { SecretsManagerClient, DeleteResourcePolicyCommand } = require("@aws-sdk/client-secrets-manager"); // CommonJS import
+ * const client = new SecretsManagerClient(config);
+ * const command = new DeleteResourcePolicyCommand(input);
+ * const response = await client.send(command);
+ * ```
+ *
+ * @see {@link DeleteResourcePolicyCommandInput} for command's `input` shape.
+ * @see {@link DeleteResourcePolicyCommandOutput} for command's `response` shape.
+ * @see {@link SecretsManagerClientResolvedConfig | config} for command's `input` shape.
+ *
+ */
+class DeleteResourcePolicyCommand extends smithy_client_1.Command {
+    // Start section: command_properties
+    // End section: command_properties
+    constructor(input) {
+        // Start section: command_constructor
+        super();
+        this.input = input;
+        // End section: command_constructor
+    }
+    /**
+     * @internal
+     */
+    resolveMiddleware(clientStack, configuration, options) {
+        this.middlewareStack.use(middleware_serde_1.getSerdePlugin(configuration, this.serialize, this.deserialize));
+        const stack = clientStack.concat(this.middlewareStack);
+        const { logger } = configuration;
+        const clientName = "SecretsManagerClient";
+        const commandName = "DeleteResourcePolicyCommand";
+        const handlerExecutionContext = {
+            logger,
+            clientName,
+            commandName,
+            inputFilterSensitiveLog: models_0_1.DeleteResourcePolicyRequest.filterSensitiveLog,
+            outputFilterSensitiveLog: models_0_1.DeleteResourcePolicyResponse.filterSensitiveLog,
+        };
+        const { requestHandler } = configuration;
+        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
+    }
+    serialize(input, context) {
+        return Aws_json1_1_1.serializeAws_json1_1DeleteResourcePolicyCommand(input, context);
+    }
+    deserialize(output, context) {
+        return Aws_json1_1_1.deserializeAws_json1_1DeleteResourcePolicyCommand(output, context);
+    }
+}
+exports.DeleteResourcePolicyCommand = DeleteResourcePolicyCommand;
+//# sourceMappingURL=DeleteResourcePolicyCommand.js.map

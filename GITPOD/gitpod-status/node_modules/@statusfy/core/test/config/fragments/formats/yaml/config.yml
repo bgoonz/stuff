@@ -1,0 +1,10 @@
+title: &title YAML Config Format
+name: yaml-config-format
+description: *title
+defaultLocale: en
+serviceWorker: true
+manifest: false
+locales:
+  - code: en
+    iso: en-US
+    name: English
