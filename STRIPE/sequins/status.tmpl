@@ -1,0 +1,353 @@
+<html>
+  <head>
+    <style type="text/css">
+      body {
+        font-family: monospace;
+        color: #32325d;
+        font-size: 12px;
+        margin: 0px;
+        background-color: #f6f9fc;
+      }
+
+      div#header {
+        width: 100%;
+        background-color: #525f7f;
+        padding: 12px 0px;
+        color: #f6f9fc;
+        box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08)
+      }
+
+      div#header > span#logo {
+        font-size: 24px;
+        font-weight: bold;
+        margin-left: 20px;
+      }
+
+      div#header > span#docs {
+        float: right;
+        margin-right: 20px;
+        font-size: 14px;
+        line-height: 24px;
+      }
+
+      span#logo > a:link, a:visited {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      span#logo > a:hover, a:active {
+        color: white;
+      }
+
+      span#docs > a {
+        text-decoration: none;
+        color: white;
+        background-color: #6b7c93;
+        padding: 4px;
+        border-radius: 4px;
+      }
+
+      span#docs > a:hover {
+        background-color: white;
+        color: #6b7c93;
+      }
+
+      div#wrapper {
+        margin: 20px;
+      }
+
+      div.db {
+        width: 800px;
+        padding: 20px;
+        margin: 0 auto 20px auto;
+        display: table;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+      }
+
+      div.expanded {
+        width: 1000px
+      }
+
+      h2.dbname > a:link, a:visited {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      h2.dbname > a:hover, a:active {
+        color: #6772e5;
+      }
+
+      div.version {
+        border-top: 1px dashed #e6ebf1;
+        padding: 10px 5px 10px 0;
+        display: block;
+      }
+
+      div .versionwrapper {
+        margin-top: 7px;
+      }
+
+      span.versionname {
+        font-size: 16px;
+      }
+
+      span.versionstate {
+        float: right;
+        font-size: 16px;
+        font-weight: bold;
+        padding-top: 0px;
+      }
+
+      span.versionstate > span.count {
+        margin-left: 10px;
+      }
+
+      span.versionstate > span.label {
+        padding: 0px 4px;
+        border-radius: 4px;
+        color: white;
+        margin-left: 4px;
+      }
+
+      div.versionpath {
+        font-size: 12px;
+        color: #8898aa;
+      }
+
+      div.versionwrapper > div {
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      div.node {
+        display: block;
+        padding: 10px 0px;
+      }
+
+      div.nodenotcurrent {
+        opacity: 0.5;
+      }
+
+      div.nodeerror {
+        color: #fa755a;
+      }
+
+      div.nodename, div.nodeid {
+        display: inline-block;
+        font-weight: bold;
+      }
+
+      div.nodestate {
+        display: inline-block;
+        padding: 2px;
+        border-radius: 4px;
+        font-weight: bold;
+        color: white;
+      }
+
+      .active {
+        background-color: #3ecf8e;
+      }
+
+      .removing {
+        background-color: #ffcca5;
+      }
+
+      .building {
+        background-color: #f5be58;
+      }
+
+      .error {
+        background-color: #fa755a;
+      }
+
+      div.nodetimestamp {
+        font-size: 10px;
+        color: #8898aa;
+      }
+
+      div.nodemap {
+        margin-left: 7px;
+      }
+
+      div.versionname {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      div.versioninfo {
+        padding-top: 10px;
+        margin-top: 5px;
+      }
+
+      div.versioninfo > li {
+        display: inline-block;
+      }
+    </style>
+
+    <script type="text/javascript">
+      var drawMaps = function() {
+        var status = {{ marshal . }};
+
+        for (dbName in status.dbs) {
+          var db = status.dbs[dbName];
+
+          for (versionName in db.versions) {
+            var version = db.versions[versionName];
+
+            var id = "nodemap_canvas_" + dbName + "_" + versionName,
+              canvas = document.getElementById(id),
+              ctx = canvas.getContext("2d");
+
+            // This makes lines less fuzzy.
+            ctx.translate(0.5, 0.5);
+
+            var numPartitions = version["num_partitions"],
+              replication = [];
+
+            // Size the canvas to the nodes.
+            canvas.height = 0;
+            var totalHeight = canvas.height = canvas.parentElement.parentElement.clientHeight,
+              totalWidth = canvas.width = 400;
+
+            // The size and width of each box.
+            var nodeHeight =  Math.floor(totalHeight / (Object.keys(version.nodes).length)),
+              partitionWidth = Math.floor(totalWidth / numPartitions);
+
+            for (nodeName in version.nodes) {
+              var nodeId = "node_" + dbName + "_" + versionName + "_" + nodeName;
+              var nodeElem = document.getElementById(nodeId);
+              var idx = Array.prototype.indexOf.call(nodeElem.parentElement.children, nodeElem);
+
+              var node = version.nodes[nodeName];
+
+              if (node.state === "ACTIVE") {
+                ctx.fillStyle = "#3ecf8e";
+              } else if (node.state === "BUILDING") {
+                ctx.fillStyle = "#f5be58";
+              } else if (node.state === "REMOVING") {
+                ctx.fillStyle = "#ffcca5";
+              } else if (node.state === "ERROR") {
+                ctx.fillStyle = "#fa755a";
+              }
+
+              node.partitions.forEach(function(p) {
+                if (replication[p] === undefined)
+                  replication[p] = 0;
+
+                if (node.state !== "BUILDING")
+                  replication[p] += 1;
+
+                ctx.fillRect(partitionWidth * p-1, nodeHeight * idx, partitionWidth+1, nodeHeight);
+              });
+            }
+          }
+        }
+      };
+
+      var countNodeStatuses = function() {
+        var dbs = {{ marshal . }};
+        var elements = document.getElementsByClassName('versionstate');
+        [].forEach.call(elements, function (elem) {
+          var dbName = elem.getAttribute('data-dbName');
+          var versionName = elem.getAttribute('data-versionName');
+
+          var statusCounts = {};
+          var nodes = dbs.dbs[dbName].versions[versionName].nodes;
+          Object.values(nodes).forEach(function (node) {
+            if (node.state in statusCounts) {
+              statusCounts[node.state]++;
+            } else {
+              statusCounts[node.state] = 1;
+            }
+          });
+
+          for (status in statusCounts) {
+            var count = document.createElement('span');
+            count.innerHTML = statusCounts[status].toString() + 'x';
+            count.classList.add('count');
+            elem.appendChild(count);
+
+            var label = document.createElement('span');
+            label.innerHTML = status;
+            label.classList.add('label');
+            label.classList.add(status);
+            elem.appendChild(label);
+          }
+        });
+      };
+    </script>
+  </head>
+
+  <body {{ if not (isListView $) }} onload="drawMaps();" {{ else }} onload="countNodeStatuses();" {{ end }}>
+    <div id="header">
+      <span id="logo">
+        <a href="/">Sequins!</a>
+      </span>
+
+      <span id="docs">
+        Docs:
+        <a href="http://sequins.io/manual/1-5-healthchecks-and-monitoring/#version-states">States</a>
+        <a href="http://sequins.io/manual/1-4-running-a-distributed-cluster/#replication">Replication</a>
+      </span>
+    </div>
+
+    <div id="wrapper">
+      {{ range $dbName, $db := .DBs}}
+        {{ if (isListView $) }}
+          <div class="db">
+            <h2 class="dbname"><a href="/{{ $dbName }}">/{{ $dbName }} &rarr;</a></h2>
+            {{ range $versionName, $version := $db.Versions }}
+              <div class="version">
+                <span class="versionname">/{{ $versionName }}</span>
+                <span class="versionstate" data-dbName="{{ $dbName }}" data-versionName="{{ $versionName }}"></span>
+              </div>
+            {{ end }}
+          </div>
+        {{ else }}
+          <div class="db expanded">
+            <h2 class="dbname">/{{ $dbName }}</h2>
+            {{ range $versionName, $version := $db.Versions }}
+              <div class="version">
+                <span class="versionname">/{{ $versionName }}</span>
+                <div class="versionpath">{{ $version.Path }}</div>
+                <div class="versionwrapper">
+                  <div class="nodes">
+                    {{ range $node := $version.SortedNodes }}
+                      <div class="node {{ if $node.Current }}nodecurrent{{else}}nodenotcurrent{{end}}{{ if eq $node.State "ERROR" }} nodeerror{{end}}"
+                          id="node_{{$dbName}}_{{$versionName}}_{{$node.Name}}">
+                        {{ if ne $node.ShardID "" }}
+                          <div class="nodeid">{{$node.ShardID}}: </div>
+                        {{ end }}
+                        <div class="nodename">{{$node.Name}}</div>
+                        <div class="nodestate {{ $node.State }}">{{ $node.State }}</div>
+                        <div class="nodetimestamp">
+                          {{ if eq $node.State "BUILDING" }}
+                            building since <b>{{ $node.CreatedAt }}</b>
+                          {{ else if (eq $node.State "ACTIVE" "REMOVING") }}
+                            active since <b>{{ $node.ActiveAt }}</b>
+                          {{ end }}
+                        </div>
+                      </div>
+                    {{ end }}
+                  </div>
+                  <div class="nodemap">
+                    <canvas class="nodemap_canvas" id="nodemap_canvas_{{ $dbName }}_{{ $versionName }}"></canvas>
+                  </div>
+                </div>
+                <div class="versioninfo">
+                  Replication ({{ replicationKeys $version }}) of {{ $version.NumPartitions }}: <b>{{ replicationValues $version }}</b>
+                  <b>|</b>
+                  Target Replication: <b>{{ $version.TargetReplication }}</b>
+                  <b>|</b>
+                  Avg. Replication: <b>{{ $version.AverageReplication }}</b>
+                </div>
+              </div>
+            {{ end}}
+          </div>
+        {{ end }}
+      {{ end }}
+    </div>
+  </body>
+</html>

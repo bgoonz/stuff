@@ -1,0 +1,78 @@
+AllCops:
+  DisabledByDefault: true
+  TargetRubyVersion: 2.2
+  DisplayCopNames: true
+  StyleGuideCopsOnly: false
+  Exclude:
+    - 'tmp/**/*'
+    - '**/vendor/bundle/**/*'
+    - 'examples/**/*'
+    - 'pkg/**/*'
+    - 'Rakefile'
+
+Layout/SpaceAfterColon:
+  Enabled: true
+
+Layout/SpaceAroundKeyword:
+  Enabled: true
+
+Layout/SpaceBeforeBlockBraces:
+  EnforcedStyleForEmptyBraces: no_space
+  Enabled: true
+
+Layout/SpaceBeforeFirstArg:
+  Enabled: true
+
+Layout/SpaceInsideParens:
+  Enabled: true
+
+Layout/Tab:
+  Enabled: true
+
+Layout/TrailingBlankLines:
+  Enabled: true
+
+Layout/TrailingWhitespace:
+  Enabled: true
+
+Lint/Debugger:
+  Enabled: true
+
+Naming/MethodName:
+  Enabled: true
+  EnforcedStyle: snake_case
+  Exclude:
+    - 'test/**/**'
+
+Naming/VariableName:
+  Enabled: true
+
+Style/MethodDefParentheses:
+  Enabled: true
+
+Style/TrailingCommaInArguments:
+  Enabled: true
+
+Performance:
+  Enabled: true
+
+Metrics/ParameterLists:
+  Max: 7
+
+Performance/RedundantMatch:
+  Enabled: true
+
+Performance/RedundantBlockCall:
+  Enabled: true
+
+Performance/StringReplacement:
+  Enabled: true
+
+Layout/AccessModifierIndentation:
+  EnforcedStyle: indent
+
+Style/WhileUntilModifier:
+  Enabled: true
+
+Style/TernaryParentheses:
+  Enabled: true

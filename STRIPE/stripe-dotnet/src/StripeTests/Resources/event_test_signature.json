@@ -1,0 +1,24 @@
+{
+  "id": "evt_123",
+  "object": "event",
+  "account": "acct_123",
+  "api_version": "2017-05-25",
+  "created": 1533204620,
+  "data": {
+    "object": {
+      "id": "cus_123",
+      "object": "customer",
+      "created": 123456789,
+      "email": "test@stripe.com",
+      "livemode": false,
+      "metadata": {}
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 1,
+  "request": {
+    "id": "req_123",
+    "idempotency_key": "idempotency-key-123"
+  },
+  "type": "customer.created"
+}

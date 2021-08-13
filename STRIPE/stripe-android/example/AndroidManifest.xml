@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.stripe.example"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <dist:module dist:instant="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".ExampleApplication"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/appName"
+        android:theme="@style/AppTheme"
+        android:supportsRtl="true"
+        tools:ignore="AllowBackup">
+
+        <meta-data
+            android:name="com.stripe.example.metadata.backend_url"
+            android:value="${BACKEND_URL}" />
+        <meta-data
+            android:name="com.stripe.example.metadata.publishable_key"
+            android:value="${PUBLISHABLE_KEY}" />
+        <meta-data
+            android:name="com.stripe.example.metadata.stripe_account_id"
+            android:value="${STRIPE_ACCOUNT_ID}" />
+
+        <!-- Enables the Google Payment API -->
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
+
+        <activity
+            android:name=".activity.LauncherActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.CreateCardTokenActivity" />
+        <activity android:name=".activity.CreateCardSourceActivity" />
+        <activity android:name=".activity.CustomerSessionActivity" />
+        <activity android:name=".activity.CreateCardPaymentMethodActivity" />
+        <activity android:name=".activity.PaymentSessionActivity" />
+        <activity android:name=".activity.GooglePayLauncherIntegrationActivity" />
+        <activity android:name=".activity.GooglePayPaymentMethodLauncherIntegrationActivity" />
+        <activity android:name=".activity.PaymentAuthActivity" />
+        <activity android:name=".activity.FragmentExamplesActivity" />
+        <activity android:name=".activity.ConfirmSepaDebitActivity" />
+        <activity android:name=".activity.FpxPaymentActivity" />
+        <activity android:name=".activity.NetbankingListPaymentActivity" />
+        <activity android:name=".activity.BecsDebitPaymentMethodActivity" />
+        <activity android:name=".activity.BacsDebitPaymentMethodActivity" />
+        <activity android:name=".activity.SofortPaymentMethodActivity" />
+        <activity android:name=".activity.UpiPaymentActivity" />
+        <activity android:name=".activity.UpiWaitingActivity" />
+        <activity android:name=".activity.KlarnaSourceActivity" />
+        <activity android:name=".activity.CardBrandsActivity" />
+        <activity android:name=".activity.NetbankingPaymentActivity" />
+        <activity android:name=".activity.SimpleConfirmationActivity" />
+        <activity android:name=".activity.ConnectExampleActivity" />
+    </application>
+
+</manifest>

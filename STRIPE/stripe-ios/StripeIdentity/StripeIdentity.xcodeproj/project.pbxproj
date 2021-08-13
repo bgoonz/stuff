@@ -1,0 +1,654 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E61EA92A26A0D89900CAEE52 /* FBSnapshotTestCase.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E61EA92926A0D89900CAEE52 /* FBSnapshotTestCase.xcframework */; };
+		E61EA92C26A0D8AE00CAEE52 /* StripeCoreTestUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E61EA92B26A0D8AE00CAEE52 /* StripeCoreTestUtils.framework */; };
+		E61EA92F26A0E00900CAEE52 /* mock.html in Resources */ = {isa = PBXBuildFile; fileRef = E61EA92E26A0E00900CAEE52 /* mock.html */; };
+		E646511D269E1E0B002EC424 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E6465103269E1E0B002EC424 /* Localizable.strings */; };
+		E6465120269E1F8F002EC424 /* StripeIdentityBundleLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E646511F269E1F8F002EC424 /* StripeIdentityBundleLocator.swift */; };
+		E6465122269E202A002EC424 /* STPLocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6465121269E202A002EC424 /* STPLocalizedString.swift */; };
+		E6AF1ECA269FD7990091BE99 /* VerificationSheetAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AF1EC5269FD7980091BE99 /* VerificationSheetAnalytics.swift */; };
+		E6AF1ECB269FD7990091BE99 /* IdentityVerificationSheetError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AF1EC6269FD7980091BE99 /* IdentityVerificationSheetError.swift */; };
+		E6AF1ECC269FD7990091BE99 /* VerificationClientSecret.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AF1EC7269FD7990091BE99 /* VerificationClientSecret.swift */; };
+		E6AF1ECD269FD7990091BE99 /* VerifyWebURLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AF1EC8269FD7990091BE99 /* VerifyWebURLHelper.swift */; };
+		E6AF1ECE269FD7990091BE99 /* IdentityVerificationSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AF1EC9269FD7990091BE99 /* IdentityVerificationSheet.swift */; };
+		E6AF1ED2269FD7B30091BE99 /* VerificationFlowWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AF1ED1269FD7B30091BE99 /* VerificationFlowWebViewController.swift */; };
+		E6AF1ED4269FD7BB0091BE99 /* VerificationFlowWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AF1ED3269FD7BB0091BE99 /* VerificationFlowWebView.swift */; };
+		E6AF1EE1269FD9970091BE99 /* VerificationClientSecretTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AF1EDD269FD9960091BE99 /* VerificationClientSecretTest.swift */; };
+		E6AF1EE2269FD9970091BE99 /* VerificationFlowWebViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AF1EE0269FD9970091BE99 /* VerificationFlowWebViewControllerTest.swift */; };
+		E6AF1EE3269FD9970091BE99 /* IdentityVerificationSheetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AF1EDC269FD9960091BE99 /* IdentityVerificationSheetTest.swift */; };
+		E6AF1EE4269FD9970091BE99 /* VerificationFlowWebViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AF1EDE269FD9970091BE99 /* VerificationFlowWebViewTest.swift */; };
+		E6AF1EE5269FD9970091BE99 /* VerificationSheetAnalyticsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AF1EDF269FD9970091BE99 /* VerificationSheetAnalyticsTest.swift */; };
+		E6AF1EE9269FDA020091BE99 /* VerificationFlowWebViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AF1EE8269FDA020091BE99 /* VerificationFlowWebViewSnapshotTests.swift */; };
+		E6CC14B8269E22060078837F /* StripeCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6CC14B7269E22060078837F /* StripeCore.framework */; };
+		E6E146B126950E1E007BDCD8 /* StripeIdentity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6E146A726950E1E007BDCD8 /* StripeIdentity.framework */; };
+		E6E146B826950E1E007BDCD8 /* StripeIdentity.h in Headers */ = {isa = PBXBuildFile; fileRef = E6E146AA26950E1E007BDCD8 /* StripeIdentity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6E146CC26950E64007BDCD8 /* StripeiOS Tests-Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E6E146C226950E64007BDCD8 /* StripeiOS Tests-Debug.xcconfig */; };
+		E6E146CD26950E64007BDCD8 /* StripeiOS-Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E6E146C326950E64007BDCD8 /* StripeiOS-Debug.xcconfig */; };
+		E6E146CE26950E64007BDCD8 /* Project-Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E6E146C426950E64007BDCD8 /* Project-Release.xcconfig */; };
+		E6E146CF26950E64007BDCD8 /* StripeiOS Tests-Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E6E146C526950E64007BDCD8 /* StripeiOS Tests-Release.xcconfig */; };
+		E6E146D026950E64007BDCD8 /* Project-Shared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E6E146C626950E64007BDCD8 /* Project-Shared.xcconfig */; };
+		E6E146D126950E64007BDCD8 /* Version.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E6E146C726950E64007BDCD8 /* Version.xcconfig */; };
+		E6E146D226950E64007BDCD8 /* StripeiOS Tests-Shared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E6E146C826950E64007BDCD8 /* StripeiOS Tests-Shared.xcconfig */; };
+		E6E146D326950E64007BDCD8 /* StripeiOS-Shared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E6E146C926950E64007BDCD8 /* StripeiOS-Shared.xcconfig */; };
+		E6E146D426950E64007BDCD8 /* Project-Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E6E146CA26950E64007BDCD8 /* Project-Debug.xcconfig */; };
+		E6E146D526950E64007BDCD8 /* StripeiOS-Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E6E146CB26950E64007BDCD8 /* StripeiOS-Release.xcconfig */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E6E146B226950E1E007BDCD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6E1469E26950E1E007BDCD8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6E146A626950E1E007BDCD8;
+			remoteInfo = StripeIdentity;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E61EA92926A0D89900CAEE52 /* FBSnapshotTestCase.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FBSnapshotTestCase.xcframework; path = ../Carthage/Build/FBSnapshotTestCase.xcframework; sourceTree = "<group>"; };
+		E61EA92B26A0D8AE00CAEE52 /* StripeCoreTestUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = StripeCoreTestUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E61EA92E26A0E00900CAEE52 /* mock.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mock.html; sourceTree = "<group>"; };
+		E6465104269E1E0B002EC424 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E6465105269E1E0B002EC424 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		E6465106269E1E0B002EC424 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E6465107269E1E0B002EC424 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E6465108269E1E0B002EC424 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		E6465109269E1E0B002EC424 /* mt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = mt; path = mt.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E646510A269E1E0B002EC424 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E646510B269E1E0B002EC424 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		E646510C269E1E0B002EC424 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E646510D269E1E0B002EC424 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E646510E269E1E0B002EC424 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		E646510F269E1E0B002EC424 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E6465110269E1E0B002EC424 /* nn-NO */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "nn-NO"; path = "nn-NO.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		E6465111269E1E0B002EC424 /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		E6465112269E1E0B002EC424 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E6465113269E1E0B002EC424 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E6465114269E1E0B002EC424 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		E6465115269E1E0B002EC424 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E6465116269E1E0B002EC424 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E6465117269E1E0B002EC424 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		E6465118269E1E0B002EC424 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E6465119269E1E0B002EC424 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E646511A269E1E0B002EC424 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E646511B269E1E0B002EC424 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E646511C269E1E0B002EC424 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		E646511F269E1F8F002EC424 /* StripeIdentityBundleLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeIdentityBundleLocator.swift; sourceTree = "<group>"; };
+		E6465121269E202A002EC424 /* STPLocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STPLocalizedString.swift; sourceTree = "<group>"; };
+		E6AF1EC5269FD7980091BE99 /* VerificationSheetAnalytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationSheetAnalytics.swift; sourceTree = "<group>"; };
+		E6AF1EC6269FD7980091BE99 /* IdentityVerificationSheetError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentityVerificationSheetError.swift; sourceTree = "<group>"; };
+		E6AF1EC7269FD7990091BE99 /* VerificationClientSecret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationClientSecret.swift; sourceTree = "<group>"; };
+		E6AF1EC8269FD7990091BE99 /* VerifyWebURLHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyWebURLHelper.swift; sourceTree = "<group>"; };
+		E6AF1EC9269FD7990091BE99 /* IdentityVerificationSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentityVerificationSheet.swift; sourceTree = "<group>"; };
+		E6AF1ED1269FD7B30091BE99 /* VerificationFlowWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationFlowWebViewController.swift; sourceTree = "<group>"; };
+		E6AF1ED3269FD7BB0091BE99 /* VerificationFlowWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationFlowWebView.swift; sourceTree = "<group>"; };
+		E6AF1EDC269FD9960091BE99 /* IdentityVerificationSheetTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityVerificationSheetTest.swift; sourceTree = "<group>"; };
+		E6AF1EDD269FD9960091BE99 /* VerificationClientSecretTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationClientSecretTest.swift; sourceTree = "<group>"; };
+		E6AF1EDE269FD9970091BE99 /* VerificationFlowWebViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationFlowWebViewTest.swift; sourceTree = "<group>"; };
+		E6AF1EDF269FD9970091BE99 /* VerificationSheetAnalyticsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationSheetAnalyticsTest.swift; sourceTree = "<group>"; };
+		E6AF1EE0269FD9970091BE99 /* VerificationFlowWebViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationFlowWebViewControllerTest.swift; sourceTree = "<group>"; };
+		E6AF1EE8269FDA020091BE99 /* VerificationFlowWebViewSnapshotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationFlowWebViewSnapshotTests.swift; sourceTree = "<group>"; };
+		E6CC14B7269E22060078837F /* StripeCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = StripeCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6E146A726950E1E007BDCD8 /* StripeIdentity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StripeIdentity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6E146AA26950E1E007BDCD8 /* StripeIdentity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StripeIdentity.h; sourceTree = "<group>"; };
+		E6E146AB26950E1E007BDCD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6E146B026950E1E007BDCD8 /* StripeIdentityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StripeIdentityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6E146B726950E1E007BDCD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6E146C226950E64007BDCD8 /* StripeiOS Tests-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "StripeiOS Tests-Debug.xcconfig"; sourceTree = "<group>"; };
+		E6E146C326950E64007BDCD8 /* StripeiOS-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "StripeiOS-Debug.xcconfig"; sourceTree = "<group>"; };
+		E6E146C426950E64007BDCD8 /* Project-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-Release.xcconfig"; sourceTree = "<group>"; };
+		E6E146C526950E64007BDCD8 /* StripeiOS Tests-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "StripeiOS Tests-Release.xcconfig"; sourceTree = "<group>"; };
+		E6E146C626950E64007BDCD8 /* Project-Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-Shared.xcconfig"; sourceTree = "<group>"; };
+		E6E146C726950E64007BDCD8 /* Version.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Version.xcconfig; sourceTree = "<group>"; };
+		E6E146C826950E64007BDCD8 /* StripeiOS Tests-Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "StripeiOS Tests-Shared.xcconfig"; sourceTree = "<group>"; };
+		E6E146C926950E64007BDCD8 /* StripeiOS-Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "StripeiOS-Shared.xcconfig"; sourceTree = "<group>"; };
+		E6E146CA26950E64007BDCD8 /* Project-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Project-Debug.xcconfig"; sourceTree = "<group>"; };
+		E6E146CB26950E64007BDCD8 /* StripeiOS-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "StripeiOS-Release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E6E146A426950E1E007BDCD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6CC14B8269E22060078837F /* StripeCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6E146AD26950E1E007BDCD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E61EA92C26A0D8AE00CAEE52 /* StripeCoreTestUtils.framework in Frameworks */,
+				E61EA92A26A0D89900CAEE52 /* FBSnapshotTestCase.xcframework in Frameworks */,
+				E6E146B126950E1E007BDCD8 /* StripeIdentity.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E61EA92D26A0DFFA00CAEE52 /* Mock Files */ = {
+			isa = PBXGroup;
+			children = (
+				E61EA92E26A0E00900CAEE52 /* mock.html */,
+			);
+			path = "Mock Files";
+			sourceTree = "<group>";
+		};
+		E6465101269E1E0B002EC424 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E6465102269E1E0B002EC424 /* Localizations */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E6465102269E1E0B002EC424 /* Localizations */ = {
+			isa = PBXGroup;
+			children = (
+				E6465103269E1E0B002EC424 /* Localizable.strings */,
+			);
+			path = Localizations;
+			sourceTree = "<group>";
+		};
+		E646511E269E1F7C002EC424 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E646511F269E1F8F002EC424 /* StripeIdentityBundleLocator.swift */,
+				E6465121269E202A002EC424 /* STPLocalizedString.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E6AF1ECF269FD7A20091BE99 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E6AF1ED1269FD7B30091BE99 /* VerificationFlowWebViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E6AF1ED0269FD7A90091BE99 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E6AF1ED3269FD7BB0091BE99 /* VerificationFlowWebView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E6AF1EE6269FD9B60091BE99 /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				E6AF1EDC269FD9960091BE99 /* IdentityVerificationSheetTest.swift */,
+				E6AF1EDD269FD9960091BE99 /* VerificationClientSecretTest.swift */,
+				E6AF1EE0269FD9970091BE99 /* VerificationFlowWebViewControllerTest.swift */,
+				E6AF1EDE269FD9970091BE99 /* VerificationFlowWebViewTest.swift */,
+				E6AF1EDF269FD9970091BE99 /* VerificationSheetAnalyticsTest.swift */,
+			);
+			path = Unit;
+			sourceTree = "<group>";
+		};
+		E6AF1EE7269FD9E60091BE99 /* Snapshot */ = {
+			isa = PBXGroup;
+			children = (
+				E6AF1EE8269FDA020091BE99 /* VerificationFlowWebViewSnapshotTests.swift */,
+			);
+			path = Snapshot;
+			sourceTree = "<group>";
+		};
+		E6CC14B6269E22060078837F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E61EA92B26A0D8AE00CAEE52 /* StripeCoreTestUtils.framework */,
+				E61EA92926A0D89900CAEE52 /* FBSnapshotTestCase.xcframework */,
+				E6CC14B7269E22060078837F /* StripeCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E6E1469D26950E1E007BDCD8 = {
+			isa = PBXGroup;
+			children = (
+				E6E146C126950E64007BDCD8 /* BuildConfigurations */,
+				E6E146A926950E1E007BDCD8 /* StripeIdentity */,
+				E6E146B426950E1E007BDCD8 /* StripeIdentityTests */,
+				E6E146A826950E1E007BDCD8 /* Products */,
+				E6CC14B6269E22060078837F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E6E146A826950E1E007BDCD8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6E146A726950E1E007BDCD8 /* StripeIdentity.framework */,
+				E6E146B026950E1E007BDCD8 /* StripeIdentityTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E6E146A926950E1E007BDCD8 /* StripeIdentity */ = {
+			isa = PBXGroup;
+			children = (
+				E6E146AB26950E1E007BDCD8 /* Info.plist */,
+				E6465101269E1E0B002EC424 /* Resources */,
+				E6E146D6269512A1007BDCD8 /* Source */,
+				E6E146AA26950E1E007BDCD8 /* StripeIdentity.h */,
+			);
+			path = StripeIdentity;
+			sourceTree = "<group>";
+		};
+		E6E146B426950E1E007BDCD8 /* StripeIdentityTests */ = {
+			isa = PBXGroup;
+			children = (
+				E61EA92D26A0DFFA00CAEE52 /* Mock Files */,
+				E6E146B726950E1E007BDCD8 /* Info.plist */,
+				E6AF1EE7269FD9E60091BE99 /* Snapshot */,
+				E6AF1EE6269FD9B60091BE99 /* Unit */,
+			);
+			path = StripeIdentityTests;
+			sourceTree = "<group>";
+		};
+		E6E146C126950E64007BDCD8 /* BuildConfigurations */ = {
+			isa = PBXGroup;
+			children = (
+				E6E146C226950E64007BDCD8 /* StripeiOS Tests-Debug.xcconfig */,
+				E6E146C326950E64007BDCD8 /* StripeiOS-Debug.xcconfig */,
+				E6E146C426950E64007BDCD8 /* Project-Release.xcconfig */,
+				E6E146C526950E64007BDCD8 /* StripeiOS Tests-Release.xcconfig */,
+				E6E146C626950E64007BDCD8 /* Project-Shared.xcconfig */,
+				E6E146C726950E64007BDCD8 /* Version.xcconfig */,
+				E6E146C826950E64007BDCD8 /* StripeiOS Tests-Shared.xcconfig */,
+				E6E146C926950E64007BDCD8 /* StripeiOS-Shared.xcconfig */,
+				E6E146CA26950E64007BDCD8 /* Project-Debug.xcconfig */,
+				E6E146CB26950E64007BDCD8 /* StripeiOS-Release.xcconfig */,
+			);
+			name = BuildConfigurations;
+			path = ../BuildConfigurations;
+			sourceTree = "<group>";
+		};
+		E6E146D6269512A1007BDCD8 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				E646511E269E1F7C002EC424 /* Helpers */,
+				E6AF1ECF269FD7A20091BE99 /* ViewControllers */,
+				E6AF1ED0269FD7A90091BE99 /* Views */,
+				E6AF1EC9269FD7990091BE99 /* IdentityVerificationSheet.swift */,
+				E6AF1EC6269FD7980091BE99 /* IdentityVerificationSheetError.swift */,
+				E6AF1EC7269FD7990091BE99 /* VerificationClientSecret.swift */,
+				E6AF1EC5269FD7980091BE99 /* VerificationSheetAnalytics.swift */,
+				E6AF1EC8269FD7990091BE99 /* VerifyWebURLHelper.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E6E146A226950E1E007BDCD8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6E146B826950E1E007BDCD8 /* StripeIdentity.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E6E146A626950E1E007BDCD8 /* StripeIdentity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6E146BB26950E1E007BDCD8 /* Build configuration list for PBXNativeTarget "StripeIdentity" */;
+			buildPhases = (
+				E6E146A226950E1E007BDCD8 /* Headers */,
+				E6E146A326950E1E007BDCD8 /* Sources */,
+				E6E146A426950E1E007BDCD8 /* Frameworks */,
+				E6E146A526950E1E007BDCD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StripeIdentity;
+			productName = StripeIdentity;
+			productReference = E6E146A726950E1E007BDCD8 /* StripeIdentity.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E6E146AF26950E1E007BDCD8 /* StripeIdentityTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6E146BE26950E1E007BDCD8 /* Build configuration list for PBXNativeTarget "StripeIdentityTests" */;
+			buildPhases = (
+				E6E146AC26950E1E007BDCD8 /* Sources */,
+				E6E146AD26950E1E007BDCD8 /* Frameworks */,
+				E6E146AE26950E1E007BDCD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6E146B326950E1E007BDCD8 /* PBXTargetDependency */,
+			);
+			name = StripeIdentityTests;
+			productName = StripeIdentityTests;
+			productReference = E6E146B026950E1E007BDCD8 /* StripeIdentityTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E6E1469E26950E1E007BDCD8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					E6E146A626950E1E007BDCD8 = {
+						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
+					};
+					E6E146AF26950E1E007BDCD8 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = E6E146A126950E1E007BDCD8 /* Build configuration list for PBXProject "StripeIdentity" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				de,
+				"zh-Hans",
+				ja,
+				"zh-HK",
+				mt,
+				nb,
+				"en-GB",
+				es,
+				da,
+				"es-419",
+				it,
+				"nn-NO",
+				"fr-CA",
+				sv,
+				ko,
+				"zh-Hant",
+				hu,
+				tr,
+				"pt-BR",
+				ru,
+				fr,
+				fi,
+				nl,
+				"pt-PT",
+			);
+			mainGroup = E6E1469D26950E1E007BDCD8;
+			productRefGroup = E6E146A826950E1E007BDCD8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E6E146A626950E1E007BDCD8 /* StripeIdentity */,
+				E6E146AF26950E1E007BDCD8 /* StripeIdentityTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E6E146A526950E1E007BDCD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6E146CF26950E64007BDCD8 /* StripeiOS Tests-Release.xcconfig in Resources */,
+				E6E146D226950E64007BDCD8 /* StripeiOS Tests-Shared.xcconfig in Resources */,
+				E646511D269E1E0B002EC424 /* Localizable.strings in Resources */,
+				E6E146D026950E64007BDCD8 /* Project-Shared.xcconfig in Resources */,
+				E6E146CC26950E64007BDCD8 /* StripeiOS Tests-Debug.xcconfig in Resources */,
+				E6E146CD26950E64007BDCD8 /* StripeiOS-Debug.xcconfig in Resources */,
+				E6E146D526950E64007BDCD8 /* StripeiOS-Release.xcconfig in Resources */,
+				E6E146CE26950E64007BDCD8 /* Project-Release.xcconfig in Resources */,
+				E6E146D426950E64007BDCD8 /* Project-Debug.xcconfig in Resources */,
+				E6E146D326950E64007BDCD8 /* StripeiOS-Shared.xcconfig in Resources */,
+				E6E146D126950E64007BDCD8 /* Version.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6E146AE26950E1E007BDCD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E61EA92F26A0E00900CAEE52 /* mock.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E6E146A326950E1E007BDCD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6AF1ED4269FD7BB0091BE99 /* VerificationFlowWebView.swift in Sources */,
+				E6465122269E202A002EC424 /* STPLocalizedString.swift in Sources */,
+				E6AF1ECD269FD7990091BE99 /* VerifyWebURLHelper.swift in Sources */,
+				E6AF1ED2269FD7B30091BE99 /* VerificationFlowWebViewController.swift in Sources */,
+				E6465120269E1F8F002EC424 /* StripeIdentityBundleLocator.swift in Sources */,
+				E6AF1ECC269FD7990091BE99 /* VerificationClientSecret.swift in Sources */,
+				E6AF1ECE269FD7990091BE99 /* IdentityVerificationSheet.swift in Sources */,
+				E6AF1ECA269FD7990091BE99 /* VerificationSheetAnalytics.swift in Sources */,
+				E6AF1ECB269FD7990091BE99 /* IdentityVerificationSheetError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6E146AC26950E1E007BDCD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6AF1EE9269FDA020091BE99 /* VerificationFlowWebViewSnapshotTests.swift in Sources */,
+				E6AF1EE3269FD9970091BE99 /* IdentityVerificationSheetTest.swift in Sources */,
+				E6AF1EE2269FD9970091BE99 /* VerificationFlowWebViewControllerTest.swift in Sources */,
+				E6AF1EE4269FD9970091BE99 /* VerificationFlowWebViewTest.swift in Sources */,
+				E6AF1EE1269FD9970091BE99 /* VerificationClientSecretTest.swift in Sources */,
+				E6AF1EE5269FD9970091BE99 /* VerificationSheetAnalyticsTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E6E146B326950E1E007BDCD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6E146A626950E1E007BDCD8 /* StripeIdentity */;
+			targetProxy = E6E146B226950E1E007BDCD8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E6465103269E1E0B002EC424 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E6465104269E1E0B002EC424 /* de */,
+				E6465105269E1E0B002EC424 /* zh-Hans */,
+				E6465106269E1E0B002EC424 /* ja */,
+				E6465107269E1E0B002EC424 /* en */,
+				E6465108269E1E0B002EC424 /* zh-HK */,
+				E6465109269E1E0B002EC424 /* mt */,
+				E646510A269E1E0B002EC424 /* nb */,
+				E646510B269E1E0B002EC424 /* en-GB */,
+				E646510C269E1E0B002EC424 /* es */,
+				E646510D269E1E0B002EC424 /* da */,
+				E646510E269E1E0B002EC424 /* es-419 */,
+				E646510F269E1E0B002EC424 /* it */,
+				E6465110269E1E0B002EC424 /* nn-NO */,
+				E6465111269E1E0B002EC424 /* fr-CA */,
+				E6465112269E1E0B002EC424 /* sv */,
+				E6465113269E1E0B002EC424 /* ko */,
+				E6465114269E1E0B002EC424 /* zh-Hant */,
+				E6465115269E1E0B002EC424 /* hu */,
+				E6465116269E1E0B002EC424 /* tr */,
+				E6465117269E1E0B002EC424 /* pt-BR */,
+				E6465118269E1E0B002EC424 /* ru */,
+				E6465119269E1E0B002EC424 /* fr */,
+				E646511A269E1E0B002EC424 /* fi */,
+				E646511B269E1E0B002EC424 /* nl */,
+				E646511C269E1E0B002EC424 /* pt-PT */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E6E146B926950E1E007BDCD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6E146CA26950E64007BDCD8 /* Project-Debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E6E146BA26950E1E007BDCD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6E146C426950E64007BDCD8 /* Project-Release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		E6E146BC26950E1E007BDCD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6E146C326950E64007BDCD8 /* StripeiOS-Debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Y28TH9SHX7;
+				INFOPLIST_FILE = StripeIdentity/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stripe.stripe-identity";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E6E146BD26950E1E007BDCD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6E146CB26950E64007BDCD8 /* StripeiOS-Release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Y28TH9SHX7;
+				INFOPLIST_FILE = StripeIdentity/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stripe.stripe-identity";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		E6E146BF26950E1E007BDCD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6E146C226950E64007BDCD8 /* StripeiOS Tests-Debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y28TH9SHX7;
+				INFOPLIST_FILE = StripeIdentityTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.stripe.StripeIdentityTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E6E146C026950E1E007BDCD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6E146C526950E64007BDCD8 /* StripeiOS Tests-Release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y28TH9SHX7;
+				INFOPLIST_FILE = StripeIdentityTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.stripe.StripeIdentityTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E6E146A126950E1E007BDCD8 /* Build configuration list for PBXProject "StripeIdentity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6E146B926950E1E007BDCD8 /* Debug */,
+				E6E146BA26950E1E007BDCD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6E146BB26950E1E007BDCD8 /* Build configuration list for PBXNativeTarget "StripeIdentity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6E146BC26950E1E007BDCD8 /* Debug */,
+				E6E146BD26950E1E007BDCD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6E146BE26950E1E007BDCD8 /* Build configuration list for PBXNativeTarget "StripeIdentityTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6E146BF26950E1E007BDCD8 /* Debug */,
+				E6E146C026950E1E007BDCD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E6E1469E26950E1E007BDCD8 /* Project object */;
+}

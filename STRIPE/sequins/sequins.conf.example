@@ -1,0 +1,182 @@
+# This configuration file is in the toml format, which is defined here:
+# https://github.com/toml-lang/toml
+
+# Unless specified otherwise, the below values are the defaults.
+
+source = "hdfs://namenode:8020/path/to/sequins"
+# The url or directory where the sequencefiles are. This can be a local
+# directory, an HDFS url of the form hdfs://<namenode>:<port>/path/to/stuff,
+# or an S3 url of the form s3://<bucket>/path/to/stuff. This should be a
+# a directory of directories of directories; each first level represents a
+# 'database', and each subdirectory therein represents a 'version' of that
+# database. See the README for more information. This must be set, but can be
+# overriden from the command line with --source.
+
+# bind = "0.0.0.0:9599"
+# The address to bind on. This can be overridden from the command line with
+# --bind.
+
+# local_store = "/var/sequins/"
+# This is where sequins will store its internal copy of all the data it ingests.
+# This can be overriden from the command line with --local-store.
+
+# max_parallel_loads = 4
+# Unset by default. If this flag is set, sequins will only update this many
+# databases at a time, minimizing disk usage while new data is being loaded. If
+# you set this to 1, then loads will be completely serialized.
+
+# throttle_loads = "800μs"
+# Unset by default. If this flag is set, sequins will sleep this long between
+# writes while loading data, artificially slowing down loads and reducing disk
+# i/o. If you are using disks where the latency is extremely sensitive to
+# activity, then loading large amounts of data can negatively impact your
+# latency, and you may want to experiment with this setting.
+
+# refresh_period = "10m"
+# Unset by default. If this is specified, sequins will periodically download new
+# data this often (in seconds). If you enable this, you should also enable
+# 'require_success_file', or sequins may start automatically downloading a
+# partially-created set of files.
+
+# require_success_file = false
+# If this flag is set, sequins will only ingest data from directories that have
+# a _SUCCESS file (which is produced by hadoop when it completes a job).
+
+# content_type = "application/json"
+# Unset by default. If this is set, sequins will set this Content-Type header on
+# responses.
+
+# goforit_flag_json_path = "/path/to/flags.json"
+# Unset by default. If this path is specified, sequins will
+# start goforit backed by the JSON file located at that path.
+# Goforit enables feature flagging within sequins and can be used
+# to easily toggle remote refresh on and off.  See
+# disableRemoteRefreshFlagPrefix in sequins.go for more details.
+
+[storage]
+
+# compression = "snappy"
+# This can be either 'snappy' or 'none', and defines how data is compressed
+# on disk.
+
+# block_size = 4096
+# This controls the block size for on-disk compression.
+
+[s3]
+
+# region = "us-west-1"
+# Unset by default. The S3 region for the bucket where your data is. If unset,
+# and sequins is running on EC2, this will be set to the instance region.
+
+# access_key_id = "AKIAIOSFODNN7EXAMPLE"
+# secret_access_key = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+# Unset by default. The access key and secret to use for S3. If unset, the env
+# variables AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY will be used, or IAM
+# instance role credentials if they are available.
+
+# max_retries = 3
+# Number of times to try an S3 download before returning an error.
+
+[sharding]
+
+# enabled = false
+# If true, sequins will attempt to connect to zookeeper at the specified
+# addresses (see below), and coordinate with peer instances to shard datasets.
+# For a complete description of the sharding algorithm, see the manual.
+
+# replication = 2
+# This is the number of replicas responsible for each partition.
+
+# min_replication = 1
+# This is the minimum number of replicas required for sequins to switch to
+# a new version. Set this to a higher value to ensure data redundancy before
+# upgrading.
+# You probably don't want this to be equal to `replication`,
+# or sequins will never upgrade versions if any node at all is down.
+
+# max_replication = 0
+# This is the maximum number of replicas that sequins will allow to exist for a
+# given partition. This can come into play if ZK starts flapping while nodes
+# are coming online, causing partition assignments to be inconsistent. You
+# probably don't want this to be equal to `replication` as it will make it hard
+# to replace a node that is having issues (since the replacement node will see
+# all partitions as already properly replicated and refuse to fetch them
+# again).
+# A value of less than `replication` means that `max_replication` is
+# ignored and no limit is imposed.
+
+# time_to_converge = "10s"
+# Upon startup, sequins will wait this long for the set of known peers to
+# stabilize.
+
+# proxy_timeout = "100ms"
+# This is the total timeout (connect + request) for proxied requests to peers
+# in a sequins cluster. You may want to increase this if you're running on
+# particularly cold storage, or if there are other factors significantly
+# increasing request time.
+
+# proxy_stage_timeout = "50ms"
+# Unset by default. After this interval, sequins will try another peer
+# concurrently with the first, as long as there are other peers available and
+# the total time is less than 'proxy_timeout'. If left unset, this defaults to
+# the 'proxy_timeout' divided by 'replication_factor' - enough time for all
+# peers to be tried within the total timeout.
+
+# cluster_name = "sequins"
+# This defines the root prefix to use for zookeeper state. If you are running
+# multiple sequins clusters using the same zookeeper for coordination, you
+# should change this so they can't conflict.
+
+# advertised_hostname = "sequins1.example.com"
+# Unset by default. This is the hostname sequins uses to advertise itself to
+# peers in a cluster. It should be resolvable by those peers. If left unset, it
+# will be set to the hostname of the server.
+
+# shard_id = "sequins1"
+# Unset by default. The shard ID is used to determine which partitions
+# the node is responsible for. By default, it is the same as
+# 'advertised_hostname'. Unlike the hostname, however, it doesn't have to be
+# unique; two nodes can have the same shard_id, in which case they will download
+# the same  partitions. This can be useful if you don't have stable hostnames,
+# but want to be able to rebuild a server to take the place of a dead or
+# decomissioning one.
+
+[zk]
+
+# servers = ["localhost:2181"]
+# If set and 'sharding.enabled' is true, sequins will connect to zookeeper at
+# the given addresses.
+
+# connect_timeout = "1s"
+# This specifies how long to wait while connecting to zookeeper.
+
+# session_timeout = "10s"
+# This specifies the session timeout to use with zookeeper. The
+# actual timeout is negotiated between server and client, but will never be
+# lower than this number.
+
+[datadog]
+
+# url = "localhost:8200"
+# If set, sequins will report metrics concerning S3 file downloads using the
+# DogStatsD protocol to this address.
+
+[debug]
+
+# bind = "localhost:6060"
+# Unset by default. If set, binds the golang debug http server, which can serve
+# expvars and profiling information, to the specified address.
+
+# expvars = true
+# If set, this adds expvars to the debug HTTP server, including the default ones
+# and a few sequins-specific ones.
+
+# pprof = false
+# If set, this adds the default pprof handlers to the debug HTTP server.
+
+# request_log_enable = false
+# If set, this enables request logging. Must also set request_log_file.
+
+# request_log_file = "/var/log/sequins-requests.log"
+# Unset by default. If set, this will be the destination for any request logging.
+# Request logging can then be enabled with either request_log, or a feature flag.

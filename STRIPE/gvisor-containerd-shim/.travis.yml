@@ -1,0 +1,29 @@
+dist: trusty
+sudo: required
+language: go
+go: "1.12.x"
+
+env:
+  - GO111MODULE=on CONTAINERD_VERSION=1.1.5 RUNSC_VERSION=2019-08-06 TEST=untrusted-workload
+  - GO111MODULE=on CONTAINERD_VERSION=1.2.1 RUNSC_VERSION=2019-08-06 TEST=untrusted-workload
+  - GO111MODULE=on CONTAINERD_VERSION=1.2.1 RUNSC_VERSION=2019-08-06 TEST=runtime-handler
+  - GO111MODULE=on CONTAINERD_VERSION=1.2.1 RUNSC_VERSION=2019-08-06 TEST=runtime-handler-shim-v2
+
+
+go_import_path: github.com/google/gvisor-containerd-shim
+
+addons:
+  apt:
+    packages:
+      - socat
+      - conntrack
+      - ipset
+
+before_install:
+  - uname -r
+  - sudo apt-get -q update
+  - sudo apt-get install -y libseccomp-dev/trusty-backports
+
+script:
+  - make test
+  - ./test/e2e/${TEST}/test.sh

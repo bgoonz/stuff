@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package helloworld;
+
+message FooRequest {};
+message BarRequest {};
+message FooResponse {};
+
+service Foo {
+  rpc Invoke(BarRequest) returns (FooResponse) {}
+}

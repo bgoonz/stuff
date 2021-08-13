@@ -1,0 +1,18 @@
+{
+    // Show the path in the top window bar.
+    "window.title": "${rootName}${separator}${activeEditorMedium}",
+
+    "editor.formatOnSave": false,
+
+    "go.formatTool": "goimports",
+    "go.formatFlags": [
+        "-local", "github.com/stripe/stripe-cli",
+    ],
+    "go.lintTool": "golangci-lint",
+    "go.lintFlags": [
+        "--fast",
+    ],
+    "[go]": {
+        "editor.formatOnSave": true
+    },
+}

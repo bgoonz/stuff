@@ -1,0 +1,50 @@
+                <table class="table table-striped table-condensed">
+                    <thead>
+                        <th>node</th>
+                        <th>query</th>
+                        <th>created</th>
+                        <th>run after</th>
+                        <th>retrieved</th>
+                        {% if not status %}<th>status</th>{% endif %}
+                        <th>result</th>
+                    </thead>
+
+                    <tbody>
+                        {% for query in queries %}
+                        <tr>
+                            <td>
+                                <a href="{{ url_for('manage.get_node', node_id=query.node_id) }}">{{ query.node.display_name }}</a>
+                            </td>
+                            <td>
+                                <code>{{ query.distributed_query.sql }}</code>
+                                <a href="{{ url_for('manage.distributed_results', distributed_id=query.distributed_query.id) }}">
+                                    <i class="fa fa-list-alt" title="View results for only this query"></i>
+                                </a>
+                            </td>
+                            <td>{{ query.distributed_query.timestamp }}</td>
+                            <td>{{ query.distributed_query.not_before or 'immediately' }}</td>
+                            <td>{{ query.timestamp or '' }}</td>
+                            {% if not status %}
+                            <td>
+                                {%- if query.status == DistributedQueryTask.NEW -%}
+                                NEW
+                                {%- elif query.status == DistributedQueryTask.PENDING -%}
+                                PENDING
+                                {%- elif query.status == DistributedQueryTask.COMPLETE -%}
+                                COMPLETE
+                                {%- endif -%}
+                            </td>
+                            {% endif %}
+
+                            <td>
+                                {% if query.results %}
+                                <a href="{{ url_for('manage.get_distributed_result', node_id=query.node_id, guid=query.guid) }}">{{ query.results | first | attr('timestamp') }}</a>
+                                {% elif query.status == DistributedQueryTask.COMPLETE %}
+                                <p class="text-center">&mdash;</p>
+                                {% endif %}
+                            </td>
+
+                        {% endfor %}
+                    </tbody>
+
+                </table>

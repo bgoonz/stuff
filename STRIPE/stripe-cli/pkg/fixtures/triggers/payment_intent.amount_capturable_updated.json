@@ -1,0 +1,22 @@
+{
+  "_meta": {
+    "template_version": 0
+  },
+  "fixtures": [
+    {
+      "name": "payment_intent",
+      "path": "/v1/payment_intents",
+      "method": "post",
+      "params": {
+        "amount": 2000,
+        "capture_method": "manual",
+        "confirm": true,
+        "confirmation_method": "manual",
+        "currency": "usd",
+        "description": "(created by Stripe CLI)",
+        "payment_method": "pm_card_visa",
+        "return_url": "https://stripe.com"
+      }
+    }
+  ]
+}

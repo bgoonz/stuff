@@ -1,0 +1,363 @@
+[[faq]]
+= Frequently Asked Questions
+
+[partintro]
+--
+This section will be updated as more frequently asked questions arise
+
+* <<faq_doc_error,How can I report an error in the documentation?>>
+* <<faq_partial_delete,Can I delete only certain data from within indices?>>
+* <<faq_strange_chars,Can Curator handle index names with strange characters?>>
+* <<entrypoint-fix,I'm getting `DistributionNotFound` and `entry_point` errors when I try to run Curator.  What am I doing wrong?>>
+* <<faq_lb_timeout,Snapshots seem to be working. Why am I getting `SnapshotMissingException` messages?>>
+* <<faq_old_indices,Why doesn't Curator 4 work with older indices?>>
+* <<faq_aws_iam,Why doesn't Curator 4 work with AWS Elasticsearch?>>
+* <<faq_unicode,Why am I getting an error message about ASCII encoding?>>
+--
+
+[[faq_doc_error]]
+== Q: How can I report an error in the documentation?
+
+[float]
+A: Use the "Edit" link on any page
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+See <<site-corrections,Site Corrections>>.
+
+[[faq_partial_delete]]
+== Q: Can I delete only certain data from within indices?
+
+[float]
+A: It's complicated
+~~~~~~~~~~~~~~~~~~~
+
+[float]
+TL;DR: No. Curator can only delete entire indices.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+[float]
+Full answer:
+^^^^^^^^^^^^
+
+As a thought exercise, think of Elasticsearch indices as being like databases,
+or tablespaces within a database. If you had hundreds of millions of rows to
+delete from your database, would you run a separate
+`DELETE from TABLE where date<YYYY.MM.dd` to assemble hundreds of millions of
+individual delete operations every day, or would you partition your tables in a
+way that you could simply run `DROP table TABLENAME.YYYY.MM.dd`? The strain on
+your database would be astronomical on the former and next to nothing on the
+latter. Elasticsearch works much the same way. While Elasticsearch _can_
+technically do both methods, for use-cases with time-series data (like logging),
+we recommend dropping entire indices vs. the extremely I/O expensive search and
+delete method. Curator was created to help fill that need.
+
+While you can store different types within different indices (e.g.
+syslog-2014.05.05, apache-2015.05.06), this gets very expensive, very quickly in
+a totally different way. Each shard in Elasticsearch is a Lucene index. Each
+index requires a portion of the heap to exist and be kept current. If you have 3
+daily indices with 5 primary shards each, you suddenly have reduced the
+available heap space for shard management by a factor of 3, having gone from 5
+shards to 15, __per index,__ not counting multiple indexes per day. The ways to
+mitigate this (if you pursue this route) include massive daily indexing boxes
+and using shard allocation/routing to move indices to specific members of the
+cluster where they can have less effect; keeping fewer days of information;
+having more nodes in your cluster, and so forth.
+
+[float]
+Conclusion:
+^^^^^^^^^^^
+
+While it may be desirable to have different life-cycles for your data, sometimes
+it's just easier and cheaper to store everything as long as the longest
+life-cycle you wish to maintain.
+
+[float]
+Post-script:
+^^^^^^^^^^^^
+
+Even though it is neither recommended*, nor best practices, it is still possible
+to perform these search & delete operations yourself, using the Elasticsearch
+API. Curator will not be modified to perform operations such as these, however.
+Curator is meant to manage at the index level, rather than the data level.
+
+*There are reasons Elasticsearch does not recommend this, particularly for
+time-series data. For more information read
+http://blog.mikemccandless.com/2011/02/visualizing-lucenes-segment-merges.html
+and watch what happens to your segments when you delete data.
+
+'''''
+
+[[faq_strange_chars]]
+== Q: Can Curator handle index names with strange characters?
+
+[float]
+A: Yes!
+~~~~~~~
+
+This problem can be resolved by using the
+<<filtertype_pattern,pattern filtertype>> with <<fe_kind,kind>> set to `regex`,
+and <<fe_value,value>> set to the needed regular expression.
+
+[float]
+The Problem:
+^^^^^^^^^^^^
+
+Illegal characters make it hard to delete indices.
+
+------------------
+% curl logs.example.com:9200/_cat/indices
+red    }?ebc-2015.04.08.03
+                          sip-request{ 5 1         0  0     632b     316b
+red    }?ebc-2015.04.08.03
+                          sip-response 5 1         0  0     474b     237b
+red    ?ebc-2015.04.08.02
+                         sip-request{ 5 1         0  0     474b     316b
+red
+eb                               5 1         0  0     632b     316b
+red    ?e                                5 1         0  0     632b     316b
+------------------
+
+&nbsp;
+
+You can see it looks like there are some tab characters and maybe newline
+characters. This makes it hard to use the HTTP API to delete the indices.
+
+Dumping all the index settings out:
+
+[source,sh]
+-------
+curl -XGET localhost:9200/*/_settings?pretty
+-------
+
+&nbsp;
+
+...reveals the index names as the first key in the resulting JSON.  In this
+case, the names were very atypical:
+
+-------
+}\b?\u0011ebc-2015.04.08.02\u000Bsip-request{
+}\u0006?\u0011ebc-2015.04.08.03\u000Bsip-request{
+}\u0003?\u0011ebc-2015.04.08.03\fsip-response
+...
+-------
+
+&nbsp;
+
+Curator lets you use regular expressions to select indices to perform actions
+on.
+
+WARNING: Before attempting an action, see what will be affected by using the
+`--dry-run` flag first.
+
+To delete the first three from the above example, use `'.*sip.*'` as your
+regular expression.
+
+NOTE: In an <<actionfile,actionfile>>, regular expressions and strftime date
+strings _must_ be encapsulated in single-quotes.
+
+The next one is trickier. The real name of the index was `\n\u0011eb`. The
+regular expression `.*b$` did not work, but `'\n.*'` did.
+
+The last index can be deleted with a regular expression of `'.*e$'`.
+
+The resulting <<actionfile,actionfile>> might look like this:
+
+[source,yaml]
+--------
+actions:
+  1:
+    description: Delete indices with strange characters that match regex '.*sip.*'
+    action: delete_indices
+    options:
+      continue_if_exception: False
+      disable_action: False
+    filters:
+    - filtertype: pattern
+      kind: regex
+      value: '.*sip.*'
+  2:
+    description: Delete indices with strange characters that match regex '\n.*'
+    action: delete_indices
+    options:
+      continue_if_exception: False
+      disable_action: False
+    filters:
+    - filtertype: pattern
+      kind: regex
+      value: '\n.*'
+  3:
+    description: Delete indices with strange characters that match regex '.*e$'
+    action: delete_indices
+    options:
+      continue_if_exception: False
+      disable_action: False
+    filters:
+    - filtertype: pattern
+      kind: regex
+      value: '.*e$'
+--------
+
+&nbsp;
+
+'''''
+
+[[entrypoint-fix]]
+== Q: I'm getting `DistributionNotFound` and `entry_point` errors when I try to run Curator.  What am I doing wrong?
+
+[float]
+A: You likely need to upgrade `setuptools`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you are still unable to install, or get strange errors about dependencies you
+know you've installed, or messages mentioning `entry_point`, you may need to
+upgrade the `setuptools` package.  This is especially common with RHEL and
+CentOS installs, and their variants, as they depend on Python 2.6.
+
+If you can run `pip install -U setuptools`, it should correct the problem.
+
+You may also be able to download and install manually:
+
+. `wget https://pypi.python.org/packages/source/s/setuptools/setuptools-15.1.tar.gz -O setuptools-15.1.tar.gz`
+. `pip install setuptools-15.1.tar.gz`
+
+Any dependencies this version of setuptools may require will have to be manually
+acquired and installed for your platform.
+
+For more information about setuptools, see https://pypi.python.org/pypi/setuptools
+
+This fix originally appeared https://github.com/elastic/curator/issues/56#issuecomment-77843587[here].
+
+'''''
+
+[[faq_lb_timeout]]
+== Q: Snapshots seem to be working. Why am I getting `SnapshotMissingException` messages?
+
+[float]
+A: A load balancer, or other network fixture could be timing out your connection.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A gateway, proxy, or load balancer timeout will usually result in
+http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html[504 HTTP responses]:
+
+504 Gateway Timeout::
+    The server, while acting as a gateway or proxy, did not receive a timely
+    response from the upstream server specified by the URI (e.g. HTTP, FTP,
+    LDAP) or some other auxiliary server (e.g. DNS) it needed to access in
+    attempting to complete the request.
+
+
+An easy way to check is to change the <<loglevel,loglevel>> to DEBUG and look
+for 504 errors and long requests, like these:
+
+[source,txt]
+-------
+2015-04-02 13:18:37,702 DEBUG     urllib3.connectionpool          _make_request:368  "PUT /_snapshot/my_backup_s3_repository/curator-20150402121735?wait_for_completion=true HTTP/1.1" 504 0
+2015-04-02 13:18:37,703 WARNING            elasticsearch       log_request_fail:81   PUT /_snapshot/my_backup_s3_repository/curator-20150402121735?wait_for_completion=true [status:504 request:59.777s]
+-------
+
+Note the `status:504` and the `request:59.777s` at the right end of the line.
+
+In the case of these error messages, it turned out to be an AWS load balancer
+that had a 60 second timeout for connections.  The fix was to increase the
+timeout.  Another potential resolution would be to have Curator connect to a
+client directly, rather than through a load balancer or proxy.
+
+IMPORTANT: You will need to set <<blacklist,`blacklist: []`>> in your
+<<configfile,configuration file>> to catch these 504 errors, as they are
+filtered by default.
+
+'''''
+
+[[faq_old_indices]]
+== Q: Why doesn't Curator 4 work with older indices?
+
+[float]
+A: Because Curator 4 requires that all indices have a `creation_date`.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The actual error message might look something like this:
+
+[source,txt]
+-------
+2016-08-30 13:18:37,702 WARNING Index: indexname has no "creation_date"! This implies that the index predates Elasticsearch v1.4. For safety, this index will be removed from the actionable list.
+-------
+
+Older indices (made before Elasticsearch 1.4) do not have this metadata.
+Trying to support this in Curator 4 would result in having to catch edge cases
+for some indices, but not for others.  In order to keep the code clean, and with
+fewer exceptions, a design decision was made to not work with indices without a
+`creation_date`. Curator will not change them in any way, ever.  They are
+automatically removed from the list of actionable indices.
+
+You can use the Sense plugin for Kibana to act on these indices manually, or
+your preference of API method.
+
+'''''
+
+[[faq_aws_iam]]
+== Q: Why doesn't Curator 4 work with AWS Elasticsearch?
+
+[float]
+A: Because Curator 4 requires access to the `/_cluster/state/metadata` endpoint.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+There is some confusion because Curator 3 supported AWS ES, but Curator 4 does
+not.  There are even some IAM credentials listed as options for client
+connections.  These are currently available, but not able to be used.  This may
+change at some point, so they remain at the ready until then.
+
+Curator 4 requires access to the `/_cluster/state/metadata` endpoint in order to
+pull metadata at IndexList initialization time for _all_ indices.  This metadata
+is used to determine index routing information, index sizing, index state
+(either `open` or `close`), aliases, and more.  Curator 4 switched to doing this
+in order to reduce the number of repetitive client calls that were made in the
+previous versions.
+
+After Curator 4 was released, AWS announced it's 2.3 version of Elasticsearch.
+Unfortunately, this version did not support the `/_cluster/state/metadata`
+endpoint, which means that Curator cannot be used to manage indices in AWS.
+
+https://forums.aws.amazon.com/thread.jspa?threadID=236643&tstart=0[This thread]
+(requires AWS login credentials) tracks the issue on the Amazon side.
+
+'''''
+
+[[faq_unicode]]
+== Q: Why am I getting an error message about ASCII encoding?
+
+If you see messages like this:
+
+[source,sh]
+-----------
+Click will abort further execution because Python 3 was configured to use ASCII
+as encoding for the environment.  Either run this under Python 2 or consult
+http://click.pocoo.org/python3/ for mitigation steps.
+
+This system lists a couple of UTF-8 supporting locales that
+you can pick from.  The following suitable locales where
+discovered: aa_DJ.utf8, aa_ER.utf8, aa_ET.utf8, ...
+-----------
+
+You are likely running Curator with Python 3, or the RPM/DEB package, which was
+compiled with Python 3.  Using the command-line library
+http://click.pocoo.org[click] with Python 3 requires your locale to be Unicode.
+You can set this up by exporting the `LC_ALL` environment variable like this:
+
+[source,sh]
+-----------
+$ export LC_ALL=mylocale.utf8
+-----------
+
+Where `mylocale.utf8` is one of the listed "suitable locales."
+
+You can also set the locale on the command-line before the Curator command:
+
+[source,sh]
+-----------
+$ LC_ALL=mylocale.utf8 curator [ARGS] ...
+-----------
+
+IMPORTANT: If you use `export`, be sure to choose the correct locale as it will
+be set for the duration of your terminal session.
+
+'''''

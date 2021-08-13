@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "template_version": 0
+  },
+  "fixtures": [
+    {
+      "name": "payment_intent",
+      "path": "/v1/payment_intents",
+      "method": "post",
+      "params": {
+        "amount": 2000,
+        "confirm": "true",
+        "currency": "usd",
+        "description": "(created by Stripe CLI)",
+        "payment_method": "pm_card_visa",
+        "payment_method_types": ["card"],
+        "shipping": {
+          "name": "Jenny Rosen",
+          "address": {
+            "line1": "510 Townsend St",
+            "postal_code": "94103",
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "US"
+          }
+        }
+      }
+    }
+  ]
+}

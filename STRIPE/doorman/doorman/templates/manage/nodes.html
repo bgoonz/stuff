@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class="body-content">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>
+                    {% if status == 'active' %}
+                    active nodes /
+                    <a href="{{ url_for('manage.nodes', status='inactive') }}">inactive nodes</a>
+                    {% else %}
+                    <a href="{{ url_for('manage.nodes') }}">active nodes</a>
+                    / inactive nodes
+                    {% endif %}
+                </h1>
+                
+                {% if nodes %}
+                {% include "tables/nodes.html" %}
+
+                <div class="text-center">
+                    <small>{{ pagination.info }}</small>
+                    {{ pagination.links }}
+                </div>
+
+                {% elif request.endpoint == url_for('manage.nodes') %}
+                <p>No nodes have enrolled yet!</p>
+                {% endif %}
+
+            </div><!--./col-md-12-->
+        </div><!--./row-->
+    </div><!--./body-content-->
+
+{% endblock %}

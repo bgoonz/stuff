@@ -1,0 +1,8 @@
+{
+  "docs": {
+    "Overview": ["intro", "priors", "likelihoods", "vectors", "posteriors"],
+    "Installation": ["install", "jupyter", "roadmap", "modules"],
+    "API Reference": ["distributions", "model",  "generator", "real", "vec", "samplers"],
+    "Implementation": ["probprog"] 
+  }
+}

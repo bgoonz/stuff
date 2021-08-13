@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class="body-content">
+        <div class="row">
+            <div class="col-md-9">
+                <h1>packs</h1>
+
+                {% if packs %}
+                {% for pack in packs %}
+                <h2 id="{{ pack.name }}">{{ pack.name }}</h2>
+                <p>
+                    <input class="tagsinput" placeholder="Add tags by typing here" value="{{ pack.tags | map(attribute='value') | sort | join(',') }}" data-uri="{{ url_for('manage.tag_pack', pack_name=pack.name) }}" size="23">
+                </p>
+                {% include "_pack.html" %}
+                {% endfor %}
+                {% else %}
+                <p>No packs uploaded. You may upload a new pack <a href="{{ url_for('manage.add_pack') }}">here</a>.<p>
+                {% endif %}
+            </div>
+
+            <nav class="col-md-3 bs-docs-sidebar">
+                <ul class="nav nav-stacked fixed" id="sidebar">
+                {% if packs %}
+                    {% for pack in packs %}
+                    <li>
+                        <a href="#{{ pack.name }}">{{ pack.name }}</a>
+                        <ul class="nav nav-stacked">
+                        {% for query in pack.queries | sort(attribute='name') %}
+                            <li><a href="#{{ pack.name }}-{{ query.name }}">{{ query.name }}</a></li>
+                        {% endfor %}
+                        </ul>
+                    </li>
+                    {% endfor %}
+                {% endif %}
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+
+{% endblock %}

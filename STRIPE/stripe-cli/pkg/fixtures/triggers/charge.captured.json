@@ -1,0 +1,24 @@
+{
+  "_meta": {
+    "template_version": 0
+  },
+  "fixtures": [
+    {
+      "name": "charge",
+      "path": "/v1/charges",
+      "method": "post",
+      "params": {
+        "source": "tok_visa",
+        "amount": 100,
+        "currency": "usd",
+        "capture": false,
+        "description": "(created by Stripe CLI)"
+      }
+    },
+    {
+      "name": "capture",
+      "path": "/v1/charges/${charge:id}/capture",
+      "method": "post"
+    }
+  ]
+}

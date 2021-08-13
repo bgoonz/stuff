@@ -1,0 +1,181 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'checkstyle'
+    id 'org.jetbrains.kotlin.plugin.parcelize'
+}
+
+assemble.dependsOn('lint')
+check.dependsOn('checkstyle')
+
+configurations {
+    ktlint
+}
+
+ext {
+    retrofitVersion = '2.9.0'
+}
+
+// Read values from gradle.properties or system environment variable
+def getBackendUrl() {
+    return findProperty('STRIPE_EXAMPLE_BACKEND_URL') ?: ""
+}
+
+def getPublishableKey() {
+    return findProperty('STRIPE_EXAMPLE_PUBLISHABLE_KEY') ?: ""
+}
+
+def getAccountId() {
+    return findProperty('STRIPE_ACCOUNT_ID') ?: ""
+}
+
+dependencies {
+    implementation project(':payments')
+    implementation libraries.androidx.appcompat
+    implementation libraries.androidx.recyclerview
+    implementation libraries.androidx.lifecycle.livedata.ktx
+    implementation libraries.androidx.lifecycle.viewmodel.ktx
+    implementation "com.google.android.material:material:$materialVersion"
+    implementation libraries.androidx.fragment.ktx
+    implementation libraries.androidx.constraintlayout
+    implementation libraries.androidx.preference.ktx
+
+    implementation 'com.google.android.gms:play-services-wallet:18.1.3'
+
+    /* Used for server calls */
+    implementation 'com.squareup.okio:okio:2.10.0'
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+
+    /* Used to make Retrofit easier and GSON & Rx-compatible*/
+    implementation 'com.google.code.gson:gson:2.8.7'
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.1'
+
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
+
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoroutinesVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinCoroutinesVersion"
+
+    ktlint "com.pinterest:ktlint:$ktlintVersion"
+
+    testImplementation "androidx.test:core:$androidTestVersion"
+
+    // Core library
+    androidTestImplementation "androidx.test:core:$androidTestVersion"
+    androidTestImplementation "androidx.test:core-ktx:$androidTestVersion"
+
+    // AndroidJUnitRunner and JUnit Rules
+    androidTestImplementation "androidx.test:runner:$androidTestVersion"
+    androidTestImplementation "androidx.test:rules:$androidTestVersion"
+
+    // Assertions
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.ext:junit-ktx:1.1.3'
+    androidTestImplementation "androidx.test.ext:truth:$androidTestVersion"
+    androidTestImplementation 'com.google.truth:truth:1.1.3'
+
+    // Espresso dependencies
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$espressoVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-intents:$espressoVersion"
+    androidTestImplementation "androidx.test.espresso.idling:idling-concurrent:$espressoVersion"
+
+    // The following Espresso dependency can be either "implementation"
+    // or "androidTestImplementation", depending on whether you want the
+    // dependency to appear on your APK's compile classpath or the test APK
+    // classpath.
+    androidTestImplementation "androidx.test.espresso:espresso-idling-resource:$espressoVersion"
+
+    androidTestUtil "androidx.test:orchestrator:$androidTestVersion"
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion rootProject.ext.compileSdkVersion
+
+        vectorDrawables.useSupportLibrary = true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // From https://developer.android.com/training/testing/junit-runner:
+        // > To remove all shared state from your device's CPU and memory after each test,
+        // > use the clearPackageData flag.
+        testInstrumentationRunnerArguments clearPackageData: 'true'
+
+        manifestPlaceholders = [
+                BACKEND_URL: getBackendUrl(),
+                PUBLISHABLE_KEY: getPublishableKey(),
+                STRIPE_ACCOUNT_ID: getAccountId()
+        ]
+    }
+
+    testOptions {
+        execution 'ANDROIDX_TEST_ORCHESTRATOR'
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+    }
+
+    lintOptions {
+        disable 'MissingTranslation'
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+        androidTest {
+            setRoot('src/test')
+        }
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+task ktlint(type: JavaExec, group: "verification") {
+    description = "Check Kotlin code style."
+    main = "com.pinterest.ktlint.Main"
+    classpath = configurations.ktlint
+    args "src/**/*.kt"
+    // to generate report in checkstyle format prepend following args:
+    // "--reporter=plain", "--reporter=checkstyle,output=${buildDir}/ktlint.xml"
+    // see https://github.com/pinterest/ktlint#usage for more
+}
+check.dependsOn ktlint
+
+task ktlintFormat(type: JavaExec, group: "formatting") {
+    description = "Fix Kotlin code style deviations."
+    main = "com.pinterest.ktlint.Main"
+    classpath = configurations.ktlint
+    args "-F", "src/**/*.kt"
+}
+

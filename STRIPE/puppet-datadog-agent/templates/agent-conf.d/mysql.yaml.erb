@@ -1,0 +1,24 @@
+#
+# MANAGED BY PUPPET
+#
+
+init_config:
+
+instances:
+  - server: <%= @host %>
+    user: <%= @user %>
+    pass: <%= @password %>
+<% if @sock -%>
+    sock: <%= @sock %>
+<% end -%>
+#    port: 3306             # Optional
+#    defaults_file: my.cnf  # Alternate configuration mechanism
+<% if !@tags.empty? -%>
+    tags:                  # Optional
+<% @tags.each do |tag| -%>
+        - <%= tag %>
+<% end -%>
+<% end -%>
+    options:               # Optional
+        replication: <%= @replication %>
+        galera_cluster: <%= @galera_cluster %>

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package helloworld;
+
+message Empty {};
+
+service Foo {
+  rpc Bar(Empty) returns (Empty) {}
+}

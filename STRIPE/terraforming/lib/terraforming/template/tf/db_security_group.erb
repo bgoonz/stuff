@@ -1,0 +1,26 @@
+<% db_security_groups.each do |security_group| -%>
+resource "aws_db_security_group" "<%= module_name_of(security_group) %>" {
+    name        = "<%= security_group.db_security_group_name %>"
+    description = "<%= security_group.db_security_group_description %>"
+
+<% security_group.ip_ranges.each do |cidr| -%>
+    ingress {
+        cidr                    = "<%= cidr.cidrip %>"
+        security_group_name     = ""
+        security_group_id       = ""
+        security_group_owner_id = ""
+    }
+
+<% end -%>
+<% security_group.ec2_security_groups.each do |ec2_sg| -%>
+    ingress {
+        cidr                    = ""
+        security_group_name     = "<%= ec2_sg.ec2_security_group_name %>"
+        security_group_id       = "<%= ec2_sg.ec2_security_group_id %>"
+        security_group_owner_id = "<%= ec2_sg.ec2_security_group_owner_id %>"
+    }
+
+<% end -%>
+}
+
+<% end -%>

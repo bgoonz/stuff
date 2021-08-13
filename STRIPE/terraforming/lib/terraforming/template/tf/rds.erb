@@ -1,0 +1,25 @@
+<% db_instances.each do |instance| -%>
+resource "aws_db_instance" "<%= instance.db_instance_identifier %>" {
+    identifier                = "<%= module_name_of(instance) %>"
+    allocated_storage         = <%= instance.allocated_storage %>
+    storage_type              = "<%= instance.storage_type %>"
+    engine                    = "<%= instance.engine %>"
+    engine_version            = "<%= instance.engine_version %>"
+    instance_class            = "<%= instance.db_instance_class %>"
+    name                      = "<%= instance.db_name %>"
+    username                  = "<%= instance.master_username %>"
+    password                  = "xxxxxxxx"
+    port                      = <%= instance.endpoint.port %>
+    publicly_accessible       = <%= instance.publicly_accessible %>
+    availability_zone         = "<%= instance.availability_zone %>"
+    security_group_names      = <%= instance.db_security_groups.map { |sg| sg.db_security_group_name }.inspect %>
+    vpc_security_group_ids    = <%= instance.vpc_security_groups.map { |sg| sg.vpc_security_group_id }.inspect %>
+    db_subnet_group_name      = "<%= instance.db_subnet_group ? instance.db_subnet_group.db_subnet_group_name : "" %>"
+    parameter_group_name      = "<%= instance.db_parameter_groups[0].db_parameter_group_name %>"
+    multi_az                  = <%= instance.multi_az %>
+    backup_retention_period   = <%= instance.backup_retention_period %>
+    backup_window             = "<%= instance.preferred_backup_window %>"
+    maintenance_window        = "<%= instance.preferred_maintenance_window %>"
+    final_snapshot_identifier = "<%= instance.db_instance_identifier %>-final"
+}
+<% end -%>

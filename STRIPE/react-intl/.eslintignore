@@ -1,0 +1,7 @@
+dist/**/*.js
+examples/**/node_modules/**/*.js
+examples/**/build/**/*.js
+examples/hello-world/bundle.js
+lib/**/*.js
+src/en.js
+src/locale-data/*.js

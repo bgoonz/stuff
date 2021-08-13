@@ -1,0 +1,32 @@
+sudo: false
+language: python
+cache: pip
+python:
+  - "2.6"
+  - "2.7"
+  - "3.3"
+  - "3.4"
+  - "3.5"
+  - "3.5-dev" # 3.5 development branch
+
+install: "pip install -r requirements/dev.txt"
+
+services:
+  - postgresql
+  - redis-server
+
+addons:
+  postgresql: "9.4"
+
+before_script:
+  # Install JS dependencies
+  - npm install -g bower less
+  - bower install
+
+  # Create test DB
+  - psql -c 'create database doorman_test;' -U postgres
+
+  # Launch celery worker for tests
+  - env DOORMAN_ENV=test celery worker -D -A doorman.worker:celery -l DEBUG
+
+script: python manage.py test

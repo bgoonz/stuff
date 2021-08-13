@@ -1,0 +1,16 @@
+{
+  "ignoreDir": ["Godeps"],
+  "checks": [
+    {
+      "macro": "gofmt"
+    }, {
+      "macro": "vet"
+    }, {
+      "macro": "golint"
+    }, {
+      "macro": "gocyclo"
+    }, {
+      "macro": "gocoverdir"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+import java.time.Duration
+
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext.kotlinVersion = '1.5.21'
+    ext.dokkaVersion = '1.5.0'
+
+    repositories {
+        mavenCentral()
+        google()
+        gradlePluginPortal()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath "org.jetbrains.dokka:dokka-gradle-plugin:$dokkaVersion"
+        classpath "org.jetbrains.kotlinx:binary-compatibility-validator:0.6.0"
+    }
+}
+
+plugins {
+    id 'io.github.gradle-nexus.publish-plugin' version '1.1.0'
+}
+
+allprojects {
+    group = GROUP
+
+    repositories {
+        mavenCentral()
+        google()
+        gradlePluginPortal()
+    }
+
+    task checkstyle(type: Checkstyle) {
+        showViolations = true
+        configFile file("../settings/checkstyle.xml")
+        source 'src/main/java'
+        include '**/*.java'
+        exclude '**/gen/**'
+        exclude '**/R.java'
+        exclude '**/BuildConfig.java'
+
+        // empty classpath
+        classpath = files()
+    }
+}
+
+ext {
+    buildToolsVersion = "30.0.3"
+    compileSdkVersion = 30
+
+    kotlinCoroutinesVersion = '1.5.1'
+    composeVersion = '1.0.1'
+    espressoVersion = '3.4.0'
+    ktlintVersion = '0.42.1'
+    materialVersion = '1.4.0'
+    daggerVersion = '2.38.1'
+
+    androidTestVersion = '1.4.0'
+    junitVersion = '4.13.2'
+    robolectricVersion = '4.6'
+    mockitoCoreVersion = '3.11.2'
+    mockitoKotlinVersion = '3.2.0'
+
+    group_name = GROUP
+    version_name = VERSION_NAME
+}
+
+if (JavaVersion.current().isJava8Compatible()) {
+    allprojects {
+        tasks.withType(Javadoc) {
+            options.addStringOption('Xdoclint:none', '-quiet')
+        }
+    }
+}
+
+nexusPublishing {
+    packageGroup = GROUP
+
+    repositories {
+        sonatype {
+            username = project.findProperty('NEXUS_USERNAME') ?: ""
+            password = project.findProperty('NEXUS_PASSWORD') ?: ""
+        }
+    }
+
+    clientTimeout = Duration.ofMinutes(5)
+    connectTimeout = Duration.ofMinutes(1)
+
+    transitionCheckOptions {
+        maxRetries.set(40)
+        delayBetween.set(Duration.ofSeconds(10))
+    }
+}
+
+apply plugin: 'binary-compatibility-validator'
+apply plugin: 'org.jetbrains.dokka'
+
+
+tasks.dokkaHtmlMultiModule.configure {
+    outputDirectory = new File("${project.rootDir}/docs")
+}
+
+apiValidation {
+    ignoredPackages += ["com.stripe.android.databinding"]
+    ignoredProjects += ["example", "paymentsheet-example"]
+}
