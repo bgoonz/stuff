@@ -1,0 +1,9 @@
+image:
+  file: .gitpod.Dockerfile
+tasks:
+  - init: |
+      echo '🧡'
+
+vscode:
+  extensions:
+    - julialang.language-julia

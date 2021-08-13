@@ -1,0 +1,5 @@
+image: gitpod/workspace-full
+vscode:
+  extensions:
+    - abusaidm.html-snippets@0.2.1:7b7Vkkp6Lem9WOqKCYMq2w==
+    - Zignd.html-css-class-completion@1.19.0:b3YWQQIEP1z3u93nyLX0UA==

@@ -1,0 +1,1 @@
+{"version":3,"file":"semaphore.d.ts","sourceRoot":"","sources":["../../src/util/semaphore.ts"],"names":[],"mappings":"AAAA;;;;GAIG;AAGH,qBAAa,SAAS;IAIN,SAAS,CAAC,QAAQ,CAAC,QAAQ,EAAE,MAAM;IAH/C,SAAS,CAAC,KAAK,EAAE,CAAC,MAAM,IAAI,CAAC,EAAE,CAAM;IACrC,SAAS,CAAC,IAAI,EAAE,MAAM,CAAC;gBAEQ,QAAQ,EAAE,MAAM;IAMxC,OAAO;IAWD,OAAO,IAAI,OAAO,CAAC,IAAI,CAAC;CAWxC"}

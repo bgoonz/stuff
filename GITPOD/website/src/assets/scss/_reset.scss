@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-repeat: no-repeat;
+}
+:root {
+  font-size: 16px;
+}
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font);
+  font-size: var(--p-medium);
+  color: var(--dark-grey);
+  background: var(--sand-light);
+  overflow-x: hidden;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove margin, padding and list styles on ul, ol elements with a class attribute (leave content lists alone. may need to revisit this */
+ul:where([class]),
+ol:where([class]) {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ol[type="A"] {
+  list-style: outside upper-alpha;
+}
+ol[type="1"] {
+  list-style: outside decimal;
+}
+ol[type="I"] {
+  list-style: outside upper-roman;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+/* Ensure accessibility. Remove outline if we may miss images in prod */
+img:not([alt]) {
+  filter: blur(10px);
+  outline: 10px solid;
+}
+img[role="presentation"] {
+  filter: none;
+  outline: none;
+}
+
+/* margin bottom on everything  */
+main > * {
+  margin-bottom: 1em;
+}
+
+a,
+summary,
+button {
+  cursor: pointer;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make site accessible for those who request it, no matter what! */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+a {
+  text-decoration: underline solid;
+  text-underline-offset: 0.25em;
+  color: var(--link-grey);
+}
+a:hover,
+a:focus {
+  color: var(--black);
+  text-decoration: underline solid transparent;
+}
+/* low specificity. easy to overwrite */
+a[class] {
+  text-decoration: none;
+}

@@ -1,0 +1,8 @@
+checkoutLocation: src/github.com/andlabs/ui
+workspaceLocation: /
+image:
+  file: Dockerfile
+ports:
+  - port: 6080
+tasks:
+  - command: "go get -v ./... && cd examples && DISPLAY=:0 go run controlgallery.go"

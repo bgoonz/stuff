@@ -1,0 +1,16 @@
+ports:
+  - port: 8080
+    onOpen: open-preview
+checkoutLocation: "go/src/github.com/demo-apps/go-gin-app"
+workspaceLocation: "go/src/github.com/demo-apps/go-gin-app"
+tasks:
+  - init: >
+      go build -o app
+    command: >
+      ./app
+github:
+  prebuilds:
+    pullRequestsFromForks: true
+vscode:
+  extensions:
+    - golang.go

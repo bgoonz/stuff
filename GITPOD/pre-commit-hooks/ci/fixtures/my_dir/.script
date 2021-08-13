@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -eEu
+set -o pipefail
+
+# Executable script without the `.sh' extension
+:

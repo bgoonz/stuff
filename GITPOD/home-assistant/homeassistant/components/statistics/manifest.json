@@ -1,0 +1,8 @@
+{
+  "domain": "statistics",
+  "name": "Statistics",
+  "documentation": "https://www.home-assistant.io/components/statistics",
+  "requirements": [],
+  "dependencies": [],
+  "codeowners": ["@fabaff"]
+}

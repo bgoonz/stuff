@@ -1,0 +1,65 @@
+[package]
+name = "rust-starter"
+version = "1.0.0"
+authors = ["Abid Omar <contact@omarabid.com>"]
+edition = "2018"
+repository = "https://github.com/omarabid/rust-starter"
+readme = "README.md"
+license = "MIT"
+keywords = ["cli", "starter"]
+description = """
+Rust Starter aims to provide high quality components to bootstrap your Rust CLI Project. It includes a battery of most used libraries; and defines a set of Rust best practices.
+"""
+
+[workspace]
+members = [
+    "utils",
+    "cli",
+    "core",
+]
+
+[dependencies]
+utils = { path = "utils" }
+cli = { path = "cli"}
+core = { path = "core" }
+human-panic = "1.0.3"
+better-panic = "0.2.0"
+log = "0.4.11"
+slog-scope = "4.3.0"
+slog-stdlog = "4.1.0"
+
+[dev-dependencies]
+assert_cmd = "1.0.1"
+predicates = "1.0.5"
+
+[profile.dev]
+opt-level=0
+debug = true
+rpath = false
+lto = false
+debug-assertions = true
+codegen-units = 4
+
+[profile.release]
+opt-level=3
+debug = false
+rpath = false
+lto = true
+debug-assertions = false
+codegen-units = 1
+
+[profile.test]
+opt-level = 1
+debug = true
+rpath = false
+lto = false
+debug-assertions = true
+codegen-units = 4
+
+[profile.bench]
+opt-level = 3
+debug = false
+rpath = false
+lto = true
+debug-assertions = false
+codegen-units = 1

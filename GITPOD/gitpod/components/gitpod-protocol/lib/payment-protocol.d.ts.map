@@ -1,0 +1,1 @@
+{"version":3,"file":"payment-protocol.d.ts","sourceRoot":"","sources":["../src/payment-protocol.ts"],"names":[],"mappings":"AAAA;;;;GAIG;AAEF,yBAAiB,eAAe,CAAC;IACvB,MAAM,+BAA+B,uBAAuB,CAAA;CACtE;AAED,MAAM,WAAW,UAAU;IACvB,eAAe,EAAE,MAAM,CAAC;IACxB,QAAQ,EAAE,MAAM,CAAC;IACjB,WAAW,EAAE,MAAM,CAAC;CACvB;AAED,MAAM,WAAW,gBAAgB;IAC7B,GAAG,EAAE,MAAM,CAAC;IACZ,MAAM,EAAE,MAAM,CAAC;CAClB"}

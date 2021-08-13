@@ -1,0 +1,8 @@
+{
+  "domain": "template",
+  "name": "Template",
+  "documentation": "https://www.home-assistant.io/components/template",
+  "requirements": [],
+  "dependencies": [],
+  "codeowners": ["@PhracturedBlue"]
+}

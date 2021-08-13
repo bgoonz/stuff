@@ -1,0 +1,85 @@
+:root {
+  --font: "ABCDiatype", sans-serif;
+
+  --black: #12100c;
+  --dark-grey: #12100cb3;
+  --link-grey: #12100c97;
+  --black-hover: #2d2d2d;
+  --light-grey: #999795;
+  --divider: #dadada;
+  --sand-dark: #ece7e5;
+  --sand-light: #f5f4f4;
+  --off-white: #f9f9f9;
+  --white: #ffffff;
+  --brand-ripe: #ff8a00;
+  --brand-almost-ripe: #ffae33;
+  --brand-hover: #ffbe5c;
+  --brand-light: #ffe4bc;
+  --salmon: #ffb0ae;
+  --salmon-hover: #ffc0be;
+  --blue: #00a3ff;
+  --green: #218001;
+  --transparent-green: #2180010b;
+  --error: #f51f1f;
+  --transparent-error: #f51f1f0b;
+
+  --brand-gradient: linear-gradient(137.41deg, #ffad33 14.37%, #ff8a00 91.32%);
+
+  --shadow: 0 0.625rem 1.5rem 0rem rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.1);
+  --shadow-light: 0 1px 1px rgba(0, 0, 0, 0.1);
+  --shadow-brand: 0 0.625rem 1.5rem var(--brand-hover);
+
+  --h1: 5rem;
+  --h2: 3.375rem;
+  --h3: 3rem;
+  --h4: 2rem;
+  --h5: 1.75rem;
+  --h6: 1.25rem;
+  --p-large: 1.5rem;
+  --p-medium: 1.125rem;
+  --p-small: 1rem;
+  --p-footer: 0.938rem;
+  --p-xsmall: 0.8125rem;
+  --btn-small: 0.875rem;
+  --fine-print: 0.75rem;
+
+  --header-height: 5rem;
+  --row-max-width: 87.5rem;
+  --container-normal: 68.75rem;
+  --xx-large: 10rem;
+  --huge: 8rem;
+  --not-huge: 3rem;
+  --x-large: 4.5rem;
+  --large: 4rem;
+  --medium: 3.5rem;
+  --small: 3rem;
+  --x-small: 2rem;
+  --xx-small: 1.5rem;
+  --micro: 1rem; /* should we invert micro and macro? */
+  --macro: 0.5rem;
+
+  --border-light: 1px solid var(--sand-dark);
+
+  @media (max-width: 1140px) {
+    --h1: 3rem;
+    --h2: 2.5rem;
+    --h3: 2rem;
+    --h4: 1.5rem;
+    --h5: 1.25rem;
+    --h6: 1.123rem;
+    --p-large: 1.125rem;
+    --p-medium: 1rem;
+    --p-small: 0.875rem;
+    --btn-small: 0.75rem;
+    --fine-print: 0.75rem;
+    --huge: 6rem;
+
+    --small: 2.5rem;
+  }
+  @media (max-width: 768px) {
+    --huge: 3rem;
+    --not-huge: 1.5rem;
+    --x-small: 1rem;
+  }
+}

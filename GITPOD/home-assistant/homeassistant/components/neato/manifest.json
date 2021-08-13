@@ -1,0 +1,8 @@
+{
+  "domain": "neato",
+  "name": "Neato",
+  "documentation": "https://www.home-assistant.io/components/neato",
+  "requirements": ["pybotvac==0.0.15"],
+  "dependencies": [],
+  "codeowners": []
+}

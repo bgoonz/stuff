@@ -1,0 +1,4 @@
+{
+  "title": "template-datasette",
+  "description_html": "<p>An example of how to run <a href=\"https://datasette.readthedocs.io/\">Datasette</a> on Gitpod.</p><p>Hit the Open in Gitpod button to start an automated dev environment, in the cloud, in seconds.<p><a href=\"https://gitpod.io#https://github.com/gitpod-io/template-datasette\"><img src=\"https://gitpod.io/button/open-in-gitpod.svg\" alt=\"Open in Gitpod\" /></a></p>"
+}

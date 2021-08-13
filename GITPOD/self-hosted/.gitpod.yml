@@ -1,0 +1,6 @@
+image:
+  file: .gitpod.Dockerfile
+tasks:
+  - command: |
+      gp open values.yaml
+      ./utils/create-gcp-resources.go

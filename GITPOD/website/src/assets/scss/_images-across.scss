@@ -1,0 +1,13 @@
+.imageCarousel {
+  display: flex;
+  margin: 2rem auto;
+}
+.imageCarousel {
+  flex: 0 0 25%;
+}
+.imageCarousel li {
+  padding: 0.5rem;
+}
+.imageCarousel img {
+  width: 100%;
+}
