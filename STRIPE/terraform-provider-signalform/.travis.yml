@@ -1,8 +1,0 @@
-language: go
-sudo: required
-services:
-      - docker
-install:
-  - bash scripts/gitcookie.sh
-go:
-  - 1.9

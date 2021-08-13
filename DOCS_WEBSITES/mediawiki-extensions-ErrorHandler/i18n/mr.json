@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"V.narsikar"
+		]
+	},
+	"errorhandler-desc": "मिडियाविकिसाठी त्रुटी हाताळक",
+	"errorhandler-errors": "त्रुटी:",
+	"errorhandler-error-fatal": "जघन्य त्रुटी",
+	"errorhandler-error-warning": "ताकीद",
+	"errorhandler-error-parse": "पार्सर त्रुटी",
+	"errorhandler-error-notice": "सूचना",
+	"errorhandler-error-deprecated": "नापसंत",
+	"errorhandler-error-core-error": "गाभा त्रुटी",
+	"errorhandler-error-core-warning": "गाभा ताकीद",
+	"errorhandler-error-compile-error": "संकलन त्रुटी",
+	"errorhandler-error-compile-warning": "संकलन ताकीद",
+	"errorhandler-error-user-error": "सदस्य त्रुटी",
+	"errorhandler-error-user-warning": "सदस्य ताकीद",
+	"errorhandler-error-user-notice": "सदस्य सूचना",
+	"errorhandler-error-user-deprecated": "सदस्याची नापसंती",
+	"errorhandler-error-strict": "कठोर दर्जे",
+	"errorhandler-error-recoverable": "कॅशेची जघन्य त्रुटी",
+	"errorhandler-msg-text": "$1 :$3 मध्ये $2(ओळ $4)",
+	"errorhandler-msg-html": "<b>$1</b> :<b>$3</b> मध्ये <i>$2</i>(ओळ <b>$4</b>)",
+	"errorhandler-trace": "मागोवा घ्या:",
+	"errorhandler-trace-line": "$1 (ओळ $2): $3",
+	"errorhandler-trace-line-internal": "[आंतरिक क्रिया]: $1"
+}

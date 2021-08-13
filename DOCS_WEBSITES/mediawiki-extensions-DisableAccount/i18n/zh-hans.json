@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Liuxinyu970226",
+			"PhiLiP",
+			"Yfdyh000",
+			"阿pp"
+		]
+	},
+	"disableaccount-desc": "使管理员可以禁用单个帐户",
+	"right-disableaccount": "禁用账户",
+	"action-disableaccount": "禁用账户",
+	"disableaccount": "禁用用户账户",
+	"disableaccount-user": "用户名：",
+	"disableaccount-confirm": "禁用此用户账户。\n该用户将无法登录、重置其密码或收到电子邮件通知。如果用户当前仍保持登录，其账户将被强制退出。\n''留意若无系统管理员的干预，被禁用的账户不可重新启用。''",
+	"disableaccount-mustconfirm": "请确认您的确要禁用此账户。",
+	"disableaccount-nosuchuser": "用户账户“$1”不存在。",
+	"disableaccount-success": "用户账户“$1”已被永久禁用。",
+	"logentry-block-disableaccount": "$1{{GENDER:$2|停用了}}{{GENDER:$4|$3}}的账户。"
+}

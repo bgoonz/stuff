@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ferrer",
+			"Innv",
+			"KPu3uC B Poccuu",
+			"Lockal",
+			"Movses",
+			"Okras",
+			"Vlad5250",
+			"Александр Сигачёв"
+		]
+	},
+	"deletebatch": "Удаление набора страниц",
+	"deletebatch-desc": "[[Special:DeleteBatch|Удаление набора страниц]]",
+	"deletebatch-help": "Удаление набора страниц. \nВы можете либо удалить одну страницу, либо удалить несколько страниц, перечисленных в файле.\nВыберите участника, который будет указан в журнале удалений.\nЗагружаемый файл должен содержать имя страницы и необязательную причину удаления; их должен разделять символ «|».",
+	"deletebatch-caption": "Список страниц:",
+	"deletebatch-default-reason": "Причина удаления по умолчанию:",
+	"deletebatch-title": "Удаление набора",
+	"deletebatch-link-back": "Вернуться к служебной странице",
+	"deletebatch-as": "Запустить скрипт как:",
+	"deletebatch-both-modes": "Пожалуйста, выберите одну страницу или список страниц.",
+	"deletebatch-or": "<strong>или</strong>",
+	"deletebatch-delete": "Удалить",
+	"deletebatch-page": "Страницы к удалению:",
+	"deletebatch-processing-from-file": "удаление страниц, перечисленных в файле",
+	"deletebatch-processing-from-form": "удаление страниц, перечисленных в форме",
+	"deletebatch-omitting-nonexistent": "За исключением несуществующей страницы $1.",
+	"deletebatch-omitting-invalid": "За исключением ошибочной страницы $1.",
+	"deletebatch-file-bad-format": "Файл должен содержать простой текст",
+	"deletebatch-file-missing": "Невозможно прочитать данный файл",
+	"deletebatch-select-script": "скрипт удаления страниц",
+	"deletebatch-select-yourself": "вы",
+	"deletebatch-no-page": "Пожалуйста, выберите минимум одну страницу для удаления ИЛИ выберите файл, содержащий список страниц.",
+	"deletebatch-system-username": "Скрипт удаления страниц",
+	"action-deletebatch": "удаление набора страниц",
+	"right-deletebatch": "удаление набора страниц",
+	"action-deletebatch-spoof": "пакетное удаление с помощью «Скрипта удаления страниц»",
+	"right-deletebatch-spoof": "удаление набора страниц с помощью \"Скрипта удаления страниц\"",
+	"deletebatch-deleting-file-only": "Страница описания файла $1 не существует; удаление только самого файла.\nЭто действие не будет отражено в журнале."
+}

@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ooswesthoesbes"
+		]
+	},
+	"eventlogging-desc": "Vraemwerk veur 't vaslègke van gebäörtenisse aan de klantjkantj",
+	"eventlogging-invalid-json": "Óngeljige JSON",
+	"eventlogging-revision-id": "Versie $1",
+	"eventlogging-code-sample-logging-on-server-side": "PHP-logbookregistratie",
+	"eventlogging-code-sample-module-setup-json": "extension.json setup veur JavaScrip-logbookregistratie",
+	"eventlogging-code-sample-logging-on-client-side": "JavaScrip-logbookregistratie",
+	"eventlogging-error-move-source": "Sjemapagina's moge neet waere verplaats",
+	"eventlogging-error-move-destination": "Pagina's kónne neet waere verplaats nao sjemapagina's"
+}

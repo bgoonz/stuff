@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chaduvari",
+			"Veeven"
+		]
+	},
+	"createredirect": "దారిమార్పుని సృష్టించండి",
+	"createredirect-desc": "సులభంగా దారిమార్పులను సృష్టించడానికి వీలుగా [[Special:CreateRedirect|దారిమార్పులను సృష్టించండి]] అనే ప్రత్యేక పుటని చేరుస్తుంది",
+	"createredirect-error": "లోపం: ఆథెంటికేషను విఫలమైంది.",
+	"createredirect-instructions": "కింది ఫారమును వాడి, ఓ దారిమార్పు పేజీని సృష్టించవచ్చు లేదా ప్రస్తుతం ఉనికిలో ఉన్న పేజీ స్థానంలో దారిమార్పు పేజీని పెట్టవచ్చు.",
+	"createredirect-page-title": "పుట శీర్షిక:",
+	"createredirect-redirect-done": "\"$1\" నుండి \"$2\"కి దారిమార్పుని సృష్టించాం",
+	"createredirect-redirect-to": "ఇక్కడికి దారిమార్పు:",
+	"createredirect-save": "పేజీని భద్రపరచు"
+}

@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mainframe98",
+			"Siebrand"
+		]
+	},
+	"diagnosis": "Diagnose",
+	"diagnosis-desc": "Speciale pagina om mogelijk problemen en fout of beveiligingsproblemen te vinden",
+	"action-diagnosis-access": "het diagnosehulpmiddel kunnen uitvoeren",
+	"right-diagnosis-access": "Diagnose uitvoeren"
+}

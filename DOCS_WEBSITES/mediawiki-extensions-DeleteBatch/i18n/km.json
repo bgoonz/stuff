@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lovekhmer",
+			"Thearith",
+			"គីមស៊្រុន",
+			"វ័ណថារិទ្ធ"
+		]
+	},
+	"deletebatch": "លុប​បាច់​នៃ​ទំព័រ",
+	"deletebatch-desc": "[[Special:DeleteBatch|លុប​បាច់​ទំព័រ]]",
+	"deletebatch-caption": "បញ្ជី​ទំព័រ៖",
+	"deletebatch-title": "លុប​បាច់",
+	"deletebatch-link-back": "ត្រឡប់​ទៅកាន់​ទំព័រ​ពិសេស",
+	"deletebatch-as": "រត់​ស្គ្រីប​ជា៖",
+	"deletebatch-or": "<strong>ឬ</strong>",
+	"deletebatch-delete": "លុបចោល",
+	"deletebatch-page": "ទំព័រ​ដែល​ត្រូវ​លុប៖",
+	"deletebatch-processing-from-file": "កំពុង​លុប​ទំព័រ​ក្នុង​បញ្ជី​ឯកសារ​",
+	"deletebatch-omitting-invalid": "លុប​ទំព័រ​មិនត្រឹមត្រូវ $1 ។",
+	"deletebatch-file-bad-format": "ឯកសារ​គួរតែ​ជា​អត្ថបទធម្មតា",
+	"deletebatch-file-missing": "មិន​អាច​អាន​ឯកសារ​ដែល​បាន​ផ្ដល់​ឱ្យ",
+	"deletebatch-select-script": "លុប​ស្គ្រីប​ទំព័រ",
+	"deletebatch-select-yourself": "អ្នក"
+}

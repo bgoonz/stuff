@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"deletebatch": "Desaniciar un piñu de páxines",
+	"deletebatch-desc": "[[Special:DeleteBatch|Desaniciar un piñu de páxines]]",
+	"deletebatch-help": "Desaniciar un piñu de páxines.\nPuedes facer un desaniciu únicu, o desaniciar les páxines qu'apaecen nun ficheru.\nEscueye l'usuariu qu'apaecerá nos rexistros de desanicios.\nLos ficheros cargaos tienen de contener el nome de la páxina y un motivu opcional, separaos por una barra vertical (\"|\").",
+	"deletebatch-caption": "Llista de páxines:",
+	"deletebatch-default-reason": "Motivu de desaniciu predetermináu:",
+	"deletebatch-title": "Desaniciar un conxuntu",
+	"deletebatch-link-back": "Volver a la páxina especial",
+	"deletebatch-as": "Executar el script como:",
+	"deletebatch-both-modes": "Por favor, escueye una páxina determinada o una llista de páxines daes.",
+	"deletebatch-or": "<strong>o</strong>",
+	"deletebatch-delete": "Desaniciar",
+	"deletebatch-page": "Páxines a desaniciar:",
+	"deletebatch-processing-from-file": "desaniciando les páxines qu'apaecen nel ficheru",
+	"deletebatch-processing-from-form": "desaniciando les páxines qu'apaecen nel formulariu",
+	"deletebatch-omitting-nonexistent": "Omitiendo la páxina inesistente \"$1\".",
+	"deletebatch-omitting-invalid": "Omitiendo la páxina inválida \"$1\".",
+	"deletebatch-file-bad-format": "El ficheru tien de ser de testu planu.",
+	"deletebatch-file-missing": "Nun pudo lleese'l ficheru dau",
+	"deletebatch-select-script": "Script de desaniciu de páxines",
+	"deletebatch-select-yourself": "Tu",
+	"deletebatch-no-page": "Por favor, especifica polo menos una páxina pa desaniciar o escueye un ficheru que contenga una llista de páxines.",
+	"deletebatch-system-username": "Script de desaniciu de páxines",
+	"action-deletebatch": "desaniciu de llotes de páxines",
+	"right-deletebatch": "Desaniciar conxuntos de páxines",
+	"action-deletebatch-spoof": "desaniciar llotes de páxines como «Script de desaniciu de páxines»",
+	"right-deletebatch-spoof": "Desaniciu de llotes de páxines como «Script de desaniciu de páxines»",
+	"deletebatch-deleting-file-only": "Nun esiste la páxina de descripción del ficheru $1; desaniciando namái el propiu ficheru.\nEsta aición nun quedará rexistrada."
+}

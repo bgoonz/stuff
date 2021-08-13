@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Irus",
+			"Wadorgurt"
+		]
+	},
+	"requestaccount": "Учётной записез курон",
+	"requestaccount-login": "Учётной записез курон",
+	"requestaccount-text": "'''Учётной запись курыны вылысь тырмытэ но келялэ та формаез'''.\n\nКуронэз келянлэсь азьло, тауна, лыдӟелэ [[{{MediaWiki:Requestaccount-page}}|Ужез быдэстонлэсь условиоссэ]].\n\nУчётной запись кылдытӥськоз бере, тӥледлы электрон почтаен ивортон вуоз но учётной записьты ярамон луоз [[Special:UserLogin|авторизацилы]].",
+	"requestaccount-page": "{{ns:project}}:Ужез быдэстонлэн условиосыз",
+	"requestaccount-real": "Зэм нимды:",
+	"requestaccount-tos": "Мон лыдӟи но соглаш луисько [[{{MediaWiki:Requestaccount-page}}|Ужез быдэстонлэн условиосыныз]] {{SITENAME}} проектын.\nНим, кудзэ мон «Зэм нимды» бордын гожтӥ, зэмзэ но луэ аслам зэм нимы.",
+	"requestaccount-submit": "Учётной запись куроно"
+}

@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"disableaccount-desc": "Permitte al administratores de disactivar individual contos.",
+	"right-disableaccount": "Disactivar contos",
+	"action-disableaccount": "disactivar contos",
+	"disableaccount": "Disactivar un conto de usator",
+	"disableaccount-user": "Nomine de usator:",
+	"disableaccount-confirm": "Disactivar iste conto de usator.\nLe usator non potera aperir session, ni reinitialisar su contrasigno, ni reciper notificationes per e-mail.\nSi le usator es actualmente authenticate alicubi, su session essera immediatemente claudite.\n''Nota que le disactivation de un conto de usator non es reversibile sin intervention de un administrator del systema.''",
+	"disableaccount-mustconfirm": "Tu debe confirmar que tu vole disactivar iste conto.",
+	"disableaccount-nosuchuser": "Le conto de usator \"$1\" non existe.",
+	"disableaccount-success": "Le conto de usator \"$1\" ha essite disactivate permanentemente.",
+	"logentry-block-disableaccount": "$1 {{GENDER:$2|disactivava le conto}} de {{GENDER:$4|$3}}."
+}

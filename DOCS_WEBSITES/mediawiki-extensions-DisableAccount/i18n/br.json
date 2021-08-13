@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fohanno",
+			"Fulup"
+		]
+	},
+	"disableaccount-desc": "Aotren a ra ar verourien da ziweredekaat ar c'hontoù hiniennel.",
+	"right-disableaccount": "Diweredekaat kontoù",
+	"action-disableaccount": "Diweredekaat ar c'hontoù",
+	"disableaccount": "Diweredekaat ur gont implijer",
+	"disableaccount-user": "Anv implijer :",
+	"disableaccount-confirm": "Diweredekaat kont an implijer-mañ.\nNe vo ket gouest an implijer da gevreañ na da adderaouekaat e c'her-tremen ken, n'hallo ket resev kemennoù dre bostel kennebeut.\nM'emañ kevreet bremañ an implijer un tu bennak e vo digevreet kerkent.\n\"Notit mat n'haller ket distreiñ war diwerekadur ur gont hep emell ur merour eus ar reizhiad.\"",
+	"disableaccount-mustconfirm": "Rankout a rit kadarnaat e fell deoc'h diweredekaat ar gont-mañ.",
+	"disableaccount-nosuchuser": "N'eus ket eus ar gont implijer \"$1\".",
+	"disableaccount-success": "Diweredekaat eo bet ar gont implijer \"$1\" da vat.",
+	"logentry-block-disableaccount": "$1 {{GENDER:$2|en deus|he deus}} diweredekaet kont {{GENDER:$4|$3}}."
+}

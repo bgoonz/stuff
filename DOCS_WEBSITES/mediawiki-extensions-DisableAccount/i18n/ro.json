@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Firilacroco",
+			"Minisarm"
+		]
+	},
+	"disableaccount-desc": "Permite administratorilor să dezactiveze conturi individuale.",
+	"right-disableaccount": "Dezactivează conturi",
+	"disableaccount": "Dezactivare cont de utilizator",
+	"disableaccount-user": "Nume de utilizator:",
+	"disableaccount-confirm": "Dezactivarea acestui cont de utilizator.\nUtilizatorul nu se va mai putea autentifica, nu-și va mai putea reseta parola sau primi notificări prin e-mail.\nDacă utilizatorul este autentificat în acest moment, sesiunea sa va fi încheiată imediat.\n''Rețineți că dezactivarea unui cont de utilizator nu este reversibilă fără intervenția unui administrator de sistem.''",
+	"disableaccount-mustconfirm": "Trebuie să confirmați că doriți dezactivarea acestui cont.",
+	"disableaccount-nosuchuser": "Contul de utilizator „$1” nu există.",
+	"disableaccount-success": "Contul de utilizator „$1” a fost definitiv dezactivat."
+}

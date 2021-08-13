@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Minh Nguyen",
+			"Vinhtantran",
+			"පසිඳු කාවින්ද"
+		]
+	},
+	"deletebatch": "Xóa một nhóm trang",
+	"deletebatch-desc": "[[Special:DeleteBatch|Xóa một nhóm trang]]",
+	"deletebatch-help": "Xóa một nhóm trang. Bạn có thể thực hiện việc xóa từng trang, hoặc xóa các trang liệt kê trong một tập tin.\nChọn một thành viên sẽ hiện ra trong nhật trình xóa.\nTập tin đã tải nên có chứa tên trang và lý do tùy chọn phân tách bằng ký tự \"|\" tại mỗi dòng.",
+	"deletebatch-caption": "Danh sách trang:",
+	"deletebatch-title": "Xóa nhóm",
+	"deletebatch-link-back": "Trở lại trang đặc biệt",
+	"deletebatch-as": "Chạy kịch bản với tên:",
+	"deletebatch-both-modes": "Xin hãy chọn một trang hoặc một danh sách trang cho trước.",
+	"deletebatch-or": "<strong>hoặc</strong>",
+	"deletebatch-delete": "Xóa",
+	"deletebatch-page": "Các trang sẽ bị xóa:",
+	"deletebatch-omitting-nonexistent": "Đang bỏ trang $1 không tồn tại.",
+	"deletebatch-omitting-invalid": "Đang bỏ trang $1 không hợp lệ.",
+	"deletebatch-file-bad-format": "Tập tin nên ở dạng thuần ký tự",
+	"deletebatch-file-missing": "Không thể đọc tập tin có sẵn",
+	"deletebatch-select-script": "xóa kịch bản của trang",
+	"deletebatch-select-yourself": "bạn",
+	"deletebatch-no-page": "Xin hãy chỉ định ít nhất một trang để xóa HOẶC chọn một tập tin có chứa danh sách các trang.",
+	"right-deletebatch": "Xóa nhóm trang"
+}

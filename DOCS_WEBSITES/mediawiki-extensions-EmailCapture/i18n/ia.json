@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"emailcapture": "Verification de e-mail",
+	"emailcapture-desc": "Capturar adresses de e-mail, e permitter al usatores de verificar los per e-mail",
+	"emailcapture-failure": "Tu adresse de e-mail '''non''' ha essite verificate.",
+	"emailcapture-invalid-code": "Codice de confirmation invalide.",
+	"emailcapture-already-confirmed": "Tu adresse de e-mail ha jam essite confirmate.",
+	"emailcapture-response-subject": "Verification del adresse de e-mail pro {{SITENAME}}",
+	"emailcapture-response-body": "Salute!\n\nGratias pro haber interesse in adjutar a meliorar {{SITENAME}}.\n\nPer favor prende un momento pro confirmar tu adresse de e-mail con un clic sur le ligamine sequente:\n$1\n\nAlternativemente, visita:\n$2\n\n...e entra le codice de confirmation sequente:\n$3\n\nNos va tosto contactar te pro explicar como tu pote adjutar a meliorar {{SITENAME}}.\n\nSi tu non ha initiate iste requesta, per favor ignora iste e-mail e nos non te inviara altere cosa.",
+	"emailcapture-success": "Gratias!\n\nTu adresse de e-mail ha essite confirmate.",
+	"emailcapture-instructions": "Pro verificar tu adresse de e-mail, entra le codice que te esseva inviate in e-mail, e clicca sur \"{{int:emailcapture-submit}}\".",
+	"emailcapture-verify": "Codice de verification:",
+	"emailcapture-submit": "Verificar adresse de e-mail",
+	"apihelp-emailcapture-param-info": "Information additional a registrar, usualmente structurate in codice JSON"
+}

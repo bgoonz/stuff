@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Minh Nguyen",
+			"Phjtieudoc",
+			"Vinhtantran"
+		]
+	},
+	"contributionscores": "Điểm số đóng góp",
+	"contributionscores-desc": "Truy xuất cơ sở dữ liệu wiki để xem [[Special:ContributionScores|mức đóng góp]] cao nhất của thành viên",
+	"contributionscores-info": "Điểm số này chủ yếu đo số trang riêng lẻ được sửa đổi, có xét thêm mức độ sửa đổi cao.",
+	"contributionscores-top": "(Tốp $1)",
+	"contributionscores-days": "{{PLURAL:$1|Ngày|$1 ngày}} qua",
+	"contributionscores-allrevisions": "Từ trước đến nay",
+	"contributionscores-score": "Điểm số",
+	"contributionscores-pages": "Trang",
+	"contributionscores-changes": "Thay đổi",
+	"contributionscores-username": "Tên người dùng",
+	"contributionscores-invalidusername": "Tên người dùng không hợp lệ",
+	"contributionscores-invalidmetric": "Chuẩn đo không hợp lệ"
+}

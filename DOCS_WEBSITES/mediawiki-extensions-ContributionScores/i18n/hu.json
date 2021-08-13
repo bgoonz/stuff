@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dani",
+			"Dj",
+			"Glanthor Reviol",
+			"Shirayuki",
+			"Tacsipacsi"
+		]
+	},
+	"contributionscores": "Szerkesztési pontszám",
+	"contributionscores-desc": "Megjeleníti a [[Special:ContributionScores|szerkesztő közreműködéseinek súlyát]] a wiki adatbázisa alapján",
+	"contributionscores-info": "A pontszámok alapvetően az egyedi szerkesztett lapok számát mutatja, figyelembe véve a nagy szerkesztési számokat.",
+	"contributionscores-top": "(legjobb $1)",
+	"contributionscores-days": "Utolsó {{PLURAL:$1|nap|$1 nap}}",
+	"contributionscores-allrevisions": "Összes szerkesztés",
+	"contributionscores-score": "Pontszám",
+	"contributionscores-rank": "Helyezés",
+	"contributionscores-pages": "Oldalak",
+	"contributionscores-changes": "Változtatások",
+	"contributionscores-username": "Felhasználónév",
+	"contributionscores-invalidusername": "Érvénytelen szerkesztői név",
+	"contributionscores-invalidmetric": "Érvénytelen mértékrendszer"
+}

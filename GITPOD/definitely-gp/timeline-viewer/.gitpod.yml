@@ -1,4 +1,0 @@
-ports:
-  - port: 8833
-tasks:
-  - command: "yarn && yarn dev"

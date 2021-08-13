@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"editsubpages-desc": "Permette a le sysop de sbloccà 'na pàgene e tutte le sottopàggene de quedda pàgene pe 'nu camngiamende anonime ausanne [[MediaWiki:Unlockedpages|sbluecche le pàggene]]",
+	"unlockedpages": "  #<!-- Lasse sta linea sole --><pre>\n# Mitte le vôsce ca tu vuè ccu sbluécche sotte ausanne\n# * Nome d'a pàgene\n# Le vôsce sbloccate onne accumenzà cu 'nu punde pe essere cundate,\n# tutte l'otre cose sonde conziderate commende\n# Le nome de le pàggene ponne essere [[links|collegate]] e so senzibbile a le maiuscole/minuscole\n# Pure le pàggene de le 'ngazzaminde avènene automaticamende sbloccate cu 'a vôscia prengepàle\n# Vide https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages pe maggiore 'mbormaziune\n  #</pre><!-- Lasse sta linea sole -->"
+}

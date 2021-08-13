@@ -1,5 +1,0 @@
-(library
-  (name telemetry)
-  (wrapped false)
-  (libraries
-    utils_core))

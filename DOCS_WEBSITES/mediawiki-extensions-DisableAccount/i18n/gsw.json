@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Als-Chlämens",
+			"Als-Holder"
+		]
+	},
+	"disableaccount-desc": "Macht's für Ammane mögli, einzelni Benutzerchonte z deaktiviere",
+	"right-disableaccount": "Benutzerkonto deaktiviere",
+	"disableaccount": "E Benutzerkonto deaktiviere",
+	"disableaccount-user": "Benutzername:",
+	"disableaccount-confirm": "Des Benutzerkonto deaktiviere.\nDr Benutzer cha sich derno nimi aamälde, cha s Passwort nimi zrucksetze oder un keini E-Mail-Benochrichtigunge me iberchuu.\nWänn dr Benutzer grad aagmäldet isch, wird er sofort abgmäldet.\n''Obacht: D Deaktivierig vun eme Benutzerkonto cha nume vun eme Syschtemadministrator ruckgängig gmacht wäre.''",
+	"disableaccount-mustconfirm": "Du muesch d Deaktivierig vu däm Benutzerkonto no bstetige.",
+	"disableaccount-nosuchuser": "Dr Benutzer „$1“ git s nit.",
+	"disableaccount-success": "S Benutzerkonto „$1“ isch fir immer deaktiviert wore."
+}

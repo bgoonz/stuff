@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Diman Russkov",
+			"MaxSem",
+			"Александр Сигачёв"
+		]
+	},
+	"createredirect": "Создать перенаправление",
+	"createredirect-desc": "Добавляет служебную страницу [[Special:CreateRedirect|CreateRedirect]] для лёгкого создания перенаправлений",
+	"createredirect-error": "Ошибка. Аутентификация не удалась.",
+	"createredirect-instructions": "Используя приведённую ниже форму, вы можете создать страницу-перенаправление или заменить существующую страницу перенаправления.",
+	"createredirect-overwrite": "Игнорировать предупреждения",
+	"createredirect-page-title": "Название страницы:",
+	"createredirect-redirect-done": "Создано перенаправление с «$1» на «$2»",
+	"createredirect-redirect-to": "Перенаправить на:",
+	"createredirect-save": "Сохранить страницу",
+	"createredirect-would-overwrite": "Предупреждение: страница \"[[:$1]]\" уже существует."
+}

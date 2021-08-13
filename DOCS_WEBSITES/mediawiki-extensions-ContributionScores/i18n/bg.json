@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"DCLXVI",
+			"StanProg"
+		]
+	},
+	"contributionscores": "Потребителска класация",
+	"contributionscores-top": "(Най-добрите $1)",
+	"contributionscores-days": "{{PLURAL:$1|Последния ден|Последните $1 дни}}",
+	"contributionscores-allrevisions": "За всички времена",
+	"contributionscores-score": "Точки",
+	"contributionscores-pages": "Страници",
+	"contributionscores-changes": "Редакции",
+	"contributionscores-username": "Потребител",
+	"contributionscores-invalidusername": "Невалидно потребителско име"
+}

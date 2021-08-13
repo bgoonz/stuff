@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joao Xavier"
+		]
+	},
+	"disableaccount-user": "Nomo dil uzero:",
+	"disableaccount-confirm": "Nekapabligez la nuna uzerokonto.\nCa uzero ne povos facar ''log in'', modifikor lua pasovorto, o recevor avizi per e-posto.\nSe la uzero esas nun konektata ulaloke, lua sesiono finos nemediate.\n''Atencez: sen interveno da ula administrero, la nekapableso di la konto ne povos desfacesar.''",
+	"disableaccount-nosuchuser": "L'uzero-konto \"$1\" ne existas."
+}

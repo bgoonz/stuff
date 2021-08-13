@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Helix84",
+			"Luky001",
+			"TomášPolonec",
+			"Vlad5250"
+		]
+	},
+	"deletebatch": "Zmazanie viacerých stránok",
+	"deletebatch-desc": "[[Special:DeleteBatch|Zmazanie viacerých stránok]]",
+	"deletebatch-help": "Hromadné zmazanie stránok.\nMôžete buď vykonať jedno zmazanie, alebo zmazať stránky uvedené v súbore.\nVyberte používateľa, ktorý sa zobrazí v záznamoch zmazania.\nNahraný súbor by mal na každom riadku obsahovať názov stránky a nepovinne aj dôvod zmazania oddelený znakom „|”.",
+	"deletebatch-caption": "Zoznam stránok:",
+	"deletebatch-title": "Zmazať dávku",
+	"deletebatch-link-back": "Môžete sa vrátiť späť na špeciálnu stránku",
+	"deletebatch-as": "Spustiť skript ako:",
+	"deletebatch-both-modes": "Prosím, vyberte buď zadanú stránku alebo zadaý zoznam stránok.",
+	"deletebatch-or": "<strong>ALEBO</strong>",
+	"deletebatch-delete": "Zmazať",
+	"deletebatch-page": "Stránky, ktoré budú zmazané:",
+	"deletebatch-processing-from-file": "mažú sa stránky uvedené v súbore",
+	"deletebatch-processing-from-form": "mažú sa stránky z formulára",
+	"deletebatch-omitting-nonexistent": "Vynecháva sa neexistujúca stránka $1.",
+	"deletebatch-omitting-invalid": "Vynecháva sa neplatná stránka $1.",
+	"deletebatch-file-bad-format": "Súbor by mal byť textovom formáte",
+	"deletebatch-file-missing": "Nebolo možné prečítať zadaný súbor",
+	"deletebatch-select-script": "skript na zmazanie stránok",
+	"deletebatch-select-yourself": "vy",
+	"deletebatch-no-page": "Prosím, zadajte aspoň jednu stránku, ktorá sa má zmazať ALEBO súbor obsahujúci zoznam stránok.",
+	"deletebatch-system-username": "Skript na zmazanie stránok",
+	"action-deletebatch": "dávkové mazanie stránok",
+	"right-deletebatch": "Dávkové mazanie stránok"
+}

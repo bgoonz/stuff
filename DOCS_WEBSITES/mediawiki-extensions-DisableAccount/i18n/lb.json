@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robby"
+		]
+	},
+	"disableaccount-desc": "Erlaabt et Administratuere fir eenzel Benotzerkonten ze desaktivéieren.",
+	"right-disableaccount": "Benotzerkonten desaktivéieren",
+	"action-disableaccount": "Benotzerkonten ze desaktivéieren",
+	"disableaccount": "E Benotzerkont desaktivéieren",
+	"disableaccount-user": "Benotzernumm:",
+	"disableaccount-confirm": "Dëse Benotzerkont desaktivéieren.\nDe Benotzer ka sech net méi aloggen, säi Passwuert änneren, a kritt och keng Noriichte méi per Mail.\nWann e Benotzer elo iergendwou ageloggt ass da gëtt hien direkt ausgeloggt.\n''Denkt drun datt desaktivéiere vun engem Kont net ka réckgängeg gemaach ginn ouni d'Interventioun vun engem Administrateur vum System.''",
+	"disableaccount-mustconfirm": "Dir musst confirméieren datt Dir dëse Kont desaktivéiere wëllt.",
+	"disableaccount-nosuchuser": "De Benotzerkont \"$1\" gëtt et net.",
+	"disableaccount-success": "De Benotzerkont \"$1\" gouf definitiv desaktivéiert.",
+	"logentry-block-disableaccount": "$1 huet de {{GENDER:$2|Benotzerkont}} vum {{GENDER:$4|$3}} desaktivéiert."
+}

@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"AnakngAraw",
+			"Jojit fb"
+		]
+	},
+	"disableaccount-desc": "Pahintulutan ang mga tagapangasiwa na huwag paganahin ang pang-isahang mga account.",
+	"right-disableaccount": "Huwag paganahin ang mga account",
+	"disableaccount": "Huwag paganahin ang account ng tagagamit",
+	"disableaccount-user": "Pangalan ng tagagamit:",
+	"disableaccount-confirm": "Huwag paganahin ang account ng tagagamit na ito.\nAng tagagamit ay hindi na naka-login, makapagpapalit ng password, o makatatanggap ng mga pabatid sa e-mail.\nKung ang tagagamit ay kasalukuyang nakalogin saan man, kaagad silang ilo-logout.\n''Tandaan na maibabalik lamang sa dati ang hindi pagpapagana ng isang account sa pamamagitan ng tulong ng tagapangasiwa.\"",
+	"disableaccount-mustconfirm": "Dapat mong tiyakin na nais mong huwag paganahin ang account na ito.",
+	"disableaccount-nosuchuser": "Hindi umiiral ang account ng tagagamit na \"$1\".",
+	"disableaccount-success": "Pamalagiang hindi na pinagagana ang account ng tagagamit na \"$1\"."
+}

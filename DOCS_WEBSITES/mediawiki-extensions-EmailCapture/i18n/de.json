@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Geitost",
+			"Kghbln",
+			"MF-Warburg",
+			"Metalhead64"
+		]
+	},
+	"emailcapture": "E-Mail-Bestätigung",
+	"emailcapture-desc": "Ermöglicht das automatische Aufgreifen von E-Mail-Adressen und deren Bestätigung durch deren Benutzer per E-Mail",
+	"emailcapture-failure": "Deine E-Mail-Adresse wurde '''nicht''' bestätigt.",
+	"emailcapture-invalid-code": "Ungültiger Bestätigungscode.",
+	"emailcapture-already-confirmed": "Deine E-Mail-Adresse wurde bereits bestätigt.",
+	"emailcapture-response-subject": "{{SITENAME}} E-Mail-Bestätigung",
+	"emailcapture-response-body": "Hallo!\n\nVielen Dank für dein Interesse an der Verbesserung von {{SITENAME}}.\n\nBitte nimm dir einen Moment Zeit, deine E-Mail-Adresse zu bestätigen, indem du auf den folgenden Link klickst:\n$1\n\nDu kannst auch die folgende Seite besuchen:\n$2\n\nGib dort den nachfolgenden Bestätigungscode ein:\n$3\n\nWir melden uns in Kürze dazu, wie du helfen kannst, {{SITENAME}} zu verbessern.\n\nSofern du diese Anfrage nicht ausgelöst hast, ignoriere einfach diese E-Mail. Wir werden dir dann nichts mehr zusenden.",
+	"emailcapture-success": "Vielen Dank!\n\nDeine E-Mail-Adresse wurde bestätigt.",
+	"emailcapture-instructions": "Um deine E-Mail-Adresse zu bestätigen, gib bitte den Code ein, der dir per E-Mail zuschickt wurde, und klicke anschließend auf „{{int:emailcapture-submit}}“.",
+	"emailcapture-verify": "Bestätigungscode:",
+	"emailcapture-submit": "E-Mail-Adresse bestätigen",
+	"apihelp-emailcapture-description": "Greift E-Mail-Adressen auf",
+	"apihelp-emailcapture-summary": "Greift E-Mail-Adressen auf.",
+	"apihelp-emailcapture-param-email": "Aufzugreifende E-Mail-Adresse",
+	"apihelp-emailcapture-param-info": "Zusätzlich zu protokollierende Informationen, normalerweise strukturierte JSON-kodierte Informationen"
+}

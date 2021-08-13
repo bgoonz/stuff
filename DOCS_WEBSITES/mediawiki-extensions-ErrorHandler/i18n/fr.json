@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"IAlex",
+			"McDutchie",
+			"PieRRoMaN",
+			"Urhixidur"
+		]
+	},
+	"errorhandler-desc": "Gestionnaire d'erreurs pour MediaWiki",
+	"errorhandler-errors": "Erreurs :",
+	"errorhandler-error-fatal": "Erreur fatale",
+	"errorhandler-error-warning": "Avertissement",
+	"errorhandler-error-parse": "Erreur d’analyse",
+	"errorhandler-error-notice": "Notice",
+	"errorhandler-error-deprecated": "Désuet",
+	"errorhandler-error-core-error": "Erreur du noyau",
+	"errorhandler-error-core-warning": "Avertissement du noyau",
+	"errorhandler-error-compile-error": "Erreur de compilation",
+	"errorhandler-error-compile-warning": "Avertissement de compilation",
+	"errorhandler-error-user-error": "Erreur (utilisateur)",
+	"errorhandler-error-user-warning": "Avertissement (utilisateur)",
+	"errorhandler-error-user-notice": "Notice (utilisateur)",
+	"errorhandler-error-user-deprecated": "Désuet (utilisateur)",
+	"errorhandler-error-strict": "Standards stricts",
+	"errorhandler-error-recoverable": "Erreur fatale qui peut être attrapée",
+	"errorhandler-msg-text": "$1 : $2 dans $3 (ligne $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> dans <b>$3</b> (ligne <b>$4</b>)",
+	"errorhandler-trace": "trace :",
+	"errorhandler-trace-line": "$1 (ligne $2) : $3",
+	"errorhandler-trace-line-internal": "[fonction interne] : $1"
+}

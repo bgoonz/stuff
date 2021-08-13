@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ilmira"
+		]
+	},
+	"errorhandler-error-fatal": "Етди хата",
+	"errorhandler-error-warning": "Иғтибар",
+	"errorhandler-error-parse": "Парсер хатаһы",
+	"errorhandler-error-notice": "Хәбәр итеү",
+	"errorhandler-error-deprecated": "Тыйылған",
+	"errorhandler-error-core-error": "Йәҙрә хатаһы",
+	"errorhandler-error-core-warning": "Йәҙрә иҫкәртеүе",
+	"errorhandler-error-compile-error": "Компиляция хатаһы",
+	"errorhandler-error-compile-warning": "Компиляция иҫкәртеүе",
+	"errorhandler-error-user-error": "Ҡулланыусы хатаһы",
+	"errorhandler-error-user-warning": "Ҡатнашыусыны иҫкәртеү",
+	"errorhandler-error-user-notice": "Ҡатнашыусыға хәбәр итеү",
+	"errorhandler-error-user-deprecated": "Ҡатнашыусыны тыйыу",
+	"errorhandler-error-strict": "Теүәл стандарттар",
+	"errorhandler-error-recoverable": "Ҡотолғоһоҙ хата Catchable",
+	"errorhandler-msg-text": "$1 : $2 в $3 ($4 линия)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> в <b>$3</b> ( <b>$4</b> линия)",
+	"errorhandler-trace": "Эҙ:",
+	"errorhandler-trace-line": "$1 ( $2 линия): $3",
+	"errorhandler-trace-line-internal": "$1:[эске функция]"
+}

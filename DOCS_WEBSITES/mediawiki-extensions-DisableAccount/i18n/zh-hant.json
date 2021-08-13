@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Anakmalaysia",
+			"Cwlin0416",
+			"LNDDYL",
+			"Liuxinyu970226",
+			"Mark85296341",
+			"Waihorace"
+		]
+	},
+	"disableaccount-desc": "允許管理員停用個別帳號。",
+	"right-disableaccount": "停用帳號",
+	"action-disableaccount": "停用帳戶",
+	"disableaccount": "停用使用者帳號",
+	"disableaccount-user": "使用者名稱：",
+	"disableaccount-confirm": "停用此使用者帳號。\n該使用者將無法登入、重設其密碼或接收電子郵件通知。如果使用者目前正在登入狀態，會立即將該使用者強制登出。\n''注意，需透過系統管理者方可將停用的帳號解除。''",
+	"disableaccount-mustconfirm": "您需要確定您是否要停用此帳號。",
+	"disableaccount-nosuchuser": "使用者帳號 \"$1\" 不存在。",
+	"disableaccount-success": "使用者帳號 \"$1\" 已被永久停用。",
+	"logentry-block-disableaccount": "$1 {{GENDER:$2|已停用}} {{GENDER:$4|$3}} 的帳號。"
+}

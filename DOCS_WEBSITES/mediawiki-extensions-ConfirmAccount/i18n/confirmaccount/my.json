@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dr Lotus Black"
+		]
+	},
+	"confirmaccount-real-q": "အမည်",
+	"confirmaccount-email-q": "အီးမေးလ်",
+	"confirmaccount-bio-q": "ကိုယ်ရေးရာဇဝင်",
+	"confirmaccount-leg-user": "အသုံးပြုသူ အကောင့်",
+	"confirmaccount-leg-person": "ပုဂ္ဂိုလ်ရေး အချက်အလက်",
+	"confirmaccount-leg-other": "အခြားသတင်းအချက်အလက်များ",
+	"confirmaccount-leg-ip": "အိုင်ပီလိပ်စာ ဒေတာ",
+	"confirmaccount-name": "အသုံးပြုသူအမည်",
+	"confirmaccount-real": "အမည်",
+	"confirmaccount-email": "အီးမေး :",
+	"confirmaccount-reqtype": "အနေအထား:",
+	"confirmaccount-pos-0": "စာရေးသူ",
+	"confirmaccount-pos-1": "တည်းဖြတ်သူ",
+	"confirmaccount-bio": "ကိုယ်ရေးရာဇဝင်",
+	"confirmaccount-notes": "အပို မှတ်စုများ",
+	"confirmaccount-econf": "(အတည်ပြုပြီး)",
+	"confirmaccount-noreason": "(ဘာမှမရှိ)",
+	"confirmaccount-hold": "ဆိုင်းငံ့",
+	"confirmaccount-ip": "အိုင်ပီလိပ်စာ:",
+	"confirmaccount-submit": "အတည်ပြု",
+	"confirmaccount-wsum": "ကြိုဆိုပါသည်!"
+}

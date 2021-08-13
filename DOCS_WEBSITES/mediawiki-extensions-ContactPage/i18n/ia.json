@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"DannyS712",
+			"McDutchie"
+		]
+	},
+	"contactpage": "Pagina de contacto",
+	"contactpage-desc": "[[Special:Contact|Formulario de contacto pro visitatores]]",
+	"contactpage-title": "Contacto",
+	"contactpage-pagetext": "Per favor usa le formulario infra pro contactar nos.",
+	"contactpage-legend": "Inviar e-mail",
+	"contactpage-defsubject": "Message de contacto",
+	"contactpage-subject-and-sender": "$1 (de $2)",
+	"contactpage-subject-and-sender-withip": "$1 (de $2 a $3)",
+	"contactpage-fromname": "Tu nomine:",
+	"contactpage-fromaddress": "Tu e-mail:",
+	"contactpage-formfootnotes": "(necessari si tu vole reciper un responsa)",
+	"contactpage-includeip": "Includer mi adresse IP in iste message.",
+	"contactpage-usermailererror": "Le objecto de e-mail retornava le error: $1",
+	"contactpage-captcha-error": "Error de CAPTCHA",
+	"contactpage-config-error-title": "Error de formulario de contacto",
+	"contactpage-config-error": "Le formulario de contacto pro iste pagina es o non configurate o configurate incorrectemente.",
+	"contactpage-mustbeloggedin": "Per favor aperi session pro inviar un formulario de contacto."
+}

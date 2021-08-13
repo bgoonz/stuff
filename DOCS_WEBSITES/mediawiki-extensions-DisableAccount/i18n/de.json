@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Geitost",
+			"Kghbln",
+			"Metalhead64"
+		]
+	},
+	"disableaccount-desc": "Ermöglicht die Deaktivierung einzelner Benutzerkonten",
+	"right-disableaccount": "Benutzerkonten deaktivieren",
+	"action-disableaccount": "Benutzerkonten zu deaktivieren",
+	"disableaccount": "Ein Benutzerkonto deaktivieren",
+	"disableaccount-user": "Benutzername:",
+	"disableaccount-confirm": "Deaktivieren dieses Benutzerkontos.\nDer Benutzer wird nicht mehr in der Lage sein, sich anzumelden, das Passwort zurückzusetzen oder E-Mail-Benachrichtigungen zu empfangen.\nSofern der Benutzer momentan angemeldet ist, wird er umgehend abgemeldet.\n''Es ist zu beachten, dass die Deaktivierung eines Benutzerkontos nicht mehr ohne das Eingreifen eines Systemadministrators rückgängig gemacht werden kann.''",
+	"disableaccount-mustconfirm": "Die Deaktivierung dieses Benutzerkontos muss nun bestätigt werden.",
+	"disableaccount-nosuchuser": "Das Benutzerkonto „$1“ ist nicht vorhanden.",
+	"disableaccount-success": "Das Benutzerkonto „$1“ wurde dauerhaft deaktiviert.",
+	"logentry-block-disableaccount": "$1 {{GENDER:$2|deaktivierte}} das Benutzerkonto von {{GENDER:$4|$3}}."
+}

@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eduardo.mps"
+		]
+	},
+	"editsubpages-desc": "Permite a administradores desbloquearem uma página e todas as suas subpáginas para edição anônima através de [[MediaWiki:Unlockedpages]]",
+	"unlockedpages": " #<!-- deixe esta linha como está --><pre>\n# Coloque páginas que pretende desbloquear abaixo, usando\n# * Nome da página\n# Páginas desbloqueadas devem começar com um 'asterisco' (*) para serem consideradas,\n# tudo o resto é considerado um comentário\n# Os nomes de páginas podem ser [[ligações]] e são sensíveis à capitalização\n# As páginas de discussão serão também automaticamente desbloqueadas com a página\n# Veja https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages para mais informação\n   #</pre><!-- deixe esta linha como está -->"
+}

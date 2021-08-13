@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bugoslav"
+		]
+	},
+	"etherpadlite-desc": "Dodaje parsersku oznaku &lt;eplite&gt; za ugradbu jednog ili više blokića Etherpad Litea (dostupno na lokalnim ili vanjskim poslužiteljima Etherpad Litea) na stranice",
+	"etherpadlite-tracking-category": "Stranice s ugrađenim Etherpadom",
+	"etherpadlite-tracking-category-desc": "Stranice s ugradnjom Etherpada pomoću oznake <code>&lt;eplite&gt;</code>.",
+	"etherpadlite-invalid-pad-url": "»$1«, nije valjan URL ili ime blokića Etherpad Litea.",
+	"etherpadlite-url-is-not-whitelisted": "»$1« nije na bijelom popisu dopuštenih poslužitelja Etherpad Litea. {{PLURAL:$3|1=$2 je jedini poslužitelj koji je dopušten|Dopušteni su sljedeći poslužitelji: $2}}.",
+	"etherpadlite-empty-whitelist": "»$1« nije na bijelom popisu dopuštenih poslužitelja Etherpad Litea. Trenutačno ne postoje dopušteni poslužitelji na bijelom popisu.",
+	"etherpadlite-pad-used-more-than-once": "Blokić s naslovom »$1« već je upotrijebljen na ovoj stranici; možete postaviti više blokića na stranicu, ali samo ako je riječ o različitim blokićima."
+}

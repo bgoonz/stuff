@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"OC Ripper",
+			"Vlad5250"
+		]
+	},
+	"disableaccount-desc": "Omogućava administratorima da onemoguće pojedinačne račune.",
+	"right-disableaccount": "Onemogućavanje računa",
+	"action-disableaccount": "onemogućavanje računa",
+	"disableaccount": "Onemogućavanje korisničkog računa",
+	"disableaccount-user": "Korisničko ime:",
+	"disableaccount-confirm": "Onemogući ovaj korisnički račun.\nKorisnik se neće moći prijaviti, staviti novu šifru ili primati obavještenja putem e-maila.\nAko je korisnik negdje u međuvremenu prijavljen, bit će automatski odmah odjavljen.\n''Zapamtite da se onemogućavanje računa ne može poništiti bez intervencije sistemskog administratora.''",
+	"disableaccount-mustconfirm": "Morate potvrditi da želite onemogućiti ovaj račun.",
+	"disableaccount-nosuchuser": "Korisnički račun \"$1\" ne postoji.",
+	"disableaccount-success": "Korisnički račun \"$1\" je trajno onemogućen.",
+	"logentry-block-disableaccount": "$1 {{GENDER:$2|je onemogućio|je onemogućila}} nalog {{GENDER:$4|$3}}."
+}

@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Michawiki",
+			"Yekrats"
+		]
+	},
+	"deletebatch": "Forigi aron de paĝoj",
+	"deletebatch-desc": "[[Special:DeleteBatch|Forigi aron de paĝoj]]",
+	"deletebatch-help": "Por forigi aron de paĝoj. Vi povas aŭ fari unuopan forigon, aŭ forigi paĝojn listitajn en dosiero.\nSelektu uzanton kiu estos montrata en forigadaj protokoloj.\nAlŝutita dosiero enhavu paĝan nomon kaj nedevigan kialon apartigita de signo \"|\" en ĉiu linio.",
+	"deletebatch-caption": "Paĝlisto:",
+	"deletebatch-title": "Forigi aron",
+	"deletebatch-link-back": "Reiru al la speciala paĝo",
+	"deletebatch-as": "Voki la skripton kiel:",
+	"deletebatch-both-modes": "Bonvolu selekti aŭ unu specifan paĝon aŭ donatan liston de paĝoj.",
+	"deletebatch-or": "<strong>AŬ</strong>",
+	"deletebatch-delete": "Forigi",
+	"deletebatch-page": "Forigotaj paĝoj:",
+	"deletebatch-processing-from-file": "forigante paĝojn de dosierlisto",
+	"deletebatch-processing-from-form": "forigante paĝojn de formularo",
+	"deletebatch-omitting-nonexistent": "Pasante neekzistan paĝon $1.",
+	"deletebatch-omitting-invalid": "Pasante nevalidan paĝon $1.",
+	"deletebatch-file-bad-format": "La dosiero estu norma teksto",
+	"deletebatch-file-missing": "Ne eblas legi donatan dosieron",
+	"deletebatch-select-script": "skripto por forigi paĝon",
+	"deletebatch-select-yourself": "vi",
+	"deletebatch-no-page": "Bonvolu specifi almenaŭ unu paĝon por forigi AŬ selekti dosieron enhavantan paĝliston.",
+	"right-deletebatch": "Amasforigi paĝojn"
+}

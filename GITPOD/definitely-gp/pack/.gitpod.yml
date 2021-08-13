@@ -1,4 +1,0 @@
-tasks:
-  - before: npm install -g @pika/pack
-    init: npm install
-    command: pack build

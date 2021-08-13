@@ -1,0 +1,42 @@
+{
+	"@metadata": {
+		"authors": [
+			"Event",
+			"Jon Harald Søby",
+			"Laaknor"
+		]
+	},
+	"drafts": "Kladder",
+	"drafts-desc": "Legger til muligheten til å lagre [[Special:Drafts|utkast]]versjoner av en side på serveren",
+	"drafts-view": "Vis utkast",
+	"drafts-view-summary": "Denne spesialsiden viser en liste over nåværende utkast.\nUbrukte utkast vil slettes automatisk etter {{PLURAL:$1|én dag|$1 dager}}.",
+	"drafts-view-article": "Side",
+	"drafts-view-existing": "Eksisterende utkast",
+	"drafts-view-saved": "Lagret",
+	"drafts-view-discard": "Forkast",
+	"drafts-view-nonesaved": "Du har ingen utkast lagret på nåværende tidspunkt",
+	"drafts-view-notice": "Du har $1 for denne siden.",
+	"drafts-view-notice-link": "{{PLURAL:$1|ett utkast|$1 utkast}}",
+	"drafts-view-warn": "Hvis du holder fast på å navigere bort fra denne siden, vil du miste alle ulagrede endringer av denne siden.",
+	"drafts-save": "Lagre dette som et utkast",
+	"drafts-save-save": "Lagre utkast",
+	"drafts-save-saved": "Lagret",
+	"drafts-save-saving": "Lagrer",
+	"drafts-save-error": "Feil ved lagring av utkast",
+	"drafts-enable": "Aktiviser funksjonalitet for å kunne lagre utkast fra redigeringsboksen",
+	"prefs-extension-drafts": "Utkast",
+	"tooltip-drafts-save": "Lagre som et utkast",
+	"apierror-mustbeloggedin-save-drafts": "Du må være logget inn for å lagre kladder.",
+	"apihelp-savedrafts-description": "Lagre en kladd.",
+	"apihelp-savedrafts-summary": "Lagre en kladd.",
+	"apihelp-savedrafts-param-id": "ID-en til kladden.",
+	"apihelp-savedrafts-param-drafttoken": "Kladdtegn.",
+	"apihelp-savedrafts-param-title": "Kladdtittel.",
+	"apihelp-savedrafts-param-section": "Indeks for seksjonen på siden som redigeres.",
+	"apihelp-savedrafts-param-starttime": "Starttiden til kladden.",
+	"apihelp-savedrafts-param-edittime": "Redigeringstiden til kladden.",
+	"apihelp-savedrafts-param-scrolltop": "scrollTop-en til tekstboksen.",
+	"apihelp-savedrafts-param-text": "Kladdtekst.",
+	"apihelp-savedrafts-param-summary": "Kladdsammendrag.",
+	"apihelp-savedrafts-param-minoredit": "Boolean som reperesenterer hvorvidt kladden er en mindre endring."
+}

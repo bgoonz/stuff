@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"BadDog",
+			"Rancher"
+		]
+	},
+	"createredirect": "Прављење преусмеравања",
+	"createredirect-desc": "Додаје посебну страницу „[[Special:CreateRedirect|Прављење преусмеравања]]” за једноставно прављење преусмеравања",
+	"createredirect-error": "Грешка: Потврда идентитета није успела.",
+	"createredirect-enable-multiline": "Унесите више наслова",
+	"createredirect-instructions": "Коришћењем обрасца испод, можете да направите преусмеравање или замените постојећу страницу са преусмеравањем.",
+	"createredirect-invalid-title": "Грешка: „$1” није важећи наслов.",
+	"createredirect-overwrite": "Занемари упозорења",
+	"createredirect-page-title": "Наслов странице:",
+	"createredirect-redirect-done": "Направљено преусмерење са „$1” на „$2”",
+	"createredirect-redirect-to": "Преусмери на:",
+	"createredirect-save": "Сачувај страницу",
+	"createredirect-would-overwrite": "Упозорење: Страница „[[:$1]]” већ постоји."
+}

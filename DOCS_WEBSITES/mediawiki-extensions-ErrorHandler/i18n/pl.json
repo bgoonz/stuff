@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Maikking",
+			"Sp5uhe"
+		]
+	},
+	"errorhandler-desc": "Wyłapuje błędy w MediaWiki",
+	"errorhandler-errors": "Błędy:",
+	"errorhandler-error-fatal": "Błąd krytyczny",
+	"errorhandler-error-warning": "Ostrzeżenie",
+	"errorhandler-error-parse": "Błąd parsera",
+	"errorhandler-error-notice": "Wiadomość",
+	"errorhandler-error-deprecated": "Niezaakceptowane",
+	"errorhandler-error-core-error": "Błąd rdzenia",
+	"errorhandler-error-core-warning": "Ostrzeżenie dotyczące rdzenia",
+	"errorhandler-error-compile-error": "Błąd kompilacji",
+	"errorhandler-error-compile-warning": "Ostrzeżenie w trakcie kompilacji",
+	"errorhandler-error-user-error": "Błąd użytkownika",
+	"errorhandler-error-user-warning": "Ostrzeżenie użytkownika",
+	"errorhandler-error-user-notice": "Wiadomość użytkownika",
+	"errorhandler-error-user-deprecated": "Niezaakceptowany użytkownik",
+	"errorhandler-error-strict": "Ścisłe normy",
+	"errorhandler-error-recoverable": "Wychwytywalny błąd krytyczny",
+	"errorhandler-msg-text": "$1 : $2 w $3 (linia $4)",
+	"errorhandler-msg-html": "<b>$1</b> – <i>$2</i> w <b>$3</b> (linia <b>$4</b>)",
+	"errorhandler-trace": "śledzenie:",
+	"errorhandler-trace-line": "$1 (linia $2): $3",
+	"errorhandler-trace-line-internal": "[funkcja wewnętrzna] – $1"
+}

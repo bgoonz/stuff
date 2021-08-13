@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bartek Łapiński",
+			"MarcoAurelio"
+		]
+	},
+	"deletebatch": "Delete batch of pages",
+	"deletebatch-desc": "[[Special:DeleteBatch|Delete a batch of pages]]",
+	"deletebatch-help": "Delete a batch of pages.\nYou can either perform a single delete, or delete pages listed in a file.\nChoose a user that will be shown in deletion logs.\nUploaded files should contain page name and optional reason, separated by a \"|\".",
+	"deletebatch-caption": "Page list:",
+	"deletebatch-default-reason": "Default deletion reason:",
+	"deletebatch-extensionname": "Delete Batch",
+	"deletebatch-title": "Delete batch",
+	"deletebatch-link-back": "Go back to the special page",
+	"deletebatch-as": "Run the script as:",
+	"deletebatch-both-modes": "Please choose either one specified page or a given list of pages.",
+	"deletebatch-or": "<strong>or</strong>",
+	"deletebatch-delete": "Delete",
+	"deletebatch-page": "Pages to be deleted:",
+	"deletebatch-processing-from-file": "deleting pages listed in the file",
+	"deletebatch-processing-from-form": "deleting pages listed in the form",
+	"deletebatch-omitting-nonexistent": "Omitting non-existing page $1.",
+	"deletebatch-omitting-invalid": "Omitting invalid page $1.",
+	"deletebatch-file-bad-format": "The file should be plain text.",
+	"deletebatch-file-missing": "Unable to read given file.",
+	"deletebatch-select-script": "Delete page script",
+	"deletebatch-select-yourself": "You",
+	"deletebatch-no-page": "Please specify at least one page to delete or choose a file containing page list.",
+	"deletebatch-system-username": "Delete page script",
+	"action-deletebatch": "batch delete pages",
+	"right-deletebatch": "Batch delete pages",
+	"action-deletebatch-spoof": "batch delete pages as \"Delete page script\"",
+	"right-deletebatch-spoof": "Batch delete pages as \"Delete page script\"",
+	"deletebatch-deleting-file-only": "File description page $1 does not exist; deleting the actual file only.\nThis action will not be logged."
+}

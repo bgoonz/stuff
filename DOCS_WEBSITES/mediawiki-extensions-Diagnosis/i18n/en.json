@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": []
+	},
+	"diagnosis": "Diagnosis",
+	"diagnosis-desc": "Special page to find possible problems and errors or security risks",
+	"action-diagnosis-access": "run the diagnosis tool",
+	"right-diagnosis-access": "Run the diagnosis tool"
+}

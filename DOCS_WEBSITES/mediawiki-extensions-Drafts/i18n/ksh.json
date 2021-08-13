@@ -1,0 +1,38 @@
+{
+	"@metadata": {
+		"authors": [
+			"Purodha"
+		]
+	},
+	"drafts": "Äntwörf",
+	"drafts-desc": "Deit de Müjjeleschkeit dobei, ene [[Special:Drafts|Entworf]] fun en Sigg om ẞööver affzelähje.",
+	"drafts-view": "Äntworf zeije",
+	"drafts-view-summary": "Heh di {{int:specialpage}} hädd en Leß met alle Entwörf, di mer han. \nNoh {{PLURAL:$1|einem Daach|$1 Dääsch|nullkommanix}} wähde de\nonjenötz Äntwörf automattesch fott jeschmeße.",
+	"drafts-view-article": "Sigg",
+	"drafts-view-existing": "Jespeicherte Äntwörf",
+	"drafts-view-saved": "Jespeichert",
+	"drafts-view-discard": "Schmiiß fott!",
+	"drafts-view-nonesaved": "Do häß jrad kein Äntwörf jespeichert.",
+	"drafts-view-notice": "Do häß $1 för heh di Sigg.",
+	"drafts-view-notice-link": "{{PLURAL:$1|eine Entworf|$1 Äntwörf|keine Entworf}}",
+	"drafts-view-warn": "Wann De heh vun dä Sigg fott jeihß, dann sen all Ding Ennjabe fott, di De noch nit avjespeicht häß.\nWellß De dat?",
+	"drafts-save": "Wat mer heh süht als_ennen Entworf avspeichere",
+	"drafts-save-save": "Entworf avspeichere",
+	"drafts-save-saved": "Avjespeichert",
+	"drafts-save-saving": "Am Avspeichere",
+	"drafts-save-error": "Bemm Entworf Speichere es jet donevve jejange, dat hät nit jeflupp.",
+	"drafts-enable": "Ennschallde, dat me ene Äntworv em beim Beärbeide faßhallde kann",
+	"prefs-extension-drafts": "Äntwörf",
+	"tooltip-drafts-save": "Als ene Entworf avspeichere",
+	"apihelp-savedrafts-description": "Donn ene Äntworf faßhallde.",
+	"apihelp-savedrafts-param-id": "Däm Äntworf sing Kännong.",
+	"apihelp-savedrafts-param-drafttoken": "Däm Äntworf sing !!FUZY!! token.",
+	"apihelp-savedrafts-param-title": "Däm Äntworf sing Övverschreff.",
+	"apihelp-savedrafts-param-section": "De Nommer vun däm Afschnedd en dä Sigg, dä mer jrahd aam ändere es.",
+	"apihelp-savedrafts-param-starttime": "De Zigg, woh met däm Äntworf bejonne wohd.",
+	"apihelp-savedrafts-param-edittime": "De Zigg, woh dä Äntworf jeänndert wohd.",
+	"apihelp-savedrafts-param-scrolltop": "Dä „<i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"Et bövverschte Pixel em Kaßte, vun woh af der Enhalld aanfänglessch aanjezeijsch weed\">scrollTop</i>“ vun däm Kaßte mem Täx.",
+	"apihelp-savedrafts-param-text": "Däm Äntworf singe Ennhald.",
+	"apihelp-savedrafts-param-summary": "Däm Äntworf sing Zersammefaßong.",
+	"apihelp-savedrafts-param-minoredit": "Ene Schallder, dä sähd ov dä Äntworv en klein Mini-Änderong sin sull."
+}

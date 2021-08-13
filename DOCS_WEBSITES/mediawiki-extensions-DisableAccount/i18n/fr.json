@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cquoi",
+			"Gomoko",
+			"IAlex",
+			"Orlodrim",
+			"Peter17",
+			"Urhixidur"
+		]
+	},
+	"disableaccount-desc": "Permet aux administrateurs de désactiver des comptes individuels.",
+	"right-disableaccount": "Désactiver des comptes",
+	"action-disableaccount": "désactiver des comptes",
+	"disableaccount": "Désactiver un compte d’utilisateur",
+	"disableaccount-user": "Nom d’utilisateur :",
+	"disableaccount-confirm": "Désactiver ce compte utilisateur.\nL’utilisateur ne pourra plus s’identifier, ni réinitialiser son mot de passe, ni recevoir des notifications par courrier électronique.\nSi l’utilisateur est actuellement identifié quelque part, il sera immédiatement déconnecté.\n''Notez que la désactivation d’un compte n’est pas réversible sans intervention d’un administrateur système.''",
+	"disableaccount-mustconfirm": "Vous devez confirmer que vous souhaitez désactiver ce compte.",
+	"disableaccount-nosuchuser": "Le compte utilisateur « $1 » n'existe pas.",
+	"disableaccount-success": "Le compte utilisateur « $1 » a été définitivement désactivé.",
+	"logentry-block-disableaccount": "$1 {{GENDER:$2|a désactivé}} le compte de {{GENDER:$4|$3}}."
+}

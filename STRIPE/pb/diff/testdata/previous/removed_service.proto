@@ -1,6 +1,0 @@
-syntax = "proto3";
-
-package helloworld;
-
-service Foo {
-}

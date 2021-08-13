@@ -1,0 +1,56 @@
+{
+	"name": "Create Page",
+	"version": "0.5.0",
+	"author": [
+		"[https://www.mediawiki.org/wiki/User:Jeroen_De_Dauw Jeroen De Dauw]",
+		"Ike Hecht"
+	],
+	"license-name": "GPL-3.0-only",
+	"requires": {
+		"MediaWiki": ">= 1.35.0"
+	},
+	"url": "https://www.mediawiki.org/wiki/Extension:Create_Page",
+	"descriptionmsg": "cp-desc",
+	"type": "parser",
+	"SpecialPages": {
+		"CreatePageRedirect": "SpecialCreatePageRedirect"
+	},
+	"MessagesDirs": {
+		"CreatePage": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"CreatePageAlias": "CreatePage.alias.php",
+		"CreatePageMagic": "CreatePage.magic.php"
+	},
+	"AutoloadClasses": {
+		"CreatePageHooks": "includes/CreatePageHooks.php",
+		"SpecialCreatePageRedirect": "includes/specials/SpecialCreatePageRedirect.php"
+	},
+	"Hooks": {
+		"BeforePageDisplay": "CreatePageHooks::addCreatePageModules",
+		"ParserFirstCallInit": "CreatePageHooks::setupParserFunction"
+	},
+	"config": {
+		"CreatePageEditExisting": {
+			"value": false,
+			"description": "Set to true to edit existing pages."
+		},
+		"CreatePageUseVisualEditor": {
+			"value": false,
+			"description": "Set to true to redirect to VisualEditor for page creation."
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "modules",
+		"remoteExtPath": "CreatePage/modules"
+	},
+	"ResourceModules": {
+		"ext.createPage": {
+			"scripts": "createPage.searchSuggest.js",
+			"dependencies": "mediawiki.searchSuggest"
+		}
+	},
+	"manifest_version": 2
+}

@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"etherpadlite-desc": "Aggiunge 'u tag analizzatore &lt;eplite&gt; pe 'ngapsulà une o cchiù pad Etherpad Lite (le quale stonne ospitate in locale o sus a server de fore Etherpad Lite) sus a le pàggene",
+	"etherpadlite-tracking-category": "Pàggene cu 'nu Etherpad 'ngapsulate",
+	"etherpadlite-tracking-category-desc": "Sta pàgene 'ngapsule 'nu Etherpad cu 'u tag <code>&lt;eplite&gt;</code>.",
+	"etherpadlite-invalid-pad-url": "\"$1\" non g'è 'na URL valide de Etherpad Lite URL o 'nu nome anghiute bbuène.",
+	"etherpadlite-url-is-not-whitelisted": "\"$1\" non ges te jndr'à l'elenghe de le server permesse de Etherpad Lite. {{PLURAL:$3|$2 jè l'uneche server permesse|Le server permesse sò le seguende: $2}}.",
+	"etherpadlite-empty-whitelist": "\"$1\" non ge ste jndr'à l'elenghe de le server permesse de Etherpad Lite. Non ge stonne server consendite jndr'à l'elenghe.",
+	"etherpadlite-pad-used-more-than-once": "'U pad \"$1\" ha state ggià ausate apprime sus a sta pàgene; tu puè avè 'nu sbuènne de pad sus a 'na pàgene, ma sulamende ce lore sò diverse."
+}

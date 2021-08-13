@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aotake",
+			"Azeha",
+			"Fievarsty",
+			"Fryed-peach",
+			"Otokoume",
+			"Shirayuki"
+		]
+	},
+	"deletebatch": "ページの一括削除",
+	"deletebatch-desc": "[[Special:DeleteBatch|ページを一括削除する]]",
+	"deletebatch-help": "ページを一括削除できます。\nページ毎に削除できる他、ファイル内に列挙したページ群を削除することもできます。\n削除記録に表示される利用者を選択してください。\nアップロードされたファイルでは、ページ名と削除理由 (省略可能) をパイプ記号 (|) で区切って記す必要があります。",
+	"deletebatch-caption": "ページ一覧:",
+	"deletebatch-title": "一括削除",
+	"deletebatch-link-back": "特別ページに戻る",
+	"deletebatch-as": "スクリプトを実行する名義:",
+	"deletebatch-both-modes": "1つのページ名か、ページ一覧ファイルか、どちらかで指定してください。",
+	"deletebatch-or": "<strong>または</strong>",
+	"deletebatch-delete": "削除",
+	"deletebatch-page": "削除するページ:",
+	"deletebatch-processing-from-file": "ファイル内で列挙されたページを削除中",
+	"deletebatch-processing-from-form": "フォーム内に列挙されたページを削除中",
+	"deletebatch-omitting-nonexistent": "存在しないページ $1 を省略しました。",
+	"deletebatch-omitting-invalid": "無効なページ $1 を省略しました。",
+	"deletebatch-file-bad-format": "ファイルは、プレーンテキストであるべきです。",
+	"deletebatch-file-missing": "指定されたファイルから読み取れません。",
+	"deletebatch-select-script": "ページ削除スクリプト",
+	"deletebatch-select-yourself": "あなた",
+	"deletebatch-no-page": "削除するページを少なくとも1つ指定するか、ページ一覧を含むファイルを選択してください。",
+	"action-deletebatch": "ページの一括削除",
+	"right-deletebatch": "ページを一括削除",
+	"deletebatch-deleting-file-only": "ファイル解説ページ $1 は存在しません。本体ファイルのみを削除しています。この操作は記録されません。"
+}

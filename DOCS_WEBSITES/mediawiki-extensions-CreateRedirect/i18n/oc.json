@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cedric31"
+		]
+	},
+	"createredirect": "Crear una redireccion",
+	"createredirect-desc": "Apond una pagina especiala [[Special:CreateRedirect|Crear una redireccion]] per crear aisidament de redireccions",
+	"createredirect-error": "Error : Fracàs de l’identificacion.",
+	"createredirect-instructions": "En utilizant lo formulari çaijós, podètz crear una pagina de redireccion o remplaçar una pagina existenta per una redireccion.",
+	"createredirect-page-title": "Títol de la pagina :",
+	"createredirect-redirect-done": "Redireccion creada de « $1 » cap a « $2 »",
+	"createredirect-redirect-to": "Redirigir cap a :",
+	"createredirect-save": "Enregistrar la pagina"
+}

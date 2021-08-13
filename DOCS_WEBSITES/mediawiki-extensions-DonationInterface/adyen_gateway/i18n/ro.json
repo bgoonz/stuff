@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Minisarm"
+		]
+	},
+	"adyen_gateway-desc": "Procesarea plăților prin Adyen",
+	"adyen_gateway-response-default": "S-a produs o eroare în timpul procesării tranzacției dumneavoastră.\nVă rugăm să reîncercați mai târziu."
+}

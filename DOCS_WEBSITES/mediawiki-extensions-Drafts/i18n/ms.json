@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Anakmalaysia",
+			"Aviator",
+			"Izzudin"
+		]
+	},
+	"drafts": "Draf",
+	"drafts-desc": "Menambah kebolehan untuk menyimpan laman versi [[Special:Drafts|draf]] dalam komputer pelayan",
+	"drafts-view": "ViewDraft",
+	"drafts-view-summary": "Yang berikut ialah senarai semua draf. Draf-draf yang tidak digunakan akan diabaikan secara automatik selepas $1 hari.",
+	"drafts-view-article": "Laman",
+	"drafts-view-existing": "Draf yang ada",
+	"drafts-view-saved": "Disimpan",
+	"drafts-view-discard": "Abaikan",
+	"drafts-view-nonesaved": "Anda tidak mempunyai draf.",
+	"drafts-view-notice": "Anda mempunyai $1 untuk laman ini.",
+	"drafts-view-notice-link": "$1 draf",
+	"drafts-view-warn": "Anda akan kehilangan semua perubahan pada laman ini yang belum disimpan. Betul anda mahu keluar dari laman ini?",
+	"drafts-save": "Simpan suntingan ini sebagai draf",
+	"drafts-save-save": "Simpan draf",
+	"drafts-save-saved": "Disimpan",
+	"drafts-save-saving": "Menyimpan",
+	"drafts-save-error": "Ralat ketika menyimpan draf",
+	"drafts-enable": "Hidupkan ciri menyimpan draf dalam bentuk sunting",
+	"prefs-extension-drafts": "Draf",
+	"tooltip-drafts-save": "Simpan sebagai draf"
+}

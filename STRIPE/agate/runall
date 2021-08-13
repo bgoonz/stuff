@@ -1,5 +1,0 @@
-#!/bin/sh
-
-./gendoc && \
-  sbt scalafmtAll test doc && \
-  git status -s -uno

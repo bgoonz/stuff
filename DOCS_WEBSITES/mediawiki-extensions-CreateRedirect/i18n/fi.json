@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"01miki10",
+			"Crt",
+			"Nike",
+			"Pxos",
+			"Veikk0.ma"
+		]
+	},
+	"createredirect": "Luo ohjaus",
+	"createredirect-desc": "Lisää [[Special:CreateRedirect|toimintosivun]], jolla voi helposti luoda ohjauksia.",
+	"createredirect-error": "Virhe: Varmennus epäonnistui.",
+	"createredirect-enable-multiline": "Syötä lisää nimiä",
+	"createredirect-instructions": "Alla olevan lomakkeen avulla voit luoda ohjaussivun tai korvata olemassa olevan sivun ohjaussivulla.",
+	"createredirect-invalid-title": "Virhe: \"$1\" ei ole kelvollinen nimi.",
+	"createredirect-overwrite": "Ohita varoitukset",
+	"createredirect-page-title": "Sivun nimi:",
+	"createredirect-redirect-done": "Ohjaus luotu sivulta ”$1” sivulle ”$2”.",
+	"createredirect-redirect-to": "Ohjaa sivulle",
+	"createredirect-save": "Tallenna sivu",
+	"createredirect-would-overwrite": "Varoitus: sivu \"[[:$1]]\" on jo olemassa."
+}

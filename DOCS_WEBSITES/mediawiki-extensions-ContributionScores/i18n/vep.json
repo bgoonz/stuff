@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Игорь Бродский"
+		]
+	},
+	"contributionscores": "Tondan arvoind",
+	"contributionscores-desc": "Märičeb [[Special:ContributionScores|kävutajid, kel om enamba redaktiruindad,]] andmuzbazan turbiš",
+	"contributionscores-info": "Arvsana lugedas ezmäks unikaližiden redaktiruidud lehtpoliden lugun mödhe; sidaig ottas sil'mnägubale redaktiruindan surembad mülüd.",
+	"contributionscores-top": "($1 parembad)",
+	"contributionscores-days": "{{PLURAL:$1|jäl'gmäine päiv|$1 jäl'gmäšt päiväd}}",
+	"contributionscores-allrevisions": "Kaikes aigas",
+	"contributionscores-score": "Punktad",
+	"contributionscores-rank": "Rang",
+	"contributionscores-pages": "Lehtpol't",
+	"contributionscores-changes": "Toižetusid",
+	"contributionscores-username": "Kävutajannimi",
+	"contributionscores-invalidusername": "Vär kävutajannimi",
+	"contributionscores-invalidmetric": "Petuzline metrik"
+}

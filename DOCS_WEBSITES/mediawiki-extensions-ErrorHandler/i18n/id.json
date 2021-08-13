@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bennylin",
+			"IvanLanin",
+			"Kandar"
+		]
+	},
+	"errorhandler-desc": "Penangan kesalahan untuk MediaWiki",
+	"errorhandler-errors": "Galat:",
+	"errorhandler-error-fatal": "Kesalahan fatal",
+	"errorhandler-error-warning": "Peringatan",
+	"errorhandler-error-parse": "Kesalahan parser",
+	"errorhandler-error-notice": "Pemberitahuan",
+	"errorhandler-error-deprecated": "Tidak dipakai",
+	"errorhandler-error-core-error": "Kesalahan dasar",
+	"errorhandler-error-core-warning": "Peringatan dasar",
+	"errorhandler-error-compile-error": "Kesalahan kompilasi",
+	"errorhandler-error-compile-warning": "Peringatan kompilasi",
+	"errorhandler-error-user-error": "Kesalahan pengguna",
+	"errorhandler-error-user-warning": "Peringatan pengguna",
+	"errorhandler-error-user-notice": "Pemberitahuaan pengguna",
+	"errorhandler-error-user-deprecated": "Tidak dipakai pengguna",
+	"errorhandler-error-strict": "Standar kaku",
+	"errorhandler-error-recoverable": "Kesalahan fatal yang dapat ditangkap",
+	"errorhandler-msg-text": "$1 : $2 pada $3 (baris $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> pada <b>$3</b> (baris <b>$4</b>)",
+	"errorhandler-trace": "lacak:",
+	"errorhandler-trace-line": "$1 (baris $2): $3",
+	"errorhandler-trace-line-internal": "[fungsi internal]: $1"
+}

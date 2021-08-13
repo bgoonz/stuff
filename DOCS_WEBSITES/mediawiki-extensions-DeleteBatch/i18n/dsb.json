@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Michawiki"
+		]
+	},
+	"deletebatch": "Někotare boki wulašowaś",
+	"deletebatch-desc": "[[Special:DeleteBatch|Někotare boki wulašowaś]]",
+	"deletebatch-help": "Wulašuj někotare boki. Móžoš pak jadnotliwe wulašowanje pśewjasć pak boki z dataje wulašowaś.\nWubjeŕ wužywarja, kótaryž se pokažo w protokolach wulašowanjow.\nNagrata dataja by měła mě boka a opcionelnu pśicynu wopśimjeś, kótarejž stej pśez znamuško \"|\" w  kuždej smužce wótźělonej.",
+	"deletebatch-caption": "Lisćina bokow:",
+	"deletebatch-title": "Někotare boki wulašowaś",
+	"deletebatch-link-back": "Slědk k specialnemu bokoju",
+	"deletebatch-as": "Skript wuwjasć ako:",
+	"deletebatch-both-modes": "Pšosym wubjeŕ pak jaden pódany boka pak danu lisćinu bokow.",
+	"deletebatch-or": "<strong>abo</strong>",
+	"deletebatch-delete": "Wulašowaś",
+	"deletebatch-page": "Boki, kótarež maju se wulašowaś:",
+	"deletebatch-processing-from-file": "boki z dataje lašowaś",
+	"deletebatch-processing-from-form": "boki z formulara lašowaś",
+	"deletebatch-omitting-nonexistent": "Njeeksistujucy bok $1 se wuwóstaja.",
+	"deletebatch-omitting-invalid": "Njepłaśiwy bok $1 se wuwóstaja.",
+	"deletebatch-file-bad-format": "Dataja by měła lutny tekst wopśimjeś",
+	"deletebatch-file-missing": "Jo njemóžno danu dataju cytaś",
+	"deletebatch-select-script": "skript za wulašowanje bokow",
+	"deletebatch-select-yourself": "ty",
+	"deletebatch-no-page": "Pšosym pódaj nanejmjenjej jaden bok za wulašowanje ABO wujeŕ dataju, kótaraž wopśimujo lisćinu bokow.",
+	"right-deletebatch": "Někotare boki wulašowaś",
+	"deletebatch-deleting-file-only": "Bok datajowego wopisanja $1 njeeksistěrujo; popšawna dataja lašujo se jano.\nToś ta akcija njebuźo se protokolěrowaś."
+}

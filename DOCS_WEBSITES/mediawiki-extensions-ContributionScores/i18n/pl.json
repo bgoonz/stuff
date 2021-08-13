@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrumps",
+			"Derbeth",
+			"Equadus",
+			"McMonster",
+			"Rail",
+			"Railfail536",
+			"Sp5uhe",
+			"Wpedzich"
+		]
+	},
+	"contributionscores": "Punkty za edycje",
+	"contributionscores-desc": "Wylicza [[Special:ContributionScores|punkty za edycje]] dla użytkowników",
+	"contributionscores-info": "Wynik jest uzależniony przede wszystkim od liczby edytowanych unikalnych stron z uwzględnieniem dużej liczby edycji – zakładając wyższą wartość tworzenia nowych artykułów.",
+	"contributionscores-top": "($1 najlepszych)",
+	"contributionscores-days": "{{PLURAL:$1|Ostatni 1 dzień|Ostatnie $1 dni|Ostatnich $1 dni}}",
+	"contributionscores-allrevisions": "Cała aktywność",
+	"contributionscores-score": "Punktów",
+	"contributionscores-rank": "Ranga",
+	"contributionscores-pages": "Stron",
+	"contributionscores-changes": "Zmian",
+	"contributionscores-username": "Nazwa użytkownika",
+	"contributionscores-invalidusername": "Zła nazwa użytkownika",
+	"contributionscores-invalidmetric": "Nieprawidłowa metryka"
+}

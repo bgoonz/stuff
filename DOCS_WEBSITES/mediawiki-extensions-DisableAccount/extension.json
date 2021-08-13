@@ -1,0 +1,36 @@
+{
+	"@doc": "Written by Andrew Garrett, 2010-12-02",
+	"name": "Disable Account",
+	"author": [
+		"Andrew Garrett"
+	],
+	"license-name": "GPL-2.0-or-later",
+	"requires": {
+		"MediaWiki": ">= 1.33.0"
+	},
+	"url": "https://www.mediawiki.org/wiki/Extension:DisableAccount",
+	"descriptionmsg": "disableaccount-desc",
+	"type": "other",
+	"ExtensionMessagesFiles": {
+		"DisableAccountAliases": "DisableAccount.alias.php"
+	},
+	"MessagesDirs": {
+		"DisableAccount": [
+			"i18n"
+		]
+	},
+	"LogActionsHandlers": {
+		"block/disableaccount": "DisableAccountLogFormatter"
+	},
+	"AvailableRights": [
+		"disableaccount"
+	],
+	"SpecialPages": {
+		"DisableAccount": "SpecialDisableAccount"
+	},
+	"AutoloadClasses": {
+		"SpecialDisableAccount": "SpecialDisableAccount.php",
+		"DisableAccountLogFormatter": "DisableAccountLogFormatter.php"
+	},
+	"manifest_version": 1
+}

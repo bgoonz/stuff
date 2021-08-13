@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"editsubpages-desc": "Permite a los alministradores desbloquiar una páxina y toles subpáxines pa edición anónima con [[MediaWiki:Unlockedpages]]",
+	"unlockedpages": "  #<!-- dexe esta llinia como ta --><pre>\n# Ponga más abaxo les páxines que quiera desprotexer usando\n# * Nomedelapáxina\n# Les páxines desprotexíes han comenzar con asteriscu (*) para que se cuenten,\n# tolo demás considerase un comentariu\n# Los nomes de les páxines puen ser [[enllaces]] y distinguen ente mayúscules y minúscules\n# Tamién, les páxines d'alderique desprotexeránse automáticamente cola páxina\n# Ver https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages pa más información\n  #</pre><!-- dexe esta llinia como ta -->"
+}

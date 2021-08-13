@@ -1,3 +1,0 @@
-#!/bin/bash
-eval $(PATH=.:$PATH helios-env)
-helios -z $HELIOS_URI "$@"

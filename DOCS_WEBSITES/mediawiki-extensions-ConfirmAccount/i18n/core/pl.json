@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Derbeth",
+			"Equadus",
+			"Leinad",
+			"Maikking",
+			"Masti",
+			"McMonster",
+			"Rail",
+			"Railfail536",
+			"Sp5uhe",
+			"ToSter",
+			"Woytecr",
+			"Wpedzich"
+		]
+	},
+	"confirmaccount-newrequests": "{{PLURAL:$1|Jest '''$1''' [[Special:ConfirmAccounts|oczekujący wniosek]]|Są '''$1''' [[Special:ConfirmAccounts|oczekujące wnioski]]|Jest '''$1''' [[Special:ConfirmAccounts|oczekujących wniosków]]}}, z potwierdzonym adresem e‐mail. '''Konieczna jest Twoja ingerencja!'''",
+	"requestaccount-loginnotice": "By uzyskać konto użytkownika musisz '''[[Special:RequestAccount|złożyć wniosek]]'''.",
+	"action-confirmaccount": "sprawdzania i akceptacji kont",
+	"right-confirmaccount": "Przeglądanie [[Special:ConfirmAccounts|kolejki z wnioskami o założenie konta]]",
+	"right-confirmaccount-notify": "Otrzymuj powiadomienia na e-mail o nowo zatwierdzonych wniosków o utworzenie konta",
+	"action-requestips": "przeglądania adresów IP wnioskodawców podczas przetwarzania ich wniosków o założenie konta",
+	"right-requestips": "Przeglądanie adresów IP wnioskodawców podczas przetwarzania ich wniosków o założenie konta",
+	"action-lookupcredentials": "podglądu poświadczeń użytkownika",
+	"right-lookupcredentials": "Przeglądanie [[Special:UserCredentials|referencji użytkowników]]"
+}

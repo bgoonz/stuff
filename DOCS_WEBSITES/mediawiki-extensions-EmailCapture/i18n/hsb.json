@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Michawiki"
+		]
+	},
+	"emailcapture": "E-mejlowe přepruwowanje",
+	"emailcapture-desc": "Zmóžnja popadnjenje e-mejlowych adresow a dowola wužiwarjam je přez e-mejl přepruwować",
+	"emailcapture-failure": "Twoja e-mejl '''nje'''je so přepruwowała.",
+	"emailcapture-invalid-code": "Njepłaćiwy wobkrućenski kod.",
+	"emailcapture-already-confirmed": "Twoja e-mejlowa adresa bu hižo wobkrućena.",
+	"emailcapture-response-subject": "{{SITENAME}} – přepruwowanje e-mejloweje adresy",
+	"emailcapture-response-body": "Halo!\n\nWulki dźak za twój zajim {{GRAMMAR:akuzatiw|{{SITENAME}}}} polěpšić.\n\nProšu bjer sej wokomik časa, zo by swoju e-mejl přez kliknjenje na slědowacy wotkaz wobkrućił:\n$1\n\nMóžeš tež slědowacu stronu wopytać:\n$2\n\nZapodaj potom slědowacy wobkrućenski kod:\n$3\n\nStajimy so za krótki čas z tobu do zwiska, zo bychmy ći zdźělili, kak móžeš pomhać, {{GRAMMAR:akuzatiw|{{SITENAME}}}} polěpšić.\n\nJeli njejsy tute naprašowanje pósłał, ignoruj prošu tutu e-mejl a njepósćelemy ći ničo wjace.",
+	"emailcapture-success": "Wulki dźak!\n\nWaša e-mejl je so wuspěšnje wobkrućiła.",
+	"emailcapture-instructions": "Zo by swoju e-mejlowu adresu wobkrućił, zapodajće kod, kotryž je so ći přez e-mejl připósłał a klikń na \"{{int:emailcapture-submit}}\".",
+	"emailcapture-verify": "Wobkrućenski kod:",
+	"emailcapture-submit": "E-mejlowu adresu wobkrućić"
+}

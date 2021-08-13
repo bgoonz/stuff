@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Michawiki"
+		]
+	},
+	"editsubpages-desc": "Dowola administratoram stronu a wšě jich podstrony za anonymne wobdźěłanje přez [[MediaWiki:Unlockedpages]] wotewrěć",
+	"unlockedpages": " #<!-- tutu linku njezměnjenu wostajić --><pre>\n# Strony, kotrež chceš wotewrěć z pomocu\n# * mjena strony\n# nalistować\n# Wotewrjene strony dyrbja so z naličenskim znamješkom započeć,\n# wšo druhe maja za komentar\n# Mjena stronow móža [[links|wotkazy]] być a wulkopisanje wobkedźbować\n# Tež diskusijne strony budu so ze stronu awtomatisce wotewěrać\n# Hlej https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages za dalše informacije\n  #</pre><!-- tutu linku njezměnjenu wostajić -->"
+}

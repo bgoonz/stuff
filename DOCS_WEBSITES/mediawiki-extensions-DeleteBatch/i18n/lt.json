@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eitvys200"
+		]
+	},
+	"deletebatch-caption": "Puslapių sąrašas:",
+	"deletebatch-link-back": "Grįžti į specialų puslapį",
+	"deletebatch-both-modes": "Prašome pasirinkti vieną nurodytą puslapį ar pateiktą puslapių sąrašą.",
+	"deletebatch-or": "<strong>arba</strong>",
+	"deletebatch-delete": "Ištrinti",
+	"deletebatch-page": "Puslapiai ištrynimui:",
+	"deletebatch-processing-from-file": "trinami puslapiai, esantys faile",
+	"deletebatch-processing-from-form": "trinami puslapiai, esantys formoje",
+	"deletebatch-select-yourself": "Jūs",
+	"deletebatch-no-page": "Prašome nurodyti bent vieną puslapį trynimui arba pasirinkti failą, kuriame yra puslapių sąrašas.",
+	"deletebatch-deleting-file-only": "Failo aprašymo puslapis $1 neegzistuoja; trinamas tik pats failas.\nŠis veiksmas nebus įrašytas į žurnalą."
+}

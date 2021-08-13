@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gitartha.bordoloi"
+		]
+	},
+	"createredirect": "পুনঃনিৰ্দেশ সৃষ্টি কৰক",
+	"createredirect-desc": "সহজে পুনঃনিৰ্দেশনা সৃষ্টি কৰিবলৈ বিশেষ পৃষ্ঠা [[Special:CreateRedirect|ক্ৰিয়েটৰিডিৰেক্ট]] যোগ কৰে",
+	"createredirect-error": "ত্ৰুটি: নিশ্চিতকৰণ ব্যৰ্থ হৈছে।",
+	"createredirect-instructions": "তলৰ প্ৰপত্ৰ ব্যৱহাৰ কৰি আপুনি এটা পুনঃনিৰ্দেশ পৃষ্ঠা সৃষ্টি কৰিব পাৰে বা পূৰ্বৰ পৃষ্ঠা এটা পুনঃনিৰ্দেশেৰে সলাব পাৰে।",
+	"createredirect-page-title": "পৃষ্ঠাৰ শিৰোনামা:",
+	"createredirect-redirect-done": "\"$1\" ৰ পৰা \"$2\"লৈ পুনঃনিৰ্দেশ সৃষ্টি কৰা হৈছে",
+	"createredirect-redirect-to": "পুনঃনিৰ্দেশ কৰা হৈছে:",
+	"createredirect-save": "পৃষ্ঠা সাঁচক"
+}

@@ -1,8 +1,0 @@
-{
-  "domain": "device_tracker",
-  "name": "Device tracker",
-  "documentation": "https://www.home-assistant.io/components/device_tracker",
-  "requirements": [],
-  "dependencies": ["group", "zone"],
-  "codeowners": []
-}

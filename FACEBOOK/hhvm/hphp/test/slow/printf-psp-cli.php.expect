@@ -1,6 +1,0 @@
-echo nonpsp
-file_put_contents nonpsp
-fwrite nonpsp
-echo psp
-file_put_contents psp
-fwrite psp

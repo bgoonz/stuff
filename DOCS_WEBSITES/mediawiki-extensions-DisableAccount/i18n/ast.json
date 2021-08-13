@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"disableaccount-desc": "Permite que los alministradores desactiven cuentes individuales.",
+	"right-disableaccount": "Desactivar cuentes",
+	"action-disableaccount": "desactivar cuentes",
+	"disableaccount": "Desactivar una cuenta d'usuariu",
+	"disableaccount-user": "Nome d'usuariu:",
+	"disableaccount-confirm": "Desactivar esta cuenta d'usuariu.\nL'usuariu nun podrá entrar al sistema, reaniciar la contraseña o recibir avisos per corréu.\nSi l'usuariu ta conectáu n'ayuri, se-y desconectará darréu.\n''Ten en cuenta que desactivar una cuenta nun ye reversible ensin la intervención d'un alministrador del sistema.''",
+	"disableaccount-mustconfirm": "Tienes de confirmar que quies desactivar esta cuenta.",
+	"disableaccount-nosuchuser": "La cuenta d'usuariu \"$1\" nun esiste.",
+	"disableaccount-success": "La cuenta d'usuariu \"$1\" se desactivó de mou permanente.",
+	"logentry-block-disableaccount": "$1 {{GENDER:$2|desactivó la cuenta}} de {{GENDER:$4|$3}}."
+}

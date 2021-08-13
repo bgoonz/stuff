@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Daniel Kinzler",
+			"Reedy"
+		]
+	},
+	"contactpage": "Contact page",
+	"contactpage-desc": "[[Special:Contact|Contact form for visitors]]",
+	"contactpage-title": "Contact",
+	"contactpage-pagetext": "Please use the form below to contact us.",
+	"contactpage-legend": "Send email",
+	"contactpage-defsubject": "Contact message",
+	"contactpage-subject-and-sender": "$1 (from $2)",
+	"contactpage-subject-and-sender-withip": "$1 (from $2 at $3)",
+	"contactpage-fromname": "Your name:",
+	"contactpage-fromaddress": "Your email address:",
+	"contactpage-formfootnotes": "(needed if you want an answer)",
+	"contactpage-includeip": "Include my IP address in this message.",
+	"contactpage-usermailererror": "Mail object returned error: $1",
+	"contactpage-captcha-error": "CAPTCHA error",
+	"contactpage-config-error-title": "Contact form error",
+	"contactpage-config-error": "A contact form is either not configured for this page or is configured incorrectly.",
+	"contactpage-mustbeloggedin": "Please log in to submit a contact form."
+}

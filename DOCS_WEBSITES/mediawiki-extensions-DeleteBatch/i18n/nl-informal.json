@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"HanV",
+			"Siebrand"
+		]
+	},
+	"deletebatch-help": "Een lijst pagina's verwijderen.\nJe kunt een enkele pagina verwijderen of een lijst van pagina's in een bestand.\nKies een gebruiker die in het verwijderingslogboek wordt genoemd.\nHet bestand dat je uploadt moet op iedere regel een paginanaam en een reden bevatten (optioneel), gescheiden door het karakter \"|\".",
+	"deletebatch-select-yourself": "jij"
+}

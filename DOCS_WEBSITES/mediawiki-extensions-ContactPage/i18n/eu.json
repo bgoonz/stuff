@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"An13sa",
+			"DannyS712",
+			"Subi",
+			"Theklan",
+			"Xabier Armendaritz"
+		]
+	},
+	"contactpage": "Kontaktu orrialdea",
+	"contactpage-desc": "[[Special:Contact|Bisitarientzako kontaktu formularioa]]",
+	"contactpage-title": "Kontaktatu",
+	"contactpage-pagetext": "Erabil ezazu beheko formularioa gurekin kontaktatzeko.",
+	"contactpage-legend": "Bidali mezu elektronikoa",
+	"contactpage-defsubject": "Kontaktu mezua",
+	"contactpage-subject-and-sender": "$1 ($2(e)k bidalia)",
+	"contactpage-subject-and-sender-withip": "$1 ($2-k bidalia, $3-(r)ekin)",
+	"contactpage-fromname": "Zure izena:",
+	"contactpage-fromaddress": "Zure helbide elektronikoa:",
+	"contactpage-formfootnotes": "(beharrezkoa erantzuna nahi bada)",
+	"contactpage-includeip": "Nire IP helbidea mezu honetan sartu.",
+	"contactpage-usermailererror": "Mail objektuak errore hau itzuli du: $1"
+}

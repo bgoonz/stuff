@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"EugeneZelenko",
+			"Jim-by",
+			"Red Winged Duck",
+			"Wizardist"
+		]
+	},
+	"deletebatch": "Выдаленьне групы старонак",
+	"deletebatch-desc": "[[Special:DeleteBatch|Выдаліць групу старонак]]",
+	"deletebatch-help": "Выдаленьне групы старонак.\nВы можаце выдаляць старонкі па адной альбо выдаліць старонкі зьмешчаныя ў файле.\nАбярыце ўдзельніка, які будзе паказаны ў журнале выдаленьняў.\nЗагружаныя файлы павінныя зьмяшчаць назвы старонак і неабавязковую прычыну выдаленьня, якія падзеленыя паміж сабой сымбалем «|».",
+	"deletebatch-caption": "Сьпіс старонак:",
+	"deletebatch-default-reason": "Прычына выдаленьня па змоўчаньні:",
+	"deletebatch-title": "Выдаліць групу",
+	"deletebatch-link-back": "Вярнуцца да спэцыяльнай старонкі",
+	"deletebatch-as": "Запусьціць скрыпт як:",
+	"deletebatch-both-modes": "Калі ласка, выберыце адну вызначаную старонку альбо сьпіс старонак.",
+	"deletebatch-or": "<strong>ці</strong>",
+	"deletebatch-delete": "Выдаліць",
+	"deletebatch-page": "Старонкі да выдаленьня:",
+	"deletebatch-processing-from-file": "выдаленьне старонак, пералічаных у файле",
+	"deletebatch-processing-from-form": "выдаленьне старонак, якія пералічаныя ў форме",
+	"deletebatch-omitting-nonexistent": "Прапушчаная неіснуючая старонка $1.",
+	"deletebatch-omitting-invalid": "Прапушчаная няслушная старонка $1.",
+	"deletebatch-file-bad-format": "Файл павінен утрымліваць толькі тэкст",
+	"deletebatch-file-missing": "Немагчыма прачытаць пададзены файл",
+	"deletebatch-select-script": "скрыпт выдаленьня старонак",
+	"deletebatch-select-yourself": "Вы",
+	"deletebatch-no-page": "Калі ласка, пазначце хаця б адну старонку АЛЬБО файл, які ўтрымлівае сьпіс старонак да выдаленьня.",
+	"deletebatch-system-username": "Скрыпт выдаленьня старонак",
+	"action-deletebatch": "выдаленьне групы старонак",
+	"right-deletebatch": "выдаленьне групы старонак",
+	"action-deletebatch-spoof": "групавое выдаленьне старонак як «Скрыпт выдаленьня старонак»",
+	"right-deletebatch-spoof": "Выдаленьне групы старонак як «Выдаленьне скрыпту з старонкі»",
+	"deletebatch-deleting-file-only": "Старонка з апісаньнем файла «$1» не існуе — будзе выдалены толькі файл.\nДзеяньне ня будзе запісанае ў журнал."
+}

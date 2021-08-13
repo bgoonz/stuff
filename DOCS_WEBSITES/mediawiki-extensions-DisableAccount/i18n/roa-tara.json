@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"disableaccount-desc": "Permette a le amministrature de desabbilità le cunde utinde individuale.",
+	"right-disableaccount": "Disabbilete le cunde utinde",
+	"action-disableaccount": "disabbilite le cunde",
+	"disableaccount": "Disabbilete 'nu cunde utende",
+	"disableaccount-user": "Nome de l'utende:",
+	"disableaccount-confirm": "Disabbilete stu cunde de l'utende. <br />\nSt'utende pò non ge pò trasè cchiù, azzerà 'a passuord soje, o ricevere email de notifiche. <br />\nCe l'utende jè collegate jndr'à stu mumende, allore avène mise fore. <br />\n''Vide bbuene 'a disabbilitazione de 'nu cunde utende non g'è reversibbele senze 'n'indervende de 'n'amministratore d'u sisteme.''",
+	"disableaccount-mustconfirm": "Tu a confermà ce vuè ccu disabbilete stu cunde utende.",
+	"disableaccount-nosuchuser": "'U cunde utende \"$1\" non g'esiste.",
+	"disableaccount-success": "'U cunde utende \"$1\" ha state disabbilitate pe sembre.",
+	"logentry-block-disableaccount": "$1 {{GENDER:$2|disabbilite 'u cunde}} de {{GENDER:$4|$3}}."
+}

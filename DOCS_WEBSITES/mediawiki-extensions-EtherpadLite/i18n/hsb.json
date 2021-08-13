@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Michawiki"
+		]
+	},
+	"etherpadlite-desc": "Přidawa parserowu tafličku &lt;eplite&gt;, za zasadźenje jedneje pisanskeje płoniny abo wjacorych płoninow Etherpad Lite (kotrež su na lokalnych abo eksternych serwerach Etherpad Lite zaměstnjene) na stronach",
+	"etherpadlite-tracking-category": "Strony ze zasadźenym Etherpadom",
+	"etherpadlite-invalid-pad-url": "\"$1\" płaćiwy URL Etherpad Lite abo płaćiwe mjeno pisanskeje płoniny njeje.",
+	"etherpadlite-url-is-not-whitelisted": "\"$1\" njeje w lisćinje dowolenych serwerow Etherpad Lite. {{PLURAL:$3|$2 je jenički dowoleny serwer|Slědowacej serweraj stej móžno: $2|Slědowace serwery su móžno: $2|Slědowace serwery su móžno: $2}}.",
+	"etherpadlite-empty-whitelist": "\"$1\" njeje w lisćinje dowolenych serwerow Etherpad Lite. W lisćinje dowolene serwery njejsu.",
+	"etherpadlite-pad-used-more-than-once": "Pisanska płonina \"$1\" je so hižo do toho na tutej stronje wužiła; móžeš wjele pisanskich płoninow na stronje měć, ale jenož, jeli su rozdźělne płoniny-"
+}

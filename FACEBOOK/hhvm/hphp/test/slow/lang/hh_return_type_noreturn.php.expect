@@ -1,3 +1,0 @@
-Exception: Value returned from function return_implicit() must be of type noreturn, null given
-Exception: Value returned from function return_on_its_own() must be of type noreturn, null given
-Done

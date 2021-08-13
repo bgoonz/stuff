@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Rancher",
+			"Михајло Анђелковић"
+		]
+	},
+	"drafts": "Нацрти",
+	"drafts-view-article": "Страница",
+	"drafts-view-existing": "Постојећи нацрти",
+	"drafts-view-saved": "Сачувано",
+	"drafts-view-discard": "Одбаци",
+	"drafts-view-nonesaved": "Тренутно немате снимљених нацрта.",
+	"drafts-view-notice": "Имате $1 за ову страну.",
+	"drafts-save": "Сними ово као нацрт",
+	"drafts-save-save": "Сними нацрт",
+	"drafts-save-saved": "Сачувано",
+	"drafts-save-saving": "Чување",
+	"drafts-save-error": "Грешка приликом снимања нацрта",
+	"prefs-extension-drafts": "Нацрти",
+	"tooltip-drafts-save": "Сними као нацрт"
+}

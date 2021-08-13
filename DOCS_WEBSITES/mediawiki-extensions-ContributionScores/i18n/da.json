@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Byrial",
+			"Christian List",
+			"Kaare",
+			"Peter Alberti",
+			"Saederup92"
+		]
+	},
+	"contributionscores": "Bidragspoint",
+	"contributionscores-desc": "Henter information fra databasen om de brugere som har [[Special:ContributionScores|flest bidrag]]",
+	"contributionscores-info": "Pointene måler primært unikke sideredigeringer, med hensyntagen til højt antal redigeringer.",
+	"contributionscores-top": "(Top $1)",
+	"contributionscores-days": "Sidste {{PLURAL:$1|dag|$1 dage}}",
+	"contributionscores-allrevisions": "Gennem tiden",
+	"contributionscores-score": "Point",
+	"contributionscores-rank": "Rang",
+	"contributionscores-pages": "Sider",
+	"contributionscores-changes": "Ændringer",
+	"contributionscores-username": "Brugernavn",
+	"contributionscores-invalidusername": "Ugyldigt brugernavn",
+	"contributionscores-invalidmetric": "Ugyldig målemetode"
+}

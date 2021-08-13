@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Daud I.F. Argana",
+			"Diki Ananta",
+			"Farras",
+			"IvanLanin",
+			"Sumbukompor"
+		]
+	},
+	"emailcapture": "Verifikasi surel",
+	"emailcapture-desc": "Merekam alamat surel dan memungkinkan pengguna untuk melakukan verifikasi melalui surel",
+	"emailcapture-failure": "Alamat surel Anda '''belum'' terverifikasi.",
+	"emailcapture-invalid-code": "Kode konfirmasi salah.",
+	"emailcapture-already-confirmed": "Alamat surel Anda telah dikonfirmasi.",
+	"emailcapture-response-subject": "Verifikasi alamat surel {{SITENAME}}",
+	"emailcapture-response-body": "Halo!\n\nTerima kasih Anda telah menyatakan minat untuk membantu penyempurnaan {{SITENAME}}.\n\nHarap luangkan waktu sejenak untuk memverifikasikan alamat surel Anda dengan mengikuti tautan berikut:\n$1\n\nAnda juga dapat mengunjungi:\n$2\n\ndan memasukkan kode verifikasi berikut:\n$3\n\nKami akan segera menghubungi Anda untuk memberi tahu cara membantu menyempurnakan {{SITENAME}}.\n\nJika Anda merasa tidak mengirim permintaan ini, harap abaikan saja surel ini dan kami tidak akan lagi mengirimkan apa pun kepada Anda.",
+	"emailcapture-success": "Terima kasih!\n\nAlamat surel Anda berhasil diverifikasi.",
+	"emailcapture-instructions": "Untuk memverifikasi alamat surel Anda, masukkan kode yang dikirim melalui surel kepada Anda dan klik \"{{int: emailcapture-submit}}\".",
+	"emailcapture-verify": "Kode verifikasi:",
+	"emailcapture-submit": "Verifikasi alamat surel",
+	"apihelp-emailcapture-description": "Merekam alamat surel",
+	"apihelp-emailcapture-summary": "Merekam alamat surel",
+	"apihelp-emailcapture-param-email": "Alamat surel yang ingin direkam",
+	"apihelp-emailcapture-param-info": "Informasi tambahan yang ingin dicatat, biasanya informasi terstruktur berkode JSON"
+}

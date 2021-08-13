@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Srtxg"
+		]
+	},
+	"contributionscores": "Ponts des contribouwaedjes",
+	"contributionscores-desc": "Riwaite li båze di dnêyes po les [[Special:ContributionScores|uzeus avou l' meyeu livea d' contribouwaedje]]",
+	"contributionscores-info": "Les ponts sont carculés come shût:\n* On (1) pont po tchaeke pådje unike k' on candjmint î a stî fwait\n* Li cwårêye raecene di (nombe di candjmints) - (nombe totå di pådjes unikes) * 2\n\nDi cisse manire on dene pus di pontiaedje al varyisté des contribouwaedjes k' a leu cwantité.\nPo l' dire pus simplumint, ci pontiaedje ci mezeure copurade li nombe di pådejs diferinnes di candjeyes, et poy seulmint li cwantité di candjmints diferins.",
+	"contributionscores-top": "(les $1 meyeus)",
+	"contributionscores-days": "{{PLURAL:$1|Sol dierin djoû|So les $1 dierins djoûs}}",
+	"contributionscores-allrevisions": "Dispoy todi",
+	"contributionscores-score": "Ponts",
+	"contributionscores-pages": "Pådjes",
+	"contributionscores-changes": "Candjmints",
+	"contributionscores-username": "No d' uzeu:",
+	"contributionscores-invalidusername": "No d' uzeu nén valide",
+	"contributionscores-invalidmetric": "Metrike nén valide"
+}

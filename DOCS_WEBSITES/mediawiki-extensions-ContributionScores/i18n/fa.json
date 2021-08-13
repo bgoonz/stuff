@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Alirezaaa",
+			"Ebraminio",
+			"Huji",
+			"Mjbmr",
+			"Reza1615",
+			"Tofighi",
+			"ZxxZxxZ"
+		]
+	},
+	"contributionscores": "امتیاز مشارکت",
+	"contributionscores-desc": "سرشماری پایگاه داده ویکی برای بالاترین [[Special:ContributionScores|حجم مشارکت کاربر]]",
+	"contributionscores-info": "امتباز ابتدا ویرایش‌های یکتا را با در نظر گرفتن ویرایش ججم بالا اندازه می‌گیرد.",
+	"contributionscores-top": "($1 برتر)",
+	"contributionscores-days": "آخرین {{PLURAL:$1|روز|$1 روز}}",
+	"contributionscores-allrevisions": "تمام وقت",
+	"contributionscores-score": "امتیاز",
+	"contributionscores-rank": "رتبه",
+	"contributionscores-pages": "صفحات",
+	"contributionscores-changes": "تغییرات",
+	"contributionscores-username": "نام کاربری",
+	"contributionscores-invalidusername": "نام کاربری نامعتبر",
+	"contributionscores-invalidmetric": "متریک نامعتبر"
+}

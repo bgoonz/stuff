@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eitvys200",
+			"Tomasdd"
+		]
+	},
+	"viewxml": "Žiūrėti XML",
+	"dt_viewxml_categories": "Kategorijos",
+	"dt_viewxml_simplifiedformat": "Supaprastintas formatas",
+	"dt_xml_namespace": "Vardų sritis",
+	"dt_xml_pages": "Puslapiai",
+	"dt_xml_page": "Puslapis",
+	"dt_xml_template": "Šablonas",
+	"dt_xml_field": "Laukas",
+	"dt_xml_name": "Vardas",
+	"dt_xml_title": "Pavadinimas",
+	"dt_xml_id": "ID",
+	"dt_xml_freetext": "Laisvas tekstas",
+	"importxml": "Importuoti XML",
+	"dt_import_selectfile": "Prašome pasirinkti $1 failą importavimui:",
+	"dt_import_encodingtype": "Kodavimo tipas:",
+	"dt_import_forexisting": "Puslapiams kurie jau egzistuoja:",
+	"dt_import_overwriteexisting": "Perrašyti egzistuojantį turinį",
+	"dt_import_skipexisting": "Praleisti",
+	"dt_import_summarydesc": "Importo santrauka:",
+	"dt_import_editsummary": "{{ucfirst:$1}} importas",
+	"dt_import_importing": "Importuojama...",
+	"dt_import_success": "$1 {{PLURAL:$1|puslapis bus sukurtas|puslapiai bus sukurti}} iš $2 failo.",
+	"importcsv": "Importuoti CSV",
+	"importspreadsheet": "Importuoti skaičiuoklę",
+	"right-datatransferimport": "Importuoti duomenis",
+	"dt_filetype_spreadsheet": "skaičiuoklė"
+}

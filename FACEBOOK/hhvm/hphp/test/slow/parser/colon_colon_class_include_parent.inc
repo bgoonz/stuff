@@ -1,2 +1,0 @@
-<?hh
-echo parent::class;

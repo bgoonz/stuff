@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aelske",
+			"Ooswesthoesbes",
+			"Pahles"
+		]
+	},
+	"usercredentials": "Rifferenties van gebroeker",
+	"usercredentials-leg": "Betrach gekónfermeerde rifferenties veur gebroeker",
+	"usercredentials-user": "Gebroekersnaam:",
+	"usercredentials-text": "Euverzich van de gekónfermeerde rifferenties veur de geselecteerde gebroeker:",
+	"usercredentials-leg-user": "Gebroekersaccount",
+	"usercredentials-leg-areas": "Interessegebede",
+	"usercredentials-leg-person": "Persuunlike infermasie",
+	"usercredentials-leg-other": "Euverige infermasie",
+	"usercredentials-leg-ip": "IP-adresgegaeves",
+	"usercredentials-email": "E-mail:",
+	"usercredentials-real": "Echte naam:",
+	"usercredentials-bio": "Biografie:",
+	"usercredentials-attach": "CV:",
+	"usercredentials-notes": "Euverige opmirkinge:",
+	"usercredentials-urls": "Lies van websites:",
+	"usercredentials-ip": "Oersjprunkelik IP-adres:",
+	"usercredentials-xff": "Oearsprunkelik X-Forwarded-For:",
+	"usercredentials-agent": "Oearsprunkelike gebroekersagent:",
+	"usercredentials-member": "Rechte:",
+	"usercredentials-badid": "Gein referenties gevónje veur deze gebroeker.\nKiek nao of de naam korrek gespeld is."
+}

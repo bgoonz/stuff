@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"BaRaN6161 TURK",
+			"Hedda",
+			"MuratTheTurkish",
+			"Suelnur"
+		]
+	},
+	"createredirect": "Yönlendirme Oluştur",
+	"createredirect-desc": "Kolayca yönlendirme oluşturmak için [[Special:CreateRedirect|CreateRedirect]] özel sayfası ekler",
+	"createredirect-error": "Hata: Kimlik doğrulama başarısız.",
+	"createredirect-enable-multiline": "Daha fazla başlık girin",
+	"createredirect-instructions": "Aşağıdaki formu kullanarak bir yönlendirme sayfası oluşturabilir veya mevcut bir sayfayı yönlendirme ile değiştirebilirsiniz.",
+	"createredirect-invalid-title": "Hata: \"$1\" doğru bir başlık değil.",
+	"createredirect-overwrite": "Uyarıları yoksay",
+	"createredirect-page-title": "Sayfa başlığı:",
+	"createredirect-redirect-done": "\"$1\" sayfasından \"$2\" sayfasına yönlendirme oluşturuldu",
+	"createredirect-redirect-to": "Şuraya yönlendir:",
+	"createredirect-save": "Sayfayı kaydet",
+	"createredirect-would-overwrite": "Uyarı: \"[[:$1]]\" sayfası zaten var."
+}

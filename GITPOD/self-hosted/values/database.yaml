@@ -1,8 +1,0 @@
-gitpod:
-  db:
-    host: db
-    port: 3306
-    password: your-password-goes-here
-
-  mysql:
-    enabled: false

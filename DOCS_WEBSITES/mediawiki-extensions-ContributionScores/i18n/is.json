@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"S.Örvarr.S",
+			"Snævar",
+			"Sveinn í Felli"
+		]
+	},
+	"contributionscores": "Framleggjandastig",
+	"contributionscores-desc": "Kannar wiki-gagnagrunninn eftir mesta [[Special:ContributionScores|magni framlaga notenda]]",
+	"contributionscores-info": "Stigin eru aðalega reiknuð út frá breytingum á einkvæmum síðum, með tilliti til hás magns breytinga.",
+	"contributionscores-top": "(Efstu $1)",
+	"contributionscores-days": "{{PLURAL:$1|Síðasta $1 daginn|Síðustu $1 dagana}}",
+	"contributionscores-allrevisions": "Allan tímann",
+	"contributionscores-score": "Stigafjöldi",
+	"contributionscores-rank": "Sæti",
+	"contributionscores-pages": "Síður",
+	"contributionscores-changes": "Breytingar",
+	"contributionscores-username": "Notandanafn",
+	"contributionscores-invalidusername": "Ógilt notandanafn",
+	"contributionscores-invalidmetric": "Ógild mæling"
+}

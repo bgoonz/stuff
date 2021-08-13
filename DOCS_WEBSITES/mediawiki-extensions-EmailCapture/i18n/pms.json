@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Borichèt",
+			"Dragonòt"
+		]
+	},
+	"emailcapture": "Verìfica ëd pòsta eletrònica",
+	"emailcapture-desc": "A ciapa dj'adrësse ëd pòsta eletrònica, e a përmët a j'utent ëd verificheje për pòsta eletrònica",
+	"emailcapture-failure": "Soa adrëssa ëd pòsta eletrònica a l'é '''pa''' stàita verificà.",
+	"emailcapture-invalid-code": "Còdes ëd conferma pa bon.",
+	"emailcapture-already-confirmed": "Soa adrëssa ëd pòsta eletrònica a l'é già stàita confermà.",
+	"emailcapture-response-subject": "Verìfica dl'adrëssa postal ëd {{SITENAME}}",
+	"emailcapture-response-body": "Cerea!\n\nMersì për sò anteresse a giuté a amelioré {{SITENAME}}.\n\nPër piasì, ch'a pija un moment për confirmé soa adrëssa ëd pòsta eletrònica an sgnacand an sl'anliura sì-sota:\n$1\n\nA peul ëdcò visité:\n$2\n\nE buté ël ës còdes ëd verìfica:\n$3\n\nI la contatëroma prest për coma a peul giuté a amelioré {{SITENAME}}.\n\nSi chiel a l'ha pa ancaminà costa arcesta, për piasì ch'a lassa perde 's mëssagi e i mandëroma gnente dj'àutr.",
+	"emailcapture-success": "Mersi!\n\nSoa adrëssa ëd pòsta eletrònica a l'é stàita verificà për da bin.",
+	"emailcapture-instructions": "Për verifiché soa adrëssa ëd pòsta eletrònica, ch'a buta ël còdes ch'a l'é staje spedì e ch'a sgnaca \"{{int:emailcapture-submit}}\".",
+	"emailcapture-verify": "Còdes ëd verìfica:",
+	"emailcapture-submit": "Ch'a verìfica l'adrëssa ëd pòsta eletrònica"
+}

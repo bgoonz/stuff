@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Brazal.dang",
+			"DannyS712",
+			"Filipinayzd",
+			"Geopoet"
+		]
+	},
+	"contactpage": "Hadoyan na pahina",
+	"contactpage-subject-and-sender": "$1 (poon $2)",
+	"contactpage-fromname": "Pangaran mo:",
+	"contactpage-fromaddress": "''E''-surat mo:",
+	"contactpage-usermailererror": "Error manonongod sa korreong binalik: $1",
+	"contactpage-config-error-title": "Kasalaan sa porma kan haduyan"
+}

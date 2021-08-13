@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"emailcapture": "Verifeche de l'e-mail",
+	"emailcapture-desc": "Pigghie le indirizze e-mail e permette a l'utinde de verificarle ausanne 'a mail probbie",
+	"emailcapture-failure": "L'indirizze e-mail tune '''non''' g'ha state verificate.",
+	"emailcapture-invalid-code": "Codece de conferme invalide.",
+	"emailcapture-already-confirmed": "L'indirizze e-mail tune ha state ggià confermate.",
+	"emailcapture-response-subject": "Verifeche de l'indirizze email pe {{SITENAME}}",
+	"emailcapture-response-body": "Cià!\n\nGrazie purcé è avute inderesse a dà 'na màne pe migliorà {{SITENAME}}.\n\nPe piacere pigghiate 'nu mumende pe confermà 'a mail toje cazzanne 'u collegamende aqquà sotte:\n$1\n\nTu puè pure 'ndrucà:\n$2\n\nE sckaffe 'u seguende codece de conferme:\n$3\n\nRumanime in condatte e te decime cumme ne puè dà 'na mane pe migliorà {{SITENAME}}.\n\nCe tu non g'è mannate sta richieste, pe piacere no sce penzanne a sta e-mail e nuje no te manname cchiù ninde.",
+	"emailcapture-success": "Grazie!\n\n'U 'nderizze e-mail tune ha state confermate.",
+	"emailcapture-instructions": "Pe verificà l'indirizze mail tune, mitte 'u codece ca t'ha state mannate pe poste e cazze \"{{int:emailcapture-submit}}\".",
+	"emailcapture-verify": "Codece de verifeche:",
+	"emailcapture-submit": "Verifeche d'u 'ndirizze e-mail",
+	"apihelp-emailcapture-description": "Catture le indirizze email",
+	"apihelp-emailcapture-summary": "Catture le indirizze email",
+	"apihelp-emailcapture-param-email": "Indirizze email da catturà",
+	"apihelp-emailcapture-param-info": "'Mbormazziune de cchiù da reggistrà, normalmende avènene codicicate jndr'à 'na strutture JSON"
+}

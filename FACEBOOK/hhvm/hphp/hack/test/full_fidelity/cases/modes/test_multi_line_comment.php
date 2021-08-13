@@ -1,1 +1,0 @@
-<?hh /* stric strict */

@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ahmed-Najib-Biabani-Ibrahimkhel"
+		]
+	},
+	"emailcapture": "د برېښليک تاييد",
+	"emailcapture-failure": "ستاسې برېښليک پته تاييد '''نه شوه'''.",
+	"emailcapture-invalid-code": "ناسم تاييد کوډ",
+	"emailcapture-already-confirmed": "له پخوا نه ستاسې برېښليک پته تاييد شوې.",
+	"emailcapture-response-subject": "د {{SITENAME}} د برېښليک پتې تاييد",
+	"emailcapture-success": "له تاسو مننه!\n\nستاسې برېښليک په برياليتوب سره تاييد شو.",
+	"emailcapture-verify": "تاييد کوډ:",
+	"emailcapture-submit": "برېښليک پته تاييد کړۍ"
+}

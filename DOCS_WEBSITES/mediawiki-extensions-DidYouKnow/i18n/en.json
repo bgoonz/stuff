@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jeroen De Dauw"
+		]
+	},
+	"didyouknow-desc": "Allows displaying a \"Did you know ... ?\" box filled with content from a wiki page",
+	"didyouknow-header": "Did you know ... ?"
+}

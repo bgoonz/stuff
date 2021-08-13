@@ -1,0 +1,38 @@
+{
+	"@metadata": {
+		"authors": [
+			"Azouz.anis",
+			"Meno25",
+			"OsamaK",
+			"ديفيد"
+		]
+	},
+	"deletebatch": "حذف باتش من الصفحات",
+	"deletebatch-desc": "[[Special:DeleteBatch|حذف باتش من الصفحات]]",
+	"deletebatch-help": "حذف مجموعة من الصفحات.\nيمكنك إما عمل عملية حذف واحدة، أو حذف الصفحات المدرجة في ملف.\nاختر مستخدما ليتم عرضه في سجلات الحذف.\nيجب أن تحتوي الملفات المحملة على اسم الصفحة والسبب الاختياري، مفصولة ب \"|\".",
+	"deletebatch-caption": "قائمة الصفحات:",
+	"deletebatch-default-reason": "سبب الحذف الافتراضي:",
+	"deletebatch-extensionname": "حذف الباتش",
+	"deletebatch-title": "حذف الباتش",
+	"deletebatch-link-back": "ارجع إلى الصفحة الخاصة",
+	"deletebatch-as": "تشغيل السكريبت ك:",
+	"deletebatch-both-modes": "من فضلك اختر إما صفحة واحدة أو قائمة معطاة من الصفحات.",
+	"deletebatch-or": "<strong>أو</strong>",
+	"deletebatch-delete": "حذف",
+	"deletebatch-page": "الصفحات للحذف:",
+	"deletebatch-processing-from-file": "جارٍ حذف الصفحات الواردة في الملف",
+	"deletebatch-processing-from-form": "جارٍ حذف الصفحات الواردة في الاستمارة",
+	"deletebatch-omitting-nonexistent": "إزالة صفحة غير موجودة $1.",
+	"deletebatch-omitting-invalid": "إزالة صفحة غير صحيحة $1.",
+	"deletebatch-file-bad-format": "الملف ينبغي أن يكون نصا خالصا",
+	"deletebatch-file-missing": "غير قادر على قراءة الملف المعطى",
+	"deletebatch-select-script": "سكريبت حذف الصفحات",
+	"deletebatch-select-yourself": "أنت",
+	"deletebatch-no-page": "من فضلك اختر على الأقل صفحة واحدة للحذف أو اختر ملفا يحتوي على قائمة الصفحات.",
+	"deletebatch-system-username": "سكريبت حذف الصفحة",
+	"action-deletebatch": "حذف الصفحات كميا",
+	"right-deletebatch": "حذف باتش الصفحات",
+	"action-deletebatch-spoof": "حذف الصفحات كميا ك\"Delete page script\"",
+	"right-deletebatch-spoof": "حذف الصفحات كميا كـ\"سكريبت حذف الصفحة\"",
+	"deletebatch-deleting-file-only": "صفحة وصف الملف $1 غير موجودة؛ حذف الملف الفعلي فقط،\nلن يتم تسجيل هذا الإجراء."
+}

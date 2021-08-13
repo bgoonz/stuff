@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Liuxinyu970226",
+			"乌拉跨氪"
+		]
+	},
+	"adyen_gateway-desc": "Adyen支付处理",
+	"adyen_gateway-response-default": "在处理您的信息时出错。请稍候再试。"
+}

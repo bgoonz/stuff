@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby",
+			"Nghtwlkr",
+			"Sjurhamre"
+		]
+	},
+	"disableaccount-desc": "Lar administratorer deaktivere individuelle kontoer",
+	"right-disableaccount": "Deaktivere kontoer",
+	"action-disableaccount": "deaktivere kontoer",
+	"disableaccount": "Deaktiver en brukerkonto",
+	"disableaccount-user": "Brukernavn:",
+	"disableaccount-confirm": "Deaktiver denne brukerkontoen.\nBrukeren vil ikke kunne logge inn, tilbakestille sitt passord eller motta e-postvarsler.\nOm denne brukeren er pålogget et sted vil den umiddelbart bli logget ut.\n''Merk at å deaktivere en konto ikke er reversibelt uten inngripen fra en systemadministrator.''",
+	"disableaccount-mustconfirm": "Du må bekrefte at du vil deaktivere denne kontoen.",
+	"disableaccount-nosuchuser": "Brukerkontoen «$1» finnes ikke.",
+	"disableaccount-success": "Brukerkontoen «$1» har blitt permanent deaktivert.",
+	"logentry-block-disableaccount": "$1 {{GENDER:$2|deaktiverte}} kontoen til {{GENDER:$4|$3}}."
+}

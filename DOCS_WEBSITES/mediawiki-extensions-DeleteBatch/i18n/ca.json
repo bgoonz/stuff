@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aleator",
+			"Arnaugir",
+			"Mguix",
+			"SMP"
+		]
+	},
+	"deletebatch": "Esborra un lot de pàgines",
+	"deletebatch-desc": "[[Special:DeleteBatch|Esborreu un lot de pàgines]]",
+	"deletebatch-help": "Suprimeix un lot de pàgines.\nPodeu realitzar una sola eliminació o suprimir pàgines llistades en un fitxer.\nTrieu un usuari que es mostrarà als registres de supressió.\nEls arxius pujats han de contenir el nom de la pàgina i el motiu, separats per una barra vertical \"|\".",
+	"deletebatch-caption": "Llista de pàgines:",
+	"deletebatch-title": "Esborra lot",
+	"deletebatch-link-back": "Torna a la pàgina especial",
+	"deletebatch-as": "Executa el script com a:",
+	"deletebatch-both-modes": "Escolliu una pàgina especificada o una llista de pàgines donada.",
+	"deletebatch-or": "<strong>o</strong>",
+	"deletebatch-delete": "Esborra",
+	"deletebatch-page": "Pàgines a esborrar:",
+	"deletebatch-processing-from-file": "s'estan suprimint les pàgines llistades al fitxer",
+	"deletebatch-processing-from-form": "s'estan suprimint les pàgines llistades al formulari",
+	"deletebatch-omitting-nonexistent": "S'ha omès la pàgina inexistent $1.",
+	"deletebatch-omitting-invalid": "S'ha omès la pàgina no vàlida $1.",
+	"deletebatch-file-bad-format": "El fitxer ha de ser de text pla",
+	"deletebatch-file-missing": "No s'ha pogut llegir el fitxer",
+	"deletebatch-select-script": "script d'eliminació de pàgines",
+	"deletebatch-select-yourself": "vós",
+	"deletebatch-no-page": "Especifiqueu com a mínim una pàgina per esborrar o escolliu un fitxer que contingui una llista de pàgines.",
+	"right-deletebatch": "Esborrar pàgines en bloc"
+}

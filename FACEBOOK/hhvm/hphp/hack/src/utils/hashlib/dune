@@ -1,5 +1,0 @@
-(library
-  (name utils_hash)
-  (wrapped false)
-  (c_names sha1_ocaml sha1c)
-  (libraries core_kernel))

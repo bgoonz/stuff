@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"etherpadlite-desc": "Adde un etiquetta &lt;eplite&gt; al analysator syntactic que incorpora un o plure documentos collaborative de Etherpad Lite (le quales es albergate in servitor(es) externe de Etherpad Lite) in paginas",
+	"etherpadlite-tracking-category": "Paginas con Etherpad incorporate",
+	"etherpadlite-invalid-pad-url": "\"$1\" non es un URL de Etherpad Lite o nomine de documento valide.",
+	"etherpadlite-url-is-not-whitelisted": "\"$1\" non es in le lista de servitores Etherpad Lite autorisate. {{PLURAL:$3|Solmente le servitor $2 es autorisate|Le servitores autorisate es: $2}}.",
+	"etherpadlite-empty-whitelist": "\"$1\" non es in le lista de servitores Etherpad Lite autorisate. Nulle servitor es autorisate.",
+	"etherpadlite-pad-used-more-than-once": "Le documento collaborative \"$1\" ha jam essite usate in iste pagina; il pote haber multe documentos collaborative in un pagina, ma solmente si illos es differente."
+}

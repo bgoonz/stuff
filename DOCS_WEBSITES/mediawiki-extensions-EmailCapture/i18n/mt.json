@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrisportelli"
+		]
+	},
+	"emailcapture": "Verifika tal-posta elettronika",
+	"emailcapture-desc": "Taqbad l-indirizzi elettroniċi u tħalli l-utenti jivverifikawhom permezz tal-posta elettronika",
+	"emailcapture-failure": "L-indirizz elettroniku '''ma ġiex''' verifikat.",
+	"emailcapture-invalid-code": "Kodiċi ta' konferma ħażin.",
+	"emailcapture-already-confirmed": "L-indirizz tal-posta elettronika tiegħek diġà ġie kkonfermat.",
+	"emailcapture-response-subject": "{{SITENAME}}: konferma tal-indirizz elettroniku",
+	"emailcapture-success": "Grazzi!\n\nL-indirizz elettroniku tiegħek ġie kkonfermat b'suċċess.",
+	"emailcapture-instructions": "Sabiex tivverifika l-indirizz elettroniku, daħħal il-kodiċi li ntbagħtlek u klikkja fuq \"{{int:emailcapture-submit}}\".",
+	"emailcapture-verify": "Kodiċi ta' verifika:",
+	"emailcapture-submit": "Ivverifika l-indrizz elettroniku"
+}

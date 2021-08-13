@@ -1,8 +1,0 @@
-{
-  "domain": "imap_email_content",
-  "name": "Imap email content",
-  "documentation": "https://www.home-assistant.io/components/imap_email_content",
-  "requirements": [],
-  "dependencies": [],
-  "codeowners": []
-}

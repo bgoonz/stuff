@@ -1,0 +1,38 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cainamarques",
+			"Eduardo Addad de Oliveira",
+			"Eduardo.mps",
+			"Eduardoaddad",
+			"Luckas"
+		]
+	},
+	"deletebatch": "Apagar páginas em bloco",
+	"deletebatch-desc": "Permite [[Special:DeleteBatch|eliminar páginas em bloco]]",
+	"deletebatch-help": "Eliminar um bloco de páginas.\nPode fazer a eliminação de uma página, ou de todas as páginas que listar num ficheiro.\nEscolha um utilizador que será mostrado nos registos de eliminação.\nOs ficheiros carregados devem conter o nome da página e um motivo opcional, separados por uma barra vertical \"|\".",
+	"deletebatch-caption": "Lista de páginas:",
+	"deletebatch-default-reason": "Motivo padrão para eliminações:",
+	"deletebatch-title": "Apagar bloco",
+	"deletebatch-link-back": "Voltar à página especial",
+	"deletebatch-as": "Executar o script como:",
+	"deletebatch-both-modes": "Por favor, escolha uma página especificada ou uma dada lista de páginas.",
+	"deletebatch-or": "<strong>ou</strong>",
+	"deletebatch-delete": "Remover",
+	"deletebatch-page": "Páginas a eliminar:",
+	"deletebatch-processing-from-file": "eliminando as páginas listadas no arquivo",
+	"deletebatch-processing-from-form": "eliminando as páginas listadas no formulário",
+	"deletebatch-omitting-nonexistent": "Omitindo página não existente $1.",
+	"deletebatch-omitting-invalid": "Omitindo página inválida $1.",
+	"deletebatch-file-bad-format": "O arquivo deve conter texto pleno",
+	"deletebatch-file-missing": "Não foi possível ler o arquivo fornecido",
+	"deletebatch-select-script": "script de eliminação de páginas",
+	"deletebatch-select-yourself": "você",
+	"deletebatch-no-page": "Por favor, especifique pelo menos uma página para eliminar OU escolha um arquivo contendo uma lista de páginas.",
+	"deletebatch-system-username": "script de eliminação de páginas",
+	"action-deletebatch": "apagar páginas em bloco",
+	"right-deletebatch": "Apagar páginas em bloco",
+	"action-deletebatch-spoof": "excluir páginas em lote como \"''Script'' de eliminação de páginas\"",
+	"right-deletebatch-spoof": "Apagar páginas em bloco como \"''Script'' de eliminação de páginas\"",
+	"deletebatch-deleting-file-only": "A página de descrição de arquivo $1 não existe; eliminando apenas o arquivo. Esta ação não será registrada."
+}

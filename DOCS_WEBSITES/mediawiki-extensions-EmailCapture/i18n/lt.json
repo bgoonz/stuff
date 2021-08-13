@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eitvys200"
+		]
+	},
+	"emailcapture": "E-pašto patvirtinimas",
+	"emailcapture-failure": "Jūsų el. paštas '''nebuvo''' patvirtintas.",
+	"emailcapture-invalid-code": "Negalimas patvirtinimo kodas.",
+	"emailcapture-already-confirmed": "Jūsų el. pašto adresas jau patvirtintas.",
+	"emailcapture-response-subject": "{{SITENAME}} el. pašto adreso patvirtinimas",
+	"emailcapture-response-body": "Sveiki!\n\nAčiū, kad norite prisidėti prie {{SITENAME}} tobulinimo.\n\nPrašome skirti laiko patvirtinti savo el. pašto adresui paspaudžiant ant šios nuorodos:\n$1\n\nTaip pat galite apsilankyti:\n$2\n\nIr įvesti šį patvirtinimo kodą:\n$3\n\nMes su jumis netrukus susisieksime ir pranešime kaip galite padėti patobulinti {{SITENAME}}.\n\nJei nepradėjote šio prašymo, prašome ignoruoti šį el. laišką ir mes jums daugiau nieko nesiųsime.",
+	"emailcapture-success": "Ačiū!\n\nJūsų el. pašto adresas buvo patvirtintas.",
+	"emailcapture-instructions": "Norėdami patvirtinti savo elektroninio pašto adresą, įveskite kodą, kuris elektroniniu paštu buvo jums nusiųstas, ir paspauskite mygtuką \"{{int: emailcapture-submit}}\".",
+	"emailcapture-verify": "Patvirtinimo kodas:",
+	"emailcapture-submit": "Patvirtinti e-pašto adresą"
+}

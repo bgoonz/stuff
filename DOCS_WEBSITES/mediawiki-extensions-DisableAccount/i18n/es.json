@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ciencia Al Poder",
+			"DJ Nietzsche",
+			"Dferg",
+			"Fitoschido",
+			"Macofe",
+			"MarcoAurelio",
+			"Sanbec"
+		]
+	},
+	"disableaccount-desc": "Permite a los administradores desactivar cuentas individuales.",
+	"right-disableaccount": "Deshabilitar cuentas",
+	"action-disableaccount": "deshabilitar cuentas",
+	"disableaccount": "Deshabilitar una cuenta de usuario",
+	"disableaccount-user": "Nombre de usuario:",
+	"disableaccount-confirm": "Deshabilitar esta cuenta de usuario.\nEl usuario no podrá iniciar sesión, restablecer su contraseña o recibir notificaciones por correo electrónico.\nSi el usuario está conectado, será desconectado de inmediato.\n''Ten en cuenta que la desactivación de una cuenta no es reversible sin intervención de un administrador del sistema''.",
+	"disableaccount-mustconfirm": "Tienes que confirmar que quieres desactivar esta cuenta.",
+	"disableaccount-nosuchuser": "La cuenta de usuario «$1» no existe.",
+	"disableaccount-success": "La cuenta de usuario «$1» fue desactivada permanentemente.",
+	"logentry-block-disableaccount": "$1 {{GENDER:$2|deshabilitó la cuenta}} de {{GENDER:$4|$3}}."
+}

@@ -1,0 +1,9 @@
+<noscript>
+	<div id="noscript">
+		<p id="noscript-msg">{{ l10n "donate_interface-noscript-msg" }}</p>
+{{# no_script_redirect }}
+		<p id="noscript-redirect-msg">{{ l10n "donate_interface-noscript-redirect-msg" }}</p>
+		<p id="noscript-redirect-link"><a href="{{ . }}">{{ . }}</a></p>
+{{/ no_script_redirect }}
+	</div>
+</noscript>

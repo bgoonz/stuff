@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"AnakngAraw"
+		]
+	},
+	"etherpadlite-desc": "Nagdaragdag ng &lt;eplite&gt; tatak na pambanghay upang maibaon ang isa o maraming mga sapin ng Etherpad Lite (na mga pinasisinayahan sa [mga] tagapaghain ng katutubo o panlabas na Etherpad Lite) sa mga pahina",
+	"etherpadlite-tracking-category": "Mga pahinang mayroong nakabaon na Etherpad",
+	"etherpadlite-invalid-pad-url": "Ang \"$1\" ay isang hindi katanggap-tanggap na URL o pangalan ng sapin ng Etherpad Lite.",
+	"etherpadlite-url-is-not-whitelisted": "Ang \"$1\" ay wala sa listahan ng mga hindi pinagbabawalan ng pinahihintulutang mga tagapaghain ng Etherpad Lite. Ang {{PLURAL:$3|$2 lang ang pinapayagang tagapaghain|Ang pinapahintulutang mga tagapaghain ay ang mga sumusunod: $2}}.",
+	"etherpadlite-empty-whitelist": "Ang \"$1\" ay wala sa talaan ng mga hindi pinagbabawalan ng pinahihintulutang mga tagapaghain ng Etherpad Lite. Walang mga pinapahintulutang mga tagapaghain sa loob ng talaan ng mga hindi pinagbabawalan.",
+	"etherpadlite-pad-used-more-than-once": "Ang sapin na \"$1\" ay nagamit na dati sa pahinang ito; maaari kang magkaroon ng maraming mga sapin sa ibabaw ng isang pahina, subalit kung magkakaiba lamang na mga sapin ang mga ito."
+}

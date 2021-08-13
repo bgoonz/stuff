@@ -1,3 +1,0 @@
-bin/spcassandra-* usr/bin
-target/lib/* usr/share/cassandra-opstools/
-target/cassandra-opstools*.jar usr/share/cassandra-opstools/

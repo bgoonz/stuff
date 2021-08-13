@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ainali"
+		]
+	},
+	"adyen_gateway-desc": "Adyen betalningshantering",
+	"adyen_gateway-response-default": "Ett fel uppstod när din transaktion behandlades.\nFörsök igen senare."
+}

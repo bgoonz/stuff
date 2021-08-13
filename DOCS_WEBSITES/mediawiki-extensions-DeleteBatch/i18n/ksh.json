@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Purodha"
+		]
+	},
+	"deletebatch": "En Aanzahl Sigge fottschmiiße",
+	"deletebatch-desc": "En [[Special:DeleteBatch|Aanzahl Sigge fottschmiiße]]",
+	"deletebatch-help": "Donn En Aanzahl Sigge fottschmiiße.\nDo kanns entwehder ein einzel Sigg fottschmiiße, udder en Aanzahl Sigge, di en ener Datei jeleß sen. Söhk Der ene Metmaacher uß, dä em Logbohch för et Fottschmiiße enjedrahre weed.\nDe huhjelade Datei sullt en jede Reih ene Nahme fun ene Sigg han, dohenger kann ene „|“ schtonn, un dann dohenger ene Jrond för et Fottschmiiße.",
+	"deletebatch-caption": "Leß met de Sigge:",
+	"deletebatch-title": "En Aanzahl Sigge fottschmiiße",
+	"deletebatch-link-back": "Donn op dä Zosatz zom Wiki retuur jonn",
+	"deletebatch-as": "Lohß dat Projramm loufe als Metmaacher:",
+	"deletebatch-both-modes": "Sök entweder en bestemmpte Sigg uß, udder en Leß met Sigge.",
+	"deletebatch-or": "<strong>udder</strong>",
+	"deletebatch-delete": "Maach fott!",
+	"deletebatch-page": "Sigge zom Fottschmiiße:",
+	"deletebatch-processing-from-file": "Ben Sigge per Dateije-Leß fott am schmiiße.",
+	"deletebatch-processing-from-form": "Ben Sigge per Fommulaa fott am schmiiße.",
+	"deletebatch-omitting-nonexistent": "Donn de Sigg $1 övverjonn, weil et se nit jit.",
+	"deletebatch-omitting-invalid": "Donn de Övverschreff $1 övverjonn, weil hä onjöltesh eß.",
+	"deletebatch-file-bad-format": "En dä Dattei sullt nommahle Täx schtonn.",
+	"deletebatch-file-missing": "Di aanjejovve Dattei kunnte mer nit lässe.",
+	"deletebatch-select-script": "Projramm zom Sigge Fottschmiiße",
+	"deletebatch-select-yourself": "Do",
+	"deletebatch-no-page": "Beß esu joot, un jif winnischstens ein Sigg zom Fottschmiiße aan, udder\nsöök en Datei uß, wo en Leß met Sigge zom Fottschmiiße dren steiht.",
+	"right-deletebatch": "En Aanzahl Sigge fottschmiiße",
+	"deletebatch-deleting-file-only": "En Sigg, woh di Dattei „$1“ beschrevve wöhr, hammer nit. Dröm schmiiße mer bloß di Dattei sellver fott. Dat kütt nit en de Logbööscher."
+}

@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Minh Nguyen"
+		]
+	},
+	"emailcapture": "Xác minh địa chỉ thư điện tử",
+	"emailcapture-desc": "Bắt các địa chỉ thư điện tử và cho phép người dùng xác minh chúng qua thư điện tử",
+	"emailcapture-failure": "Địa chỉ thư điện tử của bạn '''chưa''' được xác minh.",
+	"emailcapture-invalid-code": "Mã xác nhận không hợp lệ.",
+	"emailcapture-already-confirmed": "Địa chỉ thư điện tử của bạn đã được xác nhận trước đây.",
+	"emailcapture-response-subject": "Xác minh địa chỉ thư điện tử tại {{SITENAME}}",
+	"emailcapture-response-body": "Xin chào!\n\nCảm ơn bạn đã bày tỏ quan tâm về việc giúp cải tiến {{SITENAME}}.\n\nXin vui lòng xác nhận địa chỉ thư điện tử của bạn qua liên kết này:\n$1\n\nBạn cũng có thể ghé thăm:\n$2\n\nvà nhập mã xác minh sau:\n$3\n\nChúng tôi sẽ sớm liên lạc với bạn với thông tin về giúp cải tiến {{SITENAME}}.\n\nNếu bạn không phải là người yêu cầu thông tin này, xin vui lòng kệ thông điệp này và chúng tôi sẽ không gửi cho bạn bất cứ gì nữa.",
+	"emailcapture-success": "Cảm ơn!\n\nĐịa chỉ thư điện tử của bạn đã được xác minh thành công.",
+	"emailcapture-instructions": "Để xác minh địa chỉ thư điện tử của bạn, hãy nhập mã trong thư điện tử đã được gửi cho bạn và bấm nút “{{int:emailcapture-submit}}”.",
+	"emailcapture-verify": "Mã xác minh:",
+	"emailcapture-submit": "Xác minh địa chỉ thư điện tử"
+}

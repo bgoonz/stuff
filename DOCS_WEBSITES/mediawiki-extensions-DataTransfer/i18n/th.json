@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aefgh39622",
+			"Octahedron80"
+		]
+	},
+	"viewxml": "ดู XML",
+	"dt_viewxml_categories": "หมวดหมู่",
+	"dt_viewxml_namespaces": "เนมสเปซ",
+	"dt_xml_namespace": "เนมสเปซ",
+	"dt_xml_pages": "หน้า",
+	"dt_xml_page": "หน้า",
+	"dt_xml_template": "แม่แบบ",
+	"dt_xml_field": "เขตข้อมูล",
+	"dt_xml_name": "ชื่อ",
+	"dt_xml_title": "ชื่อเรื่อง",
+	"dt_xml_id": "ไอดี",
+	"dt_xml_freetext": "ข้อความอิสระ",
+	"importxml": "นำเข้า XML",
+	"dt_import_skipexisting": "ข้าม",
+	"dt_import_importing": "กำลังนำเข้า...",
+	"importcsv": "นำเข้า CSV"
+}

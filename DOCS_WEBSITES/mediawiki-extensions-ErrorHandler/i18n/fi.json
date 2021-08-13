@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cimon Avaro",
+			"Crt",
+			"Mobe",
+			"Nike",
+			"Vililikku"
+		]
+	},
+	"errorhandler-desc": "Virhekäsittelijä MediaWikille",
+	"errorhandler-errors": "Virheet:",
+	"errorhandler-error-fatal": "Vakava virhe",
+	"errorhandler-error-warning": "Varoitus",
+	"errorhandler-error-parse": "Jäsennysvirhe",
+	"errorhandler-error-notice": "Huomautus",
+	"errorhandler-error-deprecated": "Käytöstä poistuva",
+	"errorhandler-error-core-error": "Ydinosan virhe",
+	"errorhandler-error-core-warning": "Ydinosan varoitus",
+	"errorhandler-error-compile-error": "Käännösvirhe",
+	"errorhandler-error-compile-warning": "Käännösvaroitus",
+	"errorhandler-error-user-error": "Koodissa määritelty virhe",
+	"errorhandler-error-user-warning": "Koodissa määritelty varoitus",
+	"errorhandler-error-user-notice": "Koodissa määritelty huomautus",
+	"errorhandler-error-user-deprecated": "Koodissa määritelty käytöstä poistuva -varoitus",
+	"errorhandler-error-strict": "Tiukat standardit",
+	"errorhandler-error-recoverable": "Vakava virhe, joka kyetään korjaamaan",
+	"errorhandler-msg-text": "$1 : $2 kohteessa $3 (rivi $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> kohteessa <b>$3</b> (rivi <b>$4</b>)",
+	"errorhandler-trace": "pinolistaus:",
+	"errorhandler-trace-line": "$1 (rivi $2): $3",
+	"errorhandler-trace-line-internal": "[sisäinen funktio]: $1"
+}

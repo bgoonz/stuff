@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Candalua"
+		]
+	},
+	"drafts": "Bozze",
+	"drafts-desc": "Zonta la possibilità de salvar sul server na version de [[Special:Drafts|bozza]] de na pàxena",
+	"drafts-view": "VardaBozza",
+	"drafts-view-summary": "Sta pàxena speciale la mostra na lista de tute le bozze esistenti.\nLe bozze mia doparà le vegnarà scancelà automaticamente dopo {{PLURAL:$1|$1 zòrno|$1 zòrni}}.",
+	"drafts-view-article": "Pàxena",
+	"drafts-view-existing": "Bozze esistenti",
+	"drafts-view-saved": "Salvà",
+	"drafts-view-discard": "Scancela",
+	"drafts-view-nonesaved": "No ti gà nissuna bozza salvà in sto momento.",
+	"drafts-view-notice": "Ti gà $1 de sta pàxena",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|bozza|bozze}}",
+	"drafts-view-warn": "'Ndando fora de sta pàxena te perdarè tute quante le modìfeghe che no ti gà salvà.\nVuto continuar?",
+	"drafts-save": "Salva come bozza",
+	"drafts-save-save": "Salva bozza",
+	"drafts-save-saved": "Salvà",
+	"drafts-save-saving": "Drio salvar",
+	"drafts-save-error": "Eròr in tel salvatajo de la bozza",
+	"tooltip-drafts-save": "Salva come bozza"
+}

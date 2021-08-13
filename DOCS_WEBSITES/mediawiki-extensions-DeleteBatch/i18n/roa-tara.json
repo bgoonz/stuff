@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"deletebatch": "Batch pa scangellazione de le pàggene",
+	"deletebatch-desc": "[[Special:DeleteBatch|'Nu batch pa scangellazione de le pàggene]]",
+	"deletebatch-help": "Scangille 'nu batch de pàggene.\nTu puè eseguì 'na scangellazione singole, o scangellà pàggene elengate jndr'à 'nu file.\nScacchie 'n'utende ca adda 'ndrucà l'archivije de le scangellaziune.\nLe file carecate avessera tenè 'u nome de le pàggene e facoltativamende 'u mutive, separate da 'nu carattere \"|\".",
+	"deletebatch-caption": "Elenghe de le pàggene:",
+	"deletebatch-default-reason": "Mutive de base pa scangellazione:",
+	"deletebatch-title": "'Nfornate de scangellazione",
+	"deletebatch-link-back": "Tuèrne rrete a le pàggene speciale",
+	"deletebatch-as": "Lange 'u script cumme:",
+	"deletebatch-both-modes": "Pe piacere scacchie 'na pàgene specifiche o 'n'elenghe de pàggene.",
+	"deletebatch-or": "<strong>o</strong>",
+	"deletebatch-delete": "Scangille",
+	"deletebatch-page": "Pàggene da scangellà:",
+	"deletebatch-processing-from-file": "pàggene in scangellazzione elengate jndr'à 'u file",
+	"deletebatch-processing-from-form": "pàggene in scangellazzione elengate jndr'à 'u module",
+	"deletebatch-omitting-nonexistent": "Scartate 'a pàgene $1 ca non g'esiste.",
+	"deletebatch-omitting-invalid": "Scartate 'a pàgene invalide $1.",
+	"deletebatch-file-bad-format": "'U file avessa essere 'nu teste semblice.",
+	"deletebatch-file-missing": "Non ge riesche a leggere 'u file.",
+	"deletebatch-select-script": "Script de scangellazione d'a pàgene",
+	"deletebatch-select-yourself": "tu",
+	"deletebatch-no-page": "Pe piacere specifiche almene 'na pàgene da scangellà o scacchie 'nu file ca tènen 'n'elenghe de pàggene.",
+	"deletebatch-system-username": "Script de scangellazione d'a pàgene",
+	"action-deletebatch": "robbot ca scangelle le pàggene",
+	"right-deletebatch": "'Nfornate pa scangellazione de le pàggene",
+	"action-deletebatch-spoof": "robbot ca scangelle le pàggene cumme \"Delete page script\"",
+	"right-deletebatch-spoof": "Robbot ca scangelle le pàggene cumme \"Delete page script\"",
+	"deletebatch-deleting-file-only": "'U file de descrizione d'a pàgene $1 non g'esiste, avène scangellate sulamende 'u file.\nSta azione non g'avène reggistrate."
+}

@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Junaidpv",
+			"Praveenp"
+		]
+	},
+	"deletebatch": "ഒരു കൂട്ടം താളുകളെ മായ്ക്കുക",
+	"deletebatch-caption": "താളിന്റെ പട്ടിക:",
+	"deletebatch-link-back": "പ്രത്യേക താളിലേക്ക് തിരിച്ച് പോകുക",
+	"deletebatch-or": "<strong>അഥവാ</strong>",
+	"deletebatch-delete": "മായ്ക്കുക",
+	"deletebatch-page": "മായ്ക്കേണ്ട താളുകൾ:",
+	"deletebatch-omitting-nonexistent": "നിലവിലില്ലാത്ത താളായ $1 ഒഴിവാക്കുന്നു.",
+	"deletebatch-omitting-invalid": "അസാധുവായ താൾ $1 ഒഴിവാക്കുന്നു.",
+	"deletebatch-file-bad-format": "പ്രമാണം പ്ലയിൻ ടെക്സ്റ്റ് ആയിരിക്കണം",
+	"deletebatch-file-missing": "നൽകിയിരിക്കുന്ന പ്രമാണം സ്വീകരിക്കാൻ സാധിക്കുന്നില്ല",
+	"deletebatch-select-script": "താൾ മായ്ക്കൽ സ്ക്രിപ്റ്റ്",
+	"deletebatch-select-yourself": "താങ്കൾ"
+}

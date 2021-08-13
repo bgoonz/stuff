@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Borichèt",
+			"Dragonòt"
+		]
+	},
+	"deletebatch": "Scancela na partìa ëd pàgine",
+	"deletebatch-desc": "[[Special:DeleteBatch|Scancela na partìa ëd pàgine]]",
+	"deletebatch-help": "Scancela na partìa ëd pàgine.\nIt peule ëdcò fé na scancelassion sìngola, o scancelé dle pàgine listà an n'archivi.\nSern n'utent che a sarà mostà ant ël registr ëd le scancelassion.\nJ'archivi carià a dovrìo conten-e ël nòm dla pàgina e na rason opsional, separà da un caràter \"|\" an minca linia.",
+	"deletebatch-caption": "Lista dle pàgine:",
+	"deletebatch-title": "Scancela na partìa",
+	"deletebatch-link-back": "Va andré a la pàgina special",
+	"deletebatch-as": "Fà giré lë script com:",
+	"deletebatch-both-modes": "Për piasì sern na pàgina specificà o na serta lista ëd pàgine.",
+	"deletebatch-or": "<strong>o</strong>",
+	"deletebatch-delete": "Scancela",
+	"deletebatch-page": "Pàgine da scancelé:",
+	"deletebatch-processing-from-file": "scancelassion ëd pàgine da n'archivi ëd lista",
+	"deletebatch-processing-from-form": "scancelassion ëd pàgine dal formolari",
+	"deletebatch-omitting-nonexistent": "As lassa sté la pàgina $1$ ch'a esist pa.",
+	"deletebatch-omitting-invalid": "As lassa sté la pàgina $1 pa bon-a.",
+	"deletebatch-file-bad-format": "L'archivi a dovrìa esse mach test",
+	"deletebatch-file-missing": "L'archivi dàit as peul pa les-se",
+	"deletebatch-select-script": "Script dë scancelassion ëd na pàgina",
+	"deletebatch-select-yourself": "Ti",
+	"deletebatch-no-page": "Për piasì specìfica almanch na pàgina da scancelé o sern n'archivi ch'a conten-a na lista ëd pàgine.",
+	"right-deletebatch": "Scancela le pàgine an partìa",
+	"deletebatch-deleting-file-only": "La pàgina $1 ëd descrission dl'archivi a esist pa; scancelassion mach ëd l'archivi atual. St'assion a sarà pa registrà."
+}

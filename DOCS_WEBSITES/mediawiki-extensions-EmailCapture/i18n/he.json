@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"Guycn2",
+			"Steeve815"
+		]
+	},
+	"emailcapture": "אימות כתובת דואר אלקטרוני",
+	"emailcapture-desc": "לכידה של כתובת דואר אלקטרוני ואפשרות לאמת את הכתובת דרך דואר אלקטרוני",
+	"emailcapture-failure": "כתובת הדוא\"ל שלך '''לא''' אומתה.",
+	"emailcapture-invalid-code": "קוד אימות בלתי־תקין.",
+	"emailcapture-already-confirmed": "כתובת הדוא״ל שלך כבר אומתה.",
+	"emailcapture-response-subject": "אימות כתובת דואר אלקטרוני באתר {{SITENAME}}",
+	"emailcapture-response-body": "שלום!\n\nתודה על הבעת העניין בעזרה לאתר {{SITENAME}}.\n\nאנא הקדישו דקה לאימות כתובת הדואר האלקטרוני שלכם באמצעות לחיצה על הקישור הבא:\n$1\n\nאפשר גם לבקר כאן:\n$2\n\nולהכניס את קוד האימות הבא:\n$3\n\nאנחנו ניצור אתכם קשר עם מידע על הדרכים שבהן תוכלו לעזור לשפר את אתר {{SITENAME}}.\n\nאם לא שלחתם את הבקשה הזאת, התעלמו מהמכתב הזה ולא נשלח להם עוד שום דבר.",
+	"emailcapture-success": "תודה!\n\nכתובת הדוא\"ל שלך אומתה.",
+	"emailcapture-instructions": "כדי לאמת את כתובת הדוא״ל שלכם, הכניסו את הקוד שנשלח אליכם ולחצו על \"{{int:emailcapture-submit}}\".",
+	"emailcapture-verify": "קוד אימות:",
+	"emailcapture-submit": "לאמת כתובת דוא״ל"
+}

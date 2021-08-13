@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cedric31"
+		]
+	},
+	"deletebatch": "Lòt de supression de las paginas",
+	"deletebatch-desc": "[[Special:DeleteBatch|Suprimís un lòt de paginas]]",
+	"deletebatch-help": "Suprimís un lòt de paginas. Podètz siá aviar una supression simpla, siá suprimir de paginas listadas dins un fichièr.\nCausissètz un utilizaire que serà afichat dins lo jornal de las supressions.\nUn fichièr importat poirà conténer un nom de la pagina e un motiu facultatiu separat per un « | » dins cada linha.",
+	"deletebatch-caption": "Lista de paginas :",
+	"deletebatch-title": "Suprimir en lòt",
+	"deletebatch-link-back": "Tornar a la pagina especiala",
+	"deletebatch-as": "Aviar l'escript coma :",
+	"deletebatch-both-modes": "Causissètz, siá una de las paginas indicadas, siá una lista donada de paginas.",
+	"deletebatch-or": "<strong>o</strong>",
+	"deletebatch-delete": "Suprimir",
+	"deletebatch-page": "Paginas de suprimir :",
+	"deletebatch-processing-from-file": "supression de las paginas listadas dins lo fichièr",
+	"deletebatch-processing-from-form": "supression de las paginas listadas dins lo formulari",
+	"deletebatch-omitting-nonexistent": "Omission de la pagina « $1 » inexistenta.",
+	"deletebatch-omitting-invalid": "Omission de la pagina « $1 » incorrècta.",
+	"deletebatch-file-bad-format": "Lo fichièr deu èsser en tèxte simple",
+	"deletebatch-file-missing": "Impossible de legir lo fichièr donat",
+	"deletebatch-select-script": "suprimir l'escript de la pagina",
+	"deletebatch-select-yourself": "vos",
+	"deletebatch-no-page": "Indicatz al mens una pagina de suprimir O un fichièr donat que conten una lista de paginas.",
+	"right-deletebatch": "Suprimir de paginas en lòt"
+}

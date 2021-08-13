@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Antur",
+			"Fitoschido",
+			"Macofe",
+			"Sanbec",
+			"Tiberius1701"
+		]
+	},
+	"errorhandler-desc": "Manejador de errores para MediaWiki",
+	"errorhandler-errors": "Errores:",
+	"errorhandler-error-fatal": "Error grave",
+	"errorhandler-error-warning": "Advertencia",
+	"errorhandler-error-parse": "Error sintáctico",
+	"errorhandler-error-notice": "Aviso",
+	"errorhandler-error-deprecated": "En desuso",
+	"errorhandler-error-core-error": "Error de núcleo",
+	"errorhandler-error-core-warning": "Advertencia de núcleo",
+	"errorhandler-error-compile-error": "Error de compilación",
+	"errorhandler-error-compile-warning": "Advertencia de compilación",
+	"errorhandler-error-user-error": "Error de usuario",
+	"errorhandler-error-user-warning": "Advertencia de usuario",
+	"errorhandler-error-user-notice": "Aviso de usuario",
+	"errorhandler-error-user-deprecated": "Usuario en desuso",
+	"errorhandler-error-strict": "Estándar estricto",
+	"errorhandler-error-recoverable": "Error grave recuperable",
+	"errorhandler-msg-text": "$1 : $2 en $3 (línea $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> en <b>$3</b> (línea <b>$4</b>)",
+	"errorhandler-trace": "rastrear:",
+	"errorhandler-trace-line": "$1 (línea $2): $3",
+	"errorhandler-trace-line-internal": "[función interna]: $1"
+}

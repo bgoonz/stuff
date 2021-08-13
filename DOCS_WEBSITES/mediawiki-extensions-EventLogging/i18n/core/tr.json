@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"BaRaN6161 TURK"
+		]
+	},
+	"eventlogging-desc": "İstemci tarafı kodundan olayları günlüğe kaydetme çerçevesi",
+	"eventlogging-invalid-json": "Geçersiz JSON",
+	"eventlogging-revision-id": "Revizyon $1",
+	"eventlogging-code-sample-logging-on-server-side": "PHP günlüğü",
+	"eventlogging-code-sample-module-setup-json": "JavaScript günlüğü için extension.json kurulumu",
+	"eventlogging-code-sample-logging-on-client-side": "JavaScript günlüğü",
+	"eventlogging-error-move-source": "Şema sayfaları yeniden adlandırılmayabilir",
+	"eventlogging-error-move-destination": "Sayfalar Schema sayfalarıyla değiştirilemez"
+}

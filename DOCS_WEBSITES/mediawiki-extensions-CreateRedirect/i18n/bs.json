@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"CERminator"
+		]
+	},
+	"createredirect": "Pravljenje preusmjerenja",
+	"createredirect-desc": "Dodaje posebnu stranicu [[Special:CreateRedirect|Napravi Preusmjerenje]] za lahko pravljenje preusmjerenja",
+	"createredirect-error": "Greška: Autentifikacija nije uspjela.",
+	"createredirect-instructions": "Koristeći obrazac ispod, možete napraviti stranicu za preusmjeravanje ili zamijeniti postojeću stranicu sa preusmjeravanjem.",
+	"createredirect-page-title": "Naslov stranice:",
+	"createredirect-redirect-done": "Napravljeno preusmjerenje sa \"$1\" na \"$2\"",
+	"createredirect-redirect-to": "Preusmjerenje na:",
+	"createredirect-save": "Spremi stranicu"
+}

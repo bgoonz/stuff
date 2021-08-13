@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aushulz",
+			"Beta16",
+			"F. Cosoleto",
+			"Federico Mugnaini"
+		]
+	},
+	"emailcapture": "Verifica email",
+	"emailcapture-desc": "Cattura gli indirizzi e-mail e consente di verificarli tramite posta elettronica",
+	"emailcapture-failure": "Il tuo indirizzo di posta elettronica '''non''' è stato verificato.",
+	"emailcapture-invalid-code": "Codice di conferma non valido.",
+	"emailcapture-already-confirmed": "L'indirizzo email è già stato confermato.",
+	"emailcapture-response-subject": "{{SITENAME}}: conferma dell'indirizzo email",
+	"emailcapture-response-body": "Ciao e grazie per l'interesse mostrato nel contribuire a migliorare {{SITENAME}}.\n\nPer favore, conferma il tuo indirizzo di posta elettronica cliccando sul collegamento sottostante:\n$1\n\nSi può anche visitare:\n$2\n\ne inserire il seguente codice di conferma:\n$3\n\nCi metteremo in contatto a breve con come si può aiutare a migliorare {{SITENAME}}.\n\nNel caso non fossi stato tu ad attivare questa richiesta, ti preghiamo d'ignorare questa email e non ne riceverai altre da parte nostra.",
+	"emailcapture-success": "Grazie!\n\nIl tuo indirizzo di posta elettronica è stato confermato.",
+	"emailcapture-instructions": "Per verificare il tuo indirizzo e-mail, inserire il codice che ti è stato inviato tramite posta elettronica e cliccare su \"{{int:emailcapture-presentare}}\".",
+	"emailcapture-verify": "Codice di verifica:",
+	"emailcapture-submit": "Verifica indirizzo email",
+	"apihelp-emailcapture-description": "Cattura indirizzi di posta elettronica",
+	"apihelp-emailcapture-summary": "Cattura indirizzi di posta elettronica",
+	"apihelp-emailcapture-param-email": "Indirizzi di posta elettronica da catturare",
+	"apihelp-emailcapture-param-info": "Ulteriori informazioni da registrare, di solito informazioni codificate in una struttura JSON"
+}

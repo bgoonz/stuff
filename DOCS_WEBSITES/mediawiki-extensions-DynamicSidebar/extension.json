@@ -1,0 +1,52 @@
+{
+	"name": "DynamicSidebar",
+	"version": "1.1",
+	"author": [
+		"Ryan Lane",
+		"Derick Alangi"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:DynamicSidebar",
+	"descriptionmsg": "dynamicsidebar-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.35.0"
+	},
+	"config": {
+		"DynamicSidebarUseCategories": {
+			"value": true
+		},
+		"DynamicSidebarUseGroups": {
+			"value": true
+		},
+		"DynamicSidebarUsePageCategories": {
+			"value": false
+		},
+		"DynamicSidebarUseUserpages": {
+			"value": true
+		}
+	},
+	"HookHandlers": {
+		"DynamicSidebar": {
+			"class": "MediaWiki\\Extension\\DynamicSidebar\\DynamicSidebarHooks",
+			"services": [
+				"HookContainer",
+				"UserGroupManager"
+			]
+		}
+	},
+	"Hooks": {
+		"SidebarBeforeOutput": {
+			"handler": "DynamicSidebar"
+		}
+	},
+	"MessagesDirs": {
+		"DynamicSidebar": [
+			"i18n"
+		]
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\DynamicSidebar\\": "includes/"
+	},
+	"manifest_version": 2
+}

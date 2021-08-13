@@ -1,5 +1,0 @@
-ports:
-  - port: 8080
-
-tasks:
-  - command: "cd client && yarn && yarn examples:build && cd ../server && ./gradlew jettyRun"

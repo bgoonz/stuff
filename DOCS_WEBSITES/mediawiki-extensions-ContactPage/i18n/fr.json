@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gomoko",
+			"Grondin",
+			"IAlex",
+			"Peter17",
+			"Sherbrooke",
+			"Urhixidur",
+			"Verdy p",
+			"Windes",
+			"Wladek92",
+			"לערי ריינהארט"
+		]
+	},
+	"contactpage": "Page de contact",
+	"contactpage-desc": "[[Special:Contact|Formulaire de contact pour les visiteurs]]",
+	"contactpage-title": "Contacter",
+	"contactpage-pagetext": "Veuillez utiliser le formulaire ci-dessous pour nous contacter.",
+	"contactpage-legend": "Envoyer un courriel",
+	"contactpage-defsubject": "Message",
+	"contactpage-subject-and-sender": "$1 (de $2)",
+	"contactpage-subject-and-sender-withip": "$1 (de $2 à $3)",
+	"contactpage-fromname": "Votre nom :",
+	"contactpage-fromaddress": "Votre adresse de courriel :",
+	"contactpage-formfootnotes": "(obligatoire si vous désirez une réponse)",
+	"contactpage-includeip": "Inclure mon adresse IP dans ce message.",
+	"contactpage-usermailererror": "Erreur renvoyée par l'objet Mail : $1",
+	"contactpage-captcha-error": "Erreur de CAPTCHA",
+	"contactpage-config-error-title": "Formulaire de contact pour signaler une erreur",
+	"contactpage-config-error": "Un formulaire de contact n'est pas configuré pour cette page ou est mal configuré.",
+	"contactpage-mustbeloggedin": "Veuillez vous connecter pour soumettre un formulaire de contact."
+}

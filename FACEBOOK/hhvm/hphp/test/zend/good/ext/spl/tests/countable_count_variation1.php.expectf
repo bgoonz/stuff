@@ -1,8 +1,0 @@
-Count returns null:
-int(0)
-Count returns a string:
-int(0)
-Count returns an array:
-int(1)
-Count throws an exception:
-Thrown from count

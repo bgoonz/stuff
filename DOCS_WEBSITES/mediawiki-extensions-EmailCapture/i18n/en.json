@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Trevor Parscal"
+		]
+	},
+	"emailcapture": "Email verification",
+	"emailcapture-desc": "Capture email addresses, and allow users to verify them through email",
+	"emailcapture-failure": "Your email address was '''not''' verified.",
+	"emailcapture-invalid-code": "Invalid confirmation code.",
+	"emailcapture-already-confirmed": "Your email address has already been confirmed.",
+	"emailcapture-response-subject": "{{SITENAME}} email address verification",
+	"emailcapture-response-body": "Hello!\n\nThank you for expressing interest in helping to improve {{SITENAME}}.\n\nPlease take a moment to confirm your email address by clicking on the link below:\n$1\n\nYou may also visit:\n$2\n\nAnd enter the following confirmation code:\n$3\n\nWe'll be in touch shortly with how you can help improve {{SITENAME}}.\n\nIf you didn't initiate this request, please ignore this email and we won't send you anything else.",
+	"emailcapture-success": "Thank you!\n\nYour email address has been confirmed.",
+	"emailcapture-instructions": "To verify your email address, enter the code that was emailed to you and click \"{{int:emailcapture-submit}}\".",
+	"emailcapture-verify": "Verification code:",
+	"emailcapture-submit": "Verify email address",
+	"apihelp-emailcapture-description": "Capture email addresses",
+	"apihelp-emailcapture-summary": "Capture email addresses",
+	"apihelp-emailcapture-param-email": "Email address to capture",
+	"apihelp-emailcapture-param-info": "Extra information to log, usually JSON encoded structured information"
+}

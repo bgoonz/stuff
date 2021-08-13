@@ -1,6 +1,0 @@
-<?hh
-
-function using($x) {
-
-}
-

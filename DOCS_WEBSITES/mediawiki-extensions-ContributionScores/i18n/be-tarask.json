@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"EugeneZelenko",
+			"Jim-by",
+			"Red Winged Duck",
+			"Wizardist"
+		]
+	},
+	"contributionscores": "Адзнака ўнёску",
+	"contributionscores-desc": "Вызначае з базы зьвестак [[Special:ContributionScores|удзельнікаў з найбольшай колькасьцю рэдагаваньняў]]",
+	"contributionscores-info": "Адзнака галоўным чынам вымярае ўнікальныя рэдагаваньні старонак з улікам памеру ўнёску.",
+	"contributionscores-top": "($1 {{PLURAL:$1|найлепшы|найлепшых|найлепшых}})",
+	"contributionscores-days": "{{PLURAL:$1|Апошні $1 дзень|Апошнія $1 дні|Апошнія $1 дзён}}",
+	"contributionscores-allrevisions": "За ўвесь час",
+	"contributionscores-score": "Адзнака",
+	"contributionscores-rank": "Ранг",
+	"contributionscores-pages": "Старонак",
+	"contributionscores-changes": "Зьменаў",
+	"contributionscores-username": "Імя ўдзельніка",
+	"contributionscores-invalidusername": "Няслушнае імя ўдзельніка",
+	"contributionscores-invalidmetric": "Няслушная мэтрыка"
+}

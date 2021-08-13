@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hym411",
+			"Ykhwong",
+			"아라"
+		]
+	},
+	"etherpadlite-desc": "문서에 (로컬 또는 외부 Etherpad Lite 서버에서 호스팅하는) 하나 또는 여러 Etherpad Lite 패드를 포함하는 &lt;eplite&gt; 파서 태그를 추가합니다",
+	"etherpadlite-tracking-category": "Etherpad가 들어간 문서",
+	"etherpadlite-tracking-category-desc": "문서에 <code>&lt;eplite&gt;</code> 태그가 있는 Etherpad를 포함합니다.",
+	"etherpadlite-invalid-pad-url": "\"$1\"은(는) 올바른 Etherpad Lite URL이나 패드 이름이 아닙니다.",
+	"etherpadlite-url-is-not-whitelisted": "\"$1\"은(는) 허용한 Etherpad Lite 서버의 화이트리스트에 있지 않습니다. {{PLURAL:$3|$2만이 유일하게 허용한 서버입니다.|허용한 서버는 다음과 같습니다: $2}}",
+	"etherpadlite-empty-whitelist": "\"$1\"은(는) 허용한 Etherpad Lite 서버의 화이트리스트에 있지 않습니다. 화이트리스트에 허용한 서버가 없습니다.",
+	"etherpadlite-pad-used-more-than-once": "\"$1\" 패드는 이미 이 문서에서 이전에 사용했습니다. 서로 다른 패드일 때에만 문서에 여러 패드를 가질 수 있습니다."
+}

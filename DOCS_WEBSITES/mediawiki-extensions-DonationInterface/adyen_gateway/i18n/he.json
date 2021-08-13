@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80"
+		]
+	},
+	"adyen_gateway-desc": "עיבוד תשלומים של Adyen",
+	"adyen_gateway-response-default": "אירעה שגיאה בעיבוד העסקה שלך.\nנא לנסות שוב מאוחר יותר."
+}

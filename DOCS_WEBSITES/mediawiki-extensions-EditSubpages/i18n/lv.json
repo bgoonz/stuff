@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xil"
+		]
+	},
+	"editsubpages-desc": "Ļauj sistēmas operatoriem atbloķēt lapu, izmantojot [[MediaWiki:Unlockedpages]], lai to varētu rediģēt anonīmie lietotāji",
+	"unlockedpages": "# <!-- šo līniju neaiztikt --><pre>\n # Norādi lapas, kuras vēlies atbloķēt zemāk, rakstot \n # * Lapas nosaukums \n # Pirms lapas nosukuma jābūt zvaigznītei, citādi tā netiks atbloķēt\n # Lapu nosaukumi var būt [[saites]] un ir reģistrjutīgi \n # Arī diskusiju lapas tiks automātiski atbloķētas līdz ar lapu \n # Plašākai informācijai skatīt https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages\n # </pre><!-- šo līniju neaiztikt -->"
+}

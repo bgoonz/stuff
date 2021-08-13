@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Avjoska",
+			"Pikne"
+		]
+	},
+	"contributionscores": "Kaastööpunktid",
+	"contributionscores-desc": "Teeb viki andmekogust järelepärimise [[Special:ContributionScores|kasutajate kaastööde hulga]] kohta.",
+	"contributionscores-info": "Need punktid lähtuvad eeskätt erinevate redigeeritud lehekülgede arvust ja võtavad arvesse ka redigeerimiste koguarvu.",
+	"contributionscores-top": "($1 paremat)",
+	"contributionscores-days": "{{PLURAL:$1|Viimane päev|Viimased $1 päeva}}",
+	"contributionscores-allrevisions": "Kõik aeg",
+	"contributionscores-score": "Punkte",
+	"contributionscores-rank": "Koht",
+	"contributionscores-pages": "Lehekülgi",
+	"contributionscores-changes": "Muudatusi",
+	"contributionscores-username": "Kasutajanimi",
+	"contributionscores-invalidusername": "Vigane kasutajanimi"
+}

@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Alp Er Tunqa",
+			"Mousa"
+		]
+	},
+	"contributionscores": "چالیشماق امتیازلاری",
+	"contributionscores-desc": "ان یوخاری [[Special:ContributionScores|ایستیفاده‌چی چالیشماق حجمی]] اوچون دیتابیس‌دن سوروشار",
+	"contributionscores-info": "بو امتیاز اؤنجه‌لیکله دَییشدیریلمیش تک صحیفه‌لری ساییر و یوخاری دَییشدیرمک حجمینی ده نظرده آلیر.",
+	"contributionscores-top": "(یوخاری $1)",
+	"contributionscores-days": "سون {{PLURAL:$1|گون|$1 گون}}",
+	"contributionscores-allrevisions": "بوتون زامانلار",
+	"contributionscores-score": "امتیاز",
+	"contributionscores-pages": "صفحه‌لر",
+	"contributionscores-changes": "دَییشمه‌لر",
+	"contributionscores-username": "آد",
+	"contributionscores-invalidusername": "گئچرسیز ایستیفاده‌چی آدی",
+	"contributionscores-invalidmetric": "گئچرسیز مِتریک"
+}

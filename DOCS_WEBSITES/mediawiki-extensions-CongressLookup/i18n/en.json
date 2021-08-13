@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ryan Kaldari"
+		]
+	},
+	"congresslookup-desc": "Look up congressional representatives",
+	"congresslookup": "CongressLookup",
+	"congresslookup-net-neutrality": "Restore net neutrality",
+	"congresslookup-senator-contact": "Contact your senators",
+	"congresslookup-senator-error": "Error: No sentators found.",
+	"congresslookup-state-error": "Error: No state specified."
+}

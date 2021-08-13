@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrumps",
+			"Sp5uhe"
+		]
+	},
+	"createredirect": "Tworzenie przekierowania",
+	"createredirect-desc": "Dodaje stronę specjalną [[Special:CreateRedirect|tworzenia przekierowania]] ułatwiającą tę czynność",
+	"createredirect-error": "Błąd – nie powiodło się uwierzytelnienie.",
+	"createredirect-instructions": "Korzystając z poniższego formularza, można utworzyć stronę przekierowującą lub zastąpić istniejącą stronę przekierowaniem.",
+	"createredirect-page-title": "Tytuł strony:",
+	"createredirect-redirect-done": "Utworzono przekierowanie ze strony „$1” do „$2”",
+	"createredirect-redirect-to": "Przekierowanie do",
+	"createredirect-save": "Zapisz stronę"
+}

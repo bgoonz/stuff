@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lionslayer"
+		]
+	},
+	"right-disableaccount": "အကောင့်များပိတ်ရန်",
+	"disableaccount": "အသုံးပြုသူအကောင့်တစ်ခုကို ပိတ်လိုက်သည်",
+	"disableaccount-user": "အသုံးပြုသူအမည် -",
+	"disableaccount-mustconfirm": "ဤအကောင့်ကို ပိတ်လိုကြောင်း အတည်ပြုရမည် ဖြစ်သည်။",
+	"disableaccount-nosuchuser": "အသုံးပြုသူအကောင့် \"$1\" မတည်ရှိပါ။",
+	"disableaccount-success": "အသုံးပြုသူအကောင့် \"$1\" ကို ရာသက်ပန် ပိတ်ထားလိုက်သည်။"
+}

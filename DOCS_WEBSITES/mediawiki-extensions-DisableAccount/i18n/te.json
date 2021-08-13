@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Veeven"
+		]
+	},
+	"right-disableaccount": "ఖాతాలని అచేతనం చెయ్యడం",
+	"disableaccount": "వాడుకరి ఖాతాని అచేతనంచేయి",
+	"disableaccount-user": "వాడుకరి పేరు:",
+	"disableaccount-mustconfirm": "ఈ ఖాతాని అచేతనించదలచుకున్నారు మీరు తప్పనిసరిగా నిర్ధారించాలి.",
+	"disableaccount-nosuchuser": "\"$1\" అనే వాడుకరి ఖాతా లేనే లేదు.",
+	"disableaccount-success": "\"$1\" అనే వాడుకరి ఖాతాని శాశ్వతంగా అచేతనం చేసారు."
+}

@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pikne"
+		]
+	},
+	"disableaccount-desc": "Lubab administraatoritel isiklikke kontosid keelata.",
+	"right-disableaccount": "Lukustada kontosid",
+	"disableaccount": "Kasutajakonto lukustamine",
+	"disableaccount-user": "Kasutajanimi:",
+	"disableaccount-confirm": "Lukusta see kasutajakonto.\nEdaspidi ei saa kasutaja sisse logida, oma parooli lähtestada ega e-kirjatsi teateid saada.\nKui kasutaja on praegu kuskile sisse logitud, logitakse ta koheselt välja.\n''Pane tähele, et lukustatud konto uuesti kasutamiseks on tarvis süsteemiadministraatori sekkumist.''",
+	"disableaccount-mustconfirm": "Pead kinnitama, et soovid seda kontot lukustada.",
+	"disableaccount-nosuchuser": "Kasutajakontot \"$1\" pole.",
+	"disableaccount-success": "Kasutajakonto \"$1\" on jäädavalt lukustatud."
+}

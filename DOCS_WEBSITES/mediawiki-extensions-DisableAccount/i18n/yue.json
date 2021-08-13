@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ktchankt",
+			"Yueman"
+		]
+	},
+	"disableaccount-desc": "容許管理員停用個別戶口",
+	"right-disableaccount": "停用戶口",
+	"action-disableaccount": "停用戶口",
+	"disableaccount": "停用一個用戶戶口",
+	"disableaccount-user": "用戶名：",
+	"disableaccount-confirm": "停用呢個用戶戶口。\n呢位用戶唔可以再登入、重設佢嘅密碼，又或者收到電郵通知。\n如果呢位用戶而家係響任何地方緊入緊嘅，佢嘅就將會即刻登出。\n''留意停用一個戶口響無系統管理員嘅介入之下係唔可以番轉頭嘅。''",
+	"disableaccount-mustconfirm": "你一定要確認你想去停用呢個戶口。",
+	"disableaccount-nosuchuser": "用戶戶口 \"$1\" 唔存在。",
+	"disableaccount-success": "用戶戶口 \"$1\" 已經永久停用咗。",
+	"logentry-block-disableaccount": "$1 {{GENDER:$2|停用咗}} {{GENDER:$4|$3}} 嘅戶口。"
+}

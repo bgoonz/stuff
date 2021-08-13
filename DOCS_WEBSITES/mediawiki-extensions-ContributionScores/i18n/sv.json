@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lejonel",
+			"M.M.S.",
+			"Najami",
+			"WikiPhoenix"
+		]
+	},
+	"contributionscores": "Bidragspoäng",
+	"contributionscores-desc": "Hämtar information från databasen om de användare som gjort [[Special:ContributionScores|flest bidrag]]",
+	"contributionscores-info": "Poängen beräknar främst redigerade unika sidor, med hänsyn till höga redigeringsvolymer.",
+	"contributionscores-top": "(Topp $1)",
+	"contributionscores-days": "Senaste {{PLURAL:$1|dagen|$1 dagarna}}",
+	"contributionscores-allrevisions": "Hela tiden",
+	"contributionscores-score": "Poäng",
+	"contributionscores-rank": "Rankning",
+	"contributionscores-pages": "Sidor",
+	"contributionscores-changes": "Ändringar",
+	"contributionscores-username": "Användarnamn",
+	"contributionscores-invalidusername": "Ogiltigt användarnamn",
+	"contributionscores-invalidmetric": "Ogiltig metrisk"
+}

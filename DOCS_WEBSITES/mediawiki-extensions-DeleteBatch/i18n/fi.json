@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"01miki10",
+			"Crt",
+			"Jack Phoenix",
+			"Mobe",
+			"Nedergard",
+			"Nike"
+		]
+	},
+	"deletebatch": "Poista useita sivuja",
+	"deletebatch-desc": "Mahdollistaa [[Special:DeleteBatch|sivujen poistamisen erissä]].",
+	"deletebatch-help": "Poista useita sivuja. Voit joko tehdä yhden poiston tai poistaa tiedostossa listatut sivut. Valitse käyttäjä, joka näytetään poistolokeissa. Tallennetun tiedoston tulisi sisältää sivun nimi ja vapaaehtoinen syy | -merkin erottamina joka rivillä.",
+	"deletebatch-caption": "Sivulista",
+	"deletebatch-title": "Poista useita sivuja",
+	"deletebatch-link-back": "Palaa takaisin toimintosivulle",
+	"deletebatch-as": "Poiston suorittaja",
+	"deletebatch-both-modes": "Valitse joko määritelty sivu tai annettu lista sivuista.",
+	"deletebatch-or": "<strong>tai</strong>",
+	"deletebatch-delete": "Poista",
+	"deletebatch-page": "Poistettavat sivut",
+	"deletebatch-processing-from-file": "poistetaan tiedostossa lueteltuja sivuja",
+	"deletebatch-processing-from-form": "poistetaan lomakkeessa lueteltuja sivuja",
+	"deletebatch-omitting-nonexistent": "Ohitetaan olematon sivu $1.",
+	"deletebatch-omitting-invalid": "Ohitetaan kelpaamaton sivu $1.",
+	"deletebatch-file-bad-format": "Tiedoston tulisi olla raakatekstiä",
+	"deletebatch-file-missing": "Ei voi lukea annettua tiedostoa",
+	"deletebatch-select-script": "yleinen sivunpoistotunnus",
+	"deletebatch-select-yourself": "oma tunnus",
+	"deletebatch-no-page": "Määrittele ainakin yksi poistettava sivu tai valitse tiedosto, joka sisältää sivulistan.",
+	"right-deletebatch": "Poistaa sivuja erissä",
+	"deletebatch-deleting-file-only": "Tiedoston kuvaussivua $1 ei ole, pelkkä tiedosto poistetaan.\nToiminnosta ei tehdä lokimerkintää."
+}

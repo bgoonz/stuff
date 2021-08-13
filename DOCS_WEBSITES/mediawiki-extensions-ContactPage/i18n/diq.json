@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"DannyS712",
+			"Erdemaslancan",
+			"Kumkumuk",
+			"Marmase",
+			"Mirzali",
+			"Orbot707",
+			"Xoser"
+		]
+	},
+	"contactpage": "Pela irtıbati",
+	"contactpage-desc": "[[Special:Contact|Qe meymanan enformasyonê kontakî]]",
+	"contactpage-title": "İrtıbat",
+	"contactpage-pagetext": "Qe ma rê kontak kerdişî rê, ma rica kenê ena form sero kar bike.",
+	"contactpage-legend": "E-poste bırışe",
+	"contactpage-defsubject": "Mesajê kontakî",
+	"contactpage-subject-and-sender": "$1 ($2 ra)",
+	"contactpage-subject-and-sender-withip": "$1 ($2 ra $3 de)",
+	"contactpage-fromname": "Nameyê şıma:",
+	"contactpage-fromaddress": "Adresa e-posteyê şıma:",
+	"contactpage-formfootnotes": "(şıma ke yew cewab wazenê lazım beno)",
+	"contactpage-includeip": "Adresê IP cı ke mesaci tede.",
+	"contactpage-usermailererror": "Xızmeta e-postey xeta çarnayê: $1",
+	"contactpage-captcha-error": "Xetay CAPTCHA",
+	"contactpage-config-error-title": "Xetay fotmdê irtibati",
+	"contactpage-config-error": "Forma irtibati ya qandê pela timar nêbiya yana xırab timar biya",
+	"contactpage-mustbeloggedin": "Yew formê irtibati rıştışi rê cıkewe hesabê ho"
+}

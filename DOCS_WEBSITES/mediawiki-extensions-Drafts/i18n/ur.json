@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Obaid Raza",
+			"පසිඳු කාවින්ද"
+		]
+	},
+	"drafts": "مسودہ",
+	"drafts-view": "مسودہ دیکھیں",
+	"drafts-view-article": "صفحہ",
+	"drafts-view-saved": "محفوظ کر لیا",
+	"drafts-save": "اسے بطور مسودہ محفوظ کریں",
+	"drafts-save-save": "مسودہ محفوظ",
+	"drafts-save-saved": "محفوظ",
+	"drafts-save-saving": "محفوظ ہو رہا ہے",
+	"drafts-save-error": "مسودہ کے محفوظ ہونے میں خرابی",
+	"prefs-extension-drafts": "مسودات",
+	"tooltip-drafts-save": "بطو مسودہ محفوظ",
+	"apihelp-savedrafts-description": "مسودہ محفوظ۔",
+	"apihelp-savedrafts-param-id": "مسودہ کی آئی ڈی۔",
+	"apihelp-savedrafts-param-drafttoken": "مسودہ ٹوکن۔",
+	"apihelp-savedrafts-param-title": "عنوان مسودہ",
+	"apihelp-savedrafts-param-text": "متن مسودہ",
+	"apihelp-savedrafts-param-summary": "خلاصہ مسودہ۔"
+}

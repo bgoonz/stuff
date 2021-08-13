@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jkjk",
+			"Mormegil"
+		]
+	},
+	"disableaccount-desc": "Umožňuje správcům deaktivovat jednotlivé účty",
+	"right-disableaccount": "Deaktivování účtů",
+	"action-disableaccount": "deaktivovat účty",
+	"disableaccount": "Deaktivace uživatelského účtu",
+	"disableaccount-user": "Uživatelské jméno:",
+	"disableaccount-confirm": "Deaktivovat tento uživatelský účet.\nUživatel se nebude moci přihlásit, požádat o nové heslo, ani dostávat e-mailové notifikace.\nPokud je uživatel kdekoli přihlášen, bude okamžitě odhlášen.\n''Uvědomte si, že deaktivaci účtu nelze vrátit zpět bez pomoci systémového administrátora.''",
+	"disableaccount-mustconfirm": "Musíte potvrdit, že si přejete deaktivovat tento účet.",
+	"disableaccount-nosuchuser": "Uživatelský účet „$1“ neexistuje.",
+	"disableaccount-success": "Uživatelský účet „$1“ byl natrvalo deaktivován.",
+	"logentry-block-disableaccount": "$1 {{GENDER:$2|deaktivoval|deaktivovala}} účet {{GENDER:$4|uživatele|uživatelky}} $3."
+}

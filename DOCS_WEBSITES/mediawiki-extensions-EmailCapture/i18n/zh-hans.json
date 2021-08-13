@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bencmq",
+			"Hudafu",
+			"Hydra",
+			"Liuxinyu970226",
+			"PhiLiP",
+			"Xiaomingyan",
+			"阿pp"
+		]
+	},
+	"emailcapture": "电子邮件验证",
+	"emailcapture-desc": "捕获电子邮件地址，并允许用户通过电子邮件确认他们",
+	"emailcapture-failure": "您的电子邮件地址'''未'''被验证。",
+	"emailcapture-invalid-code": "验证码无效。",
+	"emailcapture-already-confirmed": "您的电子邮件地址已经确认。",
+	"emailcapture-response-subject": "{{SITENAME}}电子邮件地址验证",
+	"emailcapture-response-body": "您好！\n\n谢谢您表示愿意帮助我们改善{{SITENAME}}。\n\n请花一点时间，点击下面的链接来确认您的电子邮件地址：\n\n$1\n\n您还可以访问：\n\n$2\n\n然后输入下列确认码：$3\n\n我们会在短期内联系您，并向您介绍帮助我们改善{{SITENAME}}的方式。\n\n如果这项请求并非由您发起，请忽略这封电子邮件，我们不会再向您发送任何邮件。",
+	"emailcapture-success": "谢谢！\n\n您的电子邮件地址已确认。",
+	"emailcapture-instructions": "输入邮件的标明的验证码并点击\"{{int:emailcapture-submit}}\"以验证您的邮箱地址。",
+	"emailcapture-verify": "验证码：",
+	"emailcapture-submit": "验证电子邮件地址",
+	"apihelp-emailcapture-description": "捕获电子邮件地址",
+	"apihelp-emailcapture-summary": "捕获电子邮件地址",
+	"apihelp-emailcapture-param-email": "要捕获的电子邮件地址",
+	"apihelp-emailcapture-param-info": "要在日志中记录的额外信息，通常是JSON编码的结构化信息"
+}

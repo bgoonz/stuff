@@ -1,9 +1,0 @@
-syntax = "proto3";
-
-package helloworld;
-
-message Empty {};
-
-service Foo {
-  rpc Invoke(Empty) returns (stream Empty) {}
-}

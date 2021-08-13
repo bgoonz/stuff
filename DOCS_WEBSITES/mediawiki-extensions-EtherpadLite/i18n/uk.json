@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Andriykopanytsia",
+			"Base",
+			"DDPAT"
+		]
+	},
+	"etherpadlite-desc": "Додає підтримку парсером тегу &lt;eplite&gt; для вбудування в сторінки одного чи декількох документів Etherpad Lite (розташованих локально чи зовні на сервері/ах Etherpad Lite)",
+	"etherpadlite-tracking-category": "Сторінки з вбудованим Etherpad",
+	"etherpadlite-tracking-category-desc": "Сторінки вбудовує Etherpad з тегом <code>&lt;eplite&gt;</code>.",
+	"etherpadlite-invalid-pad-url": "«$1» не є дійсною назвою документу або адресою Etherpad Lite",
+	"etherpadlite-url-is-not-whitelisted": "«$1» не входить до білого списку дозволених серверів Etherpad Lite. {{PLURAL:$3|1=Тільки сервер $2 є дозволеним|Доступними є наступні сервери: $2}}.",
+	"etherpadlite-empty-whitelist": "«$1» не входить до білого списку дозволених серверів Etherpad Lite. У білому списку дозволених серверів немає жодного серверу.",
+	"etherpadlite-pad-used-more-than-once": "Документ «$1» вже використано на цій сторінці; можна використовувати декілька документів на сторінці, але лише якщо вони різні."
+}

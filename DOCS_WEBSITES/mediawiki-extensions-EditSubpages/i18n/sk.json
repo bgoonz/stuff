@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Helix84"
+		]
+	},
+	"editsubpages-desc": "Umožniť správcom odomknúť stránku so všetkými podstránkami danej stránky pre anonymné úpravy prostredníctvom [[MediaWiki:Unlockedpages]]",
+	"unlockedpages": " #<!-- nechajte tento riadok ako je --><pre>\n# Stránky, ktoré chcete odomknúť uveďte v zozname nižšie pomocou\n# * názov stránky\n# Stránky, ktoré sa majú odomknúť musia začínať odrážkou, aby sa počítali,\n# všetko ostatné sa považuje za komentár\n# Názvy stránok môžu byť [[odkazmi]] a na veľkosti písmen záleží.\n# Budú odomknuté aj diskusné stránky uvedených stránok.\n# Podrobnosti pozri na  https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages\n  #</pre><!-- nechajte tento riadok ako je -->"
+}

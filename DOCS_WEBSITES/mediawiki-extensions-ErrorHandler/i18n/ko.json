@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hym411",
+			"Priviet",
+			"Revi",
+			"Yjs5497"
+		]
+	},
+	"errorhandler-desc": "미디어위키 오류 처리기",
+	"errorhandler-errors": "오류:",
+	"errorhandler-error-fatal": "치명적인 오류",
+	"errorhandler-error-warning": "경고",
+	"errorhandler-error-parse": "파서 오류",
+	"errorhandler-error-notice": "알림",
+	"errorhandler-error-deprecated": "사용되지 않음",
+	"errorhandler-error-core-error": "코드 오류",
+	"errorhandler-error-core-warning": "코어 경고",
+	"errorhandler-error-compile-error": "컴파일 오류",
+	"errorhandler-error-compile-warning": "컴파일 경고",
+	"errorhandler-error-user-error": "사용자 오류",
+	"errorhandler-error-user-warning": "사용자 경고",
+	"errorhandler-error-user-notice": "사용자 알림",
+	"errorhandler-error-user-deprecated": "탈퇴한 사용자",
+	"errorhandler-error-strict": "엄격한 기준",
+	"errorhandler-error-recoverable": "추적가능한 치명적 오류",
+	"errorhandler-msg-text": "$1 : $3 파일의 $2($4 번째 줄)",
+	"errorhandler-msg-html": "<b>$1</b>: <b>$3</b>파일의 <i>$2</i> (<b>$4</b> 번째 줄)",
+	"errorhandler-trace": "추적:",
+	"errorhandler-trace-line": "$1($2 열): $3",
+	"errorhandler-trace-line-internal": "[내부 기능]: $1"
+}

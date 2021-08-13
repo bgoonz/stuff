@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Beta16",
+			"BrokenArrow",
+			"Darth Kule",
+			"Gianfranco",
+			"Pietrodn",
+			"Rippitippi"
+		]
+	},
+	"contributionscores": "Punteggi contributi",
+	"contributionscores-desc": "Interroga il database wiki per il più alto [[Special:ContributionScores|volume di contributi utente]]",
+	"contributionscores-info": "Questo punteggio misura in primo luogo il numero di pagine distinte modificate, valutando anche un alto volume di contributi.",
+	"contributionscores-top": "(Migliori $1)",
+	"contributionscores-days": "{{PLURAL:$1|Ultimo giorno|Ultimi $1 giorni}}",
+	"contributionscores-allrevisions": "Intero periodo",
+	"contributionscores-score": "Punteggio",
+	"contributionscores-rank": "Posizione",
+	"contributionscores-pages": "Pagine",
+	"contributionscores-changes": "Modifiche",
+	"contributionscores-username": "Nome utente",
+	"contributionscores-invalidusername": "Nome utente non valido",
+	"contributionscores-invalidmetric": "Metrica non valida"
+}

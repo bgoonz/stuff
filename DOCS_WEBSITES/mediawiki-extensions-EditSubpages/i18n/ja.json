@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fryed-peach",
+			"Shirayuki"
+		]
+	},
+	"editsubpages-desc": "管理者が [[MediaWiki:Unlockedpages]] を使い、ページとそのすべての下位ページを匿名の編集からロック解除できるようにする",
+	"unlockedpages": " #<!-- leave this line alone --><pre>\n# ロック解除したいページを以下に次の形式で列挙してください\n# * ページ名\n# ロック解除されたページは集計のために必ず * で始めてください\n# その他はすべてコメントと見なされます\n# ページ名は[[リンク]]の形式も可能で大文字・小文字を区別します\n# また、ノートページは付随して自動的にロック解除されます\n# より詳しくは https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages を参照してください\n  #</pre><!-- leave this line alone -->"
+}

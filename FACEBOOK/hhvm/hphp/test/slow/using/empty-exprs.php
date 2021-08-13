@@ -1,7 +1,0 @@
-<?hh
-
-function main() {
-  using () {
-  }
-}
-

@@ -1,8 +1,0 @@
-{
-  "domain": "random",
-  "name": "Random",
-  "documentation": "https://www.home-assistant.io/components/random",
-  "requirements": [],
-  "dependencies": [],
-  "codeowners": ["@fabaff"]
-}

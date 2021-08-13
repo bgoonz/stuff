@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"D6283",
+			"Garam",
+			"Idh0854",
+			"Ykhwong",
+			"아라"
+		]
+	},
+	"deletebatch": "문서를 일괄 삭제",
+	"deletebatch-desc": "[[Special:DeleteBatch|문서를 일괄 삭제합니다]]",
+	"deletebatch-help": "문서를 일괄 삭제합니다.\n하나를 삭제를 수행하거나 파일에 나열한 문서를 삭제할 수 있습니다.\n삭제 기록에 보여줄 사용자를 선택하세요.\n올린 파일에는 문서 이름과, 선택적으로 \"|\"로 구분되어 쓰인 이유가 있어야 합니다.",
+	"deletebatch-caption": "문서 목록:",
+	"deletebatch-default-reason": "기본 삭제 이유:",
+	"deletebatch-title": "일괄 삭제",
+	"deletebatch-link-back": "특수 문서로 돌아가기",
+	"deletebatch-as": "스크립트 실행:",
+	"deletebatch-both-modes": "특정한 문서나 문서의 주어진 목록을 선택하세요.",
+	"deletebatch-or": "<strong>또는</strong>",
+	"deletebatch-delete": "삭제",
+	"deletebatch-page": "삭제될 문서:",
+	"deletebatch-processing-from-file": "파일에 나열된 문서를 삭제 중",
+	"deletebatch-processing-from-form": "양식에 나열된 문서를 삭제 중",
+	"deletebatch-omitting-nonexistent": "존재하지 않는 $1 문서는 생략합니다.",
+	"deletebatch-omitting-invalid": "잘못된 $1 문서는 생략합니다.",
+	"deletebatch-file-bad-format": "파일은 일반 텍스트이여야 합니다",
+	"deletebatch-file-missing": "주어진 파일을 읽을 수 없습니다.",
+	"deletebatch-select-script": "문서 스크립트 삭제",
+	"deletebatch-select-yourself": "나 자신",
+	"deletebatch-no-page": "문서 목록이 포함된 파일을 삭제하거나 선택할 수 있는 적어도 하나의 문서를 지정하세요.",
+	"deletebatch-system-username": "문서 스크립트 삭제",
+	"action-deletebatch": "문서 일괄 삭제",
+	"right-deletebatch": "문서 일괄 삭제",
+	"deletebatch-deleting-file-only": "$1 파일 설명 문서가 존재하지 않아서 실제 파일만 삭제합니다.\n이 동작은 기록되지 않습니다."
+}

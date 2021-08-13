@@ -1,0 +1,34 @@
+{
+	"name": "Diagnosis",
+	"version": "0.2.0",
+	"author": "[http://www.dasch-tour.de DaSch]",
+	"url": "https://www.mediawiki.org/wiki/Extension:Diagnosis",
+	"descriptionmsg": "diagnosis-desc",
+	"type": "specialpage",
+	"requires": {
+		"MediaWiki": ">= 1.29.0"
+	},
+	"AvailableRights": [
+		"diagnosis-access"
+	],
+	"GroupPermissions": {
+		"sysop": {
+			"diagnosis-access": true
+		}
+	},
+	"SpecialPages": {
+		"Diagnosis": "SpecialDiagnosis"
+	},
+	"MessagesDirs": {
+		"Diagnosis": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"SpecialDiagnosis": "Diagnosis.i18n.alias.php"
+	},
+	"AutoloadClasses": {
+		"SpecialDiagnosis": "SpecialDiagnosis.php"
+	},
+	"manifest_version": 2
+}

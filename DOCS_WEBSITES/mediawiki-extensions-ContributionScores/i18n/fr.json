@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gomoko",
+			"Grondin",
+			"IAlex",
+			"Peter17",
+			"Sherbrooke",
+			"Urhixidur",
+			"Verdy p"
+		]
+	},
+	"contributionscores": "Pointage des contributions",
+	"contributionscores-desc": "Scrute la base de données wiki pour les plus importants [[Special:ContributionScores|volumes de contribution des utilisateurs]]",
+	"contributionscores-info": "Le pointage mesure en priorité les pages uniques modifiées, en prenant en compte les gros volumes de modification.",
+	"contributionscores-top": "(Les $1 plus élevés)",
+	"contributionscores-days": "Dans {{PLURAL:$1|le dernier jour|les derniers $1 jours}}",
+	"contributionscores-allrevisions": "Tout le temps",
+	"contributionscores-score": "Pointage",
+	"contributionscores-rank": "Rang",
+	"contributionscores-pages": "Pages",
+	"contributionscores-changes": "Changements",
+	"contributionscores-username": "Nom d’utilisateur",
+	"contributionscores-invalidusername": "Nom d’utilisateur incorrect",
+	"contributionscores-invalidmetric": "Métrique incorrecte"
+}

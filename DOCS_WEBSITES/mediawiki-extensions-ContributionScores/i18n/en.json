@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": []
+	},
+	"contributionscores": "Contribution scores",
+	"contributionscores-desc": "Polls the wiki database for highest [[Special:ContributionScores|user contribution volume]]",
+	"contributionscores-info": "The score primarily measures unique pages edited, with consideration for high edit volume.",
+	"contributionscores-top": "(Top $1)",
+	"contributionscores-days": "Last {{PLURAL:$1|day|$1 days}}",
+	"contributionscores-allrevisions": "All time",
+	"contributionscores-score": "Score",
+	"contributionscores-rank": "Rank",
+	"contributionscores-pages": "Pages",
+	"contributionscores-changes": "Changes",
+	"contributionscores-username": "Username",
+	"contributionscores-invalidusername": "Invalid username",
+	"contributionscores-invalidmetric": "Invalid metric"
+}

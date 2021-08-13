@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Crazymadlover",
+			"Sanbec"
+		]
+	},
+	"editsubpages-desc": "Permita a los administradores desbloquear una página y sus subpáginas para edición anónima a través de [[MediaWiki:Unlockedpages]]",
+	"unlockedpages": "  #<!-- Deje esta línea como está --><pre>\n# Coloque páginas que deseas desbloquear debajo usando\n# * Nombre de página\n# Páginas desbloqueadas deben comenzar con una bala para ser contadas,\n# Todo lo adicional es considerado un comentario\n# Nombres de páginas pueden ser [[vínculos]] y son sensibles a la mayúsculas\n# También, páginas de discusión serán automáticamente desbloqueadas con la página\n# Ver https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages para más información\n  #</pre><!-- deje esta línea como está -->"
+}

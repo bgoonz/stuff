@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"ToJack"
+		]
+	},
+	"errorhandler-error-fatal": "Хатои фаталӣ",
+	"errorhandler-error-warning": "Огоҳӣ",
+	"errorhandler-error-user-error": "Хатои корбар"
+}

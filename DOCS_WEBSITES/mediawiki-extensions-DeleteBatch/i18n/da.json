@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Christian List",
+			"Saederup92",
+			"Sarrus"
+		]
+	},
+	"deletebatch-caption": "Sideliste:",
+	"deletebatch-link-back": "Gå tilbage til specialsiden",
+	"deletebatch-as": "Kør scriptet som:",
+	"deletebatch-or": "<strong>eller</strong>",
+	"deletebatch-delete": "Slet",
+	"deletebatch-page": "Sider, der skal slettes:",
+	"deletebatch-file-missing": "Klarede ikke læse filen.",
+	"deletebatch-select-yourself": "Dig"
+}

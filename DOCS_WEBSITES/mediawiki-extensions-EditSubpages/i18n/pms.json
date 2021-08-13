@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Borichèt",
+			"Dragonòt"
+		]
+	},
+	"editsubpages-desc": "A përmëtt a j'aministrador ëd dësbloché na pàgina e tute le sotpàgine ëd cola pàgina për modìfiche anònime con [[MediaWiki:Unlockedpages]]",
+	"unlockedpages": "  #<!-- lassé cost alinia 'me ch'a l'é --><pre>\n# Ch'a buta sì-sota le pàgine che a veul dësbloché an dovrand\n# * Nomedlapagina\n# Le pàgine dësblocà a devo ancaminé con * për esse contà,\n# tut ël rest a l'é considerà un coment\n# Ij nòm ëd pàgine a peulo esse [[anliure]] e a son sensìbij al mujùscol\n# An dzorpì, le pàgine ëd discussion a saran automaticament dësblocà con la pàgina\n# Vëdde https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages për savèjne ëd pì\n  #</pre><!-- lassé costa linia 'me ch'a l'é -->"
+}

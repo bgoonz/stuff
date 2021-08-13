@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pyt"
+		]
+	},
+	"right-disableaccount": "Benutserkonto deaktivierje.",
+	"disableaccount": "N Benutserkonto deaktivierje",
+	"disableaccount-user": "Benutsernoome:",
+	"disableaccount-confirm": "Deaktivier dit Benutserkonto.\nDie Benutser kon sik dan nit moor anmäldje, dät Paaswoud touräächsätte of E-Mail-Ättergjuchte ämfange.\nAs die Benutser apstuuns anmälded is, wäd er fluks oumälded.\n''Beoachtje, dät ju Deaktivierenge fon n Benutserkonto nit moor sunner dät Iengriepen fon n Systemadministrator tourääch troald wäide kon.''",
+	"disableaccount-mustconfirm": "Ju Deaktivierenge fon dit Benutserkonto mout nu bestäÄtiged wäide.",
+	"disableaccount-nosuchuser": "Dät Benutserkonto \"$1\" is nit deer.",
+	"disableaccount-success": "Dät Benutserkonto \"$1\" wuud duurhaft deaktivierd."
+}

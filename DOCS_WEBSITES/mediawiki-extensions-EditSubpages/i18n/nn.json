@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Harald Khan",
+			"Njardarlogar"
+		]
+	},
+	"editsubpages-desc": "Lèt administratorane låsa opp ei sida og alle undersidene hennar for endringar for uregistrerte via [[MediaWiki:Unlockedpages]]",
+	"unlockedpages": " #<!-- lat denne linja vera som ho er --><pre>\n# Skriv inn sider du vil låsa opp nedanfor på formen\n# * sidenamn\n# Namna må byrja med stjerna,\n# alt anna blir rekna som ein kommentar\n# Sidenamn kan vera [[lenkjer]], og\n# ein må skilja mellom store og små bokstavar.\n# Diskusjonssider blir automatisk låste opp saman med hovudsida\n# Sjå https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages for meir informasjon\n   #</pre><!-- lat denne linja vera som ho er -->"
+}

@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Omnipaedista"
+		]
+	},
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> in <b>$3</b> (linea <b>$4</b>)",
+	"errorhandler-trace": "vestigium:",
+	"errorhandler-trace-line": "$1 (linea $2): $3"
+}

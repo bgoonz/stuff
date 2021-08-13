@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"David1010"
+		]
+	},
+	"deletebatch-caption": "გვერდების სია:",
+	"deletebatch-link-back": "სპეციალურ გვერდზე დაბრუნება",
+	"deletebatch-or": "<strong>ან</strong>",
+	"deletebatch-delete": "წაშლა",
+	"deletebatch-page": "წასაშლელი გვერდები:",
+	"deletebatch-file-missing": "აღნიშნული ფაილის წაკითხვა შეუძლებელია",
+	"deletebatch-select-script": "გვერდის წაშლის სკრიპტი",
+	"deletebatch-select-yourself": "თქვენ"
+}

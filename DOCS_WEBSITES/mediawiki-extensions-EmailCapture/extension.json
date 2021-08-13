@@ -1,0 +1,50 @@
+{
+	"name": "EmailCapture",
+	"version": "0.5.0",
+	"author": "Trevor Parscal",
+	"url": "https://www.mediawiki.org/wiki/Extension:EmailCapture",
+	"descriptionmsg": "emailcapture-desc",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.29.0"
+	},
+	"APIModules": {
+		"emailcapture": "ApiEmailCapture"
+	},
+	"SpecialPages": {
+		"EmailCapture": "SpecialEmailCapture"
+	},
+	"MessagesDirs": {
+		"EmailCapture": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"EmailCaptureAlias": "EmailCapture.alias.php"
+	},
+	"AutoloadClasses": {
+		"ApiEmailCapture": "includes/api/ApiEmailCapture.php",
+		"EmailCaptureHooks": "includes/EmailCaptureHooks.php",
+		"SpecialEmailCapture": "includes/specials/SpecialEmailCapture.php"
+	},
+	"Hooks": {
+		"LoadExtensionSchemaUpdates": "EmailCaptureHooks::loadExtensionSchemaUpdates",
+		"ParserTestTables": "EmailCaptureHooks::parserTestTables"
+	},
+	"config": {
+		"EmailCaptureSendAutoResponse": {
+			"value": true
+		},
+		"EmailCaptureAutoResponse": {
+			"value": {
+				"from": null,
+				"from-name": null,
+				"subject-msg": "emailcapture-response-subject",
+				"body-msg": "emailcapture-response-body",
+				"reply-to": null,
+				"content-type": null
+			}
+		}
+	},
+	"manifest_version": 2
+}

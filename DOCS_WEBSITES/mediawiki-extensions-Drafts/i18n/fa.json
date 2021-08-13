@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Alirezaaa",
+			"AzorAhai",
+			"Ebraminio",
+			"Huji",
+			"Mjbmr",
+			"Reza1615",
+			"Sunfyre",
+			"Wayiran"
+		]
+	},
+	"drafts": "پیش‌نویس‌ها",
+	"drafts-desc": "امکان نمایش نسخه‌های [[Special:Drafts|پیش‌نویس]] یک صفحه را می‌افزاید",
+	"drafts-view": "نمایش پیش‌نویس",
+	"drafts-view-summary": "این صفحهٔ ویژه فهرستی از تمام پیش‌نویس‌های موجود را نمایش می‌دهد.\nپیش‌نویس‌های استفاده نشده پس از {{PLURAL:$1|$1 روز|$1 روز}} به طور خودکار دور انداخته می‌شوند.",
+	"drafts-view-article": "صفحه",
+	"drafts-view-existing": "پیش‌نویس‌های موجود",
+	"drafts-view-saved": "ذخیره شد",
+	"drafts-view-discard": "دور انداختن",
+	"drafts-view-nonesaved": "شما همینک هیچ پیش‌نویسی ذخیره ندارید.",
+	"drafts-view-notice": "شما $1 برای این صفحه دارید.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|پیش‌نویس|پیش‌نویس}}",
+	"drafts-view-warn": "آیا می‌خواهید از این صفحه بروید؟ با چنین کاری، تمام تغییرات ذخیره‌نشده به این صفحه از دست خواهد رفت.",
+	"drafts-save": "ذخیره کردن این متن به عنوان پیش‌نویس",
+	"drafts-save-save": "ذخیره کردن پیش‌نویس",
+	"drafts-save-saved": "ذخیره شد",
+	"drafts-save-saving": "ذخیره‌سازی",
+	"drafts-save-error": "خطا در ذخیره کردن پیش‌نویس",
+	"drafts-enable": "فعال کردن ویژگی ذخیرهٔ پیش‌نویس در فرم ویرایش",
+	"prefs-extension-drafts": "پیش‌نویس‌ها",
+	"tooltip-drafts-save": "ذخیره به عنوان پیش‌نویس",
+	"apihelp-savedrafts-description": "ذخیره کردن پیش‌نویس"
+}

@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dalibor Bosits",
+			"Ex13",
+			"MaGa",
+			"SpeedyGonsales"
+		]
+	},
+	"contributionscores": "Najbolji suradnici",
+	"contributionscores-desc": "Šalje upit bazi podataka za najveći [[Special:ContributionScores|broj suradničkih doprinosa]]",
+	"contributionscores-info": "U prvom planu rezultat mjeri jedinstvene izmijenjene stranice, uzimajući u obzir veliku količinu uređivanja.",
+	"contributionscores-top": "(najboljih $1)",
+	"contributionscores-days": "{{PLURAL:$1|Zadnji dan|Zadnjih $1 dana}}",
+	"contributionscores-allrevisions": "Sve vrijeme",
+	"contributionscores-score": "Rezultat",
+	"contributionscores-rank": "Mjesto",
+	"contributionscores-pages": "Stranica",
+	"contributionscores-changes": "Uređivanja",
+	"contributionscores-username": "Suradničko ime",
+	"contributionscores-invalidusername": "Nevaljano suradničko ime",
+	"contributionscores-invalidmetric": "Nevaljana metrika"
+}

@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Giromin Cangiaxo"
+		]
+	},
+	"disableaccount-desc": "O consente a-i amministratoî de disattivâ e scingole utençe.",
+	"right-disableaccount": "Disabilitâ e utençe",
+	"action-disableaccount": "disabilitâ e utençe",
+	"disableaccount": "Disabilitâ un'utença",
+	"disableaccount-user": "Nomme utente:",
+	"disableaccount-confirm": "Disabilitâ permanentemente quest'utença.\nL'utente o no saiâ in graddo d'accede, reimpostâ a password ò riçeive notiffiche via e-mail.\nTutte e presente connescioin de l'utente saian subbito terminæ.\n''Notta che a disattivaçion de 'n'utença a no l'è reverscibbile sença l'intervento de 'n amministratô de scistema''.",
+	"disableaccount-mustconfirm": "Ti devi confermâ che ti voeu disabilitâ st'utença.",
+	"disableaccount-nosuchuser": "L'utença \"$1\" a no l'existe.",
+	"disableaccount-success": "L'utença \"$1\" a l'è stæta disabilitâ definitivamente.",
+	"logentry-block-disableaccount": "$1 o l'ha {{GENDER:$2|disabilitou l'utença}} de {{GENDER:$4|$3}}."
+}

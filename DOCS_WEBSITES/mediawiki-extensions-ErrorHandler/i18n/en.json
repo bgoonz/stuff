@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"IAlex"
+		]
+	},
+	"errorhandler-desc": "Error handler for MediaWiki",
+	"errorhandler-errors": "Errors:",
+	"errorhandler-error-fatal": "Fatal error",
+	"errorhandler-error-warning": "Warning",
+	"errorhandler-error-parse": "Parser error",
+	"errorhandler-error-notice": "Notice",
+	"errorhandler-error-deprecated": "Deprecated",
+	"errorhandler-error-core-error": "Core error",
+	"errorhandler-error-core-warning": "Core warning",
+	"errorhandler-error-compile-error": "Compile error",
+	"errorhandler-error-compile-warning": "Compile warning",
+	"errorhandler-error-user-error": "User error",
+	"errorhandler-error-user-warning": "User warning",
+	"errorhandler-error-user-notice": "User notice",
+	"errorhandler-error-user-deprecated": "User deprecated",
+	"errorhandler-error-strict": "Strict standards",
+	"errorhandler-error-recoverable": "Catchable fatal error",
+	"errorhandler-msg-text": "$1 : $2 in $3 (line $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> in <b>$3</b> (line <b>$4</b>)",
+	"errorhandler-trace": "trace:",
+	"errorhandler-trace-line": "$1 (line $2): $3",
+	"errorhandler-trace-line-internal": "[internal function]: $1"
+}

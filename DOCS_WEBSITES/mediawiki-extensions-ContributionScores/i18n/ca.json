@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jordi Roqué",
+			"SMP",
+			"Solde",
+			"Toniher"
+		]
+	},
+	"contributionscores": "Punts de contribució",
+	"contributionscores-desc": "Valora les edicions en cerca dels [[Special:ContributionScores|usuaris amb més volum de contribucions]]",
+	"contributionscores-info": "La puntuació mesura el nombre de pàgines úniques editades, amb consideració de les edicions d'alt volum.",
+	"contributionscores-top": "($1 millors)",
+	"contributionscores-days": "{{PLURAL:$1|Últim dia|Últims $1 dies}}",
+	"contributionscores-allrevisions": "Des de sempre",
+	"contributionscores-score": "Puntuació",
+	"contributionscores-rank": "Classificació",
+	"contributionscores-pages": "Pàgines",
+	"contributionscores-changes": "Canvis",
+	"contributionscores-username": "Nom d'usuari",
+	"contributionscores-invalidusername": "Nom d'usuari no vàlid",
+	"contributionscores-invalidmetric": "Mètrica no vàlida"
+}

@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Michaello",
+			"Milicevic01"
+		]
+	},
+	"contributionscores-top": "(prvih $1)",
+	"contributionscores-days": "{{PLURAL:$1|1=Poslednjeg dana|Poslednjih $1 dana}}",
+	"contributionscores-allrevisions": "Svih vremena",
+	"contributionscores-pages": "Stranice",
+	"contributionscores-changes": "Izmene",
+	"contributionscores-username": "Korisničko ime"
+}

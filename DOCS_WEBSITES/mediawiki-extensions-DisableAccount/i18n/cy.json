@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lloffiwr"
+		]
+	},
+	"disableaccount-desc": "Yn caniatau i weinyddwyr analluogi cyfrifon penodol.",
+	"right-disableaccount": "Analluogi cyfrifon",
+	"disableaccount": "Analluogi cyfrif defnyddiwr",
+	"disableaccount-user": "Enw defnyddiwr:",
+	"disableaccount-confirm": "Analluogu cyfrif y defnyddiwr hwn. \nNi fydd y defnyddiwr yn gallu mewngofnodi, ailosod ei gyfrinair, na derbyn hysbysiadau e-bost. \nOs yw'r defnyddiwr wedi mewngofnodi rhywle ar hyn o bryd, bydd yn cael ei allgofnodi'n syth. \n''Noder nad oes modd gwrthdroi'r weithred o anablu cyfrif heb ymyrraeth gweinyddwr y system.''",
+	"disableaccount-mustconfirm": "Mae'n rhaid i chi gadarnhau eich bod am analluogi'r cyfrif hwn.",
+	"disableaccount-nosuchuser": "Nid oes cyfrif defnyddiwr o'r enw \"$1\" ar gael.",
+	"disableaccount-success": "Analluogwyd cyfrif y defnyddiwr \"$1\" yn barhaol."
+}

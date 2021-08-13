@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"V.narsikar"
+		]
+	},
+	"createredirect": "पुनर्निर्देशन तयार करा",
+	"createredirect-desc": "सहजगत्या पुनर्निर्देशन करण्यास [[Special:CreateRedirect|पुनर्निर्देशन तयार करा]] हे एक विशेष पान जोडते",
+	"createredirect-error": "त्रुटी:अधिप्रमाणन अयशस्वी.",
+	"createredirect-instructions": "खालील आवेदन वापरुन, आपण पुनर्निर्देशनाचे पान तयार करु शकता किंवा अस्तित्वात असलेल्या पानास पुनर्निर्देशनाचे पानाने बदलु शकता.",
+	"createredirect-page-title": "पान शिर्षक:",
+	"createredirect-redirect-done": "\"$1\" पासून \"$2\"ला पुनर्निर्देशन तयार केले.",
+	"createredirect-redirect-to": "ला पुनर्निर्देशन करा:",
+	"createredirect-save": "पान जतन करा"
+}

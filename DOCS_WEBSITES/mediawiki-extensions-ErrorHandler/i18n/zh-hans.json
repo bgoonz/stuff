@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Arthur2e5",
+			"Gaoxuewei",
+			"PhiLiP",
+			"Xiaomingyan"
+		]
+	},
+	"errorhandler-desc": "MediaWiki的错误处理程序",
+	"errorhandler-errors": "错误：",
+	"errorhandler-error-fatal": "致命错误",
+	"errorhandler-error-warning": "警告",
+	"errorhandler-error-parse": "解析器错误",
+	"errorhandler-error-notice": "提示",
+	"errorhandler-error-deprecated": "已弃用",
+	"errorhandler-error-core-error": "核心错误",
+	"errorhandler-error-core-warning": "核心警告",
+	"errorhandler-error-compile-error": "编译错误",
+	"errorhandler-error-compile-warning": "编译警告",
+	"errorhandler-error-user-error": "用户错误",
+	"errorhandler-error-user-warning": "用户警告",
+	"errorhandler-error-user-notice": "用户提示",
+	"errorhandler-error-user-deprecated": "用户弃用",
+	"errorhandler-error-strict": "严格的标准",
+	"errorhandler-error-recoverable": "可捕获的致命错误",
+	"errorhandler-msg-text": "$1 : $2 在 $3 中 （第$4行）",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> 在 <b>$3</b> 中（第 <b>$4</b> 行）",
+	"errorhandler-trace": "轨迹：",
+	"errorhandler-trace-line": "$1 （第$2行）: $3",
+	"errorhandler-trace-line-internal": "[内部函数]: $1"
+}

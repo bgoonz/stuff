@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Anakmalaysia"
+		]
+	},
+	"errorhandler-desc": "Pengelola ralat untuk MediaWiki",
+	"errorhandler-errors": "Ralat:",
+	"errorhandler-error-fatal": "Ralat mati",
+	"errorhandler-error-warning": "Amaran",
+	"errorhandler-error-parse": "Ralat penghurai",
+	"errorhandler-error-notice": "Pemberitahuan",
+	"errorhandler-error-deprecated": "Lapuk",
+	"errorhandler-error-core-error": "Ralat teras",
+	"errorhandler-error-core-warning": "Amaran teras",
+	"errorhandler-error-compile-error": "Ralat kompil",
+	"errorhandler-error-compile-warning": "Amaran kompil",
+	"errorhandler-error-user-error": "Ralat pengguna",
+	"errorhandler-error-user-warning": "Amaran pengguna",
+	"errorhandler-error-user-notice": "Pemberitahuaan pengguna",
+	"errorhandler-error-user-deprecated": "Pengguna dibuang",
+	"errorhandler-error-strict": "Piawaian ketat",
+	"errorhandler-error-recoverable": "Ralat mati yang boleh ditangkap",
+	"errorhandler-msg-text": "$1 : $2 dalam $3 (baris $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> dalam <b>$3</b> (baris <b>$4</b>)",
+	"errorhandler-trace": "jejak:",
+	"errorhandler-trace-line": "$1 (baris $2): $3",
+	"errorhandler-trace-line-internal": "[fungsi dalaman]: $1"
+}

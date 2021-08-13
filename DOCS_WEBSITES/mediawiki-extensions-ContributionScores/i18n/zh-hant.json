@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cwlin0416",
+			"Kly",
+			"LNDDYL",
+			"Liuxinyu970226",
+			"Mark85296341",
+			"PhiLiP",
+			"Shinjiman",
+			"Shirayuki",
+			"Simon Shek"
+		]
+	},
+	"contributionscores": "貢獻分數",
+	"contributionscores-desc": "調查 Wiki 資料庫中[[Special:ContributionScores|貢獻最多的使用者]]",
+	"contributionscores-info": "此分數主要以編輯個別頁面數量計算並考慮編輯次數。",
+	"contributionscores-top": "(前 $1 名)",
+	"contributionscores-days": "最近 {{PLURAL:$1|天|$1 天}}",
+	"contributionscores-allrevisions": "所有時間",
+	"contributionscores-score": "分數",
+	"contributionscores-rank": "等級",
+	"contributionscores-pages": "頁面數量",
+	"contributionscores-changes": "修改次數",
+	"contributionscores-username": "使用者名稱",
+	"contributionscores-invalidusername": "無效的使用者名稱",
+	"contributionscores-invalidmetric": "無效的計算單位"
+}

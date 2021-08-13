@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fohanno",
+			"Fulup",
+			"Y-M D"
+		]
+	},
+	"errorhandler-desc": "Merer ar fazioù evit MediaWiki",
+	"errorhandler-errors": "Fazioù :",
+	"errorhandler-error-fatal": "Fazi diremed",
+	"errorhandler-error-warning": "Diwallit",
+	"errorhandler-error-parse": "Fazi parser",
+	"errorhandler-error-notice": "Kemenn",
+	"errorhandler-error-deprecated": "Dispredet",
+	"errorhandler-error-core-error": "Fazi er graoñenn",
+	"errorhandler-error-core-warning": "Kemenn-diwall a-berzh ar graoñenn",
+	"errorhandler-error-compile-error": "Fazi kempunañ",
+	"errorhandler-error-compile-warning": "Kemenn-diwall evit ar c'hempunañ",
+	"errorhandler-error-user-error": "Fazi implijer",
+	"errorhandler-error-user-warning": "Kemenn-diwall implijer",
+	"errorhandler-error-user-notice": "Kemenn implijer",
+	"errorhandler-error-user-deprecated": "Implijer dispredet",
+	"errorhandler-error-strict": "Standardoù strizh",
+	"errorhandler-error-recoverable": "Fazi grevus a c'hell bezañ adpaket",
+	"errorhandler-msg-text": "$1 : $2 e $3 (linenn $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> e <b>$3</b> (linenn <b>$4</b>)",
+	"errorhandler-trace": "roud :",
+	"errorhandler-trace-line": "$1 (linenn $2) : $3",
+	"errorhandler-trace-line-internal": "[arc'hwel diabarzh] : $1"
+}

@@ -1,0 +1,69 @@
+# Default config for a eventgate-wikimedia-dev server.  This
+# validates events in the same way as eventgate-wikimedia,
+# but outputs them to the configured output_path file (or to stdout).
+#
+# The default config is set up to use trace logging to have events show up
+# in the logs on the terminal when $(npm bin)/eventgate-wikimedia-dev is run.
+# If you pipe this output through $(npm bin)/bunyan, logs will be pretty printed, including
+# the valid events.
+# Events will also be output to the output_path, which defaults to ./events.json.
+
+# Number of worker processes to spawn.
+# Set to 0 to run everything in a single process without clustering.
+# Use 'ncpu' to run as many workers as there are CPU units
+num_workers: 0
+
+# Log error messages and gracefully restart a worker if v8 reports that it
+# uses more heap (note: not RSS) than this many mb.
+worker_heap_limit_mb: 200
+
+# Logger info
+logging:
+  # trace level logging outputs a lot of extra info as events come in, including
+  # pretty printing events if piped through bunyan.
+  level: trace
+
+services:
+  - name: eventgate-devserver
+    # a relative path or the name of an npm package, if different from name
+    module: eventgate
+    entrypoint: app
+    # optionally, a version constraint of the npm package
+    # version: ^0.4.0
+    # per-service config
+    conf:
+      port: 8192
+      # Events can be large; increase max body size
+      max_body_size: 1mb
+
+      # more per-service config settings
+      user_agent: eventgate-devserver
+
+      # This EventGate implemenation uses the same
+      # validate function that eventgate-wikimedia does, but
+      # writes events to stdout (or to output_path).
+      eventgate_factory_module: 'eventgate-wikimedia/eventgate-wikimedia-dev'
+
+      # If set, these URIs will be prepended to any relative schema URI
+      # extracted from each event's schema_field.  The resulting URLs will
+      # be searched until a schema is found.  Change this
+      # to match paths to your local schema repositories.
+      schema_base_uris:
+        - https://schema.wikimedia.org/repositories/primary/jsonschema
+        - https://schema.wikimedia.org/repositories/secondary/jsonschema
+
+      # Valid events will be output to this file.
+      # If you unset this, events will be printed to stdout instead.
+      # (If you usnet this and logging.level is trace, you'll see the
+      # events on stdout multiple times.)
+      output_path: ./events.json
+
+      # If true, output events will be formatted into pretty printed multiline strings.
+      should_pretty_print: false
+
+      # Setting test_events will enable the /v1/_test/events route.
+      # A GET request to this path will submit these events to EventGate.
+      test_events:
+        - $schema: /test/event/1.0.0
+          meta:
+            stream: eventgate-devserver.test.event

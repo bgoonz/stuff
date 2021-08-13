@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Diki Ananta",
+			"Meursault2004",
+			"N219",
+			"NoiX180",
+			"Sumbukompor"
+		]
+	},
+	"disableaccount-desc": "Nglilakaké panata kanggo nutup akun individu",
+	"right-disableaccount": "Tutup akun",
+	"disableaccount": "Nonaktifaké akun naraguna",
+	"disableaccount-user": "Jeneng naraguna:",
+	"disableaccount-mustconfirm": "Sampéyan kudu mesthèkaké yèn Sampéyan pancèn pingin matèni akun iki.",
+	"disableaccount-nosuchuser": "Akun naraguna \"$1\" ora ana.",
+	"disableaccount-success": "Akun naraguna \"$1\" wis dipatèni permanèn."
+}

@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"EugeneZelenko",
+			"Nike",
+			"Purodha",
+			"Shirayuki",
+			"Umherirrender"
+		]
+	},
+	"disableaccount-desc": "{{desc|name=Disable Account|url=https://www.mediawiki.org/wiki/Extension:DisableAccount}}",
+	"right-disableaccount": "{{doc-right|disableaccount}}",
+	"action-disableaccount": "{{doc-action|disableaccount}}",
+	"disableaccount": "{{doc-special|DisableAccount|unlisted=1}}",
+	"disableaccount-user": "{{Identical|Username}}",
+	"disableaccount-confirm": "{{doc-singularthey}}\nA system administrator here is one having access to the system the wiki is running on beyond that of a sysop or a bureaucrat. In Wikimedia terminology they have 'shell access'. This message refers to \"no return without direct database changes.\"\n\nUsed as label for the checkbox.\n\nThe confirmation message for this checkbox is:\n* {{msg-mw|Disableaccount-mustconfirm}}",
+	"disableaccount-mustconfirm": "Used as confirmation message for the checkbox which has the following label:\n* {{msg-mw|Disableaccount-confirm}}",
+	"disableaccount-nosuchuser": "Used as result of username validation. Parameters:\n* $1 - username",
+	"disableaccount-success": "Used as success message. Parameters:\n* $1 - username",
+	"logentry-block-disableaccount": "{{Logentry}}\nAdditional parameters:\n* $4 - username, for GENDER support"
+}

@@ -1,8 +1,0 @@
-{
-  "domain": "upcloud",
-  "name": "Upcloud",
-  "documentation": "https://www.home-assistant.io/components/upcloud",
-  "requirements": ["upcloud-api==0.4.3"],
-  "dependencies": [],
-  "codeowners": ["@scop"]
-}

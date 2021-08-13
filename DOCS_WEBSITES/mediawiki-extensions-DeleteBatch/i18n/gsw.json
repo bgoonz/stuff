@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Als-Holder"
+		]
+	},
+	"deletebatch": "E ganzi Zyylete vu Syte lesche",
+	"deletebatch-desc": "[[Special:DeleteBatch|E Zyylete vu Syte lesche]]",
+	"deletebatch-help": "Lesch e Zyylete vu Syte. Du chasch uf eire Syte ei einzelni Syte lesche, aber au mehreri Syte, wu Du in ere Datei ufzellsch.\nWehl e Benutzer, wu im Leschlogbuech soll aazeigt wäre.\nD Datei, wu soll uffeglade wäre, sott pro Zyyle ei Sytetitel haa un s cha optional e Leschgrund din haa, wu mit eme sänkrächte Strich („|“) abtrännt isch.",
+	"deletebatch-caption": "Sytelischt:",
+	"deletebatch-title": "Mehreri Syte lesche",
+	"deletebatch-link-back": "Zrugg zue dr Spezialsyte",
+	"deletebatch-as": "Skript uusfieren as:",
+	"deletebatch-both-modes": "Bitte wehl äntwäder e spezifischi Seite oder e Lischt vu Syte.",
+	"deletebatch-or": "<strong>oder</strong>",
+	"deletebatch-delete": "Lesche",
+	"deletebatch-page": "Syte, wu solle glescht wäre:",
+	"deletebatch-processing-from-file": "Lescht Syte us dr Dateie-Lischt",
+	"deletebatch-processing-from-form": "Lescht Dateie us dr Formular",
+	"deletebatch-omitting-nonexistent": "Ibergump Syte $1, wu s nit git.",
+	"deletebatch-omitting-invalid": "Ibergump nit giltigi Syte $1.",
+	"deletebatch-file-bad-format": "In dr Datei sott s Klartäxt haa.",
+	"deletebatch-file-missing": "Datei, wu ibergee woren isch, het nit chenne gläse wäre",
+	"deletebatch-select-script": "Syteleschskript",
+	"deletebatch-select-yourself": "Du",
+	"deletebatch-no-page": "Bitte gib äntwäder zmindescht ei Syten aa, wu glescht soll wäre, oder wehl e Datei, wu s e Lischt din het vu Syte, wu glescht solle wäre.",
+	"right-deletebatch": "E Zyylete vu Syte lesche"
+}

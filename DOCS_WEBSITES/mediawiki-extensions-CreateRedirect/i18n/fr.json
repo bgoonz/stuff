@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gomoko",
+			"McDutchie",
+			"Peter17",
+			"Thibaut120094"
+		]
+	},
+	"createredirect": "Créer une redirection",
+	"createredirect-desc": "Ajoute une page spéciale [[Special:CreateRedirect|Créer une redirection]] pour créer facilement des redirections",
+	"createredirect-error": "Erreur : Échec de l’identification.",
+	"createredirect-enable-multiline": "Saisir plus de titres",
+	"createredirect-instructions": "En utilisant le formulaire ci-dessous, vous pouvez créer une page de redirection ou remplacer une page existante par une redirection.",
+	"createredirect-invalid-title": "Erreur : « $1 » n’est pas un titre correct.",
+	"createredirect-overwrite": "Ignorer les avertissements",
+	"createredirect-page-title": "Titre de la page :",
+	"createredirect-redirect-done": "Redirection créée de « $1 » vers « $2 »",
+	"createredirect-redirect-to": "Rediriger vers :",
+	"createredirect-save": "Enregistrer la page",
+	"createredirect-would-overwrite": "Attention : la page « [[:$1]] » existe déjà."
+}

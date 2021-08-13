@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ciphers",
+			"OsamaK",
+			"ديفيد"
+		]
+	},
+	"disableaccount-desc": "تسمح للإداريين بتعطيل الحسابات الفردية.",
+	"right-disableaccount": "تعطيل الحسابات",
+	"action-disableaccount": "تعطيل الحسابات",
+	"disableaccount": "تعطيل حساب مستخدم",
+	"disableaccount-user": "اسم المستخدم:",
+	"disableaccount-confirm": "تعطيل حساب المستخدم هذا. \nالمستخدم لن يكون قادرا على تسجيل الدخول، إعادة تعيين كلمة المرور الخاصة به، أو تلقي إعلامات البريد الإلكتروني. \nإذا تم تسجيل المستخدم حاليا في أي مكان، سيتم تسجيله على الفور. \n«لاحظ أن تعطيل الحساب لا يمكن عكسه دون تدخل المسؤول عن النظام».",
+	"disableaccount-mustconfirm": "يجب التأكد من أنك ترغب في تعطيل هذا الحساب.",
+	"disableaccount-nosuchuser": "حساب المستخدم \"$1\" غير موجود.",
+	"disableaccount-success": "تم تعطيل حساب المستخدم \"$1\" بشكل دائم.",
+	"logentry-block-disableaccount": "$1 {{GENDER:$2|تعطيل حساب}} {{GENDER:$4|$3}}."
+}

@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bennylin",
+			"EugeneZelenko",
+			"Jon Harald Søby",
+			"Lejonel",
+			"McDutchie",
+			"Purodha",
+			"Shirayuki",
+			"Siebrand",
+			"The Evil IP address",
+			"Umherirrender"
+		]
+	},
+	"confirmaccount-newrequests": "Notice for account reviewers when there are account requests from users with a confirmed email address.\n\nParameters:\n* $1 - the number of open account requests matching given criteria",
+	"requestaccount-loginnotice": "Used in notice message in the \"Create account\" form in [{{canonicalurl:Special:UserLogin|type=signup}} Special:UserLogin?type=signup], if the extension RequestAccount is enabled.",
+	"action-confirmaccount": "{{doc-action|confirmaccount}}",
+	"right-confirmaccount": "{{doc-right|confirmaccount}}",
+	"action-confirmaccount-notify": "{{notranslate}}\n{{doc-action|confirmaccount-notify}}\nThis empty message exists only to keep [[mw:Continuous Integration|CI]] happy. It is never used anywhere in reality.",
+	"right-confirmaccount-notify": "{{doc-right|confirmaccount-notify}}",
+	"action-requestips": "{{doc-action|requestips}}",
+	"right-requestips": "{{doc-right|requestips}}",
+	"action-lookupcredentials": "{{doc-action|lookupcredentials}}",
+	"right-lookupcredentials": "{{doc-right|lookupcredentials}}"
+}

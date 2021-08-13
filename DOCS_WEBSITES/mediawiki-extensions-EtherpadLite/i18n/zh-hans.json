@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Liuxinyu970226",
+			"Yfdyh000"
+		]
+	},
+	"etherpadlite-desc": "添加&lt;eplite&gt;解析器函数来在页面上嵌入一个或多个Etherpad Lite便签（托管在本地或外部Etherpad Lite服务器）",
+	"etherpadlite-tracking-category": "嵌入了Etherpad的页面",
+	"etherpadlite-tracking-category-desc": "页面嵌入了带<code>&lt;eplite&gt;</code>标签的Etherpad。",
+	"etherpadlite-invalid-pad-url": "“$1”不是有效的Etherpad Lite URL或便签名。",
+	"etherpadlite-url-is-not-whitelisted": "“$1”不在已允许的Etherpad Lite服务器白名单中。{{PLURAL:$3|$2 是唯一被允许的服务器|允许的服务器如下：$2}}。",
+	"etherpadlite-empty-whitelist": "“$1”不在已允许的Etherpad Lite服务器白名单中。白名单中目前没有已允许的服务器。",
+	"etherpadlite-pad-used-more-than-once": "便签“$1”已在此页面上使用过；你可以在一个页面上放很多个便签，但必须是不同的便签。"
+}

@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Minh Nguyen",
+			"Vinhtantran"
+		]
+	},
+	"editsubpages-desc": "Cho phép các quản lý mở khóa một trang và tất cả các trang con của nó để người dùng vô danh có thể sửa đổi thông qua [[MediaWiki:Unlockedpages]]",
+	"unlockedpages": " #<!-- đừng sửa vào dòng này --><pre>\n# Đặt trang bạn muốn mở khóa vào dưới đây\n# dùng tên trang là *\n# Trang được mở khóa phải bắt đầu bằng dấu chấm mới được tính,\n# mọi thứ khác được xem là chú thích\n# Tên trang có thể là [[liên kết]] và là phân biệt chữ hoa chữ thường\n# Ngoài ra, trang thảo luận sẽ được tự động mở khóa theo\n# Xem https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages để có thêm thông tin\n  #</pre><!-- đừng sửa vào dòng này -->"
+}

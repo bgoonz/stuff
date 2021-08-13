@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Meno25",
+			"ديفيد",
+			"روخو",
+			"محمد أحمد عبد الفتاح"
+		]
+	},
+	"createredirect": "إنشاء تحويلة",
+	"createredirect-desc": "يضيف الصفحة الخاصة [[Special:CreateRedirect|إنشاء تحويلة]] لإنشاء تحويلات بسهولة",
+	"createredirect-error": "خطأ: فشلت المصادقة.",
+	"createredirect-enable-multiline": "أضف المزيد من العناوين",
+	"createredirect-instructions": "باستخدام النموذج أدناه، يمكنك إنشاء صفحة تحويل أو استبدال صفحة موجودة بتحويلة.",
+	"createredirect-overwrite": "تجاهل التحذيرات",
+	"createredirect-page-title": "عنوان الصفحة:",
+	"createredirect-redirect-done": "تم إنشاء تحويلة من \"$1\" إلى \"$2\"",
+	"createredirect-redirect-to": "إعادة توجيه إلى:",
+	"createredirect-save": "حفظ الصفحة"
+}

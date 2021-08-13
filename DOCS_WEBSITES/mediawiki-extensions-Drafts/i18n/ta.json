@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Karthi.dr",
+			"TRYPPN"
+		]
+	},
+	"drafts": "வரைவுகள்",
+	"drafts-view-article": "பக்கம்",
+	"drafts-view-existing": "இருக்கும் வரைவுகள்",
+	"drafts-view-saved": "சேமிக்கப்பட்டது",
+	"drafts-save": "இதை வரைவாகச் சேமிக்கவும்",
+	"drafts-save-save": "வரைவை சேமி",
+	"drafts-save-saved": "சேமிக்கப்பட்டது",
+	"drafts-save-saving": "சேமிக்கப்படுகிறது",
+	"drafts-save-error": "வரைவைச் சேமிப்பதில் பிழை",
+	"prefs-extension-drafts": "வரைவுகள்",
+	"tooltip-drafts-save": "வரைவாகச் சேமிக்கவும்"
+}

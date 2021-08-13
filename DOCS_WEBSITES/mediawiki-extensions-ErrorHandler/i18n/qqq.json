@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"EugeneZelenko",
+			"Fryed-peach",
+			"IAlex",
+			"Purodha",
+			"Shirayuki",
+			"Umherirrender"
+		]
+	},
+	"errorhandler-desc": "{{desc|name=ErrorHandler|url=https://www.mediawiki.org/wiki/Extension:ErrorHandler}}",
+	"errorhandler-errors": "This message is followed by list of the errors.\n{{Identical|Error}}",
+	"errorhandler-error-fatal": "Used as error message in list of the error messages.\n\nThe label for the list is {{msg-mw|Errorhandler-errors}}.\n{{Related|Errorhandler-error}}",
+	"errorhandler-error-warning": "Used as error message in list of the error messages.\n\nThe label for the list is {{msg-mw|Errorhandler-errors}}.\n{{Related|Errorhandler-error}}\n{{Identical|Warning}}",
+	"errorhandler-error-parse": "Used as error message in list of the error messages.\n\nThe label for the list is {{msg-mw|Errorhandler-errors}}.\n{{Related|Errorhandler-error}}",
+	"errorhandler-error-notice": "Used as error message in list of the error messages.\n\nThe label for the list is {{msg-mw|Errorhandler-errors}}.\n{{Related|Errorhandler-error}}\n{{Identical|Notice}}",
+	"errorhandler-error-deprecated": "Used as error message in list of the error messages.\n\nThe label for the list is {{msg-mw|Errorhandler-errors}}.\n{{Related|Errorhandler-error}}\n{{Identical|Deprecated}}",
+	"errorhandler-error-core-error": "Used as error message in list of the error messages.\n\nThe label for the list is {{msg-mw|Errorhandler-errors}}.\n{{Related|Errorhandler-error}}",
+	"errorhandler-error-core-warning": "Used as error message in list of the error messages.\n\nThe label for the list is {{msg-mw|Errorhandler-errors}}.\n{{Related|Errorhandler-error}}",
+	"errorhandler-error-compile-error": "Used as error message in list of the error messages.\n\nThe label for the list is {{msg-mw|Errorhandler-errors}}.\n{{Related|Errorhandler-error}}",
+	"errorhandler-error-compile-warning": "Used as error message in list of the error messages.\n\nThe label for the list is {{msg-mw|Errorhandler-errors}}.\n{{Related|Errorhandler-error}}",
+	"errorhandler-error-user-error": "Used as error message in list of the error messages.\n\nThe label for the list is {{msg-mw|Errorhandler-errors}}.\n{{Related|Errorhandler-error}}",
+	"errorhandler-error-user-warning": "Used as error message in list of the error messages.\n\nThe label for the list is {{msg-mw|Errorhandler-errors}}.\n{{Related|Errorhandler-error}}",
+	"errorhandler-error-user-notice": "Used as error message in list of the error messages.\n\nThe label for the list is {{msg-mw|Errorhandler-errors}}.\n{{Related|Errorhandler-error}}",
+	"errorhandler-error-user-deprecated": "Used as error message in list of the error messages.\n\nThe label for the list is {{msg-mw|Errorhandler-errors}}.\n{{Related|Errorhandler-error}}",
+	"errorhandler-error-strict": "Used as error message in list of the error messages.\n\nThe label for the list is {{msg-mw|Errorhandler-errors}}.\n{{Related|Errorhandler-error}}",
+	"errorhandler-error-recoverable": "Used as error message in list of the error messages.\n\nThe label for the list is {{msg-mw|Errorhandler-errors}}.\n{{Related|Errorhandler-error}}",
+	"errorhandler-msg-text": "Used as error message. Parameters:\n* $1 - error name\n* $2 - error message\n* $3 - filename\n* $4 - line number\nSee also:\n* {{msg-mw|Errorhandler-msg-html}}",
+	"errorhandler-msg-html": "Used as error message. Parameters:\n* $1 - error name\n* $2 - error message\n* $3 - filename\n* $4 - line number\nSee also:\n* {{msg-mw|Errorhandler-msg-text}}",
+	"errorhandler-trace": "This message is followed by list of the traces (ordered list).\n{{Identical|Trace}}",
+	"errorhandler-trace-line": "Parameters:\n* $1 - filename\n* $2 - line number\n* $3 - function name",
+	"errorhandler-trace-line-internal": "Parameters:\n* $1 - function name"
+}

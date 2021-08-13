@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrisportelli",
+			"Giangian15",
+			"Roderick Mallia"
+		]
+	},
+	"contributionscores": "Punteġġi tal-kontribuzzjonijiet",
+	"contributionscores-desc": "Tanalizza d-databażi tal-wiki għall-ogħla [[Special:ContributionScores|volum ta' kontributi tal-utenti]]",
+	"contributionscores-info": "Il-punteġġi huma kkalkulati b'dan il-mod:\n*Punt (1) għal kull paġna distinta modifikata\n*Radiċi kwadrata ta' (modifiki kollha li saru) - (total ta' paġni distinti) * 2\nDan il-metodu ta' kalkolu tal-punteġġi jagħti iktar importanza għad-diversità fil-modifiki milli għan-numru ta' kontribuzzjonijiet. Bażikament, dan il-punteġġ l-ewwel jikkalkola n-numru ta' paġni distinti modifikati, fejn in konsiderazzjoni għall-volum għoli ta' kontribuzzjonijiet - din tassumi li hija paġna ta' kwalità ogħla.",
+	"contributionscores-top": "(L-Aqwa $1)",
+	"contributionscores-days": "L-aħħar {{PLURAL:$1|ġurnata|$1 ġranet}}",
+	"contributionscores-allrevisions": "Ta' kull żmien",
+	"contributionscores-score": "Punteġġ",
+	"contributionscores-pages": "Paġni",
+	"contributionscores-changes": "Tibdil",
+	"contributionscores-username": "Isem l-utent",
+	"contributionscores-invalidusername": "Isem tal-utent invalidu",
+	"contributionscores-invalidmetric": "Metrika invalida"
+}

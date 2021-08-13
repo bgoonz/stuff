@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"etherpadlite-desc": "Engade a etiqueta analítica &lt;eplite&gt; para incorporar un ou moitos documentos de Etherpad Lite (aloxados nun ou en varios servidores de Etherpad Lite) nas páxinas",
+	"etherpadlite-tracking-category": "Páxinas con Etherpad incorporado",
+	"etherpadlite-tracking-category-desc": "A páxina incorpora un Etherpad coa etiqueta <code>&lt;eplite&gt;</code>.",
+	"etherpadlite-invalid-pad-url": "\"$1\" non é un nome de documento ou enderezo URL de Etherpad Lite válido.",
+	"etherpadlite-url-is-not-whitelisted": "\"$1\" non se atopa na lista branca dos servidores de Etherpad Lite permitidos. {{PLURAL:$3|$2 é o único servidor permitido|Os servidores permitidos son os seguintes: $2}}.",
+	"etherpadlite-empty-whitelist": "\"$1\" non se atopa na lista branca dos servidores de Etherpad Lite permitidos. Non hai servidores permitidos na lista branca.",
+	"etherpadlite-pad-used-more-than-once": "O documento \"$1\" utilizouse nesta páxina con anterioridade; pode ter varios documentos nunha páxina, pero unicamente se son diferentes."
+}

@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"Les Meloures",
+			"Robby",
+			"Soued031"
+		]
+	},
+	"deletebatch": "Rei vu Säite läschen",
+	"deletebatch-desc": "[[Special:DeleteBatch|Läscht eng Rei Säiten]]",
+	"deletebatch-caption": "Lëscht vun der Säit:",
+	"deletebatch-default-reason": "Standard Grond fir ze läschen:",
+	"deletebatch-title": "Zesumme läschen",
+	"deletebatch-link-back": "Gitt zréck op d'Spezialsäit",
+	"deletebatch-as": "Skript ausféieren als:",
+	"deletebatch-both-modes": "Wielt entweder eng spezifesch Säit oder eng spezifesch Lëscht vu Säiten.",
+	"deletebatch-or": "<strong>oder</strong>",
+	"deletebatch-delete": "Läschen",
+	"deletebatch-page": "Säite fir ze läschen:",
+	"deletebatch-processing-from-file": "Säite läschen déi am Fichier drastinn",
+	"deletebatch-processing-from-form": "Säite läschen déi am Formulaire drastinn",
+	"deletebatch-omitting-nonexistent": "D'Säit $1 déi et net gëtt iwwersprangen.",
+	"deletebatch-omitting-invalid": "Déi ongëlteg Säit $1 iwwersprangen.",
+	"deletebatch-file-bad-format": "De Fichier sollt als textfile virleien",
+	"deletebatch-file-missing": "De Fichier deen ukoum konnt net gelies ginn",
+	"deletebatch-select-script": "de Skript vun der Säit läschen",
+	"deletebatch-select-yourself": "Dir",
+	"deletebatch-system-username": "Skript vun der Säit läschen",
+	"right-deletebatch": "Méi Säiten zesumme läschen",
+	"deletebatch-deleting-file-only": "D'Beschreiwungssäit vum Fichier $1 gëtt et net, dowéinst gëtt just de Fichier geläscht. Dës Aktioun gëtt net geloggt."
+}

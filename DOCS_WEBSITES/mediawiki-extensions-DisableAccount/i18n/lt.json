@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eitvys200",
+			"Garas",
+			"Homo",
+			"Zygimantus"
+		]
+	},
+	"disableaccount-desc": "Leisti administratoriams išjungti atskiras sąskaitas.",
+	"right-disableaccount": "Išjungti sąskaitas",
+	"action-disableaccount": "išjungti sąskaitas",
+	"disableaccount": "Išjungti vartotojo sąskaitą",
+	"disableaccount-user": "Naudotojo vardas:",
+	"disableaccount-confirm": "Išjungti šią vartotojo paskyrą.\nVartotojas negalės prisijungti, iš naujo nustatyti savo slaptažodį ar gauti pranešimus el. paštu.\nJei vartotojas šiuo metu yra prisijungęs, vartotojas bus iškart atjungtas.\n''Atkreipkite dėmesį, kad paskyros išjungimas negali būti atstatytas be administratoriaus įsikišimo.''",
+	"disableaccount-mustconfirm": "Jūs turite patvirtinti, kad jūs norite išjungti šią sąskaitą.",
+	"disableaccount-nosuchuser": "Naudotojo paskyra „$1“ neegzistuoja.",
+	"disableaccount-success": "Vartotojo paskyra „$1“ buvo išjungta visam laikui.",
+	"logentry-block-disableaccount": "$1 {{GENDER:$2|išjungė}} {{GENDER:$4|$3}} paskyrą."
+}

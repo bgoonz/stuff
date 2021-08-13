@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Purodha"
+		]
+	},
+	"etherpadlite-desc": "Deiht dä Befähl &lt;eplite&gt; en et Wiki, womet mer <i lang=\"en>etherpad</i> Pädds en Wiki-Sigge enboue kann. Di Pädds wääde ob em eije odder op främde <i lang=\"en>Etherpad Lite</i> ẞöövere jehallde.",
+	"etherpadlite-tracking-category": "Sigge med enem <i lang=\"en>etherpad</i> dren.",
+	"etherpadlite-tracking-category-desc": "Bengk e Pädd en met däm Befähl <code>&lt;eplite&gt;</code>",
+	"etherpadlite-invalid-pad-url": "„$1“ es keine jöltijje <i lang=\"en>URL</i> för <i lang=\"en>Etherpad Lite</i> udder dä Nahme för et Pädd es verkiehrt.",
+	"etherpadlite-url-is-not-whitelisted": "„$1“ es keine zohjelohße ẞööver för <i lang=\"en>Etherpad Lite</i>. Em Momang {{PLURAL:$3|es bloß $2 zohjelohße.|sin zohjelohße: $2|es jaa keine ẞööver zohjelohße.}}.",
+	"etherpadlite-empty-whitelist": "„$1“ es keine zohjelohße ẞööver för <i lang=\"en>Etherpad Lite</i>. Et sinn_er em Momang jaa kein ẞööver zohjelohße.",
+	"etherpadlite-pad-used-more-than-once": "Dat <i lang=\"en>etherpad</i> „$1“ es ald en heh dä Sigg. Mer kann esu vill <i lang=\"en>etherpads</i> en en Sigg han, wi mer well, ävver se möße ongerscheidlesch sin."
+}

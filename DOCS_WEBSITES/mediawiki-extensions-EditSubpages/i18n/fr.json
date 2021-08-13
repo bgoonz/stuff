@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Crochet.david",
+			"Grondin",
+			"PieRRoMaN",
+			"Urhixidur"
+		]
+	},
+	"editsubpages-desc": "Permet aux administrateurs de déverrouiller une page et toutes ses sous-pages pour les modifications anonymes grâce à [[MediaWiki:Unlockedpages]]",
+	"unlockedpages": "  #<!-- Laisser cette ligne telle quelle --><pre>\n# Indiquez, ci-dessous, les pages que vous désirez déverrouiller en utilisant\n# * Nomdelapage\n# Les pages déverrouillées doivent commencer par une puce pour être prises en compte,\n# tout autre caractère sera considéré comme un commentaire.\n# Les noms de pages peuvent être des [[liens]] et sont sensibles à la casse.\n# De plus, les pages de discussion seront déverrouillées automatiquement avec leur page principale.\n# Voir https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages pour plus d’informations.\n  #</pre><!-- Laisser cette ligne telle quelle -->"
+}

@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Armando-Martin",
+			"Ihojose",
+			"VegaDark"
+		]
+	},
+	"creditssource-desc": "Mostrar los créditos de trabajo de fuente en el pie de página",
+	"creditssource-credits": "Esta página se deriva de la página [$1 $2] en [$3 $4] en su revisión de $8 a las $9 (UTC).\nAhí, se publicó bajo la licencia CC-BY-SA 3.0. Para ver más detalles y la lista completa de colaboradores puedes encontrarlo en el [[$5|historial de la página]].\nLos colaboradores de Wikitravel están marcados con el prefijo $6.",
+	"creditssource-creditpage": "Otorga créditos para las fuentes del trabajo."
+}

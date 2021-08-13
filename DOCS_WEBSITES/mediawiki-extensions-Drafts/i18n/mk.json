@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06",
+			"Vlad5250"
+		]
+	},
+	"drafts": "Недовршени",
+	"drafts-desc": "Додава можност за зачувување на [[Special:Drafts|работни верзии]] на страниците на опслужувачот",
+	"drafts-view": "ПрегледНаРаботнаВерзија",
+	"drafts-view-summary": "Оваа службена страница ги наведува сите постоечки работни верзии.\nНеискористените работни верзии ќе бидат автоматски исфрлени по {{PLURAL:$1|еден ден|$1 дена}}.",
+	"drafts-view-article": "Страница",
+	"drafts-view-existing": "Постоечки работни верзии",
+	"drafts-view-saved": "Зачувано",
+	"drafts-view-discard": "Фрли",
+	"drafts-view-nonesaved": "Моментално немате зачувани работни верзии.",
+	"drafts-view-notice": "Имате $1 за оваа страница.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|работна верзија|работни верзии}}",
+	"drafts-view-warn": "Ако се оттргнете од страницава ќе ги изгубите сите незачувани промени.\nДали сакате да продолжите?",
+	"drafts-save": "Зачувај го ова како работна верзија",
+	"drafts-save-save": "Зачувај раб. верз.",
+	"drafts-save-saved": "Зачувано",
+	"drafts-save-saving": "Зачувување",
+	"drafts-save-error": "Грешка при зачувувањето на работната верзија",
+	"drafts-enable": "Овозможете ја функцијата за да зачувате нацрт во образецот за уредување",
+	"prefs-extension-drafts": "Недовршени",
+	"tooltip-drafts-save": "Зачувај како нацрт",
+	"apierror-mustbeloggedin-save-drafts": "Мора да сте најавени за да зачувувате работни верзии.",
+	"apihelp-savedrafts-description": "Зачувај нацрт.",
+	"apihelp-savedrafts-summary": "Зачувај нацрт.",
+	"apihelp-savedrafts-param-id": "Назнака на нацртот.",
+	"apihelp-savedrafts-param-drafttoken": "Шифра на нацртот.",
+	"apihelp-savedrafts-param-title": "Наслов на нацртот.",
+	"apihelp-savedrafts-param-section": "Показател на поднасловот на страницата што се уредува.",
+	"apihelp-savedrafts-param-starttime": "Време на почнувањето на нацртот.",
+	"apihelp-savedrafts-param-edittime": "Време на уредувањето на нацртот.",
+	"apihelp-savedrafts-param-scrolltop": "scrollTop на полето со текст.",
+	"apihelp-savedrafts-param-text": "Текст на нацртот.",
+	"apihelp-savedrafts-param-summary": "Опис на нацртот.",
+	"apihelp-savedrafts-param-minoredit": "Булов показател за тоа дали нацртот е ситно уредување."
+}

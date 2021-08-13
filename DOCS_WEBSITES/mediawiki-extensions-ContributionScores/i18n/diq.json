@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Erdemaslancan",
+			"Marmase",
+			"Mirzali"
+		]
+	},
+	"contributionscores": "Skorê iştıraqan",
+	"contributionscores-desc": "Qandê tewr berz malumat de wiki de  [[Special:ContributionScores|dekerdenanê karberan]] persêno",
+	"contributionscores-info": "Ebe pawıtışê hecmê tedqiqê berzi ra, puwan raveri pelanê bêemsalanê vurniyayeyan senceno.",
+	"contributionscores-top": "(Tewr Gırde $1)",
+	"contributionscores-days": "{{PLURAL:$1|Roca peyêne|$1 Rocê peyêni}}",
+	"contributionscores-allrevisions": "Her dem",
+	"contributionscores-score": "Puwan",
+	"contributionscores-rank": "Rêze",
+	"contributionscores-pages": "Peli",
+	"contributionscores-changes": "Vurnayışi",
+	"contributionscores-username": "Nameyê karberi",
+	"contributionscores-invalidusername": "Nameyê karberiyo nêvêrde",
+	"contributionscores-invalidmetric": "Metriko nêvêrde"
+}

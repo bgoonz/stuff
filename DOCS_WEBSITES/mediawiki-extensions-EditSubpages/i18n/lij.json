@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Giromin Cangiaxo"
+		]
+	},
+	"editsubpages-desc": "O permette a-i aministratoî sysop de sblocâ 'na paggina e tutte e relative sottopaggine pe permette e modiffiche a-i utenti anonnimi a traverso [[MediaWiki:Unlockedpages]]",
+	"unlockedpages": " #<!-- lascia sta riga coscì com'a l'è --><pre>\n# Inseisci chì sotta e paggine che ti voeu sblocâ scrivendo\n# * Nomme paggina\n# E paggine da sblocâ g'han da ese precedue da-o segno * pe ese contæ,\n# tutto o resto o l'è consciderou un comento\n# I nommi de paggine poeuan vese [[links]] e son case-sensitive\n# Inoltre, e paggine de discuscion saian aotomaticamente sblocæ insemme a-a paggina\n# Vixita https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages pe magioî informaçioin\n  #</pre><!-- lascia sta riga coscì com'a l'è -->"
+}

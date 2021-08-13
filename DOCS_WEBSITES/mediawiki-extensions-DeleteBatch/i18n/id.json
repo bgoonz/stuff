@@ -1,0 +1,38 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bennylin",
+			"Daud I.F. Argana",
+			"Diki Ananta",
+			"IvanLanin",
+			"Sumbukompor"
+		]
+	},
+	"deletebatch": "Menghapus sekelompok halaman",
+	"deletebatch-desc": "[[Special:DeleteBatch|Menghapus sekelompok halaman]]",
+	"deletebatch-help": "Menghapus sekelompok halaman.\nAnda dapat melakukan penghapusan sekaligus, atau menghapus halaman-halaman yang terdaftar dalam suatu berkas.\nPilihlah pengguna yang akan ditampilkan pada log penghapusan.\nBerkas yang diunggah harus mengandung nama halaman dan alasan opsional, dipisahkan dengan suatu tanda \"|\".",
+	"deletebatch-caption": "Daftar halaman:",
+	"deletebatch-default-reason": "Alasan penghapusan baku:",
+	"deletebatch-title": "Penghapusan kelompok",
+	"deletebatch-link-back": "Kembali ke halaman istimewa",
+	"deletebatch-as": "Jalankan skrip sebagai:",
+	"deletebatch-both-modes": "Silakan pilih suatu halaman tertentu atau suatu daftar halaman.",
+	"deletebatch-or": "<strong>atau</strong>",
+	"deletebatch-delete": "Hapus",
+	"deletebatch-page": "Halaman yang akan dihapus:",
+	"deletebatch-processing-from-file": "menghapus halaman yang tercantum dalam berkas",
+	"deletebatch-processing-from-form": "menghapus halaman yang tercantum dalam isian",
+	"deletebatch-omitting-nonexistent": "Mengabaikan halaman $1 yang tidak ada.",
+	"deletebatch-omitting-invalid": "Mengabaikan halaman $1 yang tidak valid.",
+	"deletebatch-file-bad-format": "Berkas harus berbentuk teks polos",
+	"deletebatch-file-missing": "Tidak dapat membaca berkas yang diberikan",
+	"deletebatch-select-script": "Skrip penghapusan halaman",
+	"deletebatch-select-yourself": "Anda",
+	"deletebatch-no-page": "Silakan berikan paling tidak satu halaman untuk dihapus atau pilih berkas yang berisi daftar halaman.",
+	"deletebatch-system-username": "Skrip penghapusan halaman",
+	"action-deletebatch": "menghapus sekelompok halaman",
+	"right-deletebatch": "Menghapus sekelompok halaman",
+	"action-deletebatch-spoof": "menghapus sekelompok halaman sebagai \"Skrip penghapusan halaman\"",
+	"right-deletebatch-spoof": "Menghapus sekelompok halaman sebagai \"Skrip penghapusan halaman\"",
+	"deletebatch-deleting-file-only": "Halaman deskripsi berkas $1 tidak ada; menghapus berkasnya saja.\nTindakan ini tidak akan dicatat."
+}

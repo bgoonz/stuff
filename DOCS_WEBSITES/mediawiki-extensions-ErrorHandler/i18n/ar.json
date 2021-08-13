@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Meno25"
+		]
+	},
+	"errorhandler-desc": "معالج الخطأ لميدياويكي",
+	"errorhandler-errors": "الأخطاء:",
+	"errorhandler-error-fatal": "خطأ قاتل",
+	"errorhandler-error-warning": "تحذير",
+	"errorhandler-error-parse": "خطأ محلل",
+	"errorhandler-error-notice": "ملاحظة",
+	"errorhandler-error-deprecated": "تم الاستغناء عنه",
+	"errorhandler-error-core-error": "خطأ قلب",
+	"errorhandler-error-core-warning": "تحذير قلب",
+	"errorhandler-error-compile-error": "خطأ تراكم",
+	"errorhandler-error-compile-warning": "تحذير تراكم",
+	"errorhandler-error-user-error": "خطأ مستخدم",
+	"errorhandler-error-user-warning": "تحذير مستخدم",
+	"errorhandler-error-user-notice": "ملاحظة مستخدم",
+	"errorhandler-error-user-deprecated": "المستخدم تم الاستغناء عنه",
+	"errorhandler-error-strict": "معايير صارمة",
+	"errorhandler-error-recoverable": "خطأ قاتل يمكن إمساكه",
+	"errorhandler-msg-text": "$1 : $2 في $3 (سطر $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> في <b>$3</b> (سطر <b>$4</b>)",
+	"errorhandler-trace": "الأثر:",
+	"errorhandler-trace-line": "$1 (سطر $2): $3",
+	"errorhandler-trace-line-internal": "[وظيفة داخلية]: $1"
+}

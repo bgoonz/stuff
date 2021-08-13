@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cedric31"
+		]
+	},
+	"editsubpages-desc": "Permet als administrators de desverrolhar una pagina e totas sas sospaginas per las modificacions anonimas gràcia a [[MediaWiki:Unlockedpages]]",
+	"unlockedpages": " #<!-- Daissatz aquesta linha tala coma es --><pre>\n# Indicatz, çaijós, las paginas que desiratz desverrolhar en utilizant\n# * Nomdelapagina\n# Las paginas desverrolhadas devon començar per una piuse per èsser presas en compte,\n# Tot autre caractèr serà considerat coma un comentari.\n# Los noms de paginas pòdon èsser de [[ligams]] e son sensibles a la cassa.\n# Amai, las paginas de discussion seràn desverrolhadas automaticament amb sa pagina principala.\n# Vejatz https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages per mai d’entresenhas.\n #</pre><!-- Daissatz aquesta linha tala coma es -->"
+}

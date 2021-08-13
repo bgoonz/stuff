@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hedda",
+			"Joseph",
+			"MuratTheTurkish"
+		]
+	},
+	"disableaccount-desc": "Hizmetlilerin bireysel hesapları devre dışı bırakmasına izin verir",
+	"right-disableaccount": "Hesapları devre dışı bırak",
+	"action-disableaccount": "hesapları devre dışı bırak",
+	"disableaccount": "Bir kullanıcı hesabını devre dışı bırak",
+	"disableaccount-user": "Kullanıcı adı:",
+	"disableaccount-confirm": "Bu kullanıcı hesabını devre dışı bırak.\nKullanıcı oturum açmayacak, parolasını sıfırlayamayacak veya e-posta bildirimlerini alamayacak.\nEğer kullanıcı bir yerde oturum açmış ise, hemen oturum kapatacak.\n''Bir hesabın devre dışı bırakılmasının sistem hizmetlisinin müdahalesi olmadan geri alınamayacağına dikkat edin.''",
+	"disableaccount-mustconfirm": "Bu hesabı devre dışı bırakmak istediğinizi onaylamalısınız.",
+	"disableaccount-nosuchuser": "\"$1\" kullanıcı hesabı mevcut değil.",
+	"disableaccount-success": "\"$1\" kullanıcı hesabı kalıcı olarak devre dışı bırakıldı.",
+	"logentry-block-disableaccount": "$1, {{GENDER:$4|$3}} kullanıcısının {{GENDER:$2|hesabını devre dışı bıraktı}}."
+}

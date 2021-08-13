@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joao Xavier",
+			"Lakaoso",
+			"Malafaya"
+		]
+	},
+	"contactpage": "Pagino por kontakto",
+	"contactpage-legend": "Sendar e-posto",
+	"contactpage-subject-and-sender": "$1 (de $2)",
+	"contactpage-subject-and-sender-withip": "$1 (de $2 en $3)",
+	"contactpage-fromname": "Vua nomo:",
+	"contactpage-fromaddress": "Vua e-postal adreso:"
+}

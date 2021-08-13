@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Firilacroco",
+			"KlaudiuMihaila",
+			"Minisarm",
+			"Stelistcristi"
+		]
+	},
+	"deletebatch": "Șterge seria de pagini",
+	"deletebatch-caption": "Lista de pagini:",
+	"deletebatch-title": "Șterge lotul",
+	"deletebatch-link-back": "Du-te înapoi la pagina specială",
+	"deletebatch-as": "Rulează scriptul ca:",
+	"deletebatch-or": "<strong>sau</strong>",
+	"deletebatch-delete": "Șterge",
+	"deletebatch-page": "Pagini de șters:",
+	"deletebatch-file-bad-format": "Fișierul ar trebui să fie text simplu",
+	"deletebatch-file-missing": "Nu se poate citi fișierul dat",
+	"deletebatch-select-yourself": "Dumneavoastră"
+}

@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu",
+			"SandroHc",
+			"Vitorvicentevalente"
+		]
+	},
+	"emailcapture": "Verificação do correio eletrónico",
+	"emailcapture-desc": "Capturar endereços de correio eletrónico e permitir que os utilizadores os verifiquem através do próprio correio eletrónico",
+	"emailcapture-failure": "O seu endereço de correio eletrónico '''não''' foi verificado.",
+	"emailcapture-invalid-code": "Código de confirmação inválido.",
+	"emailcapture-already-confirmed": "O seu endereço de correio eletrónico já foi confirmado.",
+	"emailcapture-response-subject": "Verificação do endereço de correio eletrónico, da wiki {{SITENAME}}",
+	"emailcapture-response-body": "Olá!\n\nObrigado por expressar interesse em ajudar a melhorar a wiki {{SITENAME}}.\n\nConfirme o seu endereço de correio eletrónico clicando na hiperligação abaixo, por favor:\n$1\n\nTambém pode visitar:\n$2\n\nE introduzir o seguinte código de confirmação:\n$3\n\nEm breve irá receber informações sobre como pode ajudar a melhorar a wiki {{SITENAME}}.\n\nSe não iniciou este pedido, ignore esta mensagem e não voltará a ser contactado.",
+	"emailcapture-success": "Obrigado!\n\nO seu endereço de correio eletrónico foi confirmado.",
+	"emailcapture-instructions": "Para verificar o seu endereço de correio eletrónico, introduza o código que lhe foi enviado para o correio eletrónico e clique \"{{int:emailcapture-submit}}\".",
+	"emailcapture-verify": "Código de verificação:",
+	"emailcapture-submit": "Verificar endereço",
+	"apihelp-emailcapture-description": "Capturar endereços de correio eletrónico",
+	"apihelp-emailcapture-summary": "Capturar endereços de correio eletrónico",
+	"apihelp-emailcapture-param-email": "Endereço a capturar",
+	"apihelp-emailcapture-param-info": "Informação adicional a registar, normalmente informação estruturada e codificada JSON"
+}

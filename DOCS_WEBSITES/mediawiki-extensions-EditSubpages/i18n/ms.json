@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Anakmalaysia"
+		]
+	},
+	"editsubpages-desc": "Membolehkan penyelia untuk membuka kunci laluan dan semua sublaman dalam laman itu untuk penyuntingan secara rahsia melalui [[MediaWiki:Unlockedpages]]",
+	"unlockedpages": " #<!-- jangan usik baris ini --><pre>\n# Letakkan laman-laman yang ingin dibuka kunci di bawah dengan menggunakan\n# * Nama laman\n# Laman yang dibuka kunci mesti bermula dengan bulet untuk dikira,\n# yang selebihnya dianggap sebagai komen\n# Nama laman itu boleh berbentuk [[pautan]] dan peka besar kecil huruf\n# Selain itu, laman perbincangannya akan dibuka kunci secara automatik beserta laman itu\n# Lihat https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages untuk maklumat lanjut\n #</pre><!-- jangan usik baris ini -->"
+}

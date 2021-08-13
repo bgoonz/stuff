@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"EugeneZelenko",
+			"Jim-by"
+		]
+	},
+	"errorhandler-desc": "Апрацоўшчык памылак для MediaWiki",
+	"errorhandler-errors": "Памылкі:",
+	"errorhandler-error-fatal": "Крытычная памылка",
+	"errorhandler-error-warning": "Папярэджаньне",
+	"errorhandler-error-parse": "Памылка парсэра",
+	"errorhandler-error-notice": "Заўвага",
+	"errorhandler-error-deprecated": "Паменшаная",
+	"errorhandler-error-core-error": "Памылка ядра",
+	"errorhandler-error-core-warning": "Папярэджаньне ядра",
+	"errorhandler-error-compile-error": "Памылка кампіляцыі",
+	"errorhandler-error-compile-warning": "Папярэджаньне кампілятара",
+	"errorhandler-error-user-error": "Памылка ўдзельніка",
+	"errorhandler-error-user-warning": "Папярэджаньне ўдзельніка",
+	"errorhandler-error-user-notice": "Заўвага ўдзельніка",
+	"errorhandler-error-user-deprecated": "Непрыняты ўдзельнік",
+	"errorhandler-error-strict": "Жорсткія стандарты",
+	"errorhandler-error-recoverable": "Фатальная памылка, якую можна адсачыць",
+	"errorhandler-msg-text": "$1 : $2 у $3 (радок $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> у <b>$3</b> (радок <b>$4</b>)",
+	"errorhandler-trace": "сачэньне:",
+	"errorhandler-trace-line": "$1 (радок $2): $3",
+	"errorhandler-trace-line-internal": "[вонкавая функцыя]: $1"
+}

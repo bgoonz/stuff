@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Arystanbek"
+		]
+	},
+	"contributionscores": "Үлес қосу санағы",
+	"contributionscores-info": "Есептер келесі дей саналады:\n*1 ұпай әрбір түзетілген бірегей бет үшін\n*Мынаның шаршы түбірі (Барлық Істелінген Түзетулер) ‒ (Барлық Бірегей Беттер) * 2\nОсы тәсілмен саналған есептер түзету ауқымындағы өңдеу әркелкілігінің салмағын өлшейді. Негізінде, бұл есеп алдымен түзетілген біркелкі беттерді өлшейді, жоғарғы өңдеу ауқымымен бірге — жоғары сапалы бет жағдайымен есептеп.",
+	"contributionscores-top": "(Жоғарғы $1)",
+	"contributionscores-days": "Соңғы {{PLURAL:$1|күнде|$1 күнде}}",
+	"contributionscores-allrevisions": "Барлық уақытта",
+	"contributionscores-score": "Ұпай",
+	"contributionscores-rank": "Орны",
+	"contributionscores-pages": "Беттер",
+	"contributionscores-changes": "Өзгерістер",
+	"contributionscores-username": "Қатысушы есімі",
+	"contributionscores-invalidusername": "Жарамсыз қатысушы есімі",
+	"contributionscores-invalidmetric": "Дұрыс емес метрик"
+}

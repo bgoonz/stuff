@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Giromin Cangiaxo"
+		]
+	},
+	"errorhandler-desc": "Gestô di eroî pe MediaWiki",
+	"errorhandler-errors": "Eroî:",
+	"errorhandler-error-fatal": "Erô fatale",
+	"errorhandler-error-warning": "Atençion",
+	"errorhandler-error-parse": "Errô do parser",
+	"errorhandler-error-notice": "Avizo",
+	"errorhandler-error-deprecated": "Deprecou"
+}

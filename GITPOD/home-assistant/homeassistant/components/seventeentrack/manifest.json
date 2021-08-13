@@ -1,8 +1,0 @@
-{
-  "domain": "seventeentrack",
-  "name": "Seventeentrack",
-  "documentation": "https://www.home-assistant.io/components/seventeentrack",
-  "requirements": ["py17track==2.2.2"],
-  "dependencies": [],
-  "codeowners": ["@bachya"]
-}

@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Edward Chernenko",
+			"Shirayuki",
+			"The Evil IP address",
+			"Umherirrender"
+		]
+	},
+	"createredirect": "{{doc-special|CreateRedirect}}",
+	"createredirect-desc": "{{desc|name=Create Redirect|url=https://www.mediawiki.org/wiki/Extension:CreateRedirect}}",
+	"createredirect-error": "Unused at this time.\n\nUsed as error message.",
+	"createredirect-enable-multiline": "Label for button that allows to enter multiple titles.",
+	"createredirect-instructions": "Used as instructions message.\n\nThis message is followed by the Redirect form.",
+	"createredirect-invalid-title": "Used as error message when incorrect title is entered.\n* $1 is the title as entered by the user.",
+	"createredirect-overwrite": "Used as label for checkbox that allows to overwrite existing pages.",
+	"createredirect-page-title": "Used as label for Original Title input box.\n{{Identical|Page title}}",
+	"createredirect-redirect-done": "This message indicates the redirect $2 (from the page $1) has been created successfully.\n\nParameters:\n* $1 - original title\n* $2 - redirect title",
+	"createredirect-redirect-to": "Used as label for Redirect Title input box.",
+	"createredirect-save": "Used as Submit button text.\n{{Identical|Save page}}",
+	"createredirect-would-overwrite": "Used as error message when page $1 already exists (user is attempting to overwrite it with redirect).\n\nParameters:\n* $1 - redirect title"
+}

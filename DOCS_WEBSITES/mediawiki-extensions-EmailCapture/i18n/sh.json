@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"emailcapture": "Potvrda e-pošte",
+	"emailcapture-desc": "Zavođivanje adresa e-pošte što korisnici mogu potvrditi preko poruke",
+	"emailcapture-failure": "Vaša adresa e-pošte '''nije''' potvrđena.",
+	"emailcapture-invalid-code": "Nevalidan potvrdni kôd.",
+	"emailcapture-already-confirmed": "Adresa Vaše e-pošte već je potvrđena.",
+	"emailcapture-response-subject": "{{SITENAME}} — Potvrda adrese e-pošte",
+	"emailcapture-verify": "Potvrdni kod:",
+	"emailcapture-submit": "Potvrdi adresu e-pošte",
+	"apihelp-emailcapture-description": "Zavedi adrese e-pošte",
+	"apihelp-emailcapture-summary": "Zavedi adrese e-pošte",
+	"apihelp-emailcapture-param-email": "Adresa e-pošte za zavođivanje",
+	"apihelp-emailcapture-param-info": "Dodatni podaci za zavođivanje, obično strukturirani podaci kodirani u JSON"
+}

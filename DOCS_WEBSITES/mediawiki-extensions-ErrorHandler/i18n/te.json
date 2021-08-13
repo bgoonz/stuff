@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chaduvari",
+			"Veeven"
+		]
+	},
+	"errorhandler-errors": "పొరపాట్లు:",
+	"errorhandler-error-fatal": "ఫాటల్ లోపం",
+	"errorhandler-error-warning": "హెచ్చరిక",
+	"errorhandler-error-notice": "గమనిక",
+	"errorhandler-error-core-error": "కోర్ లోపం",
+	"errorhandler-error-core-warning": "కోర్ హెచ్చరిక",
+	"errorhandler-error-compile-error": "కంపైలు లోపం",
+	"errorhandler-error-compile-warning": "కంపైలు హెచ్చరిక",
+	"errorhandler-error-user-error": "వాడుకరి లోపం",
+	"errorhandler-error-user-warning": "వాడుకరి హెచ్చరిక",
+	"errorhandler-error-user-notice": "వాడుకరి గమనిక",
+	"errorhandler-error-strict": "ఖచ్చితమైన ప్రమాణాలు",
+	"errorhandler-msg-text": "$1 : $2 $3 లో ($4వ పంక్తి)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> <b>$3</b>లో (<b>$4</b>వ పంక్తి)",
+	"errorhandler-trace-line": "$1 (లైను $2): $3",
+	"errorhandler-trace-line-internal": "[internal function]: $1"
+}

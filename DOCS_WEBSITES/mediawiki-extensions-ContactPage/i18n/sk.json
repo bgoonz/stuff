@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"DannyS712",
+			"Helix84",
+			"Teslaton",
+			"Vlad5250"
+		]
+	},
+	"contactpage": "Kontaktná stránka",
+	"contactpage-desc": "[[Special:Contact|Kontaktný formulár pre návštevníkov]]",
+	"contactpage-title": "Kontakt",
+	"contactpage-pagetext": "Prosím, použite tento formulár, aby ste nás kontaktovali.",
+	"contactpage-legend": "Poslať e-mail",
+	"contactpage-defsubject": "Správa",
+	"contactpage-subject-and-sender": "$1 (od $2)",
+	"contactpage-subject-and-sender-withip": "$1 (od $2 z $3)",
+	"contactpage-fromname": "Vaše meno:",
+	"contactpage-fromaddress": "Vaša e-mailová adresa:",
+	"contactpage-formfootnotes": "(potrebné ak chcete odpoveď)",
+	"contactpage-includeip": "Vložiť k tejto správe moju IP adresu.",
+	"contactpage-usermailererror": "E-mailový program vrátil chybu: $1"
+}

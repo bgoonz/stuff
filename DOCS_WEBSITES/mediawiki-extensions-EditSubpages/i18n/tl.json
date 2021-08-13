@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"AnakngAraw"
+		]
+	},
+	"editsubpages-desc": "Nagpapahintulot sa mga tagapagpatakbo ng sistemang matanggal ang pagkakakandado ng isang pahina at lahat ng mga kabahaging pahina ng pahinang iyan para sa hindi nagpapakilalang pamamatnugot sa pamamagitan ng [[MediaWiki:Unlockedpages]]",
+	"unlockedpages": " #<!-- leave this line alone --><pre>\n# Ilagay sa ibaba ang mga pahinang nais mong huwag ikandado na ginagamit ang\n# * Pangalan ng pahina\n# Dapat na nagsisimula ang hindi ikinandadong mga pahina sa isang panandang \"punglo\" upang maibilang,\n# ituturing na isang puna ang lahat ng iba pa\n# Maaaring mga [[links]] at maselan kapag minamakinilya ang mga pangalan ng pahina \n# Gayon din, kusang kasama sa hindi pagkakakandado ang mga pahina ng usapan\n# Tingnan ang https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages para sa mas marami pang kabatiran\n  #</pre><!-- leave this line alone -->"
+}

@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Red Winged Duck",
+			"Wizardist"
+		]
+	},
+	"etherpadlite-desc": "Дадае падтрымку парсэрам тэгу &lt;eplite&gt;, з дапамогай якога можна дадаваць на старонку адзін ці некалькі сшыткаў Etherpad Lite, якія разьмяшчаюцца на лякальным або вонкавым сэрвэры (сэрвэрах) Etherpad Lite.",
+	"etherpadlite-tracking-category": "Старонкі з уключаным Etherpad",
+	"etherpadlite-tracking-category-desc": "Старонкі, якія ўтрымліваюць убудаваны Etherpad з дапамогай тэгу <code>&lt;eplite&gt;</code>.",
+	"etherpadlite-invalid-pad-url": "«$1» не зьяўляецца слушным URL або назовам сшытку Etherpad Lite.",
+	"etherpadlite-url-is-not-whitelisted": "«$1» не пазначаны ў сьпісе дазволеных сэрвэраў Etherpad Lite. {{PLURAL:$3|1=Дазволеным сэрвэрам зьяўляецца толькі $2|Дазволеныя сэрвэры: $2}}.",
+	"etherpadlite-empty-whitelist": "«$1» не пазначаны ў белым сьпісе дазволеных сэрвэраў Etherpad Lite. У белым сьпісе няма ніводнага сэрвэра.",
+	"etherpadlite-pad-used-more-than-once": "Сшытак «$1» ужо быў выкарыстаны на гэтай старонцы; вы можаце мець шмат сшыткаў на старонцы, але гэта мусяць быць розныя сшыткі."
+}

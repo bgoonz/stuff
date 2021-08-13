@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"createredirect": "Crear unha redirección",
+	"createredirect-desc": "Engade unha [[Special:CreateRedirect|páxina especial]] para crear redireccións dun xeito sinxelo",
+	"createredirect-error": "Erro: Fallou a autenticación.",
+	"createredirect-instructions": "Empregando o formulario de embaixo, pode crear unha páxina de redirección ou substituír unha páxina existente por unha redirección.",
+	"createredirect-page-title": "Título da páxina:",
+	"createredirect-redirect-done": "Redirección creada de \"$1\" cara a \"$2\"",
+	"createredirect-redirect-to": "Redirixir cara a:",
+	"createredirect-save": "Gardar a páxina"
+}

@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ryan Kaldari"
+		]
+	},
+	"congresslookup-desc": "{{desc}}",
+	"congresslookup": "The name of the extension CongressLookup.",
+	"congresslookup-net-neutrality": "Header displayed at top of special page",
+	"congresslookup-senator-contact": "Header displayed at top of special page",
+	"congresslookup-senator-error": "Error message displayed when no sentators are found.",
+	"congresslookup-state-error": "Error message displayed when no state is specified."
+}

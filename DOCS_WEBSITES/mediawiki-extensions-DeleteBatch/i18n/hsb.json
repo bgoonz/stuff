@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Michawiki"
+		]
+	},
+	"deletebatch": "Wjacore strony wušmórnyć",
+	"deletebatch-desc": "[[Special:DeleteBatch|Wjacore strony wušmórnyć]]",
+	"deletebatch-help": "Wušmórń wjacore strony. Móžeš pak jednotliwe wušmórnjenje přewjesć pak strony z dataje wušmórnyc. Wubjer wužiwarja, kotryž so w protokolach wušmórnjenjow pokaza.\nNahrata dataja měła mjeno strony a opcionalnu přičinu wobsahować, kotrejž so přez znamješko \"|\" na kóždej lince wotdźěletej.",
+	"deletebatch-caption": "Lisćina stronow:",
+	"deletebatch-title": "Wjacore strony wušmórnyć",
+	"deletebatch-link-back": "Wróćo k specialnej stronje",
+	"deletebatch-as": "Skript wuwjesć jako:",
+	"deletebatch-both-modes": "Prošu wubjer pak jednu podatu stronu abo datu lisćinu stronow.",
+	"deletebatch-or": "<strong>abo</strong>",
+	"deletebatch-delete": "Wušmórnyć",
+	"deletebatch-page": "Strony, kotrež maja so wušmórnyć:",
+	"deletebatch-processing-from-file": "strony z dataje zhašeć",
+	"deletebatch-processing-from-form": "Strony z formulara zhašeć",
+	"deletebatch-omitting-nonexistent": "Njeeksistowaca strona $1 so wuwostaja.",
+	"deletebatch-omitting-invalid": "Njepłaćiwa strona $1 so wuwostaja.",
+	"deletebatch-file-bad-format": "Dataja měła z luteho teksta wobstać.",
+	"deletebatch-file-missing": "Je njemóžno datu dataju čitać",
+	"deletebatch-select-script": "skript za wušmórnjenje strony",
+	"deletebatch-select-yourself": "ty",
+	"deletebatch-no-page": "Prošu podaj znajmjeńša jednun stronu abo wušmórń ABO wubjer dataju, kotraž lisćinu stronow wobsahuje.",
+	"right-deletebatch": "Wjacore strony wušmórnyć",
+	"deletebatch-deleting-file-only": "Strona datajoweho wopisanja $1 njeeksistuje; poprawna dataja so jenož haša.\nTuta akcija njebudźe so protokolować."
+}

@@ -1,2 +1,0 @@
-class TypeA {}
-class TypeB {}

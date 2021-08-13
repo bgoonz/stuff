@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Darth Kule",
+			"Pietrodn"
+		]
+	},
+	"editsubpages-desc": "Permette agli amministratori di sbloccare una pagine e tutte le relative sottopagine per permettere le modifiche agli utenti anonimi attraverso [[MediaWiki:Unlockedpages]]",
+	"unlockedpages": " #<!-- lascia questa linea così com'è --><pre>\n# Inserisci le pagine che vuoi sbloccare di seguito scrivendo\n# * Nome pagina\n# Le pagine da sbloccare devono essere precedute dal segno * per essere contate,\n# tutto il resto è considerato un commento\n# I nomi delle pagine possono essere [[links]] e sono case-sensitive\n# Inoltre, le pagine di discussione verranno automaticamente sbloccate insieme alla pagina\n# Visita https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages per maggiori informazioni\n  #</pre><!-- lascia questa linea così com'è -->"
+}

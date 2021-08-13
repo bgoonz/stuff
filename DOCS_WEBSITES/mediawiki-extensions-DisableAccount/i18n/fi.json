@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"01miki10",
+			"Crt",
+			"Nike",
+			"Olli"
+		]
+	},
+	"disableaccount-desc": "Järjestelmänvalvojat voivat poistaa käytöstä yksittäisiä tilejä.",
+	"right-disableaccount": "Poistaa tunnuksia käytöstä",
+	"action-disableaccount": "poistaa tunnuksia käytöstä",
+	"disableaccount": "Käyttäjätunnuksen poistaminen käytöstä",
+	"disableaccount-user": "Käyttäjänimi:",
+	"disableaccount-confirm": "Poista käytöstä tämä käyttäjätunnus.\nKäyttäjä ei pysty kirjautumaan sisään, pyytämään uutta salasanaa tai vastaanottamaan sähköposti-ilmoituksia. \nJos käyttäjä on tällä hetkellä sisäänkirjautuneena, käyttäjä kirjataan ulos välittömästi.\n''Huomaa, että tunnuksen käytöstä poistamisen peruminen ei ole mahdollista ilman järjestelmänvalvojan toimia.''",
+	"disableaccount-mustconfirm": "Vahvista, että haluat poistaa käytöstä tämän tunnuksen.",
+	"disableaccount-nosuchuser": "Käyttäjätunnusta ”$1” ei ole olemassa.",
+	"disableaccount-success": "Käyttäjätunnus ''$1'' on poistettu käytöstä pysyvästi.",
+	"logentry-block-disableaccount": "$1 {{GENDER:$2|poisti käytöstä tunnuksen}} {{GENDER:$4|$3}}."
+}

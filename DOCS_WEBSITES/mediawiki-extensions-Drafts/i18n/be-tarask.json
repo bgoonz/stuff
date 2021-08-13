@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"EugeneZelenko",
+			"Jim-by",
+			"Red Winged Duck",
+			"Wizardist"
+		]
+	},
+	"drafts": "Чарнавікі",
+	"drafts-desc": "Дадае магчымасьць запісу [[Special:Drafts|чарнавіка]] старонкі на сэрвэры",
+	"drafts-view": "Прагляд чарнавіка",
+	"drafts-view-summary": "Гэтая спэцыяльная старонка паказвае сьпіс усіх існуючых чарнавікоў.\nЧарнавікі, якія не выкарыстоўваюцца, будуць аўтаматычна выдаляцца праз {{PLURAL:$1|дзень|дні|дзён}}.",
+	"drafts-view-article": "Старонка",
+	"drafts-view-existing": "Існуючыя чарнавікі",
+	"drafts-view-saved": "Захаваны",
+	"drafts-view-discard": "Выдаліць",
+	"drafts-view-nonesaved": "Цяпер у Вас няма захаваных чарнавікоў.",
+	"drafts-view-notice": "Вы маеце $1 для гэтай старонкі.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|чарнавік|чарнавікі|чарнавікоў}}",
+	"drafts-view-warn": "Вы сапраўды хочаце сыйсьці з гэтай старонкі? Закрыцьцё гэтай старонкі прывядзе да страты ўсіх незахаваных зьменаў.",
+	"drafts-save": "Захаваць гэта як чарнавік",
+	"drafts-save-save": "Захаваць чарнавік",
+	"drafts-save-saved": "Захаваны",
+	"drafts-save-saving": "Захаваньне",
+	"drafts-save-error": "Памылка захаваньня чарнавіка",
+	"drafts-enable": "Уключыць магчымасьць захаваньня чарнавікоў",
+	"prefs-extension-drafts": "Чарнавікі",
+	"tooltip-drafts-save": "Захаваць як чарнавік"
+}

@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gion-andri"
+		]
+	},
+	"disableaccount-desc": "Lubescha ad administraturs da deactivar contos d'utilisader inividuals.",
+	"right-disableaccount": "Deactivar contos",
+	"disableaccount": "Deactivar in conto d'utilisader",
+	"disableaccount-user": "Num d'utilisader:",
+	"disableaccount-confirm": "Deactivar quest conto d'utilisader.\nQuest utilisader na vegn betg pli pudair s'annunziar, midar il pled-clav u retschaiver e-mails d'avis.\nSche l'utilisader è actualmain annunzià vegn el immediatamain sortì dal sistem.\n''Resguarda che la reactivaziun d'in conto d'utilisader po be vegnir fatga d'in administratur.''",
+	"disableaccount-mustconfirm": "Ti stos confermar che ti vuls deactivar quest conto.",
+	"disableaccount-nosuchuser": "Il conto d'utilisader \"$1\" n'exista betg.",
+	"disableaccount-success": "Il conto d'utilisader \"$1\" è vegnì deactivà premanentamain."
+}

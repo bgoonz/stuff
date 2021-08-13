@@ -1,1 +1,0 @@
-# Gitpod-ShellCheck

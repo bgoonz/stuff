@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Minh Nguyen"
+		]
+	},
+	"errorhandler-errors": "Lỗi:",
+	"errorhandler-error-warning": "Cảnh báo",
+	"errorhandler-error-user-error": "Lỗi tại người dùng",
+	"errorhandler-error-user-warning": "Cảnh báo do người dùng",
+	"errorhandler-msg-text": "$1 : $2 trong $3 (dòng $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> trong <b>$3</b> (dòng <b>$4</b>)",
+	"errorhandler-trace-line": "$1 (dòng $2): $3",
+	"errorhandler-trace-line-internal": "[hàm nội bộ]: $1"
+}

@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hedda",
+			"Joseph",
+			"Karduelis",
+			"Mach",
+			"Suelnur",
+			"Vito Genovese"
+		]
+	},
+	"contributionscores": "Katkı puanları",
+	"contributionscores-desc": "En yüksek [[Special:ContributionScores|kullanıcı katkı hacmi]] için viki veritabanını sorgular",
+	"contributionscores-info": "Puanlama, öncelikle yüksek düzenleme hacmi dikkate alınarak düzenlenmiş benzersiz sayfaları ölçer.",
+	"contributionscores-top": "(Zirvedeki $1 kişi)",
+	"contributionscores-days": "Son $1 {{PLURAL:$1|gün|gün}}",
+	"contributionscores-allrevisions": "Tüm zamanlar",
+	"contributionscores-score": "Puan",
+	"contributionscores-rank": "Sıralama",
+	"contributionscores-pages": "Sayfalar",
+	"contributionscores-changes": "Değişiklikler",
+	"contributionscores-username": "Kullanıcı adı",
+	"contributionscores-invalidusername": "Geçersiz kullanıcı adı",
+	"contributionscores-invalidmetric": "Geçersiz metrik"
+}

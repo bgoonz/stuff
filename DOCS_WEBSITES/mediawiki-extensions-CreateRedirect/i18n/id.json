@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Daud I.F. Argana",
+			"IvanLanin"
+		]
+	},
+	"createredirect": "Pembuatan Pengalihan",
+	"createredirect-desc": "Menambahkan halaman istimewa [[Special:CreateRedirect|Pembuat Pengalihan]] untuk dengan mudah membuat pengalihan",
+	"createredirect-error": "Kesalahan: Autentikasi gagal.",
+	"createredirect-enable-multiline": "Masukkan lebih banyak judul",
+	"createredirect-instructions": "Dengan menggunakan formulir di bawah ini, Anda dapat membuat halaman pengalihan atau mengganti halaman yang sudah ada dengan suatu pengalihan.",
+	"createredirect-invalid-title": "Kesalahan: \"$1\" bukanlah judul yang benar.",
+	"createredirect-overwrite": "Abaikan peringatan",
+	"createredirect-page-title": "Judul halaman:",
+	"createredirect-redirect-done": "Pengalihan dibuat dari \"$1\" ke \"$2\"",
+	"createredirect-redirect-to": "Pengalihan ke:",
+	"createredirect-save": "Simpan halaman",
+	"createredirect-would-overwrite": "Peringatan: halaman \"[[:$1]]\" sudah ada."
+}

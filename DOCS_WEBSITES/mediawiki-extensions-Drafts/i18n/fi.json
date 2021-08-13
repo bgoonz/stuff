@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"01miki10",
+			"Beluga",
+			"Crt",
+			"Nedergard",
+			"Nike",
+			"Silvonen",
+			"Str4nd",
+			"Vililikku"
+		]
+	},
+	"drafts": "Luonnokset",
+	"drafts-desc": "Lisää mahdollisuuden tallentaa [[Special:Drafts|luonnosversioita]] sivusta palvelimelle.",
+	"drafts-view": "Katso luonnosta",
+	"drafts-view-summary": "Tämä toimintosivu näyttää luettelon kaikista olemassa olevista luonnoksista.\nLuonnokset, joita ei käytetä hävitetään {{PLURAL:$1|$1 päivän|$1 päivän}} kuluttua automaattisesti.",
+	"drafts-view-article": "Sivu",
+	"drafts-view-existing": "Olemassa olevat luonnokset",
+	"drafts-view-saved": "Tallennettu",
+	"drafts-view-discard": "Hylkää",
+	"drafts-view-nonesaved": "Sinulla ei ole yhtään tallennettua luonnosta tällä hetkellä.",
+	"drafts-view-notice": "Sinulla on $1 tälle sivulle.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|luonnos|luonnosta}}",
+	"drafts-view-warn": "Haluatko poistua tältä sivulta? Kaikki tallentamattomat muutokset tälle sivulle menetetään, jos jatkat.",
+	"drafts-save": "Tallenna nykyinen teksti luonnoksena",
+	"drafts-save-save": "Tallenna luonnos",
+	"drafts-save-saved": "Tallennettu",
+	"drafts-save-saving": "Tallennetaan",
+	"drafts-save-error": "Luonnoksen tallentaminen epäonnistui",
+	"drafts-enable": "Ota käyttöön luonnoksen tallentaminen muokkausmuodossa",
+	"prefs-extension-drafts": "Luonnokset",
+	"tooltip-drafts-save": "Tallenna luonnoksena",
+	"apihelp-savedrafts-description": "Tallenna luonnos.",
+	"apihelp-savedrafts-summary": "Tallenna luonnos.",
+	"apihelp-savedrafts-param-drafttoken": "Luonnospoletti."
+}

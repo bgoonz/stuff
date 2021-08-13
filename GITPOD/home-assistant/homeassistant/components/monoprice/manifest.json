@@ -1,8 +1,0 @@
-{
-  "domain": "monoprice",
-  "name": "Monoprice",
-  "documentation": "https://www.home-assistant.io/components/monoprice",
-  "requirements": ["pymonoprice==0.3"],
-  "dependencies": [],
-  "codeowners": ["@etsinko"]
-}

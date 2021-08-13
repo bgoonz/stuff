@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"01miki10",
+			"Centerlink",
+			"Cimon Avaro",
+			"Crt",
+			"Jaakonam",
+			"Mobe",
+			"Nike",
+			"Str4nd",
+			"Taleman",
+			"Varusmies"
+		]
+	},
+	"confirmaccount-newrequests": "'''$1''' {{PLURAL:$1|avoin sähköpostinsa vahvistanut|avointa sähköpostinsa vahvistanutta}} {{PLURAL:$1|[[Special:ConfirmAccounts|pyyntö]]|[[Special:ConfirmAccounts|pyyntöä]]}} on käsiteltävänä. '''Huomiotasi tarvitaan!'''",
+	"requestaccount-loginnotice": "Saadaksesi käyttäjätunnuksen on tehtävä '''[[Special:RequestAccount|käyttäjätunnuspyyntö]]'''.",
+	"action-confirmaccount": "tarkastaa ja hyväksyä tunnuksia",
+	"right-confirmaccount": "Nähdä [[Special:ConfirmAccounts|listan pyydetyistä tunnuksista]]",
+	"action-requestips": "nähdä hakijan IP-osoitteita käyttäjätunnuksia käsitellessä",
+	"right-requestips": "Nähdä hakijan IP-osoitteet käyttäjätunnuksia käsiteltäessä",
+	"action-lookupcredentials": "nähdä käyttäjän kirjautumistietoja",
+	"right-lookupcredentials": "Nähdä [[Special:UserCredentials|käyttäjän kirjautumistiedot]]"
+}

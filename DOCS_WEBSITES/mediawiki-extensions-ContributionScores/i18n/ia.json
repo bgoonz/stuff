@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"contributionscores": "Punctage de contributiones",
+	"contributionscores-desc": "Consulta le base de datos wiki pro le [[Special:ContributionScores|usatores contribuente le plus]]",
+	"contributionscores-info": "Iste punctage mesura primarimente le paginas unic modificate, con consideration pro un alte volumine de modificationes.",
+	"contributionscores-top": "(Le prime $1)",
+	"contributionscores-days": "Ultime $1 {{PLURAL:$1|die|dies}}",
+	"contributionscores-allrevisions": "Omne tempore",
+	"contributionscores-score": "Punctage",
+	"contributionscores-rank": "Rango",
+	"contributionscores-pages": "Paginas",
+	"contributionscores-changes": "Modificationes",
+	"contributionscores-username": "Nomine de usator",
+	"contributionscores-invalidusername": "Nomine de usator invalide",
+	"contributionscores-invalidmetric": "Metrica invalide"
+}

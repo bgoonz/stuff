@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cedric31"
+		]
+	},
+	"adyen_gateway-desc": "Tractament dels pagaments Adyen",
+	"adyen_gateway-response-default": "Una error s'es produita al moment del tractament de vòstra transaccion.\nTornatz ensajar mai tard."
+}

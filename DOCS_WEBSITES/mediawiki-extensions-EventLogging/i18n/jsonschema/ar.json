@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"ديفيد"
+		]
+	},
+	"jsonschema-badidref": "idref سيء: \"$1\"",
+	"jsonschema-idconvert": "لا يمكن تحويل var إلى id: <code>$1</code>",
+	"jsonschema-invalidkey": "مفتاح غير صالح \"$1\" في \"$2\"",
+	"jsonschema-invalidempty": "بنية البيانات الفارغة غير صالحة مع هذا المخطط",
+	"jsonschema-invalidnode": "عقدة غير صالحة: عند توقع \"$1\"، حصلت على \"$2\"، مسار: \"$3\"",
+	"jsonschema-invalid-missingfield": "حقل مطلوب مفقود \"$1\"",
+	"jsonschema-invalid-notinenum": "القيمة <code>$1</code>  ليست في التعداد للخاصية $2$1",
+	"apihelp-jsonschema-description": "استرداد صفحة مخطط JSON.",
+	"apihelp-jsonschema-summary": "استرداد صفحة مخطط JSON.",
+	"apihelp-jsonschema-param-revid": "معرف مراجعة المخطط.",
+	"apihelp-jsonschema-param-title": "اسم المخطط.",
+	"apihelp-jsonschema-example-1": "استرداد المخطط للمراجعة 1234",
+	"apihelp-jsonschema-example-2": "استرداد المخطط لأحدث مراجعة من Schema:Test"
+}

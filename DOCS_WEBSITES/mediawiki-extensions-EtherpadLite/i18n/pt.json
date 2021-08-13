@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu"
+		]
+	},
+	"etherpadlite-desc": "Adiciona o elemento &lt;eplite&gt; ao analisador sintático, para incorporar nas páginas um ou mais documentos Etherpad Lite (os quais são alojados em um ou mais servidores Etherpad Lite, locais ou externos).",
+	"etherpadlite-tracking-category": "Páginas com um Etherpad incorporado",
+	"etherpadlite-tracking-category-desc": "A página tem um Etherpad incorporado com o elemento <code>&lt;eplite&gt;</code>.",
+	"etherpadlite-invalid-pad-url": "\"$1\" não é válido como um URL de Etherpad Lite nem como nome de um documento Etherpad.",
+	"etherpadlite-url-is-not-whitelisted": "\"$1\" não consta da lista branca de servidores Etherpad Lite permitidos. {{PLURAL:$3|O único servidor permitido é: $2|Os servidores permitidos são os seguintes: $2}}.",
+	"etherpadlite-empty-whitelist": "\"$1\" não consta da lista branca de servidores Etherpad Lite permitidos. Não há nenhum servidor permitido na lista branca.",
+	"etherpadlite-pad-used-more-than-once": "O documento \"$1\" já foi usado antes nesta página; pode ter muitos documentos Etherpad numa página, mas só se estes forem diferentes."
+}

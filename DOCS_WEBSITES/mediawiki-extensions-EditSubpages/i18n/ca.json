@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Paucabot",
+			"Ssola"
+		]
+	},
+	"editsubpages-desc": "Permet als administradors desblocar una pàgina i totes les seves subpàgines per a les edicions anònimes a través de [[MediaWiki:Unlockedpages]]",
+	"unlockedpages": " #<!-- deixau aquesta línia --><pre>\n# Posau les pàgines que voleu desblocar a continuació, utilitzant\n# * Nom de la pàgina\n# Les pàgines a desblocar han de començar amb un pic per ser computades,\n# qualsevol altra cosa serà considerada un comentari\n# Els noms de les pàgines han de ser [[enllaços]] i es distingeix entre majúscules i minúscules\n# Addicionalment, les pàgines de discussió seran automàticament desblocades amb la pàgina\n# Vegeu https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages per a més informació\n #</pre><!-- deixau aquesta línia -->"
+}

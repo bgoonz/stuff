@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Michawiki"
+		]
+	},
+	"etherpadlite-desc": "Pśidawa parserowu toflicku &lt;eplite&gt;, za zasajźenje jadneje pisańskeje płoniny abo někotarych płoninow Etherpad Lite (kótarež su na lokalnych abo eksternych serwerach Etherpad Lite zaměstnjone) na bokach",
+	"etherpadlite-tracking-category": "Boki ze zasajźonym Ehterpadom",
+	"etherpadlite-invalid-pad-url": "\"$1\" njejo płaśiwy URL Etherpad Lite abo płaśiwe mě pisańskeje płoniny.",
+	"etherpadlite-url-is-not-whitelisted": "\"$1\" njejo w lisćinje dowólonych serwerow Etherpad Lite. {{PLURAL:$3|$2 jo jadnucki dowólony serwer|Slědujucej serwera stej móžno: $2|Slědujuce serwery su móžno: $2|Slědujuce serwery su móžno: $2}}.",
+	"etherpadlite-empty-whitelist": "\"$1\" njejo w lisćinje dowólonych serwerow Etherpad Lite. W lisćinje dowólone serwery njejsu.",
+	"etherpadlite-pad-used-more-than-once": "Pisańska płonina \"$1\" jo se južo do togo na toś tom boku wužyła; móžoš wjele pisańskich płoninow na boku měś, ale jano, jolic su rozdźělne płoniny-"
+}

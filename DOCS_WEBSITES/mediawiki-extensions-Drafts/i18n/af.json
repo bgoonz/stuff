@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Naudefj"
+		]
+	},
+	"drafts": "Werkweergawes",
+	"drafts-view": "WysWerkweergawe",
+	"drafts-view-article": "Bladsy",
+	"drafts-view-saved": "Gestoor",
+	"drafts-view-discard": "Verwyder",
+	"drafts-view-notice": "U het $1 vir hierdie bladsy.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|werkweergawe|werkweergawes}}",
+	"drafts-save": "Stoor dit as 'n werkweergawe",
+	"drafts-save-save": "Stoor as kladwerk",
+	"drafts-save-saved": "Gestoor",
+	"drafts-save-saving": "Besig om te stoor",
+	"drafts-save-error": "Fout tydens stoor van werkweergawe",
+	"tooltip-drafts-save": "As werkweergawe stoor"
+}

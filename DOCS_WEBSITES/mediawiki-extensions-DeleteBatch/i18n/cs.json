@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jaroslav Cerny",
+			"Jkjk",
+			"Matěj Grabovský"
+		]
+	},
+	"deletebatch": "Hromadné mazání stránek",
+	"deletebatch-desc": "[[Special:DeleteBatch|Hromadné mazání stránek]]",
+	"deletebatch-help": "Hromadné mazání stránek.\nMůžete buď smazat jednu stránku, nebo stránky podle seznamu.\nVyberte uživatele, který se objeví v záznamech.\nNahrávané soubory by měly na každé řádce obsahovat název stránky a volitelně důvod oddělený „|“.",
+	"deletebatch-caption": "Seznam stránek:",
+	"deletebatch-default-reason": "Výchozí důvod ke smazání:",
+	"deletebatch-title": "Smazat požadavek",
+	"deletebatch-link-back": "Vrátit se na speciální stránku",
+	"deletebatch-as": "Spustit skript jako:",
+	"deletebatch-both-modes": "Prosím vyberte jednu nebo více z následujícího seznamu stránek.",
+	"deletebatch-or": "<strong>nebo</strong>",
+	"deletebatch-delete": "Smazat",
+	"deletebatch-page": "Stránky, které budou smazané:",
+	"deletebatch-processing-from-file": "mazání stránek ze seznamu v souboru",
+	"deletebatch-processing-from-form": "mazání stránek z formuláře",
+	"deletebatch-omitting-nonexistent": "Vynechává se neexistující stránka $1.",
+	"deletebatch-omitting-invalid": "Vynechává se neplatná stránka $1.",
+	"deletebatch-file-bad-format": "Soubor by měl být v čistě textovém formátu",
+	"deletebatch-file-missing": "Nelze přečíst tento soubor",
+	"deletebatch-select-script": "Skript pro smazání stránek",
+	"deletebatch-select-yourself": "Vy",
+	"deletebatch-no-page": "Prosím zadejte alespoň jednu stránku nebo vyberte soubor obsahující seznam stránek.",
+	"right-deletebatch": "Hromadné (dávkové) mazání stránek",
+	"deletebatch-deleting-file-only": "Stránka s popisem souboru $1 neexistuje, bude smazán pouze soubor.\nTato akce nebude zaznamenána."
+}

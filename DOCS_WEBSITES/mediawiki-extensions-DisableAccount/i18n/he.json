@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"Guycn2"
+		]
+	},
+	"disableaccount-desc": "אפשרות שמפעילים יבטלו חשבונות מסוימים",
+	"right-disableaccount": "השבתה (ביטול) של חשבונות",
+	"action-disableaccount": "להשבית חשבונות",
+	"disableaccount": "ביטול חשבון משתמש",
+	"disableaccount-user": "שם משתמש:",
+	"disableaccount-confirm": "כיבוי חשבון משתמש זה.\nהמשתמש לא יוכל להיכנס לחשבון, לאפס את הסיסמה, או לקבל הודעות בדואר אלקטרוני.\nאם המשתמש מחובר כעת לחשבון במקום כלשהו, הוא יוּצא מהחשבון מייד.\n'''שימו לב שביטול חשבון הוא פעולה בלתי־הפיכה ללא התערבות של מנהל מערכת.'''",
+	"disableaccount-mustconfirm": "עליכם לאשר שאתם רוצים לבטל חשבון זה.",
+	"disableaccount-nosuchuser": "חשבון המשתמש \"$1\" אינו קיים.",
+	"disableaccount-success": "חשבון המשתמש \"$1\" בוטל.",
+	"logentry-block-disableaccount": "$1 {{GENDER:$2||כיבה|כיבתה}} את החשבון של {{GENDER:$4|$3}}."
+}

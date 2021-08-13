@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dani",
+			"Dj",
+			"Glanthor Reviol"
+		]
+	},
+	"deletebatch": "Lapok tömeges törlése",
+	"deletebatch-desc": "[[Special:DeleteBatch|Lapok tömeges törlése]]",
+	"deletebatch-help": "Törölhetsz egyetlen lapot, vagy egy fájlban listázottakat.\nVálaszd ki a felhasználói nevet, ami meg fog jelenni a törlési naplóban.\nA feltöltött fájl minden sora tartalmazhat „|” karakterrel elválasztva egy törlési okot.",
+	"deletebatch-caption": "Lapok listája:",
+	"deletebatch-title": "Lapok tömeges törlése",
+	"deletebatch-link-back": "Vissza a speciális lapra",
+	"deletebatch-as": "A szkript futtatása mint:",
+	"deletebatch-both-modes": "Kérlek válassz egy konkrét lapot, vagy a lapok egy megadott listáját.",
+	"deletebatch-or": "<strong>vagy</strong>",
+	"deletebatch-delete": "Törlés",
+	"deletebatch-page": "Törlendő lapok:",
+	"deletebatch-processing-from-file": "lapok törlése fájllista alapján",
+	"deletebatch-processing-from-form": "lapok törlése űrlap alapján",
+	"deletebatch-omitting-nonexistent": "A(z) $1 nem létező lap kihagyása.",
+	"deletebatch-omitting-invalid": "A(z) $1 érvénytelen lap kihagyása.",
+	"deletebatch-file-bad-format": "A fájlnak egyszerű szövegnek kell lennie",
+	"deletebatch-file-missing": "A megadott fájl nem olvasható",
+	"deletebatch-select-script": "Laptörlés szkript",
+	"deletebatch-select-yourself": "te",
+	"deletebatch-no-page": "Kérlek adj meg legalább egy törlendő lapot, vagy válassz egy lapok listáját tartalmazó fájlt.",
+	"right-deletebatch": "Lapok kötegelt törlése",
+	"deletebatch-deleting-file-only": "A $1 fájlleíró lap nem található; csak az aktuális fájl kerül törlésre.\nEz a tevékenység nem kerül naplózásra."
+}

@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrisportelli"
+		]
+	},
+	"disableaccount-desc": "Tħalli l-amministraturi jiddiżabilitaw kontijiet individwali",
+	"right-disableaccount": "Jiddiżabilita l-kontijiet",
+	"disableaccount": "Iddiżabilita kont tal-utent",
+	"disableaccount-user": "Isem tal-utent:",
+	"disableaccount-confirm": "Iddiżabilita dan il-kont tal-utent.\nL-utent ma jkunx jista' jidħol fil-kont tiegħu, jirrisettja l-password, jew jirċievi notifiki bil-posta elettronika.\nJekk l-utent huwa attwalment fil-kont, dan jiġi illogjat 'il barra.\n''Kun af li jekk tiddżabilita kont mhuwiex reversibbli mingħajr intervent tal-amministratur tas-sistema.''",
+	"disableaccount-mustconfirm": "Trid tikkonferma li tixtieq tiddiżabilita dan il-kont.",
+	"disableaccount-nosuchuser": "Il-kont tal-utent \"$1\" ma jeżistix.",
+	"disableaccount-success": "Il-kont tal-utent \"$1\" ġie diżabilitat b'mod permanenti."
+}

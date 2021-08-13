@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Tiven2240",
+			"V.narsikar"
+		]
+	},
+	"disableaccount-desc": "प्रबंधकास व्यक्तिचे खाते अक्षम करण्यास परवानगी देते",
+	"right-disableaccount": "खाते अक्षम करा",
+	"action-disableaccount": "खाते बंद करा",
+	"disableaccount": "सदस्य खाता बंद करा",
+	"disableaccount-user": "सदस्य नाव:",
+	"disableaccount-confirm": "हे खाता बंद करा.\nया सदस्याला सनोंद प्रवेश करणे, पासवर्ड रीसेट करणे, किंवा ई-मेल सूचना भेटणार नाही.\nजर आपण दुसऱ्या तिथे सनोंद प्रवेश आहेत, ती क्रिया बंद केली जाईल व तुम्ही सनोंद बाहेर पडाल.\n''नोंद घ्यावी की ही खाते पुन्हा चालू केले जाऊ शकत नाही त्यासाठी  सिस्टिम अडमिनिस्टरतोर ची गरज आहे.''",
+	"disableaccount-mustconfirm": "आपण हे खाते बंद करू इच्छित असल्याची पुष्टी करणे आवश्यक आहे",
+	"disableaccount-nosuchuser": "सदस्य खाता $1 अस्तित्वात नाही",
+	"disableaccount-success": "सदस्य खाता $1 पूर्णपणे बंद केले आहे",
+	"logentry-block-disableaccount": "$1 {{GENDER:$2|disabled the account}} of {{GENDER:$4|$3}}."
+}

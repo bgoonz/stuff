@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ainali",
+			"WikiPhoenix"
+		]
+	},
+	"etherpadlite-desc": "Lägger till &lt;eplite&gt; parsertagg om du vill bädda in ett eller flera Etherpad Lite block (vilka finns på lokala eller externa Etherpad Lite server/s) på sidor",
+	"etherpadlite-tracking-category": "Sidor med en inbäddad Etherpad",
+	"etherpadlite-tracking-category-desc": "Sidan bäddar in ett Etherpad-block med taggen <code>&lt;eplite&gt;</code>.",
+	"etherpadlite-invalid-pad-url": "\"$1\" är inte en giltig Etherpad Lite URL eller blocknamn.",
+	"etherpadlite-url-is-not-whitelisted": "\"$1\" finns inte i vitlistan med tillåtna Etherpad Lite servrar. {{PLURAL:$3|$2 är den enda tillåtna servern|De tillåtna servrarna är följande: $2}}.",
+	"etherpadlite-empty-whitelist": "\"$1\" finns inte i vitlistan med tillåtna Etherpad Lite servrar. Det finns inga tillåtna servrar i vitlistan.",
+	"etherpadlite-pad-used-more-than-once": "Blocket \"$1\" har redan använts på den här sidan, du kan ha många block på en sida, men endast om de är olika block."
+}

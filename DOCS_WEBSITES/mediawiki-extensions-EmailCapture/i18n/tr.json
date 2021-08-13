@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bilalokms",
+			"Hedda",
+			"Karduelis",
+			"MuratTheTurkish"
+		]
+	},
+	"emailcapture": "E-posta doğrulama",
+	"emailcapture-desc": "E-posta adreslerine el koyun ve kullanıcıların e-posta yoluyla doğrulamasını sağlayın",
+	"emailcapture-failure": "E-postanız '''doğrulanmadı'''.",
+	"emailcapture-invalid-code": "Geçersiz onay kodu.",
+	"emailcapture-already-confirmed": "E-posta adresiniz zaten doğrulanmış.",
+	"emailcapture-response-subject": "{{SITENAME}} e-posta adresi doğrulaması",
+	"emailcapture-response-body": "Merhaba!\n\n{{SITENAME}} sitesinin geliştirilmesine yardımcı olma konusundaki ilginiz için teşekkür ederiz.\n\nLütfen aşağıdaki bağlantıyı tıklayarak e-posta adresinizi onaylamak için bir dakikanızı ayırın:\n$1\n\nAyrıca şurayı da ziyaret edebilirsiniz:\n$2\n\nVe aşağıdaki onay kodunu giriniz:\n$3\n\n{{SITENAME}} sitesini iyileştirmeye nasıl yardımcı olabileceğinizle ilgili kısa bir süre sonra iletişime geçeceğiz.\n\nBu isteği siz göndermediyseniz, lütfen bu e-postayı dikkate almayın. Size başka bir şey göndermeyiz.",
+	"emailcapture-success": "Teşekkür ederiz!\n\nE-posta adresiniz başarıyla onaylamıştır.",
+	"emailcapture-instructions": "E-posta adresinizi doğrulamak için, size e-posta ile gönderilen kodu girin ve \"{{int:emailcapture-submit}}\" düğmesine tıklayın.",
+	"emailcapture-verify": "Doğrulama kodu:",
+	"emailcapture-submit": "E-posta adresini doğrulayın",
+	"apihelp-emailcapture-description": "E-posta adreslerine el koy",
+	"apihelp-emailcapture-summary": "E-posta adreslerine el koy",
+	"apihelp-emailcapture-param-email": "El konulacak e-posta adresi",
+	"apihelp-emailcapture-param-info": "Genel olarak JSON kodlu yapılandırılmış bilgi girişi için ek bilgi"
+}

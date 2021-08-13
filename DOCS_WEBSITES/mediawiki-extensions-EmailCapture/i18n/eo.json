@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robin van der Vliet",
+			"Yekrats"
+		]
+	},
+	"emailcapture": "Retpoŝta kontrolado",
+	"emailcapture-desc": "Kapti retpoŝadresojn, kaj permesi al uzantoj kontroli tion per retpoŝto",
+	"emailcapture-failure": "Via retpoŝtadreso '''ne estis''' kontrolita.",
+	"emailcapture-invalid-code": "Nevalida konfirmkodo.",
+	"emailcapture-already-confirmed": "Via retpoŝtadreso estas jam konfirmita.",
+	"emailcapture-response-subject": "{{SITENAME}} retpoŝta konfirmado",
+	"emailcapture-response-body": "Saluton!\n\nDankon pro esprimante intereson helpi plibonigi {{SITENAME}}.\n\nBonvolu konfirmi vian retpoŝtadreson klakante la jenan ligilon:\n$1\n\nAnkaŭ vi povas viziti:\n$2\n\nkaj enigi la jenan konfirmkodon:\n$3\n\nNi respondos baldaŭ kiel vi povas helpi plibonigi {{SITENAME}}.\n\nSe vi ne eksendis ĉi tiun peton, bonvolu ignori ĉi tiun retpoŝton, kaj ni ne sendos al vi ion ajn.",
+	"emailcapture-success": "Dankegon!\n\nVia retpoŝtadreso estis sukcese kontrolita.",
+	"emailcapture-instructions": "Por kontroli vian retpoŝtadreson, enigi la kodo kiu estis retpoŝtita al vi kaj klaku butonon \"{{int:emailcapture-submit}}\".",
+	"emailcapture-verify": "Kontrolkodo:",
+	"emailcapture-submit": "Konfirmi adreson de retpoŝto"
+}

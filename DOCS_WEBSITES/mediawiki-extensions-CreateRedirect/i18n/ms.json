@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Anakmalaysia",
+			"Pizza1016"
+		]
+	},
+	"createredirect": "Cipta lencongan",
+	"createredirect-desc": "Menambahkan halaman khas [[Special:CreateRedirect|CreateRedirect]] untuk membuat lencongan dengan mudah",
+	"createredirect-error": "Ralat: Penentusahan gagal.",
+	"createredirect-instructions": "Dengan borang di bawah, anda boleh membuat halaman lencongan atau mengganti halaman yang sedia ada dengan lencongan.",
+	"createredirect-page-title": "Tajuk laman:",
+	"createredirect-redirect-done": "Lencongan dibuat dari \"$1\" ke \"$2\"",
+	"createredirect-redirect-to": "Lencongkan ke:",
+	"createredirect-save": "Simpan laman"
+}

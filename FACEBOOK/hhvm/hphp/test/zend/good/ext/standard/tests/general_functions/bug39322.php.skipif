@@ -1,4 +1,0 @@
-<?hh
-<<__EntryPoint>> function main(): void {
-  if (!is_executable('/bin/sleep')) echo 'skip sleep not found';
-}

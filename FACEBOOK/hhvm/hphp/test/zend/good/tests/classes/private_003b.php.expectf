@@ -1,3 +1,0 @@
-Call show()
-
-Fatal error: Call to private method pass::show() from context 'fail' in %s/private_003b.php on line 19

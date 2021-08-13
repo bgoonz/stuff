@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido",
+			"Xuacu"
+		]
+	},
+	"createredirect": "Crear una redireición",
+	"createredirect-desc": "Amiesta la páxina especial [[Special:CreateRedirect|CreateRedirect]] pa crear redireiciones de manera fácil",
+	"createredirect-error": "Error : Falló la identificación.",
+	"createredirect-enable-multiline": "Escribir más títulos",
+	"createredirect-instructions": "Emplegando'l formulariu d'abaxo, pues crear una páxina de redireición o trocar una páxina esistente por una redireición.",
+	"createredirect-invalid-title": "Error: «$1» ye un títulu incorrechu.",
+	"createredirect-overwrite": "Inorar los avisos",
+	"createredirect-page-title": "Títulu de la páxina:",
+	"createredirect-redirect-done": "Redireición creada de «$1» a «$2»",
+	"createredirect-redirect-to": "Redirixir a:",
+	"createredirect-save": "Grabar páxina",
+	"createredirect-would-overwrite": "Atención: yá esiste la páxina «[[:$1]]»."
+}

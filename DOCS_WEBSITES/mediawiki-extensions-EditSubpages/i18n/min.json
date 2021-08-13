@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Iwan Novirion"
+		]
+	},
+	"editsubpages-desc": "Mangizinkan panguruih untuak mambukan kunci laman jo sagalo sub lamannyo dari suntiangan anonim malalui [[MediaWiki:Unlockedpages]]",
+	"unlockedpages": "  #<!-- jan maubah barih ko --><pre>\n# Latak laman nan ka dibukak kuncinyo di bawah ko manggunoan\n# * Namo laman\n# Laman nan ka dibukak kuncinyo musti diawali jo *,\n# nan indak diawali jo * akan dianggap sabagai komen\n# Namo laman dapek barupo [[pautan]] dan huruf gadang/ketek bapangaruah\n# Laman rundiangnyo pun akan otomatih tabukak kuncinyo basamo-samo jo laman tasabuik\n# Labiah lanjuik caliak https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages\n  #</pre><!-- jan maubah barih ko -->"
+}

@@ -1,4 +1,0 @@
-<?hh
-
-interface stdClass { }
-

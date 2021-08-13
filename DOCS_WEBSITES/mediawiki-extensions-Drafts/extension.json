@@ -1,0 +1,102 @@
+{
+	"name": "Drafts",
+	"version": "0.3.6",
+	"author": [
+		"Trevor Parscal",
+		"Petr Bena"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:Drafts",
+	"descriptionmsg": "drafts-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.35.0"
+	},
+	"config_prefix": "eg",
+	"config": {
+		"DraftsAutoSaveWait": {
+			"value": 120,
+			"path": false,
+			"description": "Seconds of inactivity after change before autosaving. Use the value 0 to disable autosave",
+			"public": false
+		},
+		"DraftsAutoSaveInputBased": {
+			"value": false,
+			"path": false,
+			"description": "Enable auto save only if user stop typing (less auto saves, but much worse recovery ability)",
+			"public": false
+		},
+		"DraftsAutoSaveTimeout": {
+			"value": 20,
+			"path": false,
+			"description": "Seconds to wait until giving up on a response from the server. Use the value 0 to disable autosave",
+			"public": false
+		},
+		"DraftsLifeSpan": {
+			"value": 30,
+			"path": false,
+			"description": "Days to keep drafts around before automatic deletion. Set to 0 to keep forever.",
+			"public": false
+		},
+		"DraftsCleanRatio": {
+			"value": 1000,
+			"path": false,
+			"description": "Ratio of times which a list of drafts requested and the list should be pruned for expired drafts - expired drafts will not apear in the list even if they are not yet pruned, this is just a way to keep the database from filling up with old drafts",
+			"public": false
+		}
+	},
+	"AutoloadClasses": {
+		"ApiSaveDrafts": "includes/api/ApiSaveDrafts.php",
+		"Drafts": "includes/Drafts.php",
+		"Draft": "includes/Draft.php",
+		"DraftHooks": "includes/DraftHooks.php",
+		"SpecialDrafts": "includes/specials/SpecialDrafts.php"
+	},
+	"APIModules": {
+		"savedrafts": "ApiSaveDrafts"
+	},
+	"SpecialPages": {
+		"Drafts": "SpecialDrafts"
+	},
+	"ExtensionMessagesFiles": {
+		"DraftsAlias": "Drafts.alias.php"
+	},
+	"MessagesDirs": {
+		"Drafts": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"ext.Drafts": {
+			"scripts": "modules/ext.Drafts.js",
+			"styles": "modules/ext.Drafts.css",
+			"dependencies": [
+				"mediawiki.jqueryMsg",
+				"oojs-ui-core",
+				"oojs-ui-widgets"
+			],
+			"messages": [
+				"drafts-save-save",
+				"drafts-save-saved",
+				"drafts-save-saving",
+				"drafts-save-error",
+				"drafts-view-warn"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "Drafts"
+	},
+	"Hooks": {
+		"UserGetDefaultOptions": "DraftHooks::onUserGetDefaultOptions",
+		"GetPreferences": "DraftHooks::onGetPreferences",
+		"EditFilter": "DraftHooks::onEditFilter",
+		"PageSaveComplete": "DraftHooks::onPageSaveComplete",
+		"SpecialMovepageAfterMove": "DraftHooks::onSpecialMovepageAfterMove",
+		"EditPageBeforeEditButtons": "DraftHooks::onEditPageBeforeEditButtons",
+		"EditPage::showEditForm:initial": "DraftHooks::loadForm",
+		"LoadExtensionSchemaUpdates": "DraftHooks::schema"
+	},
+	"manifest_version": 2
+}

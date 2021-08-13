@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kghbln",
+			"Purodha",
+			"Shirayuki",
+			"Tacsipacsi",
+			"Umherirrender",
+			"Yekrats"
+		]
+	},
+	"emailcapture": "{{doc-special|EmailCapture|unlisted=1}}\nThe Email Capture extension will capture email addresses, and allow users to verify them through email. \n\nFor more information, see [[mw:Extension:EmailCapture]].",
+	"emailcapture-desc": "{{desc|name=Email Capture|url=https://www.mediawiki.org/wiki/Extension:EmailCapture}}\nThe Email Capture extension will capture email addresses, and allow users to verify them through email.",
+	"emailcapture-failure": "Used as failure message in [[Special:EmailCapture]].\n\nSee also:\n* {{msg-mw|Emailcapture-success}}",
+	"emailcapture-invalid-code": "Used as error message in [[Special:EmailCapture]].",
+	"emailcapture-already-confirmed": "Used in [[Special:EmailCapture]].",
+	"emailcapture-response-subject": "The Email Capture extension will capture email addresses, and allow users to verify them through email. \n\nFor more information, see [[mw:Extension:EmailCapture]].\n\nThis is the subject line of the email sent to users.\n\nThe body for this subject is:\n* {{msg-mw|Emailcapture-response-body|notext=1}}\n{{Identical|SITENAME e-mail address confirmation}}",
+	"emailcapture-response-body": "Body of an e-mail sent to a user.\n\nParameters:\n* $1 – URL of the confirmation link\n* $2 – URL to type in the confirmation code manually\n* $3 – Confirmation code for the user to type in\n\nThe subject for this body is:\n* {{msg-mw|emailcapture-response-subject}}",
+	"emailcapture-success": "Used as success message in [[Special:EmailCapture]].\n\nSee also:\n* {{msg-mw|Emailcapture-failure}}",
+	"emailcapture-instructions": "Used on [[Special:EmailCapture]], see image.\n[[Image:TestWiki-Special-EmailCapture-L4H0.png|Screenshot of Special:EmailCapture|right|thumb]]\n\nRefers to {{msg-mw|Emailcapture-submit}}.",
+	"emailcapture-verify": "Used on [[Special:EmailCapture]], see image.\n[[Image:TestWiki-Special-EmailCapture-L4H0.png|Screenshot of Special:EmailCapture|right|thumb]]",
+	"emailcapture-submit": "[[Image:TestWiki-Special-EmailCapture-L4H0.png|Screenshot of Special:EmailCapture|right|thumb]]\nUsed on [[Special:EmailCapture]], see image.\n\nUsed as label for the Submit button.",
+	"apihelp-emailcapture-description": "{{doc-apihelp-description|emailcapture}}",
+	"apihelp-emailcapture-summary": "{{doc-apihelp-summary|emailcapture}}",
+	"apihelp-emailcapture-param-email": "{{doc-apihelp-param|emailcapture|email}}",
+	"apihelp-emailcapture-param-info": "{{doc-apihelp-param|emailcapture|info}}"
+}

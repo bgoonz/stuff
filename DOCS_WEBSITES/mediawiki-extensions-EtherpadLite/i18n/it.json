@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Beta16"
+		]
+	},
+	"etherpadlite-desc": "Aggiunge il parser tag &lt;eplite&gt; per incorporare uno o più blocchi Etherpad Lite (che sono ospitati in server Etherpad Lite locali o esterni) nelle pagine",
+	"etherpadlite-tracking-category": "Pagine con Etherpad incorporato",
+	"etherpadlite-tracking-category-desc": "La pagina incorpora un Etherpad con il tag <code>&lt;eplite&gt;</code>.",
+	"etherpadlite-invalid-pad-url": "\"$1\" non è un URL Etherpad Lite valido o nome di un pad.",
+	"etherpadlite-url-is-not-whitelisted": "\"$1\" non si trova nella lista dei server Etherpad Lite consentiti. {{PLURAL:$3|$2 è l'unico server consentito|I server consentiti sono: $2}}.",
+	"etherpadlite-empty-whitelist": "\"$1\" non si trova nella lista dei server Etherpad Lite consentiti. Non ci sono server consentiti.",
+	"etherpadlite-pad-used-more-than-once": "Il pad \"$1\" è già stato usato su questa pagina; puoi avere più pad su una pagina, ma solo se sono diversi fra loro."
+}

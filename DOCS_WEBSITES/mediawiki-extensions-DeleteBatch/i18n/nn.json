@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gunnernett",
+			"Harald Khan",
+			"Njardarlogar"
+		]
+	},
+	"deletebatch": "Masseslett sider",
+	"deletebatch-desc": "[[Special:DeleteBatch|Masseslett sider]]",
+	"deletebatch-help": "Slett ein serie av sider. Du kan òg utføra ei enkel sletting, eller sletta sider lista opp i ei fil.\nVel ein brukar som skal bli vist i sletteloggen.\nEi opplasta fil må innehalda namnet på sida, og kan òg ha ei valfri sletteårsak skild frå tittelen med «|».",
+	"deletebatch-caption": "Sidelista:",
+	"deletebatch-title": "Slett serie",
+	"deletebatch-link-back": "Gå attende til spesialsida",
+	"deletebatch-as": "Køyr skriptet som:",
+	"deletebatch-both-modes": "Vel éi sida eller ei lista over sider.",
+	"deletebatch-or": "<strong>eller</strong>",
+	"deletebatch-delete": "Slett",
+	"deletebatch-page": "Sider som skal bli sletta:",
+	"deletebatch-processing-from-file": "slettar sider frå lista over filer",
+	"deletebatch-processing-from-form": "slettar sider frå skjemaet",
+	"deletebatch-omitting-nonexistent": "Tek ikkje med sida $1 som ikkje finst.",
+	"deletebatch-omitting-invalid": "Tek ikkje med den ugyldige sida $1.",
+	"deletebatch-file-bad-format": "Fila bør innehalda rein tekst",
+	"deletebatch-file-missing": "Kunne ikkje lesa fila",
+	"deletebatch-select-script": "slett sideskript",
+	"deletebatch-select-yourself": "du",
+	"deletebatch-no-page": "Oppgje minst éi sida som skal bli sletta, eller vel ei fil med ei lista over sider.",
+	"right-deletebatch": "Massesletta sider"
+}

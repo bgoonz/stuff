@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"!Silent",
+			"Brunoy Anastasiya Seryozhenko",
+			"Crazymadlover",
+			"Eduardo.mps",
+			"Giro720",
+			"HenriqueCrang",
+			"Luckas",
+			"Opraco"
+		]
+	},
+	"contributionscores": "Pontuação de contribuições",
+	"contributionscores-desc": "Inquire a base de dados wiki sobre os mais altos [[Special:ContributionScores|volumes de contribuição dos utilizadores]]",
+	"contributionscores-info": "A pontuação mede, principalmente, as páginas únicas editadas, tendo em consideração o alto volume de edições.",
+	"contributionscores-top": "(top $1)",
+	"contributionscores-days": "{{PLURAL:$1|Último dia|Últimos $1 dias}}",
+	"contributionscores-allrevisions": "Desde sempre",
+	"contributionscores-score": "Pontuação",
+	"contributionscores-rank": "Classificação",
+	"contributionscores-pages": "Páginas",
+	"contributionscores-changes": "Mudanças",
+	"contributionscores-username": "Nome de usuário",
+	"contributionscores-invalidusername": "Nome de usuário inválido",
+	"contributionscores-invalidmetric": "Métrica inválida"
+}

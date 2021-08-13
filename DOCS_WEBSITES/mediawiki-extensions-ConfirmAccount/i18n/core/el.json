@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"NikosLikomitros",
+			"Nikosgranturismogt",
+			"Protnet"
+		]
+	},
+	"requestaccount-loginnotice": "Για να έχετε ένα λογαριασμό χρήστη, πρέπει να '''[[Special:RequestAccount|ζητήσετε ένα]]'''.",
+	"action-confirmaccount": "θεώρηση και έγκριση λογαριασμών",
+	"right-confirmaccount": "Προβολή της [[Special:ConfirmAccounts|ουράς με τους αιτούμενους λογαριασμούς]]",
+	"action-lookupcredentials": "προβάλετε τα διαπιστευτήρια χρήστη",
+	"right-lookupcredentials": "Προβολή [[Special:UserCredentials|πιστοποιητικών χρήστη]]"
+}

@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gazeb"
+		]
+	},
+	"drafts": "Концепты",
+	"drafts-view": "Зобразити концепт",
+	"drafts-view-article": "Сторінка",
+	"drafts-view-existing": "Єстуючі концепты",
+	"drafts-view-saved": "Уложене",
+	"drafts-view-discard": "Змазати",
+	"drafts-view-nonesaved": "Моментално не маєте уложены жадны концепты",
+	"drafts-view-notice": "Маєте $1 той сторінкы.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|концепт|концепты|концептів}}",
+	"drafts-view-warn": "Кідь одыйдете з той сторінкы, стратите вшыткы уложены зміны той сторінкы. Хочете продовжыти?",
+	"drafts-save": "Уложыти тоту верзію як концепт",
+	"drafts-save-save": "Уложыти концепт",
+	"drafts-save-saved": "Уложене",
+	"drafts-save-saving": "Укладать ся",
+	"drafts-save-error": "Хыба почас укладаня концепту",
+	"tooltip-drafts-save": "Уложыти як концепт"
+}

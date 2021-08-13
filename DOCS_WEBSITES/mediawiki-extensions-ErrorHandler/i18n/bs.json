@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"CERminator"
+		]
+	},
+	"errorhandler-desc": "Upravljač grešaka za MediaWiki",
+	"errorhandler-errors": "Greške:",
+	"errorhandler-error-fatal": "Fatalna greška",
+	"errorhandler-error-warning": "Upozorenje",
+	"errorhandler-error-parse": "Greška parsera",
+	"errorhandler-error-notice": "Obavještenje",
+	"errorhandler-error-deprecated": "Prevaziđeno",
+	"errorhandler-error-core-error": "Greška jezgre",
+	"errorhandler-error-core-warning": "Upozorenje jezgre",
+	"errorhandler-error-compile-error": "Greška kompajlera",
+	"errorhandler-error-compile-warning": "Upozorenje kompajlera",
+	"errorhandler-error-user-error": "Korisnička greška",
+	"errorhandler-error-user-warning": "Korisničko upozorenje",
+	"errorhandler-error-user-notice": "Korisničko upozorenje",
+	"errorhandler-error-user-deprecated": "Korisnik odbijen",
+	"errorhandler-error-strict": "Strogi standardi",
+	"errorhandler-error-recoverable": "Čitljiva fatalna greška",
+	"errorhandler-msg-text": "$1 : $2 u datoteci $3 (linija $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> u <b>$3</b> (linija <b>$4</b>)",
+	"errorhandler-trace": "trag:",
+	"errorhandler-trace-line": "$1 (linija $2): $3",
+	"errorhandler-trace-line-internal": "[unutrašnja funkcija]: $1"
+}

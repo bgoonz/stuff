@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby",
+			"Nghtwlkr"
+		]
+	},
+	"editsubpages-desc": "Lar administratorer låse opp en side og alle dens undersider for endringer av uregistrerte via [[MediaWiki:Unlockedpages]]",
+	"unlockedpages": " #<!-- la denne linja være som den er --><pre>\n# Skriv inn sider du vil låse opp nedenfor på formen\n# * Sidenavn\n# Navnene må begynne med stjerne,\n# alt annet regnes som kommentar\n# Sidenavn kan være [[lenker]] og skiller mellom store og små bokstaver\n# Diskusjonssider blir automatisk låst opp sammen med hovedsiden\n# Se https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages for mer informasjon\n #</pre><!-- la denne linja være som den er -->"
+}

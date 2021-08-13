@@ -1,1 +1,0 @@
-{{ prefix | trim }} {{ node.display_name }} {{ match.rule.name }} ({{ match.result.action }})

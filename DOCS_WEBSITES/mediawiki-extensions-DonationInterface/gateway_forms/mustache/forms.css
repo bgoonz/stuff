@@ -1,0 +1,497 @@
+img.submethod-logo {
+	max-width: 100%;
+}
+
+div#payment_gateway-donate-submessage {
+	line-height: 120%;
+}
+
+div#payment_gateway-donate-submessage img {
+	vertical-align: baseline;
+	margin-right: 4px;
+}
+
+#payment_gateway-personal-info {
+	margin-right: 0;
+}
+
+#payment_gateway-personal-info > div {
+	padding: 6px 1px;
+	vertical-align: top;
+}
+
+#appeal {
+	background-color: transparent;
+	border: 0;
+	padding: 16px 24px 0 24px;
+	vertical-align: top;
+}
+
+#content.mw-body {
+	background-color: transparent;
+	background-image: none;
+}
+
+#mw-head-base {
+	background-image: none;
+	/* Move the form up */
+	height: 1em !important;
+}
+
+/* Hiding stuff we don't need */
+#firstHeading,
+#contentSub,
+#footer,
+#p-personal {
+	display: none;
+}
+
+/* NEW STUFF */
+ul#moreinfolinks li {
+	list-style: none;
+	list-style-image: none;
+}
+
+.form .options-h {
+	margin: 0;
+}
+
+.options-h {
+	list-style: none;
+	margin: 0 0 1em 0;
+}
+
+.options-h img {
+	vertical-align: middle;
+}
+
+.options-h li {
+	background: none;
+	margin-bottom: 0.3em;
+	padding: 0;
+}
+
+.options-h li {
+	display: inline;
+	line-height: 2.5;
+	margin-right: 0.3em;
+	white-space: nowrap;
+}
+
+.options-h li select {
+	vertical-align: middle;
+}
+
+.options-h li:last-child {
+	margin: 0;
+}
+
+input:-moz-placeholder {
+	opacity: 1;
+}
+
+input::placeholder,
+select::placeholder,
+textarea::placeholder,
+textarea::placeholder {
+	opacity: 1;
+}
+
+#donate {
+	min-width: 32em;
+	max-width: 46.5em;
+	padding: 1em 1em 0 1em;
+}
+
+#greenBackground {
+	background-color: #fff;
+	border: 1px solid #a2a9b1;
+	border-radius: 2px;
+	position: relative;
+	padding: 24px;
+	width: auto;
+}
+
+.amount_header {
+	color: #222;
+	font-size: 1.2em;
+	line-height: 1.2;
+	display: block;
+	text-align: center;
+	border-bottom: 1px solid #cbcbcb;
+	padding: 0 0 1em !important;
+	font-weight: normal;
+}
+
+.amount_header span {
+	display: block;
+	color: #069;
+}
+
+span#selected-amount {
+	font-size: 1.8em;
+}
+
+.cc_header {
+	text-transform: capitalize;
+	font-size: 0.85em;
+	color: #222;
+	text-align: center;
+	margin-bottom: 0.5em !important;
+	padding-bottom: 0;
+}
+
+.cc_header img {
+	vertical-align: baseline;
+	margin-left: 8px;
+}
+
+#donate input[ type='text' ],
+#donate input[ type='email' ],
+#donate input[ type='number' ],
+#donate input:not( [ type ] ),
+#donate select {
+	background-color: #fff;
+	border-radius: 2px;
+	border: 1px solid #a2a9b1;
+	color: #000;
+	font-family: inherit;
+	font-size: 13px;
+	line-height: 17px;
+	padding: 0.8em;
+	margin-bottom: 0.2em;
+	-webkit-transition: border-color 200ms cubic-bezier( 0.4, 0.55, 0.55, 1 ), box-shadow 200ms cubic-bezier( 0.4, 0.55, 0.55, 1 );
+	-moz-transition: border-color 200ms cubic-bezier( 0.4, 0.55, 0.55, 1 ), box-shadow 200ms cubic-bezier( 0.4, 0.55, 0.55, 1 );
+	transition: border-color 200ms cubic-bezier( 0.4, 0.55, 0.55, 1 ), box-shadow 200ms cubic-bezier( 0.4, 0.55, 0.55, 1 );
+	width: 100%;
+}
+
+#donate select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: url( ../includes/triangle.svg ) no-repeat center right 8px;
+	padding-right: 24px;
+	cursor: pointer;
+}
+
+#donate select::-ms-expand {
+	/* Hide arrow on IE 10-11 */
+	display: none;
+}
+
+#donate input[ type='text' ]:hover,
+#donate input[ type='email' ]:hover,
+#donate input[ type='number' ]:hover,
+#donate select:hover {
+	border-color: #72777d;
+}
+
+#donate input[ type='text' ]:focus,
+#donate input[ type='email' ]:focus,
+#donate input[ type='number' ]:focus,
+#donate select:focus {
+	outline: 0;
+	border-color: #36c;
+	box-shadow: inset 0 0 0 1px #36c;
+}
+
+#donate input[ type='text' ]:disabled,
+#donate input[ type='email' ]:disabled,
+#donate input[ type='number' ]:disabled,
+#donate select:disabled {
+	background-color: #ccc;
+	cursor: not-allowed;
+}
+
+#amount_input * {
+	vertical-align: top;
+}
+
+#topError,
+p#informationsharing,
+p#monthlycancel,
+.errorMsg {
+	max-width: 481px;
+}
+
+.mw-donate-submessage {
+	text-transform: uppercase;
+	font-size: 0.75em;
+	color: #72777d;
+	text-align: center;
+}
+
+#content.mw-body {
+	padding-bottom: 0;
+}
+
+#cards {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+#cards:before,
+#cards:after {
+	content: '';
+	display: table;
+}
+
+#cards:after {
+	clear: both;
+}
+
+#cards li {
+	height: 100px;
+	background: #f8f9fa;
+	border: 1px solid #a2a9b1;
+	margin: 0 0.7% 0.7% 0;
+	float: left;
+	text-align: center;
+	border-radius: 2px;
+	cursor: pointer;
+	-webkit-transition: border-color 200ms cubic-bezier( 0.4, 0.55, 0.55, 1 ), box-shadow 200ms cubic-bezier( 0.4, 0.55, 0.55, 1 );
+	-moz-transition: border-color 200ms cubic-bezier( 0.4, 0.55, 0.55, 1 ), box-shadow 200ms cubic-bezier( 0.4, 0.55, 0.55, 1 );
+	transition: border-color 200ms cubic-bezier( 0.4, 0.55, 0.55, 1 ), box-shadow 200ms cubic-bezier( 0.4, 0.55, 0.55, 1 );
+}
+
+#cards.three-per-line li {
+	width: 32.63%;
+}
+
+#cards.three-per-line > li:nth-child( 3 ),
+#cards.three-per-line > li:nth-child( 6 ) {
+	margin-right: 0;
+}
+
+#cards.four-per-line li {
+	width: 24.29%;
+}
+
+#cards.four-per-line > li:nth-child( 4 ),
+#cards.four-per-line > li:nth-child( 8 ) {
+	margin-right: 0;
+}
+
+#cards li.has_sub_text {
+	padding-bottom: 0.1em;
+}
+
+#cards.enabled li:hover {
+	background: #fff;
+}
+
+#cards.enabled li:active {
+	background-color: #a2a9b1;
+	border-color: #36c;
+}
+
+#cards li input {
+	display: block;
+	width: 100%;
+	margin: 0;
+	box-shadow: none;
+	float: none;
+	cursor: pointer;
+}
+
+#cards li label {
+	cursor: pointer;
+	padding: 1em;
+	display: block;
+}
+
+#cards li label img {
+	margin: 0.7em auto 0;
+	height: auto;
+}
+
+#cards li.has_sub_text label {
+	margin-top: 0;
+}
+
+#cards li.has_sub_text input {
+	margin: -0.15em 0;
+}
+
+ul#cards li.has_sub_text label img {
+	margin: 0.2em auto;
+}
+
+#cards li label p.card_sub_text {
+	margin: -0.7em auto;
+}
+
+#paymentContinue,
+#paymentSubmit {
+	margin-top: 1em;
+	clear: both;
+	display: none;
+}
+
+#paymentContinue.force,
+#paymentSubmit.force {
+	display: block;
+}
+
+.btn {
+	background-color: #c8ccd1;
+	color: #fff;
+	width: 100%;
+	font-size: 1.3em;
+	border-radius: 2px;
+	padding: 0.6em;
+	border: 0;
+	font-family: inherit;
+	-webkit-transition: background-color 100ms, color 100ms, border-color 100ms, box-shadow 100ms;
+	-moz-transition: background-color 100ms, color 100ms, border-color 100ms, box-shadow 100ms;
+	transition: background-color 100ms, color 100ms, border-color 100ms, box-shadow 100ms;
+}
+
+.btn.enabled {
+	background-color: #36c;
+	cursor: pointer;
+}
+
+.btn.enabled:hover {
+	background-color: #447ff5;
+}
+
+.btn.enabled:active {
+	background-color: #2a4b8d;
+}
+
+.hidden {
+	display: none !important;
+}
+
+#overlay {
+	z-index: 999;
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba( 128, 128, 128, 0.3 );
+}
+
+#loading {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin: -26px 0 0 -28px;
+}
+
+dd.field {
+	margin-bottom: 0;
+	margin-left: 0;
+}
+
+div.error-box {
+	margin: auto;
+	width: 70%;
+	border: solid #000 2px;
+	padding: 20px;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+div.error-box h2 {
+	color: #f00;
+}
+
+.close-button {
+	background: rgba( 0, 0, 0, 0 );
+	display: inline-block;
+	height: 19px;
+	width: 19px;
+	text-align: center;
+	cursor: pointer;
+}
+
+p#informationsharing,
+p#monthlycancel {
+	padding: 0 3px;
+	line-height: inherit;
+}
+
+ul#moreinfolinks {
+	margin-left: 0;
+}
+
+.opt_in_explain {
+	font-size: 0.8em;
+}
+
+@media screen and ( max-device-width: 981px ) {
+	body {
+		background-color: #f5f5f5;
+	}
+
+	#donate {
+		display: block;
+		width: 100%;
+	}
+
+	#donate form input[ type='text' ],
+	#donate form input[ type='email' ],
+	#donate form input[ type='number' ],
+	#donate form select {
+		display: block;
+		font-size: 16px;
+		padding: 14px;
+		margin-bottom: 10px;
+		-webkit-appearance: none;
+	}
+
+	#donate form select {
+		background-position: center right 14px;
+		padding-right: 28px;
+	}
+
+	#donate form input[ type='radio' ].opt_in_radio {
+		width: 3%;
+		margin: 5px 3px auto;
+		display: inline-block;
+	}
+
+	#donate form label.opt_in_label {
+		width: 95%;
+		cursor: pointer;
+	}
+
+	body #mw-content-text #donate #greenBackground {
+		background: transparent;
+		border: 0;
+		padding: 0;
+		width: 100%;
+	}
+
+	body #donate {
+		padding: 0;
+		margin: 0 auto;
+		min-width: 200px;
+		max-width: 400px;
+	}
+
+	body #mw-page-base {
+		background: transparent;
+	}
+
+	h3.cc_header img {
+		display: none;
+	}
+
+	p#informationsharing {
+		margin-top: 2em;
+		font-size: 12px;
+		width: auto;
+	}
+
+	ul#moreinfolinks {
+		padding: 0;
+		line-height: 2;
+	}
+}

@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Byrial",
+			"Cgtdk",
+			"Christian List",
+			"DannyS712",
+			"Hylle",
+			"Thomsen"
+		]
+	},
+	"contactpage": "Kontaktside",
+	"contactpage-desc": "[[Special:Contact|Kontaktformular for besøgende]]",
+	"contactpage-title": "Kontakt",
+	"contactpage-pagetext": "Brug formularen herunder til at kontakte os.",
+	"contactpage-legend": "Send e-mail",
+	"contactpage-defsubject": "Kontaktbesked",
+	"contactpage-subject-and-sender": "$1 (fra $2)",
+	"contactpage-subject-and-sender-withip": "$1 (fra $2 på $3)",
+	"contactpage-fromname": "Dit navn:",
+	"contactpage-fromaddress": "Din e-mailadresse:",
+	"contactpage-formfootnotes": "(nødvendig hvis du ønsker at få svar)",
+	"contactpage-includeip": "Inkluder min IP-adresse i denne besked.",
+	"contactpage-usermailererror": "E-mail-modulet returnerede en fejl: $1",
+	"contactpage-captcha-error": "CAPTCHA fejl",
+	"contactpage-config-error-title": "Fejl i kontaktformular",
+	"contactpage-config-error": "En kontaktformular er enten ikke konfigureret for denne side eller er konfigureret forkert."
+}

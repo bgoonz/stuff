@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Flightmare",
+			"Siebrand"
+		]
+	},
+	"contributionscores": "Gebruikersstatistieken",
+	"contributionscores-desc": "Geeft een overzicht van [[Special:ContributionScores|gebruikers met de meeste bijdragen]] in de wiki",
+	"contributionscores-info": "Deze score meet voornamelijk het aantal unieke pagina's dat is bewerkt, terwijl een groot aantal bewerkingen wel in acht wordt genomen.",
+	"contributionscores-top": "(Top $1)",
+	"contributionscores-days": "Laatste {{PLURAL:$1|dag|$1 dagen}}",
+	"contributionscores-allrevisions": "Alle versies",
+	"contributionscores-score": "Punten",
+	"contributionscores-rank": "Rang",
+	"contributionscores-pages": "Pagina's",
+	"contributionscores-changes": "Wijzigingen",
+	"contributionscores-username": "Gebruikersnaam",
+	"contributionscores-invalidusername": "Ongeldige gebruikersnaam",
+	"contributionscores-invalidmetric": "Ongeldige eenheid"
+}

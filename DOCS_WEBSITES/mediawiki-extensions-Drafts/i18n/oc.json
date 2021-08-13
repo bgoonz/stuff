@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cedric31"
+		]
+	},
+	"drafts": "Borrolhons",
+	"drafts-desc": "Apond la possibilitat de salvar las versions « [[Special:Drafts|borrolhon]] » d’una pagina sul servidor",
+	"drafts-view": "Veire lo borrolhon",
+	"drafts-view-summary": "Aquesta pagina especiala fa la lista de totes los borrolhons qu'existisson.\nLos borrolhons inutilizats seràn suprimits automaticament aprèp $1 {{PLURAL:$1|jorn|jorns}}.",
+	"drafts-view-article": "Pagina",
+	"drafts-view-existing": "Borrolhons existents",
+	"drafts-view-saved": "Salvar",
+	"drafts-view-discard": "Abandonar",
+	"drafts-view-nonesaved": "Avètz pas de borrolhon salvat actualament.",
+	"drafts-view-notice": "Avètz $1 per aquesta pagina.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|borrolhon|borrolhons}}",
+	"drafts-view-warn": "Volètz contunhar de navegar en defòra d'aquesta pagina ? En fasent aquò perdretz totas las modificacions pas enregistradas d'aquesta pagina.",
+	"drafts-save": "Salvatz aquò coma borrolhon",
+	"drafts-save-save": "Salvar lo borrolhon",
+	"drafts-save-saved": "Salvat",
+	"drafts-save-saving": "Salvament en cors",
+	"drafts-save-error": "Error de salvament del borrolhon",
+	"prefs-extension-drafts": "Borrolhons",
+	"tooltip-drafts-save": "Salvar coma borrolhon",
+	"apihelp-savedrafts-description": "Enregistrar un borrolhon",
+	"apihelp-savedrafts-param-id": "L’ID del borrolhon.",
+	"apihelp-savedrafts-param-drafttoken": "Geton de borrolhon.",
+	"apihelp-savedrafts-param-title": "Títol del borrolhon.",
+	"apihelp-savedrafts-param-starttime": "L’orodatatge de començament del borrolhon.",
+	"apihelp-savedrafts-param-text": "Tèxte del borrolhon.",
+	"apihelp-savedrafts-param-summary": "Resumit del borrolhon."
+}

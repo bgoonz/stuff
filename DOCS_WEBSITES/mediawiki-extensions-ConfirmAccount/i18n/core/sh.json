@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"requestaccount-loginnotice": "Da biste dobili korisnički račun, morate '''[[Special:RequestAccount|unesti zahtijev]]'''.",
+	"action-confirmaccount": "pregled i prihvatanje račune",
+	"action-requestips": "pregledavanje IP adresa zahtijevatelja pri radu zahtjevanjh računa",
+	"action-lookupcredentials": "pregledavanje korisničkih ovlaštenja"
+}

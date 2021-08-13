@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Banjo",
+			"Elisardojm",
+			"Toliño"
+		]
+	},
+	"eventlogging-desc": "Estrutura para rexistrar os eventos do código do lado do cliente",
+	"eventlogging-invalid-json": "JSON non válido",
+	"eventlogging-revision-id": "Revisión $1",
+	"eventlogging-code-sample-logging-on-server-side": "Rexistro PHP",
+	"eventlogging-code-sample-module-setup-json": "Configuración de extension.json para a conexión vía JavaScript",
+	"eventlogging-code-sample-logging-on-client-side": "Rexistro de JavaScript",
+	"eventlogging-error-move-source": "As páxinas de esquema non poden ser renomeadas",
+	"eventlogging-error-move-destination": "As páxinas non poden ser renomeadas a páxinas de esquema"
+}

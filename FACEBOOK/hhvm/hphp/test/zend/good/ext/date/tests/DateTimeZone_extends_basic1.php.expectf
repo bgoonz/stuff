@@ -1,7 +1,0 @@
-*** Testing basic DateTimeZone inheritance() ***
-
--- Create an instance of DateTimeZoneExt --
-
--- Invoke __toString --
-America/Los_Angeles
-===DONE===

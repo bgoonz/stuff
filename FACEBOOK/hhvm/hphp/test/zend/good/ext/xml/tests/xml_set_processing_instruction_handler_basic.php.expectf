@@ -1,4 +1,0 @@
-Simple test of xml_set_processing_instruction_handler() function
-Target: xml-stylesheet
-Data: href="default.xsl" type="text/xml"
-Done

@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80"
+		]
+	},
+	"etherpadlite-desc": "הוספת תג מפענח &lt;eplite&gt; שמטמיע בדפים לוח כתיבה אחד או יותר של אתרפד לייט (שמתארחים בשרת Etherpad Lite מקומי או חיצוני)",
+	"etherpadlite-tracking-category": "דפים עם את'רפד מובנה",
+	"etherpadlite-invalid-pad-url": "\"$1\" אינה כתובת תקינה של את'רפד לייט או שם תקין של לוח כתיבה",
+	"etherpadlite-url-is-not-whitelisted": "\"$1\" לא נמצא ברשימת שרתי את'רפד לייט מורשים. {{PLURAL:$3|השרת המותר היחיד הוא $2|מותרים השרתים הבאים: $2}}.",
+	"etherpadlite-empty-whitelist": "\"$1\" לא נמצא ברשימת שרתי את'רפד לייט מורשים. אין שום שרת מורשה ברשימה.",
+	"etherpadlite-pad-used-more-than-once": "לוח הכתיבה \"$1\" כבר נמצא בדף הזה; אפשר לשים מספר לוחות כתיבה בדף, אבל הם צריכים להיות שונים."
+}

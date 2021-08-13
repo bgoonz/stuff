@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"Guycn2",
+			"Rotemliss",
+			"YaronSh"
+		]
+	},
+	"deletebatch": "מחיקת מקבץ דפים",
+	"deletebatch-desc": "[[Special:DeleteBatch|מחיקת מקבץ דפים]]",
+	"deletebatch-help": "מחיקת מקבץ דפים.\nבאפשרותכם לבצע מחיקה בודדת, או למחוק דפים הרשומים בקובץ.\nנא לבחור משתמש שיופיע ביומני המחיקה.\nהקובץ המועלה אמור לכלול שם של דף בכל שורה, ואפשר גם לכלול סיבה המופרדת בתו \"|\" משם הדף בכל אחת מהשורות.",
+	"deletebatch-caption": "רשימת דפים:",
+	"deletebatch-default-reason": "סיבת המחיקה המשמשת כברירת מחדל:",
+	"deletebatch-title": "מחיקת מקבץ",
+	"deletebatch-link-back": "חזרה לדף המיוחד",
+	"deletebatch-as": "הרצת הסקריפט בתור:",
+	"deletebatch-both-modes": "אנא בחרו בדף אחד מסוים או ברשימה נתונה של דפים.",
+	"deletebatch-or": "<strong>או</strong>",
+	"deletebatch-delete": "מחיקה",
+	"deletebatch-page": "דפים למחיקה:",
+	"deletebatch-processing-from-file": "מתבצעת מחיקת דפים מהרשימה בקובץ",
+	"deletebatch-processing-from-form": "מחיקת דפים שרשומים בטופס הזה",
+	"deletebatch-omitting-nonexistent": "השמטת דף שאינו קיים $1.",
+	"deletebatch-omitting-invalid": "השמטת דף בלתי תקין $1.",
+	"deletebatch-file-bad-format": "הקובץ אמור להיות קובץ טקסט פשוט.",
+	"deletebatch-file-missing": "לא ניתן לקרוא את הקובץ הנתון.",
+	"deletebatch-select-script": "סקריפט מחיקת דפים",
+	"deletebatch-select-yourself": "אתם",
+	"deletebatch-no-page": "אנא ציינו לפחות דף אחד למחיקה או בחרו קובץ המכיל רשימת דפים.",
+	"action-deletebatch": "למחוק מספר דפים בו־זמנית",
+	"right-deletebatch": "מחיקת מספר דפים בו־זמנית",
+	"right-deletebatch-spoof": "מחיקת מספר דפים בו־זמנית בתור \"סקריפט מחיקת דפים\"",
+	"deletebatch-deleting-file-only": "דך תיאור הקובץ $1 אינו קיים; יימחק רק הקובץ.\nהפעולה הזאת לא תירשם ביומן."
+}

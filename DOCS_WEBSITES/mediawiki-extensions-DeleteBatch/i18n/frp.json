@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"ChrisPtDe"
+		]
+	},
+	"deletebatch": "Suprimar una pârt de pâges",
+	"deletebatch-desc": "[[Special:DeleteBatch|Suprime una pârt de pâges]].",
+	"deletebatch-caption": "Lista de les pâges :",
+	"deletebatch-title": "Suprimar en pârts",
+	"deletebatch-link-back": "Tornar a la pâge spèciâla",
+	"deletebatch-as": "Lanciér lo scripte coment :",
+	"deletebatch-or": "<strong>ou ben</strong>",
+	"deletebatch-delete": "Suprimar",
+	"deletebatch-page": "Pâges a suprimar :",
+	"deletebatch-processing-from-file": "suprèssion de les pâges dês una lista de fichiérs",
+	"deletebatch-processing-from-form": "suprèssion de les pâges dês lo formulèro",
+	"deletebatch-omitting-nonexistent": "Omission de la pâge $1 pas ègzistenta.",
+	"deletebatch-omitting-invalid": "Omission de la pâge $1 fôssa.",
+	"deletebatch-file-bad-format": "Lo fichiér dêt étre en tèxto simplo",
+	"deletebatch-file-missing": "Empossiblo de liére lo fichiér balyê",
+	"deletebatch-select-script": "Scripte por suprimar pâges",
+	"deletebatch-select-yourself": "Vos",
+	"right-deletebatch": "Suprimar des pâges en pârts"
+}

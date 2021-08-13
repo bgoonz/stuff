@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bugoslav",
+			"DannyS712",
+			"Dnik",
+			"SpeedyGonsales",
+			"Tivek"
+		]
+	},
+	"contactpage": "Stranica za kontakt",
+	"contactpage-desc": "[[Special:Contact|Kontaktni obrazac za posjetitelje]]",
+	"contactpage-title": "Kontakt",
+	"contactpage-pagetext": "Molimo, koristite ovaj obrazac za kontakt s nama.",
+	"contactpage-legend": "Pošalji e-poruku",
+	"contactpage-defsubject": "Poruka za kontakt",
+	"contactpage-subject-and-sender": "$1 (od $2)",
+	"contactpage-subject-and-sender-withip": "$1 (od $2 s $3)",
+	"contactpage-fromname": "Vaše ime:",
+	"contactpage-fromaddress": "Vaša adresa e-pošte:",
+	"contactpage-formfootnotes": "(obvezno, ako želite dobiti odgovor)",
+	"contactpage-includeip": "Priloži moju IP adresu u ovu poruku.",
+	"contactpage-usermailererror": "Sustav pošte javio je pogrešku: $1",
+	"contactpage-captcha-error": "Pogrješka u CAPTCHA-i",
+	"contactpage-config-error-title": "Pogrješka u obrascu za kontakte",
+	"contactpage-config-error": "Obrazac za kontakte nije konfiguriran za ovu stranicu ili je nepravilno konfiguriran.",
+	"contactpage-mustbeloggedin": "Molimo Vas, prijavite se da biste podnijeli obrazac za kontakte"
+}

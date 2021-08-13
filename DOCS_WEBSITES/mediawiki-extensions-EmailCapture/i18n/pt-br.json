@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Felipe L. Ewald",
+			"Giro720",
+			"Pedroca cerebral"
+		]
+	},
+	"emailcapture": "Verificação do e-mail",
+	"emailcapture-desc": "Capturar endereços de e-mail e permitir que os usuários os verifiquem através do próprio e-mail",
+	"emailcapture-failure": "Seu endereço de e-mail '''não''' foi verificado.",
+	"emailcapture-invalid-code": "Código de confirmação inválido.",
+	"emailcapture-already-confirmed": "Seu endereço de email já foi confirmado.",
+	"emailcapture-response-subject": "Verificação do endereço de e-mail, da {{SITENAME}}",
+	"emailcapture-response-body": "Olá!\n\nObrigado por expressar interesse em ajudar a melhorar a {{SITENAME}}.\n\nConfirme o seu endereço de e-mail, clicando o link abaixo, por favor:\n$1\n\nVocê também pode visitar:\n$2\n\nE introduzir o seguinte código de confirmação:\n$3\n\nEm breve irá receber informações sobre como poderá ajudar a melhorar a {{SITENAME}}.\n\nSe você não iniciou este pedido, ignore esta mensagem e você não voltará a ser contactado.",
+	"emailcapture-success": "Obrigado!\n\nSeu endereço de e-mail foi confirmado.",
+	"emailcapture-instructions": "Para verificar o seu endereço de e-mail, introduza o código que lhe foi enviado por e-mail e clique \"{{int:emailcapture-submit}}\".",
+	"emailcapture-verify": "Código de verificação:",
+	"emailcapture-submit": "Verificar endereço de e-mail",
+	"apihelp-emailcapture-description": "Capturar endereços de e-mail",
+	"apihelp-emailcapture-summary": "Capturar endereços de e-mail",
+	"apihelp-emailcapture-param-email": "Endereços de e-mail para capturar",
+	"apihelp-emailcapture-param-info": "Informações adicionais para registrar, geralmente informações estruturadas codificadas JSON"
+}

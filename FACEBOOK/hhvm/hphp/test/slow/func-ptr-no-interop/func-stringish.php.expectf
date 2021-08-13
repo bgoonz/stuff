@@ -1,3 +1,0 @@
-string(5) "hello"
-
-Catchable fatal error: Argument 1 passed to foo() must implement interface Stringish, func given in %s/func-ptr-no-interop/func-stringish.php on line 10

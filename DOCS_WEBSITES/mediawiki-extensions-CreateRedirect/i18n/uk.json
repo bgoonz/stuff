@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Base",
+			"DDPAT",
+			"Piramidion"
+		]
+	},
+	"createredirect": "Створити перенаправлення",
+	"createredirect-desc": "Додає спеціальну сторінку [[Special:CreateRedirect|CreateRedirect]] для легкого створення перенаправлень",
+	"createredirect-error": "Помилка: Автентифікація не вдалась.",
+	"createredirect-enable-multiline": "Введіть більше назв",
+	"createredirect-instructions": "Використовуючи форму нижче, Ви можете створити сторіку-перенаправлення або замінити існуючу сторіку перенаправленням.",
+	"createredirect-invalid-title": "Помилка: «$1» не є коректною назвою.",
+	"createredirect-overwrite": "Ігнорувати попередження",
+	"createredirect-page-title": "Назва сторінки:",
+	"createredirect-redirect-done": "Створено пененаправлення із «$1» на «$2»",
+	"createredirect-redirect-to": "Перенаправити на:",
+	"createredirect-save": "Зберегти сторінку",
+	"createredirect-would-overwrite": "Попередження: сторінка «[[:$1]]» вже існує."
+}

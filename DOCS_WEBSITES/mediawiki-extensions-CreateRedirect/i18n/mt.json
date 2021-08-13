@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrisportelli"
+		]
+	},
+	"createredirect": "Oħloq ir-rindirizz",
+	"createredirect-desc": "Iżżid paġna speċjali [[Special:CreateRedirect|CreateRedirect]] sabiex faċilment toħloq rindirizz",
+	"createredirect-error": "Żball: L-awtentikazzjoni falliet.",
+	"createredirect-instructions": "Billi tuża l-formola t'hawn taħt, inti tista' toħloq paġna ta' rindirizz jew tissostitwixxi paġna eżistenti b'rindirizz.",
+	"createredirect-page-title": "Titlu tal-paġna:",
+	"createredirect-redirect-done": "Rindirizz maħluq minn \"$1\" għal \"$2\"",
+	"createredirect-redirect-to": "Rindirizz lejn:",
+	"createredirect-save": "Salva l-paġna"
+}

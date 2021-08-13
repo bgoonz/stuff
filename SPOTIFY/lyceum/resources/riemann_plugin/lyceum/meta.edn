@@ -1,4 +1,0 @@
-{:plugin "lyceum"
- :title  "A plugin for loading and testing rules from separate namespaces."
- :git-repo "https://github.com/spotify/lyceum"
- :require lyceum.plugin}

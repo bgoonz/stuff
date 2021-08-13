@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"LNDDYL",
+			"Liangent",
+			"Mark85296341",
+			"Wrightbus"
+		]
+	},
+	"errorhandler-desc": "MediaWiki的錯誤處理程序",
+	"errorhandler-errors": "錯誤：",
+	"errorhandler-error-fatal": "致命錯誤",
+	"errorhandler-error-warning": "警告",
+	"errorhandler-error-parse": "解析器錯誤",
+	"errorhandler-error-notice": "提示",
+	"errorhandler-error-deprecated": "不推薦使用",
+	"errorhandler-error-core-error": "核心錯誤",
+	"errorhandler-error-core-warning": "核心警告",
+	"errorhandler-error-compile-error": "編譯錯誤",
+	"errorhandler-error-compile-warning": "編譯警告",
+	"errorhandler-error-user-error": "使用者錯誤",
+	"errorhandler-error-user-warning": "使用者警告",
+	"errorhandler-error-user-notice": "使用者提示",
+	"errorhandler-error-user-deprecated": "使用者不推薦使用",
+	"errorhandler-error-strict": "嚴格的標準",
+	"errorhandler-error-recoverable": "可捕獲的致命錯誤",
+	"errorhandler-msg-text": "$1：$2 在 $3 中（第 $4 行）",
+	"errorhandler-msg-html": "<b>$1</b>：<i>$2</i> 在 <b>$3</b> 中（第 <b>$4</b> 行）",
+	"errorhandler-trace": "追蹤：",
+	"errorhandler-trace-line": "$1（第$2行）：$3",
+	"errorhandler-trace-line-internal": "[內部函數]：$1"
+}

@@ -1,3 +1,0 @@
-(alias
-  (name all-hack)
-  (deps (alias_rec exe) (alias_rec debug)))

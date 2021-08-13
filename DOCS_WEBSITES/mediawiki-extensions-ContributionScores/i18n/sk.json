@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Helix84",
+			"Luky001",
+			"Teslaton",
+			"Yardom78"
+		]
+	},
+	"contributionscores": "Skóre príspevkov",
+	"contributionscores-desc": "Získava údaje z databázy wiki o [[Special:ContributionScores|množstve používateľských príspevkov]]",
+	"contributionscores-info": "Skóre primárne meria jedinečné editované stránky s ohľadom na veľké množstvo úprav.",
+	"contributionscores-top": "(Najlepších $1)",
+	"contributionscores-days": "{{PLURAL:$1|Posledný $1 deň|Posledné $1 dni|Posledných $1 dní}}",
+	"contributionscores-allrevisions": "Celkom",
+	"contributionscores-score": "Skóre",
+	"contributionscores-rank": "Poradie",
+	"contributionscores-pages": "Stránky",
+	"contributionscores-changes": "Zmeny",
+	"contributionscores-username": "Používateľské meno",
+	"contributionscores-invalidusername": "Neplatné používateľské meno",
+	"contributionscores-invalidmetric": "Neplatná metrika"
+}

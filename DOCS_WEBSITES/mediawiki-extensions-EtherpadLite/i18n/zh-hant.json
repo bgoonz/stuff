@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Justincheng12345",
+			"Kly"
+		]
+	},
+	"etherpadlite-desc": "添加&lt;eplite&gt;解析器函數以於頁面中嵌入一個或多個Etherpad Lite便箋（托管於本地或外部Etherpad Lite伺服器）",
+	"etherpadlite-tracking-category": "已嵌入 Etherpad 的頁面",
+	"etherpadlite-tracking-category-desc": "頁面內嵌帶有 <code>&lt;eplite&gt;</code> 標籤的 Etherpad。",
+	"etherpadlite-invalid-pad-url": "「$1」並非有效 Etherpad Lite 網址或便箋名稱。",
+	"etherpadlite-url-is-not-whitelisted": "「$1」並不位於所容許的 Etherpad Lite 伺服器白名單。{{PLURAL:$3|$2是唯一允許的伺服器|已容許的伺服器如下所示：$2}}。",
+	"etherpadlite-empty-whitelist": "「$1」並不位於所容許的 Etherpad Lite 伺服器白名單。白名單沒有已容許伺服器",
+	"etherpadlite-pad-used-more-than-once": "便箋「$1」己曾用於此頁，你只可於同一頁中加入不同的便箋。"
+}

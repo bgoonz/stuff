@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"createredirect": "Crear redirection",
+	"createredirect-desc": "Adde un pagina special [[Special:CreateRedirect|CreateRedirect]] pro facilemente crear redirectiones",
+	"createredirect-error": "Error: Authentication fallite.",
+	"createredirect-enable-multiline": "Entrar plus titulos",
+	"createredirect-instructions": "Con le formulario hic infra, tu pote crear un pagina de redirection o reimplaciar un pagina existente per un redirection.",
+	"createredirect-invalid-title": "Error: \"$1\" non es un titulo correcte.",
+	"createredirect-overwrite": "Ignorar advertimentos",
+	"createredirect-page-title": "Titulo del pagina:",
+	"createredirect-redirect-done": "Redirection create ab \"$1\" verso \"$2\"",
+	"createredirect-redirect-to": "Rediriger verso:",
+	"createredirect-save": "Publicar pagina",
+	"createredirect-would-overwrite": "Attention: le pagina \"[[:$1]]\" jam existe."
+}

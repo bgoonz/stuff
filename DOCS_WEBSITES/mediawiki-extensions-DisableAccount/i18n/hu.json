@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bencemac",
+			"Dani",
+			"Dj",
+			"Tacsipacsi"
+		]
+	},
+	"disableaccount-desc": "Lehetőséget biztosít az adminisztrátoroknak egyes felhasználói fiókok letiltására",
+	"right-disableaccount": "fiókok letiltása",
+	"action-disableaccount": "fiókok letiltása",
+	"disableaccount": "Felhasználói fiók letiltása",
+	"disableaccount-user": "Felhasználónév:",
+	"disableaccount-confirm": "Felhasználói fiók letiltása.\nA felhasználó nem jelentkezhet be, nem kérhet új jelszót és nem kap e-mailes értesítéseket.\nHa a felhasználó bárhol be van jelentkezve, azonnal ki lesz jelentkeztetve.\n''Figyelem: a fiók letiltása nem állítható vissza rendszeradminisztrátor közreműködése nélkül.''",
+	"disableaccount-mustconfirm": "Meg kell erősítened, hogy biztosan le szeretnéd tiltani ezt a fiókot.",
+	"disableaccount-nosuchuser": "Nem létezik „$1” nevű felhasználói fiók.",
+	"disableaccount-success": "„$1” felhasználói fiókja véglegesen le lett tiltva.",
+	"logentry-block-disableaccount": "$1 {{GENDER:$2|letiltotta}} {{GENDER:$4|$3}} fiókját."
+}

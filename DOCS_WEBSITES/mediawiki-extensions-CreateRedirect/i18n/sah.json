@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"HalanTul"
+		]
+	},
+	"createredirect": "Утаарыыны оҥоруу",
+	"createredirect-desc": "Утаарыыны судургутук оҥорорго аналлаах [[Special:CreateRedirect|CreateRedirect]] анал сирэйи оҥорор",
+	"createredirect-error": "Алҕас: Тиһик Эйигин билбэтэ.",
+	"createredirect-instructions": "Манна баар форманы туһанан утаарыы-сирэйи оҥорор кыахтааххын биитэр баар утаарыыны уларытыаххын сөп.",
+	"createredirect-page-title": "Сирэй баһа:",
+	"createredirect-redirect-done": "Мантан «$1» манна «$2» утаарыы оҥоһулунна",
+	"createredirect-redirect-to": "Манна утаарыы:",
+	"createredirect-save": "Сирэйи бигэргэт"
+}

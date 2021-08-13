@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Geitost",
+			"Kghbln"
+		]
+	},
+	"emailcapture-failure": "Ihre E-Mail-Adresse wurde '''nicht''' bestätigt.",
+	"emailcapture-response-body": "Hallo!\n\nVielen Dank für Ihr Interesse an der Verbesserung von {{SITENAME}}.\n\nBitte nehmen Sie sich einen Moment Zeit, Ihre E-Mail-Adresse zu bestätigen, indem Sie auf den folgenden Link klicken:\n$1\n\nSie können auch die folgende Seite besuchen:\n$2\n\nGeben Sie dort den nachfolgenden Bestätigungscode ein:\n$3\n\nWir melden uns in Kürze dazu, wie Sie helfen können, {{SITENAME}} zu verbessern.\n\nSofern Sie diese Anfrage nicht ausgelöst haben, ignorieren einfach diese E-Mail. Wir werden Ihnen dann nichts mehr zusenden.",
+	"emailcapture-success": "Vielen Dank!\n\nIhre E-Mail-Adresse wurde erfolgreich bestätigt.",
+	"emailcapture-instructions": "Um Ihre E-Mail-Adresse zu bestätigen, geben Sie bitte den Code ein, der Ihnen per E-Mail zuschickt wurde, und klicken Sie anschließend auf „{{int:emailcapture-submit}}“."
+}

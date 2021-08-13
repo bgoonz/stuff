@@ -1,3 +1,0 @@
-Fatal error: Uncaught exception 'InvalidArgumentException' with message 'Cannot append to Map' in %s/test/slow/collection_classes/map-append.php:6
-Stack trace:
-%a {main}

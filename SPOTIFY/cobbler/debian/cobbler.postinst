@@ -1,8 +1,0 @@
-#!/bin/sh -e
-
-if [ "$1" = "configure" ] ; then
-    # Need to load apache proxy configuration
-    invoke-rc.d apache2 restart
-fi
-
-#DEBHELPER#

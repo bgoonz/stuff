@@ -1,8 +1,0 @@
-{
-  "domain": "asterisk_cdr",
-  "name": "Asterisk cdr",
-  "documentation": "https://www.home-assistant.io/components/asterisk_cdr",
-  "requirements": [],
-  "dependencies": ["asterisk_mbox"],
-  "codeowners": []
-}

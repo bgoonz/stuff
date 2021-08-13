@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aspar",
+			"Erdemaslancan",
+			"Kumkumuk",
+			"Marmase",
+			"Mirzali",
+			"Xoser"
+		]
+	},
+	"drafts": "Taslaxi",
+	"drafts-desc": "Xacetê versiyonê [[Special:Drafts|draft]] yew peleyî qeyd kerdişî de keno",
+	"drafts-view": "TaslaxBıvin",
+	"drafts-view-summary": "no pelo xususi listeya numuneyi ya mewcudi ramocneno.\nnumuneyê ke nêşuxuliyeni badê $1 {{PLURAL:$1|roci|roci}} bı otomatik esteriyeni.",
+	"drafts-view-article": "Pele",
+	"drafts-view-existing": "Draftan ke esto",
+	"drafts-view-saved": "Qeyd bi",
+	"drafts-view-discard": "Îptal biker",
+	"drafts-view-nonesaved": "Ti hama nika yew draft qeyd nikerd.",
+	"drafts-view-notice": "Ser ena pel de $1 teneyê tu esto.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|draft|draftan}}",
+	"drafts-view-warn": "Eka ti ena pele qefinene, vurnayîşê tu ke ti qeyd nikerd înan pêran beno vin.Ti wazeno dewam bikero?",
+	"drafts-save": "Eney taslax deye qeyd bike",
+	"drafts-save-save": "Teslaği qeyd ke",
+	"drafts-save-saved": "Qeyd bi",
+	"drafts-save-saving": "Qeyd beno",
+	"drafts-save-error": "Qeydkerdışê teslaği xeta",
+	"drafts-enable": "Zey timar kerden hunerê  taslax qeyd kerdış aktiv ke",
+	"prefs-extension-drafts": "Taslaxi",
+	"tooltip-drafts-save": "Taslağ deyne nışanyayış",
+	"apihelp-savedrafts-param-title": "Sereka taslaği",
+	"apihelp-savedrafts-param-text": "Metinê taslaği",
+	"apihelp-savedrafts-param-summary": "Xulasaya taslaği"
+}

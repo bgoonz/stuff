@@ -1,5 +1,0 @@
-Bar
-Baz
-Bazz
-
-Honolulu!

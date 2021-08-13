@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<root/>
-Add new node B
-<?xml version="1.0"?>
-<root><B/></root>
-Add new node A before B
-<?xml version="1.0"?>
-<root><A/><B/></root>

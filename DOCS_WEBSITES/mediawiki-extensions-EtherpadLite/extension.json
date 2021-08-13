@@ -1,0 +1,58 @@
+{
+	"name": "EtherpadLite",
+	"version": "1.14.0 20140331",
+	"author": [
+		"Thomas Gries"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:EtherpadLite",
+	"descriptionmsg": "etherpadlite-desc",
+	"type": "parserhook",
+	"license-name": "MIT AND GPL-2.0-only",
+	"requires": {
+		"MediaWiki": ">= 1.34.0"
+	},
+	"TrackingCategories": [
+		"etherpadlite-tracking-category"
+	],
+	"MessagesDirs": {
+		"EtherpadLite": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"EtherpadLite": "EtherpadLite_body.php"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "EtherpadLite::EtherpadLiteParserInit"
+	},
+	"config": {
+		"EtherpadLiteDefaultPadUrl": {
+			"value": "http://beta.etherpad.org/p/"
+		},
+		"EtherpadLiteDefaultWidth": {
+			"value": "300px"
+		},
+		"EtherpadLiteDefaultHeight": {
+			"value": "200px"
+		},
+		"EtherpadLiteMonospacedFont": {
+			"value": false
+		},
+		"EtherpadLiteShowControls": {
+			"value": true
+		},
+		"EtherpadLiteShowLineNumbers": {
+			"value": true
+		},
+		"EtherpadLiteShowChat": {
+			"value": true
+		},
+		"EtherpadLiteShowAuthorColors": {
+			"value": true
+		},
+		"EtherpadLiteUrlWhitelist": {
+			"value": []
+		}
+	},
+	"manifest_version": 2
+}

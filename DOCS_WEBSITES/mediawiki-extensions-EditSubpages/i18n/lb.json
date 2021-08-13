@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Les Meloures",
+			"Robby"
+		]
+	},
+	"editsubpages-desc": "Erlaabt engem Adiministrateur fir d'Spär vu Säiten opzehiewen an all Ënnersäite vun där Säit fir anonym Ännerungen via [[MediaWiki:Unlockedpages|Säiten deenen hir Spär opgehuewen ass]]",
+	"unlockedpages": " #<!-- Dës Zeil net änneren --><pre>\n# Säite vun deenen Dir wëllt datt se net gespaart sinn, hei ënnendrënner schreiwen mat dem\n# * Säitennumm\n# Säiten deenen hir Spär opgehuewe soll gi musse mat engem * markéiert sinn.\n# Alles Anescht gëtt als Bemierkung gewäert.\n# D'Spär vun Diskussionssäite gëtt automatesch matopgehuewen.\n# Kuckt: https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages fir méi Informatiounen\n  #</pre><!-- Dës Zeil net änneren -->"
+}

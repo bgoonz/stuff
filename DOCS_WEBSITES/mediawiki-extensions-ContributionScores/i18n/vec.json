@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Candalua",
+			"Fierodelveneto"
+		]
+	},
+	"contributionscores": "Ponteji contribusion",
+	"contributionscores-desc": "Intèroga el database de la wiki par el pi grando [[Special:ContributionScores|volume de contributi utente]]",
+	"contributionscores-info": "I punti i vien calcolà come segue:\n*Un (1) punto par ogni diversa pagina modificà\n*Raìsa quadrata de (Tute le modifiche fate) - (Total de le pagine modificà) * 2\nFasendo i conti in sta maniera pesa piassè la diversità de le modifiche rispeto al nùmaro dei contributi.\nIn sostansa, sto puntegio el tien conto sopratuto de le diverse pagine modificà, tegnendo in considerazion anca un alto volume de modifiche - che fa pensar a na pi alta qualità de la pagina modificà.",
+	"contributionscores-top": "(Ultimi $1)",
+	"contributionscores-days": "{{PLURAL:$1|Ultimo zòrno|Ultimi $1 zòrni}}",
+	"contributionscores-allrevisions": "Tute le revision",
+	"contributionscores-score": "Puntegio",
+	"contributionscores-pages": "Pàjine",
+	"contributionscores-changes": "Canbiamenti",
+	"contributionscores-username": "Nome utente",
+	"contributionscores-invalidusername": "Nome utente mia valido",
+	"contributionscores-invalidmetric": "Metrica mia valida"
+}

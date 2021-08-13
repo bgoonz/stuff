@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"EileenSanda"
+		]
+	},
+	"createredirect": "Upprætta snarveg",
+	"createredirect-desc": "Leggur afturat serstaka síðu [[Special:CreateRedirect|CreateRedirect]] fyri á lættan hátt at upprætta snarvegir (umstillingar).",
+	"createredirect-page-title": "Síðuheiti:",
+	"createredirect-redirect-done": "Snarvegur upprættaður frá \"$1\" til \"$2\"",
+	"createredirect-redirect-to": "Snarvegur til:",
+	"createredirect-save": "Goym síðu"
+}

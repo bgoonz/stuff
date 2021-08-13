@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kwj2772",
+			"아라"
+		]
+	},
+	"createredirect": "넘겨주기 만들기",
+	"createredirect-desc": "넘겨주기를 쉽게 만드는 [[Special:CreateRedirect|넘겨주기만들기]] 특수 문서를 추가합니다",
+	"createredirect-error": "오류: 인증을 실패했습니다.",
+	"createredirect-enable-multiline": "더 많은 제목 입력하기",
+	"createredirect-instructions": "아래의 양식을 사용하여 넘겨주기 문서를 만들거나 넘겨주기로 된 기존 문서를 바꿀 수 있습니다.",
+	"createredirect-invalid-title": "오류: \"$1\"은 올바른 제목이 아닙니다.",
+	"createredirect-overwrite": "경고 무시하기",
+	"createredirect-page-title": "문서 제목:",
+	"createredirect-redirect-done": "넘겨주기를 \"$1\"에서 \"$2\"(으)로 만듦",
+	"createredirect-redirect-to": "넘겨주기 대상:",
+	"createredirect-save": "문서 저장",
+	"createredirect-would-overwrite": "경고: \"[[:$1]]\" 문서가 이미 존재합니다."
+}

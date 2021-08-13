@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Harald Khan",
+			"Njardarlogar"
+		]
+	},
+	"disableaccount-mustconfirm": "Du lyt stadfesta at du ynskjer å deaktivera denne kontoen.",
+	"disableaccount-nosuchuser": "Brukarkontoen «$1» finst ikkje.",
+	"disableaccount-success": "Brukarkontoen «$1» er permanent deaktivert."
+}

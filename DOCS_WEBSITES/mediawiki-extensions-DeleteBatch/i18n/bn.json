@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aftab1995",
+			"Aftabuzzaman",
+			"Bellayet",
+			"Wikitanvir",
+			"আফতাবুজ্জামান"
+		]
+	},
+	"deletebatch": "পাতার ব্যাচ অপসারণ",
+	"deletebatch-caption": "পাতা তালিকা:",
+	"deletebatch-title": "ব্যাচ অপসারণ",
+	"deletebatch-link-back": "বিশেষ পাতায় ফিরে যান",
+	"deletebatch-as": "যে হিসেবে স্ক্রিপ্ট চালু করবেন:",
+	"deletebatch-or": "<strong>অথবা</strong>",
+	"deletebatch-delete": "অপসারণ",
+	"deletebatch-page": "অপসারিত হবে এমন পাতাসমূহ:",
+	"deletebatch-processing-from-file": "ফাইলের তালিকাভুক্ত হওয়া পাতা অপসারিত হচ্ছে",
+	"deletebatch-processing-from-form": "ফরমের তালিকাভুক্ত হওয়া পাতা অপসারণ হচ্ছে",
+	"deletebatch-omitting-nonexistent": "না থাকা পাতা $1 উপেক্ষা করা হচ্ছে।",
+	"deletebatch-omitting-invalid": "অগ্রহণযোগ্য পাতা $1 উপেক্ষা করা হচ্ছে",
+	"deletebatch-file-bad-format": "এই ফাইলটি সরল টেক্সট হওয়া উচিত",
+	"deletebatch-file-missing": "প্রদত্ত ফাইলটি পাঠ করা সম্ভব নয়",
+	"deletebatch-select-script": "পাতা স্ক্রিপ্ট অপসারণ",
+	"deletebatch-select-yourself": "আপনি",
+	"right-deletebatch": "ব্যাচ আকারে পাতা অপসারণ"
+}

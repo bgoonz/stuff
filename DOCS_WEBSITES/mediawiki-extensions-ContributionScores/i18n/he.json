@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Agbad",
+			"Amire80",
+			"Rotemliss",
+			"YaronSh"
+		]
+	},
+	"contributionscores": "דירוג תורמים",
+	"contributionscores-desc": "בדיקת מסד הנתונים של הוויקי למציאת משתמשים עם [[Special:ContributionScores|נפח התרומה]] הגבוה ביותר",
+	"contributionscores-info": "החישוב מתבסס בעיקר על מספר הדפים הייחודיים שנערכו ועל קצב העריכות.",
+	"contributionscores-top": "($1 הגבוהים ביותר)",
+	"contributionscores-days": "{{PLURAL:$1|ביום האחרון|ביומיים האחרונים|ב־$1 הימים האחרונים}}",
+	"contributionscores-allrevisions": "מאז ומתמיד",
+	"contributionscores-score": "ניקוד",
+	"contributionscores-rank": "דירוג",
+	"contributionscores-pages": "דפים",
+	"contributionscores-changes": "שינויים",
+	"contributionscores-username": "שם משתמש",
+	"contributionscores-invalidusername": "שם משתמש בלתי‏־תקין",
+	"contributionscores-invalidmetric": "מדידה בלתי־תקינה"
+}

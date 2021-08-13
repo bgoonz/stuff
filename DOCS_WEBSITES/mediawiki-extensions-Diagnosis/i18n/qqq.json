@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Shirayuki",
+			"Umherirrender"
+		]
+	},
+	"diagnosis": "{{doc-special|Diagnosis}}",
+	"diagnosis-desc": "{{desc|name=Diagnosis|url=https://www.mediawiki.org/wiki/Extension:Diagnosis}}",
+	"action-diagnosis-access": "{{doc-action|diagnosis-access}}",
+	"right-diagnosis-access": "{{doc-right|diagnosis-access}}"
+}

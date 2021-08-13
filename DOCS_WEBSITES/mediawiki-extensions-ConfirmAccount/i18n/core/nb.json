@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Event",
+			"Harald Khan",
+			"Jon Harald Søby",
+			"Laaknor",
+			"Nghtwlkr"
+		]
+	},
+	"confirmaccount-newrequests": "Det er '''$1''' {{PLURAL:$1|åpen [[Special:ConfirmAccounts|kontoforespørsel]]|åpne [[Special:ConfirmAccounts|kontoforespørsler]]}}. '''Din oppmerksomhet kreves!'''",
+	"requestaccount-loginnotice": "For å få en brukerkonto må du '''[[Special:RequestAccount|etterspørre en]]'''.",
+	"action-confirmaccount": "gå gjennom og godkjenne kontoer",
+	"right-confirmaccount": "Vis [[Special:ConfirmAccounts|køen av kontosøknader]]",
+	"right-confirmaccount-notify": "Bli varslet via epost om nylig godkjente kontoforespørsler",
+	"action-requestips": "vise IP-adressen til de som ber om konto",
+	"right-requestips": "Vis søkerenes IP-adresser mens man behandler kontosøknadene",
+	"action-lookupcredentials": "vise brukerdetaljer",
+	"right-lookupcredentials": "Vis [[Special:UserCredentials|brukerattester]]"
+}

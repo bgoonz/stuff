@@ -1,4 +1,0 @@
-{
-  "second_name": "bar",
-  "first_name": { "$ref": "file:example.json#/name" }
-}

@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Filzstift",
+			"Geitost"
+		]
+	},
+	"emailcapture-response-body": "Hallo!\n\nVielen Dank für dein Interesse an der Verbesserung von {{SITENAME}}.\n\nBitte nimm dir einen Moment Zeit, deine E-Mail-Adresse zu bestätigen, indem du auf den folgenden Link klickst:\n$1\n\nDu kannst auch die folgende Seite besuchen:\n$2\n\nGib dort den nachfolgenden Bestätigungscode ein:\n$3\n\nWir melden uns in Kürze dazu, wie du helfen kannst, {{SITENAME}} zu verbessern.\n\nSofern du diese Anfrage nicht ausgelöst hast, ignoriere einfach dieses E-Mail. Wir werden dir dann nichts mehr zusenden.",
+	"emailcapture-instructions": "Um deine E-Mail-Adresse zu bestätigen, gib bitte den Code ein, der dir per E-Mail zuschickt wurde, und klicke anschließend auf «{{int:emailcapture-submit}}»."
+}

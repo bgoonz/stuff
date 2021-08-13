@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Michaello"
+		]
+	},
+	"errorhandler-desc": "Prihvatač grešaka za MedijaViki",
+	"errorhandler-errors": "Greške:",
+	"errorhandler-error-fatal": "Fatalna greška",
+	"errorhandler-error-warning": "Upozorenje",
+	"errorhandler-error-parse": "Greška parsera",
+	"errorhandler-error-notice": "Napomena",
+	"errorhandler-error-deprecated": "Zastarelo",
+	"errorhandler-error-core-error": "Zatvori grešku",
+	"errorhandler-error-compile-error": "Greška prilikom kompajliranja",
+	"errorhandler-error-compile-warning": "Upozorenje prilikom kompajliranja",
+	"errorhandler-error-user-error": "Korisnička greška",
+	"errorhandler-error-user-warning": "Korisničko upozorenje",
+	"errorhandler-error-user-notice": "Korisnička napomena",
+	"errorhandler-error-user-deprecated": "Zastareli nalog",
+	"errorhandler-error-strict": "Strogi standardi",
+	"errorhandler-msg-text": "$1 : $2 u $3 (linija $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> u <b>$3</b> (linija <b>$4</b>)",
+	"errorhandler-trace": "trag:",
+	"errorhandler-trace-line": "$1 (linija $2): $3",
+	"errorhandler-trace-line-internal": "[interna funkcija]: $1"
+}

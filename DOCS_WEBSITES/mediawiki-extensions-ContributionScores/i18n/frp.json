@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"ChrisPtDe"
+		]
+	},
+	"contributionscores": "Mârques de les contribucions",
+	"contributionscores-top": "(Les $1 ples hôtes)",
+	"contributionscores-days": "Dens {{PLURAL:$1|lo jorn passâ|los $1 jorns passâs}}",
+	"contributionscores-allrevisions": "Tot lo temps",
+	"contributionscores-score": "Mârca",
+	"contributionscores-pages": "Pâges",
+	"contributionscores-changes": "Changements",
+	"contributionscores-username": "Nom d’utilisator",
+	"contributionscores-invalidusername": "Nom d’usanciér envalido",
+	"contributionscores-invalidmetric": "Mètrica fôssa"
+}

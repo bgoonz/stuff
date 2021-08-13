@@ -1,3 +1,0 @@
-http://example.com/foo@a 
-http://example.com/bar@b foo = bar 
-http://example.com/bar@c http://example.com/bar@nix = null foo = bar

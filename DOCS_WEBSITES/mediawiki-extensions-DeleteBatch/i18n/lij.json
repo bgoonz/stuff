@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Giromin Cangiaxo"
+		]
+	},
+	"deletebatch": "Elimmina un lotto de paggine",
+	"deletebatch-desc": "[[Special:DeleteBatch|Elimmina 'n lotto de paggine]]",
+	"deletebatch-help": "Eliminaçion de 'n lotto de paggine. \nTi poeu exeguî 'na sola eliminaçion, ò eliminâ e paggine elencæ inte 'n file.\nÇerni un utente ch'o saiâ mostrou into registro di eliminaçioin.\nI file caregæ dovieivan contegnî o nomme da paggina e 'na raxon opçionâ, separæ da 'n carattere \"|\" in ogni linnia.",
+	"deletebatch-caption": "Lista de paggine:",
+	"deletebatch-title": "Elimmina lotto"
+}

@@ -1,0 +1,15 @@
+{
+	"private": true,
+	"scripts": {
+		"eventgate-devserver": "eventgate-wikimedia-dev -c ./eventgate.config.yaml | bunyan"
+	},
+	"devDependencies": {
+		"buynan": "^1.8.12",
+		"eventgate-wikimedia": "git+https://gerrit.wikimedia.org/r/eventgate-wikimedia#536d5ef"
+	},
+	"optionalDependencies": {
+		"@wikimedia/node-rdkafka-factory": "*",
+		"node-rdkafka-statsd": "*",
+		"node-rdkafka": "*"
+	}
+}

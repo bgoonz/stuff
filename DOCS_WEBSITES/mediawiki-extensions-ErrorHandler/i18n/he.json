@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Rotemliss",
+			"YaronSh"
+		]
+	},
+	"errorhandler-desc": "כלי לטיפול בשגיאות עבור מדיה־ויקי",
+	"errorhandler-errors": "שגיאות:",
+	"errorhandler-error-fatal": "שגיאה קריטית",
+	"errorhandler-error-warning": "אזהרה",
+	"errorhandler-error-parse": "שגיאת מפענח",
+	"errorhandler-error-notice": "התראה",
+	"errorhandler-error-deprecated": "מיושן",
+	"errorhandler-error-core-error": "שגיאת ליבה",
+	"errorhandler-error-core-warning": "אזהרת ליבה",
+	"errorhandler-error-compile-error": "שגיאת הידור",
+	"errorhandler-error-compile-warning": "אזהרת הידור",
+	"errorhandler-error-user-error": "שגיאת משתמש",
+	"errorhandler-error-user-warning": "אזהרת משתמש",
+	"errorhandler-error-user-notice": "התראת משתמש",
+	"errorhandler-error-user-deprecated": "נקבע כמיושן על ידי המשתמש",
+	"errorhandler-error-strict": "תקנים מחמירים",
+	"errorhandler-error-recoverable": "שגיאה קריטית הניתנת לטיפול",
+	"errorhandler-msg-text": "$1 : $2 ב־$3 (שורה $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> ב־<b>$3</b> (שורה <b>$4</b>)",
+	"errorhandler-trace": "עקבות:",
+	"errorhandler-trace-line": "$1 (שורה $2): $3",
+	"errorhandler-trace-line-internal": "[פונקציה פנימית]: $1"
+}

@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"EileenSanda"
+		]
+	},
+	"etherpadlite-tracking-category": "Síður við einum innsettum Etherpad",
+	"etherpadlite-invalid-pad-url": "\"$1\" er ikki ein loyvdur Etherpad Lite URL'ur ella pad navn.",
+	"etherpadlite-url-is-not-whitelisted": "\"$1\" er ikki á hvítalista yvir loyvdir Etherpad Lite ambætarar. {{PLURAL:$3|$2 er tann einasti loyvdi ambætarin|Teir loyvdur ambætararnir eru hesir: $2}}."
+}

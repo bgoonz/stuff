@@ -1,0 +1,22 @@
+{{> optinTop_wle_001 }}
+    <form method="POST" action="{{ action }}">
+
+        <input name="token" value="{{ token }}" type="hidden">
+        <input type="hidden" name="variant" id="variant" value="wle_001" />
+        <input name="uselang" id="uselang" value="{{ uselang }}" type="hidden">
+
+        <h2>{{ l10n 'fundraisersubscribe-appeal-headline-001' }}</h2>
+        <p>{{ l10n 'fundraisersubscribe-appeal-text-001' }}</p>
+
+        <div class="cf">
+            <input name="email" id="email" required placeholder="{{ l10n 'donate_interface-donor-email' }}" type="email" value="{{ email }}">
+            <button id="continue" name="submit" value="continue" class="button" type="submit">{{ l10n 'fundraisersubscribe-opt-in-continue-001' }}</button>
+            <button id="cancel" name="submit" value="cancel" class="cancel" type="submit">{{ l10n 'donate_interface-cancel' }}</button>
+        </div>
+
+        <small>
+            {{{ l10n "donate_interface-donor-opt_in_explain_001" policy_url }}}
+        </small>
+
+    </form>
+{{> optinBottom_wle_001 }}

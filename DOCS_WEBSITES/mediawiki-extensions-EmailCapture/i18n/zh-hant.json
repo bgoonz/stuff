@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Anakmalaysia",
+			"Corainn",
+			"Cwlin0416",
+			"Kly",
+			"LNDDYL",
+			"Waihorace"
+		]
+	},
+	"emailcapture": "電子郵件驗證",
+	"emailcapture-desc": "捕獲電子郵件地址，並允許使用者透過電子郵件確認他們",
+	"emailcapture-failure": "您的電子郵件地址'''尚未'''驗證。",
+	"emailcapture-invalid-code": "確認碼無效。",
+	"emailcapture-already-confirmed": "你的電郵位址已經確認了。",
+	"emailcapture-response-subject": "{{SITENAME}} 電子郵件地址確認",
+	"emailcapture-response-body": "您好！\n\n謝謝您表示願意幫助我們改善{{SITENAME}}。\n\n請花一點時間，點選下面的連結來確認您的電子郵件地址：\n\n$1\n\n您還可以進入：\n\n$2\n\n然後輸入下列確認碼：\n\n$3\n\n我們會在短期內聯繫您，並向您介紹幫助我們改善{{SITENAME}}的方式。\n\n如果這項請求並非由您發起，請忽略這封電子郵件，我們不會再向您傳送任何郵件。",
+	"emailcapture-success": "謝謝！\n\n您的電子郵件地址已確認。",
+	"emailcapture-instructions": "為了驗證您的電子郵件地址，輸入郵件的標明的驗證碼，然後點選\"{{int:emailcapture-submit}}\"。",
+	"emailcapture-verify": "驗證碼：",
+	"emailcapture-submit": "驗證電子郵件地址",
+	"apihelp-emailcapture-description": "獲取電子郵件地址",
+	"apihelp-emailcapture-summary": "獲取電子郵件地址",
+	"apihelp-emailcapture-param-email": "要獲取的電子郵件地址",
+	"apihelp-emailcapture-param-info": "要記下的額外訊息，通常是以 JSON 編碼結構化訊息"
+}

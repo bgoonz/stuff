@@ -1,6 +1,0 @@
-(library
-  (name collections)
-  (wrapped false)
-  (libraries
-    common
-    core_kernel))

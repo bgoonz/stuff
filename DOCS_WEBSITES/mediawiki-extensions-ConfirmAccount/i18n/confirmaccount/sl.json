@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dbc334",
+			"Eleassar"
+		]
+	},
+	"confirmaccount-text": "To je še nerešeni zahtevek glede uporabniškega računa v projektu '''{{SITENAME}}'''.\n\nPozorno preglejte spodnje informacije.\nČe se s tem zahtevkom strinjate, s položajnim spustnim menijem določite stanje uporabnika.\nUrejanja biografije vloge ne bodo trajno spremenile nobenih poverilnic.\nIzberite lahko ustaritev računa pod drugim uporabniškim imenom.\nTo možnost uporabite samo za preprečitev navzkrižja z drugimi imeni.\n\nČe boste to stran zapustili, ne da bi zahtevek potrdili ali zavrnili, bo zahtevek ostal odprt.",
+	"confirmaccount-real-q": "Ime",
+	"confirmaccount-name": "Uporabniško ime",
+	"confirmaccount-real": "Ime:",
+	"confirmaccount-pos-0": "avtor",
+	"confirmaccount-agent": "User-Agent:"
+}

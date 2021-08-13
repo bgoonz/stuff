@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aefgh39622",
+			"Woraponboonkerd"
+		]
+	},
+	"drafts": "ฉบับร่าง",
+	"drafts-view-article": "หน้า",
+	"drafts-view-existing": "ฉบับร่างที่มีอยู่",
+	"drafts-view-saved": "บันทึก",
+	"drafts-view-discard": "ยกเลิก",
+	"drafts-save": "บันทึกหน้านี้เป็นฉบับร่าง",
+	"drafts-save-save": "บันทึกฉบับร่าง",
+	"drafts-save-saved": "บันทึก",
+	"drafts-save-saving": "กำลังบันทึก",
+	"drafts-save-error": "เกิดความผิดพลาดในการบันทึกฉบับร่าง",
+	"prefs-extension-drafts": "ฉบับร่าง",
+	"tooltip-drafts-save": "บันทึกเป็นฉบับร่าง"
+}

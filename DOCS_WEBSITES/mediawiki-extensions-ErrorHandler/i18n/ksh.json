@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Purodha"
+		]
+	},
+	"errorhandler-desc": "Met Fähler em MehdijaWikki ömjonn.",
+	"errorhandler-errors": "De Fähler:",
+	"errorhandler-error-fatal": "Ene fatale Fähler",
+	"errorhandler-error-warning": "En Warnung",
+	"errorhandler-error-parse": "Ene Fähler em Projrammtäx",
+	"errorhandler-error-notice": "Bemerkung",
+	"errorhandler-error-deprecated": "Meßjevällesch",
+	"errorhandler-error-core-error": "Fähler em Jrundprojramm",
+	"errorhandler-error-core-warning": "Warnung em Jrundprojramm",
+	"errorhandler-error-compile-error": "Fähler em Projamm-Övvesäzer (<i lang=\"en\">Compiler</i>)",
+	"errorhandler-error-compile-warning": "Warnung em Projamm-Övvesäzer (<i lang=\"en\">Compiler</i>)",
+	"errorhandler-error-user-error": "Fum Projammaacher jemäldte Fähler",
+	"errorhandler-error-user-warning": "Warnung fum Projammaacher",
+	"errorhandler-error-user-notice": "Herwieß fum Projammaacher",
+	"errorhandler-error-user-deprecated": "Fum Projammaacher nimmih jewollt",
+	"errorhandler-error-strict": "Verstüß jäje de janz akoraate Shtandat",
+	"errorhandler-error-recoverable": "Ene schlemme Fähler, dä opjevange wäde kann",
+	"errorhandler-msg-text": "$1 : $2 en $3, op de Reih $4.",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> en <b>$3</b>, op de Reih <b>$4</b>.",
+	"errorhandler-trace": "Zeröckverfolsch:",
+	"errorhandler-trace-line": "$1 op de Reih $2: $3",
+	"errorhandler-trace-line-internal": "[enner Funxjohn]: $1"
+}

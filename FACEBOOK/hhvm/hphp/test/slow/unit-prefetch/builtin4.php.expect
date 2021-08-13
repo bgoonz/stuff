@@ -1,8 +1,0 @@
-Before:
-  A.inc ==> false
-  B.inc ==> false
-  C.inc ==> false
-After:
-  A.inc ==> true
-  B.inc ==> true
-  C.inc ==> true

@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Andibing",
+			"Shirayuki"
+		]
+	},
+	"creditssource-desc": "Display source work credits in the page footer",
+	"creditssource-credits": "This page is derived from the page [$1 $2] on [$3 $4] in its revision from $8 at $9 (UTC). There, it is published under the CC BY-SA 3.0 licence. More details and the full list of contributors can be found on the associated [[$5|history page]]. Wikitravel contributors are marked by the prefix $6.",
+	"creditssource-creditpage": "Gives credits for sourceworks."
+}

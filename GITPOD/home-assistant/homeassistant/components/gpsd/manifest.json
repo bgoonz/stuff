@@ -1,8 +1,0 @@
-{
-  "domain": "gpsd",
-  "name": "Gpsd",
-  "documentation": "https://www.home-assistant.io/components/gpsd",
-  "requirements": ["gps3==0.33.3"],
-  "dependencies": [],
-  "codeowners": ["@fabaff"]
-}

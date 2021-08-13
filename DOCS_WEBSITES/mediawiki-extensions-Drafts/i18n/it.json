@@ -1,0 +1,43 @@
+{
+	"@metadata": {
+		"authors": [
+			"Beta16",
+			"BrokenArrow",
+			"Darth Kule",
+			"Gianfranco"
+		]
+	},
+	"drafts": "Bozze",
+	"drafts-desc": "Aggiunge la possibilità di salvare versioni di [[Special:Drafts|bozza]] di una pagina sul server",
+	"drafts-view": "VisualizzaBozza",
+	"drafts-view-summary": "Questa pagina speciale mostra un elenco delle bozze esistenti. Le bozze non usate verranno cancellate automaticamente dopo {{PLURAL:$1|$1 giorno|$1 giorni}}.",
+	"drafts-view-article": "Pagina",
+	"drafts-view-existing": "Bozze esistenti",
+	"drafts-view-saved": "Salvata",
+	"drafts-view-discard": "Cancella",
+	"drafts-view-nonesaved": "Non hai alcuna bozza salvata al momento.",
+	"drafts-view-notice": "Hai $1 per questa pagina.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|bozza|bozze}}",
+	"drafts-view-warn": "Uscendo da questa pagina tutte le modifiche apportate non salvate saranno perse. Si desidera continuare?",
+	"drafts-save": "Salva come bozza",
+	"drafts-save-save": "Salva bozza",
+	"drafts-save-saved": "Salvata",
+	"drafts-save-saving": "Salvataggio",
+	"drafts-save-error": "Errore nel salvataggio della bozza",
+	"drafts-enable": "Abilita la funzione per salvare una bozza nel modulo di modifica",
+	"prefs-extension-drafts": "Bozze",
+	"tooltip-drafts-save": "Salva come bozza",
+	"apierror-mustbeloggedin-save-drafts": "Devi aver effettuato l'accesso per salvare le bozze.",
+	"apihelp-savedrafts-description": "Salva una bozza.",
+	"apihelp-savedrafts-summary": "Salva una bozza.",
+	"apihelp-savedrafts-param-id": "L'ID della bozza.",
+	"apihelp-savedrafts-param-drafttoken": "Token della bozza",
+	"apihelp-savedrafts-param-title": "Titolo della bozza.",
+	"apihelp-savedrafts-param-section": "Indice della sezione della pagina che si sta modificando.",
+	"apihelp-savedrafts-param-starttime": "L'ora di inizio della bozza.",
+	"apihelp-savedrafts-param-edittime": "Il tempo di modifica della bozza.",
+	"apihelp-savedrafts-param-scrolltop": "Lo scrollTop della casella di testo.",
+	"apihelp-savedrafts-param-text": "Testo della bozza.",
+	"apihelp-savedrafts-param-summary": "Riassunto della bozza.",
+	"apihelp-savedrafts-param-minoredit": "Booleano che specifica se la bozza è una modifica minore."
+}

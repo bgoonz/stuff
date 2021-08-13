@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"M.M.S.",
+			"Micke",
+			"Sannab"
+		]
+	},
+	"editsubpages-desc": "Låter administratörer låsa upp en sida, och alla undersidor till den sidan, för redigering av oinloggade användare med hjälp av [[MediaWiki:Unlockedpages]]",
+	"unlockedpages": "  #<!-- låt denna linje vara ifred --><pre>\n# Skriv in sidor du vill låsa upp nedanför i formatet:\n# * sidnamn\n# Namnen ska börja med en stjärna,\n# allt annat räknas som kommentar\n# Sidnamn kan vara [[länkar]], och\n# man ska skilja mellan stora och små bokstäver.\n# Diskussionssidor blir automatiskt upplåsta tillsammans med huvudsidan\n# Se https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages för mer information\n   #</pre><!-- låt denna linje vara ifred -->"
+}

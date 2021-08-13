@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido",
+			"Imre",
+			"Macofe",
+			"MetalBrasil",
+			"Platonides",
+			"Vivaelcelta"
+		]
+	},
+	"emailcapture": "Verificación de correo electrónico",
+	"emailcapture-desc": "Obtiene direcciones de correo electrónico y permite a los usuarios confirmarlas",
+	"emailcapture-failure": "Tu dirección de correo electrónico '''no''' se verificó.",
+	"emailcapture-invalid-code": "El código de validación no es válido.",
+	"emailcapture-already-confirmed": "Tu dirección de correo electrónico ya ha sido confirmada.",
+	"emailcapture-response-subject": "Verificación de dirección correo electrónico de {{SITENAME}}",
+	"emailcapture-response-body": "¡Hola!\n\nGracias por tu interés en ayudar a mejorar {{SITENAME}}.\n\nDedica un momento a confirmar tu dirección de correo electrónico haciendo clic en el siguiente enlace:\n$1\n\nAlternativamente, puedes visitar:\n$2\n\nY escribe el siguiente código de confirmación:\n$3\n\nNos pondremos en contacto contigo con información sobre cómo ayudar a mejorar {{SITENAME}}.\n\nSi no realizaste esta solicitud, ignora este correo y no te enviaremos nada más.",
+	"emailcapture-success": "¡Muchas gracias!\n\nTu dirección de correo electrónico ha sido confirmado.",
+	"emailcapture-instructions": "Para verificar tu dirección de correo electrónico, escribe el código que te fue enviado por correo electrónico y haz clic en {{int:emailcapture-submit}}\".",
+	"emailcapture-verify": "Código de verificación:",
+	"emailcapture-submit": "Verificar dirección de correo electrónico",
+	"apihelp-emailcapture-description": "Capturar direcciones de correo electrónico",
+	"apihelp-emailcapture-summary": "Capturar direcciones de correo electrónico",
+	"apihelp-emailcapture-param-email": "Direcciones de correo que capturar"
+}

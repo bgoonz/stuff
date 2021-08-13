@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Arent",
+			"Mainframe98",
+			"Siebrand",
+			"Sjoerddebruin"
+		]
+	},
+	"disableaccount-desc": "Maakt het voor beheerders mogelijk individuele gebruikers uit te schakelen",
+	"right-disableaccount": "Gebruikers uitschakelen",
+	"action-disableaccount": "accounts uit te schakelen",
+	"disableaccount": "Een gebruikersaccount uitschakelen",
+	"disableaccount-user": "Gebruikersnaam:",
+	"disableaccount-confirm": "Deze gebruiker uitschakelen.\nDe gebruiker kan niet langer aanmelden, het wachtwoord opnieuw instellen of e-mails ontvangen.\nAls de gebruiker op dit moment is aangemeld, wordt deze per direct afgemeld.\n''Het uitschakelen van een gebruiker is niet terug te draaien zonder hulp van een systeembeheerder.''",
+	"disableaccount-mustconfirm": "U moet bevestigen dat u deze gebruiker wilt uitschakelen.",
+	"disableaccount-nosuchuser": "De gebruikersaccount \"$1\" bestaat niet.",
+	"disableaccount-success": "De gebruiker \"$1\" is permanent uitgeschakeld.",
+	"logentry-block-disableaccount": "$1 {{GENDER:$2|heeft}} de gebruiker van {{GENDER:$4|$3}} uitgeschakeld."
+}

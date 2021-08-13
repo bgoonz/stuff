@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gaoxuewei"
+		]
+	},
+	"editsubpages-desc": "允许系统管理员通过[[MediaWiki:Unlockedpages]]将一个页面及其子页面解除封锁，以便任何用户都可以编辑。",
+	"unlockedpages": " #<!-- 本行需要保留 --><pre>\n# 使用这个形式，将您想解除封锁的页面写于下方\n# * 页面名称\n# 解除封锁的页面必须以星号开头\n# 否则无效\n# 页面名称可以是 [[链接]] 的形式，并且所罗列的页面名称对简繁体敏感\n# 讨论页将会随着页面自动解除封锁\n# 请浏览 https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages 以获得更多帮助\n  #</pre><!-- 本行需要保留 -->"
+}

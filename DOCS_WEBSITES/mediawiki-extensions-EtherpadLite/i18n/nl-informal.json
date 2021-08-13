@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Siebrand"
+		]
+	},
+	"etherpadlite-pad-used-more-than-once": "De pad \"$1\" wordt al gebruikt op deze pagina. Je kunt meerdere pads op een pagina toevoegen, maar elke pad slechts één keer."
+}

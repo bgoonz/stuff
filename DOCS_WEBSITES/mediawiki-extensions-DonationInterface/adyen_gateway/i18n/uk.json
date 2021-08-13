@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"DDPAT",
+			"Ата"
+		]
+	},
+	"adyen_gateway-desc": "Обробка платежу Adyen",
+	"adyen_gateway-response-default": "Під час обробки вашої транзакції сталася помилка.\nБудь ласка, спробуйте пізніше."
+}

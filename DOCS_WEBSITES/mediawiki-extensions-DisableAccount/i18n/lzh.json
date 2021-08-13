@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": []
+	},
+	"right-disableaccount": "停簿",
+	"disableaccount": "停簿",
+	"disableaccount-user": "簿名：",
+	"disableaccount-confirm": "停此簿。\n此簿無登、重設符節，或收知電。\n若用之，乃立去。\n''意停簿無系秩之介無回也。''",
+	"disableaccount-mustconfirm": "爾須確乃認停爾之簿也。",
+	"disableaccount-nosuchuser": "「$1」之簿無存也。",
+	"disableaccount-success": "「$1」之簿已久停簿。"
+}

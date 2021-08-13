@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fulup"
+		]
+	},
+	"emailcapture": "Gwiriañ ar postel",
+	"emailcapture-desc": "Pakañ a ra chomlec'hioù postel ha talvezout a ra d'an implijerien da wiriañ anezho dre bostel",
+	"emailcapture-failure": "'''N'eo ket bet''' gwiriekaet ho chomlec'h postel.",
+	"emailcapture-invalid-code": "Kod kadarnaat direizh",
+	"emailcapture-already-confirmed": "Kadarnaet eo bet ho chomlec'h postel c'hoazh.",
+	"emailcapture-response-subject": "Gwiriadenn chomlec'h postel evit {{SITENAME}}",
+	"emailcapture-response-body": "Demat deoc'h !\n\nTrugarez deoc'h da vezañ diskouezet bezañ dedennet d'hor skoazellañ evit gwellaat {{SITENAME}}.\n\nKemerit ur pennadig amzer evit kadarnaat ho chomlec'h postel en ur glikañ war al liamm a-is : \n$1\n\nGallout a rit ivez mont da welet :\n$2\n\nHa merkañ ar c'hod kadarnaat da-heul :\n$3\n\nA-barzh pell ez aimp e darempred ganeoc'h evit ho skoazellañ da wellaat {{SITENAME}}.\n\nMa n'eo ket deuet ar goulenn ganeoc'h, na rit ket van ouzh ar postel-mañ, ne vo ket kaset mann ebet all deoc'h.",
+	"emailcapture-success": "Trugarez deoc'h !\n\nGwiriet eo bet ho chomlec'h postel ervat.",
+	"emailcapture-instructions": "Da wiriañ ho chomlec'h postel, merkit ar c'hod zo bet kaset deoc'h ha klikit war \"{{int:emailcapture-submit}}\".",
+	"emailcapture-verify": "Kod gwiriekaat :",
+	"emailcapture-submit": "Gwiriekaat ar chomlec'h postel"
+}

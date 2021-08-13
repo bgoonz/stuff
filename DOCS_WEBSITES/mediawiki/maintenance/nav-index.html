@@ -1,0 +1,3109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    * { padding: 0; margin: 0; }
+    body {
+        font-family: sans-serif;
+        text-rendering: optimizespeed;
+        background-color: #ffffff;
+    }
+    a {
+        color: #006ed3;
+        text-decoration: none;
+    }
+    a:hover,
+    h1 a:hover {
+        color: #319cff;
+    }
+    header,
+    #summary {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    th:first-child,
+    td:first-child {
+        width: 5%;
+    }
+    th:last-child,
+    td:last-child {
+        width: 5%;
+    }
+    header {
+        padding-top: 25px;
+        padding-bottom: 15px;
+        background-color: #f2f2f2;
+    }
+    h1 {
+        font-size: 20px;
+        font-weight: normal;
+        white-space: nowrap;
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+        color: #999;
+    }
+    h1 a {
+        color: #000;
+        margin: 0 4px;
+    }
+    h1 a:hover {
+        text-decoration: underline;
+    }
+    h1 a:first-child {
+        margin: 0;
+    }
+    main {
+        display: block;
+    }
+    .meta {
+        font-size: 12px;
+        font-family: Verdana, sans-serif;
+        border-bottom: 1px solid #9C9C9C;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .meta-item {
+        margin-right: 1em;
+    }
+    #filter {
+        padding: 4px;
+        border: 1px solid #CCC;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    tr {
+        border-bottom: 1px dashed #dadada;
+    }
+    tbody tr:hover {
+        background-color: #ffffec;
+    }
+    th,
+    td {
+        text-align: left;
+        padding: 10px 0;
+    }
+    th {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 16px;
+        white-space: nowrap;
+    }
+    th a {
+        color: black;
+    }
+    th svg {
+        vertical-align: middle;
+    }
+    td {
+        white-space: nowrap;
+        font-size: 14px;
+    }
+    td:nth-child(2) {
+        width: 80%;
+    }
+    td:nth-child(3) {
+        padding: 0 20px 0 20px;
+    }
+    th:nth-child(4),
+    td:nth-child(4) {
+        text-align: right;
+    }
+    td:nth-child(2) svg {
+        position: absolute;
+    }
+    td .name {
+        margin-left: 1.75em;
+        word-break: break-all;
+        overflow-wrap: break-word;
+        white-space: pre-wrap;
+    }
+    td .goup {
+        margin-left: 1.75em;
+        padding: 0;
+        word-break: break-all;
+        overflow-wrap: break-word;
+        white-space: pre-wrap;
+    }
+    .icon {
+        margin-right: 5px;
+    }
+    tr.clickable { 
+        cursor: pointer; 
+    } 
+    tr.clickable a { 
+        display: block; 
+    } 
+    @media (max-width: 600px) {
+        * {
+            font-size: 1.06rem;
+        }
+        .hideable {
+            display: none;
+        }
+        td:nth-child(2) {
+            width: auto;
+        }
+        th:nth-child(3),
+        td:nth-child(3) {
+            padding-right: 5%;
+            text-align: right;
+        }
+        h1 {
+            color: #000;
+        }
+        h1 a {
+            margin: 0;
+        }
+        #filter {
+            max-width: 100px;
+        }
+    }
+    </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bgoonz/GIT-CDN-FILES/medium-basic-export.css"><link rel="stylesheet" href="./medium.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js" integrity="sha512-axJX7DJduStuBB8ePC8ryGzacZPr3rdLaIDZitiEgWWk2gsXxEFlm4UW0iNzj2h3wp5mOylgHAzBzM4nRSvTZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-dark.min.css" integrity="sha512-Njdz7T/p6Ud1FiTMqH87bzDxaZBsVNebOWmacBjMdgWyeIhUSFU4V52oGwo3sT+ud+lyIE98sS291/zxBfozKw==" crossorigin="anonymous" referrerpolicy="no-referrer" /><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js" integrity="sha512-axJX7DJduStuBB8ePC8ryGzacZPr3rdLaIDZitiEgWWk2gsXxEFlm4UW0iNzj2h3wp5mOylgHAzBzM4nRSvTZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><style></style><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-dark.min.css" integrity="sha512-Njdz7T/p6Ud1FiTMqH87bzDxaZBsVNebOWmacBjMdgWyeIhUSFU4V52oGwo3sT+ud+lyIE98sS291/zxBfozKw==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
+<body>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="0" width="0" style="position: absolute;">
+    <defs>
+        <!-- Go-up -->
+        <g id="go-up">
+            <path d="M10,9V5L3,12L10,19V14.9C15,14.9 18.5,16.5 21,20C20,15 17,10 10,9Z" fill="#696969"/>
+        </g>
+        <!-- Folder -->
+        <g id="folder" fill-rule="nonzero" fill="none">
+            <path d="M285.22 37.55h-142.6L110.9 0H31.7C14.25 0 0 16.9 0 37.55v75.1h316.92V75.1c0-20.65-14.26-37.55-31.7-37.55z" fill="#FFA000"/>
+            <path d="M285.22 36H31.7C14.25 36 0 50.28 0 67.74v158.7c0 17.47 14.26 31.75 31.7 31.75H285.2c17.44 0 31.7-14.3 31.7-31.75V67.75c0-17.47-14.26-31.75-31.7-31.75z" fill="#FFCA28"/>
+        </g>
+        <g id="folder-shortcut" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="folder-shortcut-group" fill-rule="nonzero">
+                <g id="folder-shortcut-shape">
+                    <path d="M285.224876,37.5486902 L142.612438,37.5486902 L110.920785,0 L31.6916529,0 C14.2612438,0 0,16.8969106 0,37.5486902 L0,112.646071 L316.916529,112.646071 L316.916529,75.0973805 C316.916529,54.4456008 302.655285,37.5486902 285.224876,37.5486902 Z" id="Shape" fill="#FFA000"></path>
+                    <path d="M285.224876,36 L31.6916529,36 C14.2612438,36 0,50.2838568 0,67.7419039 L0,226.451424 C0,243.909471 14.2612438,258.193328 31.6916529,258.193328 L285.224876,258.193328 C302.655285,258.193328 316.916529,243.909471 316.916529,226.451424 L316.916529,67.7419039 C316.916529,50.2838568 302.655285,36 285.224876,36 Z" id="Shape" fill="#FFCA28"></path>
+                </g>
+                <path d="M126.154134,250.559184 C126.850974,251.883673 127.300549,253.006122 127.772602,254.106122 C128.469442,255.206122 128.919016,256.104082 129.638335,257.002041 C130.559962,258.326531 131.728855,259 133.100057,259 C134.493737,259 135.415364,258.55102 136.112204,257.67551 C136.809044,257.002041 137.258619,255.902041 137.258619,254.577551 C137.258619,253.904082 137.258619,252.804082 137.033832,251.457143 C136.786566,249.908163 136.561779,249.032653 136.561779,248.583673 C136.089726,242.814286 135.864939,237.920408 135.864939,233.273469 C135.864939,225.057143 136.786566,217.514286 138.180246,210.846939 C139.798713,204.202041 141.889234,198.634694 144.429328,193.763265 C147.216689,188.869388 150.678411,184.873469 154.836973,181.326531 C158.995535,177.779592 163.626149,174.883673 168.481552,172.661224 C173.336954,170.438776 179.113983,168.665306 185.587852,167.340816 C192.061722,166.218367 198.760378,165.342857 205.481514,164.669388 C212.18017,164.220408 219.598146,163.995918 228.162535,163.995918 L246.055591,163.995918 L246.055591,195.514286 C246.055591,197.736735 246.752431,199.510204 248.370899,201.059184 C250.214153,202.608163 252.079886,203.506122 254.372715,203.506122 C256.463236,203.506122 258.531277,202.608163 260.172223,201.059184 L326.102289,137.797959 C327.720757,136.24898 328.642384,134.47551 328.642384,132.253061 C328.642384,130.030612 327.720757,128.257143 326.102289,126.708163 L260.172223,63.4469388 C258.553756,61.8979592 256.463236,61 254.395194,61 C252.079886,61 250.236632,61.8979592 248.393377,63.4469388 C246.77491,64.9959184 246.07807,66.7693878 246.07807,68.9918367 L246.07807,100.510204 L228.162535,100.510204 C166.863084,100.510204 129.166282,117.167347 115.274437,150.459184 C110.666301,161.54898 108.350993,175.310204 108.350993,191.742857 C108.350993,205.279592 113.903236,223.912245 124.760454,247.438776 C125.00772,248.112245 125.457294,249.010204 126.154134,250.559184 Z" id="Shape" fill="#FFFFFF" transform="translate(218.496689, 160.000000) scale(-1, 1) translate(-218.496689, -160.000000) "></path>
+            </g>
+        </g>
+        <!-- File -->
+        <g id="file" stroke="#000" stroke-width="25" fill="#FFF" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13 24.12v274.76c0 6.16 5.87 11.12 13.17 11.12H239c7.3 0 13.17-4.96 13.17-11.12V136.15S132.6 13 128.37 13H26.17C18.87 13 13 17.96 13 24.12z"/>
+            <path d="M129.37 13L129 113.9c0 10.58 7.26 19.1 16.27 19.1H249L129.37 13z"/>
+        </g>
+        <g id="file-shortcut" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="file-shortcut-group" transform="translate(13.000000, 13.000000)">
+                <g id="file-shortcut-shape" stroke="#000000" stroke-width="25" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M0,11.1214886 L0,285.878477 C0,292.039924 5.87498876,296.999983 13.1728373,296.999983 L225.997983,296.999983 C233.295974,296.999983 239.17082,292.039942 239.17082,285.878477 L239.17082,123.145388 C239.17082,123.145388 119.58541,2.84217094e-14 115.369423,2.84217094e-14 L13.1728576,2.84217094e-14 C5.87500907,-1.71479982e-05 0,4.96022995 0,11.1214886 Z" id="rect1171"></path>
+                    <path d="M116.37005,0 L116,100.904964 C116,111.483663 123.258008,120 132.273377,120 L236,120 L116.37005,0 L116.37005,0 Z" id="rect1794"></path>
+                </g>
+                <path d="M47.803141,294.093878 C48.4999811,295.177551 48.9495553,296.095918 49.4216083,296.995918 C50.1184484,297.895918 50.5680227,298.630612 51.2873415,299.365306 C52.2089688,300.44898 53.3778619,301 54.7490634,301 C56.1427436,301 57.0643709,300.632653 57.761211,299.916327 C58.4580511,299.365306 58.9076254,298.465306 58.9076254,297.381633 C58.9076254,296.830612 58.9076254,295.930612 58.6828382,294.828571 C58.4355724,293.561224 58.2107852,292.844898 58.2107852,292.477551 C57.7387323,287.757143 57.5139451,283.753061 57.5139451,279.95102 C57.5139451,273.228571 58.4355724,267.057143 59.8292526,261.602041 C61.44772,256.165306 63.5382403,251.610204 66.0783349,247.62449 C68.8656954,243.620408 72.3274172,240.35102 76.4859792,237.44898 C80.6445412,234.546939 85.2751561,232.177551 90.1305582,230.359184 C94.9859603,228.540816 100.76299,227.089796 107.236859,226.006122 C113.710728,225.087755 120.409385,224.371429 127.13052,223.820408 C133.829177,223.453061 141.247152,223.269388 149.811542,223.269388 L167.704598,223.269388 L167.704598,249.057143 C167.704598,250.87551 168.401438,252.326531 170.019905,253.593878 C171.86316,254.861224 173.728893,255.595918 176.021722,255.595918 C178.112242,255.595918 180.180284,254.861224 181.82123,253.593878 L247.751296,201.834694 C249.369763,200.567347 250.291391,199.116327 250.291391,197.297959 C250.291391,195.479592 249.369763,194.028571 247.751296,192.761224 L181.82123,141.002041 C180.202763,139.734694 178.112242,139 176.044201,139 C173.728893,139 171.885639,139.734694 170.042384,141.002041 C168.423917,142.269388 167.727077,143.720408 167.727077,145.538776 L167.727077,171.326531 L149.811542,171.326531 C88.5120908,171.326531 50.8152886,184.955102 36.9234437,212.193878 C32.3153075,221.267347 30,232.526531 30,245.971429 C30,257.046939 35.5522422,272.291837 46.4094607,291.540816 C46.6567266,292.091837 47.1063009,292.826531 47.803141,294.093878 Z" id="Shape-Copy" fill="#000000" fill-rule="nonzero" transform="translate(140.145695, 220.000000) scale(-1, 1) translate(-140.145695, -220.000000) "></path>
+            </g>
+        </g>
+    </defs>
+    </svg>
+<header>
+    <h1>maintenance</h1>
+                 </header>
+                 <main>
+                 <div class="listing">
+                     <table aria-describedby="summary">
+                         <thead>
+                         <tr>
+                             <th></th>
+                             <th>Name</th>
+                             <th>Size</th>
+                             <th class="hideable">
+                                 Modified
+                             </th>
+                             <th class="hideable"></th>
+                         </tr>
+                         </thead>
+                         <tbody>
+                         <tr class="clickable">
+                             <td></td>
+                             <td><a href=".."><svg width="1.5em" height="1em" version="1.1" viewBox="0 0 24 24"><use xlink:href="#go-up"></use></svg>
+                 <span class="goup">..</span></a></td>
+                             <td>&mdash;</td>
+                             <td class="hideable">&mdash;</td>
+                             <td class="hideable"></td>
+                         </tr>
+                 
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="abstractSchemaChanges/">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#folder"></use></svg>
+                    <span class="name">abstractSchemaChanges</span>
+                </a>
+            </td>
+            <td data-order="-1">&mdash;</td>
+            <td class="hideable"><time datetime="2021-08-13T06:35:20">Fri Aug 13 06:35:20 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="archives/">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#folder"></use></svg>
+                    <span class="name">archives</span>
+                </a>
+            </td>
+            <td data-order="-1">&mdash;</td>
+            <td class="hideable"><time datetime="2021-08-13T06:35:20">Fri Aug 13 06:35:20 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="benchmarks/">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#folder"></use></svg>
+                    <span class="name">benchmarks</span>
+                </a>
+            </td>
+            <td data-order="-1">&mdash;</td>
+            <td class="hideable"><time datetime="2021-08-13T06:35:20">Fri Aug 13 06:35:20 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="dev/">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#folder"></use></svg>
+                    <span class="name">dev</span>
+                </a>
+            </td>
+            <td data-order="-1">&mdash;</td>
+            <td class="hideable"><time datetime="2021-08-13T06:35:20">Fri Aug 13 06:35:20 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="includes/">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#folder"></use></svg>
+                    <span class="name">includes</span>
+                </a>
+            </td>
+            <td data-order="-1">&mdash;</td>
+            <td class="hideable"><time datetime="2021-08-13T06:35:20">Fri Aug 13 06:35:20 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="jsduck/">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#folder"></use></svg>
+                    <span class="name">jsduck</span>
+                </a>
+            </td>
+            <td data-order="-1">&mdash;</td>
+            <td class="hideable"><time datetime="2021-08-13T06:35:20">Fri Aug 13 06:35:20 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="language/">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#folder"></use></svg>
+                    <span class="name">language</span>
+                </a>
+            </td>
+            <td data-order="-1">&mdash;</td>
+            <td class="hideable"><time datetime="2021-08-13T06:35:20">Fri Aug 13 06:35:20 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="locking/">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#folder"></use></svg>
+                    <span class="name">locking</span>
+                </a>
+            </td>
+            <td data-order="-1">&mdash;</td>
+            <td class="hideable"><time datetime="2021-08-13T06:35:20">Fri Aug 13 06:35:20 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="mediawiki.Title/">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#folder"></use></svg>
+                    <span class="name">mediawiki.Title</span>
+                </a>
+            </td>
+            <td data-order="-1">&mdash;</td>
+            <td class="hideable"><time datetime="2021-08-13T06:35:20">Fri Aug 13 06:35:20 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="postgres/">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#folder"></use></svg>
+                    <span class="name">postgres</span>
+                </a>
+            </td>
+            <td data-order="-1">&mdash;</td>
+            <td class="hideable"><time datetime="2021-08-13T06:35:20">Fri Aug 13 06:35:20 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="sqlite/">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#folder"></use></svg>
+                    <span class="name">sqlite</span>
+                </a>
+            </td>
+            <td data-order="-1">&mdash;</td>
+            <td class="hideable"><time datetime="2021-08-13T06:35:20">Fri Aug 13 06:35:20 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="storage/">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#folder"></use></svg>
+                    <span class="name">storage</span>
+                </a>
+            </td>
+            <td data-order="-1">&mdash;</td>
+            <td class="hideable"><time datetime="2021-08-13T06:35:20">Fri Aug 13 06:35:20 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="term/">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#folder"></use></svg>
+                    <span class="name">term</span>
+                </a>
+            </td>
+            <td data-order="-1">&mdash;</td>
+            <td class="hideable"><time datetime="2021-08-13T06:35:20">Fri Aug 13 06:35:20 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href=".htaccess">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">.htaccess</span>
+                </a>
+            </td>
+            <td data-order="14">14 bytes</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="CodeCleanerGlobalsPass.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">CodeCleanerGlobalsPass.php</span>
+                </a>
+            </td>
+            <td data-order="2318">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="CommandLineInc.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">CommandLineInc.php</span>
+                </a>
+            </td>
+            <td data-order="2108">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="Doxyfile">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">Doxyfile</span>
+                </a>
+            </td>
+            <td data-order="10522">10 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="Maintenance.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">Maintenance.php</span>
+                </a>
+            </td>
+            <td data-order="2318">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="Makefile">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">Makefile</span>
+                </a>
+            </td>
+            <td data-order="582">582 bytes</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="README">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">README</span>
+                </a>
+            </td>
+            <td data-order="2937">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="Sqlite.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">Sqlite.php</span>
+                </a>
+            </td>
+            <td data-order="2742">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="SqliteMaintenance.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">SqliteMaintenance.php</span>
+                </a>
+            </td>
+            <td data-order="4359">4 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="TableCleanup.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">TableCleanup.php</span>
+                </a>
+            </td>
+            <td data-order="4881">4 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="addChangeTag.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">addChangeTag.php</span>
+                </a>
+            </td>
+            <td data-order="1752">1 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="addRFCandPMIDInterwiki.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">addRFCandPMIDInterwiki.php</span>
+                </a>
+            </td>
+            <td data-order="2496">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="addSite.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">addSite.php</span>
+                </a>
+            </td>
+            <td data-order="3150">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="attachLatest.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">attachLatest.php</span>
+                </a>
+            </td>
+            <td data-order="3468">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="blockUsers.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">blockUsers.php</span>
+                </a>
+            </td>
+            <td data-order="4743">4 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="categoryChangesAsRdf.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">categoryChangesAsRdf.php</span>
+                </a>
+            </td>
+            <td data-order="19833">19 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="changePassword.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">changePassword.php</span>
+                </a>
+            </td>
+            <td data-order="2067">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="checkBadRedirects.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">checkBadRedirects.php</span>
+                </a>
+            </td>
+            <td data-order="2188">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="checkComposerLockUpToDate.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">checkComposerLockUpToDate.php</span>
+                </a>
+            </td>
+            <td data-order="2134">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="checkDependencies.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">checkDependencies.php</span>
+                </a>
+            </td>
+            <td data-order="6466">6 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="checkImages.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">checkImages.php</span>
+                </a>
+            </td>
+            <td data-order="2629">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="checkUsernames.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">checkUsernames.php</span>
+                </a>
+            </td>
+            <td data-order="2144">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="cleanupBlocks.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">cleanupBlocks.php</span>
+                </a>
+            </td>
+            <td data-order="4210">4 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="cleanupCaps.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">cleanupCaps.php</span>
+                </a>
+            </td>
+            <td data-order="5386">5 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="cleanupEmptyCategories.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">cleanupEmptyCategories.php</span>
+                </a>
+            </td>
+            <td data-order="5644">5 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="cleanupImages.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">cleanupImages.php</span>
+                </a>
+            </td>
+            <td data-order="6396">6 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="cleanupInvalidDbKeys.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">cleanupInvalidDbKeys.php</span>
+                </a>
+            </td>
+            <td data-order="11226">10 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="cleanupPreferences.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">cleanupPreferences.php</span>
+                </a>
+            </td>
+            <td data-order="5181">5 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="cleanupRemovedModules.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">cleanupRemovedModules.php</span>
+                </a>
+            </td>
+            <td data-order="2634">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="cleanupRevActorPage.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">cleanupRevActorPage.php</span>
+                </a>
+            </td>
+            <td data-order="1917">1 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="cleanupSpam.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">cleanupSpam.php</span>
+                </a>
+            </td>
+            <td data-order="6175">6 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="cleanupTitles.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">cleanupTitles.php</span>
+                </a>
+            </td>
+            <td data-order="6204">6 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="cleanupUploadStash.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">cleanupUploadStash.php</span>
+                </a>
+            </td>
+            <td data-order="5324">5 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="cleanupUsersWithNoId.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">cleanupUsersWithNoId.php</span>
+                </a>
+            </td>
+            <td data-order="6465">6 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="cleanupWatchlist.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">cleanupWatchlist.php</span>
+                </a>
+            </td>
+            <td data-order="3051">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="clearInterwikiCache.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">clearInterwikiCache.php</span>
+                </a>
+            </td>
+            <td data-order="1831">1 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="compareParserCache.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">compareParserCache.php</span>
+                </a>
+            </td>
+            <td data-order="3802">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="compareParsers.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">compareParsers.php</span>
+                </a>
+            </td>
+            <td data-order="5755">5 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="convertExtensionToRegistration.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">convertExtensionToRegistration.php</span>
+                </a>
+            </td>
+            <td data-order="11358">11 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="copyFileBackend.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">copyFileBackend.php</span>
+                </a>
+            </td>
+            <td data-order="14895">14 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="copyJobQueue.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">copyJobQueue.php</span>
+                </a>
+            </td>
+            <td data-order="3456">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="createAndPromote.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">createAndPromote.php</span>
+                </a>
+            </td>
+            <td data-order="5130">5 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="createBotPassword.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">createBotPassword.php</span>
+                </a>
+            </td>
+            <td data-order="4560">4 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="deduplicateArchiveRevId.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">deduplicateArchiveRevId.php</span>
+                </a>
+            </td>
+            <td data-order="6090">5 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="deleteArchivedFiles.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">deleteArchivedFiles.php</span>
+                </a>
+            </td>
+            <td data-order="3964">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="deleteArchivedRevisions.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">deleteArchivedRevisions.php</span>
+                </a>
+            </td>
+            <td data-order="2119">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="deleteAutoPatrolLogs.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">deleteAutoPatrolLogs.php</span>
+                </a>
+            </td>
+            <td data-order="5336">5 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="deleteBatch.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">deleteBatch.php</span>
+                </a>
+            </td>
+            <td data-order="4068">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="deleteDefaultMessages.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">deleteDefaultMessages.php</span>
+                </a>
+            </td>
+            <td data-order="3667">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="deleteEqualMessages.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">deleteEqualMessages.php</span>
+                </a>
+            </td>
+            <td data-order="7394">7 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="deleteLocalPasswords.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">deleteLocalPasswords.php</span>
+                </a>
+            </td>
+            <td data-order="988">988 bytes</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="deleteOldRevisions.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">deleteOldRevisions.php</span>
+                </a>
+            </td>
+            <td data-order="3367">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="deleteOrphanedRevisions.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">deleteOrphanedRevisions.php</span>
+                </a>
+            </td>
+            <td data-order="3224">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="deleteSelfExternals.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">deleteSelfExternals.php</span>
+                </a>
+            </td>
+            <td data-order="2622">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="deleteTag.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">deleteTag.php</span>
+                </a>
+            </td>
+            <td data-order="2260">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="doMaintenance.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">doMaintenance.php</span>
+                </a>
+            </td>
+            <td data-order="4408">4 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="dumpBackup.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">dumpBackup.php</span>
+                </a>
+            </td>
+            <td data-order="5267">5 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="dumpCategoriesAsRdf.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">dumpCategoriesAsRdf.php</span>
+                </a>
+            </td>
+            <td data-order="5334">5 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="dumpIterator.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">dumpIterator.php</span>
+                </a>
+            </td>
+            <td data-order="5967">5 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="dumpLinks.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">dumpLinks.php</span>
+                </a>
+            </td>
+            <td data-order="2374">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="dumpTextPass.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">dumpTextPass.php</span>
+                </a>
+            </td>
+            <td data-order="1109">1 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="dumpUploads.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">dumpUploads.php</span>
+                </a>
+            </td>
+            <td data-order="3899">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="edit.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">edit.php</span>
+                </a>
+            </td>
+            <td data-order="4299">4 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="emptyUserGroup.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">emptyUserGroup.php</span>
+                </a>
+            </td>
+            <td data-order="2036">1 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="eraseArchivedFile.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">eraseArchivedFile.php</span>
+                </a>
+            </td>
+            <td data-order="4256">4 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="eval.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">eval.php</span>
+                </a>
+            </td>
+            <td data-order="3587">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="exportSites.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">exportSites.php</span>
+                </a>
+            </td>
+            <td data-order="1245">1 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="fetchText.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">fetchText.php</span>
+                </a>
+            </td>
+            <td data-order="2824">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="fileOpPerfTest.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">fileOpPerfTest.php</span>
+                </a>
+            </td>
+            <td data-order="4836">4 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="findBadBlobs.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">findBadBlobs.php</span>
+                </a>
+            </td>
+            <td data-order="14995">14 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="findClasses.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">findClasses.php</span>
+                </a>
+            </td>
+            <td data-order="1503">1 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="findDeprecated.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">findDeprecated.php</span>
+                </a>
+            </td>
+            <td data-order="5789">5 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="findMissingActors.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">findMissingActors.php</span>
+                </a>
+            </td>
+            <td data-order="9414">9 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="findMissingFiles.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">findMissingFiles.php</span>
+                </a>
+            </td>
+            <td data-order="3979">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="findOrphanedFiles.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">findOrphanedFiles.php</span>
+                </a>
+            </td>
+            <td data-order="4463">4 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="fixDefaultJsonContentPages.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">fixDefaultJsonContentPages.php</span>
+                </a>
+            </td>
+            <td data-order="4180">4 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="fixDoubleRedirects.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">fixDoubleRedirects.php</span>
+                </a>
+            </td>
+            <td data-order="4086">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="fixExtLinksProtocolRelative.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">fixExtLinksProtocolRelative.php</span>
+                </a>
+            </td>
+            <td data-order="3142">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="fixMergeHistoryCorruption.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">fixMergeHistoryCorruption.php</span>
+                </a>
+            </td>
+            <td data-order="4346">4 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="fixTimestamps.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">fixTimestamps.php</span>
+                </a>
+            </td>
+            <td data-order="4285">4 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="fixUserRegistration.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">fixUserRegistration.php</span>
+                </a>
+            </td>
+            <td data-order="2832">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="formatInstallDoc.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">formatInstallDoc.php</span>
+                </a>
+            </td>
+            <td data-order="2438">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="generateJsonI18n.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">generateJsonI18n.php</span>
+                </a>
+            </td>
+            <td data-order="6652">6 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="generateLocalAutoload.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">generateLocalAutoload.php</span>
+                </a>
+            </td>
+            <td data-order="658">658 bytes</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="generateSchemaChangeSql.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">generateSchemaChangeSql.php</span>
+                </a>
+            </td>
+            <td data-order="3922">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="generateSchemaSql.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">generateSchemaSql.php</span>
+                </a>
+            </td>
+            <td data-order="4162">4 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="generateSitemap.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">generateSitemap.php</span>
+                </a>
+            </td>
+            <td data-order="14979">14 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="getConfiguration.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">getConfiguration.php</span>
+                </a>
+            </td>
+            <td data-order="5298">5 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="getLagTimes.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">getLagTimes.php</span>
+                </a>
+            </td>
+            <td data-order="2441">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="getReplicaServer.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">getReplicaServer.php</span>
+                </a>
+            </td>
+            <td data-order="1715">1 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="getText.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">getText.php</span>
+                </a>
+            </td>
+            <td data-order="2883">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="importDump.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">importDump.php</span>
+                </a>
+            </td>
+            <td data-order="10624">10 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="importImages.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">importImages.php</span>
+                </a>
+            </td>
+            <td data-order="16293">15 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="importSiteScripts.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">importSiteScripts.php</span>
+                </a>
+            </td>
+            <td data-order="3793">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="importSites.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">importSites.php</span>
+                </a>
+            </td>
+            <td data-order="1183">1 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="importTextFiles.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">importTextFiles.php</span>
+                </a>
+            </td>
+            <td data-order="6751">6 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="initEditCount.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">initEditCount.php</span>
+                </a>
+            </td>
+            <td data-order="3982">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="initSiteStats.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">initSiteStats.php</span>
+                </a>
+            </td>
+            <td data-order="2693">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="initUserPreference.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">initUserPreference.php</span>
+                </a>
+            </td>
+            <td data-order="1860">1 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="install.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">install.php</span>
+                </a>
+            </td>
+            <td data-order="7151">6 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="interwiki.list">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">interwiki.list</span>
+                </a>
+            </td>
+            <td data-order="4077">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="invalidateBotPasswords.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">invalidateBotPasswords.php</span>
+                </a>
+            </td>
+            <td data-order="1836">1 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="invalidateUserSessions.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">invalidateUserSessions.php</span>
+                </a>
+            </td>
+            <td data-order="3179">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="jsparse.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">jsparse.php</span>
+                </a>
+            </td>
+            <td data-order="2168">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="lag.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">lag.php</span>
+                </a>
+            </td>
+            <td data-order="2220">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="makeTestEdits.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">makeTestEdits.php</span>
+                </a>
+            </td>
+            <td data-order="2426">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="manageForeignResources.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">manageForeignResources.php</span>
+                </a>
+            </td>
+            <td data-order="3016">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="manageJobs.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">manageJobs.php</span>
+                </a>
+            </td>
+            <td data-order="3072">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="mcc.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">mcc.php</span>
+                </a>
+            </td>
+            <td data-order="5470">5 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="mctest.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">mctest.php</span>
+                </a>
+            </td>
+            <td data-order="8088">7 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="mergeMessageFileList.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">mergeMessageFileList.php</span>
+                </a>
+            </td>
+            <td data-order="6904">6 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="migrateActors.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">migrateActors.php</span>
+                </a>
+            </td>
+            <td data-order="1001">1001 bytes</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="migrateArchiveText.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">migrateArchiveText.php</span>
+                </a>
+            </td>
+            <td data-order="4545">4 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="migrateComments.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">migrateComments.php</span>
+                </a>
+            </td>
+            <td data-order="8774">8 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="migrateFileRepoLayout.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">migrateFileRepoLayout.php</span>
+                </a>
+            </td>
+            <td data-order="7639">7 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="migrateImageCommentTemp.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">migrateImageCommentTemp.php</span>
+                </a>
+            </td>
+            <td data-order="3792">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="migrateRevisionActorTemp.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">migrateRevisionActorTemp.php</span>
+                </a>
+            </td>
+            <td data-order="2361">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="migrateUserGroup.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">migrateUserGroup.php</span>
+                </a>
+            </td>
+            <td data-order="3679">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="moveBatch.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">moveBatch.php</span>
+                </a>
+            </td>
+            <td data-order="3655">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="mwdoc-filter.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">mwdoc-filter.php</span>
+                </a>
+            </td>
+            <td data-order="1628">1 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="mwdocgen.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">mwdocgen.php</span>
+                </a>
+            </td>
+            <td data-order="5312">5 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="mwjsduck-gen">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">mwjsduck-gen</span>
+                </a>
+            </td>
+            <td data-order="54">54 bytes</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="mysql.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">mysql.php</span>
+                </a>
+            </td>
+            <td data-order="5887">5 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="namespaceDupes.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">namespaceDupes.php</span>
+                </a>
+            </td>
+            <td data-order="20434">19 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="nukeNS.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">nukeNS.php</span>
+                </a>
+            </td>
+            <td data-order="4227">4 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="nukePage.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">nukePage.php</span>
+                </a>
+            </td>
+            <td data-order="3598">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="orphans.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">orphans.php</span>
+                </a>
+            </td>
+            <td data-order="7018">6 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="pageExists.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">pageExists.php</span>
+                </a>
+            </td>
+            <td data-order="1535">1 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="parse.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">parse.php</span>
+                </a>
+            </td>
+            <td data-order="3591">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="patchSql.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">patchSql.php</span>
+                </a>
+            </td>
+            <td data-order="2093">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="populateArchiveRevId.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">populateArchiveRevId.php</span>
+                </a>
+            </td>
+            <td data-order="8508">8 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="populateBacklinkNamespace.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">populateBacklinkNamespace.php</span>
+                </a>
+            </td>
+            <td data-order="3147">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="populateChangeTagDef.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">populateChangeTagDef.php</span>
+                </a>
+            </td>
+            <td data-order="6754">6 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="populateContentTables.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">populateContentTables.php</span>
+                </a>
+            </td>
+            <td data-order="11518">11 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="populateExternallinksIndex60.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">populateExternallinksIndex60.php</span>
+                </a>
+            </td>
+            <td data-order="2623">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="populateFilearchiveSha1.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">populateFilearchiveSha1.php</span>
+                </a>
+            </td>
+            <td data-order="3130">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="populateImageSha1.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">populateImageSha1.php</span>
+                </a>
+            </td>
+            <td data-order="6356">6 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="populateInterwiki.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">populateInterwiki.php</span>
+                </a>
+            </td>
+            <td data-order="4110">4 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="populateIpChanges.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">populateIpChanges.php</span>
+                </a>
+            </td>
+            <td data-order="4872">4 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="populatePPSortKey.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">populatePPSortKey.php</span>
+                </a>
+            </td>
+            <td data-order="3002">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="populateRecentChangesSource.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">populateRecentChangesSource.php</span>
+                </a>
+            </td>
+            <td data-order="3276">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="populateRevisionLength.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">populateRevisionLength.php</span>
+                </a>
+            </td>
+            <td data-order="5133">5 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="populateRevisionSha1.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">populateRevisionSha1.php</span>
+                </a>
+            </td>
+            <td data-order="6688">6 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="preprocessorFuzzTest.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">preprocessorFuzzTest.php</span>
+                </a>
+            </td>
+            <td data-order="8532">8 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="protect.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">protect.php</span>
+                </a>
+            </td>
+            <td data-order="2832">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="pruneFileCache.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">pruneFileCache.php</span>
+                </a>
+            </td>
+            <td data-order="3721">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="purgeChangedFiles.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">purgeChangedFiles.php</span>
+                </a>
+            </td>
+            <td data-order="8529">8 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="purgeChangedPages.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">purgeChangedPages.php</span>
+                </a>
+            </td>
+            <td data-order="6382">6 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="purgeExpiredBlocks.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">purgeExpiredBlocks.php</span>
+                </a>
+            </td>
+            <td data-order="1459">1 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="purgeExpiredUserrights.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">purgeExpiredUserrights.php</span>
+                </a>
+            </td>
+            <td data-order="1666">1 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="purgeExpiredWatchlistItems.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">purgeExpiredWatchlistItems.php</span>
+                </a>
+            </td>
+            <td data-order="1344">1 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="purgeList.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">purgeList.php</span>
+                </a>
+            </td>
+            <td data-order="5257">5 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="purgeMessageBlobStore.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">purgeMessageBlobStore.php</span>
+                </a>
+            </td>
+            <td data-order="539">539 bytes</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="purgeModuleDeps.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">purgeModuleDeps.php</span>
+                </a>
+            </td>
+            <td data-order="2270">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="purgeOldText.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">purgeOldText.php</span>
+                </a>
+            </td>
+            <td data-order="1444">1 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="purgePage.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">purgePage.php</span>
+                </a>
+            </td>
+            <td data-order="2147">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="purgeParserCache.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">purgeParserCache.php</span>
+                </a>
+            </td>
+            <td data-order="5520">5 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="reassignEdits.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">reassignEdits.php</span>
+                </a>
+            </td>
+            <td data-order="6165">6 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="rebuildFileCache.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">rebuildFileCache.php</span>
+                </a>
+            </td>
+            <td data-order="6435">6 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="rebuildImages.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">rebuildImages.php</span>
+                </a>
+            </td>
+            <td data-order="7097">6 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="rebuildLocalisationCache.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">rebuildLocalisationCache.php</span>
+                </a>
+            </td>
+            <td data-order="8178">7 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="rebuildall.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">rebuildall.php</span>
+                </a>
+            </td>
+            <td data-order="2302">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="rebuildmessages.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">rebuildmessages.php</span>
+                </a>
+            </td>
+            <td data-order="1487">1 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="rebuildrecentchanges.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">rebuildrecentchanges.php</span>
+                </a>
+            </td>
+            <td data-order="15678">15 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="rebuildtextindex.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">rebuildtextindex.php</span>
+                </a>
+            </td>
+            <td data-order="4984">4 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="recountCategories.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">recountCategories.php</span>
+                </a>
+            </td>
+            <td data-order="5727">5 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="refreshExternallinksIndex.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">refreshExternallinksIndex.php</span>
+                </a>
+            </td>
+            <td data-order="3677">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="refreshFileHeaders.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">refreshFileHeaders.php</span>
+                </a>
+            </td>
+            <td data-order="5161">5 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="refreshImageMetadata.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">refreshImageMetadata.php</span>
+                </a>
+            </td>
+            <td data-order="7640">7 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="refreshLinks.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">refreshLinks.php</span>
+                </a>
+            </td>
+            <td data-order="15860">15 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="removeInvalidEmails.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">removeInvalidEmails.php</span>
+                </a>
+            </td>
+            <td data-order="2178">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="removeUnusedAccounts.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">removeUnusedAccounts.php</span>
+                </a>
+            </td>
+            <td data-order="6592">6 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="renameDbPrefix.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">renameDbPrefix.php</span>
+                </a>
+            </td>
+            <td data-order="3147">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="renameRestrictions.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">renameRestrictions.php</span>
+                </a>
+            </td>
+            <td data-order="1659">1 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="renderDump.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">renderDump.php</span>
+                </a>
+            </td>
+            <td data-order="4229">4 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="resetAuthenticationThrottle.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">resetAuthenticationThrottle.php</span>
+                </a>
+            </td>
+            <td data-order="4809">4 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="resetPageRandom.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">resetPageRandom.php</span>
+                </a>
+            </td>
+            <td data-order="4538">4 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="resetUserEmail.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">resetUserEmail.php</span>
+                </a>
+            </td>
+            <td data-order="2643">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="resetUserTokens.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">resetUserTokens.php</span>
+                </a>
+            </td>
+            <td data-order="3815">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="rollbackEdits.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">rollbackEdits.php</span>
+                </a>
+            </td>
+            <td data-order="4040">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="runBatchedQuery.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">runBatchedQuery.php</span>
+                </a>
+            </td>
+            <td data-order="4048">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="runJobs.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">runJobs.php</span>
+                </a>
+            </td>
+            <td data-order="3928">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="runScript.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">runScript.php</span>
+                </a>
+            </td>
+            <td data-order="2274">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="shell.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">shell.php</span>
+                </a>
+            </td>
+            <td data-order="3315">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="showJobs.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">showJobs.php</span>
+                </a>
+            </td>
+            <td data-order="3512">3 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="showSiteStats.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">showSiteStats.php</span>
+                </a>
+            </td>
+            <td data-order="2330">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="sql.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">sql.php</span>
+                </a>
+            </td>
+            <td data-order="7028">6 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="syncFileBackend.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">syncFileBackend.php</span>
+                </a>
+            </td>
+            <td data-order="10960">10 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="tables-generated.sql">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">tables-generated.sql</span>
+                </a>
+            </td>
+            <td data-order="27545">26 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="tables.json">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">tables.json</span>
+                </a>
+            </td>
+            <td data-order="106380">103 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="tables.sql">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">tables.sql</span>
+                </a>
+            </td>
+            <td data-order="95">95 bytes</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="tidyUpT39714.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">tidyUpT39714.php</span>
+                </a>
+            </td>
+            <td data-order="1536">1 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="undelete.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">undelete.php</span>
+                </a>
+            </td>
+            <td data-order="2114">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="update-keys.sql">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">update-keys.sql</span>
+                </a>
+            </td>
+            <td data-order="1508">1 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="update.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">update.php</span>
+                </a>
+            </td>
+            <td data-order="8909">8 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="updateArticleCount.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">updateArticleCount.php</span>
+                </a>
+            </td>
+            <td data-order="2360">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="updateCollation.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">updateCollation.php</span>
+                </a>
+            </td>
+            <td data-order="10582">10 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="updateCredits.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">updateCredits.php</span>
+                </a>
+            </td>
+            <td data-order="2500">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="updateExtensionJsonSchema.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">updateExtensionJsonSchema.php</span>
+                </a>
+            </td>
+            <td data-order="4394">4 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="updateRestrictions.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">updateRestrictions.php</span>
+                </a>
+            </td>
+            <td data-order="4651">4 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="updateSearchIndex.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">updateSearchIndex.php</span>
+                </a>
+            </td>
+            <td data-order="4398">4 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="updateSpecialPages.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">updateSpecialPages.php</span>
+                </a>
+            </td>
+            <td data-order="5804">5 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="uppercaseTitlesForUnicodeTransition.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">uppercaseTitlesForUnicodeTransition.php</span>
+                </a>
+            </td>
+            <td data-order="22540">22 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="userOptions.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">userOptions.php</span>
+                </a>
+            </td>
+            <td data-order="7023">6 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="validateRegistrationFile.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">validateRegistrationFile.php</span>
+                </a>
+            </td>
+            <td data-order="801">801 bytes</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="version.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">version.php</span>
+                </a>
+            </td>
+            <td data-order="2105">2 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="view.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">view.php</span>
+                </a>
+            </td>
+            <td data-order="2028">1 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+        <tr class="file">
+            <td></td>
+            <td>
+                <a href="wrapOldPasswords.php">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
+                    <span class="name">wrapOldPasswords.php</span>
+                </a>
+            </td>
+            <td data-order="4729">4 KB</td>
+            <td class="hideable"><time datetime="2021-08-13T06:13:37">Fri Aug 13 06:13:37 2021</time></td>
+            <td class="hideable"></td>
+        </tr>
+
+            </tbody>
+        </table>
+    </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"David1010"
+		]
+	},
+	"contributionscores-top": "(საუკეთესო $1)",
+	"contributionscores-days": "ბოლო {{PLURAL:$1|დღე|$1 დღე}}",
+	"contributionscores-allrevisions": "ყველა დროის",
+	"contributionscores-score": "შეფასება",
+	"contributionscores-pages": "გვერდები",
+	"contributionscores-changes": "ცვლილებები",
+	"contributionscores-username": "მომხმარებლის სახელი",
+	"contributionscores-invalidusername": "არასწორი მომხმარებლის სახელი"
+}

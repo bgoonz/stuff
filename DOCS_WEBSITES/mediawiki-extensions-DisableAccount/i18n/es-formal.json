@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dferg",
+			"MarcoAurelio"
+		]
+	},
+	"disableaccount": "Deshabilitar una cuenta de usuario",
+	"disableaccount-user": "Nombre de usuario:",
+	"disableaccount-confirm": "Deshabilitar esta cuenta de usuario.\nEl usuario no podrá iniciar sesión, restablecer su contraseña o recibir notificaciones por correo electrónico.\nSi el usuario está conectado, será desconectado de inmediato.\n''Tenga en cuenta que la desactivación de una cuenta no es reversible sin intervención del administrador de sistema''.",
+	"disableaccount-mustconfirm": "Tiene usted que confirmar que desea desactivar esta cuenta."
+}

@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"PiefPafPier",
+			"Robin van der Vliet",
+			"Robin0van0der0vliet",
+			"Snakesteuben"
+		]
+	},
+	"requestaccount-email": "E-mailadres:",
+	"requestaccount-level-0": "auteur",
+	"requestaccount-level-1": "redakteur",
+	"requestaccount-email-body": "Immen, nei alle gedachten jo mei it IP-adres $1, hat it akkount \"$2\" op {{GRAMMAR:lidw|{{SITENAME}}}} oanfrege mei dit e-mailadres.\n\nOm te befêstigjen dat dat akkount wier jowes is op {{GRAMMAR:l|{{SITENAME}}}}, iepenje dan dizze\nferwizing yn jo webblêder:\n\n$3\n\nSadree't it akkount oanmakke is, sil allinne oan jo it wachtwurd e-maild wurde.\nAt jo it *net* west hawwe, folgje de ferwizing dan net.\nDe befêstigingskoade ferrint op $4."
+}

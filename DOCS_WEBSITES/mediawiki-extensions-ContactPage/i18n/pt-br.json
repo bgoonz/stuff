@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Araceletorres",
+			"Cainamarques",
+			"Carla404",
+			"Eduardo Addad de Oliveira",
+			"Eduardo.mps",
+			"Eduardoaddad",
+			"Felipe L. Ewald",
+			"Giro720",
+			"OTAVIO1981"
+		]
+	},
+	"contactpage": "Página de Contato",
+	"contactpage-desc": "[[Special:Contact|Formulário de contato para visitantes]]",
+	"contactpage-title": "Contato",
+	"contactpage-pagetext": "Por favor, use o formulário abaixo para nos contatar.",
+	"contactpage-legend": "Enviar e-mail",
+	"contactpage-defsubject": "Mensagem de Contato",
+	"contactpage-subject-and-sender": "$1 (de $2)",
+	"contactpage-subject-and-sender-withip": "$1 (de $2 até $3)",
+	"contactpage-fromname": "Seu nome:",
+	"contactpage-fromaddress": "Seu email:",
+	"contactpage-formfootnotes": "(necessário se deseja uma resposta)",
+	"contactpage-includeip": "Incluir o meu endereço IP nesta mensagem.",
+	"contactpage-usermailererror": "Erro retornado pelo objeto de e-mail: $1",
+	"contactpage-captcha-error": "Erro de CAPTCHA",
+	"contactpage-config-error-title": "Erro no formulário de contato",
+	"contactpage-config-error": "Um formulário de contato não está configurado para esta página ou está configurado incorretamente.",
+	"contactpage-mustbeloggedin": "Por favor, faça o login para enviar um formulário de contato."
+}

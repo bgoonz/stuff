@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ерней",
+			"Ильнар"
+		]
+	},
+	"dt_viewxml_categories": "Төркемнәр",
+	"dt_viewxml_namespaces": "Исемнәр мәйданы",
+	"dt_viewxml_simplifiedformat": "Гадиләштерелгән формат",
+	"dt_xml_namespace": "Исемнәр мәйданы",
+	"dt_xml_pages": "Битләр",
+	"dt_xml_page": "Бит",
+	"dt_xml_template": "Калып",
+	"dt_xml_field": "Мәйдан",
+	"dt_xml_name": "Исем",
+	"dt_xml_title": "Башисем",
+	"dt_xml_id": "ID",
+	"dt_xml_freetext": "Ирекле текст",
+	"importxml": "XML импорты",
+	"dt_import_selectfile": "Кертү өчен $1 файлын сайлагыз әле:",
+	"dt_import_encodingtype": "Кодлау төре"
+}

@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Als-Chlämens",
+			"Als-Holder"
+		]
+	},
+	"contributionscores": "Aazahl vu dr Benutzerbyyträg",
+	"contributionscores-desc": "Abfrog vu dr Wiki-Datebank no dr Aazahl vu dr [[Special:ContributionScores|Benutzerbyyträg]]",
+	"contributionscores-info": "Bewärtigsschema:\n*1 Punkt fir jedi bearbeiteti Syte\n*Quadratwurzle vu allene (Bearbeitige) - (Summe vu dr bearbeitete Syte) * 2\nBewärtigen uf däre Grundlag gän dr Viifalt vu dr Byyträg e hecher Gwicht wie dr Aazahl vu dr Änderige.",
+	"contributionscores-top": "(Top $1)",
+	"contributionscores-days": "{{PLURAL:$1|Letschte Tag|Letschti $1 Täg}}",
+	"contributionscores-allrevisions": "Ganzer Zitruum",
+	"contributionscores-score": "Wärt",
+	"contributionscores-pages": "Syte",
+	"contributionscores-changes": "Änderige",
+	"contributionscores-username": "Benutzername",
+	"contributionscores-invalidusername": "Nit giltige Benutzername",
+	"contributionscores-invalidmetric": "Nit giltigi Metrik"
+}

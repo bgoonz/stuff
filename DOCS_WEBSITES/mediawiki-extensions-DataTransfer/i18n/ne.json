@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"हिमाल सुबेदी"
+		]
+	},
+	"dt_viewxml_categories": "श्रेणीहरू",
+	"dt_viewxml_namespaces": "नामस्थानहरू",
+	"dt_viewxml_simplifiedformat": "सरलीकृत ढाँचा",
+	"dt_xml_namespace": "नामस्थान",
+	"dt_xml_pages": "पृष्ठहरू",
+	"dt_xml_page": "पृष्ठ",
+	"dt_xml_template": "ढाँचा",
+	"dt_xml_field": "क्षेत्र",
+	"dt_xml_name": "नाम",
+	"dt_xml_title": "शीर्षक",
+	"dt_import_overwriteexisting": "रहेको पृष्ठमा अधिलेखन गर्न चाहनुहुन्छ?",
+	"dt_import_skipexisting": "छोड्नुहोस्",
+	"dt_import_importing": "आयात गरिँदै...",
+	"importcsv": "सिएसभी निर्यात गर्नुहोस",
+	"action-datatransferimport": "आँकडा निर्यात गर्नुहाेस्",
+	"right-datatransferimport": "आँकडा निर्यात गर्नुहाेस्",
+	"dt_filetype_xml": "एक्सएमएल",
+	"dt_filetype_csv": "सिएसभी"
+}

@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dbc334",
+			"Eleassar"
+		]
+	},
+	"contributionscores": "Rezultati prispevkov",
+	"contributionscores-desc": "V zbirki podatkov wiki poišče največjo [[Special:ContributionScores|količino prispevkov uporabnikov]]",
+	"contributionscores-info": "Rezultat prvotno meri urejanja različnih strani, z upoštevanjem velike količine urejanj.",
+	"contributionscores-top": "({{PLURAL:$1|Najvišji|Najvišja|Najvišji|Najvišjih}} $1)",
+	"contributionscores-days": "{{PLURAL:$1|Zadnji $1 dan|Zadnja $1 dneva|Zadnji $1 dnevi|Zadnjih $1 dni}}",
+	"contributionscores-allrevisions": "Vseh časov",
+	"contributionscores-score": "Rezultat",
+	"contributionscores-rank": "Uvrstitev",
+	"contributionscores-pages": "Strani",
+	"contributionscores-changes": "Spremembe",
+	"contributionscores-username": "Uporabniško ime",
+	"contributionscores-invalidusername": "Neveljavno uporabniško ime",
+	"contributionscores-invalidmetric": "Neveljavna metrika"
+}

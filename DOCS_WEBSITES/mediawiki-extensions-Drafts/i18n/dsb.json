@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Michawiki"
+		]
+	},
+	"drafts": "Nacerjenja",
+	"drafts-desc": "Zmóžna składowanje [[Special:Drafts|nacerjeńskich wersijow]] boka na serwerje",
+	"drafts-view": "Nacerjenje se woglědaś",
+	"drafts-view-summary": "Toś ten specialny bok pokazujo lisćinu wšych eksistujucych nacerjenjow.\nNjewužywane naćerjenja zachyśiju se awtomatiski pó {{PLURAL:$1|$ dnju|$1 dnjoma|$1 dnjach|$1 dnjach}}.",
+	"drafts-view-article": "Bok",
+	"drafts-view-existing": "Eksistěrujuce nacerjenja",
+	"drafts-view-saved": "Skłaźony",
+	"drafts-view-discard": "Zachyśiś",
+	"drafts-view-nonesaved": "Dotychměst njejsy składł nacerjenja.",
+	"drafts-view-notice": "Maš $1 za toś ten bok.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|nacerjenje|nacerjeni|nacerjenja|nacerjenjow}}",
+	"drafts-view-warn": "Gaž spušćaš toś ten bok, zgubijoš wše njeskłaźone změny na toś tom boku.\nCoš weto pókšacowaś?",
+	"drafts-save": "To ako nacerjenje składowaś",
+	"drafts-save-save": "Nacerjenje składowaś",
+	"drafts-save-saved": "Skłaźony",
+	"drafts-save-saving": "Składowanje",
+	"drafts-save-error": "Zmólka pśi składowanju nacerjenja",
+	"drafts-enable": "Funkciju zmóžniś,  aby se nacerjenje we wobźěłowańskem pólu składowało",
+	"prefs-extension-drafts": "Nacerjenja",
+	"tooltip-drafts-save": "Ako nacerjenje składowaś"
+}

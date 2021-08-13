@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ooswesthoesbes",
+			"Pahles"
+		]
+	},
+	"disableaccount-desc": "Maak 't veur behieërders meugelik individueel gebroekers oet te sjakele",
+	"right-disableaccount": "Gebroekers oetsjakele",
+	"action-disableaccount": "sjakel konto's oet",
+	"disableaccount": "'ne Gebroeker oetsjakele",
+	"disableaccount-user": "Gebroekersnaam:",
+	"disableaccount-confirm": "Deze gebroeker oetsjakele.\nDe gebroeker kin neet langer aanmelde, 't wachwaord obbenuuts insjtelle of e-mails óntvange.\nEs de gebroeker op dit memènt is aangemeld, weurt heer metein aafgemeld.\n'''t Oetsjakele van 'ne gebroeker is neet trök te drejje zonger hölp van 'ne systeembeheerder''",
+	"disableaccount-mustconfirm": "Doe mós bevestige dats doe deze gebroeker wils oetsjakele.",
+	"disableaccount-nosuchuser": "De gebroeker \"$1\" besjteit neet.",
+	"disableaccount-success": "De gebroeker \"$1\" is permanent oetgesjakeld.",
+	"logentry-block-disableaccount": "$1 {{GENDER:$2|haet}} de konto van {{GENDER:$4|$3}} oetgesjakeld."
+}

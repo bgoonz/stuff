@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Азат Хәлилов",
+			"Айбикә"
+		]
+	},
+	"etherpadlite-desc": "Биттә бер йәки бер нисә блокнот Etherpad Lite асыу өсөн (локаль йәки Etherpad Lite серверындағы) синтаксик анализ  &lt;eplite&gt билдәһен ҡуя",
+	"etherpadlite-tracking-category": "Etherpad ҡуйылған биттәр",
+	"etherpadlite-tracking-category-desc": "Etherpad булған, <code>&lt;eplite&gt;</code> теглы биттәр.",
+	"etherpadlite-invalid-pad-url": "«$1» — блокноттың атамаһы юҡ йәки Etherpad Lite адресы дөрөҫ түгел.",
+	"etherpadlite-url-is-not-whitelisted": "«$1» Etherpad Lite рөхсәт иткән серверҙар исемлегендә түгел. {{PLURAL:$3|1=сервер ғына рөхсәт ителә «$2»|түбәндәге серверҙар рөхсәт ителгән: $2}}.",
+	"etherpadlite-empty-whitelist": "\"$1\" Etherpad Lite рөхсәт иткән серсерҙар исемлегендә түгел. Аҡ исемлектә бер сервер ҙа юҡ.",
+	"etherpadlite-pad-used-more-than-once": "\"$1\" блокноты был биттә ҡулланылған; бер биттә бер нисә блокнот ҡулланыла ала, тик улар бер үк булырға тейеш түгел."
+}

@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bennylin",
+			"Daud I.F. Argana",
+			"Irwangatot",
+			"IvanLanin",
+			"Iwan Novirion",
+			"Rex"
+		]
+	},
+	"confirmaccount-newrequests": "'''$1''' surel terbuka konfirmasi [[Special:ConfirmAccounts|{{PLURAL:$1|permintaan akun}} tertunda]]. '''Perhatian Anda dibutuhkan!'''",
+	"requestaccount-loginnotice": "Untuk mendapatkan sebuah akun pengguna, Anda harus '''[[Special:RequestAccount|mengajukannya]]'''.",
+	"action-confirmaccount": "meninjau dan menerima akun",
+	"right-confirmaccount": "Lihat [[Special:ConfirmAccounts|antrean peminta akun]]",
+	"right-confirmaccount-notify": "Diberitahu lewat surel mengenai permintaan akun yang baru disetujui",
+	"action-requestips": "melihat alamat IP pemohon selama memproses akun yang diminta",
+	"right-requestips": "Lihat Alamat IP pemohon selama proses permohonan akun",
+	"action-lookupcredentials": "melihat kredensial pengguna",
+	"right-lookupcredentials": "Lihat [[Special:UserCredentials|pengguna  Kredensial]]"
+}

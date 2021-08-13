@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chaduvari",
+			"Veeven"
+		]
+	},
+	"drafts": "చిత్తుప్రతులు",
+	"drafts-view-article": "పేజీ",
+	"drafts-view-existing": "ప్రస్తుత చిత్తుప్రతులు",
+	"drafts-view-saved": "భద్రపరచినవి",
+	"drafts-view-nonesaved": "ప్రస్తుతం మీరు భద్రపరచిన ప్రతులు ఏమీ లేవు.",
+	"drafts-view-notice": "ఈ పుటకి మీకు $1.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|చిత్తుప్రతి ఉంది|చిత్తుప్రతులు ఉన్నాయి}}",
+	"drafts-view-warn": "ఈ పేజీని వదిలి వెళ్ళాలనుకుంటున్నారా? అలా వెళ్ళడం ద్వారా ఈ పేజీలోని భద్రపరచని మార్పులన్నిటినీ కోల్పోతారు.",
+	"drafts-save": "దీన్ని చిత్తుప్రతిగా భద్రపరచు",
+	"drafts-save-save": "చిత్తుప్రతిని భద్రపరచు",
+	"drafts-save-saved": "భద్రమయ్యింది"
+}

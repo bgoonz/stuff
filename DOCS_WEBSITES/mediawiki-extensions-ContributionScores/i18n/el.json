@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Consta",
+			"Crazymadlover",
+			"Omnipaedista",
+			"Protnet",
+			"ZaDiak"
+		]
+	},
+	"contributionscores": "Βαθμολογίες συνεισφοράς",
+	"contributionscores-desc": "Εξετάζει την βάση δεδομένων του wiki για τον υψηλότερο [[Special:ContributionScores|όγκο συνεισφορών χρήστη]]",
+	"contributionscores-info": "Η βαθμολογία μετρά πρωτίστως μοναδικές σελίδες που έχουν τύχει επεξεργασίας, λαμβάνοντας υπ' όψιν και τον υψηλό όγκο επεξεργασίας.",
+	"contributionscores-top": "(Πρώτοι $1)",
+	"contributionscores-days": "{{PLURAL:$1|Τελευταία ημέρα|Τελευταίες $1 ημέρες}}",
+	"contributionscores-allrevisions": "Όλων των εποχών",
+	"contributionscores-score": "Βαθμολογία",
+	"contributionscores-rank": "Κατάταξη",
+	"contributionscores-pages": "Σελίδες",
+	"contributionscores-changes": "Αλλαγές",
+	"contributionscores-username": "Όνομα χρήστη",
+	"contributionscores-invalidusername": "Μη έγκυρο όνομα χρήστη",
+	"contributionscores-invalidmetric": "Μη έγκυρη μετρική"
+}

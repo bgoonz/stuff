@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"පසිඳු කාවින්ද"
+		]
+	},
+	"deletebatch": "පිටු කාණ්ඩ මකා දමන්න",
+	"deletebatch-desc": "[[Special:DeleteBatch|පිටු කාණ්ඩ මකා දමන්න]]",
+	"deletebatch-caption": "පිටු ලැයිස්තුව:",
+	"deletebatch-title": "කාණ්ඩය මකන්න",
+	"deletebatch-link-back": "විශේෂ පිටුව වෙත ආපසු යන්න",
+	"deletebatch-as": "කොටස්කරය මෙලෙස ධාවනය කරන්න:",
+	"deletebatch-or": "<strong>හෝ</strong>",
+	"deletebatch-delete": "මකන්න",
+	"deletebatch-page": "මකා දැමීමට ඇති පිටු:",
+	"deletebatch-processing-from-file": "ගොනු ලැයිස්තුවෙන් පිටු මකා දැමීම",
+	"deletebatch-processing-from-form": "සිට පිටු මකා දැමීම",
+	"deletebatch-omitting-nonexistent": "$1 නො-පවත්නා පිටුව අත් හරිමින්.",
+	"deletebatch-omitting-invalid": "$1 වලංගු නොවන පිටුව අත් හරිමින්.",
+	"deletebatch-file-bad-format": "ගොනුව සාමාන්‍ය පාඨයෙන් විය යුතුය",
+	"deletebatch-file-missing": "ලබා දුන් ගොනුව කියවිය නොහැක",
+	"deletebatch-select-script": "පිටු කොටස්කරය මකන්න",
+	"deletebatch-select-yourself": "ඔබ",
+	"right-deletebatch": "පිටු කාණ්ඩ වශයෙන් මැකීම"
+}

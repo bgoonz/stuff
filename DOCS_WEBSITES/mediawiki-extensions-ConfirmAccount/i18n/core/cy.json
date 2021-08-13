@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lloffiwr",
+			"Oergell"
+		]
+	},
+	"confirmaccount-newrequests": "Wedi cadarnhau agor e-bost '''$1''' [[Special:ConfirmAccounts|account {{PLURAL:$1|cais yn aros}}]]. '''Mae angen eich sylw a mewnbwn!'''",
+	"requestaccount-loginnotice": "I gael cyfrif defnyddiwr, rhaid i chi '''[[Special:RequestAccount|wneud cais am gyfrif]]'''.",
+	"action-confirmaccount": "adolygu a derbyn cyfrifon",
+	"right-confirmaccount": "Gweld [[Special:ConfirmAccounts|y ciw o'r ceisiadau am gyfrifon]]",
+	"right-requestips": "Gweld cyfeiriadau IP yr ymgeisydd tra'n brosesu ceisiadau am gyfrifon",
+	"right-lookupcredentials": "Gweld [[Special:UserCredentials|dilysiadau defnyddiwr]]"
+}

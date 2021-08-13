@@ -1,1 +1,0 @@
-raise_exception_on_sigterm false

@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dani"
+		]
+	},
+	"editsubpages-desc": "Lehetővé teszi az adminisztrátorok számára, hogy engedélyezzék a szerkesztést egy lapon és annak összes allapján a [[MediaWiki:Unlockedpages]] lapon keresztül.",
+	"unlockedpages": " #<!-- ezt a sort hagyd így --><pre>\n# Az engedélyezni kívánt lapok listáját sorold fel a\n# * Lap neve\n# forma használatával. A lapok előtt csillagnak kell szerepelni, hogy\n# számítsanak, minden más megjegyzésnek számít.\n# A lapnevek lehetnek [[linkek]] és kis- és nagybetűérzékenyek.\n# Továbbá, a lapok vitalapjai is szerkeszthetőek lesznek.\n# Lásd a https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages lapot további információért\n  #</pre><!-- ezt a sort hagyd így -->"
+}

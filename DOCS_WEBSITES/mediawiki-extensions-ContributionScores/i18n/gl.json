@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Alma",
+			"Toliño",
+			"Xosé"
+		]
+	},
+	"contributionscores": "Puntuación das contribucións",
+	"contributionscores-desc": "Escruta a base de datos do wiki para ver os maiores [[Special:ContributionScores|volumes de contribucións dos usuarios]]",
+	"contributionscores-info": "Basicamente, a puntuación mide as páxinas únicas editadas, tendo en conta o alto volume de edicións.",
+	"contributionscores-top": "(os $1 que máis)",
+	"contributionscores-days": "{{PLURAL:$1|O último día|Os últimos $1 días}}",
+	"contributionscores-allrevisions": "Desde sempre",
+	"contributionscores-score": "Puntuación",
+	"contributionscores-rank": "Clasificación",
+	"contributionscores-pages": "Páxinas",
+	"contributionscores-changes": "Cambios",
+	"contributionscores-username": "Nome de usuario",
+	"contributionscores-invalidusername": "Nome de usuario non válido",
+	"contributionscores-invalidmetric": "Métrica inválida"
+}

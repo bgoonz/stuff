@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dbc334",
+			"Eleassar"
+		]
+	},
+	"emailcapture": "Preverjanje e-pošte",
+	"emailcapture-desc": "Zajame e-poštne naslove in omogoča uporabnikom, da jih potrdijo iz e-pošte",
+	"emailcapture-failure": "Vaš e-poštni naslov '''ni''' bil preverjen.",
+	"emailcapture-invalid-code": "Neveljavna potrditvena koda.",
+	"emailcapture-already-confirmed": "Vaš e-poštni naslov je že potrjen.",
+	"emailcapture-response-subject": "Preverjanje e-poštnega naslova {{SITENAME}}",
+	"emailcapture-response-body": "Pozdravljeni!\n\nZahvaljujemo se vam za izkazano zanimanje za pomoč pri izboljševanju {{GRAMMAR:rodilnik|{{SITENAME}}}}.\n\nProsimo, vzemite si trenutek in potrdite vaš e-poštni naslov s klikom na spodnjo povezavo:\n$1\n\nObiščete lahko tudi:\n$2\n\nin vnesete naslednjo potrditveno kodo:\n$3\n\nKmalu vam bomo sporočili, kako lahko pomagate izboljšati {{GRAMMAR:tožilnik|{{SITENAME}}}}.\n\nČe tega niste zahtevali, prosimo, prezrite to e-pošto in ničesar več vam ne bomo poslali.",
+	"emailcapture-success": "Hvala!\n\nVaš e-poštni naslov smo potrdili.",
+	"emailcapture-instructions": "Da preverite vaš e-poštni naslov, vnesite kodo, ki ste jo prejeli po e-pošti, in kliknite »{{int:emailcapture-submit}}«.",
+	"emailcapture-verify": "Koda za preverjanje:",
+	"emailcapture-submit": "Preveri e-poštni naslov",
+	"apihelp-emailcapture-description": "Zajem e-poštnih naslovov",
+	"apihelp-emailcapture-param-email": "E-poštni naslov za zajeti",
+	"apihelp-emailcapture-param-info": "Dodatne informacije za zabeležiti, po navadi strukturirane informacije, kodirane z JSON"
+}

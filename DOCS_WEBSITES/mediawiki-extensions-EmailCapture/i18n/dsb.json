@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Michawiki"
+		]
+	},
+	"emailcapture": "E-mailowe wobkšuśenje",
+	"emailcapture-desc": "Zmóžnja pópadnjenje e-mailowych adresow a dowólujo wužywarjam je pśez e-mail wobkšuśił",
+	"emailcapture-failure": "Twója e-mailowa adresa '''nje'''jo se wobkšuśiła.",
+	"emailcapture-invalid-code": "Njepłaśiwy wobkšuśeński kod.",
+	"emailcapture-already-confirmed": "Twója e-mailowa adresa jo južo wobkšuśona.",
+	"emailcapture-response-subject": "{{SITENAME}} - wobkšuśenje e-mailoweje adrese",
+	"emailcapture-response-body": "Halo!\n\nWjeliki źěk za twój zajm {{GRAMMAR:akuzatiw|{{SITENAME}}}} polěpšyś.\n\nPšosym bjeŕ se wokognuśe casa, aby swóju e-mail pśez kliknjenje na slědujucy wótkaz wobkšuśił:\n$1\n\nMóžoš teke k slědujucemu bokoju woglědaś:\n$2\n\nZapódaj pón slědujucy wobkśuśeński kod:\n$3\n\nStajijomy se za krotki cas z tobu do zwiska, aby my śi k wěsći dali, kak móžoš pomagaś, {{GRAMMAR:akuzatiw|{{SITENAME}}}} polěpšyś.\n\nJolic njejsy toś to napšašowanje pósłał, ignorěruj pšosym toś tu e-mejl a njepósćelomy śi nic wěcej.",
+	"emailcapture-success": "Wjeliki źěk!\n\nTwója e-mailowa adresa jo se wuspěšnje wobkšuśiła.",
+	"emailcapture-instructions": "Aby swóju e-mailowu adresu wobkšuśił, zapódaj kod, kótaryž jo se śi pśez e-mail pśipósłał a klikni na \"{{int:emailcapture-submit}}\".",
+	"emailcapture-verify": "Wobkšuśeński kod:",
+	"emailcapture-submit": "E-mailowu adresu wobkšuśiś"
+}

@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"පසිඳු කාවින්ද",
+			"බිඟුවා"
+		]
+	},
+	"contributionscores": "දායකත්ව ලකුණු",
+	"contributionscores-info": "මෙම ලකුණ ප්‍රධාන වශයෙන් ඉහළ සංස්කරණ ධාරිතාවක් සඳහා සංස්කරණය කරනු ලැබූ අසමසම පිටු සමග සලකා බැලීමෙන් මනිනු ලැබේ.",
+	"contributionscores-top": "(ඉහළම $1)",
+	"contributionscores-days": "අවසන් {{PLURAL:$1|දිනයේ|දින $1}}",
+	"contributionscores-allrevisions": "හැම වෙලාවෙම",
+	"contributionscores-score": "ලකුණු",
+	"contributionscores-pages": "පිටු",
+	"contributionscores-changes": "වෙනස් කිරීම්",
+	"contributionscores-username": "පරිශීලක නාමය",
+	"contributionscores-invalidusername": "වලංගු නොවන පරිශීලක නාමය",
+	"contributionscores-invalidmetric": "වලංගු නොවන මාත්‍රිකය"
+}

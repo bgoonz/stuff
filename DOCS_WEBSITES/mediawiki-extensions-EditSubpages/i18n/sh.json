@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"editsubpages-desc": "Omogućava sistem-operatorima da odblokiraju stranicu i sve njezine podstranice za anonimno uređivanje pomoću [[MediaWiki:Unlockedpages]]",
+	"unlockedpages": " #<!-- leave this line alone --><pre>\n# Ispod stavite stranice koje želite da otključate koristeći\n# * Ime stranice\n# Otključane stranice moraju počinjati sa pottočkom (zvjezdicom) da bi se računale,\n# sve ostalo se smatra komentarom\n# Imena stranica mogu biti [[links|veze]] i razlikuju velika i mala slova\n# Također, razgovorne stranice će biti automatski otključane zajedno sa stranicom\n# Vidite https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages za više informacija\n  #</pre><!-- leave this line alone -->"
+}

@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Firilacroco",
+			"KlaudiuMihaila",
+			"Minisarm",
+			"Stelistcristi"
+		]
+	},
+	"errorhandler-errors": "Erori:",
+	"errorhandler-error-fatal": "Eroare fatală",
+	"errorhandler-error-warning": "Avertizare",
+	"errorhandler-error-parse": "Eroare de parser",
+	"errorhandler-error-notice": "Notificare",
+	"errorhandler-error-deprecated": "Învechit",
+	"errorhandler-error-core-error": "Eroare nucleu",
+	"errorhandler-error-core-warning": "Avertisment nucleu",
+	"errorhandler-error-compile-error": "Eroare de compilare",
+	"errorhandler-error-compile-warning": "Avertizare de compilare",
+	"errorhandler-error-user-error": "Eroare de utilizator",
+	"errorhandler-error-user-warning": "Avertizare de utilizator",
+	"errorhandler-error-user-notice": "Notificare utilizator",
+	"errorhandler-error-strict": "Standarde stricte",
+	"errorhandler-msg-text": "$1 : $2 în $3 (linia $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> în <b>$3</b> (linia <b>$4</b>)",
+	"errorhandler-trace-line": "$1 (linia $2): $3"
+}

@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Avicennasis",
+			"John Reid"
+		]
+	},
+	"disableaccount-user": "Uisername:",
+	"logentry-block-disableaccount": "$1 {{GENDER:$2|disabled the account}} o {{GENDER:$4|$3}}."
+}

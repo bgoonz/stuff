@@ -1,0 +1,9 @@
+{
+	"@metadata": {},
+	"apihelp-devicemaplogcapture-description": "{{doc-apihelp-description|devicemaplogcapture}}",
+	"apihelp-devicemaplogcapture-summary": "{{doc-apihelp-summary|devicemaplogcapture}}",
+	"apihelp-devicemaplogcapture-param-eventid": "{{doc-apihelp-param|devicemaplogcapture|eventid}}",
+	"apihelp-devicemaplogcapture-param-site": "{{doc-apihelp-param|devicemaplogcapture|site}}",
+	"apihelp-devicemaplogcapture-param-token": "{{doc-apihelp-param|devicemaplogcapture|token}}",
+	"apihelp-devicemaplogcapture-param-dmap": "{{doc-apihelp-param|devicemaplogcapture|dmap}}"
+}

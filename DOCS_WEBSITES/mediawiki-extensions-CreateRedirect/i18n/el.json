@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Glavkos"
+		]
+	},
+	"createredirect": "Δημιουργία Ανακατεύθυνσης",
+	"createredirect-desc": "Προσθέτει μια ειδική σελίδα [[Special:CreateRedirect|CreateRedirect]] για εύκολη δημιουργία ανακατευθύνσεων",
+	"createredirect-error": "Σφάλμα: Ο έλεγχος ταυτοποίησης απέτυχε",
+	"createredirect-instructions": "Χρησιμοποιώντας την παρακάτω φόρμα, μπορείτε να δημιουργήσετε μια σελίδα ανακατεύθυνσης ή να αντικαταστήσετε μια υπάρχουσα σελίδα με μια ανακατεύθυνση.",
+	"createredirect-page-title": "Τίτλος σελίδας:",
+	"createredirect-redirect-done": "Redirect δημιουργήθηκε από το \"$1\" σε \"$2\"",
+	"createredirect-redirect-to": "Ανακατεύθυνση στο:",
+	"createredirect-save": "Αποθήκευση σελίδας"
+}

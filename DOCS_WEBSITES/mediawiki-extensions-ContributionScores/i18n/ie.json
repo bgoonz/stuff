@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Renan"
+		]
+	},
+	"contributionscores": "Contes de contribution",
+	"contributionscores-desc": "Calcula li funde de data del wiki por max alt [[Special:ContributionScores|volúmine de contribution de usator]]",
+	"contributionscores-info": "Li calcul primarimen mesura págines unic redactet, considerant li alt volume de redactiones.",
+	"contributionscores-top": "(Prim $1)",
+	"contributionscores-days": "Ultim {{PLURAL:$1|die|$1 dies}}",
+	"contributionscores-allrevisions": "Omni témpor",
+	"contributionscores-score": "Conte",
+	"contributionscores-rank": "Classification",
+	"contributionscores-pages": "Págines",
+	"contributionscores-changes": "Changes",
+	"contributionscores-username": "Nómine de usator",
+	"contributionscores-invalidusername": "Nómine de usator ínvalid",
+	"contributionscores-invalidmetric": "Metric ínvalid"
+}

@@ -1,3 +1,0 @@
-ok
-
-Catchable fatal error: Argument 1 passed to g() must be an instance of C<(function (int, float): bool)>, D<int,string,bool> given in %s on line 13

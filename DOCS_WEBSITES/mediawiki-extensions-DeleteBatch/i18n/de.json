@@ -1,0 +1,43 @@
+{
+	"@metadata": {
+		"authors": [
+			"Als-Holder",
+			"ChrisiPK",
+			"Geitost",
+			"Kghbln",
+			"Leithian",
+			"MF-Warburg",
+			"Metalhead64",
+			"Purodha",
+			"Revolus",
+			"Umherirrender"
+		]
+	},
+	"deletebatch": "Sammellöschung vorzugebender Seiten",
+	"deletebatch-desc": "Erweitert das Wiki um eine [[Special:DeleteBatch|Spezialseite]] zur gesammelten Löschung vorzugebender Seiten",
+	"deletebatch-help": "Lösche eine Reihe von Seiten. Du kannst einerseits eine einzelne Seite löschen, aber auch mehrere Seiten, die du in einer Datei auflistest.\nWähle einen Benutzer, der im Löschlogbuch angezeigt werden soll.\nDie hochzuladende Datei sollte einen Seitennamen und optional einen durch einen senkrechten Strich („|“) getrennten Löschgrund enthalten.",
+	"deletebatch-caption": "Seitenliste:",
+	"deletebatch-default-reason": "Standardlöschgrund:",
+	"deletebatch-title": "Mehrere Seiten gesammelt löschen",
+	"deletebatch-link-back": "Zurück zur Spezialseite",
+	"deletebatch-as": "Skript ausführen als:",
+	"deletebatch-both-modes": "Bitte wähle entweder eine bestimmte Seite oder eine vorgegebene Liste von Seiten.",
+	"deletebatch-or": "<strong>oder</strong>",
+	"deletebatch-delete": "Löschen",
+	"deletebatch-page": "Zu löschende Seiten:",
+	"deletebatch-processing-from-file": "Seiten löschen, die in der Datei gelistet sind.",
+	"deletebatch-processing-from-form": "Seiten löschen, die im Formular gelistet sind.",
+	"deletebatch-omitting-nonexistent": "Überspringe die nicht vorhandene Seite $1.",
+	"deletebatch-omitting-invalid": "Überspringe die ungültige Seite $1.",
+	"deletebatch-file-bad-format": "Die Datei sollte eine reine Textdatei sein",
+	"deletebatch-file-missing": "Die Datei kann nicht gelesen werden",
+	"deletebatch-select-script": "Seitenlöschskript",
+	"deletebatch-select-yourself": "du",
+	"deletebatch-no-page": "Bitte gib entweder mindestens eine zu löschende Seite an oder wähle eine Datei, die eine Liste zu löschender Seiten enthält.",
+	"deletebatch-system-username": "Seitenlöschskript",
+	"action-deletebatch": "Seiten im Stapel zu löschen",
+	"right-deletebatch": "Seiten gesammelt löschen",
+	"action-deletebatch-spoof": "Stapellöschungen von Seiten als „Seite-löschen-Skript“ durchzuführen",
+	"right-deletebatch-spoof": "Stapellöschung von Seiten als „Seite-löschen-Skript“",
+	"deletebatch-deleting-file-only": "Die Dateibeschreibungsseite $1 ist nicht vorhanden. Es wird nur die eigentliche Datei gelöscht. Diese Aktion wird nicht protokolliert."
+}

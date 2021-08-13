@@ -1,8 +1,0 @@
-{
-  "domain": "mpd",
-  "name": "Mpd",
-  "documentation": "https://www.home-assistant.io/components/mpd",
-  "requirements": ["python-mpd2==1.0.0"],
-  "dependencies": [],
-  "codeowners": ["@fabaff"]
-}

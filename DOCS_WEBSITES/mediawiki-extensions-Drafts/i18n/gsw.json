@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Als-Chlämens",
+			"Als-Holder"
+		]
+	},
+	"drafts": "Versione im Zwischespycher",
+	"drafts-desc": "Macht s megli, [[Special:Drafts|zwischegspychereti Versione]] uf em Server aazlege",
+	"drafts-view": "Version im Zwischespycher aazeige",
+	"drafts-view-summary": "Die Spezialsyte zeigt alli Entwirf, wu s git.\nEntwirf, wu nit verwändet wäre, wäre automatisch no {{PLURAL:$1|$1 Tag|$1 Täg}} useghejt.",
+	"drafts-view-article": "Syte",
+	"drafts-view-existing": "Versione, wu s im Zwischespycher git",
+	"drafts-view-saved": "Gspycheret",
+	"drafts-view-discard": "Furt gheije",
+	"drafts-view-nonesaved": "Du hesch no kei Versione im Zwischespychere aagleit.",
+	"drafts-view-notice": "Du hesch $1 fir die Syte.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|Version im Zwischespycher|Versione im Zwischespycher}}",
+	"drafts-view-warn": "Wänn Du die Syte verlosch, no gehn alli Änderige verlore, wu nit gspycheret sin.\nMechtsch einewäg wytergoh?",
+	"drafts-save": "Die Version zwischespychere",
+	"drafts-save-save": "Zwischespychere",
+	"drafts-save-saved": "Gspycheret",
+	"drafts-save-saving": "Am Spychere",
+	"drafts-save-error": "Fähler bim Aalege vu dr zwischegspycherete Version",
+	"drafts-enable": "Funktion aktiviere, zume en Entwurf im Bearbeitigsfäld chönne spyychere.",
+	"prefs-extension-drafts": "Entwirf",
+	"tooltip-drafts-save": "E zwischegspychereti Version aalege"
+}

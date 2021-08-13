@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Borichèt",
+			"Dragonòt"
+		]
+	},
+	"disableaccount-desc": "A përmët a j'aministrator ëd disabilité dij cont andividuaj.",
+	"right-disableaccount": "Disabilité dij cont",
+	"disableaccount": "Disabìlita un cont utent",
+	"disableaccount-user": "Stranòm:",
+	"disableaccount-confirm": "Disabilité sto cont utent.\nL'utent a podrà pi intré ant ël sistema, amposté torna soa ciav, o arsèive notìfiche për pòsta eletrònica.\nSe l'utent a l'é al moment intrà da chèich part, a sarà sùbit barà fòra.\n''Ch'a nòta che disabiité un cont a l'é pa reversìbil senta l'antërvension ëd n'aministrator ëd sistema.''",
+	"disableaccount-mustconfirm": "A dev confirmé ch'a veul disabilité ës cont.",
+	"disableaccount-nosuchuser": "Ël cont utent \"$1\" a esist pa.",
+	"disableaccount-success": "Ël cont utent \"$1\" a l'é stàit disabilità përmanentement."
+}

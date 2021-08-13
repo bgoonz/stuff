@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fwolff",
+			"Naudefj",
+			"පසිඳු කාවින්ද"
+		]
+	},
+	"disableaccount-desc": "Stel bestuurders in staat om individuele rekeninge te deaktiveer",
+	"right-disableaccount": "Deaktiveer rekeninge",
+	"action-disableaccount": "rekeninge te deaktiveer",
+	"disableaccount": "Deaktiveer 'n gebruikerrekening",
+	"disableaccount-user": "Gebruikernaam:",
+	"disableaccount-confirm": "Deaktiveer hierdie gebruiker.\nDie gebruiker sal nie langer kan aanmeld, sy wagwoord herstel, of e-pos ontvang nie.\nAs die gebruiker tans aangeteken is, sal hy onmiddellik uitgeteken word.\n''Let daarop die aksie nie sonder die hulp van 'n administrateur omgekeer kan word nie.''",
+	"disableaccount-mustconfirm": "U moet bevestig dat u hierdie gebruiker wil deaktiveer.",
+	"disableaccount-nosuchuser": "Die gebruiker \"$1\" bestaan nie.",
+	"disableaccount-success": "Die gebruiker \"$1\" is permanent gedeaktiveer."
+}

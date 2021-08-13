@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"!Silent",
+			"Cainamarques"
+		]
+	},
+	"etherpadlite-desc": "Adiciona a etiqueta sintática &lt;eplite&gt; para incorporar um ou mais documentos Etherpad Lite (os quais são alocados em um ou mais servidores Etherpad Lite, locais ou externos) às páginas.",
+	"etherpadlite-tracking-category": "Páginas com Etherpad incorporado",
+	"etherpadlite-tracking-category-desc": "A página tem um Etherpad incorporado com o elemento <code>&lt;eplite&gt;</code>.",
+	"etherpadlite-invalid-pad-url": "\"$1\" não é uma URL Etherpad Lite ou um nome de documento.",
+	"etherpadlite-url-is-not-whitelisted": "\"$1\" não está incluído na lista branca de servidores Etherpad Lite permitidos. {{PLURAL:$3|$2 é o único servidor permitido|Os servidores permitidos são os seguintes: $2}}.",
+	"etherpadlite-empty-whitelist": "\"$1\" não está incluído na lista branca dos servidores Etherpad Lite permitidos. Não há servidores permitidos na lista branca.",
+	"etherpadlite-pad-used-more-than-once": "O documento \"$1\" já foi utilizado nesta página; você pode ter vários documentos em uma página, mas apenas se estes forem diferentes."
+}

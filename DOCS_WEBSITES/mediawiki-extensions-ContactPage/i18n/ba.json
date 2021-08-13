@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Assele",
+			"DannyS712",
+			"Haqmar",
+			"Ләйсән"
+		]
+	},
+	"contactpage": "Бәйләнеш бите",
+	"contactpage-desc": "[[Special:Contact|Ҡараусылар өсөн форма]]",
+	"contactpage-title": "Бәйләнеш",
+	"contactpage-pagetext": "Зинһар, беҙҙең менән бәйләнешкә кереү өсөн, түбәндәге форманы ҡулланығыҙ.",
+	"contactpage-legend": "Э-хат ебәрергә",
+	"contactpage-defsubject": "Хәбәр",
+	"contactpage-subject-and-sender": "$1 ($2 башлап)",
+	"contactpage-subject-and-sender-withip": "$1 ($2  $3 адресынан)",
+	"contactpage-fromname": "Исемегеҙ:",
+	"contactpage-fromaddress": "Электрон почта адресығыҙ:",
+	"contactpage-formfootnotes": "(яуап алғыыҙ килһә генә кәрәкле)",
+	"contactpage-includeip": "Был хәбәргә минең IP адресты өҫтәргә.",
+	"contactpage-usermailererror": "Хат ебәргән ваҡытта хата килеп сыҡты:  $1",
+	"contactpage-captcha-error": "CAPTCHA хатаһы",
+	"contactpage-config-error-title": "Контакт форма хатаһы",
+	"contactpage-config-error": "Контакт форма был бит өсөн көйләнмәгән, йәки дөрөҫ көйләнмәгән"
+}

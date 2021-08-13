@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"CERminator",
+			"Srdjan m",
+			"Srđan"
+		]
+	},
+	"deletebatch-caption": "Spisak stranica:",
+	"deletebatch-link-back": "Nazad na posebnu stranicu",
+	"deletebatch-as": "Pokreni skriptu kao:",
+	"deletebatch-or": "<strong>ili</strong>",
+	"deletebatch-delete": "Izbriši",
+	"deletebatch-page": "Stranice koje će biti izbrisane:",
+	"deletebatch-processing-from-file": "brisanje stranica navedenih u datoteci",
+	"deletebatch-processing-from-form": "brisanje stranica navedenih u obrascu",
+	"deletebatch-file-bad-format": "Datoteka bi trebala biti u formi običnog teksta",
+	"deletebatch-file-missing": "Ne možete se pročitati navedena datoteka",
+	"deletebatch-select-yourself": "vi"
+}

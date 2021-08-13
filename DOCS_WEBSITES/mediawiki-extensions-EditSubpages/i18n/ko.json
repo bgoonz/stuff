@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ykhwong",
+			"아라"
+		]
+	},
+	"editsubpages-desc": "[[MediaWiki:Unlockedpages]]를 통해 익명이 편집하는 문서와 모든 하위 문서에 관리자가 잠금 해제를 하도록 허용",
+	"unlockedpages": " #<!-- 이 줄은 그대로 두십시오 --><pre>\n# 사용하는 아래에 잠금을 해제하려는 페이지를 넣으세요\n# * 문서이름\n# 잠금 해제 페이지가 집계되는 순서 없는 목록으로 시작하며,\n# 다른 모든 것들은 주석으로 간주합니다\n# 문서이름은 [[링크]]되어 있을 수 있으며 대소문자를 구분합니다\n# 또한 토론 문서는 해당 페이지가 자동으로 잠금이 해제됩니다\n# 자세한 정보는 https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages를 참조하세요\n #</pre><!-- 이 줄은 그대로 두십시오 -->"
+}

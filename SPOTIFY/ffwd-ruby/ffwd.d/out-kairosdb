@@ -1,3 +1,0 @@
-:output:
-  - :type: "kairosdb"
-    :url: "http://localhost:8888"

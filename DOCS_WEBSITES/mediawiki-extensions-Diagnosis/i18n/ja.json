@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Shirayuki"
+		]
+	},
+	"diagnosis": "診断",
+	"diagnosis-desc": "問題点、エラー、セキュリティ リスクの危険性を見つけるための特別ページ",
+	"action-diagnosis-access": "診断ツールの実行",
+	"right-diagnosis-access": "診断ツールを実行"
+}

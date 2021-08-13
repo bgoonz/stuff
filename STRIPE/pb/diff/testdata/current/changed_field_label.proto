@@ -1,7 +1,0 @@
-syntax = "proto3";
-
-package helloworld;
-
-message HelloRequest {
-  repeated string name = 1;
-}

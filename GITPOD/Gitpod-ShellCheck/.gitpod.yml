@@ -1,9 +1,0 @@
-image:
-  file: .gitpod.Dockerfile
-
-tasks:
-  - command: shellcheck bad-shellscript.sh
-
-vscode:
-  extensions:
-    - timonwong.shellcheck@0.9.0:hsU/Rd39aqPYowTqL+DbXg==

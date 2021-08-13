@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"DannyS712",
+			"Ghaly",
+			"Meno25",
+			"Ramsis II"
+		]
+	},
+	"contactpage": "صفحة الاتصال",
+	"contactpage-desc": "[[Special:Contact|استمارة اتصال للزائرين]]",
+	"contactpage-title": "اتصل",
+	"contactpage-pagetext": "من فضلك استخدم الاستمارة بالأسفل للاتصال بنا.",
+	"contactpage-legend": "ايعت ايميل",
+	"contactpage-defsubject": "رسالة الاتصال",
+	"contactpage-subject-and-sender": "$1 (من $2)",
+	"contactpage-subject-and-sender-withip": "$1 (من $2 فى $3)",
+	"contactpage-fromname": "اسمك:",
+	"contactpage-fromaddress": "الايميل بتاعك:",
+	"contactpage-formfootnotes": "(ضرورى لو عايز اجابه)",
+	"contactpage-includeip": "حط عنوان الايبى بتاعى فى الرساله دى.",
+	"contactpage-usermailererror": "البريد رجع غلط: $1",
+	"contactpage-captcha-error": "غلط CAPTCHA",
+	"contactpage-config-error-title": "غلط من صفحه الاتصال",
+	"contactpage-mustbeloggedin": "لو سمحت اعمل لوجين علشان تبعت صفحة اتصال."
+}

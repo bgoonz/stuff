@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cquoi",
+			"Pols12"
+		]
+	},
+	"diagnosis": "Diagnostic",
+	"diagnosis-desc": "Page spéciale pour trouver les éventuels problèmes, erreurs ou risques de sécurité",
+	"action-diagnosis-access": "exécuter l’outil de diagnostic",
+	"right-diagnosis-access": "Exécutez l'outil de diagnostic"
+}

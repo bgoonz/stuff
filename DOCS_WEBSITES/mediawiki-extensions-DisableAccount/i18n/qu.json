@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"AlimanRuna"
+		]
+	},
+	"disableaccount-desc": "Kaywanqa kamachiqkuna sapa rakiqunakunata hark'aytam atinku.",
+	"right-disableaccount": "Rakiqunakunata hark'ay",
+	"disableaccount": "Ruraqpa rakiqunanta hark'ay",
+	"disableaccount-user": "Ruraqpa sutin:",
+	"disableaccount-confirm": "Kay ruraqpa sutinta hark'ay.\nRuraqqa manam yaykuyta atinqachu, manam yaykuna rimanta churamuyta atinqachu, manam e-chaski willaykunata chaskiyta atinchu.\nMaypipas yaykusqa kaspaqa, tuyllapi qarqusqam kanqa.\n''Qhawariy, ruraqpa sutinta hark'aspaykiqa manam t'ikrayta atinkichu llika kamachiq mana yanapachkaptin.''",
+	"disableaccount-mustconfirm": "Kay ruraqpa rakiqunanta hark'ayta munaspaykiqa, takyachinaykim tiyan.",
+	"disableaccount-nosuchuser": "\"$1\" sutiyuq ruraqpa rakiqunanqa manam kanchu.",
+	"disableaccount-success": "\"$1\" sutiyuq ruraqpa rakiqunanqa wiñaypaq hark'asqam."
+}

@@ -1,0 +1,226 @@
+{
+	"name": "Confirm User Accounts",
+	"namemsg": "confirmaccount-extensionname",
+	"author": "Aaron Schulz",
+	"url": "https://www.mediawiki.org/wiki/Extension:ConfirmAccount",
+	"descriptionmsg": "confirmaccount-desc",
+	"type": "specialpage",
+	"license-name": "GPL-2.0-or-later",
+	"requires": {
+		"MediaWiki": ">= 1.36.0"
+	},
+	"ExtensionFunctions": [
+		"ConfirmAccountHooks::onExtensionFunctions"
+	],
+	"SpecialPages": {
+		"RequestAccount": "RequestAccountPage",
+		"ConfirmAccounts": "ConfirmAccountsPage",
+		"UserCredentials": "UserCredentialsPage"
+	},
+	"MessagesDirs": {
+		"ConfirmAccount": [
+			"i18n/core"
+		],
+		"ConfirmAccountPage": [
+			"i18n/confirmaccount"
+		],
+		"RequestAccountPage": [
+			"i18n/requestaccount"
+		],
+		"UserCredentialsPage": [
+			"i18n/usercredentials"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"ConfirmAccountAliases": "ConfirmAccount.alias.php"
+	},
+	"AutoloadClasses": {
+		"ConfirmAccountHooks": "includes/ConfirmAccountHooks.php",
+		"ConfirmAccountUIHooks": "includes/frontend/ConfirmAccountUI.hooks.php",
+		"ConfirmAccountsPage": "includes/frontend/specialpages/actions/ConfirmAccount_body.php",
+		"ConfirmAccountsPager": "includes/frontend/specialpages/actions/ConfirmAccountsPager.php",
+		"RequestAccountPage": "includes/frontend/specialpages/actions/RequestAccount_body.php",
+		"UserCredentialsPage": "includes/frontend/specialpages/actions/UserCredentials_body.php",
+		"ConfirmAccount": "includes/backend/ConfirmAccount.class.php",
+		"UserAccountRequest": "includes/backend/UserAccountRequest.php",
+		"AccountRequestSubmission": "includes/business/AccountRequestSubmission.php",
+		"AccountConfirmSubmission": "includes/business/AccountConfirmSubmission.php",
+		"ConfirmAccountPreAuthenticationProvider": "includes/business/ConfirmAccountPreAuthenticationProvider.php",
+		"ConfirmAccountUpdaterHooks": "includes/backend/schema/ConfirmAccountUpdater.hooks.php"
+	},
+	"AuthManagerAutoConfig": {
+		"preauth": {
+			"ConfirmAccountPreAuthenticationProvider": {
+				"class": "ConfirmAccountPreAuthenticationProvider",
+				"sort": 0
+			}
+		}
+	},
+	"ResourceModules": {
+		"ext.confirmAccount": {
+			"styles": "includes/frontend/modules/confirmaccount.css"
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "ConfirmAccount"
+	},
+	"Hooks": {
+		"PersonalUrls": "ConfirmAccountUIHooks::setRequestLoginLinks",
+		"UserCreateForm": "ConfirmAccountUIHooks::addRequestLoginText",
+		"UserLoginForm": "ConfirmAccountUIHooks::addRequestLoginText",
+		"BeforePageDisplay": "ConfirmAccountUIHooks::confirmAccountsNotice",
+		"AdminLinks": "ConfirmAccountUIHooks::confirmAccountAdminLinks",
+		"AuthChangeFormFields": "ConfirmAccountUIHooks::onAuthChangeFormFields",
+		"LoadExtensionSchemaUpdates": "ConfirmAccountUpdaterHooks::addSchemaUpdates",
+		"SpecialPageBeforeExecute": "ConfirmAccountHooks::onSpecialPageBeforeExecute"
+	},
+	"AvailableRights": [
+		"confirmaccount",
+		"confirmaccount-notify",
+		"requestips",
+		"lookupcredentials"
+	],
+	"GroupPermissions": {
+		"*": {
+			"createaccount": false
+		},
+		"user": {
+			"createaccount": false
+		},
+		"bureaucrat": {
+			"confirmaccount": true,
+			"requestips": true,
+			"lookupcredentials": true
+		}
+	},
+	"config": {
+		"MakeUserPageFromBio": {
+			"description": "Set the person's bio as their userpage?",
+			"value": true
+		},
+		"AutoUserBioText": {
+			"description": "Text to add to bio pages if the above option is on",
+			"value": ""
+		},
+		"AutoWelcomeNewUsers": {
+			"description": "Create a user talk page with a welcome message for accepted users. The message can be customized by editing MediaWiki:Confirmaccount-welc.",
+			"value": true
+		},
+		"RejectedAccountMaxAge": {
+			"description": "How long to store rejected requests? Default is one week.",
+			"value": 604800
+		},
+		"ConfirmAccountRejectAge": {
+			"description": "How long after accounts have been requested/held before they count as 'rejected'? Default is one month.",
+			"value": 2592000
+		},
+		"AccountRequestThrottle": {
+			"description": "How many requests can an IP make at once?",
+			"value": 1
+		},
+		"AccountRequestWhileBlocked": {
+			"description": "Can blocked users with \"prevent account creation\" request accounts?",
+			"value": false
+		},
+		"ConfirmAccountRequestFormItems": {
+			"description": "Which form elements to show at Special:RequestAccount?",
+			"value": {
+				"UserName": {
+					"enabled": true
+				},
+				"RealName": {
+					"enabled": true
+				},
+				"Biography": {
+					"enabled": true,
+					"minWords": 6
+				},
+				"AreasOfInterest": {
+					"enabled": true
+				},
+				"CV": {
+					"enabled": true
+				},
+				"Notes": {
+					"enabled": true
+				},
+				"Links": {
+					"enabled": true
+				},
+				"TermsOfService": {
+					"enabled": true
+				}
+			},
+			"merge_strategy": "array_plus_2d"
+		},
+		"AccountRequestExts": {
+			"description": "If files can be attached, what types can be used? (MIME data is checked)",
+			"value": [
+				"txt",
+				"pdf",
+				"doc",
+				"latex",
+				"rtf",
+				"text",
+				"wp",
+				"wpd",
+				"sxw"
+			]
+		},
+		"AccountRequestTypes": {
+			"description": "Prospective account request types. Format is an array of (integer => (subpage param,user group,autotext)) pairs. The integer keys enumerate the request types. The key for a type should not change. Each type has its own request queue at Special:ConfirmAccount/<subpage param>. When a request of a certain type is approved, the new user: (a) is placed in the <user group> group (if not User or *) (b) has <autotext> appended to his or her user page",
+			"value": {
+				"0": [
+					"authors",
+					"user",
+					null
+				]
+			},
+			"merge_strategy": "array_plus"
+		},
+		"ConfirmAccountSortkey": {
+			"description": "If set, will add {{DEFAULTSORT:sortkey}} to userpages for auto-categories. The sortkey will be made by doing a regex search and replace on the title. Set this variable to false to avoid sortkey use. For example, setting this variable to [ '/^(.+) ([^ ]+)$/', '$2, $1' ] will do {{DEFAULTSORT:firstname, lastname}}.",
+			"value": false
+		},
+		"ConfirmAccountSaveInfo": {
+			"description": "IMPORTANT: do we store the user's notes and credentials for successful account request? This will be stored indefinetely and will be accessible to users with crediential lookup permissions",
+			"value": true
+		},
+		"ConfirmAccountContact": {
+			"description": "Send an email to this address when account requestors confirm their email. Set to false to skip this. It might be useful to point this to a mailing list.",
+			"value": false
+		},
+		"ConfirmAccountCaptchas": {
+			"description": "If ConfirmEdit is installed and set to trigger for createaccount, inject CAPTCHAs for requests too?",
+			"value": true
+		},
+		"ConfirmAccountFSRepos": {
+			"description": "Storage repositories. 'accountreqs' is the location of attached files for pending requests and 'accountcreds' is the location of credential files.",
+			"value": {
+				"accountreqs": {
+					"name": "accountreqs",
+					"directory": false,
+					"url": null,
+					"hashLevels": 3
+				},
+				"accountcreds": {
+					"name": "accountcreds",
+					"directory": false,
+					"url": false,
+					"hashLevels": 3
+				}
+			},
+			"merge_strategy": "array_plus_2d"
+		},
+		"ConfirmAccountNotice": {
+			"description": "Show notice for open requests to admins? This is cached, but still can be expensive on sites with thousands of requests.",
+			"value": true
+		},
+		"ConfirmAdminEmailExtraFields": {
+			"description": "Configuration for extra arguments that may be included in the admin email message. Extra parameters that could be added: [ 'email', 'real_name', 'bio', 'notes', 'urls', 'ip' ]. The order you specify here is the order in which you can use the parameters. $wgConfirmAdminEmailExtraFields is an array, the parameters 1 and 2 of the message will always be: 1 - the username and 2 - the confirm URL.",
+			"value": []
+		}
+	},
+	"manifest_version": 2
+}

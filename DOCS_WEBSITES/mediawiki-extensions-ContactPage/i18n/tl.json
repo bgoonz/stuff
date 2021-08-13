@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"AnakngAraw",
+			"DannyS712",
+			"GinawaSaHapon",
+			"Jojit fb",
+			"Sky Harbor"
+		]
+	},
+	"contactpage": "Pahina ng Pagkontak",
+	"contactpage-desc": "[[Special:Contact|Pormularyo ng pakikipag-ugnayan para sa mga panauhin]]",
+	"contactpage-title": "Makipag-ugnayan",
+	"contactpage-pagetext": "Pakigamit ang pormularyo sa ibaba upang makipag-ugnayan sa amin.",
+	"contactpage-legend": "Magpadala ng e-liham",
+	"contactpage-defsubject": "Mensahe ng pakikipag-ugnayan",
+	"contactpage-subject-and-sender": "$1 (mula sa $2)",
+	"contactpage-subject-and-sender-withip": "$1 (mula sa $2 na nasa $3)",
+	"contactpage-fromname": "Pangalan mo:",
+	"contactpage-fromaddress": "E-liham mo:",
+	"contactpage-formfootnotes": "(kailangan kung nais mong makakuha ng sagot)",
+	"contactpage-includeip": "Isama ang aking adres ng IP sa mensaheng ito.",
+	"contactpage-usermailererror": "Pagkakamaling sanhi ng pagkakabalik ng liham mula sa puntirya: $1",
+	"contactpage-captcha-error": "Kamalian sa CAPTCHA",
+	"contactpage-config-error-title": "Kamalian sa pormularyo ng pakikipag-ugnayan",
+	"contactpage-config-error": "Walang pormularyo ng pakikipag-ugnayan ang nakatakda para sa pahinang ito o kaya'y mali itong nakatakda.",
+	"contactpage-mustbeloggedin": "Mangyaring mag-login upang magpasa ng form ng pakikipag-ugnayan."
+}

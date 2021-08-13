@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"BadDog",
+			"DannyS712",
+			"Milicevic01",
+			"Rancher",
+			"Михајло Анђелковић",
+			"Сербијана"
+		]
+	},
+	"contactpage": "Контакт",
+	"contactpage-desc": "[[Special:Contact|Контакт-форма за посетиоце]]",
+	"contactpage-title": "Контакт",
+	"contactpage-pagetext": "Користите доњи образац да бисте нам се обратили.",
+	"contactpage-legend": "Пошаљи имејл",
+	"contactpage-defsubject": "Порука за контакт",
+	"contactpage-subject-and-sender": "$1 (од $2)",
+	"contactpage-fromname": "Име:",
+	"contactpage-fromaddress": "Ваша имејл адреса:",
+	"contactpage-formfootnotes": "(обавезно ако желите да добијете одговор)",
+	"contactpage-usermailererror": "Дошло је до грешке при слању поруке: $1",
+	"contactpage-captcha-error": "Грешка у CAPTCHA-и"
+}

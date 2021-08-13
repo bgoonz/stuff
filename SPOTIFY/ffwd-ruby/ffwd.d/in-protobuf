@@ -1,3 +1,0 @@
-:input:
-  - :type: "protobuf"
-    :receive_buffer_size: 26214400

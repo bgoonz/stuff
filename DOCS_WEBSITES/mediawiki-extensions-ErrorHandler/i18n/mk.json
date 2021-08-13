@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"errorhandler-desc": "Обработувач на грешки за MediaWiki",
+	"errorhandler-errors": "Грешки:",
+	"errorhandler-error-fatal": "Кобна грешка",
+	"errorhandler-error-warning": "Предупредување",
+	"errorhandler-error-parse": "Грешка во расчленувачот",
+	"errorhandler-error-notice": "Напомена",
+	"errorhandler-error-deprecated": "Забрането",
+	"errorhandler-error-core-error": "Грешка во јадрото",
+	"errorhandler-error-core-warning": "Јадрено предупредување",
+	"errorhandler-error-compile-error": "Грешка во компилацијата",
+	"errorhandler-error-compile-warning": "Предупредување од компилацијата",
+	"errorhandler-error-user-error": "Корисничка грешка",
+	"errorhandler-error-user-warning": "Корисничко предупредување",
+	"errorhandler-error-user-notice": "Известување на корисник",
+	"errorhandler-error-user-deprecated": "Корисникот е забранет",
+	"errorhandler-error-strict": "Строги стандарди",
+	"errorhandler-error-recoverable": "Кобна грешка во Catchable",
+	"errorhandler-msg-text": "$1 : $2 во $3 (ред $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> во <b>$3</b> (ред <b>$4</b>)",
+	"errorhandler-trace": "трага:",
+	"errorhandler-trace-line": "$1 (ред $2): $3",
+	"errorhandler-trace-line-internal": "[внатрешна функција]: $1"
+}

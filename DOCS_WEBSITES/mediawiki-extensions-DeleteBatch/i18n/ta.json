@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Shanmugamp7",
+			"TRYPPN"
+		]
+	},
+	"deletebatch-caption": "பக்கப்பட்டியல்:",
+	"deletebatch-link-back": "சிறப்பு பக்கத்திற்குத் திரும்பு",
+	"deletebatch-both-modes": "தயவுசெய்து ஒரு குறிப்பிட்ட பக்கத்தை அல்லது கொடுக்கப்பட்ட பக்கங்களின் பட்டியலைத் தேர்ந்தெடுக்கவும்.",
+	"deletebatch-or": "<strong>அல்லது</strong>",
+	"deletebatch-delete": "நீக்கவும்",
+	"deletebatch-page": "நீக்க வேண்டிய பக்கங்கள்:",
+	"deletebatch-processing-from-file": "கோப்பு பட்டியலிருந்து பக்கங்கள் நீக்கப்படுகிறது",
+	"deletebatch-processing-from-form": "படிவத்திலிருந்து பக்கங்கள் நீக்கப்படுகிறது",
+	"deletebatch-omitting-nonexistent": "இல்லாத பக்கம் $1 புறக்கணிக்கப்படுகிறது.",
+	"deletebatch-omitting-invalid": "செல்லாத பக்கம் $1 புறக்கணிக்கப்படுகிறது.",
+	"deletebatch-file-bad-format": "கோப்பு எளிய உரையாக இருக்க வேண்டும்.",
+	"deletebatch-file-missing": "கொடுக்கப்பட்ட கோப்பை படிக்க இயலவில்லை",
+	"deletebatch-select-yourself": "தாங்கள்"
+}

@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"errorhandler-desc": "Xestor d'errores pa MediaWiki",
+	"errorhandler-errors": "Errores:",
+	"errorhandler-error-fatal": "Error fatal",
+	"errorhandler-error-warning": "Avisu",
+	"errorhandler-error-parse": "Error d'analís",
+	"errorhandler-error-notice": "Nota",
+	"errorhandler-error-deprecated": "Desusao",
+	"errorhandler-error-core-error": "Error del nucleu",
+	"errorhandler-error-core-warning": "Avisu del nucleu",
+	"errorhandler-error-compile-error": "Error de compilación",
+	"errorhandler-error-compile-warning": "Avisu de compilación",
+	"errorhandler-error-user-error": "Error d'usuariu",
+	"errorhandler-error-user-warning": "Avisu d'usuariu",
+	"errorhandler-error-user-notice": "Nota d'usuariu",
+	"errorhandler-error-user-deprecated": "Usuariu desusáu",
+	"errorhandler-error-strict": "Estándares estrictos",
+	"errorhandler-error-recoverable": "Error fatal recuperable",
+	"errorhandler-msg-text": "$1 : $2 en $3 (llinia $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> en <b>$3</b> (llinia <b>$4</b>)",
+	"errorhandler-trace": "trazu:",
+	"errorhandler-trace-line": "$1 (llinia $2): $3",
+	"errorhandler-trace-line-internal": "[función interna]: $1"
+}

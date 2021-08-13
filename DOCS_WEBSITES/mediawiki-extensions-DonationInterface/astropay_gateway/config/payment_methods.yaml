@@ -1,0 +1,18 @@
+cc:
+    validation:
+        country: true
+        name: true
+        email: true
+        payment_submethod: true
+bt:
+    validation:
+        country: true
+        name: true
+        email: true
+        payment_submethod: true
+cash:
+    validation:
+        country: true
+        name: true
+        email: true
+        payment_submethod: true

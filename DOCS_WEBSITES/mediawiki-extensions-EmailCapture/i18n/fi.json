@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"01miki10",
+			"Nedergard",
+			"Olli",
+			"Pyscowicz",
+			"Silvonen",
+			"Valtlait"
+		]
+	},
+	"emailcapture": "Sähköpostin vahvistus",
+	"emailcapture-desc": "Kaappaa sähköpostiosoitteet, ja salli käyttäjien vahvistaa ne sähköpostilla",
+	"emailcapture-failure": "Sähköpostiosoitettasi '''ei''' vahvistettu.",
+	"emailcapture-invalid-code": "Virheellinen varmistuskoodi.",
+	"emailcapture-already-confirmed": "Sähköpostiosoitteesi on jo varmennettu.",
+	"emailcapture-response-subject": "{{GRAMMAR:genitive|{{SITENAME}}}}  sähköpostiosoitteen vahvistus",
+	"emailcapture-response-body": "Hei!\n\nKiitos, että osoitit kiinnostusta {{GRAMMAR:genitive|{{SITENAME}}}} kehittämiseen.\n\nKäytäthän hetken täyttääksesi kyselyn:\n$1\n\nVoit myös käydä:\n$2\n\nJa syöttää seuraavan koodin:\n$3\n\nOtamme yhteyttä sinuun pian ja kerromme kuinka voit kehittää {{GRAMMAR:partitive|{{SITENAME}}}}.\n\nJos et lähettänyt tätä pyyntöä itse, hylkää viesti ja emme enää lähetä sinulle uutta viestiä.",
+	"emailcapture-success": "Kiitos!\n\nSähköpostiosoitteesi on vahvistettu.",
+	"emailcapture-instructions": "Vahvistaaksesi sähköpostiosoitteesi syötä sinulle sähköpostilla lähetetty koodi ja napsauta ”{{int:emailcapture-submit}}”.",
+	"emailcapture-verify": "Vahvistuskoodi:",
+	"emailcapture-submit": "Vahvista sähköpostiosoite"
+}

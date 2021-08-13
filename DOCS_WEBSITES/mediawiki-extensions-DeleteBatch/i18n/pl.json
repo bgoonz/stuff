@@ -1,0 +1,42 @@
+{
+	"@metadata": {
+		"authors": [
+			"Airwolf",
+			"Chrumps",
+			"DeRudySoulStorm",
+			"Maikking",
+			"Matma Rex",
+			"Rail",
+			"Railfail536",
+			"Sp5uhe",
+			"Woytecr"
+		]
+	},
+	"deletebatch": "Usuń grupę stron",
+	"deletebatch-desc": "[[Special:DeleteBatch|Usuwanie grup stron]]",
+	"deletebatch-help": "Usuwanie grupy stron. Strony możesz usuwać pojedynczo lub poprzez usunięcie grupy stron, wymienionych w pliku.\nWybierz użytkownika, który będzie widoczny w logu stron usuniętych.\nPrzesyłane pliki powinny zawierać nazwę strony i opcjonalny powód usunięcia, oddzielony znakiem „|”.",
+	"deletebatch-caption": "Lista stron:",
+	"deletebatch-default-reason": "Domyślny powód usunięcia:",
+	"deletebatch-title": "Usuń grupę stron",
+	"deletebatch-link-back": "Cofnij do strony specjalnej",
+	"deletebatch-as": "Uruchom skrypt jako",
+	"deletebatch-both-modes": "Wybierz jedną stronę albo grupę stron.",
+	"deletebatch-or": "<strong>lub</strong>",
+	"deletebatch-delete": "Usuń",
+	"deletebatch-page": "Lista stron do usunięcia:",
+	"deletebatch-processing-from-file": "usuwanie stron wymienionych w pliku",
+	"deletebatch-processing-from-form": "usuwanie stron wymienionych w formularzu",
+	"deletebatch-omitting-nonexistent": "Pominięto nieistniejącą stronę $1.",
+	"deletebatch-omitting-invalid": "Pominięto niewłaściwą stronę $1.",
+	"deletebatch-file-bad-format": "Plik powinien zawierać wyłącznie tekst",
+	"deletebatch-file-missing": "Nie można odczytać pliku",
+	"deletebatch-select-script": "usuwanie stron skryptem",
+	"deletebatch-select-yourself": "Ty",
+	"deletebatch-no-page": "Wybierz jedną stronę LUB plik z listą stron do usunięcia.",
+	"deletebatch-system-username": "Skrypt usuwania stron",
+	"action-deletebatch": "usuwania grup stron",
+	"right-deletebatch": "Usuwanie grupy stron",
+	"action-deletebatch-spoof": "grupowego usuwania stron jako „Skrypt usuwania stron”",
+	"right-deletebatch-spoof": "Grupowe usuwanie stron jako „Skrypt usuwania stron”",
+	"deletebatch-deleting-file-only": "Strona opisu pliku $1 nie istnieje; zostanie usunięty tylko bieżący plik. Ta akcja nie zostanie dopisana do logu."
+}

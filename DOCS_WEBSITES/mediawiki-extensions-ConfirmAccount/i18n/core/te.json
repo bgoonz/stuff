@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chaduvari",
+			"Kiranmayee",
+			"Veeven",
+			"వైజాసత్య"
+		]
+	},
+	"confirmaccount-newrequests": "ప్రస్తుతం, '''$1''' ఈమెయిలు నిర్ధారించబడిన [[Special:ConfirmAccounts|ఖాతా {{PLURAL:$1|అభ్యర్ధన వేచి ఉంది|అభ్యర్ధనలు వేచి ఉన్నాయి}}]].'''మీరు చర్య తీసుకోవాల్సి ఉంది!'''",
+	"requestaccount-loginnotice": "ఖాతా పొందడానికి, మీరు తప్పనిసరిగా '''[[Special:RequestAccount|అభ్యర్థించాలి]]'''."
+}

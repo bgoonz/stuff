@@ -1,0 +1,35 @@
+{
+	"name": "Did You Know",
+	"version": "0.3",
+	"author": [
+		"[https://www.mediawiki.org/wiki/User:Jeroen_De_Dauw Jeroen De Dauw]"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:Did_You_Know",
+	"descriptionmsg": "didyouknow-desc",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.32.0"
+	},
+	"MessagesDirs": {
+		"DidYouKnow": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"DYKSettings": "DidYouKnow.settings.php",
+		"DYKHooks": "DidYouKnow.hooks.php",
+		"DYKBox": "includes/DYKBox.php"
+	},
+	"ResourceModules": {
+		"ext.dyk": {
+			"styles": [
+				"ext.dyk.css"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "DidYouKnow/resources"
+	},
+	"manifest_version": 2
+}

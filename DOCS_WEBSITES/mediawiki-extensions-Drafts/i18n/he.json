@@ -1,0 +1,43 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"Guycn2",
+			"Rotemliss",
+			"Steeve815",
+			"YaronSh",
+			"המקיסט"
+		]
+	},
+	"drafts": "טיוטות",
+	"drafts-desc": "הוספת האפשרות לשמירת גרסאות [[Special:Drafts|טיוטה]] של הדף בשרת",
+	"drafts-view": "הצגת טיוטה",
+	"drafts-view-summary": "דף מיוחד זה מציג רשימה של כל הטיוטות הקיימות.\nטיוטות שאינן בשימוש יימחקו אוטומטית כעבור {{PLURAL:$1|יום אחד|יומיים|$1 ימים}}.",
+	"drafts-view-article": "דף",
+	"drafts-view-existing": "טיוטות קיימות",
+	"drafts-view-saved": "שמורה",
+	"drafts-view-discard": "מחיקה",
+	"drafts-view-nonesaved": "אין לכם טיוטות שמורות לעת עתה.",
+	"drafts-view-notice": "יש לכם $1 לדף זה.",
+	"drafts-view-notice-link": "{{PLURAL:$1|טיוטה אחת|$1 טיוטות}}",
+	"drafts-view-warn": "אם תנווטו אל מחוץ לדף, תאבדו את כל השינויים שלא נשמרו לדף זה.\nהאם ברצונכם להמשיך?",
+	"drafts-save": "שמירת דף זה כטיוטה",
+	"drafts-save-save": "שמירת טיוטה",
+	"drafts-save-saved": "נשמרה",
+	"drafts-save-saving": "בשמירה",
+	"drafts-save-error": "שגיאה בשמירת הטיוטה",
+	"drafts-enable": "הפעלה האפשרות לשמור טיוטה בטופס העריכה",
+	"prefs-extension-drafts": "טיוטות",
+	"tooltip-drafts-save": "שמירה כטיוטה",
+	"apierror-mustbeloggedin-save-drafts": "יש להיכנס לחשבון כדי לשמור טיוטות.",
+	"apihelp-savedrafts-description": "שמירת טיוטה.",
+	"apihelp-savedrafts-summary": "שמור טיוטה",
+	"apihelp-savedrafts-param-id": "המזהה של הטיוטה.",
+	"apihelp-savedrafts-param-drafttoken": "האסימון של הטיוטה.",
+	"apihelp-savedrafts-param-title": "הכותרת של הטיוטה.",
+	"apihelp-savedrafts-param-section": "אינדקס של הפסקה הנערכת בדף.",
+	"apihelp-savedrafts-param-starttime": "זמן ההתחלה של הטיוטה.",
+	"apihelp-savedrafts-param-edittime": "זמן העריכה של הטיוטה.",
+	"apihelp-savedrafts-param-text": "הטקסט של הטיוטה.",
+	"apihelp-savedrafts-param-summary": "התקציר של הטיוטה."
+}

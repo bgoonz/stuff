@@ -1,4 +1,0 @@
-#!/bin/sh
-
-stripe postinstall
-

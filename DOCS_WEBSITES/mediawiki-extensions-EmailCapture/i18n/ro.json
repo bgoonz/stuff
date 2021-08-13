@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Andrei Stroe",
+			"Firilacroco",
+			"Minisarm"
+		]
+	},
+	"emailcapture": "Verificarea adresei de e-mail",
+	"emailcapture-desc": "Adună adrese de e-mail și permite utilizatorilor să le verifice prin e-mail",
+	"emailcapture-failure": "Adresa dumneavoastră de e-mail '''nu''' a fost verificată.",
+	"emailcapture-invalid-code": "Cod de confirmare incorect.",
+	"emailcapture-already-confirmed": "Adresa dumneavoastră de e-mail a fost deja confirmată.",
+	"emailcapture-response-subject": "Verificarea adresei de e-mail la {{SITENAME}}",
+	"emailcapture-response-body": "Bună ziua!\n\nVă mulțumim pentru interesul arătat față de procesul de îmbunătățire al proiectului {{SITENAME}}.\n\nVă rugăm să confirmați adresa de e-mail apăsând pe legătura de mai jos:\n$1\n\nPuteți vizita de asemenea și:\n$2\n\nȘi să introduceți următorul cod de confirmare:\n$3\n\nVă vom contacta în curând în legătură cu modul în care vă puteți implica în procesul de îmbunătățire al proiectului {{SITENAME}}.\n\nDacă nu sunteți dumneavoastră persoana care a cerut aceste indicații, vă rugăm să ignorați acest e-mail; nu vă vom mai trimite alte mesaje.",
+	"emailcapture-success": "Mulțumim!\n\nAdresa dumneavoastră de e-mail a fost confirmată.",
+	"emailcapture-instructions": "Pentru verificarea adresei de e-mail, introduceți codul care v-a fost transmis prin e-mail și apăsați „{{int:emailcapture-submit}}”.",
+	"emailcapture-verify": "Cod de verificare:",
+	"emailcapture-submit": "Verifică adresa de e-mail"
+}

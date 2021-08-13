@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Helix84",
+			"TomášPolonec"
+		]
+	},
+	"drafts": "Návrhy",
+	"drafts-desc": "Pridáva možnosť uložiť na server verzie stránky ako [[Special:Drafts|návrhy]]",
+	"drafts-view": "ZobraziťNávrh",
+	"drafts-view-summary": "Táto špeciálna stránka zobrazuje zoznam všetkých existujúcich návrhov.\nNepoužité návrhy sa po {{PLURAL:$1|$1 dni|$1 dňoch}} automaticky zahodia.",
+	"drafts-view-article": "Stránka",
+	"drafts-view-existing": "Existujúce návrhy",
+	"drafts-view-saved": "Uložené",
+	"drafts-view-discard": "Zmazať",
+	"drafts-view-nonesaved": "Momentálne nemáte uložené žiadne návrhy.",
+	"drafts-view-notice": "Máte $1 tejto stránky.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|návrh|návrhy|návrhov}}",
+	"drafts-view-warn": "Chcete odísť z tejto stránky? Týmto stratíte všetky neuložené zmeny tejto stránky.",
+	"drafts-save": "Uložiť túto verziu ako návrh",
+	"drafts-save-save": "Uložiť návrh",
+	"drafts-save-saved": "Uložené",
+	"drafts-save-saving": "Ukladá sa",
+	"drafts-save-error": "Chyba pri ukladaní návrhu",
+	"tooltip-drafts-save": "Uložiť ako návrh"
+}

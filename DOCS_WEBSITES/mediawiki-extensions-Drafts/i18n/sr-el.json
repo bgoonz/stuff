@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": []
+	},
+	"drafts": "Nacrti",
+	"drafts-view-article": "Strana",
+	"drafts-view-existing": "Postojeći nacrti",
+	"drafts-view-saved": "Snimljeno",
+	"drafts-view-discard": "Odbaci",
+	"drafts-view-nonesaved": "Trenutno nemate snimljenih nacrta.",
+	"drafts-view-notice": "Imate $1 za ovu stranu.",
+	"drafts-save": "Snimi ovo kao nacrt",
+	"drafts-save-save": "Snimi nacrt",
+	"drafts-save-saved": "Snimljeno",
+	"drafts-save-saving": "Snimanje u toku",
+	"drafts-save-error": "Greška prilikom snimanja nacrta",
+	"tooltip-drafts-save": "Snimi kao nacrt"
+}

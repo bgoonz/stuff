@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wikitanvir"
+		]
+	},
+	"createredirect": "পুনর্নির্দেশনা তৈরি",
+	"createredirect-desc": "সহজে পুনর্নির্দেশনা তৈরি করতে বিশে পাতা [[Special:CreateRedirect|ক্রিয়েটরিডাইরেক্ট]] যোগ করো",
+	"createredirect-error": "ত্রুটি: নিশ্চিতকরণ ব্যর্থ।",
+	"createredirect-instructions": "নিচের ফর্মটি পূরণের মাধ্যমে আপনি একটি পুনর্নির্দেশিত পাতা তৈরি করতে পারবেন, বা ইতিমধ্যেই আছে এমন পাতাকে একটি পুনর্নির্দেশিত পাতা দিয়ে প্রতিস্থাপিত করতে পারবেন।",
+	"createredirect-page-title": "পাতার শিরোনাম:",
+	"createredirect-redirect-done": "\"$1\" থেকে \"$2\"-এ পুনর্নির্দেশনা তৈরি হয়েছে",
+	"createredirect-redirect-to": "যে পাতায় পুননির্দেশিত হয়েছে:",
+	"createredirect-save": "সংরক্ষণ"
+}

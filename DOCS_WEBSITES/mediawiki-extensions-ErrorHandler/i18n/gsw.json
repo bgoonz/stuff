@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Als-Holder"
+		]
+	},
+	"errorhandler-desc": "Fählerbehandlig fir MediaWiki",
+	"errorhandler-errors": "Fähler:",
+	"errorhandler-error-fatal": "Fatale Fähler",
+	"errorhandler-error-warning": "Warnig",
+	"errorhandler-error-parse": "Verarbeitigsfähler",
+	"errorhandler-error-notice": "Aamerkig",
+	"errorhandler-error-deprecated": "Abglähnt",
+	"errorhandler-error-core-error": "Chärnfähler",
+	"errorhandler-error-core-warning": "Chärnwarnig",
+	"errorhandler-error-compile-error": "Compilerfähler",
+	"errorhandler-error-compile-warning": "Compilerwarnig",
+	"errorhandler-error-user-error": "Benutzerfähler",
+	"errorhandler-error-user-warning": "Benutzerwarnig",
+	"errorhandler-error-user-notice": "Benutzerhiiwyys",
+	"errorhandler-error-user-deprecated": "Benutzer abglähnt",
+	"errorhandler-error-strict": "Strängi Standard",
+	"errorhandler-error-recoverable": "Uusläsbare fatale Fähler",
+	"errorhandler-msg-text": "$1: $2 in $3 (Zyyle $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> in <b>$3</b> (Zyyle <b>$4</b>)",
+	"errorhandler-trace": "Ablauf verfolge:",
+	"errorhandler-trace-line": "$1 (Zyyle $2): $3",
+	"errorhandler-trace-line-internal": "[intärni Funktion]: $1"
+}

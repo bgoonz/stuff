@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby",
+			"Nghtwlkr"
+		]
+	},
+	"createredirect": "Opprett omdirigering",
+	"createredirect-desc": "Legger til spesialsiden [[Special:CreateRedirect|CreateRedirect]] for å enkelt opprette omdirigeringer",
+	"createredirect-error": "Feil: Autentisering mislyktes.",
+	"createredirect-enable-multiline": "Skriv inn flere titler",
+	"createredirect-instructions": "Ved å brukes skjemaet nedenfor kan du opprette en omdirigeringsside eller erstatte en eksisterende side med en omdirigering.",
+	"createredirect-invalid-title": "Feil: «$1» er ikke en korrekt tittel.",
+	"createredirect-overwrite": "Ignorer advarsler",
+	"createredirect-page-title": "Sidetittel:",
+	"createredirect-redirect-done": "Omdirigering opprettet fra «$1» til «$2»",
+	"createredirect-redirect-to": "Omdiriger til:",
+	"createredirect-save": "Lagre siden",
+	"createredirect-would-overwrite": "Advarsel: Siden «[[:$1]]» finnes fra før."
+}

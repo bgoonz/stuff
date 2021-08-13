@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Firilacroco",
+			"Minisarm"
+		]
+	},
+	"createredirect": "Creează o redirecționare",
+	"createredirect-error": "Eroare: Autentificarea a eșuat.",
+	"createredirect-page-title": "Titul paginii:",
+	"createredirect-redirect-done": "Redirecționare creată de la „$1” înspre „$2”",
+	"createredirect-redirect-to": "Redirecționare către:",
+	"createredirect-save": "Salvează pagina"
+}

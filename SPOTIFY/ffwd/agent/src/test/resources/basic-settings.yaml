@@ -1,5 +1,0 @@
-ttl: 50
-host: jimjam
-output:
-  cardinalitylimit: 10000
-  cardinalityttl: 555555

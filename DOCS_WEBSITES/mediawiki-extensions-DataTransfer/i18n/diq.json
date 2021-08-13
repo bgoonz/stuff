@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Erdemaslancan",
+			"Gırd",
+			"Kumkumuk",
+			"Marmase",
+			"Mirzali"
+		]
+	},
+	"viewxml": "XML'i bıvin",
+	"dt_viewxml_categories": "Kategoriyi",
+	"dt_viewxml_namespaces": "Heruna nameyan",
+	"dt_viewxml_simplifiedformat": "Basit kerde format",
+	"dt_xml_namespace": "Heruna nameyan",
+	"dt_xml_pages": "Peli",
+	"dt_xml_page": "Pele",
+	"dt_xml_template": "Şablon",
+	"dt_xml_field": "Ca",
+	"dt_xml_name": "Name",
+	"dt_xml_title": "Sername",
+	"dt_xml_id": "ID",
+	"dt_xml_freetext": "Xoser metin",
+	"importxml": "XML'i azere ke",
+	"dt_import_selectfile": "Azere kerdışi rê dosyay $1 weçinê",
+	"dt_import_encodingtype": "Babeta kod kerdışi",
+	"dt_import_skipexisting": "Ravêre",
+	"dt_import_summarydesc": "Xulasaya azere kerdışi :",
+	"dt_import_editsummary": "{{ucfirst:$1}} azere de",
+	"dt_import_importing": "Dano azere...",
+	"importcsv": "TSV'yi azere de",
+	"right-datatransferimport": "Melumatan zerre ke"
+}

@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cedric31"
+		]
+	},
+	"contributionscores": "Puntatge de las contribucions",
+	"contributionscores-desc": "Espia la basa de donadas wiki pels [[Special:ContributionScores|utilizaires que contribuisson mai]]",
+	"contributionscores-info": "La marca mesura en prioritat las paginas unicas modificadas, en prenent en compte los gròsses volums de modificacion.",
+	"contributionscores-top": "(Melhor $1)",
+	"contributionscores-days": "Dins {{PLURAL:$1|lo darrièr jorn|los darrièrs $1 jorns}}",
+	"contributionscores-allrevisions": "Tot lo temps",
+	"contributionscores-score": "Puntatge",
+	"contributionscores-rank": "Reng",
+	"contributionscores-pages": "Paginas",
+	"contributionscores-changes": "Modificacions",
+	"contributionscores-username": "Nom d'utilizaire",
+	"contributionscores-invalidusername": "Nom d'utilizaire invalid",
+	"contributionscores-invalidmetric": "Metria incorrècta"
+}

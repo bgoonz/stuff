@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie",
+			"Nemo bis",
+			"Purodha",
+			"Shirayuki",
+			"Umherirrender"
+		]
+	},
+	"creditssource-desc": "{{desc|name=Credits Source|url=https://www.mediawiki.org/wiki/Extension:CreditsSource}}",
+	"creditssource-credits": "Parameters:\n* $1 - an external url to the source; can be used to construct a link like: [$1 $2]\n* $2 - title of the external source\n* $3 - an external url to the site; can be used to construct a link like: [$3 $4]\n* $4 - title of the external site\n* $5 - a relative url that points to History page of the specified page; can be used to construct a link [[$5|like this]]\n* $6 - a short name of the site Wikitravel\n* $7 - time and date timestamp\n* $8 - a date\n* $9 - a time\nIf translation around <nowiki>[$3 $4]</nowiki> depends on the morphology, you have two options:\n# Do not translate in your language.\n# Make a translation that does work in your language. I suggest \"the site SITENAME\".",
+	"creditssource-creditpage": "Description to be displayed on the credits action page."
+}

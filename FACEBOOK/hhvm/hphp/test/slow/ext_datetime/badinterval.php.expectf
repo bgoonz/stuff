@@ -1,8 +1,0 @@
-object(DateTime) (3) {
-  ["date"]=>
-  string(%d) "%s"
-  ["timezone_type"]=>
-  int(3)
-  ["timezone"]=>
-  string(%d) "%s"
-}

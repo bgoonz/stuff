@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"01miki10",
+			"Valtlait",
+			"VezonThunder"
+		]
+	},
+	"etherpadlite-desc": "Lisää &lt;eplite&gt;-parseritunnisteen, jolla voi upottaa yhden tai useamman Etherpad Lite -lehtiön (joita säilytetään paikallisilla tai ulkoisilla Etherpad Lite -palvelimilla) sivuun",
+	"etherpadlite-tracking-category": "Sivut, joilla upotettu Etherpad",
+	"etherpadlite-tracking-category-desc": "Sivulla on upotettu Etherpad <code>&lt;eplite&gt;</code>-tagilla.",
+	"etherpadlite-invalid-pad-url": "”$1” ei ole kelvollinen Etherpad Lite -verkko-osoite tai lehtiön nimi.",
+	"etherpadlite-url-is-not-whitelisted": "”$1” ei ole sallittujen Etherpad Lite -palvelinten luettelossa. {{PLURAL:$3|$2 on ainoa sallittu palvelin|Sallitut palvelimet ovat seuraavat: $2}}.",
+	"etherpadlite-empty-whitelist": "”$1” ei ole sallittujen Etherpad Lite -palvelinten luettelossa. Sallittuja palvelimia ei ole.",
+	"etherpadlite-pad-used-more-than-once": "Lehtiötä ”$1” on jo käytetty aiemmin tällä sivulla. Sivulla voi olla useita lehtiöitä, mutta vain, jos ne ovat eri lehtiöitä."
+}

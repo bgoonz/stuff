@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Malafaya",
+			"Smeira"
+		]
+	},
+	"deletebatch": "Moükön padamödoti",
+	"deletebatch-desc": "[[Special:DeleteBatch|Moükön padamödoti]]",
+	"deletebatch-caption": "Padalised:",
+	"deletebatch-title": "Moükön padamödoti",
+	"deletebatch-or": "<strong>u</strong>",
+	"deletebatch-page": "Pads moükabik:",
+	"deletebatch-omitting-nonexistent": "Pad no dabinöl $1 pamoädon.",
+	"deletebatch-omitting-invalid": "Pad no lonöföl $1 pamoädon.",
+	"deletebatch-file-missing": "No mögos ad reidön ragivi pavilöl",
+	"deletebatch-select-yourself": "ol"
+}

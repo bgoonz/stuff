@@ -1,0 +1,60 @@
+{{{ template_trail }}}
+
+		<div id="appeal">
+			{{{ appeal_text }}}
+		</div>
+		<div id="donate">
+			<div id="greenBackground" class="">
+				{{> no_script }}
+				<div id="topError" class="creditcard-error-msg">{{# errors/general }}<p class="error">{{{ message }}}</p>{{/ errors/general }}</div>
+				<div id="cookieMsg" class="errorMsgHide" ></div>
+				<p id="errorReference" class="errorMsg{{^ show_error_reference }}Hide{{/ show_error_reference }}" >
+                {{# order_id }}{{! Use the full order id as reference if we have one }}
+                    {{ l10n "donate_interface-error-reference" . }}
+                {{/order_id}}{{^ order_id }}{{! Otherwise fall back to contribution tracking ID }}
+                    {{ l10n "donate_interface-error-reference" contribution_tracking_id }}
+                {{/order_id}}</p>
+
+			<form name="payment" id="payment-form" method="post" action="{{ action }}">
+				<div id="payment_gateway-personal-info">
+						{{{ fieldError "amount" }}}
+						{{{ fieldError "currency" }}}
+								<div id="step1header">
+									{{> payment_amount }}
+								</div>
+{{# show_personal_fields }}
+								<h3 class="cc_header">{{ l10n "donate_interface-cc-form-header-personal" }}<img src="{{ script_path }}/extensions/DonationInterface/gateway_forms/includes/padlock.gif" /></h3>
+{{> personal_info }}
+{{/ show_personal_fields }}
+{{> opt_in }}
+{{> payment_method }}
+				</div>
+				<input type="hidden" value="{{ country }}" name="country" id="country" />
+				<input type="hidden" value="{{ expiration }}" name="expiration" id="expiration"/>
+				<input type="hidden" value="{{ contact_id }}" name="contact_id" id="contact_id"/>
+				<input type="hidden" value="{{ contact_hash }}" name="contact_hash" id="contact_hash"/>
+				<input type="hidden" value="{{ utm_source }}" name="utm_source" id="utm_source"/>
+				<input type="hidden" value="{{ utm_medium }}" name="utm_medium" id="utm_medium"/>
+				<input type="hidden" value="{{ utm_campaign }}" name="utm_campaign" id="utm_campaign"/>
+				<input type="hidden" value="{{ language }}" name="language" id="language"/>
+				<input type="hidden" value="{{ referrer }}" name="referrer" id="referrer"/>
+				<input type="hidden" value="{{ wmf_token }}" name="wmf_token" id="wmf_token"/>
+				<input type="hidden" value="{{ order_id }}" name="order_id" id="order_id"/>
+				<input type="hidden" value="{{ data_hash }}" name="data_hash" id="data_hash"/>
+				<input type="hidden" value="{{ gateway }}" name="gateway" id="gateway"/>
+				<input type="hidden" value="{{ recurring }}" name="recurring" id="recurring"/>
+				<input type="hidden" value="{{ variant }}" name="variant" id="variant"/>
+				<input type="hidden" value="{{ processor_form }}" name="processor_form" id="processor_form"/>
+				<input type="hidden" value="{{ payment_method }}" name="payment_method" id="payment_method"/>
+			</form>
+			</div>
+			<p id="informationsharing">{{{ l10n "donate_interface-informationsharing" policy_url }}}</p>
+{{# recurring }}
+			<p id="monthlycancel">{{{ l10n "donate_interface-monthly-cancel" problems_email }}}</p>
+{{/ recurring }}
+{{> more_info_links }}
+		</div>
+<div id="overlay">
+	<img id="loading" src="{{ script_path }}/extensions/DonationInterface/gateway_forms/includes/loading-black.gif" />
+</div>
+{{> monthly_convert }}

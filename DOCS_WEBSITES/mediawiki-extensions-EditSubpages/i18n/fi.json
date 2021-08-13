@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Crt",
+			"Jack Phoenix",
+			"Nike"
+		]
+	},
+	"editsubpages-desc": "Ylläpitäjät voivat sallia sivun ja sen kaikkien alasivujen muokkaamisen kirjautumattomille käyttäjille sivulla [[MediaWiki:Unlockedpages]].",
+	"unlockedpages": " #<!-- älä koske tähän riviin --><pre>\n# Lisää sivut, jotka haluat sallia kirjautumattomien käyttäjien muokkauksille alapuolelle käyttäen muotoa:\n# * sivun nimi\n# Avattavien sivujen nimien tulee alkaa *:llä jotta ne laskettaisiin.\n# Kaikki muu lasketaan kommenteiksi.\n# Sivujen nimet voivat olla [[linkkejä]] ja ovat kirjainkoosta riippuvaisia.\n# Myös keskustelusivut avataan sivun kanssa.\n# Lisätietoja on sivulla https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages\n  #</pre><!-- älä koske tähän riviin -->"
+}

@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Boivie",
+			"Najami"
+		]
+	},
+	"errorhandler-desc": "Felhanterare för MediaWiki",
+	"errorhandler-errors": "Fel:",
+	"errorhandler-error-fatal": "Allvarligt fel",
+	"errorhandler-error-warning": "Varning",
+	"errorhandler-error-parse": "Parser-fel",
+	"errorhandler-error-notice": "Meddelande",
+	"errorhandler-error-deprecated": "Nedgraderad",
+	"errorhandler-error-core-error": "Fel i kärnan",
+	"errorhandler-error-core-warning": "Kärn-varning",
+	"errorhandler-error-compile-error": "Kompileringsfel",
+	"errorhandler-error-compile-warning": "Kompileringsvarning",
+	"errorhandler-error-user-error": "Användarfel",
+	"errorhandler-error-user-warning": "Användarvarning",
+	"errorhandler-error-user-notice": "Användarmeddelande",
+	"errorhandler-error-user-deprecated": "Användare nedgraderad",
+	"errorhandler-error-strict": "Strikta standarder",
+	"errorhandler-error-recoverable": "Hanterbart allvarligt fel",
+	"errorhandler-msg-text": "$1 : $2 i $3 (rad $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> i <b>$3</b> (rad <b>$4</b>)",
+	"errorhandler-trace": "spåra:",
+	"errorhandler-trace-line": "$1 (rad $2): $3",
+	"errorhandler-trace-line-internal": "[intern funktion]: $1"
+}

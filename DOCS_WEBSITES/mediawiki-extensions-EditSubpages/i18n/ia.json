@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"editsubpages-desc": "Permitte al administratores de disblocar un pagina e tote su subpaginas pro permitter modificationes anonyme via [[MediaWiki:Unlockedpages]]",
+	"unlockedpages": " #<!-- non modificar iste linea --><pre>\n# Insere le paginas que tu vole disblocar infra, in le forma\n# * Nomine de pagina\n# Le paginas debe comenciar con un bolletta pro esser disblocate,\n# tote le resto es considerate como commento.\n# Le nomines del paginas pote esser [[ligamines]] e es sensibile al majusculas e minusculas.\n# In ultra, le paginas de discussion essera automaticamente disblocate con le pagina.\n# Vide https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages pro plus info.\n  #</pre><!-- non modificar iste linea -->"
+}

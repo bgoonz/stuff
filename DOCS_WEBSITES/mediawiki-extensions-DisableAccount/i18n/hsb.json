@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Michawiki"
+		]
+	},
+	"disableaccount-desc": "Zmóžnja administratoram jednotliwe konta znjemóžnić",
+	"right-disableaccount": "Konta znjemóžnić",
+	"disableaccount": "Wužiwarske konto znjemóžnić",
+	"disableaccount-user": "Wužiwarske mjeno:",
+	"disableaccount-confirm": "Znjemóžń tute wužiwarske konto.\nWužiwar njemóže so přizjewić, swoje hesło wróćo stajić abo e-mejlowe zdźělenki dóstać.\nJeli wužiwar je tuchwilu druhdźe přizjewjeny, budźe so hnydom wotzjewjeć.\n''Wobkedźbuj, zo znjemóžnjenje konta njeje rewersibelne bjez zapřimowanja systemoweho administratora.''",
+	"disableaccount-mustconfirm": "Dyrbiš wobkrućić, zo chceš tute konto znjemóžnić.",
+	"disableaccount-nosuchuser": "Wužiwarske konto \"$1\" njeeksistuje.",
+	"disableaccount-success": "Wužiwarske konto \"$1\" bu na přeco znjemóžnjene.",
+	"logentry-block-disableaccount": "$1 je konto wužiwarja {{GENDER:$4|$3}} {{GENDER:$2|znjemóžnił|znjemóžniła}}."
+}

@@ -1,4 +1,0 @@
-rules:
-  - path: ".werft/publish.yaml"
-    matchesAll:
-      - or: ["repo.ref == refs/heads/master"]

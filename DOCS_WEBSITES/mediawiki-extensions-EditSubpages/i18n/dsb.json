@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Michawiki"
+		]
+	},
+	"editsubpages-desc": "Dowólujo administratoram bok a wšykne pódboki togo boka za anonymne wobźěłowanje pśez [[MediaWiki:Unlockedpages]] wótwóriś",
+	"unlockedpages": " #<!-- toś tu smužku njezměniś --><pre>\n# Pódaj boki, kótarež coš wótwóriś dołojce z pomocu\n# * Bokowym mjenim\n# Wótwórjone boki muse se z naliceńskim znamuškom zachopiś,\n# wšo druge maju za komentar\n# Bokowe mjenja mógu [[links|wótkaze]] byś a źiwaju na wjelikopisanje\n# Teke diskusijne boki budu se awtomatiski z bokom wótwóriś\n# Glědaj https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:editSubpages za dalšne informacije\n  #</pre><!-- toś tu smužku njezměniś -->"
+}

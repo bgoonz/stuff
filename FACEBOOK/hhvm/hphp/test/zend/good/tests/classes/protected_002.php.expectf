@@ -1,4 +1,0 @@
-Call pass::show()
-Call fail::show()
-
-Fatal error: Call to protected method pass::show() from context 'fail' in %s/protected_002.php on line 16

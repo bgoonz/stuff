@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eduardo.mps",
+			"Luckas"
+		]
+	},
+	"errorhandler-desc": "Tratador de erros do MediaWiki",
+	"errorhandler-errors": "Erros:",
+	"errorhandler-error-fatal": "Erro fatal",
+	"errorhandler-error-warning": "Aviso",
+	"errorhandler-error-parse": "Erro do analisador (parser)",
+	"errorhandler-error-notice": "Nota",
+	"errorhandler-error-deprecated": "Obsoleto",
+	"errorhandler-error-core-error": "Erro do núcleo",
+	"errorhandler-error-core-warning": "Aviso do núcleo",
+	"errorhandler-error-compile-error": "Erro de compilação",
+	"errorhandler-error-compile-warning": "Aviso de compilação",
+	"errorhandler-error-user-error": "Erro de usuário",
+	"errorhandler-error-user-warning": "Aviso de usuário",
+	"errorhandler-error-user-notice": "Nota de usuário",
+	"errorhandler-error-user-deprecated": "Usuário obsoleto",
+	"errorhandler-error-strict": "Padrões estritos",
+	"errorhandler-error-recoverable": "Erro fatal tratável",
+	"errorhandler-msg-text": "$1 : $2 em $3 (linha $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> em <b>$3</b> (linha <b>$4</b>)",
+	"errorhandler-trace": "rastreio:",
+	"errorhandler-trace-line": "$1 (linha $2): $3",
+	"errorhandler-trace-line-internal": "[função interna]: $1"
+}

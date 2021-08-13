@@ -1,3 +1,0 @@
-target/debian/*.jar usr/lib/spotify-lyceum
-riehab-public/* usr/lib/spotify-lyceum/riehab-public
-debian/bin/* usr/bin

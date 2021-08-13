@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Les Meloures",
+			"McDutchie",
+			"Robby",
+			"Soued031"
+		]
+	},
+	"createredirect": "Viruleedung uleeën",
+	"createredirect-desc": "Setzt eng Spezialsäit [[Special:CreateRedirect|Viruleedung uleeën]] derbäi, fir Viruleedungen einfach ze maachen",
+	"createredirect-error": "Feeler: Authentifikatioun huet net geklappt.",
+	"createredirect-enable-multiline": "Gitt méi Titelen an.",
+	"createredirect-instructions": "Mat dësem Formulaire kënnt Dir eng Viruleedungssäit uleeën oder eng Säit déi et gëtt duerch en Viruleedung ersetzen.",
+	"createredirect-invalid-title": "Feeler: \"$1\" ass kee korrekten Titel.",
+	"createredirect-overwrite": "Warnungen ignoréieren",
+	"createredirect-page-title": "Titel vun der Säit:",
+	"createredirect-redirect-done": "Viruleedung vun \"$1\" op \"$2\" ugeluecht",
+	"createredirect-redirect-to": "Viruleeden op:",
+	"createredirect-save": "Säit späicheren",
+	"createredirect-would-overwrite": "Opgepasst: Säit \"[[:$1]]\" gëtt et schonn."
+}

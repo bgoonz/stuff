@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"ChrisPtDe"
+		]
+	},
+	"emailcapture": "Contrôlo d’adrèce èlèctronica",
+	"emailcapture-desc": "Capture des adrèces èlèctroniques et pués pèrmèt ux usanciérs de les controlar per mèssageria èlèctronica.",
+	"emailcapture-failure": "Voutra adrèce èlèctronica at '''pas''' étâ controlâ.",
+	"emailcapture-invalid-code": "Code de confirmacion fôx.",
+	"emailcapture-already-confirmed": "Voutra adrèce èlèctronica at ja étâ confirmâ.",
+	"emailcapture-response-subject": "Contrôlo d’adrèce èlèctronica de {{SITENAME}}",
+	"emailcapture-response-body": "Bonjorn !\n\nGrant-marci d’avêr èxprimâ voutron entèrèt por édiér a mèlyorar {{SITENAME}}.\n\nVolyéd prendre un moment por confirmar voutra adrèce èlèctronica en cliquent sur lo lim ce-desot :\n$1\n\nVos pouede asse-ben visitar :\n$2\n\net pués buchiér ceti code de confirmacion :\n$3\n\nNos nos volens d’abôrd veriér vers vos avouéc la façon que vos pouede édiér a mèlyorar {{SITENAME}}.\n\nSe vos éd pas fêt cela demanda, volyéd ignorar ceti mèssâjo et pués nos vos manderens ren d’ôtro.",
+	"emailcapture-success": "Grant-marci !\n\nVoutra adrèce èlèctronica at étâ controlâ avouéc reusséta.",
+	"emailcapture-instructions": "Por controlar voutra adrèce èlèctronica, buchiéd lo code que vos at étâ mandâ per mèssageria èlèctronica et pués clicâd dessus « {{int:emailcapture-submit}} ».",
+	"emailcapture-verify": "Code de contrôlo :",
+	"emailcapture-submit": "Controlar l’adrèce èlèctronica"
+}

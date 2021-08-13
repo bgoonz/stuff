@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Michawiki",
+			"Mirin",
+			"Robin van der Vliet",
+			"Yekrats"
+		]
+	},
+	"contributionscores": "Poentaro de Kontribuoj",
+	"contributionscores-desc": "Informmendas la vikian datumbazon por la plej [[Special:ContributionScores|oftaj kontribuantoj]]",
+	"contributionscores-info": "La poentaroj precipe mezuras la nombrojn de unikaj redaktitaj paĝoj, kun konsiderado pri grandega kvanto de redaktoj.",
+	"contributionscores-top": "(Plej alta $1)",
+	"contributionscores-days": "{{PLURAL:$1|Lasta tago|Lastaj $1 tagoj}}",
+	"contributionscores-allrevisions": "Ĉiame",
+	"contributionscores-score": "Poentaro",
+	"contributionscores-rank": "Rango",
+	"contributionscores-pages": "Paĝoj",
+	"contributionscores-changes": "Ŝanĝoj",
+	"contributionscores-username": "Uzantnomo",
+	"contributionscores-invalidusername": "Nevalida uzantnomo",
+	"contributionscores-invalidmetric": "Nevalida parametro"
+}

@@ -1,0 +1,177 @@
+{
+	"name": "EventLogging",
+	"author": [
+		"Ori Livneh",
+		"Timo Tijhof",
+		"S Page",
+		"Matthew Flaschen"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:EventLogging",
+	"descriptionmsg": "eventlogging-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.34.0",
+		"extensions": {}
+	},
+	"namespaces": [
+		{
+			"id": 470,
+			"constant": "NS_SCHEMA",
+			"name": "Schema",
+			"defaultcontentmodel": "JsonSchema",
+			"protection": [
+				"autoconfirmed"
+			],
+			"conditional": true
+		},
+		{
+			"id": 471,
+			"constant": "NS_SCHEMA_TALK",
+			"name": "Schema_talk",
+			"conditional": true
+		}
+	],
+	"DefaultUserOptions": {
+		"eventlogging-display-web": 0
+	},
+	"ContentHandlers": {
+		"JsonSchema": "JsonSchemaContentHandler"
+	},
+	"ExtensionFunctions": [
+		"EventLoggingHooks::onSetup"
+	],
+	"MessagesDirs": {
+		"EventLogging": [
+			"i18n/core"
+		],
+		"JsonSchema": [
+			"i18n/jsonschema"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"EventLoggingNamespaces": "EventLogging.namespaces.php"
+	},
+	"AutoloadClasses": {
+		"ApiJsonSchema": "includes/ApiJsonSchema.php",
+		"EventLogging": "includes/EventLogging.php",
+		"EventLoggingHelper": "includes/EventLoggingHelper.php",
+		"EventLoggingHooks": "includes/EventLoggingHooks.php",
+		"JsonSchemaContent": "includes/JsonSchemaContent.php",
+		"JsonSchemaContentHandler": "includes/JsonSchemaContentHandler.php",
+		"JsonSchemaException": "includes/Libs/JsonSchemaValidation/JsonSchemaException.php",
+		"JsonSchemaHooks": "includes/JsonSchemaHooks.php",
+		"JsonSchemaIndex": "includes/Libs/JsonSchemaValidation/JsonSchemaIndex.php",
+		"JsonTreeRef": "includes/Libs/JsonSchemaValidation/JsonTreeRef.php",
+		"JsonUtil": "includes/Libs/JsonSchemaValidation/JsonUtil.php",
+		"RemoteSchema": "includes/RemoteSchema.php",
+		"TreeRef": "includes/Libs/JsonSchemaValidation/TreeRef.php",
+		"UserBucketProvider": "includes/Libs/UserBucketProvider/UserBucketProvider.php"
+	},
+	"ResourceModules": {
+		"ext.eventLogging": {
+			"localBasePath": "modules/ext.eventLogging/",
+			"remoteExtPath": "EventLogging/modules/ext.eventLogging/",
+			"packageFiles": [
+				"subscriber.js",
+				"core.js",
+				"Schema.js",
+				"BackgroundQueue.js",
+				{
+					"name": "data.json",
+					"callback": "EventLoggingHooks::getModuleData"
+				}
+			],
+			"dependencies": [
+				"mediawiki.user",
+				"user.options"
+			],
+			"targets": [
+				"desktop",
+				"mobile"
+			]
+		},
+		"ext.eventLogging.debug": {
+			"localBasePath": "modules/ext.eventLogging.debug/",
+			"remoteExtPath": "EventLogging/modules/ext.eventLogging.debug/",
+			"packageFiles": [
+				"debug.js",
+				{
+					"name": "data.json",
+					"config": [ "EventLoggingSchemaApiUri" ]
+				}
+			],
+			"targets": [
+				"desktop",
+				"mobile"
+			]
+		},
+		"ext.eventLogging.jsonSchema": {
+			"scripts": "modules/ext.eventLogging.jsonSchema/jsonSchema.js"
+		},
+		"ext.eventLogging.jsonSchema.styles": {
+			"styles": "modules/ext.eventLogging.jsonSchema.styles/jsonSchema.css"
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "EventLogging"
+	},
+	"QUnitTestModule": {
+		"localBasePath": "",
+		"remoteExtPath": "EventLogging",
+		"scripts": [
+			"tests/ext.eventLogging/utils.test.js",
+			"tests/ext.eventLogging/BackgroundQueue.test.js",
+			"tests/ext.eventLogging/log.test.js",
+			"tests/ext.eventLogging/stream.test.js",
+			"tests/ext.eventLogging/bucketing.test.js",
+			"tests/ext.eventLogging.debug.tests.js"
+		],
+		"dependencies": [
+			"ext.eventLogging",
+			"ext.eventLogging.debug"
+		]
+	},
+	"Hooks": {
+		"CanonicalNamespaces": "EventLoggingHooks::onCanonicalNamespaces",
+		"BeforePageDisplay": [
+			"EventLoggingHooks::onBeforePageDisplay",
+			"JsonSchemaHooks::onBeforePageDisplay"
+		],
+		"GetPreferences": "EventLoggingHooks::onGetPreferences",
+		"CodeEditorGetPageLanguage": "JsonSchemaHooks::onCodeEditorGetPageLanguage",
+		"EditFilterMergedContent": "JsonSchemaHooks::onEditFilterMergedContent",
+		"MovePageIsValidMove": "JsonSchemaHooks::onMovePageIsValidMove",
+		"ApiMain::moduleManager": "JsonSchemaHooks::onApiMainModuleManager"
+	},
+	"config": {
+		"EventLoggingBaseUri": {
+			"value": false,
+			"description": "Legacy EventLogging GET URI."
+		},
+		"EventLoggingSchemaApiUri": {
+			"value": "https://meta.wikimedia.org/w/api.php"
+		},
+		"EventLoggingDBname": {
+			"value": "metawiki"
+		},
+		"EventLoggingSchemas": {
+			"value": [],
+			"description": "Legacy schemas EventLogging will produce. This is a mapping from schema name to on-wiki schema revision, or a $schema URI.  If a $schema URI is set, the event will be passed to mw.eventLog.submit and the event intake service at EventLoggingServiceUri will be used."
+		},
+		"EventLoggingServiceUri": {
+			"value": false,
+			"description": "URI to event intake service.  This should look something like http://localhost:8192/v1/events"
+		},
+		"EventLoggingStreamNames": {
+			"value": false,
+			"description": "List of stream names to register for use by EventLogging from wgEventStreams.  If this is false, Event Stream Config will not be used, and EventLogging will produce any stream it is given."
+		},
+		"EventLoggingQueueLingerSeconds": {
+			"value": 30,
+			"description": "Number of seconds EventLogging should wait to batch messages before sending them to the intake service."
+		}
+	},
+	"manifest_version": 2
+}

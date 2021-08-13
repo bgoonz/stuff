@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Base",
+			"DDPAT",
+			"Movses",
+			"Piramidion",
+			"Vlad5250",
+			"Ата"
+		]
+	},
+	"confirmaccount-newrequests": "[[Special:ConfirmAccounts|{{PLURAL:$1|Очікує '''$1''' відкритий запит|Очікує '''$1''' відкриті запити|Очікують '''$1''' відкритих запитів}}]] на обліковий запис від користувачів з підтвердженими адресами.  '''Зверніть увагу!'''",
+	"requestaccount-loginnotice": "Для отримання облікового запису користувача, ви повинні \"'[[Special:RequestAccount|зробити запит]]\"'.",
+	"action-confirmaccount": "перегляд і прийняття облікових записів",
+	"right-confirmaccount": "Перегляд [[Special:ConfirmAccounts|черги запитів на створення облікових записів]]",
+	"right-confirmaccount-notify": "Отримувати ел. пошти щодо схвалених запитів облікових записів",
+	"action-requestips": "перегляд IP-адрес авторів запитів на створення облікових записів",
+	"right-requestips": "Перегляд IP-адрес авторів запитів на створення облікових записів",
+	"action-lookupcredentials": "перегляд облікових даних користувача",
+	"right-lookupcredentials": "Перегляд [[Special:UserCredentials|облікових даних користувачів]]"
+}

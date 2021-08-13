@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Beta16",
+			"Pietrodn"
+		]
+	},
+	"errorhandler-desc": "Gestore di errori per MediaWiki",
+	"errorhandler-errors": "Errori:",
+	"errorhandler-error-fatal": "Errore fatale",
+	"errorhandler-error-warning": "Attenzione",
+	"errorhandler-error-parse": "Errore del parser",
+	"errorhandler-error-notice": "Avviso",
+	"errorhandler-error-deprecated": "Deprecato",
+	"errorhandler-error-core-error": "Errore del nucleo",
+	"errorhandler-error-core-warning": "Avvertimento del nucleo",
+	"errorhandler-error-compile-error": "Errore di compilazione",
+	"errorhandler-error-compile-warning": "Avvertimento di compilazione",
+	"errorhandler-error-user-error": "Errore utente",
+	"errorhandler-error-user-warning": "Avvertimento utente",
+	"errorhandler-error-user-notice": "Avviso utente",
+	"errorhandler-error-user-deprecated": "Deprecato dall'utente",
+	"errorhandler-error-strict": "Standard severi",
+	"errorhandler-error-recoverable": "Errore fatale raccoglibile",
+	"errorhandler-msg-text": "$1: $2 in $3 (linea $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> in <b>$3</b> (linea <b>$4</b>)",
+	"errorhandler-trace": "traccia:",
+	"errorhandler-trace-line": "$1 (linea $2): $3",
+	"errorhandler-trace-line-internal": "[funzione interna]: $1"
+}

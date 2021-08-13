@@ -1,2 +1,0 @@
-<?hh
-if (true) { true; }

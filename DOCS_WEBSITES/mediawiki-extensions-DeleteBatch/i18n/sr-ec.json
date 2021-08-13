@@ -1,0 +1,40 @@
+{
+	"@metadata": {
+		"authors": [
+			"BadDog",
+			"Kizule",
+			"Rancher",
+			"Zoranzoki21",
+			"Жељко Тодоровић",
+			"Михајло Анђелковић",
+			"Сербијана"
+		]
+	},
+	"deletebatch": "Брисање групе страница",
+	"deletebatch-desc": "[[Special:DeleteBatch|Брисање групе страница]]",
+	"deletebatch-help": "Избришите групу страница.\nМожете обавити једно брисање или обрисати странице наведене у датотеци.\nОдаберите корисника који ће се приказати у записницима о брисању.\nОтпремљене датотеке треба да садрже назив странице и необавезни разлог, одвојене знаком \"|\".",
+	"deletebatch-caption": "Списак страница:",
+	"deletebatch-default-reason": "Подразумевани разлог за брисање:",
+	"deletebatch-title": "Брисање групе",
+	"deletebatch-link-back": "Назад на посебну страницу",
+	"deletebatch-as": "Покрени скрипт као:",
+	"deletebatch-both-modes": "Молимо одаберите најмање једну страницу или дати списак страница.",
+	"deletebatch-or": "<strong>или</strong>",
+	"deletebatch-delete": "Избриши",
+	"deletebatch-page": "Странице за брисање:",
+	"deletebatch-processing-from-file": "у току је брисање страница са списка",
+	"deletebatch-processing-from-form": "брисање страница наведених у форми",
+	"deletebatch-omitting-nonexistent": "Изостављам непостојећу страницу $1.",
+	"deletebatch-omitting-invalid": "Изостављам неисправну страницу $1.",
+	"deletebatch-file-bad-format": "Датотека би требало да садржи само обичан текст.",
+	"deletebatch-file-missing": "Читање датотеке није успело.",
+	"deletebatch-select-script": "Скрипта за брисање страница",
+	"deletebatch-select-yourself": "Ви",
+	"deletebatch-no-page": "Молимо наведите најмање једну страницу за брисање или одаберите датотеку која садржи списак страница.",
+	"deletebatch-system-username": "Скрипта за брисање страница",
+	"action-deletebatch": "брисање групе страница",
+	"right-deletebatch": "Брисање групе страница",
+	"action-deletebatch-spoof": "брисање групе страница као \"Скрипта за брисање страница\"",
+	"right-deletebatch-spoof": "Брисање групе страница као \"Скрипта за брисање страница\"",
+	"deletebatch-deleting-file-only": "Опис датотеке странице $1 не постоји; брисање само тренутне датотеке. Акција неће бити забележена."
+}

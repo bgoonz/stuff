@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cwlin0416",
+			"Kly",
+			"LNDDYL",
+			"Liuxinyu970226",
+			"Simon Shek",
+			"Zhxy 519"
+		]
+	},
+	"createredirect": "建立重新導向",
+	"createredirect-desc": "新增特殊頁面 [[Special:CreateRedirect|CreateRedirect]] 可以輕鬆地建立重新導向",
+	"createredirect-error": "錯誤：身份驗證失敗。",
+	"createredirect-enable-multiline": "輸入更多標題",
+	"createredirect-instructions": "使用下面的表單，可以建立重新導向頁面或取代現有的重新導向頁面。",
+	"createredirect-invalid-title": "錯誤：「$1」不是正確的標題。",
+	"createredirect-overwrite": "忽略警告",
+	"createredirect-page-title": "頁面標題:",
+	"createredirect-redirect-done": "建立重新導向從 \"$1\" 至 \"$2\"",
+	"createredirect-redirect-to": "重新導向至：",
+	"createredirect-save": "儲存頁面",
+	"createredirect-would-overwrite": "警告：頁面「[[:$1]]」已存在。"
+}

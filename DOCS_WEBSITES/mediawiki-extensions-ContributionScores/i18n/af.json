@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Arnobarnard",
+			"Naudefj"
+		]
+	},
+	"contributionscores": "Punte bygedra",
+	"contributionscores-desc": "Gee 'n oorsig van [[Special:ContributionScores|gebruikers met die meeste bydraes]] in die wiki",
+	"contributionscores-info": "Punte word as volg bereken:\n*Een (1) punt vir elke bladsy gewysig\n*Wortel van (totale aantal wysigings) - (totale aantal unieke bladsye) * 2\nPunte wat op die manier bereken word weeg die verskeidenheid van bladsye gewysig oor die aantal wysigings. Die punte meet hoofsaaklik unieke bladsye gewysig, met inagneming van hoë volume wysigings - wat veronderstel word om van hoër kwaliteit te wees.",
+	"contributionscores-top": "(Top $1)",
+	"contributionscores-days": "Laaste {{PLURAL:$1|dag|$1 dae}}",
+	"contributionscores-allrevisions": "Alle weergawes",
+	"contributionscores-score": "Punte",
+	"contributionscores-pages": "Bladsye",
+	"contributionscores-changes": "Wysigings",
+	"contributionscores-username": "Gebruikersnaam",
+	"contributionscores-invalidusername": "Ongeldige gebruikersnaam",
+	"contributionscores-invalidmetric": "Ongeldige eenheid"
+}

@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Michaello"
+		]
+	},
+	"editsubpages-desc": "Omogućava administratorima da odblokiraju stranicu i sve podstranice te stranice za anonimno uređivanje pomoću [[MediaWiki:Unlockedpages]]",
+	"unlockedpages": " #<!-- leave this line alone --><pre>\n# Postavi stranice koje želite da otključate ispod koristeći\n# * Naziv stranice\n# Otključane stranice moraju da počinju sa zrnom da bi se računalo,\n# sve ostalo se smatra kao komentar\n# Nazivi stranica mogu biti [[veze]] i osetljivi su na velika i mala slova\n# Takođe, stranice za razgovor biće automatski otključane sa stranicom\n# Vidite https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages za više informacija\n #</pre><!-- leave this line alone -->"
+}

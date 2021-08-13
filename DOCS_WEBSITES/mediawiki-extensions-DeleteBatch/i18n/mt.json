@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrisportelli"
+		]
+	},
+	"deletebatch": "Ħassar grupp ta' paġni",
+	"deletebatch-desc": "[[Special:DeleteBatch|Tħassar grupp ta' paġni]]",
+	"deletebatch-help": "Tħassir ta' grupp ta' paġni.\nTista' jew tagħmel tħassira waħda, jew tħassar paġni mniżżla f'fajl.\nAgħżel utent li jiġi jidher fir-reġistru tat-tħassir.\nFajls imtella' għandhom ikollhom l-isem tal-paġna u raġuni opzjonali, separati bil-karattru \"|\" f'kull linja.",
+	"deletebatch-caption": "Lista ta' paġni:",
+	"deletebatch-title": "Ħassar il-grupp",
+	"deletebatch-link-back": "Mur lura għall-paġna speċjali",
+	"deletebatch-as": "Esegwixxi l-iskript bħala:",
+	"deletebatch-both-modes": "Jekk jogħġbok agħżel paġna speċifika jew lista ta' paġni.",
+	"deletebatch-or": "<strong>jew</strong>",
+	"deletebatch-delete": "Ħassar",
+	"deletebatch-page": "Paġni x'jitħassru:",
+	"deletebatch-processing-from-file": "tħassir ta' paġni minn fajl ta' lista",
+	"deletebatch-processing-from-form": "tħassir ta' paġni mill-formola",
+	"deletebatch-omitting-nonexistent": "Il-paġna li ma teżistix $1 tħalliet barra.",
+	"deletebatch-omitting-invalid": "Il-paġna invalida $1 tħalliet barra.",
+	"deletebatch-file-bad-format": "Il-fajl għandu jkollu test biss.",
+	"deletebatch-file-missing": "Il-fajl mogħti ma setax jinqara",
+	"deletebatch-select-script": "Skrip għat-tħassir tal-paġna",
+	"deletebatch-select-yourself": "Inti",
+	"deletebatch-no-page": "Jekk jogħġbok speċifika tal-anqas paġna sabiex tħassar jew agħżel fajl b'lista ta' paġni.",
+	"right-deletebatch": "Iħassar paġni bil-lott"
+}

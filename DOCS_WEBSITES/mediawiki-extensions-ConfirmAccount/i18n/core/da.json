@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kaare",
+			"Saederup92"
+		]
+	},
+	"confirmaccount-newrequests": "'''$1''' {{PLURAL:$1|åben kontoanmodning|åbne kontoanmodninger}} med bekræftet e-mail [[Special:ConfirmAccounts| venter på behandling]]. '''Din opmærksomhed er påkrævet!'''",
+	"requestaccount-loginnotice": "For at få en brugerkonto, skal du '''[[Special:RequestAccount|anmode om en]]'''.",
+	"action-confirmaccount": "gennemgå og accepter kontoer",
+	"right-confirmaccount": "Vis [[Special:ConfirmAccounts|kontoanmodningskøen]]",
+	"right-requestips": "Vis anmoderers IP-adresse mens der behandles kontoanmodninger",
+	"right-lookupcredentials": "Vis [[Special:UserCredentials|brugeroplysninger]]"
+}

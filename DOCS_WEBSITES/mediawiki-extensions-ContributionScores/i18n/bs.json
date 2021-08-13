@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"CERminator",
+			"KWiki",
+			"Srdjan m",
+			"Srđan"
+		]
+	},
+	"contributionscores": "Rezultat doprinosa",
+	"contributionscores-desc": "Upit u wiki bazu podataka za najveći [[Special:ContributionScores|količinski korisnički doprinos]]",
+	"contributionscores-info": "Ovaj rezultat prvenstveno mjeri broj uređivanja pojedinačnih stranica, uzimajući u obzir velike količine uređivanja.",
+	"contributionscores-top": "(Najboljih $1)",
+	"contributionscores-days": "{{PLURAL:$1|Posljednji $1 dan|Posljednja $1 dana|Posljednjih $1 dana}}",
+	"contributionscores-allrevisions": "Svo vrijeme",
+	"contributionscores-score": "Rezultat",
+	"contributionscores-rank": "Rang",
+	"contributionscores-pages": "Stranice",
+	"contributionscores-changes": "Izmjene",
+	"contributionscores-username": "Korisničko ime",
+	"contributionscores-invalidusername": "Nevaljano korisničko ime",
+	"contributionscores-invalidmetric": "Nevaljana mjera"
+}

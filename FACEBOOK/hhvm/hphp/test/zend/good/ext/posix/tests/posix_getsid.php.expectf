@@ -1,5 +1,0 @@
-*** Testing posix_getsid() : function test ***
-
--- Testing posix_getsid() function with current process pid --
-bool(true)
-===DONE===

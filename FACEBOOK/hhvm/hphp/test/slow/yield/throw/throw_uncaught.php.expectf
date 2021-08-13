@@ -1,4 +1,0 @@
-
-Fatal error: Uncaught exception 'RuntimeException' with message 'test' in %s/throw_uncaught.php:10
-Stack trace:
-%a {main}

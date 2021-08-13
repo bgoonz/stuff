@@ -1,8 +1,0 @@
-{
-  "domain": "integration",
-  "name": "Integration",
-  "documentation": "https://www.home-assistant.io/components/integration",
-  "requirements": [],
-  "dependencies": [],
-  "codeowners": ["@dgomes"]
-}

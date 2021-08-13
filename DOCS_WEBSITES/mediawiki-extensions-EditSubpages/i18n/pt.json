@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu",
+			"Malafaya"
+		]
+	},
+	"editsubpages-desc": "Permite a administradores desbloquearem uma página e todas as suas subpáginas para edição anónima através de [[MediaWiki:Unlockedpages]]",
+	"unlockedpages": " #<!-- deixe esta linha como está --><pre>\n# Coloque as páginas que pretende desbloquear abaixo, usando\n# * Nome da página\n# Páginas desbloqueadas devem começar com um asterisco (*) para serem consideradas,\n# tudo o resto é considerado um comentário\n# Os nomes das páginas podem ser [[hiperligações]] e distingue-se maiúsculas de minúsculas\n# A respetiva página de discussão será também desbloqueada automaticamente\n# Para mais informações, consulte https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages\n #</pre><!-- deixe esta linha como está -->"
+}

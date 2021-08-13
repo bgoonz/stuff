@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fúlvio",
+			"Hamilton Abreu",
+			"Malafaya",
+			"Vitorvicentevalente",
+			"Waldir",
+			"Waldyrious"
+		]
+	},
+	"contributionscores": "Pontuação de contribuições",
+	"contributionscores-desc": "Inquire a base de dados wiki sobre os mais elevados [[Special:ContributionScores|volumes de contribuição dos utilizadores]]",
+	"contributionscores-info": "A pontuação mede, principalmente, as páginas únicas editadas, tendo em consideração o alto volume de edições.",
+	"contributionscores-top": "(Primeiros $1)",
+	"contributionscores-days": "{{PLURAL:$1|Último dia|Últimos $1 dias}}",
+	"contributionscores-allrevisions": "Desde sempre",
+	"contributionscores-score": "Pontuação",
+	"contributionscores-rank": "Posição",
+	"contributionscores-pages": "Páginas",
+	"contributionscores-changes": "Alterações",
+	"contributionscores-username": "Nome de utilizador",
+	"contributionscores-invalidusername": "Nome de utilizador inválido",
+	"contributionscores-invalidmetric": "Métrica inválida"
+}

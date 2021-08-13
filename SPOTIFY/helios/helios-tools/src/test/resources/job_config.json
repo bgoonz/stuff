@@ -1,6 +1,0 @@
-{
-  "env": {
-    "JVM_ARGS": "-Ddw.feature.randomFeatureFlagEnabled=true"
-  },
-  "gracePeriod": 100
-}

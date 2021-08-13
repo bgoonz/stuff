@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lockal",
+			"Movses"
+		]
+	},
+	"diagnosis": "Диагностика",
+	"diagnosis-desc": "Спецстраница для выявления возможных проблем, ошибок и угроз безопасности",
+	"action-diagnosis-access": "запустить инструмент диагностики",
+	"right-diagnosis-access": "Запустить инструмент диагностики"
+}

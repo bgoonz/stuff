@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chaipau",
+			"Simbu123"
+		]
+	},
+	"disableaccount": "সদস্য একাউন্ট প্ৰতিবন্ধ কৰক",
+	"disableaccount-user": "সদস্যনাম:",
+	"disableaccount-nosuchuser": "\"$1\" নামৰ সদস্য একাউন্টৰ অস্তিত্ব নাই ।",
+	"disableaccount-success": "\"$1\" ব্যৱহাৰকাৰী একাউণ্ট স্থায়ীভাৱে নিষ্ক্ৰিয় কৰা হৈছে।"
+}

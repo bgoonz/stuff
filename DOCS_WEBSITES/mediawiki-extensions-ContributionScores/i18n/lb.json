@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Les Meloures",
+			"Robby"
+		]
+	},
+	"contributionscores": "Bewäertung vun den Ännerungen",
+	"contributionscores-desc": "Ufro un d'Wiki-Datebank no den héchste [[Special:ContributionScores|Benotzerscoren]]",
+	"contributionscores-info": "D'Bewäertung moosst Zuel vu geännerte Säite a consideréiert d'Zuel vun den Ännerungen.",
+	"contributionscores-top": "(Top $1)",
+	"contributionscores-days": "{{PLURAL:$1|Leschten Dag|Lescht $1 Deeg}}",
+	"contributionscores-allrevisions": "Vun Ufank un",
+	"contributionscores-score": "Bewäertung",
+	"contributionscores-rank": "Klassement",
+	"contributionscores-pages": "Säiten",
+	"contributionscores-changes": "Ännerungen",
+	"contributionscores-username": "Benotzernumm",
+	"contributionscores-invalidusername": "Ongëltege Benotzernumm",
+	"contributionscores-invalidmetric": "Ongëlteg Metrik"
+}

@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"01miki10",
+			"Cimon Avaro",
+			"Crt",
+			"DannyS712",
+			"Jaakonam",
+			"McSalama",
+			"Nike",
+			"Silvonen",
+			"Vililikku"
+		]
+	},
+	"contactpage": "Yhteydenottosivu",
+	"contactpage-desc": "[[Special:Contact|Yhteydenottolomake vierailijoille]].",
+	"contactpage-title": "Ota yhteyttä",
+	"contactpage-pagetext": "Voit ottaa yhteyttä meihin alla olevalla lomakkeella.",
+	"contactpage-legend": "Lähetä sähköposti",
+	"contactpage-defsubject": "Viestisi",
+	"contactpage-subject-and-sender": "$1 (lähettäjä: $2)",
+	"contactpage-subject-and-sender-withip": "$1 (käyttäjältä $2 osoitteesta $3)",
+	"contactpage-fromname": "Nimesi:",
+	"contactpage-fromaddress": "Sähköpostiosoitteesi:",
+	"contactpage-formfootnotes": "(tarvitaan, jos haluat vastauksen)",
+	"contactpage-includeip": "Sisällytä IP-osoitteeni tähän viestiin.",
+	"contactpage-usermailererror": "Postitus palautti virheen: $1",
+	"contactpage-captcha-error": "CAPTCHA-virhe",
+	"contactpage-config-error-title": "Yhteydenottolomakkeen virhe",
+	"contactpage-config-error": "Yhteydenottolomaketta ei ole määritetty tälle sivulle tai se on määritetty virheellisesti.",
+	"contactpage-mustbeloggedin": "Kirjaudu sisään lähettääksesi yhteydenottolomakkeen."
+}

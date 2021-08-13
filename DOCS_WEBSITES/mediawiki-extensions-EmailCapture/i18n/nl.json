@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mainframe98",
+			"McDutchie",
+			"SPQRobin",
+			"Siebrand"
+		]
+	},
+	"emailcapture": "E-mailadresbevestiging",
+	"emailcapture-desc": "E-mailadressen bevestigen en stelt gebruikers in staat dit te doen via e-mail",
+	"emailcapture-failure": "Uw e-mailadres is '''niet''' bevestigd.",
+	"emailcapture-invalid-code": "Ongeldige bevestigingscode.",
+	"emailcapture-already-confirmed": "Uw e-mailadres is al bevestigd.",
+	"emailcapture-response-subject": "E-mailadrescontrole van {{SITENAME}}",
+	"emailcapture-response-body": "Hallo!\n\nBedankt voor uw interesse in het verbeteren van {{SITENAME}}.\n\nVolg deze koppeling om uw e-mailadres te bevestigen:\n$1\n\nU kunt ook deze koppeling volgen:\n$2\n\nEn daar de volgende bevestigingscode invoeren:\n$3\n\nWe nemen binnenkort contact met u op over hoe u kunt helpen {{SITENAME}} te verbeteren.\n\nAls u niet hebt gevraagd om dit bericht, negeer deze e-mail dan en dan krijgt u geen e-mail meer van ons.",
+	"emailcapture-success": "Bedankt!\n\nUw e-mailadres is bevestigd.",
+	"emailcapture-instructions": "Voer de code uit uw e-mail in om uw e-mailadres te bevestigen en klik daarna op \"{{int:emailcapture-submit}}\".",
+	"emailcapture-verify": "Bevestigingscode:",
+	"emailcapture-submit": "E-mailadres bevestigen",
+	"apihelp-emailcapture-description": "E-mailadressen verzamelen",
+	"apihelp-emailcapture-summary": "E-mailadressen verzamelen"
+}

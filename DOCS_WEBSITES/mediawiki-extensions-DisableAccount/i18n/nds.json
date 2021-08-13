@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Slomox"
+		]
+	},
+	"disableaccount": "Brukerkonto deaktiveren",
+	"disableaccount-user": "Brukernaam:",
+	"disableaccount-nosuchuser": "Dat Brukerkonto „$1“ gifft dat nich.",
+	"disableaccount-success": "Dat Brukerkonto „$1“ is nu duurhaftig deaktiveert."
+}

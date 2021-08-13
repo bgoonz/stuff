@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Omnipaedista"
+		]
+	},
+	"errorhandler-errors": "Σφάλματα:",
+	"errorhandler-error-warning": "Εἴδησις",
+	"errorhandler-error-parse": "Σφάλμα λεξιαναλυτοῦ",
+	"errorhandler-error-notice": "Σημείωμα",
+	"errorhandler-error-strict": "Αὐστηρὰ πρότυπα",
+	"errorhandler-msg-text": "$1 : $2 ἐν $3 (γραμμή $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> ἐν <b>$3</b> (γραμμή <b>$4</b>)",
+	"errorhandler-trace": "ἴχνος:",
+	"errorhandler-trace-line": "$1 (γραμμή $2): $3",
+	"errorhandler-trace-line-internal": "[ἐσωτέρα συνάρτησις]: $1"
+}

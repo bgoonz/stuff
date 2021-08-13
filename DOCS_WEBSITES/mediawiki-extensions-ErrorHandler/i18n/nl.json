@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Siebrand"
+		]
+	},
+	"errorhandler-desc": "Foutafhandeling voor MediaWiki",
+	"errorhandler-errors": "Fouten:",
+	"errorhandler-error-fatal": "Fatale fout",
+	"errorhandler-error-warning": "Waarschuwing",
+	"errorhandler-error-parse": "Parserfout",
+	"errorhandler-error-notice": "Mededeling",
+	"errorhandler-error-deprecated": "Gemarkeerd als 'deprecated'",
+	"errorhandler-error-core-error": "Kernfout",
+	"errorhandler-error-core-warning": "Kernwaarschuwing",
+	"errorhandler-error-compile-error": "Compileerfout",
+	"errorhandler-error-compile-warning": "Compileerwaarschuwing",
+	"errorhandler-error-user-error": "Gebruikersfout",
+	"errorhandler-error-user-warning": "Gebruikerswaarschuwing",
+	"errorhandler-error-user-notice": "Gebruikersmededeling",
+	"errorhandler-error-user-deprecated": "Gemarkeerd als 'user deprecated'",
+	"errorhandler-error-strict": "Strikte standaarden",
+	"errorhandler-error-recoverable": "Op te vangen fatale fout",
+	"errorhandler-msg-text": "$1 : $2 in $3 (regel $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> in <b>$3</b> (regel <b>$4</b>)",
+	"errorhandler-trace": "trace:",
+	"errorhandler-trace-line": "$1 (regel $2): $3",
+	"errorhandler-trace-line-internal": "[interne functie]: $1"
+}

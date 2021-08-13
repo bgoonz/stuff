@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Danmichaelo",
+			"DannyS712",
+			"Jon Harald Søby",
+			"Nghtwlkr"
+		]
+	},
+	"contactpage": "Kontaktside",
+	"contactpage-desc": "[[Special:Contact|Kontaktskjema for besøkende]]",
+	"contactpage-title": "Kontakt",
+	"contactpage-pagetext": "Bruk skjemaet nedenunder for å kontakte oss.",
+	"contactpage-legend": "Send e-post",
+	"contactpage-defsubject": "Beskjed",
+	"contactpage-subject-and-sender": "$1 (fra $2)",
+	"contactpage-subject-and-sender-withip": "$1 (fra $2 på $3)",
+	"contactpage-fromname": "Ditt navn:",
+	"contactpage-fromaddress": "Din e-postadresse:",
+	"contactpage-formfootnotes": "(trengs hvis du vil ha svar)",
+	"contactpage-includeip": "Inkluder IP-adressen min i denne meldingen.",
+	"contactpage-usermailererror": "E-postobjekt returnerte feilen: $1",
+	"contactpage-captcha-error": "CAPTCHA-feil",
+	"contactpage-config-error-title": "Feil med kontaktskjema",
+	"contactpage-config-error": "Et kontaktskjema er ikke konfigurert for denne siden eller er feilkonfigurert.",
+	"contactpage-mustbeloggedin": "Logg inn for å sende inn et kontaktskjema."
+}

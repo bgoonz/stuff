@@ -1,8 +1,0 @@
-{
-  "$schema": "./initreq-schema.json",
-  "backup": false,
-  "id": "foobar",
-  "mode": "0755",
-  "owner": "chris",
-  "Initializer": {}
-}

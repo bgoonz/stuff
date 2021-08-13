@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Banjo",
+			"Elisardojm",
+			"Toliño"
+		]
+	},
+	"deletebatch": "Borrar un conxunto de páxinas",
+	"deletebatch-desc": "[[Special:DeleteBatch|Borrar un conxunto de páxinas]]",
+	"deletebatch-help": "Borrar un conxunto de páxinas.\nPode levar a cabo un borrado único ou borrar as páxinas listadas nun ficheiro.\nEscolla o usuario que se amosará nos rexistros de borrado.\nOs ficheiros cargados deberían conter o nome da páxina e un motivo opcional, separados por \"|\".",
+	"deletebatch-caption": "Lista de páxinas:",
+	"deletebatch-default-reason": "Motivo para o borrado por defecto:",
+	"deletebatch-title": "Borrar un conxunto",
+	"deletebatch-link-back": "Volver á páxina especial",
+	"deletebatch-as": "Executar a escritura como:",
+	"deletebatch-both-modes": "Por favor, escolla unha páxina específica ou unha lista de páxinas dadas.",
+	"deletebatch-or": "<strong>ou</strong>",
+	"deletebatch-delete": "Borrar",
+	"deletebatch-page": "Páxinas a borrar:",
+	"deletebatch-processing-from-file": "borrando as páxinas listadas no ficheiro",
+	"deletebatch-processing-from-form": "borrando as páxinas listadas no formulario",
+	"deletebatch-omitting-nonexistent": "Omitindo a páxina inexistente \"$1\".",
+	"deletebatch-omitting-invalid": "Omitindo a páxina non válida \"$1\".",
+	"deletebatch-file-bad-format": "O ficheiro debería ser de texto",
+	"deletebatch-file-missing": "Non se puido ler o ficheiro dado",
+	"deletebatch-select-script": "Borrar a escritura dunha páxina",
+	"deletebatch-select-yourself": "Vostede",
+	"deletebatch-no-page": "Por favor, especifique, polo menos, unha páxina para borrar ou escolla un ficheiro que conteña unha lista de páxinas.",
+	"deletebatch-system-username": "Script de eliminación de páxinas",
+	"action-deletebatch": "Borrar conxuntos de páxinas",
+	"right-deletebatch": "Borrar conxuntos de páxinas",
+	"right-deletebatch-spoof": "Borrar conxuntos de páxinas como \"script de eliminación de páxinas\"",
+	"deletebatch-deleting-file-only": "A páxina de descrición do ficheiro \"$1\" non existe; bórrase o ficheiro unicamente.\nEsta acción non se gardará en ningún rexistro."
+}

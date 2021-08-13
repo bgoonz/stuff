@@ -1,0 +1,25 @@
+/**
+ * CSS for the Did You Know MediaWiki extension.
+ * @see https://www.mediawiki.org/wiki/Extension:Did_You_Know
+ *
+ * @licence GNU GPL v2+
+ * @author Jeroen De Dauw <jeroendedauw at gmail dot com>
+ */
+
+div.didyouknow {
+	background-color: #EDEFF5;
+	border-bottom: 1px solid #D2D9E6;
+	width: 300px;
+	position: static;
+	float: right;
+}
+
+h4.didyouknow-header {
+	padding: 5px 15px 4px;
+	border-bottom: 1px solid #A2A9B6;
+	border-top: 1px solid #A2A9B6;
+}
+
+div.didyouknow > p {
+	padding: 5px 25px 4px;
+}

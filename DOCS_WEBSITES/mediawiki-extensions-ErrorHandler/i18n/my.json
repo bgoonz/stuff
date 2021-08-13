@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dr Lotus Black"
+		]
+	},
+	"errorhandler-errors": "အမှား:",
+	"errorhandler-error-warning": "သတိပေးချက်",
+	"errorhandler-error-notice": "ကြော်ငြာသင်ပုန်း",
+	"errorhandler-error-user-error": "အသုံးပြုသူ အမှား",
+	"errorhandler-error-user-warning": "အသုံးပြုသူ သတိပေးချက်",
+	"errorhandler-error-user-notice": "အသုံးပြုသူ ကြော်ငြာသင်ပုန်း"
+}

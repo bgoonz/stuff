@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Diki Ananta",
+			"NoiX180",
+			"Sumbukompor"
+		]
+	},
+	"emailcapture": "Vèrifikasi layang-èl",
+	"emailcapture-desc": "Cathet alamat layang-èl, lan idinaké naraguna mèrifikasi lumantar layang-èl",
+	"emailcapture-failure": "Alamat layang-èl panjenengan '''durung''' divèrifikasi.",
+	"emailcapture-invalid-code": "Kodhe pepesthèn ora sah.",
+	"emailcapture-already-confirmed": "Alamat layang-èl panjenengan wis dikonfirmasi.",
+	"emailcapture-response-subject": "Vèrifikasi alamat layang-èl {{SITENAME}}",
+	"emailcapture-response-body": "Halo!\n\nMatur nuwun wis awèh kawigatèn kanthi ndandani {{SITENAME}}.\n\nMangga awèh kalodhangan sadhéla kanggo ngonfirmasi alamat layang-èlé panjenengan kanthi ngeklik pranala ingisor iki:\n$1\n\nPanjenengan uga bisa nyang:\n$2\n\nBanjur isèkaké kodhe konfirmasi ngisor iki:\n$3\n\nAwak dhéwé bakal gagé sesambungan ngenani carané panjenengan bisa ngéwangi ndandani {{SITENAME}}.\n\nYèn panjenengan ora nyuwun iki, lirwakaké waé layang-èl iki lan awak dhéwé ora bakal ngirimi panjenengan apa-apa manèh.",
+	"emailcapture-success": "Matur nuwun!\n\nAlamat layang-èlé panjenengan kasil dikonfirmasi.",
+	"emailcapture-instructions": "Kanggo vèrifikasi alamat layang-èl panjenengan, isi kodhe sing dikirim lumantar layang-èl banjur klik \"{{int:emailcapture-submit}}\".",
+	"emailcapture-verify": "Kodhe vèrifikasi:",
+	"emailcapture-submit": "Vèrifikasi alamat layang-èl"
+}

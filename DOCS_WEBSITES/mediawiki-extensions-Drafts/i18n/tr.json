@@ -1,0 +1,43 @@
+{
+	"@metadata": {
+		"authors": [
+			"BaRaN6161 TURK",
+			"Joseph",
+			"MuratTheTurkish",
+			"Stultiwikia"
+		]
+	},
+	"drafts": "Taslaklar",
+	"drafts-desc": "Bir sayfanın [[Special:Drafts|taslak]] sürümünleri sunucuya kaydetme özelliğini ekler",
+	"drafts-view": "TaslağıGör",
+	"drafts-view-summary": "Bu özel sayfa tüm mevcut taslakların bir listesini gösterir.\nKullanılmayan taslaklar $1 gün sonra otomatik olarak silinir.",
+	"drafts-view-article": "Sayfa",
+	"drafts-view-existing": "Mevcut taslaklar",
+	"drafts-view-saved": "Kaydedildi",
+	"drafts-view-discard": "Sil",
+	"drafts-view-nonesaved": "Şu anda kayıtlı hiçbir taslağınız yok.",
+	"drafts-view-notice": "Bu sayfa için $1 var.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|taslağınız|taslağınız}}",
+	"drafts-view-warn": "Bu sayfadan uzaklaşmaya devam etmek istiyor musunuz? Böylece, bu sayfadaki kaydedilmemiş tüm değişiklikleri kaybedersiniz.",
+	"drafts-save": "Bunu taslak olarak kaydet",
+	"drafts-save-save": "Taslağı kaydet",
+	"drafts-save-saved": "Kaydedildi",
+	"drafts-save-saving": "Kaydediliyor",
+	"drafts-save-error": "Taslağı kaydederken hata",
+	"drafts-enable": "Bir taslağı düzenleme formunda kaydetme özelliğini etkinleştir",
+	"prefs-extension-drafts": "Taslaklar",
+	"tooltip-drafts-save": "Taslak olarak kaydet",
+	"apierror-mustbeloggedin-save-drafts": "Taslakları kaydetmek için oturum açmalısınız.",
+	"apihelp-savedrafts-description": "Bir taslağı kaydedin.",
+	"apihelp-savedrafts-summary": "Bir taslağı kaydedin.",
+	"apihelp-savedrafts-param-id": "Taslağın kimliği.",
+	"apihelp-savedrafts-param-drafttoken": "Taslak anahtarı.",
+	"apihelp-savedrafts-param-title": "Taslak başlığı.",
+	"apihelp-savedrafts-param-section": "Sayfanın düzenlenmekte olan bölümünün dizini.",
+	"apihelp-savedrafts-param-starttime": "Taslağın başlangıç zamanı.",
+	"apihelp-savedrafts-param-edittime": "Taslağın düzenleme zamanı.",
+	"apihelp-savedrafts-param-scrolltop": "Metin kutusunun scrollTop'u.",
+	"apihelp-savedrafts-param-text": "Taslak metin.",
+	"apihelp-savedrafts-param-summary": "Taslak özeti.",
+	"apihelp-savedrafts-param-minoredit": "Taslağın küçük bir düzenleme olup olmadığını gösteren boole."
+}

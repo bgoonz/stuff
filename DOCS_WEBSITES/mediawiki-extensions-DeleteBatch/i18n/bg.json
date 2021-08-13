@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"DCLXVI",
+			"StanProg",
+			"Vlad5250",
+			"පසිඳු කාවින්ද"
+		]
+	},
+	"deletebatch-caption": "Списък на страници:",
+	"deletebatch-link-back": "Връщане към специалната страница",
+	"deletebatch-as": "Стартиране на скрипта като:",
+	"deletebatch-or": "<strong>ИЛИ</strong>",
+	"deletebatch-delete": "Изтриване",
+	"deletebatch-page": "Страници за изтриване:",
+	"deletebatch-processing-from-file": "изтривани на страници указани във файла",
+	"deletebatch-processing-from-form": "изтривани на страници указани във формуляра",
+	"deletebatch-file-bad-format": "Необходимо е файлът да съдържа обикновен текст.",
+	"deletebatch-file-missing": "Предоставеният файл не може да бъде прочетен.",
+	"deletebatch-select-script": "Скрипт за изтриване на страници",
+	"deletebatch-select-yourself": "Вие",
+	"deletebatch-no-page": "Моля, укажете поне една страница за изтриване или изберете файл съдържащ списък на страници.",
+	"deletebatch-system-username": "Скрипт за изтриване на страници"
+}

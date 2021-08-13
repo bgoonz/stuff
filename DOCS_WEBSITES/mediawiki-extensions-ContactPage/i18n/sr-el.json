@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"DannyS712",
+			"Michaello",
+			"Milicevic01",
+			"Rancher",
+			"Жељко Тодоровић",
+			"Сербијана"
+		]
+	},
+	"contactpage": "Stranica za kontakt",
+	"contactpage-desc": "[[Special:Contact|Kontakt-forma za posetioce]]",
+	"contactpage-title": "Kontakt",
+	"contactpage-pagetext": "Molimo Vas da koristite formu ispod da nas kontaktirate.",
+	"contactpage-legend": "Pošalji imejl",
+	"contactpage-subject-and-sender": "$1 (od $2)",
+	"contactpage-fromname": "Vaše ime:",
+	"contactpage-fromaddress": "Vaša imejl adresa:",
+	"contactpage-formfootnotes": "(obavezno ako želite da dobijete odgovor)",
+	"contactpage-usermailererror": "Došlo je do greške pri slanju poruke: $1",
+	"contactpage-captcha-error": "Greška u CAPTCHA-i"
+}

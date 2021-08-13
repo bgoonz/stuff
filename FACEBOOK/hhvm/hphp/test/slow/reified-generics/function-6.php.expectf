@@ -1,3 +1,0 @@
-ok
-
-Catchable fatal error: Value returned from function g() must be of type C<(function (): string)>, C<(function():int)> given in %s on line 17

@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mihxil",
+			"Mirin",
+			"Robin van der Vliet",
+			"Yekrats"
+		]
+	},
+	"disableaccount-desc": "Permesas al administrantoj forbari individuajn kontojn.",
+	"right-disableaccount": "Malŝalti kontojn",
+	"action-disableaccount": "malfunkciigi kontojn",
+	"disableaccount": "Malŝalti konton de uzanto",
+	"disableaccount-user": "Uzantnomo:",
+	"disableaccount-confirm": "Malŝalti ĉi tiun uzantkonton.\nLa uzanto ne povos saluti, reagordi sian pasvorton aŭ ricevi perretpoŝtajn sciigojn.\nSe la uzanto nun estas salutinta ie ajn, ĝi estas tuj malsalutigitota.\n''Konsciu ke malvalidigo de uzantkonto ne estas malfarebla sen helpo de sistemestro.'''",
+	"disableaccount-mustconfirm": "Vi devas konfirmi ke vi volas malŝalti ĉi tiun konton.",
+	"disableaccount-nosuchuser": "La uzantkonto \"$1\" ne ekzistas.",
+	"disableaccount-success": "La konto de uzanto \"$1\" estis ĉiame malŝaltis.",
+	"logentry-block-disableaccount": "$1 {{GENDER:$2|malfunkciigis la konton}} de {{GENDER:$4|$3}}."
+}

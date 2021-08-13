@@ -1,3 +1,0 @@
-Call fail()
-
-Fatal error: Call to protected pass::fail() from invalid context in %s/protected_001b.php on line 15

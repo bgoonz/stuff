@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vashgird"
+		]
+	},
+	"createredirect-enable-multiline": "Унвонҳои бештареро ворид кунед",
+	"createredirect-invalid-title": "Хато: \"$1\" унвони дуруст нест..",
+	"createredirect-overwrite": "Нодида гирифтани ҳушдорҳо",
+	"createredirect-would-overwrite": "Ҳушдор: сафҳаи \"[[:$1]]\" аз қабл мавҷуд аст."
+}

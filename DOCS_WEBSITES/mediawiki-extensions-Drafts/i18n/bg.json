@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"DCLXVI",
+			"StanProg",
+			"Turin"
+		]
+	},
+	"drafts": "Чернови",
+	"drafts-desc": "Добавя възможност за съхраняване на [[Special:Drafts|чернови]] на страниците",
+	"drafts-view": "ПрегледНаЧернова",
+	"drafts-view-article": "Страница",
+	"drafts-view-existing": "Налични чернови",
+	"drafts-view-saved": "Запазено",
+	"drafts-view-discard": "Отхвърляне",
+	"drafts-view-nonesaved": "Все още нямате съхранени чернови.",
+	"drafts-view-notice": "Имате $1 за тази страница.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|чернова|чернови}}",
+	"drafts-save": "Съхраняване на съдържанието като чернова",
+	"drafts-save-save": "Съхраняване като чернова",
+	"drafts-save-saved": "Съхранено",
+	"drafts-save-saving": "Съхраняване",
+	"drafts-save-error": "Възникна грешка при съхраняване на черновата",
+	"tooltip-drafts-save": "Съхраняване като чернова"
+}

@@ -1,0 +1,214 @@
+/* Hide various interface elements */
+#left-navigation {
+	display: none !important;
+}
+
+#right-navigation {
+	display: none !important;
+}
+
+#p-search {
+	display: none !important;
+}
+
+body.ltr #footer #footer-places {
+	display: none !important;
+}
+
+/* Form styling */
+.creditcard-error-msg {
+	color: #c10;
+}
+
+#appeal,
+#donate {
+	display: table-cell;
+}
+
+#donate {
+	background-color: transparent;
+}
+
+#bodyContent input[ type='text' ],
+#bodyContent input[ type='email' ],
+textarea {
+	border: 1px solid #c0c0c0;
+	padding: 3px;
+}
+
+#greenBackground {
+	display: inline-block;
+}
+
+#greenBackground {
+	padding: 16px 24px;
+	min-width: 300px;
+	background-color: #cce7cd;
+	border: 1px solid #5eac58;
+}
+
+p#informationsharing,
+p#monthlycancel {
+	padding: 0 15px;
+	line-height: 14px;
+	font-size: 11px;
+}
+
+/* Form Inputs */
+/* Override the sitedir-ltr input direction */
+body.rtl input {
+	/* @noflip */
+	direction: rtl;
+}
+
+input#email {
+	/* @noflip */
+	direction: ltr;
+}
+
+.halfwidth,
+.thirdwidth {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.halfwidth input,
+.halfwidth select,
+.halfwidth .errorMsg,
+.thirdwidth input,
+.thirdwidth select,
+.thirdwidth .errorMsg,
+.fullwidth {
+	width: 100%;
+}
+
+.halfwidth {
+	width: 49%;
+}
+
+.halfwidth:not( :first-child ) {
+	margin-left: 2%;
+}
+
+.thirdwidth {
+	width: 32%;
+}
+
+.thirdwidth:not( :first-child ) {
+	margin-left: 2%;
+}
+
+/* From 2014 appeal */
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* Slurped from https://payments.wikimedia.org/index.php?title=MediaWiki:Common.css&oldid=2183 */
+#mw-panel .portal {
+	display: none !important;
+}
+
+#footer #footer-icons {
+	display: none !important;
+}
+
+a[ href^='https://' ],
+.link-https {
+	background-image: none !important;
+	padding: 0 !important;
+}
+
+#content.mw-body {
+	border: 0;
+}
+
+.errorMsg {
+	color: #f00;
+	display: inherit;
+	clear: left;
+}
+
+.errorMsgHide {
+	display: none;
+}
+
+#emailSuggestion {
+	display: none;
+	color: #7c7c7c;
+	font-size: 95%;
+}
+
+/* Respond to small viewport */
+@media screen and ( max-device-width: 981px ) {
+	/* Overall layout */
+	#content.mw-body {
+		margin: 0;
+		padding: 1em;
+	}
+
+	#mw-navigation {
+		display: none;
+	}
+
+	#appeal {
+		display: none;
+	}
+
+	div#greenBackground {
+		padding: 1em;
+		width: inherit;
+	}
+
+	#donate form select,
+	#donate form input {
+		display: block;
+		float: left;
+		clear: both;
+		font-size: 1.6em;
+		width: 100%;
+		margin: 5px 0;
+		padding: 10px 3%;
+	}
+
+	#donate .thirdwidth,
+	#donate .halfwidth {
+		width: 100%;
+		margin-left: 0;
+	}
+
+	#donate form input.hidden {
+		display: none;
+	}
+
+	.options-h li {
+		margin-right: 1em;
+	}
+
+	p#informationsharing,
+	ul#moreinfolinks {
+		font-size: 1em;
+		line-height: 1.35em;
+		width: inherit;
+		padding: 1em;
+	}
+
+	#cards label {
+		display: inline-block;
+		width: 100%;
+		float: left;
+	}
+
+	ul#cards li.has_sub_text {
+		padding-bottom: 0.6em;
+	}
+
+	ul#cards li.has_sub_text input {
+		margin-bottom: 0.3em !important;
+	}
+
+	ul#cards li.has_sub_text label img.submethod-logo {
+		margin: 0.1em auto;
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ashok modhvadia",
+			"Dineshjk",
+			"KartikMistry"
+		]
+	},
+	"drafts": "મુસદ્દા",
+	"drafts-desc": "સર્વર પર [[Special:મુસદ્દા|મુસદ્દા]]ના પાનાંનાં સંસ્કરણો સાચવવાની ક્ષમતા ઉમેરે છે.",
+	"drafts-view": "મુસદ્દો જુઓ",
+	"drafts-view-summary": "આ ખાસ પાનું બધા વિદ્યમાન મુસદ્દાની યાદી દર્શાવે છે.\n\nવણવપરાયેલ મુસદ્દા {{PLURAL:$1|$1 દિવસ|$1 દિવસો}} પછી આપોઆપ દુર કરાશે.",
+	"drafts-view-article": "પાનું",
+	"drafts-view-existing": "વિદ્યમાન મુસદ્દા",
+	"drafts-view-saved": "સાચવેલ",
+	"drafts-view-discard": "કાઢી નાખો",
+	"drafts-view-nonesaved": "આ સમયે તમારી પાસે કોઇ સાચવેલ મુસદ્દા નથી.",
+	"drafts-view-notice": "તમારી પાસે આ પાના માટે $1 છે.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|મુસદ્દો|મુસદ્દા}}",
+	"drafts-view-warn": "આ પાના પરથી બીજે જતા તમે સાચવ્યા વિનાના બધાજ ફેરફારો ગુમાવશો.\n\nતમે આગળ વધવા માંગો છો ?",
+	"drafts-save": "આને મુસદ્દા તરીકે સાચવો",
+	"drafts-save-save": "મુસદ્દો સાચવો",
+	"drafts-save-saved": "સાચવ્યું",
+	"drafts-save-saving": "સચવાય છે",
+	"drafts-save-error": "મુસદ્દો સાચવવામાં ત્રુટી",
+	"drafts-enable": "ફેરફાર કરતી વખતે ડ્રાફટ બંધારણમાં સંગ્રહ કરવાની લાક્ષણિકતા સક્રિય કરો",
+	"prefs-extension-drafts": "મુસદ્દા",
+	"tooltip-drafts-save": "મુસદ્દા તરીકે સાચવો"
+}

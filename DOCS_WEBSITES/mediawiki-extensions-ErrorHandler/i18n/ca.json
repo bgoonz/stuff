@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aleator",
+			"Paucabot"
+		]
+	},
+	"errorhandler-errors": "Errors:",
+	"errorhandler-error-fatal": "Error fatal",
+	"errorhandler-error-compile-error": "Error de compilació",
+	"errorhandler-error-user-error": "Error d'usuari"
+}

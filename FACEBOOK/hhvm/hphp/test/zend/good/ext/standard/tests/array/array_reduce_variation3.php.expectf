@@ -1,8 +1,0 @@
-*** Testing array_reduce() : variation - object callbacks ***
-
---- Static method callback ---
-int(1)
-
---- Instance method callback ---
-int(1)
-===DONE===

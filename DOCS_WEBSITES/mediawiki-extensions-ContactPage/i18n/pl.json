@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrumps",
+			"DannyS712",
+			"Derbeth",
+			"Jacenty359",
+			"Leinad",
+			"Maikking",
+			"Rail",
+			"Railfail536",
+			"Sp5uhe",
+			"WTM",
+			"Wpedzich"
+		]
+	},
+	"contactpage": "Kontakt",
+	"contactpage-desc": "[[Special:Contact|Formularz kontaktowy dla czytelników serwisu]]",
+	"contactpage-title": "Kontakt",
+	"contactpage-pagetext": "Prosimy użyć poniższego formularza, by skontaktować się z nami",
+	"contactpage-legend": "Wyślij e‐mail",
+	"contactpage-defsubject": "Wiadomość",
+	"contactpage-subject-and-sender": "$1 (z $2)",
+	"contactpage-subject-and-sender-withip": "$1 (od $2 z $3)",
+	"contactpage-fromname": "Twoje imię:",
+	"contactpage-fromaddress": "Twój adres e-mail:",
+	"contactpage-formfootnotes": "(potrzebne jeśli chcesz uzyskać odpowiedź)",
+	"contactpage-includeip": "Dodaj do tej wiadomości informację o moim adresie IP.",
+	"contactpage-usermailererror": "Moduł obsługi poczty zwrócił błąd: $1",
+	"contactpage-captcha-error": "Błąd CAPTCHA",
+	"contactpage-config-error-title": "Błąd formularza kontaktowego",
+	"contactpage-config-error": "Formularz kontaktowy nie został skonfigurowany dla tej strony albo jest skonfigurowany nieprawidłowo.",
+	"contactpage-mustbeloggedin": "Musisz się zalogować przed wysłaniem zgłoszenia."
+}

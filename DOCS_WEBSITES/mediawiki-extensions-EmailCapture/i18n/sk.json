@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Helix84",
+			"Kusavica",
+			"Luky001",
+			"TomášPolonec",
+			"Vlad5250"
+		]
+	},
+	"emailcapture": "Overenie e-mailu",
+	"emailcapture-desc": "Zachytiť emailovú adresu a umožniť používateľom overenie pomocou emailu",
+	"emailcapture-failure": "Vaša e-mailová adresa '''nebola''' overená.",
+	"emailcapture-invalid-code": "Neplatný overovací kód.",
+	"emailcapture-response-subject": "Potvrdenie emailovej adresy pre {{GRAMMAR:akuzatív|{{SITENAME}}}}",
+	"emailcapture-response-body": "Dobrý deň!\n\nĎakujeme za Váš záujem pomôcť zlepšiť {{GRAMMAR:4sg|{{SITENAME}}}}.\n\nProsím, overte svoju elektronickú adresu stlačením tohto odkazu:\n$1\n\nMôžete tiež navštíviť:\n$2\n\na zadať tento overovací kód:\n$3\n\nČoskoro sa Vám ozveme, ako môžete pomôcť zlepšiť {{GRAMMAR:4sg|{{SITENAME}}}}.\n\nAk ste túto správu nevyžiadali vy, prosím, ignorujte ju a už vám nič iné nepošleme.",
+	"emailcapture-success": "Vďaka!\n\nVaša emailová adresa bola overená.",
+	"emailcapture-instructions": "Ak chcete overiť svoju emailovú adresu, zadajte kód, ktorý vám bol zaslaný emailom a kliknite na „{{int:emailcapture-submit}}“.",
+	"emailcapture-verify": "Overovací kód:",
+	"emailcapture-submit": "Overiť e-mailovú adresu"
+}

@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chameleon222"
+		]
+	},
+	"etherpadlite-desc": "Legger til &lt;eplite&gt; parsertagg for å bygge inn en eller flere Etherpad Lite blokker (som finnes på lokale eller eksterne tjenere for Etherpad Lite) på sider",
+	"etherpadlite-tracking-category": "Sider med en innbygd Etherpad",
+	"etherpadlite-tracking-category-desc": "Denne siden bygger inn en Etherpad med taggen <code>&lt;eplite&gt;</code>.",
+	"etherpadlite-invalid-pad-url": "«$1» er ikke en gyldig Etherpad Lite URL eller blokknavn.",
+	"etherpadlite-url-is-not-whitelisted": "«$1» er ikke i hvitelisten for tillatte Etherpad Lite tjenere. {{PLURAL:$3|$2 er eneste tillatte tjener|De tillatte tjenerene er som følger: $2}}.",
+	"etherpadlite-empty-whitelist": "«$1» er ikke i hvitelisten av tillatte Etherpad Lite tjenere. Det er ingen tillatte tjenere i hvitelisten.",
+	"etherpadlite-pad-used-more-than-once": "Blokken «$1» har allerede blitt brukt på denne siden; du kan ha mange blokker på en side, men bare dersom de er ulike blokker."
+}

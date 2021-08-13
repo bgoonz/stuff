@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Banjo",
+			"Elisardojm",
+			"Iváns",
+			"Toliño"
+		]
+	},
+	"emailcapture": "Verificación do correo electrónico",
+	"emailcapture-desc": "Captura enderezos de correo electrónico e permite aos usuarios comprobalos a través do propio correo electrónico",
+	"emailcapture-failure": "O seu correo electrónico '''non''' foi verificado.",
+	"emailcapture-invalid-code": "Código de confirmación incorrecto.",
+	"emailcapture-already-confirmed": "Xa se confirmou o seu enderezo de correo electrónico.",
+	"emailcapture-response-subject": "Verificación do enderezo de correo electrónico de {{SITENAME}}",
+	"emailcapture-response-body": "Ola!\n\nGrazas por expresar interese en axudar a mellorar {{SITENAME}}.\n\nAgarda un intre para confirmar o teu correo electrónico premendo na ligazón que hai deseguido: \n$1\n\nTamén podes visitar:\n$2\n\nE inserir o seguinte código de confirmación:\n$3\n\nPoñerémonos en contacto contigo para informarche sobre como axudar a mellorar {{SITENAME}}.\n\nSe non fixeches esta petición, ignora esta mensaxe e non che enviaremos máis nada.",
+	"emailcapture-success": "Grazas!\n\nO seu enderezo de correo electrónico foi confirmado.",
+	"emailcapture-instructions": "Para verificar o teu enderezo de correo electrónico, insire o código que se che enviou ó correo e preme en \"{{int:emailcapture-submit}}\".",
+	"emailcapture-verify": "Código de verificación:",
+	"emailcapture-submit": "Verificar o enderezo de correo electrónico",
+	"apihelp-emailcapture-description": "Capturar enderezos de correo electrónico",
+	"apihelp-emailcapture-summary": "Capturar enderezos de correo electrónico",
+	"apihelp-emailcapture-param-email": "Enderezos de correo electrónico a capturar",
+	"apihelp-emailcapture-param-info": "Información adicional a rexitrar, habitualmente información JSON estruturada e codificada"
+}

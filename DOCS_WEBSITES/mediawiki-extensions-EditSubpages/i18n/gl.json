@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"editsubpages-desc": "Permite aos administradores desprotexer unha páxina e todas as subpáxinas desta para os usuarios anónimos editando mediante [[MediaWiki:Unlockedpages]]",
+	"unlockedpages": "  #<!-- deixe esta liña como está --><pre>\n# Poña as páxinas que desexe desprotexer embaixo usando\n# * Nomedapáxina\n# As páxinas desprotexidas deben comezar cun asterisco (*) para que sexan contabilizadas,\n# o resto consideranrase comentarios\n# Os nomes das páxinas serán [[ligazóns]] e distinguen entre maiúsculas e minúsculas\n# Tamén, as páxinas de conversa serán desprotexidas automaticamente coa páxina\n# Véxase https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages para obter máis información\n  #</pre><!-- deixe esta liña como está -->"
+}

@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Andibing",
+			"Thehelpfulone"
+		]
+	},
+	"emailcapture-response-body": "Hello!\n\nThank you for expressing interest in helping to improve {{SITENAME}}.\n\nPlease take a moment to confirm your email address by clicking on the link below:\n$1\n\nYou may also visit:\n$2\n\nAnd enter the following confirmation code:\n$3\n\nWe'll be in touch shortly with how you can help improve {{SITENAME}}.\n\nIf you didn't initiate this request, please ignore this email and we won't send you anything else."
+}

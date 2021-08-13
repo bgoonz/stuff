@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Helix84"
+		]
+	},
+	"disableaccount-desc": "Umožňuje správcom zakázať jednotlivé účty.",
+	"right-disableaccount": "Zakázať účty",
+	"disableaccount": "Zakázať používateľský účet",
+	"disableaccount-user": "Používateľské meno:",
+	"disableaccount-confirm": "Zakázať tento používateľský účet.\nPoužívateľ sa nebude môcť prihlásiť, zmeniť svoje heslo ani dostávať upozornenia emailom.\nAk je používateľ momentálne niekde prihlásený, bude okamžite odhlásený.\n''Pamätajte, že zakázanie používateľského účtu je nezvratné bez zásahu správcu.''",
+	"disableaccount-mustconfirm": "Musíte potvrdiť, že chcete zakázať tento účet.",
+	"disableaccount-nosuchuser": "Používateľský účet „$1“ neexistuje.",
+	"disableaccount-success": "Používateľský účet „$1“ bol natrvalo zakázaný."
+}

@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"ChrisiPK",
+			"Geitost",
+			"Imre",
+			"Kghbln"
+		]
+	},
+	"deletebatch-help": "Löschen Sie eine Reihe von Seiten. Sie können einerseits eine einzelne Seite löschen, aber auch mehrere Seiten, die Sie in einer Datei auflisten.\nWählen Sie einen Benutzer, der im Löschlogbuch angezeigt werden soll.\nDie hochzuladende Datei sollte pro Zeile einen Seitennamen und optional einen durch einen senkrechten Strich („|“) getrennten Löschgrund enthalten.",
+	"deletebatch-both-modes": "Bitte wählen Sie entweder eine bestimmte Seite oder eine vorgegebene Liste von Seiten.",
+	"deletebatch-select-yourself": "Sie",
+	"deletebatch-no-page": "Bitte geben Sie entweder mindestens eine zu löschende Seite an oder wählen Sie eine Datei, die eine Liste zu löschender Seiten enthält."
+}

@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fluence"
+		]
+	},
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> īpan <b>$3</b> (pāntli <b>$4</b>)",
+	"errorhandler-trace-line": "$1 (pāntli $2): $3"
+}

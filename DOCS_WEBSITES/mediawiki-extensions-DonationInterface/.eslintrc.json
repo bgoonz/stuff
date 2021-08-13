@@ -1,0 +1,40 @@
+{
+	"root": true,
+	"extends": [
+		"wikimedia/client-es5",
+		"wikimedia/jquery",
+		"wikimedia/mediawiki"
+	],
+	"globals": {
+		"mediaWiki": false,
+		"jQuery": false
+	},
+	"rules": {
+		"camelcase": 0,
+		"comma-spacing": 0,
+		"indent": 0,
+		"max-len": 0,
+		"no-alert": 0,
+		"no-jquery/no-animate-toggle": 0,
+		"no-jquery/no-each-util": 0,
+		"no-jquery/no-event-shorthand": 0,
+		"no-jquery/no-global-selector": 0,
+		"no-jquery/no-map-util": 0,
+		"no-jquery/no-slide": 0,
+		"no-jquery/no-trim": 0,
+		"no-multi-spaces": 0,
+		"no-unused-vars": 0,
+		"no-use-before-define": 0,
+		"no-useless-escape": 0,
+		"spaced-comment": 0,
+		"valid-jsdoc": 0,
+		"wrap-iife": 0,
+		"no-jquery/no-constructor-attributes": "warn",
+		"no-jquery/no-parse-html-literal": "warn",
+		"no-jquery/no-sizzle": "warn",
+		"no-redeclare": "warn",
+		"no-shadow": "warn",
+		"prefer-regex-literals": "warn",
+		"mediawiki/msg-doc": "warn"
+	}
+}

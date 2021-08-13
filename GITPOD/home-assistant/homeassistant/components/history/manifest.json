@@ -1,8 +1,0 @@
-{
-  "domain": "history",
-  "name": "History",
-  "documentation": "https://www.home-assistant.io/components/history",
-  "requirements": [],
-  "dependencies": ["http", "recorder"],
-  "codeowners": ["@home-assistant/core"]
-}

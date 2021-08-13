@@ -1,8 +1,0 @@
-security:
-    providers:
-        in_memory:
-            memory:
-                users:
-                    operator:
-                        password: 'operator-test'
-                        roles: 'ROLE_USER'

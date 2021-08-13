@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Milicevic01",
+			"Сербијана"
+		]
+	},
+	"disableaccount-desc": "Omogućava administratorima da onemoguće pojedinačne naloge.",
+	"right-disableaccount": "onemogućavanje naloga",
+	"action-disableaccount": "onemogućavanje naloga",
+	"disableaccount": "Onemogući korisnički nalog",
+	"disableaccount-user": "Korisničko ime:",
+	"disableaccount-confirm": "Onemogući ovaj korisnički nalog.\nOvaj član neće moći da se prijavi, poništi lozinku i prima obaveštenja preko imejla.\nAko je korisnik trenutno prijavljen, odmah će biti odjavljen.\n''Onemogućavanje naloga nije moguće bez posredovanja sistemskog administratora.''",
+	"disableaccount-mustconfirm": "Morate potvrditi da želite da onemogućite ovaj nalog.",
+	"disableaccount-nosuchuser": "Korisnički nalog „$1“ ne postoji.",
+	"disableaccount-success": "Korisnički nalog „$1“ je trajno onemogućen.",
+	"logentry-block-disableaccount": "$1 je {{GENDER:$2|onemogućio|onemogućila}} nalog {{GENDER:$4|$3}}."
+}

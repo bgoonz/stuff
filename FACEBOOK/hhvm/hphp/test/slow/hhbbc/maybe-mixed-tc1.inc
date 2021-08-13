@@ -1,3 +1,0 @@
-<?hh
-
-type Disable = mixed;

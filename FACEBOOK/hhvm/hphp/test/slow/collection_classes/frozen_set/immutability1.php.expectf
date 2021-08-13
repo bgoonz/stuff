@@ -1,4 +1,0 @@
-Fatal error: Uncaught exception 'InvalidOperationException' with message 'Cannot modify immutable object of type HH\ImmSet' in %s:7
-Stack trace:
-#0 %S(%S): main()
-#1 {main}

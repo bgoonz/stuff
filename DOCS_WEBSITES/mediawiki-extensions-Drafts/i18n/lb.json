@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robby",
+			"Soued031"
+		]
+	},
+	"drafts": "Virbereedungen",
+	"drafts-desc": "Erlaabt et Versioune vun enger Säit als [[Special:Drafts|Brouillon]] op dem Server ze späicheren",
+	"drafts-view": "Brouillon weisen",
+	"drafts-view-summary": "Dës Spezialsäit weist eng Lëscht mat alle Brouillonen, déi et gëtt.\nBruillonen déi net benotzt ginn, ginn no {{PLURAL:$1|engem Dag|$1 Deeg}} automatesch geläscht.",
+	"drafts-view-article": "Säit",
+	"drafts-view-existing": "Brouillonen déi et gëtt",
+	"drafts-view-saved": "Gespäichert",
+	"drafts-view-discard": "Verwerfen",
+	"drafts-view-nonesaved": "Dir hutt elo keng Brouillone gespäichert.",
+	"drafts-view-notice": "Dir hutt $1 fir dës Säit.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|Brouillon|Brouillone}}",
+	"drafts-view-warn": "Wëllt Dir vun dëser Säit weidersurfen? Wann Dir dat maacht da verléiert Dir all netgespäichert Ännerunge vun dëser Säit.",
+	"drafts-save": "Dës als Brouillon späicheren",
+	"drafts-save-save": "Brouillon späicheren",
+	"drafts-save-saved": "Gespäichert",
+	"drafts-save-saving": "Späicheren",
+	"drafts-save-error": "Feller beim Späichere vum Brouillon",
+	"drafts-enable": "Funktioun aktivéiere fir eng Virbereedung am Ännerungsformulaire ze späicheren",
+	"prefs-extension-drafts": "Virbereedungen",
+	"tooltip-drafts-save": "Als Brouillon späicheren",
+	"apihelp-savedrafts-description": "E Brouillon späicheren.",
+	"apihelp-savedrafts-summary": "E Brouillon späicheren.",
+	"apihelp-savedrafts-param-id": "D'Nummer (ID) vum Brouillon.",
+	"apihelp-savedrafts-param-title": "Titel vum Brouillon.",
+	"apihelp-savedrafts-param-starttime": "D'Ufankszäit vum Brouillon.",
+	"apihelp-savedrafts-param-text": "Text vum Brouillon.",
+	"apihelp-savedrafts-param-summary": "Resumé vum Brouillon."
+}

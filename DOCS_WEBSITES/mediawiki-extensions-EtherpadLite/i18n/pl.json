@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"BeginaFelicysym"
+		]
+	},
+	"etherpadlite-desc": "Dodaje tag analizatora składni &lt;eplite&gt; w celu osadzenia na stronach jednej lub wielu konsol Etherpad Lite (które są hostowane na lokalnych lub zewnętrznych serwerach Etherpad Lite)",
+	"etherpadlite-tracking-category": "Strony z osadzonym Etherpadem",
+	"etherpadlite-invalid-pad-url": "\"$1\" nie jest prawidłową nazwą adresu URL Etherpad Lite ani nazwą konsoli.",
+	"etherpadlite-url-is-not-whitelisted": "\"$1\" nie występuje na białej liście dozwolonych serwerów Etherpad Lite.  {{PLURAL:$3|$2  jest jedynym dozwolonym serwerem|Dozwolone są następujące serwery: $2|Dozwolone są następujące serwery: $2}}.",
+	"etherpadlite-empty-whitelist": "\" $1 \" nie występuje na białej liście dozwolonych serwerów Etherpad Lite. Na białej liście nie ma dozwolonych serwerów.",
+	"etherpadlite-pad-used-more-than-once": "Konsola \"$1\" została już użyta powyżej na tej stronie; można mieć wiele konsol na stronie, ale tylko wtedy, jeżeli są to różne konsole."
+}

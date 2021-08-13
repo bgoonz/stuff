@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Consta",
+			"Crazymadlover",
+			"Egmontaz",
+			"Giannaras99",
+			"NikosLikomitros",
+			"Nikosgranturismogt",
+			"Omnipaedista",
+			"Protnet",
+			"Tifa93",
+			"ZaDiak"
+		]
+	},
+	"requestaccount": "Αίτηση λογαριασμού",
+	"requestaccount-login": "Αίτηση λογαριασμού",
+	"requestaccount-page": "{{ns:project}}:Όροι Χρήσης",
+	"requestaccount-leg-user": "Λογαριασμός χρήστη",
+	"requestaccount-leg-areas": "Κύρια πεδία ενδιαφέροντος",
+	"requestaccount-leg-person": "Προσωπικές πληροφορίες",
+	"requestaccount-leg-other": "Άλλες πληροφορίες",
+	"requestaccount-leg-tos": "Όροι Χρήσης",
+	"requestaccount-acc-text": "Ένα μήνυμα επιβεβαίωσης θα σταλεί στη διεύθυνσή σας ηλεκτρονικού ταχυδρομείου μόλις υποβάλετε αυτό το αίτημα. Η διεύθυνση δεν θα δημοσιευτεί.\nΠαρακαλούμε ανταποκριθείτε πατώντας τον σύνδεσμο επιβεβαίωσης που παρέχεται από το μήνυμα ηλεκτρονικού ταχυδρομείου.\nΤέλος, το συνθηματικό σας θα σας αποσταλεί με μήνυμα ηλεκτρονικού ταχυδρομείου όταν δημιουργηθεί ο λογαριασμός σας.",
+	"requestaccount-real": "Πραγματικό όνομα:",
+	"requestaccount-same": "(το ίδιο με το πραγματικό όνομα)",
+	"requestaccount-email": "Διεύθυνση ηλεκτρονικού ταχυδρομείου:",
+	"requestaccount-reqtype": "Θέση:",
+	"requestaccount-level-0": "δημιουργός",
+	"requestaccount-level-1": "συντάκτης",
+	"requestaccount-bio": "Προσωπική βιογραφία (μόνο απλό κείμενο):",
+	"requestaccount-attach": "Βιογραφικό (προαιρετικό):",
+	"requestaccount-notes": "Συμπληρωματικές σημειώσεις:",
+	"requestaccount-tooshort": "Το βιογραφικό σας θα πρέπει να είναι τουλάχιστον $1 {{PLURAL:$1|λέξη|λέξεις}}",
+	"requestaccount-submit": "Αίτηση λογαριασμού",
+	"requestaccount-email-subj-admin": "Αίτηση λογαριασμού στο {{SITENAME}}"
+}

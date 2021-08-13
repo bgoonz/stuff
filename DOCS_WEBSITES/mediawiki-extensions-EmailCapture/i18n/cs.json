@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mormegil",
+			"MrJaroslavik"
+		]
+	},
+	"emailcapture": "Ověření e-mailu",
+	"emailcapture-desc": "Uchovává e-mailové adresy a umožňuje uživatelům jejich ověření pomocí e-mailu",
+	"emailcapture-failure": "Vaše emailová adresa '''nebyla''' ověřena.",
+	"emailcapture-invalid-code": "Neplatný ověřovací kód.",
+	"emailcapture-already-confirmed": "Vaše e-mailová adresa již byla ověřena.",
+	"emailcapture-response-subject": "Potvrzení e-mailové adresy pro {{grammar:4sg|{{SITENAME}}}}",
+	"emailcapture-response-body": "Dobrý den!\n\nDěkujeme za vyjádření zájmu pomoci vylepšit {{grammar:4sg|{{SITENAME}}}}.\n\nVěnujte prosím chvilku potvrzení vaší e-mailové adresy kliknutím na následující odkaz:\n$1\n\nTaké můžete navštívit:\n$2\n\nA zadat následující potvrzovací kód:\n$3\n\nBrzy se vám ozveme s informacemi, jak můžete pomoci {{grammar:4sg|{{SITENAME}}}} vylepšit.\n\nPokud tato žádost nepochází od vás, ignorujte prosím tento e-mail, nic dalšího vám posílat nebudeme.",
+	"emailcapture-success": "Děkujeme!\n\nVaše emailová adresa byla potvrzena.",
+	"emailcapture-instructions": "Abyste ověřili svou e-mailovou adresu, zadejte kód, který vám přišel e-mailem, a klikněte na „{{int:emailcapture-submit}}“.",
+	"emailcapture-verify": "Ověřovací kód:",
+	"emailcapture-submit": "Ověřit e-mailovou adresu"
+}

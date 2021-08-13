@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Flominator"
+		]
+	},
+	"editsubpages-desc": "Gibt den Administratoren die Möglichkeit, eine Seite und deren Unterseiten für das unangemeldete Bearbeiten über [[MediaWiki:Unlockedpages]] freizuschalten",
+	"unlockedpages": " #<!-- Diese Zeile nicht verändern --><pre>\n# Freigegebene Seiten mittels\n# * Seitenname\n# auflisten\n# Zu entsperrende Seiten müssen mit einem * gelistet werden.\n# Alle anderen Einträge werden als Kommentar gewertet.\n# Diskussionsseiten werden ebenfalls entsperrt.\n# Mehr Informationen: https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages \n #</pre><!-- Diese Zeile nicht verändern -->"
+}

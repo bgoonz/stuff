@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"AnakngAraw"
+		]
+	},
+	"deletebatch": "Burahin ang bungkos ng mga pahina",
+	"deletebatch-desc": "[[Special:DeleteBatch|Burahin ang isang bungkos ng mga pahina]]",
+	"deletebatch-help": "Burahin ang isang bungkos ng mga pahina. Maaari kang magsagawa ng isang pang-isahang pagbubura, o burahin ang mga pahinang nakatala sa loob ng isang talaksan.\nPumili ng isang tagagamit na ipapakita sa mga talaan ng pagbubura.\nDapat na naglalaman ang ikinargang talaksan ng pangalan ng pahina at maaaring hindi ilagay na paliwanag na inihihiwalay ng isang panitik na \"|\" sa bawat guhit.",
+	"deletebatch-caption": "Talaan ng pahina:",
+	"deletebatch-title": "Burahin ang bungkos",
+	"deletebatch-link-back": "Bumalik sa natatanging pahina",
+	"deletebatch-as": "Patakbuhin ang panitik bilang:",
+	"deletebatch-both-modes": "Pakipili ang isang tinukoy na pahina o isang ibinigay na talaan ng mga pahina.",
+	"deletebatch-or": "<strong>o</strong>",
+	"deletebatch-delete": "Burahin",
+	"deletebatch-page": "Mga pahinang buburahin:",
+	"deletebatch-processing-from-file": "binubura ang mga pahina mula sa talaan ng talaksan",
+	"deletebatch-processing-from-form": "binubura ang mga pahina mula sa pormularyo",
+	"deletebatch-omitting-nonexistent": "Hindi isinasali ang hindi umiiral na pahinang $1.",
+	"deletebatch-omitting-invalid": "Hindi isinasali ang hindi tanggap na pahinang $1.",
+	"deletebatch-file-bad-format": "Dapat na teksto lamang ang talaksan",
+	"deletebatch-file-missing": "Hindi mabasa ang talaksang ibinigay",
+	"deletebatch-select-script": "burahin ang panitik ng pahina",
+	"deletebatch-select-yourself": "ikaw",
+	"deletebatch-no-page": "Pakitukoy ang kahit na isang pahinang buburahin O pumili ng isang talaksang naglalaman ng talaan ng pahina.",
+	"right-deletebatch": "Burahin ang bungkos ng mga pahina"
+}

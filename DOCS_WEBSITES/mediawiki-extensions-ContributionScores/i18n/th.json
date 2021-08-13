@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aefgh39622",
+			"Ans",
+			"Woraponboonkerd"
+		]
+	},
+	"contributionscores": "คะแนนการแก้ไข",
+	"contributionscores-desc": "จัดอันดับฐานข้อมูลของวิกิสำหรับ[[Special:ContributionScores|ผู้ใ้ช้ที่มีจำนวนการแก้ไขสูงสุด]]",
+	"contributionscores-info": "คะแนนคิดจากจำนวนหน้าที่เข้าร่วมแก้ไข พร้อมพิจารณาปริมาณการแก้ไขเป็นหลัก",
+	"contributionscores-top": "($1 อันดับแรก)",
+	"contributionscores-days": "$1 {{PLURAL:$1|วัน|วัน}} ที่แล้ว",
+	"contributionscores-allrevisions": "ตลอดเวลา",
+	"contributionscores-score": "คะแนน",
+	"contributionscores-rank": "การจัดอันดับ",
+	"contributionscores-pages": "จำนวนหน้า",
+	"contributionscores-changes": "การเปลี่ยนแปลง",
+	"contributionscores-username": "ชื่อผู้ใช้",
+	"contributionscores-invalidusername": "ชื่อผู้ใช้ไม่ถูกต้อง",
+	"contributionscores-invalidmetric": "เกณฑ์ชี้วัดไม่ถูกต้อง"
+}

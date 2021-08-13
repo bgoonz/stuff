@@ -1,7 +1,0 @@
-break printThis-ob.php:7
-run
-print $this
-continue
-print $this
-continue
-quit

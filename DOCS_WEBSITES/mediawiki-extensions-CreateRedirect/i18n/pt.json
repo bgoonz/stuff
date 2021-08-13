@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu",
+			"Luckas"
+		]
+	},
+	"createredirect": "Criar redirecionamento",
+	"createredirect-desc": "Acrescenta uma página especial [[Special:CreateRedirect|Criar redirecionamento]] para criar redirecionamentos de forma simples",
+	"createredirect-error": "Erro: Falha na autenticação.",
+	"createredirect-enable-multiline": "Introduzir mais títulos",
+	"createredirect-instructions": "Usando o formulário abaixo pode criar uma página de redirecionamento, ou substituir uma página existente por um redirecionamento.",
+	"createredirect-invalid-title": "Erro: \"$1\" não é um título correto.",
+	"createredirect-overwrite": "Ignorar avisos",
+	"createredirect-page-title": "Título da página:",
+	"createredirect-redirect-done": "Redirecionamento criado de \"$1\" para \"$2\"",
+	"createredirect-redirect-to": "Redirecionar para:",
+	"createredirect-save": "Gravar página",
+	"createredirect-would-overwrite": "Aviso: a página \"[[:$1]]\" já existe."
+}

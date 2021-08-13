@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Meno25",
+			"Mido",
+			"OsamaK",
+			"ترجمان05",
+			"ديفيد"
+		]
+	},
+	"contributionscores": "نتائج المساهمات",
+	"contributionscores-desc": "يسحب قاعدة بيانات الويكي لأعلى [[Special:ContributionScores|حجم لمساهمات المستخدم]]",
+	"contributionscores-info": "تحسب النتيجة بشكل أساسي عن طريق حساب عدد الصفحات التي تم تعديلها، مع الأخذ في الاعتبار كمية التعديلات الكبيرة.",
+	"contributionscores-top": "(أعلى $1)",
+	"contributionscores-days": "{{PLURAL:$1||اليوم الماضي|اليومان الماضيان|ال$1 أيام الماضية|ال$1 يومًا الماضية|ال$1 يوم الماضية}}",
+	"contributionscores-allrevisions": "كل الوقت",
+	"contributionscores-score": "النتيجة",
+	"contributionscores-rank": "الرتبة",
+	"contributionscores-pages": "الصفحات",
+	"contributionscores-changes": "تغييرات",
+	"contributionscores-username": "اسم المستخدم",
+	"contributionscores-invalidusername": "اسم المستخدم غير صحيح",
+	"contributionscores-invalidmetric": "المتري غير صحيح"
+}

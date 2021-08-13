@@ -1,4 +1,0 @@
-#!/bin/sh
-
-sbt clean coverage test coverageReport && \
-  open $PWD/core/target/scala-2.12/scoverage-report/index.html

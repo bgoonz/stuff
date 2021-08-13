@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aftabuzzaman",
+			"Bellayet",
+			"Wikitanvir",
+			"আফতাবুজ্জামান"
+		]
+	},
+	"drafts": "খসড়া",
+	"drafts-view": "খসড়া দেখো",
+	"drafts-view-summary": "এই বিশেষ পাতাটি বিদ্যমান সব খসড়ার একটি তালিকা দেখায়। অব্যবহৃত খসড়া স্বয়ংক্রিয়ভাবে {{PLURAL:$1|$1 দিন}} পর বাতিল করা হয়।",
+	"drafts-view-article": "পাতা",
+	"drafts-view-existing": "বর্তমানে রয়েছে এমন খসড়াসমূহ",
+	"drafts-view-saved": "সংরক্ষিত",
+	"drafts-view-discard": "বাতিল",
+	"drafts-view-nonesaved": "আপনার বর্তমানে সংরক্ষিত কোনো খসড়া নেই।",
+	"drafts-view-notice": "এই পাতার জন্য আপনার $1টি রয়েছে।",
+	"drafts-view-notice-link": "$1টি {{PLURAL:$1|খসড়া|খসড়া}}",
+	"drafts-view-warn": "আপনি কি এই পাতা থেকে অন্য কোথাও পরিভ্রমণ করতে এগিয়ে যেতে চান? তা করলে, এই পাতায় আপনার সব অসংরক্ষিত পরিবর্তন হারিয়ে যাবে।",
+	"drafts-save": "খসড়া হিসেবে সংরক্ষণ করো",
+	"drafts-save-save": "খসড়া সংরক্ষণ",
+	"drafts-save-saved": "সংরক্ষিত",
+	"drafts-save-saving": "সংরক্ষণ করা হচ্ছে",
+	"drafts-save-error": "খসড়া সংরক্ষণে ত্রুটি",
+	"drafts-enable": "সম্পাদনা ফর্মে খসড়া সংরক্ষণের বৈশিষ্ট্য সক্রিয় করুন",
+	"prefs-extension-drafts": "খসড়া",
+	"tooltip-drafts-save": "খসড়া হিসেবে সংরক্ষণ করো",
+	"apihelp-savedrafts-description": "খসড়া সংরক্ষণ।",
+	"apihelp-savedrafts-param-text": "খসড়ার লেখা।",
+	"apihelp-savedrafts-param-summary": "খসড়ার সারাংশ।"
+}

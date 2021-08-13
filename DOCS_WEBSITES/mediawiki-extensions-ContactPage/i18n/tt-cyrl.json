@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"DannyS712",
+			"Ерней",
+			"Ильнар"
+		]
+	},
+	"contactpage": "Элемтә бите",
+	"contactpage-desc": "[[Special:Contact|Килүчеләр өчен элемтә формасы]]",
+	"contactpage-title": "Элемтә",
+	"contactpage-pagetext": "Безнең белән элемтәгә керү өчен түбәндәге форманы кулланыгыз әле.",
+	"contactpage-legend": "Электрон хат җибәрү",
+	"contactpage-defsubject": "Хәбәр",
+	"contactpage-subject-and-sender": "$1 ($2 башлап)",
+	"contactpage-subject-and-sender-withip": "$1 (кулланучы: $2, адрес: $3)",
+	"contactpage-fromname": "Исемегез:",
+	"contactpage-fromaddress": "Сезнең электрон почта адресыгыз:",
+	"contactpage-formfootnotes": "(сезнең җавап аласыгыз килсә генә кирәк)",
+	"contactpage-includeip": "Бу хәбәргә минем IP адресымны өстәргә.",
+	"contactpage-usermailererror": "Хат җибәргән вакытта хата килеп чыкты: $1",
+	"contactpage-captcha-error": "CAPTCHA хатасы",
+	"contactpage-config-error-title": "Элемтә формасында хата",
+	"contactpage-config-error": "Бу бит өчен элемтә формасы көйләнмәгән яки көйләнмәләре дөрес түгел.",
+	"contactpage-mustbeloggedin": "Элемтә формасын җибәрү өчен керегез әле."
+}

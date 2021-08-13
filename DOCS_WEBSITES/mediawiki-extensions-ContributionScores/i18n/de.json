@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kghbln",
+			"Merlissimo",
+			"Metalhead64",
+			"Raimond Spekking"
+		]
+	},
+	"contributionscores": "Statistik zu Benutzern",
+	"contributionscores-desc": "Erweitert das Wiki um eine [[Special:ContributionScores|Spezialseite]] zum Ermitteln der Benutzer mit den meisten Beiträgen",
+	"contributionscores-info": "In die Bewertung fließen hauptsächlich einmalig bearbeitete Seiten unter Berücksichtigung einer hohen Bearbeitungszahl ein.",
+	"contributionscores-top": "(Top $1)",
+	"contributionscores-days": "{{PLURAL:$1|Letzter Tag|Letzte $1 Tage}}",
+	"contributionscores-allrevisions": "Gesamter Zeitraum",
+	"contributionscores-score": "Bewertung",
+	"contributionscores-rank": "Rang",
+	"contributionscores-pages": "Seiten",
+	"contributionscores-changes": "Änderungen",
+	"contributionscores-username": "Benutzername",
+	"contributionscores-invalidusername": "Ungültiger Benutzername",
+	"contributionscores-invalidmetric": "Ungültige Metrik"
+}

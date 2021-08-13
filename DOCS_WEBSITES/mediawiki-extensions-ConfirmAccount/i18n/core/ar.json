@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ciphers",
+			"DRIHEM",
+			"Meno25",
+			"OsamaK",
+			"ترجمان05",
+			"ديفيد"
+		]
+	},
+	"confirmaccount-newrequests": "'''$1''' تم تأكيد البريد الإلكتروني المفتوح  [[Special:ConfirmAccounts|هناك {{PLURAL:$1|حساب في الانتظار|طلبات في الانتظار}}]]. '''انتباهك مطلوب!'''",
+	"requestaccount-loginnotice": "للحصول على حساب، يجب عليك '''[[Special:RequestAccount|أن تطلب حسابًا]]'''.",
+	"action-confirmaccount": "مراجعة وقبول الحسابات",
+	"right-confirmaccount": "عرض [[Special:ConfirmAccounts|طابور الحسابات المطلوبة]]",
+	"action-requestips": "عرض عنوان أيبي الطالب أثناء العمل على الحسابات المطلوبة",
+	"right-requestips": "عرض عنوان أيبي الطالب أثناء العمل على الحسابات المطلوبة",
+	"action-lookupcredentials": "عرض اعتمادات المستخدم",
+	"right-lookupcredentials": "رؤية [[Special:UserCredentials|شهادات المستخدم]]"
+}

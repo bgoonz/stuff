@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido",
+			"Macofe"
+		]
+	},
+	"adyen_gateway-desc": "Procesamiento de pagos de Adyen",
+	"adyen_gateway-response-default": "Hubo un error al procesar tu transacción.\nInténtalo de nuevo más tarde."
+}

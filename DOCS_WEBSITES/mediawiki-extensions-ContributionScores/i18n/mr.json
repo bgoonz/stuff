@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Htt",
+			"Kaustubh",
+			"Mahitgar",
+			"V.narsikar"
+		]
+	},
+	"contributionscores": "योगदान संख्या",
+	"contributionscores-desc": "[[Special:ContributionScores|सदस्य योगदान संख्येनुसार]] विकि डाटाबेस दर्शवितो",
+	"contributionscores-info": "गुण देतांना, प्राथमिकरित्या, अनन्य पानांचे संपादनासह,उच्च संपादन-आवाका लक्षात घेतल्या जातो.",
+	"contributionscores-top": "(गुणानुक्रमे पहिले $1)",
+	"contributionscores-days": "{{PLURAL:$1|शेवटचा दिवस|शेवटचे $1 दिवस}}",
+	"contributionscores-allrevisions": "सर्ववेळची",
+	"contributionscores-score": "गुण",
+	"contributionscores-rank": "गुणानुक्रम",
+	"contributionscores-pages": "पाने",
+	"contributionscores-changes": "बदल",
+	"contributionscores-username": "सदस्यनाव",
+	"contributionscores-invalidusername": "चुकीचे सदस्यनाव",
+	"contributionscores-invalidmetric": "चुकीचे मेट्रिक"
+}

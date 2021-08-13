@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"CERminator"
+		]
+	},
+	"editsubpages-desc": "Omogućuje administratorima da otključaju stranicu i sve podstranice za anonimno uređivanje preko [[MediaWiki:Unlockedpages]]",
+	"unlockedpages": " #<!-- ne mijenjajte ovaj red --><pre>\n# Stavite stranice koje želite da otključate koristeći\n# * Imestranice\n# Otključane stranice moraju počinjati sa zvjezdicom da bi se računale,\n# sve ostalo se smatra komentarom\n# Imena stranica mogu biti [[links]] i razlikuju mala i velika slova\n# Također, stranice za razgovor će biti automatski otključane zajedno sa stranicom\n# Pogledajte https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages za više informacija\n  #</pre><!-- ne mijenjajte ovaj red -->"
+}

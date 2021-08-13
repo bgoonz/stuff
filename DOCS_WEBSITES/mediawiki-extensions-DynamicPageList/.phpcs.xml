@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<ruleset>
+	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
+		<exclude name="MediaWiki.Commenting.FunctionComment.MissingDocumentationPublic" />
+		<exclude name="MediaWiki.Commenting.FunctionComment.MissingDocumentationPrivate" />
+		<exclude name="MediaWiki.Commenting.FunctionComment.WrongStyle" />
+		<exclude name="MediaWiki.Commenting.PropertyDocumentation.MissingDocumentationPublic" />
+		<exclude name="MediaWiki.Commenting.PropertyDocumentation.MissingVar" />
+		<exclude name="MediaWiki.Commenting.PropertyDocumentation.WrongStyle" />
+		<exclude name="MediaWiki.ControlStructures.AssignmentInControlStructures.AssignmentInControlStructures" />
+		<exclude name="MediaWiki.Files.ClassMatchesFilename.NotMatch" />
+		<exclude name="MediaWiki.Usage.DbrQueryUsage.DbrQueryFound" />
+		<exclude name="MediaWiki.Usage.DeprecatedGlobalVariables.Deprecated$wgUser" />
+		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment" />
+		<exclude name="PSR2.ControlStructures.SwitchDeclaration.TerminatingComment" />
+	</rule>
+	<rule ref="MediaWiki.NamingConventions.PrefixedGlobalFunctions">
+		<properties>
+			<property name="ignoreList" type="array" value="ExtDynamicPageList__endReset,ExtDynamicPageList__endEliminate" />
+		</properties>
+	</rule>
+	<rule ref="Generic.Files.LineLength">
+		<properties>
+			<property name="lineLimit" value="204" />
+		</properties>
+	</rule>
+
+	<!-- keep support for php 5.3 -->
+	<rule ref="Generic.Arrays.DisallowShortArraySyntax" />
+	<rule ref="Generic.Arrays.DisallowLongArraySyntax">
+		<severity>0</severity>
+	</rule>
+	<rule ref="PEAR.Functions.ValidDefaultValue.NotAtEnd">
+		<severity>0</severity>
+	</rule>
+	<rule ref="PSR12.Properties.ConstantVisibility">
+		<severity>0</severity>
+	</rule>
+	<rule ref="PSR2.Classes.PropertyDeclaration">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Squiz.Scope.MemberVarScope">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Squiz.Scope.MethodScope">
+		<severity>0</severity>
+	</rule>
+
+	<file>.</file>
+	<arg name="extensions" value="php" />
+	<arg name="encoding" value="UTF-8" />
+</ruleset>

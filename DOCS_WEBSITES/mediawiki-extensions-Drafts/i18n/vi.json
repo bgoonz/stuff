@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Baonguyen21022003",
+			"Minh Nguyen",
+			"Vinhtantran"
+		]
+	},
+	"drafts": "Bản thảo",
+	"drafts-desc": "Thêm khả năng lưu các phiên bản [[Special:Drafts|bản thảo]] của trang trên máy chủ",
+	"drafts-view": "Xem bản thảo",
+	"drafts-view-summary": "Trang đặc biệt này hiển thị một danh sách tất cả các bản thảo hiện có.\nCác bản thảo không được sử dụng sẽ được tự động bỏ đi sau {{PLURAL:$1|$1 ngày|$1 ngày}}.",
+	"drafts-view-article": "Trang",
+	"drafts-view-existing": "Bản thảo hiện tại",
+	"drafts-view-saved": "Đã lưu",
+	"drafts-view-discard": "Loại bỏ",
+	"drafts-view-nonesaved": "Bạn không có bất kỳ bản thảo lưu trữ nào vào lúc này.",
+	"drafts-view-notice": "Bạn có $1 cho trang này.",
+	"drafts-view-notice-link": "$1 bản thảo",
+	"drafts-view-warn": "Bạn có muốn tiếp tục rời bỏ trang này và mất tất cả các thay đổi chưa được lưu vào trang này?",
+	"drafts-save": "Lưu bản này làm bản thảo",
+	"drafts-save-save": "Lưu bản thảo",
+	"drafts-save-saved": "Đã lưu",
+	"drafts-save-saving": "Đang lưu",
+	"drafts-save-error": "Lỗi khi lưu bản thảo",
+	"drafts-enable": "Cho phép lưu bản thảo trong biểu mẫu sửa đổi",
+	"prefs-extension-drafts": "Bản thảo",
+	"tooltip-drafts-save": "Lưu làm bản thảo"
+}

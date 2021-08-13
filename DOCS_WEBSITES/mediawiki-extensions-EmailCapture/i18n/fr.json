@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hashar",
+			"IAlex",
+			"Sherbrooke",
+			"Urhixidur",
+			"Wladek92",
+			"Wyz"
+		]
+	},
+	"emailcapture": "Vérification de courriel",
+	"emailcapture-desc": "Capture des adresses de courriel et permet aux utilisateurs de les vérifier par courriel",
+	"emailcapture-failure": "Votre adresse de courriel n'a '''pas''' été vérifiée.",
+	"emailcapture-invalid-code": "Code de confirmation incorrect.",
+	"emailcapture-already-confirmed": "Votre adresse de courriel a déjà été confirmée.",
+	"emailcapture-response-subject": "Vérification d'adresse de courriel de {{SITENAME}}",
+	"emailcapture-response-body": "Bonjour,\n\nMerci d’avoir manifesté votre intérêt à améliorer {{SITENAME}}.\n\nPrenez un instant s’il vous plaît pour confirmer votre adresse courriel en cliquant sur le lien suivant :\n$1\n\nVous pouvez aussi visiter :\n$2\n\net entrer le code de confirmation suivant :\n$3\n\nNous vous contacterons bientôt pour savoir comment vous pouvez aider à améliorer {{SITENAME}}.\n\nSi vous n’êtes pas l’initiateur de cette requête, ignorez ce courriel s’il vous plaît et nous ne vous enverrons plus rien d’autre.",
+	"emailcapture-success": "Merci !\n\nVotre adresse de courriel a été confirmée.",
+	"emailcapture-instructions": "Pour vérifier votre adresse de courriel, entrez le code qui vous a été envoyé par courriel et cliquez sur « {{int:emailcapture-submit}} ».",
+	"emailcapture-verify": "Code de vérification :",
+	"emailcapture-submit": "Vérifiez l'adresse de courriel",
+	"apihelp-emailcapture-description": "Capturer les adresses de courriel",
+	"apihelp-emailcapture-summary": "Capturer les adresses courriel",
+	"apihelp-emailcapture-param-email": "Adresse de courriel à capturer",
+	"apihelp-emailcapture-param-info": "Informations supplémentaires à écrire dans le journal, généralement des informations structurées encodées JSON"
+}

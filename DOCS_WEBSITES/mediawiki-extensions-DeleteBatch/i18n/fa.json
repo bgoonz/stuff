@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Armin1392",
+			"Mjbmr"
+		]
+	},
+	"deletebatch": "حذف گروهی از صفحات",
+	"deletebatch-desc": "[[Special:DeleteBatch|Delete a batch of pages]]",
+	"deletebatch-help": "گروهی از صفحات را حذف کنید.\nشما می توانید یا تنها یک حذف انجام دهید، یا صفحات فهرست شده در یک پوشه را حذف کنید.\nکاربری را که در سیاهه‌های حذف نمایش خواهد داده شد را انتخاب کنید.\nپوشه‌های انتقال داده شده باید شامل نام صفحه و دلیل اختیاری، توسط یک خصیصهٔ \"|\" در هر خط جدا شده باشد.",
+	"deletebatch-caption": "فهرست صفحه:",
+	"deletebatch-title": "حذف انبوه",
+	"deletebatch-link-back": "بازگشت به صفحه ویژه",
+	"deletebatch-as": "اجرای متن به عنوان:",
+	"deletebatch-both-modes": "لطفاً یا یک صفحهٔ تعیین شده یا فهرست صفحات داده شده را انتخاب کنید.",
+	"deletebatch-or": "<strong>یا</strong>",
+	"deletebatch-delete": "حذف",
+	"deletebatch-page": "صفحه‌هایی که باید حذف شوند:",
+	"deletebatch-processing-from-file": "حذف صفحات فهرست شده در پوشه",
+	"deletebatch-processing-from-form": "حذف صفحات فهرست شده در فرم",
+	"deletebatch-omitting-nonexistent": "حذف صفحهٔ غیر‌موجود $1",
+	"deletebatch-omitting-invalid": "حذف صفحهٔ نامعتبر $1",
+	"deletebatch-file-bad-format": "پوشه باید متن واضح باشد.",
+	"deletebatch-file-missing": "قادر به خواندن پوشهٔ داده شده نیست.",
+	"deletebatch-select-script": "حذف متن صفحه",
+	"deletebatch-select-yourself": "شما",
+	"deletebatch-no-page": "لطفاً حداقل یک صفحه برای حذف کردن تعیین کنید یا یک پوشه شامل فهرست صفحه انتخاب کنید.",
+	"right-deletebatch": "گروه صفحات حذفی",
+	"deletebatch-deleting-file-only": "صفحهٔ توصیف پوشهٔ $1 وجود ندارد؛ فقط حذف پوشهٔ حقیقی وجود دارد.\nاین عمل وارد نخواهد شد."
+}

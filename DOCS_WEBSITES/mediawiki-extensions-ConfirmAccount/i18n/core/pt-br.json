@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"!Silent",
+			"Eduardo Addad de Oliveira",
+			"Eduardo.mps",
+			"Eduardoaddad",
+			"Giro720",
+			"Helder.wiki",
+			"Jaideraf",
+			"Jhonnatanricardo",
+			"Luckas Blade",
+			555
+		]
+	},
+	"confirmaccount-newrequests": "Há, neste momento, '''$1''' [[Special:ConfirmAccounts|{{PLURAL:$1|solicitação|solicitações}} pendentes de contas]]. '''Sua atenção é necessária!''",
+	"requestaccount-loginnotice": "Para ter uma conta de usuário, é necessário '''[[Special:RequestAccount|solicitá-la]]'''.",
+	"action-confirmaccount": "rever e aceitar contas",
+	"right-confirmaccount": "Ver a [[Special:ConfirmAccounts|fila de contas solicitadas]]",
+	"right-confirmaccount-notify": "Receber notificações via e-mail sobre novas requisições de contas aprovadas",
+	"action-requestips": "ver os endereços IP do requerente durante a gestão de contas pedidas",
+	"right-requestips": "Ver os endereços IP do requerente durante a gestão de contas pedidas",
+	"action-lookupcredentials": "ver credenciais de usuário",
+	"right-lookupcredentials": "Ver [[Special:UserCredentials|credenciais de usuário]]"
+}

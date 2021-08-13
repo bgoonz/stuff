@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"Eburcat",
+			"Guycn2",
+			"Rotemliss",
+			"StuB",
+			"YaronSh"
+		]
+	},
+	"confirmaccount-newrequests": "יש {{PLURAL:$1|[[Special:ConfirmAccounts|בקשה פתוחה ממתינה '''אחת''' לפתוח חשבון]], עם כתובת דואר אלקטרוני מאושרת שממתינה|'''$1''' [[Special:ConfirmAccounts|בקשות פתוחות לפתוח חשבונות]], עם כתובות דואר אלקטרוני מאושרות שממתינות}} לאישור. '''תשומת לבך נדרשת!'''",
+	"requestaccount-loginnotice": "כדי לקבל חשבון משתמש, עליכם '''[[Special:RequestAccount|לבקש אחד כזה]]'''.",
+	"action-confirmaccount": "לסקור ולאשר חשבונות",
+	"right-confirmaccount": "צפייה ב[[Special:ConfirmAccounts|תור של החשבונות המבוקשים]]",
+	"action-requestips": "לצפות בכתובות ה־IP של המבקשים בזמן עיבוד בקשות לפתיחת חשבון",
+	"right-requestips": "צפייה בכתובות ה־IP של המבקשים בזמן עיבוד בקשות לפתיחת חשבון",
+	"action-lookupcredentials": "לצפות בהסמכות",
+	"right-lookupcredentials": "צפייה ב[[Special:UserCredentials|הסמכות של משתמש]]"
+}

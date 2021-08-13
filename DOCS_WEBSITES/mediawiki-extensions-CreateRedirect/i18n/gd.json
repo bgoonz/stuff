@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"GunChleoc"
+		]
+	},
+	"createredirect": "Cruthaich ath-stiùireadh",
+	"createredirect-desc": "Cuiridh seo duilleag shònraichte [[Special:CreateRedirect|Cruthaich ath-stiùireadh]] ris gus ath-stiùiridhean a chruthachadh gun duilgheadas",
+	"createredirect-error": "Mearachd: Dh'fhàillig leis an dearbhadh",
+	"createredirect-instructions": "Leis an fhoirm gu h-ìosal, 's urrainn dhut duilleag ath-stiùiridh a chruthachadh no duilleag ath-stiùiridh a chur an àite tè a tha ann.",
+	"createredirect-page-title": "Tiotal na duilleige:",
+	"createredirect-redirect-done": "Chaidh ath-stiùireadh o \"$1\" gu \"$2\" a chruthachadh",
+	"createredirect-redirect-to": "Dèan ath-stiùireadh gu:",
+	"createredirect-save": "Sàbhail an duilleag"
+}

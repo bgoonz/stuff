@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Purodha"
+		]
+	},
+	"disableaccount-desc": "Määd et för de Wiki_Köbeße müjjelesch, einzel Metmaacher stellzelääje.",
+	"right-disableaccount": "Zohjäng för Metmaacher still lääje",
+	"action-disableaccount": "Zohjäng för Metmaacher still lääje",
+	"disableaccount": "Enem Metmaacher singe Zohjang stell lääje",
+	"disableaccount-user": "Metmaacher_Naame:",
+	"disableaccount-confirm": "Däm Metmaacher singe Zohjang op Duur stell lääje.\nDä Metmaacher kann dann nit mih enlogge, sing Paßwoot ändere, udder <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„de eläktrohnesche Poß“\">e-mail</i> krijje.\nWann dä Metmaacher ööhnzwoh enjelogg es, flüsh hä tirag_eruß.\n<strong>Opjepaß:</strong> ''Ene stell jelaate Zohjang kam_mer der ohne Hölp vun enem Administrator vum ẞööver vum Wiki nit widder aan et Loufe krijje.''",
+	"disableaccount-mustconfirm": "Do moß bestäätije, dat De däm Metmaacher singe Zohjang op Duur stell lääje wells.",
+	"disableaccount-nosuchuser": "Ene Metmaacher „$1“ ham_mer nit.",
+	"disableaccount-success": "Däm Metmaacher „$1“ singe Zohjang es op Duur stell jelaat.",
+	"logentry-block-disableaccount": "{{GENDER:$2|Dä|Dat|Dä Metmaacher|De|Dat}} $1  hät {{GENDER:$4|däm|däm|däm Metmaacher|dä|däm}} $3 {{GENDER:$4|singe|singe|singe|iere|singe}} Zohjang desch jemaat."
+}

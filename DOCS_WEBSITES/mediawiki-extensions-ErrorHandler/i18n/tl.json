@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"AnakngAraw"
+		]
+	},
+	"errorhandler-desc": "Kamalian ng tagahawak para sa MediaWiki",
+	"errorhandler-errors": "Mga kamalian:",
+	"errorhandler-error-fatal": "Malubhang kamalian",
+	"errorhandler-error-warning": "Babala",
+	"errorhandler-error-parse": "Kamalian ng banghay",
+	"errorhandler-error-notice": "Pabatid",
+	"errorhandler-error-deprecated": "Tinutulan",
+	"errorhandler-error-core-error": "Kamalian ng kaibuturan",
+	"errorhandler-error-core-warning": "Babala ng kaibuturan",
+	"errorhandler-error-compile-error": "Kamalian sa pangangalap",
+	"errorhandler-error-compile-warning": "Babala sa pangangalap",
+	"errorhandler-error-user-error": "Kamalian ng tagagamit",
+	"errorhandler-error-user-warning": "Babala sa tagagamit",
+	"errorhandler-error-user-notice": "Pabatid sa tagagamit",
+	"errorhandler-error-user-deprecated": "Pagtutol sa tagagamit",
+	"errorhandler-error-strict": "Mahigpit na mga pamantayan",
+	"errorhandler-error-recoverable": "Masusukol na malubhang kamalian",
+	"errorhandler-msg-text": "$1 : $2 nasa $3 (guhit na $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> nasa <b>$3</b> (guhit na <b>$4</b>)",
+	"errorhandler-trace": "bakas:",
+	"errorhandler-trace-line": "$1 (guhit na $2): $3",
+	"errorhandler-trace-line-internal": "[panloob na tungkulin]: $1"
+}

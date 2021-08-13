@@ -1,3 +1,0 @@
-extension mbstring
-function mb_strtolower
-function mb_convert_case

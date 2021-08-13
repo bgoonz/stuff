@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"TomášPolonec"
+		]
+	},
+	"createredirect": "Vytvoriť presmerovanie",
+	"createredirect-desc": "Pridá špeciálnu stránku [[Special:CreateRedirect|CreateRedirect]] na jednoduchšie vytváranie presmerovaní",
+	"createredirect-error": "Chyba: Overenie zlyhalo.",
+	"createredirect-instructions": "Použitím formulára nižšie môžete vytvoriť presmerovanie alebo nahradiť už existujúcu stránku presmerovaním.",
+	"createredirect-page-title": "Názov stránky:",
+	"createredirect-redirect-done": "Vytvorené presmerovanie z „$1“ na „$2“",
+	"createredirect-redirect-to": "Presmerovanie na:",
+	"createredirect-save": "Uložiť stránku"
+}

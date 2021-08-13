@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"SpeedyGonsales"
+		]
+	},
+	"right-disableaccount": "Onemogući račune",
+	"disableaccount": "Onemogući suradnički račun",
+	"disableaccount-user": "Suradničko ime:",
+	"disableaccount-confirm": "Onemogućite ovaj suradnički račun. \nSuradnik neće biti u mogućnosti prijaviti se, promijeniti svoju zaporku, niti primati e-mail obavijesti. \nAko je suradnik trenutno prijavljen negdje, odmah će biti odjavljen. \n''Napominjemo da onemogućavanje računa nije reverzibilno bez intervencije administratora sustava.''",
+	"disableaccount-mustconfirm": "Morate potvrditi da želite onemogućiti ovaj račun.",
+	"disableaccount-nosuchuser": "Suradnik \"$1\" ne postoji.",
+	"disableaccount-success": "Suradnički račun \"$1\" je trajno onemogućen."
+}

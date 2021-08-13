@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bennylin"
+		]
+	},
+	"editsubpages-desc": "Mengizinkan opsis untuk mengunci sebuah halaman dan upa-upa halamannya dari suntingan anonim melalui [[MediaWiki:Unlockedpages]]",
+	"unlockedpages": "  #<!-- jangan mengubah baris ini --><pre>\n# Taruh halaman yang ingin dibuka kuncinya di bawah ini dengan menggunakan\n# * Nama halaman\n# Halaman yang dibuka kuncinya harus diawali dengan sebuah *,\n# semua yang tidak diawali dengan * akan dianggap sebagai komentar\n# Nama halaman dapat berupa [[pranala]] dan huruf besar/kecil berpengaruh\n# Halaman pembicaraannya juga akan otomatis terbuka kuncinya bersama-sama dengan halaman tersebut\n# Lebih lanjut lihat https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages\n  #</pre><!-- jangan mengubah baris ini -->"
+}

@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Anakmalaysia"
+		]
+	},
+	"emailcapture": "Pengesahan e-mel",
+	"emailcapture-desc": "Menangkap alamat e-mel dan membolehkan pengguna untuk mengesahkannya melalui e-mel",
+	"emailcapture-failure": "E-mel anda '''belum''' disahkan.",
+	"emailcapture-invalid-code": "Kod pengesahan tidak sah.",
+	"emailcapture-already-confirmed": "Alamat e-mel anda telah disahkan.",
+	"emailcapture-response-subject": "Pengesahan alamat e-mel {{SITENAME}}",
+	"emailcapture-response-body": "Selamat sejahtera!\n\nTerima kasih kerana menunjukkan minat untuk membantu mempertingkatkan {{SITENAME}}.\n\nSila luangkan sedikit masa untuk mengesahkan e-mel anda dengan mengklik pautan berikut:\n\n$1\n\nAnda juga boleh melawati:\n\n$2\n\nDan isikan kod pengesahan yang berikut:\n\n$3\n\nKami akan menghubungi anda sebentar lagi dengan cara-cara untuk anda mempertingkat mutu {{SITENAME}}.\n\nJika bukan anda yang membuat permohonan ini, sila abaikan e-mel ini dan kami tidak akan menghantar apa-apa lagi kepada anda.",
+	"emailcapture-success": "Terima kasih!\n\nE-mel anda berjaya disahkan.",
+	"emailcapture-instructions": "Untuk mengesahkan alamat e-mel anda, isikan kod yang dihantar kepada anda melalui e-mel, kemudian klik \"{{int:emailcapture-submit}}\".",
+	"emailcapture-verify": "Kod pengesahan:",
+	"emailcapture-submit": "Sahkan alamat e-mel"
+}

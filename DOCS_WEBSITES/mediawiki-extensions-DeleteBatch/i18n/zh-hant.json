@@ -1,0 +1,38 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gzdavidwong",
+			"Kly",
+			"LNDDYL",
+			"Simon Shek",
+			"Wrightbus"
+		]
+	},
+	"deletebatch": "刪除批處理的頁面",
+	"deletebatch-desc": "[[Special:DeleteBatch|刪除一批頁面]]",
+	"deletebatch-help": "刪除一批頁。\n你可以處理單一頁的刪除，或刪除檔案包含的頁面清單上的頁面。\n選擇一位使用者顯示在刪除日誌。\n上傳檔案包含要刪除的頁面的清單和其原因，並請以\"|\"做分隔。",
+	"deletebatch-caption": "頁面清單：",
+	"deletebatch-default-reason": "預設的刪除原因：",
+	"deletebatch-title": "刪除批處理",
+	"deletebatch-link-back": "返回特殊頁面",
+	"deletebatch-as": "運行腳本為：",
+	"deletebatch-both-modes": "請選擇指定的頁面或頁面清單。",
+	"deletebatch-or": "<strong>或</strong>",
+	"deletebatch-delete": "刪除",
+	"deletebatch-page": "欲刪除的頁面：",
+	"deletebatch-processing-from-file": "正在刪除檔案清單上的頁面",
+	"deletebatch-processing-from-form": "正在刪除表單上的頁面",
+	"deletebatch-omitting-nonexistent": "忽略不存在的頁面 $1 。",
+	"deletebatch-omitting-invalid": "忽略不合法頁面 $1 。",
+	"deletebatch-file-bad-format": "該檔案應該為純文字",
+	"deletebatch-file-missing": "無法讀取指定檔案。",
+	"deletebatch-select-script": "刪除頁面腳本",
+	"deletebatch-select-yourself": "閣下",
+	"deletebatch-no-page": "請指定至少一頁要刪除的頁面或選擇包含頁面清單的檔案。",
+	"deletebatch-system-username": "刪除頁面腳本",
+	"action-deletebatch": "批量刪除頁面",
+	"right-deletebatch": "批量刪除頁面",
+	"action-deletebatch-spoof": "以「刪除頁面腳本」批量刪除頁面",
+	"right-deletebatch-spoof": "以「刪除頁面腳本」批量刪除頁面",
+	"deletebatch-deleting-file-only": "不存在檔描述頁面$1；只刪去實際的檔案。\n此操作不會記錄。"
+}

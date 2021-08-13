@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kghbln",
+			"Metalhead64",
+			"Tiin"
+		]
+	},
+	"etherpadlite-desc": "Ergänzt das Tag &lt;eplite&gt; zum Einbetten eines oder mehrerer, entweder lokal oder extern auf EtherPad-Lite-Servern gehosteter, EtherPad-Lite-Editierflächen in eine Seite",
+	"etherpadlite-tracking-category": "Seiten mit einem eingebetteten EtherPad",
+	"etherpadlite-tracking-category-desc": "Die Seite bindet ein Etherpad mit dem Tag <code>&lt;eplite&gt;</code> ein.",
+	"etherpadlite-invalid-pad-url": "„$1“ ist keine gültige EtherPad-Lite-URL oder ein Editierfeldname.",
+	"etherpadlite-url-is-not-whitelisted": "„$1“ befindet sich nicht in der Liste zulässiger EtherPad-Lite-Server. {{PLURAL:$3|$2 ist der einzige mögliche Server|Die folgenden Server sind möglich: $2}}.",
+	"etherpadlite-empty-whitelist": "„$1“ befindet sich nicht in der Liste zulässiger EtherPad-Lite-Server. Es gibt keine zulässigen Server in der Liste.",
+	"etherpadlite-pad-used-more-than-once": "Das Pad „$1“ wurde früher bereits auf dieser Seite verwendet. Es können viele Pads auf einer Seite genutzt werden, jedoch nur, sofern es unterschiedliche sind."
+}

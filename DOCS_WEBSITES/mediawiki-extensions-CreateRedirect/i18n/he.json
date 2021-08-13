@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Guycn2",
+			"YaronSh"
+		]
+	},
+	"createredirect": "יצירת הפניה",
+	"createredirect-desc": "הוספת דף מיוחד [[Special:CreateRedirect|CreateRedirect]] ליצירת הפניות בפשטות",
+	"createredirect-error": "שגיאה: האימות נכשל.",
+	"createredirect-instructions": "באמצעות הטופס שלהלן, באפשרותך ליצור דף הפניה או להחליף דף קיים בהפניה.",
+	"createredirect-page-title": "שם הדף:",
+	"createredirect-redirect-done": "נוצרה הפניה מהדף \"$1\" לדף \"$2\"",
+	"createredirect-redirect-to": "הפניה אל:",
+	"createredirect-save": "שמירת הדף"
+}

@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"AnakngAraw"
+		]
+	},
+	"emailcapture": "Pagpapatunay ng e-liham",
+	"emailcapture-desc": "Hulihin ang mga tirahan ng e-liham, at payagan ang mga tagagamit na patunayan sila sa pamamagitan ng e-liham",
+	"emailcapture-failure": "'''Hindi''' pa napapatunayan ang e-liham mo.",
+	"emailcapture-invalid-code": "Hindi katanggap-tanggap na kodigo ng pagtitiyak.",
+	"emailcapture-already-confirmed": "Natiyak na ang tirahan ng e-liham mo.",
+	"emailcapture-response-subject": "Pagpapatunay ng E-liham ng {{SITENAME}}",
+	"emailcapture-response-body": "Kumusta!\n\nSalamat sa pagpapahayag mo ng kagustuhan sa pagtulong sa pagpapainam ng {{SITENAME}}.\n\nPaki magbigay ng isang sandali upang tiyakin ang e-liham mo sa pamamagitan ng pagpindot sa kawing na nasa ibaba:\n$1\n\nMaaari ka ring dumalaw sa:\n$2\n\nAt ipasok ang sumsunod na kodigo ng kumpirmasyon:\n$3\n\nMakikipag-ugnayan kami sa loob ng ilang saglit sa kung paano ka makakatulong sa pagpapainam ng {{SITENAME}}.\n\nKung hindi ikaw ang nagpasimula ng kahilingang ito, paki huwag na lamang pansinin ang e-liham na ito at hindi na kami magpapadala nang iba pa.",
+	"emailcapture-success": "Salamat!\n\nMatagumpay na natiyak ang e-liham mo.",
+	"emailcapture-instructions": "Upang mapatunayan ang tirahan mo ng e-liham, ipasok ang kodigong ipinadala sa iyo sa pamamagitan ng e-liham at pindutin ang \"{{int:emailcapture-submit}}\".",
+	"emailcapture-verify": "Kodigo ng pagpapatotoo:",
+	"emailcapture-submit": "Patunayan ang tirahan ng e-liham"
+}

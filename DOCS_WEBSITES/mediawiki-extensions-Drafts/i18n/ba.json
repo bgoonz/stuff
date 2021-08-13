@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Assele",
+			"Ләйсән",
+			"Мухамадеева"
+		]
+	},
+	"drafts": "Ҡараламалар",
+	"drafts-desc": "Серверҙа биттәрҙең [[Special:Drafts|ҡараламаһын]] һаҡлау мөмкинлеген өҫтәй",
+	"drafts-view": "ҠараламаҠарау",
+	"drafts-view-summary": "Был эш битендә  бөтә булған ҡараламалар килтерелә.\nҠулланылмаған ҡараламалар {{PLURAL:$1|$1 көндән}} үҙенән-үҙе юйыла.",
+	"drafts-view-article": "Бит",
+	"drafts-view-existing": "Булған ҡараламалар",
+	"drafts-view-saved": "Һаҡланған",
+	"drafts-view-discard": "Кире алырға",
+	"drafts-view-nonesaved": "Әлеге выҡытта һеҙҙең бер ҡараламағыҙ ҙа юҡ.",
+	"drafts-view-notice": "Һеҙҙең был бит өсөн $1 бар.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|ҡаралама}}",
+	"drafts-view-warn": "Ысынлап был биттән китергә теләйһегеҙме? улайһа һеҙ был биттәге һаҡланмаған бөтә үҙгәртеүҙәрҙе юғалтасаҡһығыҙ.",
+	"drafts-save": "Ҡаралама рәүешендә һаҡларға",
+	"drafts-save-save": "Ҡараламаны һаҡларға",
+	"drafts-save-saved": "Һаҡланған",
+	"drafts-save-saving": "Һаҡлау",
+	"drafts-save-error": "Ҡараламаны һаҡлау хатаһы",
+	"drafts-enable": "Ҡараламаны һаҡлау өсөн мөхәррирләү формаһындағы функцияны ҡабыҙырға",
+	"prefs-extension-drafts": "Ҡараламалар",
+	"tooltip-drafts-save": "Ҡаралама рәүешендә һаҡларға",
+	"apihelp-savedrafts-description": "Ҡараламаны һаҡларға",
+	"apihelp-savedrafts-param-id": "Ҡараламаның ID- һы",
+	"apihelp-savedrafts-param-title": "Ҡараламаның атамаһы",
+	"apihelp-savedrafts-param-text": "Ҡараламаның тексы",
+	"apihelp-savedrafts-param-summary": "Ҡараламаны һүрәтләү",
+	"apihelp-savedrafts-param-minoredit": "Ҡаралама бәләкәй төҙәтеү булыуын күрһәтеүсе логик мәғәнә."
+}

@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bdamokos",
+			"Dani",
+			"Dj",
+			"Glanthor Reviol",
+			"Gondnok",
+			"Misibacsi"
+		]
+	},
+	"drafts": "Piszkozatok",
+	"drafts-desc": "Lehetővé teszi lapok [[Special:Drafts|piszkozatainak]] elmentését a szerverre",
+	"drafts-view": "Piszkozatok megtekintése",
+	"drafts-view-summary": "Ez a speciális lap listázza az összes piszkozatot.\nA fel nem használt piszkozatok {{PLURAL:$1|egy nap|$1 nap}} után automatikusan törlődnek.",
+	"drafts-view-article": "Lap",
+	"drafts-view-existing": "Elmentett piszkozatok",
+	"drafts-view-saved": "Elmentve",
+	"drafts-view-discard": "Elvetés",
+	"drafts-view-nonesaved": "Jelenleg nincs egyetlen elmentett piszkozatod sem.",
+	"drafts-view-notice": "Jelenleg $1 van ehhez a laphoz.",
+	"drafts-view-notice-link": "{{PLURAL:$1|egy|$1}} piszkozatod",
+	"drafts-view-warn": "Ha elmész az oldalról, az összes nem mentett változtatás elvész.",
+	"drafts-save": "Mentés piszkozatként",
+	"drafts-save-save": "Mentés piszkozatként",
+	"drafts-save-saved": "Elmentve",
+	"drafts-save-saving": "Mentés…",
+	"drafts-save-error": "Hiba történt a piszkozat elmentése közben",
+	"drafts-enable": "Lehetőséget biztosít piszkozatok mentésére szerkesztő űrlapon",
+	"prefs-extension-drafts": "Piszkozatok",
+	"tooltip-drafts-save": "Mentés piszkozatként"
+}

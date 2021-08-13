@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"AS",
+			"Ahonc",
+			"Andriykopanytsia",
+			"Prima klasy4na",
+			"Ата",
+			"Тест"
+		]
+	},
+	"contributionscores": "Оцінка внеску",
+	"contributionscores-desc": "Визначає з бази даних [[Special:ContributionScores|користувачів з найбільшою кількістю редагувань]]",
+	"contributionscores-info": "При підрахунку оцінки велика вага надається розмаїттю редагувань, враховується і загальна кількість.",
+	"contributionscores-top": "($1 {{PLURAL:$1|1=найкращий|найкращих}})",
+	"contributionscores-days": "{{PLURAL:$1|Останній день|Останні $1 дні|Останні $1 днів}}",
+	"contributionscores-allrevisions": "Весь час",
+	"contributionscores-score": "Оцінка",
+	"contributionscores-rank": "Ранг",
+	"contributionscores-pages": "Сторінок",
+	"contributionscores-changes": "Редагувань",
+	"contributionscores-username": "Ім'я користувача",
+	"contributionscores-invalidusername": "Неправильне ім'я користувача",
+	"contributionscores-invalidmetric": "Неправильна метрика"
+}

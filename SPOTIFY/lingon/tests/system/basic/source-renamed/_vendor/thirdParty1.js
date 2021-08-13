@@ -1,1 +1,0 @@
-var thirdPartyString = "Party time!";

@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wikitanvir"
+		]
+	},
+	"errorhandler-errors": "ত্রুটিসমূহ:",
+	"errorhandler-error-fatal": "ফ্যাটাল ত্রুটি",
+	"errorhandler-error-warning": "সতর্কীকরণ:",
+	"errorhandler-error-parse": "পার্সার ত্রুটি",
+	"errorhandler-error-notice": "নোটিশ",
+	"errorhandler-error-deprecated": "বাতিল হয়েছে",
+	"errorhandler-error-core-error": "কোড ত্রুটি",
+	"errorhandler-error-core-warning": "কোড সতর্কীকরণ",
+	"errorhandler-error-compile-error": "কম্পাইল ত্রুটি",
+	"errorhandler-error-compile-warning": "কম্পাইল সতর্কীকরণ",
+	"errorhandler-error-user-error": "ব্যবহারকারী ত্রুটি",
+	"errorhandler-error-user-warning": "ব্যবহারকারী সতর্কীকরণ",
+	"errorhandler-error-user-notice": "ব্যবহারকারী নোটিশ",
+	"errorhandler-error-user-deprecated": "ব্যবহারকারী বাতিল হয়েছে",
+	"errorhandler-error-strict": "কঠোর মান"
+}

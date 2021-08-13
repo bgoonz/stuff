@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Glanthor Reviol"
+		]
+	},
+	"errorhandler-desc": "Hibakezelő a MediaWikihez",
+	"errorhandler-errors": "Hibák:",
+	"errorhandler-error-fatal": "Végzetes hiba",
+	"errorhandler-error-warning": "Figyelmeztetés",
+	"errorhandler-error-parse": "Elemző hiba",
+	"errorhandler-error-notice": "Megjegyzés",
+	"errorhandler-error-deprecated": "Elavult",
+	"errorhandler-error-core-error": "Központi hiba",
+	"errorhandler-error-core-warning": "Központi figyelmeztetés",
+	"errorhandler-error-compile-error": "Fordítási hiba",
+	"errorhandler-error-compile-warning": "Fordítási figyelmeztetés",
+	"errorhandler-error-user-error": "Felhasználói hiba",
+	"errorhandler-error-user-warning": "Felhasználói figyelmeztetés",
+	"errorhandler-error-user-notice": "Felhasználói megjegyzés",
+	"errorhandler-error-user-deprecated": "Felhasználó által elavulttá tett",
+	"errorhandler-error-strict": "Szigorú szabványok",
+	"errorhandler-error-recoverable": "Elkapható végzetes hiba",
+	"errorhandler-msg-text": "$1: $2 a(z) $3 fájl $4. sorában",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> a(z) <b>$3</b> fájl <b>$4</b>. sorában",
+	"errorhandler-trace": "nyomkövetés:",
+	"errorhandler-trace-line": "$1 ($2. sor): $3",
+	"errorhandler-trace-line-internal": "[belső függvény]: $1"
+}

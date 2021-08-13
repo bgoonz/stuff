@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"errorhandler-desc": "Gestore de l'errore pe MediaUicchi",
+	"errorhandler-errors": "Errore:",
+	"errorhandler-error-fatal": "Errore putende",
+	"errorhandler-error-warning": "Avvertimende",
+	"errorhandler-error-parse": "Analizzatore de l'errore",
+	"errorhandler-error-notice": "Notizie",
+	"errorhandler-error-deprecated": "Deprecate",
+	"errorhandler-error-core-error": "Core de l'errore",
+	"errorhandler-error-core-warning": "Core de l'avvertimende",
+	"errorhandler-error-compile-error": "Errore de combilazione",
+	"errorhandler-error-compile-warning": "Avvertimende de combilazione",
+	"errorhandler-error-user-error": "Errore de l'utende",
+	"errorhandler-error-user-warning": "Avvertimende de l'utende",
+	"errorhandler-error-user-notice": "Notizie de l'utende",
+	"errorhandler-error-user-deprecated": "Utende deprecate",
+	"errorhandler-error-strict": "Restriziune standàrd",
+	"errorhandler-error-recoverable": "Errore fatale catturabbile",
+	"errorhandler-msg-text": "$1 : $2 jndr'à $3 (linèe $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> jndr'à <b>$3</b> (linèe <b>$4</b>)",
+	"errorhandler-trace": "tracce:",
+	"errorhandler-trace-line": "$1 (linèe $2): $3",
+	"errorhandler-trace-line-internal": "[funzione inderne]: $1"
+}

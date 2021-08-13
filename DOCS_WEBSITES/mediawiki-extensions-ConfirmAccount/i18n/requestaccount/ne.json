@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"पर्वत सुबेदी"
+		]
+	},
+	"requestaccount": "खाता अनुरोध गर्नुहोस्",
+	"requestaccount-login": "खाता अनुरोध गर्नुहोस्",
+	"requestaccount-page": "{{ns:project}}: सेवाका शर्तहरू",
+	"requestaccount-leg-user": "प्रयाेगकर्ता खाता",
+	"requestaccount-leg-areas": "रूचिका मुख्य क्षेत्रहरू",
+	"requestaccount-leg-person": "व्यक्तिगत जानकारी",
+	"requestaccount-leg-other": "अन्य जानकारी",
+	"requestaccount-leg-tos": "सेवाका सर्तहरू",
+	"requestaccount-real": "वास्तविक नाम:",
+	"requestaccount-email": "डाँक ठेगाना:",
+	"requestaccount-reqtype": "स्थान:",
+	"requestaccount-level-0": "लेखक",
+	"requestaccount-level-1": "सम्पादक",
+	"requestaccount-info": "(?)",
+	"requestaccount-notes": "बैकल्पिक टिप्पणीहरू",
+	"requestaccount-submit": "खाता अनुरोध गर्नुहोस्",
+	"requestaccount-email-subj": "{{SITENAME}} डाँक ठेगानाको पुष्टि",
+	"requestaccount-email-subj-admin": "{{SITENAME}} खाता अनुराेध गर्नुहाेस्"
+}

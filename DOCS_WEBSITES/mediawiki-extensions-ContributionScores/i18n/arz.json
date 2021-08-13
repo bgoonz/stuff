@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Meno25"
+		]
+	},
+	"contributionscores": "نتائج المساهمات",
+	"contributionscores-desc": "يسحب قاعدة بيانات الويكى لأعلى [[Special:ContributionScores|حجم لمساهمات المستخدم]]",
+	"contributionscores-info": "النتائج تحسب كالتالي:\n*1 نقطة لكل صفحة فريدة تحرر\n*الجذر التربيعى ل(عدد التعديلات الكلية) - (عدد الصفحات الفريدة الكلية) * 2\nالنتائج المحسوبة بهذه الطريقة توزن انتثار التعديلات على حجم التعديلات.  أساسا، هذه النتيجة تقيس بشكل أساسى الصفحات الفريدة المحررة، مع الأخذ فى الاعتبار أحجام التعديل الكبيرة - تفترض أنها تكون صفحة بجودة أعلى.",
+	"contributionscores-top": "(أعلى $1)",
+	"contributionscores-days": "{{PLURAL:$1||اليوم الماضي|اليومان الماضيان|ال$1 أيام الماضية|ال$1 يومًا الماضية|ال$1 يوم الماضية}}",
+	"contributionscores-allrevisions": "كل المراجعات",
+	"contributionscores-score": "النتيجة",
+	"contributionscores-pages": "الصفحات",
+	"contributionscores-changes": "التغييرات",
+	"contributionscores-username": "اسم المستخدم",
+	"contributionscores-invalidusername": "اسم المستخدم غير صحيح",
+	"contributionscores-invalidmetric": "المترى غير صحيح"
+}

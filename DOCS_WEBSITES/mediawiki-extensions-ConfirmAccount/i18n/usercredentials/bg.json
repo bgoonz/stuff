@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"DCLXVI",
+			"Spiritia",
+			"StanProg"
+		]
+	},
+	"usercredentials": "Потребителски идентификационни данни",
+	"usercredentials-leg": "Преглед на потвърдените идентификационни данни за потребител",
+	"usercredentials-user": "Потребителско име:",
+	"usercredentials-text": "По-долу са показани потвърдените идентификационни данни за избраната потребителска сметка.",
+	"usercredentials-leg-user": "Потребителска сметка",
+	"usercredentials-leg-areas": "Основни интереси",
+	"usercredentials-leg-person": "Лична информация",
+	"usercredentials-leg-other": "Друга информация",
+	"usercredentials-email": "Електронна поща:",
+	"usercredentials-real": "Име и фамилия:",
+	"usercredentials-bio": "Биография:",
+	"usercredentials-attach": "Резюме/Автобиография:",
+	"usercredentials-notes": "Допълнителни бележки:",
+	"usercredentials-urls": "Списък от уебсайтове:",
+	"usercredentials-ip": "Оригинален IP адрес:",
+	"usercredentials-member": "Права:",
+	"usercredentials-badid": "Не са открити идентификационни данни за този потребител. Проверете дали името е изписано правилно."
+}

@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"contributionscores": "Ocjene za doprinose",
+	"contributionscores-desc": "Preuzima podatke s wikibaze podataka za [[Special:ContributionScores|korisnike s najviše doprinosa]]",
+	"contributionscores-info": "Saldo je mjera koja izražava uređivanja pojedinačnih stranica, uzimajući u obzir velike količine uređivanja.",
+	"contributionscores-top": "(Najboljih $1)",
+	"contributionscores-days": "{{PLURAL:$1|Posljednji $1 dan|Posljednja $1 dana|Posljednjih $1 dana}}",
+	"contributionscores-allrevisions": "Svih vremena",
+	"contributionscores-score": "Ocjena",
+	"contributionscores-rank": "Rang",
+	"contributionscores-pages": "Stranice",
+	"contributionscores-changes": "Izmjene",
+	"contributionscores-username": "Korisničko ime",
+	"contributionscores-invalidusername": "Nevaljano korisničko ime",
+	"contributionscores-invalidmetric": "Nevaljana metrika"
+}

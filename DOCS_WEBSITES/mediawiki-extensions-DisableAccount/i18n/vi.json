@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Minh Nguyen",
+			"Withoutaname"
+		]
+	},
+	"disableaccount-desc": "Cho phép bảo quản viên vô hiệu hóa tài khoản.",
+	"right-disableaccount": "Vô hiệu hóa tài khoản",
+	"action-disableaccount": "vô hiệu hóa tài khoản",
+	"disableaccount": "Vô hiệu hóa tài khoản người dùng",
+	"disableaccount-user": "Tên người dùng:",
+	"disableaccount-confirm": "Vô hiệu hóa tài khoản của người dùng này.\nNgười dùng sẽ không thể đăng nhập, mặc định lại mật khẩu, hoặc nhận thông báo qua thư điện tử.\nNếu người dùng đã dăng nhập vào bất cứ wiki nào trong hệ thống, nó sẽ bị đăng xuất ngay.\n''Lưu ý rằng chỉ có người quản trị hệ thống can thiệp có thể lùi lại việc vô hiệu hóa tài khoản.''",
+	"disableaccount-mustconfirm": "Bạn phải xác nhận rằng bạn muốn vô hiệu hóa tài khoản này.",
+	"disableaccount-nosuchuser": "Tài khoản người dùng “$1” không tồn tại.",
+	"disableaccount-success": "Tài khoản người dùng “$1” đã bị vô hiệu hóa vĩnh viễn.",
+	"logentry-block-disableaccount": "$1 {{GENDER:$2}}đã tắt tài khoản {{GENDER:$4}}$3."
+}

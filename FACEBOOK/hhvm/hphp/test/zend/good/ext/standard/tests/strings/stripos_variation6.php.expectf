@@ -1,7 +1,0 @@
-*** Testing stripos() function: with heredoc strings ***
--- With heredoc string containing quote & slash chars --
-int(88)
-int(34)
-int(34)
-int(34)
-*** Done ***

@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bencemac",
+			"Dani",
+			"Dj",
+			"Tacsipacsi"
+		]
+	},
+	"emailcapture": "E-mail ellenőrzése",
+	"emailcapture-desc": "Rögzíti az email címeket és lehetőséget biztosít az ellenőrzésükre",
+	"emailcapture-failure": "Az e-mail címed ellenőrzése '''nem''' sikerült.",
+	"emailcapture-invalid-code": "Érvénytelen ellenőrzőkód.",
+	"emailcapture-already-confirmed": "Az e-mail címed már ellenőrzésre került.",
+	"emailcapture-response-subject": "[{{SITENAME}}] E-mail-cím megerősítése",
+	"emailcapture-success": "Köszönjük!\n\nAz e-mail címed sikeresen ellenőrzésre került.",
+	"emailcapture-instructions": "E-mail címed ellenőrzéséhez add meg az e-mailben kapott kódot és kattint az „{{int:emailcapture-submit}}” gombra.",
+	"emailcapture-verify": "Ellenőrző kód:",
+	"emailcapture-submit": "E-mail-cím megerősítése"
+}

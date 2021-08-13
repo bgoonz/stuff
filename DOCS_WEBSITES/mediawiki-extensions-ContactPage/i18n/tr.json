@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"BaRaN6161 TURK",
+			"Emperyan",
+			"Homonihilis",
+			"Joseph",
+			"Karduelis",
+			"Mach",
+			"Manco Capac",
+			"MuratTheTurkish",
+			"Sayginer",
+			"Vito Genovese"
+		]
+	},
+	"contactpage": "İletişim sayfası",
+	"contactpage-desc": "[[Special:Contact|Ziyaretçiler için iletişim formu]]",
+	"contactpage-title": "İletişim",
+	"contactpage-pagetext": "Bizimle iletişime geçmek için lütfen aşağıdaki formu kullanın.",
+	"contactpage-legend": "E-posta gönder",
+	"contactpage-defsubject": "İletişim mesajı",
+	"contactpage-subject-and-sender": "$1 ($2 adlı kullanıcıdan)",
+	"contactpage-subject-and-sender-withip": "$1 ($3 IP adresindeki $2 kullanıcısı)",
+	"contactpage-fromname": "Adınız:",
+	"contactpage-fromaddress": "E-posta adresiniz:",
+	"contactpage-formfootnotes": "(bir cevap istiyorsanız gereklidir)",
+	"contactpage-includeip": "IP adresimi bu mesaja ekleyin.",
+	"contactpage-usermailererror": "Posta nesnesi hata döndürdü: $1",
+	"contactpage-captcha-error": "CAPTCHA hatası",
+	"contactpage-config-error-title": "İletişim formu hatası",
+	"contactpage-config-error": "Bir iletişim formu bu sayfa için yapılandırılmamış veya yanlış yapılandırılmış.",
+	"contactpage-mustbeloggedin": "Bir iletişim formu göndermek için lütfen oturum açın."
+}

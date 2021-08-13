@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"createredirect": "ccreje 'nu redirezionamende",
+	"createredirect-desc": "Aggiunge 'na pàgena speciale [[Special:CreateRedirect|Ccreje redirezionamende]] pe ccrejà facile facile le redirezionaminde",
+	"createredirect-error": "Errore: Autendicazione fallite.",
+	"createredirect-enable-multiline": "Mitte cchiù titole",
+	"createredirect-instructions": "Ausanne 'u module aqquà sotte, tu puè ccrejà 'na pàggene de redirezionamende o sostituì 'na pàgene esistende cu 'nu redirezionamende.",
+	"createredirect-invalid-title": "Errore: \"$1\" non jè 'nu titole valide.",
+	"createredirect-overwrite": "No scè penzanne a tutte l'avvise",
+	"createredirect-page-title": "Titole d'a pàgene:",
+	"createredirect-redirect-done": "Redirezionamende ccrejate da \"$1\" a \"$2\"",
+	"createredirect-redirect-to": "Redirezione sus a:",
+	"createredirect-save": "Reggistre 'a vôsce",
+	"createredirect-would-overwrite": "Attenziò: 'a pàgene \"[[:$1]]\" esiste ggià."
+}

@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"DannyS712",
+			"OC Ripper",
+			"Vlad5250"
+		]
+	},
+	"contactpage": "Stranica za kontakt",
+	"contactpage-desc": "[[Special:Contact|Kontaktni obrazac za posjetioce]]",
+	"contactpage-title": "Kontakt",
+	"contactpage-pagetext": "Molimo, poslužite se uz obrazac ispod da nas kontaktirate.",
+	"contactpage-legend": "Pošalji e-mail",
+	"contactpage-defsubject": "Poruka za kontakt",
+	"contactpage-subject-and-sender": "$1 (od $2)",
+	"contactpage-subject-and-sender-withip": "$1 (od $2 sa $3)",
+	"contactpage-fromname": "Vaše ime:",
+	"contactpage-fromaddress": "Vaš e-mail:",
+	"contactpage-formfootnotes": "(opcionalno, ali je potrebno ako želite dobiti odgovor)",
+	"contactpage-includeip": "Uključi moju IP adresu u ovu poruku.",
+	"contactpage-usermailererror": "Objekat pošte je vratio grešku: $1",
+	"contactpage-captcha-error": "Greška u sličici za provjeru",
+	"contactpage-config-error-title": "Greška u kontaktnom obrascu",
+	"contactpage-config-error": "Obrazac kontakta za ovu stranicu nije podešen ili je podešen neispravno.",
+	"contactpage-mustbeloggedin": "Prijavite se da biste poslali obrazac kontakta."
+}

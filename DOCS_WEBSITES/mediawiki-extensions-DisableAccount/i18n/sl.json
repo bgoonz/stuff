@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dbc334",
+			"Eleassar",
+			"Yerpo"
+		]
+	},
+	"disableaccount-desc": "Omogoča administratorjem onemogočiti posamezne račune.",
+	"right-disableaccount": "Onemogočanje računov",
+	"action-disableaccount": "onemogočitev računov",
+	"disableaccount": "Onemogoči uporabniški račun",
+	"disableaccount-user": "Uporabniško ime:",
+	"disableaccount-confirm": "Onemogočite ta uporabniški račun.\nUporabnik se ne bo mogel prijaviti, ponastaviti svojega gesla ali prejemati e-poštnih obvestil.\nČe je uporabnik trenutno kjerkoli prijavljen, bo nemudoma odjavljen.\n''Vedite, da onemogočenja računa brez posredovanja sistemskega upravljavca ni mogoče razveljaviti.''",
+	"disableaccount-mustconfirm": "Potrditi morate, da želite onemogočiti ta račun.",
+	"disableaccount-nosuchuser": "Uporabniški račun »$1« ne obstaja.",
+	"disableaccount-success": "Uporabniški račun »$1« je trajno onemogočen.",
+	"logentry-block-disableaccount": "$1 je {{GENDER:$2|onemogočil|onemogočila|onemogočil(-a)}} račun {{GENDER:$4|$3}}."
+}

@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"deletebatch": "Збирно бришење страници",
+	"deletebatch-desc": "[[Special:DeleteBatch|Бришење на збир страници]]",
+	"deletebatch-help": "Збирно бришење страници.\nМожете да направите едно бришење, или пак за бришење на страници наведени во податотека.\nОдберете го корисникот кој ќе се прикаже во дневникот на бришења.\nПодигнатите податотеки треба да содржат име на страницата и незадолжителна причина, одвоени со знакот „|“ во секој ред.",
+	"deletebatch-caption": "Список на страници:",
+	"deletebatch-default-reason": "Стандардна причина за бришење:",
+	"deletebatch-extensionname": "Збирно бришење",
+	"deletebatch-title": "Избриши збир",
+	"deletebatch-link-back": "Назад кон службената страница",
+	"deletebatch-as": "Пушти ја скриптата како:",
+	"deletebatch-both-modes": "Изберете една назначена страница, или даден список на страници.",
+	"deletebatch-or": "<strong>или</strong>",
+	"deletebatch-delete": "Избриши",
+	"deletebatch-page": "Страници за бришење:",
+	"deletebatch-processing-from-file": "бришење страници наведени во податотеката",
+	"deletebatch-processing-from-form": "бришење страници наведени во образецот",
+	"deletebatch-omitting-nonexistent": "За испуштање на непостоечката страница $1.",
+	"deletebatch-omitting-invalid": "За испуштање на неважечката страница $1.",
+	"deletebatch-file-bad-format": "Податотеката мора да содржи само прост текст",
+	"deletebatch-file-missing": "Не можам да ја прочитам дадената податотека",
+	"deletebatch-select-script": "Скрипта за бришење на страници",
+	"deletebatch-select-yourself": "Вие",
+	"deletebatch-no-page": "Назначете барем една страница за бришење или изберете податотека која содржи список на страници.",
+	"deletebatch-system-username": "Скрипта за бришење на страници",
+	"action-deletebatch": "збирно бришење страници",
+	"right-deletebatch": "Збирно бришење страници",
+	"action-deletebatch-spoof": "збирно бришење на страници како „Скрипта за бришење страници“",
+	"right-deletebatch-spoof": "Збирно бришење на страници како „Скрипта за бришење страници“",
+	"deletebatch-deleting-file-only": "Описната страница $1 не постои; ја бришам само самата податотека.\nОва дејство нема да се заведе во дневникот."
+}

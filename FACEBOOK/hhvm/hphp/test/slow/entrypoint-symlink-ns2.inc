@@ -1,1 +1,0 @@
-entrypoint-symlink-ns.php

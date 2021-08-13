@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"NickK",
+			"Prima klasy4na",
+			"Тест"
+		]
+	},
+	"errorhandler-desc": "Оброблювач помилок для MediaWiki",
+	"errorhandler-errors": "Помилки:",
+	"errorhandler-error-fatal": "Фатальна помилка",
+	"errorhandler-error-warning": "Попередження",
+	"errorhandler-error-parse": "Помилка парсеру",
+	"errorhandler-error-notice": "Повідомлення",
+	"errorhandler-error-deprecated": "Заборонені",
+	"errorhandler-error-core-error": "Помилка ядра",
+	"errorhandler-error-core-warning": "Попередження ядра",
+	"errorhandler-error-compile-error": "Помилка компіляції",
+	"errorhandler-error-compile-warning": "Попередження компіляції",
+	"errorhandler-error-user-error": "Помилка користувача",
+	"errorhandler-error-user-warning": "Попередження користувача",
+	"errorhandler-error-user-notice": "Повідомлення користувача",
+	"errorhandler-error-user-deprecated": "Користувач заборонений",
+	"errorhandler-error-strict": "Жорсткі стандарти",
+	"errorhandler-error-recoverable": "Виявлено фатальну помилку",
+	"errorhandler-msg-text": "$1 : $2 в $3 (рядок $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> у <b>$3</b> (рядок <b>$4</b>)",
+	"errorhandler-trace": "відбиток:",
+	"errorhandler-trace-line": "$1 (рядок $2): $3",
+	"errorhandler-trace-line-internal": "[внутрішня функція]: $1"
+}

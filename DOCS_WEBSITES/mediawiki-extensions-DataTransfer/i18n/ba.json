@@ -1,0 +1,42 @@
+{
+	"@metadata": {
+		"authors": [
+			"Айбикә",
+			"Аҡҡашҡа",
+			"Ләйсән",
+			"Мухамадеева"
+		]
+	},
+	"datatransfer-desc": "Ҡалыпты һорап алыу эстәлегендәге мәғлүмәтте импортлау һәм экспортлау",
+	"viewxml": "XMLды ҡарап сығыу",
+	"dt_viewxml_docu": "XML форматында исем категорияларын һәм арауығын ҡарап сығыуҙы һайлағыҙ.",
+	"dt_viewxml_categories": "Категориялар",
+	"dt_viewxml_namespaces": "Исем арауыҡтары",
+	"dt_viewxml_simplifiedformat": "Ябайлаштырылған формат",
+	"dt_xml_namespace": "Исемдәр арауығы",
+	"dt_xml_pages": "Биттәр",
+	"dt_xml_page": "Бит",
+	"dt_xml_template": "Ҡалып",
+	"dt_xml_field": "майҙан.",
+	"dt_xml_name": "Исем.",
+	"dt_xml_title": "Атама",
+	"dt_xml_id": "ID",
+	"dt_xml_freetext": "Ирекле текст",
+	"importxml": "XML импорты",
+	"dt_import_selectfile": " импорт өсөн $1 файлын һайлағыҙ",
+	"dt_import_encodingtype": "кодлау төрө",
+	"dt_import_forexisting": "Булған биттәр өсөн",
+	"dt_import_overwriteexisting": "Булған мәғлүмәттәрҙе яңынан күсереп яҙыу",
+	"dt_import_mergeintoexisting": "Файлда булған майҙандарҙы ғына яңынан яҙыу",
+	"dt_import_skipexisting": "Ҡалдырып торорға",
+	"dt_import_appendtoexisting": "Булған мәғлүмәттәргә өҫтәргә",
+	"dt_import_summarydesc": "Импортты һүрәтләү",
+	"dt_import_editsummary": " {{ucfirst:$1}}-тан импорт",
+	"dt_import_importing": "Индереү",
+	"dt_import_success": "$1 {{PLURAL:$1|бите булған|биттәр булған|бит булған}}  $2 файлынан булдырылған.",
+	"importcsv": "CSV импорты",
+	"importspreadsheet": "Таблицаның импорты",
+	"dt_importcsv_badheader": "Хата.  №$1 «$2» колонкаларының атмаһы «$3», йәки «$4», йәки   «template_name[field_name]» формаһында булырға тейеш.",
+	"right-datatransferimport": "Мәғлүмәттәр импорты",
+	"dt_filetype_spreadsheet": "таблица"
+}

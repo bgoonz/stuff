@@ -1,5 +1,0 @@
-Check existing constant: bool(true)
-Check existing constant, different case: bool(false)
-Check absent constant: bool(false)
-Check inherited constant: bool(true)
-Check absent constant: bool(false)

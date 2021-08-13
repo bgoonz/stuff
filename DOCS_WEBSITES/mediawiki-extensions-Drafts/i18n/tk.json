@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hanberke"
+		]
+	},
+	"drafts": "Garalamalar",
+	"drafts-desc": "Sahypanyň [[Special:Drafts|garalama]] wersiýasyny serwere ýazdyrmak mümkinçiligini goşýar",
+	"drafts-view": "GaralamaGörkez",
+	"drafts-view-summary": "Bu ýörite sahypa bar bolan ähli garalamalaryň sanawyny görkezýär.\nUlanylmaýan garalamalar $1 {{PLURAL:$1|gün|gün}} geçensoň awtomatik öçüriler.",
+	"drafts-view-article": "Sahypa",
+	"drafts-view-existing": "Bar bolan garalamalar",
+	"drafts-view-saved": "Ýazdyryldy",
+	"drafts-view-discard": "Öçür",
+	"drafts-view-nonesaved": "Häzirki wagtda ýazdyrylan hiç hili garalamaňyz ýok.",
+	"drafts-view-notice": "Bu sahypa üçin $1 bar.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|garalamaňyz|garalamaňyz}}",
+	"drafts-view-warn": "Bu sahypadan gitseňiz, sahypadaky ähli ýazdyrylmadyk üýtgeşmeleri ýitirersiňiz.\nDowam etmek isleýärsiňizmi?",
+	"drafts-save": "Muny garalama hökmünde ýazdyr",
+	"drafts-save-save": "Garalamany ýazdyr",
+	"drafts-save-saved": "Ýazdyryldy",
+	"drafts-save-saving": "Ýazdyrylýar",
+	"drafts-save-error": "Garalama ýazdyrma säwligi",
+	"tooltip-drafts-save": "Garalama hökmünde ýazdyr"
+}

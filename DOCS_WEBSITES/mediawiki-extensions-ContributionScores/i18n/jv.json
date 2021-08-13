@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Diki Ananta",
+			"Meursault2004",
+			"NoiX180",
+			"Pras",
+			"Sumbukompor"
+		]
+	},
+	"contributionscores": "Bijining pasumbang",
+	"contributionscores-desc": "Nglakokaké polling (angkèt) ing basis data kanggo [[Special:ContributionScores|volume kontribusi naraguna]]",
+	"contributionscores-info": "Skoré diétung kaya mangkéné:\n* Biji siji (1) per kaca unik sing disunting\n* Oyot (bs. Indonesia ''akar'') saka (Gunggungé Suntingan) - (Gunggungé Kaca-KAca Unik) * 2\nSkor sing diétung miturut cara iki bisa nyerminaké divèrsitas suntingan sadhuwuring volume suntingan.\nSacara dhasar, skor iki utamané ngétung kaca-kaca unik sing disunting, karo mélu nimbangaké volume suntingan dhuwur - diasumsèkaké kwalitas kacané luwih dhuwur.",
+	"contributionscores-top": "(Top $1)",
+	"contributionscores-days": "{{PLURAL:$1|dina|$1 dina}} pungkasan",
+	"contributionscores-allrevisions": "Sasuwéné wektu",
+	"contributionscores-score": "Skor",
+	"contributionscores-rank": "Rangking",
+	"contributionscores-pages": "Kaca",
+	"contributionscores-changes": "Owah-owahan",
+	"contributionscores-username": "Jeneng naraguna",
+	"contributionscores-invalidusername": "Jeneng naraguna ora sah",
+	"contributionscores-invalidmetric": "Metrik ora sah"
+}

@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"StanProg",
+			"Vlad5250"
+		]
+	},
+	"createredirect": "Създаване на пренасочване",
+	"createredirect-desc": "Добавя специална страница [[Special:CreateRedirect|CreateRedirect]] за лесно създаване на пренасочвания",
+	"createredirect-error": "Грешка: Удостоверяването е неуспешно.",
+	"createredirect-instructions": "С формуляра по-долу можете да създавате пренасочваща страница или да замените съществуваща страница с пренасочване.",
+	"createredirect-page-title": "Заглавие на страницата:",
+	"createredirect-redirect-done": "Пренасочването от „$1“ към „$2“ е създадено",
+	"createredirect-redirect-to": "Пренасочване към:",
+	"createredirect-save": "Съхраняване на страницата"
+}

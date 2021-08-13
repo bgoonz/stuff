@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cradel",
+			"Olsi"
+		]
+	},
+	"right-disableaccount": "Çaktivizo llogaritë",
+	"disableaccount": "Çaktiviyoni një llogari përdoruesi",
+	"disableaccount-user": "Përdoruesi:",
+	"disableaccount-confirm": "Çaktivizoni këtë llogari të përdorusit.\nPërdoruesi nuk do të mund të identifikohet, të rivendosë fjalëkalimin e tij, ose të marrë njoftime me e-mail.\nNëse përdoruesi është aktualisht i identifikuar ndokund, ai do të dalë menjëherë.\n''Vini re se çaktivizimi i jë llogarie nuk mund të kthehet pa ndërhyrjen e një administratori të sistemit.''",
+	"disableaccount-mustconfirm": "Ju duhet të konfirmoni që dëshironi ta çaktivizoni këtë llogari.",
+	"disableaccount-nosuchuser": "Llogaria e përdoruesit \"$1\" nuk ekziston.",
+	"disableaccount-success": "Llogaria e përdoruesit \"$1\" është çaktiviyuar përgjithmonë."
+}

@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"BaRaN6161 TURK",
+			"Homonihilis",
+			"Karduelis",
+			"MuratTheTurkish",
+			"Vito Genovese"
+		]
+	},
+	"errorhandler-desc": "MediaWiki için hata işleyicisi",
+	"errorhandler-errors": "Hatalar:",
+	"errorhandler-error-fatal": "Önemli hata",
+	"errorhandler-error-warning": "Uyarı",
+	"errorhandler-error-parse": "Ayrıştırıcı hatası",
+	"errorhandler-error-notice": "Bildirim",
+	"errorhandler-error-deprecated": "Kaldırıldı",
+	"errorhandler-error-core-error": "Temel hatası",
+	"errorhandler-error-core-warning": "Temel uyarısı",
+	"errorhandler-error-compile-error": "Hata derle",
+	"errorhandler-error-compile-warning": "Uyarı derle",
+	"errorhandler-error-user-error": "Kullanıcı hatası",
+	"errorhandler-error-user-warning": "Kullanıcı uyarısı",
+	"errorhandler-error-user-notice": "Kullanıcı bildirimi",
+	"errorhandler-error-user-deprecated": "Kullanıcı kullanımdan kaldırıldı",
+	"errorhandler-error-strict": "Katı standartları",
+	"errorhandler-error-recoverable": "Yakalanabilir ölümcül hata",
+	"errorhandler-msg-text": "$1 : $2 mesajı $3 ($4 satır)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> mesajı <b>$3</b> (<b>$4</b> satır)",
+	"errorhandler-trace": "iz:",
+	"errorhandler-trace-line": "$1 ($2 satır): $3",
+	"errorhandler-trace-line-internal": "[dahili işlev]: $1"
+}

@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Michawiki"
+		]
+	},
+	"errorhandler-desc": "Wobchadźenje ze zmylkami za MediaWiki",
+	"errorhandler-errors": "Zmylki:",
+	"errorhandler-error-fatal": "Fatalny zmylk",
+	"errorhandler-error-warning": "Warnowanje",
+	"errorhandler-error-parse": "Analyzowy zmylk",
+	"errorhandler-error-notice": "Zdźělenka",
+	"errorhandler-error-deprecated": "Njeschwaleny",
+	"errorhandler-error-core-error": "Jadrowy zmylk",
+	"errorhandler-error-core-warning": "Warnowanje jadra",
+	"errorhandler-error-compile-error": "Kompilaciski zmylk",
+	"errorhandler-error-compile-warning": "Kompilaciske warnowanje",
+	"errorhandler-error-user-error": "Wužiwarski zmylk",
+	"errorhandler-error-user-warning": "Wužiwarske warnowanje",
+	"errorhandler-error-user-notice": "Wužiwarska zdźělenka",
+	"errorhandler-error-user-deprecated": "Wužiwar njeschwaleny",
+	"errorhandler-error-strict": "Striktne standardy",
+	"errorhandler-error-recoverable": "Popadujomny fatalny zmylk",
+	"errorhandler-msg-text": "$1 : $2 w $3 (rjadka $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> w <b>$3</b> (rjadka <b>$4</b>)",
+	"errorhandler-trace": "slědować:",
+	"errorhandler-trace-line": "$1 (rjadka $2): $3",
+	"errorhandler-trace-line-internal": "[interna funkcija]: $1"
+}

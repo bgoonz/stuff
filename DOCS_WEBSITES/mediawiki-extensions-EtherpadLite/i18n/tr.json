@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"BaRaN6161 TURK"
+		]
+	},
+	"etherpadlite-desc": "Bir veya daha fazla Etherpad Lite pedini (yerel veya harici Etherpad Lite sunucularında barındırılır) sayfalara yerleştirmek için &lt;eplite&gt; ayrıştırıcı etiketini ekler",
+	"etherpadlite-tracking-category": "Gömülü bir Etherpad'li sayfalar",
+	"etherpadlite-tracking-category-desc": "Sayfa, <code>&lt;eplite&gt;</code> etiketiyle bir Etherpad'i yerleştirir.",
+	"etherpadlite-invalid-pad-url": "\"$1\" geçerli bir Etherpad Lite URL'si veya pad adı değil.",
+	"etherpadlite-url-is-not-whitelisted": "\"$1\", izin verilen Etherpad Lite sunucularının beyaz listesinde değil. {{PLURAL:$3|$2 izin verilen tek sunucu|İzin verilen sunucular aşağıdaki gibidir: $2}}.",
+	"etherpadlite-empty-whitelist": "\"$1\", izin verilen Etherpad Lite sunucularının beyaz listesinde değil. Beyaz listede izin verilen sunucu yok.",
+	"etherpadlite-pad-used-more-than-once": "\"$1\" pedi bu sayfada daha önce kullanılmış; Bir sayfada birçok pediniz olabilir, ancak yalnızca farklı pedlerse."
+}

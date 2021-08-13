@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"CERminator"
+		]
+	},
+	"disableaccount-desc": "Daje administratorima mogućnost da onemoguće pojedinačne račune.",
+	"right-disableaccount": "Onemogućavanje računa",
+	"disableaccount": "Onemogućavanje korisničkog računa",
+	"disableaccount-user": "Korisničko ime:",
+	"disableaccount-confirm": "Onemogući ovaj korisnički račun.\nKorisnik se neće moći prijaviti, staviti novu šifru ili primati obavještenja putem e-maila.\nAko je korisnik negdje u međuvremenu prijavljen, bit će automatski odmah odjavljen.\n''Zapamtite da se onemogućavanje računa ne može poništiti bez intervencije sistemskog administratora.''",
+	"disableaccount-mustconfirm": "Morate potvrditi da želite onemogućiti ovaj račun.",
+	"disableaccount-nosuchuser": "Korisnički račun \"$1\" ne postoji.",
+	"disableaccount-success": "Korisnički račun \"$1\" je trajno onemogućen."
+}

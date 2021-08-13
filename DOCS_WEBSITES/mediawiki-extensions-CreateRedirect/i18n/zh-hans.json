@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hydra",
+			"Lakejason0",
+			"Liuxinyu970226"
+		]
+	},
+	"createredirect": "创建重定向",
+	"createredirect-desc": "添加特殊页面[[Special:CreateRedirect|CreateRedirect]]以便更容易的创建重定向",
+	"createredirect-error": "错误：身份验证失败。",
+	"createredirect-enable-multiline": "输入更多标题",
+	"createredirect-instructions": "使用下面的表格，可以创建重定向页面或替换现有页面重定向。",
+	"createredirect-invalid-title": "错误：“$1”不是正确的标题。",
+	"createredirect-overwrite": "忽视警告",
+	"createredirect-page-title": "页面标题：",
+	"createredirect-redirect-done": "创建重定向从 \"$1\" 到 \"$2\"",
+	"createredirect-redirect-to": "重定向至：",
+	"createredirect-save": "保存页面",
+	"createredirect-would-overwrite": "警告：页面“[[:$1]]”已存在。"
+}

@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ryan Schmidt"
+		]
+	},
+	"editsubpages-desc": "Allows sysops to unlock a page and all subpages of that page for anonymous editing via [[MediaWiki:Unlockedpages]]",
+	"unlockedpages": " #<!-- leave this line alone --><pre>\n# Put pages you want to unlock below using\n# * Pagename\n# Unlocked pages must begin with a bullet to be counted,\n# everything else is considered a comment\n# Pagenames may be [[links]] and are case-sensitive\n# Also, talk pages will be automatically unlocked with the page\n# See https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages for more info\n #</pre><!-- leave this line alone -->"
+}

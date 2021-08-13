@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ерней",
+			"Ильнар"
+		]
+	},
+	"contributionscores": "Кертем билгеләү",
+	"contributionscores-desc": "Хәтердән [[Special:ContributionScores|иң зур тәрҗемә ясаучы кулланучыларны]] билгели.",
+	"contributionscores-info": "Билгеләр кую, беренче чиратта, үзгәртелгән мәкаләләр санына һәм аларның күләменә карап бирелә.",
+	"contributionscores-top": "(Иң әйбәт $1)",
+	"contributionscores-days": "Соңгы {{PLURAL:$1|$1 көн өчен}}",
+	"contributionscores-allrevisions": "Бөтен вакыт өчен",
+	"contributionscores-score": "Бәя",
+	"contributionscores-rank": "Ранг",
+	"contributionscores-pages": "Битләр",
+	"contributionscores-changes": "Төзәтмәләр",
+	"contributionscores-username": "Кулланучы исеме",
+	"contributionscores-invalidusername": "Кулланучының исеме дөрес түгел",
+	"contributionscores-invalidmetric": "Ялгыш билгеләү"
+}

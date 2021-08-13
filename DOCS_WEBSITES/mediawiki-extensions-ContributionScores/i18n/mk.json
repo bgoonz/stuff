@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"contributionscores": "Оцени за придонеси",
+	"contributionscores-desc": "Презема податоци од викибазата за [[Special:ContributionScores|корисници со највеќе придонеси]]",
+	"contributionscores-info": "Салдото е мерка што изразува уредувања на одделни страници, со оглед на големиот број на уредувања.",
+	"contributionscores-top": "(Најдобри $1)",
+	"contributionscores-days": "{{PLURAL:$1|Последниот ден|Последните $1 дена}}",
+	"contributionscores-allrevisions": "На сите времиња",
+	"contributionscores-score": "Оценка",
+	"contributionscores-rank": "Ранг",
+	"contributionscores-pages": "Страници",
+	"contributionscores-changes": "Измени",
+	"contributionscores-username": "Корисничко име",
+	"contributionscores-invalidusername": "Неправилно корисничко име",
+	"contributionscores-invalidmetric": "Грешно мерило"
+}

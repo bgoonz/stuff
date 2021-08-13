@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": []
+	},
+	"amazon_gateway-desc": "Amazon payment processing",
+	"apihelp-di_amazon_bill-description": "",
+	"apihelp-di_amazon_bill-summary": "",
+	"apihelp-di_amazon_bill-param-amount": "",
+	"apihelp-di_amazon_bill-param-billingAgreementId": "",
+	"apihelp-di_amazon_bill-param-currency": "",
+	"apihelp-di_amazon_bill-param-orderReferenceId": "",
+	"apihelp-di_amazon_bill-param-recurring": "",
+	"apihelp-di_amazon_bill-param-wmf_token": ""
+}

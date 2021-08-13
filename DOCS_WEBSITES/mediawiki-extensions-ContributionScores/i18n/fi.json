@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"01miki10",
+			"Crt",
+			"Nike",
+			"Pxos",
+			"Pyscowicz",
+			"Str4nd",
+			"Stryn"
+		]
+	},
+	"contributionscores": "Muokkauspisteet",
+	"contributionscores-info": "Pistemäärä kuvaa ensisijaisesti muokattujen sivujen lukumäärää, mutta ottaa huomioon myös suuren muokkausmäärän yleisesti.",
+	"contributionscores-top": "(top $1)",
+	"contributionscores-days": "{{PLURAL:$1|Viime päivä|Viimeiset $1 päivää}}",
+	"contributionscores-allrevisions": "Koko ajalta",
+	"contributionscores-score": "Pisteet",
+	"contributionscores-rank": "Sija",
+	"contributionscores-pages": "Sivuja",
+	"contributionscores-changes": "Muutoksia",
+	"contributionscores-username": "Käyttäjänimi",
+	"contributionscores-invalidusername": "Virheellinen käyttäjänimi",
+	"contributionscores-invalidmetric": "Virheellinen muuttuja"
+}

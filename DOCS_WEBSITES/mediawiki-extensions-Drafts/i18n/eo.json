@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Melancholie",
+			"Yekrats"
+		]
+	},
+	"drafts": "Malnetoj",
+	"drafts-desc": "Permesas la kapablon konservi [[Special:Drafts|malnetajn]] versiojn de paĝo de la servilo",
+	"drafts-view": "VidiMalneton",
+	"drafts-view-summary": "Ĉi tiu speciala paĝo montras liston de ĉiuj ekzistantaj malnetoj.\nNeuzataj malnetoj estos forĵetitaj post {{PLURAL:$1|$1 tago|$1 tagoj}} aŭtomate.",
+	"drafts-view-article": "Paĝo",
+	"drafts-view-existing": "Ekzistante malnetojn",
+	"drafts-view-saved": "Konservita",
+	"drafts-view-discard": "Forĵeti",
+	"drafts-view-nonesaved": "Vi ne havas iujn malnetojn konservitajn ĉi-momente.",
+	"drafts-view-notice": "Vi havas $1n por ĉi tiun paĝon.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|malneto|malnetoj}}",
+	"drafts-view-warn": "Ĉu vi ja volas navigi fore de ĉi tiu paĝo? Se jes, vi perdus ĉiujn nekonservitajn ŝanĝojn al ĉi tiu paĝo.",
+	"drafts-save": "Konservi ĉi tiun kiel malneton",
+	"drafts-save-save": "Konservi malneton",
+	"drafts-save-saved": "Konservita",
+	"drafts-save-saving": "Konservante",
+	"drafts-save-error": "Eraro konservante malneton",
+	"drafts-enable": "Ŝalti programeron por konservi malneto redakto-stile.",
+	"prefs-extension-drafts": "Malnetoj",
+	"tooltip-drafts-save": "Konservi kiel malneton"
+}

@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Beta16",
+			"Nemo bis",
+			"Rosh"
+		]
+	},
+	"disableaccount-desc": "Consente agli amministratori di disattivare singole utenze.",
+	"right-disableaccount": "Disabilitare le utenze",
+	"action-disableaccount": "disabilitare le utenze",
+	"disableaccount": "Disabilitare un'utenza",
+	"disableaccount-user": "Nome utente:",
+	"disableaccount-confirm": "Disabilitare permanentemente questa utenza.\nL'utente non sarà in grado di accedere, reimpostare la password o ricevere notifiche via email.\nTutte le attuali connessioni dell'utente saranno immediatamente terminate.\n''Si noti che la disattivazione di un'utenza non è reversibile senza l'intervento di un amministratore di sistema''.",
+	"disableaccount-mustconfirm": "Devi confermare che vuoi disabilitare questa utenza.",
+	"disableaccount-nosuchuser": "L'account utente \"$1\" non esiste.",
+	"disableaccount-success": "L'account utente \"$1\" è stato disabilitato definitivamente.",
+	"logentry-block-disableaccount": "$1 ha {{GENDER:$2|disabilitato l'utenza}} di {{GENDER:$4|$3}}."
+}

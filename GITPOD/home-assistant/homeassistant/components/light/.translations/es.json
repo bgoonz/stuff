@@ -1,8 +1,0 @@
-{
-  "device_automation": {
-    "trigger_type": {
-      "turn_off": "{nombre} desactivado",
-      "turn_on": "{nombre} activado"
-    }
-  }
-}

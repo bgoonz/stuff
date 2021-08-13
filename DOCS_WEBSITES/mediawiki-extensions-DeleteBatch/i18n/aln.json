@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mdupont"
+		]
+	},
+	"deletebatch-link-back": "Kthehu mbrapa tek faqja speciale",
+	"deletebatch-as": "Ekzekuto script si:",
+	"deletebatch-both-modes": "Ju lutem zgjidhni një faqe ose një listë të caktuar ose të dhënë të faqeve.",
+	"deletebatch-or": "<strong>ose</strong>",
+	"deletebatch-delete": "Fshij",
+	"deletebatch-page": "Faqet që të fshihen:",
+	"deletebatch-processing-from-file": "fshirje faqe nga lista file",
+	"deletebatch-processing-from-form": "fshirje nga faqet formë",
+	"deletebatch-omitting-nonexistent": "Mosdhënien faqe jo-ekzistuese $1.",
+	"deletebatch-omitting-invalid": "Mosdhënien faqe pavlefshme $1.",
+	"deletebatch-file-bad-format": "Skedari i duhet të jetë në formë teksti",
+	"deletebatch-file-missing": "Në pamundësi për të lexuar dhënë file",
+	"deletebatch-select-script": "script Fshij faqe",
+	"deletebatch-select-yourself": "Ju",
+	"deletebatch-no-page": "Ju lutem specifikoni të paktën një faqe të fshini ose zgjidhni një skedë që përmban listën e faqe.",
+	"right-deletebatch": "faqe fshini Batch"
+}

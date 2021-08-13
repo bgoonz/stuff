@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Boivie",
+			"Jopparn",
+			"Mjälten",
+			"Najami",
+			"WikiPhoenix"
+		]
+	},
+	"drafts": "Utkast",
+	"drafts-desc": "Möjliggör att kunna spara [[Special:Drafts|utkastsversioner]] av en sida på servern",
+	"drafts-view": "Visa utkast",
+	"drafts-view-summary": "Denna specialsida visar en lista över alla utkast som finns.\nOanvända utkast kommer automatiskt att försvinna efter {{PLURAL:$1|$1 dag|$1 dagar}}.",
+	"drafts-view-article": "Sida",
+	"drafts-view-existing": "Existerande utkast",
+	"drafts-view-saved": "Sparad",
+	"drafts-view-discard": "Förkasta",
+	"drafts-view-nonesaved": "Du har inga utkast sparade just nu.",
+	"drafts-view-notice": "Du har $1 för denna sida.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|utkast|utkast}}",
+	"drafts-view-warn": "Vill du fortsätta navigera bort från denna sida? Då kommer du förlora alla osparade ändringar för denna sida.",
+	"drafts-save": "Spara detta som ett utkast",
+	"drafts-save-save": "Spara utkast",
+	"drafts-save-saved": "Sparad",
+	"drafts-save-saving": "Sparar",
+	"drafts-save-error": "Fel vid sparande av utkast",
+	"drafts-enable": "Aktivera funktionen för att spara ett utkast i form av en redigering",
+	"prefs-extension-drafts": "Utkast",
+	"tooltip-drafts-save": "Spara som ett utkast",
+	"apierror-mustbeloggedin-save-drafts": "Du måste vara inloggad för att spara skisser.",
+	"apihelp-savedrafts-summary": "Spara ett utkast.",
+	"apihelp-savedrafts-param-text": "Utkaststext"
+}

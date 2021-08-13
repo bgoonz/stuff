@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pikne"
+		]
+	},
+	"emailcapture": "E-posti kinnitamine",
+	"emailcapture-failure": "Sinu e-posti aadressi '''ei''' kinnitatud.",
+	"emailcapture-invalid-code": "Vigane kinnituskood.",
+	"emailcapture-already-confirmed": "Sinu e-posti aadress on juba kinnitatud.",
+	"emailcapture-response-subject": "{{GRAMMAR:genitive|{{SITENAME}}}} e-posti aadressi kinnitus",
+	"emailcapture-response-body": "Tere!\n\nAitäh, et tunned huvi {{GRAMMAR:genitive|{{SITENAME}}}} täiendamise vastu.\n\nPalun leia natuke aega, et kinnitada oma e-posti aadress. Selleks klõpsa järgmist linki:\n$1\n\nSamuti võid minna järgmisele leheküljele:\n$2\n\nJa sisestada järgmise kinnituskoodi:\n$3\n\nVõtame sinuga peagi ühendust, et rääkida, kuidas saad {{GRAMMAR:partitive|{{SITENAME}}}} täiendada.\n\nKui sa pole soovinud e-posti aadressi kinnitada, eira palun seda e-kirja ja me ei saada sulle enam midagi.",
+	"emailcapture-success": "Aitäh!\n\nSinu e-posti aadress on kinnitatud.",
+	"emailcapture-instructions": "Et oma e-posti aadress kinnitada, sisesta e-kirjatsi saadud kood ja klõpsa \"{{int:emailcapture-submit}}\".",
+	"emailcapture-verify": "Kinnituskood:",
+	"emailcapture-submit": "Kinnita e-posti aadress"
+}

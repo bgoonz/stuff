@@ -1,6 +1,0 @@
-object(stdClass) (2) {
-  ["accountId"]=>
-  int(1234)
-  ["parent"]=>
-  *RECURSION*
-}

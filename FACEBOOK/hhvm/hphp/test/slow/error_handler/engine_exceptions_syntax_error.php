@@ -1,2 +1,0 @@
-<?hh
-make_sure_expect_file_contains_file_name_and_line_number

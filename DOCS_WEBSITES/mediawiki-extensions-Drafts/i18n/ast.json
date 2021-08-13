@@ -1,0 +1,40 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"drafts": "Borradores",
+	"drafts-desc": "Amiesta la posibilidá de guardar nel sirvidor versiones de [[Special:Drafts|borrador]] d'una páxina",
+	"drafts-view": "VerBorrador",
+	"drafts-view-summary": "Esta páxina especial amuesa la llista de tolos borradores esistentes.\nLos borradores que nun s'usen en pasando {{PLURAL:$1|un día|$1 díes}} descartaránse automáticamente.",
+	"drafts-view-article": "Páxina",
+	"drafts-view-existing": "Borradores esistentes",
+	"drafts-view-saved": "Guardada",
+	"drafts-view-discard": "Descartar",
+	"drafts-view-nonesaved": "Nesti momentu nun tien dengún borrador guardáu.",
+	"drafts-view-notice": "Tien $1 pa esta páxina.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|borrador|borradores}}",
+	"drafts-view-warn": "¿Quier siguir la navegación fuera d'esta páxina? Al facelo, perderá tolos cambios nesta páxina que nun tenga guardaos.",
+	"drafts-save": "Guardar esto como borrador",
+	"drafts-save-save": "Guardar borrador",
+	"drafts-save-saved": "Guardada",
+	"drafts-save-saving": "Guardando",
+	"drafts-save-error": "Error al guardar el borrador",
+	"drafts-enable": "Activar la función pa guardar un borrador nel formulariu d'edición",
+	"prefs-extension-drafts": "Borradores",
+	"tooltip-drafts-save": "Guardar como borrador",
+	"apierror-mustbeloggedin-save-drafts": "Tienes d'aniciar sesión pa guardar borradores.",
+	"apihelp-savedrafts-description": "Guardar un borrador.",
+	"apihelp-savedrafts-summary": "Guardar un borrador.",
+	"apihelp-savedrafts-param-id": "La ID del borrador.",
+	"apihelp-savedrafts-param-drafttoken": "Pase del borrador.",
+	"apihelp-savedrafts-param-title": "Títulu del borrador.",
+	"apihelp-savedrafts-param-section": "Índiz de la seición de la páxina que ta editándose.",
+	"apihelp-savedrafts-param-starttime": "La hora de principiu del borrador.",
+	"apihelp-savedrafts-param-edittime": "El tiempu d'edición del borrador.",
+	"apihelp-savedrafts-param-scrolltop": "El scrollTop del cuadru de testu.",
+	"apihelp-savedrafts-param-text": "Testu del borrador.",
+	"apihelp-savedrafts-param-summary": "Resume del borrador.",
+	"apihelp-savedrafts-param-minoredit": "Marca lóxica pa indicar si'l borrador ye una edición menor."
+}

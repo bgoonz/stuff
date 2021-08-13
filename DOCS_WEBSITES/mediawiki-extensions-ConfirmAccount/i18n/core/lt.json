@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eitvys200"
+		]
+	},
+	"requestaccount-loginnotice": "Kad gautumėte vartotojo paskyrą, privalote '''[[Special:RequestAccount|pateikti prašymą]]'''.",
+	"action-confirmaccount": "peržiūrėti ir patvirtinti paskyras",
+	"right-confirmaccount": "Žiūrėti [[Special:ConfirmAccounts|eilę su prašomomis paskyromis]]",
+	"right-requestips": "Žiūrėti prašytojo IP adresą, tvarkant prašomas paskyras"
+}

@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06",
+			"McDutchie"
+		]
+	},
+	"createredirect": "Направи пренасочување",
+	"createredirect-desc": "Додава службена страница [[Special:CreateRedirect|НаправиПренасочување]] за лесно правење на пренасочувања",
+	"createredirect-error": "Грешка: Заверката не успеа.",
+	"createredirect-enable-multiline": "Внеси уште наслови",
+	"createredirect-instructions": "Со образецов можете да создавате пренасочувачки страници или да замените постоечка страница со пренасочување.",
+	"createredirect-invalid-title": "Грешка: „$1“ не претставува важечки наслов.",
+	"createredirect-overwrite": "Занемари предупредувања",
+	"createredirect-page-title": "Наслов на страницата:",
+	"createredirect-redirect-done": "Пренасочувањето од „$1“ кон „$2“ е создадено",
+	"createredirect-redirect-to": "Пренасочи кон:",
+	"createredirect-save": "Зачувај",
+	"createredirect-would-overwrite": "Предупредување: страницата „[[:$1]]“ веќе постои."
+}

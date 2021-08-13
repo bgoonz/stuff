@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aelske",
+			"Ooswesthoesbes",
+			"Pahles"
+		]
+	},
+	"contributionscores": "Biedraaghuuegdjes",
+	"contributionscores-desc": "Guuef 'n euverzich van [[Special:ContributionScores|gebroekers mit de meiste biedraag]] inne wiki.",
+	"contributionscores-info": "Dees score mètj veurnamelik 't aantaal unieke pagina's det is bewirk, dewiel e groeat aantaal bewirkinge waal in ach weurt genómme.",
+	"contributionscores-top": "(Top $1)",
+	"contributionscores-days": "{{PLURAL:$1|Lesten daag|Leste $1 daag}}",
+	"contributionscores-allrevisions": "Alle verzies",
+	"contributionscores-score": "Puntje",
+	"contributionscores-rank": "Rang",
+	"contributionscores-pages": "Pagina's",
+	"contributionscores-changes": "Bewèrkinger",
+	"contributionscores-username": "Gebroeker",
+	"contributionscores-invalidusername": "Verkierde gebroeker",
+	"contributionscores-invalidmetric": "Ogeljige einheid"
+}

@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"BaRaN6161 TURK",
+			"MuratTheTurkish"
+		]
+	},
+	"jsonschema-badidref": "Hatalı ref kodu: \"$1\"",
+	"jsonschema-idconvert": "Var kimliğe dönüştürülemiyor: <code>$1</code>",
+	"jsonschema-invalidkey": "\"$1\" içinde geçersiz \"$2\"",
+	"jsonschema-invalidempty": "Boş veri yapısı bu şema ile geçerli değil",
+	"jsonschema-invalidnode": "Geçersiz düğüm: \"$1\" bekleniyor, \"$2\" aldı. Yol: \"$3\"",
+	"jsonschema-invalid-missingfield": "\"$1\" zorunlu alan eksik",
+	"jsonschema-invalid-notinenum": "$2 özelliği için <code>$1</code> değeri enum değerinde değil",
+	"apihelp-jsonschema-description": "Bir JSON Şeması sayfasını alın.",
+	"apihelp-jsonschema-summary": "Bir JSON Şeması sayfasını alın.",
+	"apihelp-jsonschema-param-revid": "Şema revizyon kimliği.",
+	"apihelp-jsonschema-param-title": "Şema adı.",
+	"apihelp-jsonschema-example-1": "1234 revizyonu için şema alın",
+	"apihelp-jsonschema-example-2": "En son Şema revizyonu için Schema:Test alın"
+}

@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ooswesthoesbes"
+		]
+	},
+	"editsubpages-desc": "Steit behierders toe 'n pagina en alle subpagina's van die pagina te deblokkere veur anoniem bewirke via [[MediaWiki:Unlockedpages]]",
+	"unlockedpages": " #<!-- veranger deze regel neet --><pre>\n# Zèt pagina's die se wils vriegaeve hie-ónger es volg:\n# * paginanaam\n# Vriegegaeve pagina's mótte es óngenómmerde lies waere toegeveug, anges waere ze genegeerd. \n# Alle euverigen teks weurt behanjeld es opmirkinge.\n# Paginananame kónne [[link|gelink]] zeen, en ze zeen houflitter zeen houflittergeveulig.\n# Euverlèkpagina's waere autematis vriegegaeve veur häör biebeheurende pagina's.\n# zuuch https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages veur meer infermasie\n  #</pre><!-- veranger deze regel neet -->"
+}

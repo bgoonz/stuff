@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chaduvari",
+			"Veeven"
+		]
+	},
+	"emailcapture": "ఈమెయిలు ధృవీకరణ",
+	"emailcapture-desc": "ఈమెయిలు అడ్రసుల్ని సేకరించి, వాడుకరులు వాటిని ఈమెయిలు ద్వారా ధృవీకరించే వీలు కల్పించు",
+	"emailcapture-failure": "మీ ఈమెయిలు ధృవీకరణ ’’’కాలేదు’’’.",
+	"emailcapture-invalid-code": "చెల్లని నిర్ధారణ సంకేతం.",
+	"emailcapture-response-subject": "{{SITENAME}} ఈ-మెయిలు చిరునామా తనిఖీ",
+	"emailcapture-response-body": "కింది లింకుకు వెళ్ళి మీ ఈమెయిలు అడ్రసును ధృవీకరించండి:\n$1\n\nలేదా మీరు కింది లింకుకు వెళ్ళి:\n$2\n\nకింది ధృవీకరణ కోడును ఇవ్వవచ్చు:\n$3\n\nమీ ఈమెయిలు అడ్రసును ధృవీకరించినందుకు నెనరులు.",
+	"emailcapture-success": "ధన్యవాదాలు!\n\nమీ ఈమెయిలు చిరునామా నిర్ధారితమైంది.",
+	"emailcapture-instructions": "మీ ఈమెయిలు అడ్రసును ధృవీకరించేందుకు, మీ ఈమెయిలైడీకి పంపించిన కోడును ఇచ్చి, \"{{int:emailcapture-submit}}\" ను నొక్కండి.",
+	"emailcapture-verify": "తనిఖీ సంకేతం:",
+	"emailcapture-submit": "ఈమెయిలు అడ్రసును ధృవీకరించు"
+}

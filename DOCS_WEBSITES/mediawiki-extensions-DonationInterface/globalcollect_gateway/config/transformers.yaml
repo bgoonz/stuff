@@ -1,0 +1,16 @@
+# Core
+- Amount
+- CountryValidation
+- DonorEmail
+- DonorFullName
+- AmountInCents
+- StreetAddress
+
+# Ingenico
+- FiscalNumber
+- ContributionTrackingPlusUnique
+- GlobalCollect3DSecure
+- IngenicoFinancialNumber
+- IngenicoLanguage
+- IngenicoMethodCodec
+- IngenicoReturntoHelper

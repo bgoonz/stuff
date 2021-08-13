@@ -1,0 +1,19 @@
+These are the release notes for the Did You Know extension.
+
+Extension page on mediawiki.org: https://www.mediawiki.org/wiki/Extension:Did_You_Know
+Latest version of the release notes: https://gerrit.wikimedia.org/r/gitweb?p=mediawiki/extensions/DidYouKnow.git;a=blob;f=RELEASE-NOTES
+
+=== Version 0.3 ===
+* Converted to use extension registration
+* Dropped compatibility with MW 1.28.x and lower
+
+=== Version 0.2 ===
+(dev)
+
+* Added compatibility with MediaWiki 1.21.
+* Dropped compatibility with MediaWiki < 1.21.
+
+=== Version 0.1 ===
+(2012-6-20)
+
+Initial release.

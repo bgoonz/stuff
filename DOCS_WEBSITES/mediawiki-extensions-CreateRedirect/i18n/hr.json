@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bugoslav",
+			"Neptune, the Mystic"
+		]
+	},
+	"createredirect-invalid-title": "Pogrješka: \"$1\" nije valjani naslov.",
+	"createredirect-overwrite": "Zanemari upozorenja",
+	"createredirect-would-overwrite": "Upozorenje: stranica \"[[:$1]]\" već postoji."
+}

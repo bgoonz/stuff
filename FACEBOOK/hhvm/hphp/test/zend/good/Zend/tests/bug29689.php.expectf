@@ -1,9 +1,0 @@
-foo: foo foo2
-bar: bar
-string(30) "Undefined property: bar::$foo2"
----baz--
-foo: foo foo2
-bar: baz baz2
----baz2--
-foo: foo foo2
-bar2: baz2 baz22

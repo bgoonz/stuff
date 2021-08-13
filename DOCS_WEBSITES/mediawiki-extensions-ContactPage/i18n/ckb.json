@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Asoxor",
+			"Calak"
+		]
+	},
+	"contactpage": "پەڕەی پەیوەندی",
+	"contactpage-desc": "[[Special:Contact|فۆرمی پەیوەندی بۆ سەردانکەران]]",
+	"contactpage-title": "پەیوەندی",
+	"contactpage-pagetext": "تکایە فۆرمی خوارەوە بە کار بھێنن بۆ پەیوەندی لەگەڵماندا.",
+	"contactpage-legend": "ئیمێل بنێرە",
+	"contactpage-defsubject": "پەیامی پەیوەندی",
+	"contactpage-subject-and-sender": "$1 (لە $2)",
+	"contactpage-subject-and-sender-withip": "$1 (لە $2 لە $3ـەوە)",
+	"contactpage-fromname": "ناوت:",
+	"contactpage-fromaddress": "ناونیشانی ئیمێلەکەت:",
+	"contactpage-formfootnotes": "(ئەگەر وەڵامت دەوێت پێوستە)",
+	"contactpage-includeip": "ناونیشانی IPـەکەشم لەم پەیامەدا ھەبێت.",
+	"contactpage-captcha-error": "ھەڵەی CAPTCHA",
+	"contactpage-config-error-title": "ھەڵەی فۆرمی پەیوەندی"
+}

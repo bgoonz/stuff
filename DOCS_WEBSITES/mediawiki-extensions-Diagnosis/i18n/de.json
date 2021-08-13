@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kghbln",
+			"Metalhead64"
+		]
+	},
+	"diagnosis": "Diagnose",
+	"diagnosis-desc": "Ermöglicht das Ermitteln von Problemen, Fehlern oder Sicherheitslücken",
+	"action-diagnosis-access": "das Diagnosewerkzeug auszuführen",
+	"right-diagnosis-access": "Das Diagnosewerkzeug ausführen"
+}

@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"BaRaN6161 TURK",
+			"Homonihilis",
+			"Karduelis",
+			"Mach",
+			"Suelnur",
+			"Vito Genovese"
+		]
+	},
+	"confirmaccount-newrequests": "'''$1''' açık onaylanmış e-posta [[Special:ConfirmAccounts|hesap {{PLURAL:$1|isteği beklemede|istekleri beklemede}}]]. '''Dikkatiniz gerekiyor!'''",
+	"requestaccount-loginnotice": "Bir kullanıcı hesabı almak için, '''[[Special:RequestAccount|istekte bulunmanız]]''' gerekmektedir.",
+	"action-confirmaccount": "hesapları inceleyin ve kabul edin",
+	"right-confirmaccount": "[[Special:ConfirmAccounts|Hesap istekleri grubunu]] görüntüle",
+	"right-confirmaccount-notify": "Yeni onaylanan hesap istekleri hakkında e-posta yoluyla bilgilendir",
+	"action-requestips": "istenen hesapları işlerken istek sahibinin IP adreslerini görüntüle",
+	"right-requestips": "İstenen hesaplarla ilgili işlem yaparken istek sahibinin IP adresini görüntüle",
+	"action-lookupcredentials": "kullanıcı kimlik bilgilerini görüntüle",
+	"right-lookupcredentials": "[[Special:UserCredentials|Kullanıcı kimlik bilgileri]] görüntüle"
+}

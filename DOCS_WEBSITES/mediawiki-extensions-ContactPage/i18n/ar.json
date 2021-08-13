@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"DannyS712",
+			"Meno25",
+			"OsamaK",
+			"أحمد",
+			"ديفيد",
+			"زكريا",
+			"محمد أحمد عبد الفتاح"
+		]
+	},
+	"contactpage": "صفحة المراسلة",
+	"contactpage-desc": "[[Special:Contact|استمارة اتصال للزائرين]]",
+	"contactpage-title": "راسلنا",
+	"contactpage-pagetext": "استخدم الاستمارة التالية لتُكاتبنا.",
+	"contactpage-legend": "رسالة بريد إلكتروني",
+	"contactpage-defsubject": "موضوع المراسلة",
+	"contactpage-subject-and-sender": "$1 (من $2)",
+	"contactpage-subject-and-sender-withip": "$1 (من $2 ذي $3)",
+	"contactpage-fromname": "الاسم:",
+	"contactpage-fromaddress": "عنوان البريد:",
+	"contactpage-formfootnotes": "(مطلوب لو أردت ردًّا)",
+	"contactpage-includeip": "ضمّن عنوان بروتوكول الإنترنت الدال عليّ في الرسالة.",
+	"contactpage-usermailererror": "جسم البريد أرجع خطأ: $1",
+	"contactpage-captcha-error": "خطأ في كابتشا",
+	"contactpage-config-error-title": "خطأ في استمارة الاتصال",
+	"contactpage-config-error": "إما أن نموذج الاتصال غير مكوّن لهذه الصفحة أو تم تكوينه بشكل غير صحيح.",
+	"contactpage-mustbeloggedin": "يُرجَى تسجيل الدخول لتقديم نموذج اتصال."
+}

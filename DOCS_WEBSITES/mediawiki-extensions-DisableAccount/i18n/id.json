@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Daud I.F. Argana",
+			"IvanLanin"
+		]
+	},
+	"disableaccount-desc": "Memungkinkan administrator untuk menonaktifkan akun individu",
+	"right-disableaccount": "Menonaktifkan akun",
+	"action-disableaccount": "menonaktifkan akun",
+	"disableaccount": "Penonaktifan akun pengguna",
+	"disableaccount-user": "Nama pengguna:",
+	"disableaccount-confirm": "Nonaktifkan akun pengguna ini.\nPengguna tidak akan dapat masuk, menyetel ulang sandi mereka, atau menerima surel pemberitahuan.\nJika pengguna saat ini sedang masuk di mana saja, mereka akan segera dikeluarkan.\n''Perhatikan bahwa penonaktifan akun tidak dapat dibatalkan tanpa campur tangan administrator sistem.''",
+	"disableaccount-mustconfirm": "Anda harus mengonfirmasikan bahwa Anda ingin menonaktifkan akun ini.",
+	"disableaccount-nosuchuser": "Akun pengguna \"$1\" tidak ada.",
+	"disableaccount-success": "Akun pengguna \"$1\" telah dinonaktifkan secara permanen.",
+	"logentry-block-disableaccount": "$1 {{GENDER:$2|menonaktifkan akun}} {{GENDER:$4|$3}}."
+}

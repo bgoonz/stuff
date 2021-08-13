@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Shirayuki"
+		]
+	},
+	"etherpadlite-desc": "1つまたは複数の Etherpad Lite パッドを埋め込むための &lt;eplite&gt; パーサー タグを追加する。パッドはローカルまたは外部の Etherpad Lite サーバー(群)でホスティングされる",
+	"etherpadlite-tracking-category": "埋め込みEtherpadがあるページ",
+	"etherpadlite-invalid-pad-url": "「$1」は Etherpad Lite の URL またはパッド名として無効です。",
+	"etherpadlite-url-is-not-whitelisted": "「$1」は許可された Etherpad Lite サーバーのホワイトリストに含まれていません。{{PLURAL:$3|許可されているサーバーは $2 のみです。|許可されているサーバー群は以下の通りです: $2}}",
+	"etherpadlite-empty-whitelist": "「$1」は許可された Etherpad Lite サーバーのホワイトリストに含まれていません。ホワイトリストではどのサーバーも許可されていません。",
+	"etherpadlite-pad-used-more-than-once": "パッド「$1」はこのページで既に使用されています; 1 ページに複数のパッドを配置できますが、それは異なるパッドのみです。"
+}

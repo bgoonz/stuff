@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lokal Profil",
+			"Sabelöga",
+			"WikiPhoenix"
+		]
+	},
+	"createredirect": "Skapa omdirigering",
+	"createredirect-desc": "Lägger till specialsidan [[Special:CreateRedirect|CreateRedirect]] för att enkelt skapa omdirigeringar.",
+	"createredirect-error": "Fel: Autentisering misslyckades.",
+	"createredirect-enable-multiline": "Skriv in fler titlar",
+	"createredirect-instructions": "Med hjälp av formuläret nedan kan du skapa en omdirigeringssida eller ersätta en befintlig sida med en omdirigering.",
+	"createredirect-invalid-title": "Fel: \"$1\" är inte en korrekt titel.",
+	"createredirect-overwrite": "Ignorera varningar",
+	"createredirect-page-title": "Sidtitel:",
+	"createredirect-redirect-done": "Omdirigering skapad från \"$1\" till \"$2\"",
+	"createredirect-redirect-to": "Omdirigera till:",
+	"createredirect-save": "Spara sidan",
+	"createredirect-would-overwrite": "Varning: sidan \"[[:$1]]\" finns redan."
+}

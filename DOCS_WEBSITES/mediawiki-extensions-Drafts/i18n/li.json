@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aelske",
+			"Ooswesthoesbes",
+			"Remember the dot"
+		]
+	},
+	"drafts": "Drafts",
+	"drafts-desc": "Veug functionaliteit tou om [[Special:Drafts|drafts]] van 'n pagina op de server op te slaon",
+	"drafts-view": "DraftZeen",
+	"drafts-view-summary": "Deze speciale pagina toont 'n lies van alle bestaonde drafts.\nOngebroekte drafts zulle automatisch waere verwiederd nao {{PLURAL:$1|$1 daag|$1 daag}}.",
+	"drafts-view-article": "Pazjena",
+	"drafts-view-existing": "Bestaonde drafts",
+	"drafts-view-saved": "Opgesjlage",
+	"drafts-view-discard": "Wis",
+	"drafts-view-nonesaved": "De höbs gein opgeslage drafts.",
+	"drafts-view-notice": "De mós $1 veur dees pazjena.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|draft|drafts}}",
+	"drafts-view-warn": "Door ven dees paasj weg te gaon, verluus se als verwieziginge die se nag neet neet höbs opgeslage.\nWilse doorgaon?",
+	"drafts-save": "Slaon es 'ne draft",
+	"drafts-save-save": "Opslaon",
+	"drafts-save-saved": "Opgeslaon",
+	"drafts-save-saving": "Opslääondje",
+	"drafts-save-error": "Fout ópsläöndje draft",
+	"tooltip-drafts-save": "Opslaon es draft"
+}

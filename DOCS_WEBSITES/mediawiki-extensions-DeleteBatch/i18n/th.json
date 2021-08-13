@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aefgh39622"
+		]
+	},
+	"deletebatch-caption": "รายชื่อหน้า:",
+	"deletebatch-link-back": "กลับไปยังหน้าพิเศษ",
+	"deletebatch-as": "เรียกใช้สคริปต์ในฐานะ:",
+	"deletebatch-or": "<strong>หรือ</strong>",
+	"deletebatch-delete": "ลบ",
+	"deletebatch-page": "หน้าที่ต้องการลบ:",
+	"deletebatch-file-missing": "ไม่สามารถอ่านไฟล์ที่ระบุได้",
+	"deletebatch-select-yourself": "คุณ"
+}

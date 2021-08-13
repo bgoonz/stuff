@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fwolff",
+			"Joris Darlington Quarshie",
+			"Naudefj"
+		]
+	},
+	"createredirect": "Skep Aanstuur",
+	"createredirect-enable-multiline": "Voer meer titels in",
+	"createredirect-instructions": "Met die vorm hieronder kan u 'n aanstuurblad skep of 'n bestaande bladsy vervang met 'n aanstuurblad.",
+	"createredirect-invalid-title": "Fout:\"$1\" is nie 'n regte titel nie.",
+	"createredirect-overwrite": "Ignoreer waarskuwings",
+	"createredirect-page-title": "Bladsynaam:",
+	"createredirect-redirect-done": "Aanstuur vanaf \"$1\" na \"$2\" geskep",
+	"createredirect-redirect-to": "Stuur aan na:",
+	"createredirect-save": "Stoor bladsy",
+	"createredirect-would-overwrite": "Waarskuwing:bladsy \"[[:$1]]\" bestaan reeds."
+}

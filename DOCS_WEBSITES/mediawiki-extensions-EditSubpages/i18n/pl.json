@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sp5uhe"
+		]
+	},
+	"editsubpages-desc": "Umożliwia administratorom odblokowanie edycji strony i jej wszystkich podstron dla niezalogowanych użytkowników poprzez [[MediaWiki:Unlockedpages]]",
+	"unlockedpages": " #<!-- nie zmieniaj treści tej linii --><pre>\n# Umieść poniżej nazwy stron, które chcesz odblokować wpisując\n# * NazwaStrony\n# Każda nazwa odblokowywanej strony musi być poprzedzona gwiazdką.\n# Wszystko inne zostanie uznane za komentarz.\n# NazwaStrony może być [[odnośnikiem]] i jest czuła na wielkość znaków.\n# Strony dyskusji zostaną automatycznie odblokowane.\n# Zobacz https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages jeśli chcesz uzyskać więcej informacji.\n  #</pre><!-- nie zmieniaj treści tej linii -->"
+}

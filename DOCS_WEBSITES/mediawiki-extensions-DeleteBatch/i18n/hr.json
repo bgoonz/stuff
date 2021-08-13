@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dalibor Bosits",
+			"Ex13"
+		]
+	},
+	"deletebatch": "Izbriši skupinu stranica",
+	"deletebatch-desc": "[[Special:DeleteBatch|Izbriši skupinu stranica]]",
+	"deletebatch-help": "Brisanje skupine stranica. Možete izbrisati samo jednu stranicu, ili izbrisati stranice s popisa.\nOdaberite suradnika koje će biti prikazan u evidencijama.\nPostavljena datoteka treba sadržavati nazive stranica, a dodatno razlog odvojen kosom crtom \"|\", u svakom redu.",
+	"deletebatch-caption": "Popis stranica:",
+	"deletebatch-title": "Skupno brisanje",
+	"deletebatch-link-back": "Vrati se na posebnu stranicu",
+	"deletebatch-as": "Pokreni skriptu kao:",
+	"deletebatch-both-modes": "Molimo vas odaberiti ili jednu određenu stranicu ili popis stranica.",
+	"deletebatch-or": "<strong>ili</strong>",
+	"deletebatch-page": "Stranice za brisanje:",
+	"deletebatch-omitting-nonexistent": "Izostavljanje nepostojeće stranice $1.",
+	"deletebatch-omitting-invalid": "Izostavljanje neispravne stranice $1.",
+	"deletebatch-file-bad-format": "U datoteci bi trebao biti čisti tekst",
+	"deletebatch-file-missing": "Datoteka se ne može pročitati",
+	"deletebatch-select-script": "skripta za brisanje",
+	"deletebatch-select-yourself": "vi",
+	"deletebatch-no-page": "Molimo vas odredite barem jednu stranicu za brisanje ILI odaberite datoteku koja sadrži popis."
+}

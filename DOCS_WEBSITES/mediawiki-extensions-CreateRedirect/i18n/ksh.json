@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Purodha"
+		]
+	},
+	"createredirect": "Ömleidongssigg aanlääje",
+	"createredirect-desc": "Deihd en [[Special:CreateRedirect|{{int:specialpage}}]] en et Wikki, öm eijfach Ömleidongssigge aanlähje ze künne.",
+	"createredirect-error": "Fähler: De Beräschtejungspröövung es donevve jejange.",
+	"createredirect-instructions": "Met dämm Fommulaa kam_mer en Ömleidongssigg aanlääje udder en Sigg en en Ömleidongssigg verwandele.",
+	"createredirect-page-title": "Siggetittel:",
+	"createredirect-redirect-done": "En Ömleidong vun \"$1\" op \"$2\" aanjelaat",
+	"createredirect-redirect-to": "Ömleide op:",
+	"createredirect-save": "De Sigg Avspeichere"
+}

@@ -1,0 +1,27 @@
+{
+	"name": "Device Map Log Capture",
+	"version": "0.0.2",
+	"author": "Patrick Reilly",
+	"url": "https://www.mediawiki.org/wiki/Extension:DeviceMapLogCapture",
+	"license-name": "Apache-2.0",
+	"type": "other",
+	"APIModules": {
+		"devicemaplogcapture": "ApiDeviceMapLogCapture"
+	},
+	"requires": {
+		"MediaWiki": ">= 1.35.0"
+	},
+	"MessagesDirs": {
+		"DeviceMapLogCapture": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"DeviceMapLogCaptureHooks": "includes/DeviceMapLogCaptureHooks.php",
+		"ApiDeviceMapLogCapture": "includes/api/ApiDeviceMapLogCapture.php"
+	},
+	"Hooks": {
+		"LoadExtensionSchemaUpdates": "DeviceMapLogCaptureHooks::loadExtensionSchemaUpdates"
+	},
+	"manifest_version": 1
+}

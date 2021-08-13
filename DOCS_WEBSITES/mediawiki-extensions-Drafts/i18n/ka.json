@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"David1010",
+			"Dawid Deutschland",
+			"Sopho",
+			"გიორგიმელა"
+		]
+	},
+	"drafts": "შავი ფურცლები",
+	"drafts-desc": "მატებს [[Special:Drafts|შავი ფურცლების]] შენახვის საშუალებას სერვერზე",
+	"drafts-view": "შავი ფურცლის ხილვა",
+	"drafts-view-summary": "ამ სპეცგვერდზე წარმოდგენილია ყველა შავი ფურცელი.\nგამოუყენებელი შავი ფურცლები წაიშლება $1 {{PLURAL:$1|დღე|დღის|დღეები}}.",
+	"drafts-view-article": "გვერდი",
+	"drafts-view-existing": "არსებული შავი ფურცლები",
+	"drafts-view-saved": "შენახვა",
+	"drafts-view-discard": "გაუქმება",
+	"drafts-view-nonesaved": "ამ დროისთვის თქვენ არ გაგაჩნიათ შენახული შავი ფურცლები",
+	"drafts-view-notice": "თქვენ გაქვთ  $1 ამ გვერდისთვის.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|შეუმოწმებელი ვერსია|შეუმოწმებელი ვერსიები}}",
+	"drafts-view-warn": "ამ გვერდის დატოვებისას თქვენ კარგავთ ყველა შეუნახავ ცვლილებას.\nგაგრძელება?",
+	"drafts-save": "შეინახეთ როგორც შავი ფურცელი",
+	"drafts-save-save": "შეინახეთ შავი ფურცელი",
+	"drafts-save-saved": "შენახულია",
+	"drafts-save-saving": "შენახვა",
+	"drafts-save-error": "შავი ფურცელის შენახვის შეცდომა",
+	"prefs-extension-drafts": "ესკიზები",
+	"tooltip-drafts-save": "შეინახეთ შავი ფურცელი"
+}

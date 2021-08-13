@@ -1,8 +1,0 @@
-{
-  "domain": "config",
-  "name": "Config",
-  "documentation": "https://www.home-assistant.io/components/config",
-  "requirements": [],
-  "dependencies": ["http"],
-  "codeowners": ["@home-assistant/core"]
-}

@@ -1,0 +1,43 @@
+{
+	"@metadata": {
+		"authors": [
+			"A Chinese Wikipedian",
+			"Gzdavidwong",
+			"Hydra",
+			"Liuxinyu970226",
+			"Shizhao",
+			"Wilsonmess",
+			"Xiaomingyan",
+			"Yfdyh000",
+			"Zhangjintao",
+			"佛壁灯"
+		]
+	},
+	"deletebatch": "删除一批页面",
+	"deletebatch-desc": "[[Special:DeleteBatch|删除一批页面]]",
+	"deletebatch-help": "删除一批页面。您可以执行单条删除，或删除在一个文件中列出的页面。选择一个将显示删除日志中的用户。上传的文件应该包含页面名称和可选的原因，以“|”分隔。",
+	"deletebatch-caption": "页面列表：",
+	"deletebatch-default-reason": "默认删除原因：",
+	"deletebatch-title": "批量删除",
+	"deletebatch-link-back": "返回特殊页面",
+	"deletebatch-as": "运行脚本为：",
+	"deletebatch-both-modes": "请选择指定的页面或提供一个页面列表。",
+	"deletebatch-or": "<strong>或</strong>",
+	"deletebatch-delete": "删除",
+	"deletebatch-page": "欲删除的页面：",
+	"deletebatch-processing-from-file": "正在删除列于文件中的页面",
+	"deletebatch-processing-from-form": "正在删除列在表单中的页面",
+	"deletebatch-omitting-nonexistent": "忽略不存在的页面 $1。",
+	"deletebatch-omitting-invalid": "忽略无效的页面 $1。",
+	"deletebatch-file-bad-format": "该文件应该为纯文本",
+	"deletebatch-file-missing": "无法读取提供的文件",
+	"deletebatch-select-script": "删除页面脚本",
+	"deletebatch-select-yourself": "阁下",
+	"deletebatch-no-page": "请指定至少一个要删除的页面或选择一个包含页面列表的文件。",
+	"deletebatch-system-username": "删除页面脚本",
+	"action-deletebatch": "批量删除页面",
+	"right-deletebatch": "批量删除页面",
+	"action-deletebatch-spoof": "作为“页面删除脚本”批量删除页面",
+	"right-deletebatch-spoof": "作为“删除页面脚本”批量删除页面",
+	"deletebatch-deleting-file-only": "文件说明页面$1不存在，仅删除实际文件。该操作不会被记录。"
+}

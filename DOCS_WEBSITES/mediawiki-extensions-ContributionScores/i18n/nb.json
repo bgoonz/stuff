@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Danmichaelo",
+			"Helland",
+			"Jon Harald Søby",
+			"Nghtwlkr"
+		]
+	},
+	"contributionscores": "Bidragspoeng",
+	"contributionscores-desc": "Spør wikidatabasen etter det høyeste [[Special:ContributionScores|bidragsvolumet]]",
+	"contributionscores-info": "Bidragspoeng måler primært hvor mange unike sider som er redigert, og tar høyt redigeringsvolum i betraktning.",
+	"contributionscores-top": "(Topp $1)",
+	"contributionscores-days": "Siste {{PLURAL:$1|dagen|$1 dager}}",
+	"contributionscores-allrevisions": "Gjennom tidene",
+	"contributionscores-score": "Poeng",
+	"contributionscores-rank": "Rangering",
+	"contributionscores-pages": "Sider",
+	"contributionscores-changes": "Endringer",
+	"contributionscores-username": "Brukernavn",
+	"contributionscores-invalidusername": "Ugyldig brukernavn",
+	"contributionscores-invalidmetric": "Ugyldig målemetode"
+}

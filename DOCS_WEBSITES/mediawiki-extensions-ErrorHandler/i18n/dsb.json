@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Michawiki"
+		]
+	},
+	"errorhandler-desc": "Wobźěłanje zmólkow za MediaWiki",
+	"errorhandler-errors": "Zmólki:",
+	"errorhandler-error-fatal": "Fatalna zmólka",
+	"errorhandler-error-warning": "Warnowanje",
+	"errorhandler-error-parse": "Parserowa zmólka",
+	"errorhandler-error-notice": "Pśipisk",
+	"errorhandler-error-deprecated": "Zachyśony",
+	"errorhandler-error-core-error": "Jědrowa zmólka",
+	"errorhandler-error-core-warning": "Jědrowe warnowanje",
+	"errorhandler-error-compile-error": "Kompilěrowańska zmólka",
+	"errorhandler-error-compile-warning": "Kompilěrowańske warnowanje",
+	"errorhandler-error-user-error": "Wužywarska zmólka",
+	"errorhandler-error-user-warning": "Wužywarske warnowanje",
+	"errorhandler-error-user-notice": "Wužywarske pśipomnjeśe",
+	"errorhandler-error-user-deprecated": "Wužywaŕ wótpokazany",
+	"errorhandler-error-strict": "Kšute standardy",
+	"errorhandler-error-recoverable": "Zapópadujobna fatalna zmólka",
+	"errorhandler-msg-text": "$1 : $2 w $3 (smužka $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> w <b>$3</b> (smužka <b>$4</b>)",
+	"errorhandler-trace": "Slědkslědowanje:",
+	"errorhandler-trace-line": "$1 (smužka $2): $3",
+	"errorhandler-trace-line-internal": "[interna funkcija]: $1"
+}

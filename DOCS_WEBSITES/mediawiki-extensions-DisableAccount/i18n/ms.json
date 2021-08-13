@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Anakmalaysia",
+			"Kurniasan",
+			"Pizza1016"
+		]
+	},
+	"disableaccount-desc": "Membolehkan penyelia untuk mematikan akaun perseorangan",
+	"right-disableaccount": "Mematikan akaun",
+	"disableaccount": "Lumpuhkan akaun pengguna",
+	"disableaccount-user": "Nama pengguna:",
+	"disableaccount-confirm": "Lumpuhkan akaun pengguna ini.\nPengguna ini tidak akan dapat log masuk, set semula kata laluannya, atau menerima makluman e-mel.\nJika pengguna ini sedang log masuk di mana-mana, dia akan dilog keluar dengan serta-merta.\n''Sila notakan bahawa tindakan melumpuhkan sesuatu akaun tidak boleh diundurkan tanpa bantuan penyelia sistem.''",
+	"disableaccount-mustconfirm": "Anda perlu mengesahkan bahawa anda ingin melumpuhkan akaun ini.",
+	"disableaccount-nosuchuser": "Akaun pengguna \"$1\" tidak wujud.",
+	"disableaccount-success": "Akaun pengguna \"$1\" telah dilumpuhkan selama-lamanya.",
+	"logentry-block-disableaccount": "$1 telah {{GENDER:$2|mematikan akaun}} {{GENDER:$4|$3}}."
+}

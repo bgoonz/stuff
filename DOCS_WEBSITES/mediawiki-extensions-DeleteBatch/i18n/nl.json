@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"HanV",
+			"Mainframe98",
+			"Siebrand",
+			"Tvdm"
+		]
+	},
+	"deletebatch": "Paginareeks verwijderen",
+	"deletebatch-desc": "[[Special:DeleteBatch|Reeks pagina's verwijderen]]",
+	"deletebatch-help": "Een lijst pagina's verwijderen.\nU kunt een enkele pagina verwijderen of een lijst van pagina's in een bestand.\nKies een gebruiker die in het verwijderingslogboek wordt genoemd.\nHet bestand dat u uploadt moet op iedere regel een paginanaam en een reden bevatten (optioneel), gescheiden door het teken \"|\".",
+	"deletebatch-caption": "Paginalijst:",
+	"deletebatch-title": "Reeks verwijderen",
+	"deletebatch-link-back": "Teruggaan naar de speciale pagina",
+	"deletebatch-as": "Script uitvoeren als:",
+	"deletebatch-both-modes": "Kies een bepaalde pagina of geef een list met pagina's op.",
+	"deletebatch-or": "<strong>of</strong>",
+	"deletebatch-delete": "Verwijderen",
+	"deletebatch-page": "Te verwijderen pagina's:",
+	"deletebatch-processing-from-file": "bezig met het verwijderen van pagina's uit een bestandslijst",
+	"deletebatch-processing-from-form": "bezig met het verwijderen van pagina's uit het formulier",
+	"deletebatch-omitting-nonexistent": "Niet-bestaande pagina $1 is overgeslagen.",
+	"deletebatch-omitting-invalid": "Ongeldige paginanaam $1 is overgeslagen.",
+	"deletebatch-file-bad-format": "Het bestand moet tekst zonder opmaak bevatten",
+	"deletebatch-file-missing": "Het bestand kan niet gelezen worden",
+	"deletebatch-select-script": "script pagina's verwijderen",
+	"deletebatch-select-yourself": "u",
+	"deletebatch-no-page": "Geef ten minste één te verwijderen pagina op of kies een bestand dat de lijst met pagina's bevat.",
+	"deletebatch-system-username": "Pagina verwijderingscript",
+	"action-deletebatch": "een reeks pagina's te verwijderen",
+	"right-deletebatch": "Pagina's in batch verwijderen",
+	"deletebatch-deleting-file-only": "De bestandsbeschrijvingspagina $1 bestaat niet.\nAlleen het bestand wordt verwijderd.\nDeze handeling wordt niet opgenomen in het logboek."
+}

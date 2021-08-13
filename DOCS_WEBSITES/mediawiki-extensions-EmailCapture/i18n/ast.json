@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"emailcapture": "Comprobación del corréu electrónicu",
+	"emailcapture-desc": "Recueye direiciones de corréu electrónicu, y permite que los usuarios les comprueben per corréu electrónicu",
+	"emailcapture-failure": "La to direición de corréu electrónicu '''nun''' se comprobó.",
+	"emailcapture-invalid-code": "Códigu de confirmación inválidu.",
+	"emailcapture-already-confirmed": "La so direición de corréu yá se confirmó.",
+	"emailcapture-response-subject": "Cmprobación de la direición de corréu de {{SITENAME}}",
+	"emailcapture-response-body": "¡Bones!\n\nGracies por espresar interés n'ayudar a ameyorar {{SITENAME}}.\n\nPor favor, dedica un momentu a confirmar el corréu electrónicu faciendo click nel enllaz siguiente:\n$1\n\nTamién pues visitar:\n$2\n\nY escribir el siguiente códigu de confirmación:\n$3\n\nPronto nos comunicaremos con información de cómo pues ayudar a ameyorar {{SITENAME}}.\n\nSi nun ficisti esta solicitú, escaez esti corréu y nun unviaremos más nada.",
+	"emailcapture-success": "¡Gracies!\n\nConfirmóse la to direición de corréu electrónicu.",
+	"emailcapture-instructions": "Pa comprobar la so direición de corréu electrónicu, escriba'l códigu que se-y unvió per corréu y calque \"{{int: emailcapture-submit}}\".",
+	"emailcapture-verify": "Códigu de comprobación:",
+	"emailcapture-submit": "Comprobar la direición de corréu electrónicu",
+	"apihelp-emailcapture-description": "Capturar direiciones de corréu electrónicu",
+	"apihelp-emailcapture-summary": "Capturar direiciones de corréu electrónicu",
+	"apihelp-emailcapture-param-email": "Direición de corréu electrónicu a capturar",
+	"apihelp-emailcapture-param-info": "Otra información a rexistrar, de vezu información estructurada codificada en JSON"
+}

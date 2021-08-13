@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Veeven"
+		]
+	},
+	"contributionscores-top": "(పై $1)",
+	"contributionscores-days": "చివరి {{PLURAL:$1|రోజు|$1 రోజులు}}",
+	"contributionscores-allrevisions": "ఇప్పటివరకూ",
+	"contributionscores-score": "స్కోరు",
+	"contributionscores-pages": "పేజీలు",
+	"contributionscores-changes": "మార్పులు",
+	"contributionscores-username": "వాడుకరి పేరు",
+	"contributionscores-invalidusername": "తప్పుడు వాడుకరిపేరు"
+}

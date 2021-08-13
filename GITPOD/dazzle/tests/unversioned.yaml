@@ -1,6 +1,0 @@
-- desc: "it should say hello"
-  command: ["echo", "hello"]
-  assert:
-    - status == 0
-    - stdout.indexOf("hello") != -1
-    - stderr.length == 0

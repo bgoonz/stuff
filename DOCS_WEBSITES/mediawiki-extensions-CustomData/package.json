@@ -1,0 +1,9 @@
+{
+  "name": "customdata",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Build tools for the CustomData extension.",
+  "scripts": {
+    "test": "true"
+  }
+}

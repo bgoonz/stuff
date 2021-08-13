@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fulup",
+			"Y-M D"
+		]
+	},
+	"createredirect": "Krouiñ un adkas",
+	"createredirect-desc": "Ouzhpennañ a ra ur bajenn dibar [[Special:CreateRedirect|Krouiñ un adkas]] evit krouiñ adkasoù en un doare aes",
+	"createredirect-error": "Fazi : Gwiriekadur c'hwitet.",
+	"createredirect-instructions": "En ur ober gant ar furmskrid a-is e c'hallit krouiñ ur bajenn adkas pe lakaat un adkas e-lec'h ur bajenn zo anezhi dija.",
+	"createredirect-page-title": "Titl ar bajenn :",
+	"createredirect-redirect-done": "Adkas krouet eus \"$1\" davet \"$2\"",
+	"createredirect-redirect-to": "Adkas davet :",
+	"createredirect-save": "Enrollañ ar bajenn"
+}

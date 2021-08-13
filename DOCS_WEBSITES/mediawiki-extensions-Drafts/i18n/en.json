@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"Trevor Parscal"
+		]
+	},
+	"drafts": "Drafts",
+	"drafts-desc": "Adds the ability to save [[Special:Drafts|draft]] versions of a page on the server",
+	"drafts-view": "ViewDraft",
+	"drafts-view-summary": "This special page shows a list of all existing drafts.\nUnused drafts will be discarded after {{PLURAL:$1|$1 day|$1 days}} automatically.",
+	"drafts-view-article": "Page",
+	"drafts-view-existing": "Existing drafts",
+	"drafts-view-saved": "Saved",
+	"drafts-view-discard": "Discard",
+	"drafts-view-nonesaved": "You do not have any drafts saved at this time.",
+	"drafts-view-notice": "You have $1 for this page.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|draft|drafts}}",
+	"drafts-view-warn": "Do you want to continue navigating away from this page? By doing so, you will lose all unsaved changes to this page.",
+	"drafts-save": "Save this as a draft",
+	"drafts-save-save": "Save draft",
+	"drafts-save-saved": "Saved",
+	"drafts-save-saving": "Saving",
+	"drafts-save-error": "Error saving draft",
+	"drafts-enable": "Enable feature to save a draft in edit form",
+	"prefs-extension-drafts": "Drafts",
+	"tooltip-drafts-save": "Save as a draft",
+	"accesskey-drafts-save": "g",
+	"apierror-mustbeloggedin-save-drafts": "You must be logged in to save drafts.",
+	"apihelp-savedrafts-description": "Save a draft.",
+	"apihelp-savedrafts-summary": "Save a draft.",
+	"apihelp-savedrafts-param-id": "The ID of the draft.",
+	"apihelp-savedrafts-param-drafttoken": "Draft token.",
+	"apihelp-savedrafts-param-title": "Draft title.",
+	"apihelp-savedrafts-param-section": "Index of the section of the page being edited.",
+	"apihelp-savedrafts-param-starttime": "The start time of the draft.",
+	"apihelp-savedrafts-param-edittime": "The edit time of the draft.",
+	"apihelp-savedrafts-param-scrolltop": "The scrollTop of the text box.",
+	"apihelp-savedrafts-param-text": "Draft text.",
+	"apihelp-savedrafts-param-summary": "Draft summary.",
+	"apihelp-savedrafts-param-minoredit": "Boolean representing whether the draft is a minor edit."
+}

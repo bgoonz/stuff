@@ -1,4 +1,0 @@
-ports:
-  - port: 8080
-tasks:
-  - command: "npm install && npm run serve"

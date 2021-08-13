@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fohanno",
+			"Fulup",
+			"Y-M D"
+		]
+	},
+	"deletebatch": "Dilemel ur strollad pajennoù",
+	"deletebatch-desc": "[[Special:DeleteBatch|Dilemel ur strollad pajennoù]]",
+	"deletebatch-help": "Dilemel ur strollad pajennoù.\nGellout a rit lañsañ un dilammadenn eeun pe dilemel pajennoù listennet en ur restr.\nDibabit un implijer a vo lakaet e marilh an dilammadennoù.\nUr restr enporzhiet a c'hello bezañ ennañ : anv ur bajenn hag un abeg (diret) evit he dilemel, rankout a raio bezañ dispartiet gant ur \"|\" evit pep linenn.",
+	"deletebatch-caption": "Roll ar pajennoù :",
+	"deletebatch-title": "Dilemel ur strollad",
+	"deletebatch-link-back": "Distreiñ d'ar bajenn dibar",
+	"deletebatch-as": "Lañsañ ar skript evel :",
+	"deletebatch-both-modes": "Mar plij dibabit pe ur bajenn roet pe ur roll roet a bajennoù",
+	"deletebatch-or": "<strong>pe</strong>",
+	"deletebatch-delete": "Dilemel",
+	"deletebatch-page": "Pajennoù da zilemel :",
+	"deletebatch-processing-from-file": "o tilemel pajennoù adalek ur restr gant ur roll",
+	"deletebatch-processing-from-form": "o tilemel pajennoù adalek ar furmskrid",
+	"deletebatch-omitting-nonexistent": "Mank ar bajenn $1 ha n'eus ket diouti.",
+	"deletebatch-omitting-invalid": "Mank ar bajenn fall $1.",
+	"deletebatch-file-bad-format": "Ar restr a zle bezañ testenn blaen",
+	"deletebatch-file-missing": "Ne c'haller ket lenn ar restr roet",
+	"deletebatch-select-script": "Skript evit dilemel pajennoù",
+	"deletebatch-select-yourself": "C'hwi",
+	"deletebatch-no-page": "Mar plij roit ur bajenn da zilemel d'an nebeutañ PE dibabit ur restr ennañ ur roll pajennoù",
+	"right-deletebatch": "Dilemel pajennoù dre strolladoù",
+	"deletebatch-deleting-file-only": "Pajenn deskrivañ $1 n'eus ket anezhi ; o tiverkañ hepken ar restr red. Ne vo ket diellaouet an ober-mañ."
+}

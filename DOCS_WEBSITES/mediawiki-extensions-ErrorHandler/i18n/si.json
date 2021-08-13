@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"පසිඳු කාවින්ද"
+		]
+	},
+	"errorhandler-desc": "මාධ්‍යවිකි සඳහා දෝෂ හසුරවනය",
+	"errorhandler-errors": "දෝෂ:",
+	"errorhandler-error-fatal": "මාරක දෝෂය",
+	"errorhandler-error-warning": "අවවාදය",
+	"errorhandler-error-parse": "ව්‍යාකරණ විග්‍රහ දෝෂය",
+	"errorhandler-error-notice": "දැනුම්දීම",
+	"errorhandler-error-deprecated": "විරුද්ධත්වය ප්‍රකාශ කර ඇත",
+	"errorhandler-error-core-error": "මධ්‍ය දෝෂය",
+	"errorhandler-error-core-warning": "මධ්‍ය අවවාදය",
+	"errorhandler-error-compile-error": "සම්පාදන දෝෂය",
+	"errorhandler-error-compile-warning": "සම්පාදන අවවාදය",
+	"errorhandler-error-user-error": "පරිශීලක දෝෂය",
+	"errorhandler-error-user-warning": "පරිශීලක අවවාදය",
+	"errorhandler-error-user-notice": "පරිශීලක නිවේදනය",
+	"errorhandler-error-user-deprecated": "පරිශීලක විරුද්ධත්වය ප්‍රකාශ කර ඇත",
+	"errorhandler-error-strict": "යථාර්ථ ප්‍රමිති",
+	"errorhandler-error-recoverable": "කෑෂිතමය මාරක දෝෂය",
+	"errorhandler-msg-text": "$1 : $2 හී $3 ($4 පේළිය)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> හී <b>$3</b> (පේළිය <b>$4</b>)",
+	"errorhandler-trace": "අනුරේඛනය:",
+	"errorhandler-trace-line": "$1 ($2 පේළිය): $3",
+	"errorhandler-trace-line-internal": "[අභ්‍යන්තර කෘත්‍ය]: $1"
+}

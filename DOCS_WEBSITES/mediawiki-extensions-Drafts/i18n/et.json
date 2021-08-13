@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Avjoska",
+			"Pikne"
+		]
+	},
+	"drafts": "Mustandid",
+	"drafts-desc": "Võimaldab serverisse lehekülje [[Special:Drafts|mustandiversioone]] salvestada.",
+	"drafts-view": "Vaata mustandeid",
+	"drafts-view-summary": "Sellel erileheküljel kuvatakse kõik olemasolevad mustandid.\nKasutamata mustandid vistakse {{PLURAL:$1|ühe päeava|$1 päeva}} möödudes automaatselt ära.",
+	"drafts-view-article": "Lehekülg",
+	"drafts-view-existing": "Olemasolevad mustandid",
+	"drafts-view-saved": "Salvestatud",
+	"drafts-view-discard": "Viska ära",
+	"drafts-view-nonesaved": "Hetkel pole sul ühtegi salvestatud mustandit.",
+	"drafts-view-notice": "Sul on selle lehekülje jaoks $1.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|mustand|mustandit}}",
+	"drafts-view-warn": "Kas tahad sellelt leheküljelt lahkuda? Kui seda teed, lähevad kõik salvestamata muudatused kaotsi.",
+	"drafts-save": "Salvesta see mustandina",
+	"drafts-save-save": "Salvesta mustand",
+	"drafts-save-saved": "Salvestatud",
+	"drafts-save-saving": "Salvestamine",
+	"drafts-save-error": "Mustandi salvestamine ebaõnnestus",
+	"prefs-extension-drafts": "Mustandid",
+	"tooltip-drafts-save": "Salvesta mustandina"
+}

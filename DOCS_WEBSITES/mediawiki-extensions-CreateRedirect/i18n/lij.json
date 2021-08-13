@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Giromin Cangiaxo"
+		]
+	},
+	"createredirect": "Crea redirect",
+	"createredirect-desc": "O l'azonze a paggina speciale [[Special:CreateRedirect|CreateRedirect]] pe creâ façilmente di redirect",
+	"createredirect-error": "Errô: Aotenticaçion fallia.",
+	"createredirect-instructions": "Doeuviando questo moddulo, ti poeu creâ una paggina de rendriçço ò sostitoî una paggina existente co-in remando.",
+	"createredirect-page-title": "Tittolo da paggina:",
+	"createredirect-redirect-done": "Remando creou da \"$1\" a \"$2\"",
+	"createredirect-redirect-to": "Rendriçça a:",
+	"createredirect-save": "Sarva a paggina"
+}

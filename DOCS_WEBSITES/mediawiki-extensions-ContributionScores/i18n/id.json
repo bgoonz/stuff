@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"IvanLanin",
+			"Rex",
+			"William Surya Permana"
+		]
+	},
+	"contributionscores": "Nilai kontribusi",
+	"contributionscores-desc": "Menghitung [[Special:ContributionScores|volume kontribusi pengguna]] terbanyak di basis data wiki",
+	"contributionscores-info": "Nilai ini secara garis besar mengukur halaman unik yang disunting, dengan pertimbangan volume suntingan yang tinggi.",
+	"contributionscores-top": "($1 teratas)",
+	"contributionscores-days": "{{PLURAL:$1|Hari|$1 hari}} terakhir",
+	"contributionscores-allrevisions": "Sepanjang masa",
+	"contributionscores-score": "Nilai",
+	"contributionscores-rank": "Peringkat",
+	"contributionscores-pages": "Halaman",
+	"contributionscores-changes": "Perubahan",
+	"contributionscores-username": "Nama pengguna",
+	"contributionscores-invalidusername": "Nama pengguna tidak sah",
+	"contributionscores-invalidmetric": "Metrik tidak sah"
+}

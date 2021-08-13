@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Beta16",
+			"Darth Kule",
+			"Melos",
+			"Pietrodn"
+		]
+	},
+	"deletebatch": "Elimina un gruppo di pagine",
+	"deletebatch-desc": "[[Special:DeleteBatch|Elimina un gruppo di pagine]]",
+	"deletebatch-help": "Eliminazione di un gruppo di pagine. Puoi eseguire una sola eliminazione, o eliminare le pagine elencate in un file.\nScegli un utente che sarà mostrato nel registro delle cancellazioni.\nI file caricati dovrebbero contenere il nome della pagina e un motivo opzionale separati da un carattere \"|\".",
+	"deletebatch-caption": "Elenco delle pagine:",
+	"deletebatch-title": "Elimina gruppo",
+	"deletebatch-link-back": "Torna alla pagina speciale",
+	"deletebatch-as": "Esegui lo script come:",
+	"deletebatch-both-modes": "Per favore scegli o una pagina specificata o una data lista di pagine.",
+	"deletebatch-or": "<strong>o</strong>",
+	"deletebatch-delete": "Cancella",
+	"deletebatch-page": "Pagine da cancellare:",
+	"deletebatch-processing-from-file": "cancellazione delle pagine elencate nel file",
+	"deletebatch-processing-from-form": "cancellazione delle pagine elencate nel modulo",
+	"deletebatch-omitting-nonexistent": "Tralascio la pagina non esistente $1.",
+	"deletebatch-omitting-invalid": "Tralascio la pagina non valida $1.",
+	"deletebatch-file-bad-format": "Il file dovrebbe essere di solo testo",
+	"deletebatch-file-missing": "Impossibile leggere il file dato",
+	"deletebatch-select-script": "script di cancellazione pagina",
+	"deletebatch-select-yourself": "tu",
+	"deletebatch-no-page": "Per favore specifica almeno una pagina da eliminare O scegli un file contenente l'elenco delle pagine.",
+	"right-deletebatch": "Elimina le pagine in massa",
+	"deletebatch-deleting-file-only": "La pagina di descrizione del file $1 è inesistente; verrà cancellato solo il file vero e proprio. Questa azione non verrà registrata."
+}

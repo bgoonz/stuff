@@ -1,0 +1,40 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"drafts": "Versiones provisori",
+	"drafts-desc": "Adde le possibilitate de salveguardar [[Special:Drafts|versiones provisori]] de un pagina in le servitor",
+	"drafts-view": "Vider version provisori",
+	"drafts-view-summary": "Iste pagina special monstra un lista de tote le versiones provisori existente.\nLe versiones provisori non usate essera automaticamente abandonate post {{PLURAL:$1|$1 die|$1 dies}}.",
+	"drafts-view-article": "Pagina",
+	"drafts-view-existing": "Versiones provisori existente",
+	"drafts-view-saved": "Salveguardate",
+	"drafts-view-discard": "Abandonar",
+	"drafts-view-nonesaved": "Tu non ha alcun version provisori salveguardate al momento.",
+	"drafts-view-notice": "Tu ha $1 pro iste pagina.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|version|versiones}} provisori",
+	"drafts-view-warn": "Es tu secur de voler quitar iste pagina? Facer isto causara le perdita de tote le modificationes non salveguardate in iste pagina.",
+	"drafts-save": "Salveguardar isto como version provisori",
+	"drafts-save-save": "Salveguardar version provisori",
+	"drafts-save-saved": "Salveguardate",
+	"drafts-save-saving": "Salveguarda in curso",
+	"drafts-save-error": "Error salveguardante le version provisori",
+	"drafts-enable": "Activar le function pro salveguardar un version provisori in le formulario de modification",
+	"prefs-extension-drafts": "Versiones provisori",
+	"tooltip-drafts-save": "Salveguardar como version provisori",
+	"apierror-mustbeloggedin-save-drafts": "Tu debe aperir session pro salveguardar versiones provisori.",
+	"apihelp-savedrafts-description": "Salveguardar un version provisori.",
+	"apihelp-savedrafts-summary": "Salveguardar un version provisori.",
+	"apihelp-savedrafts-param-id": "Le ID del version provisori.",
+	"apihelp-savedrafts-param-drafttoken": "Token de version provisori.",
+	"apihelp-savedrafts-param-title": "Titulo provisori.",
+	"apihelp-savedrafts-param-section": "Indice del section del pagina in modification.",
+	"apihelp-savedrafts-param-starttime": "Hora de initio del version provisori.",
+	"apihelp-savedrafts-param-edittime": "Hora de modification del version provisori.",
+	"apihelp-savedrafts-param-scrolltop": "Le scrollTop del quadro de texto.",
+	"apihelp-savedrafts-param-text": "Texto provisori.",
+	"apihelp-savedrafts-param-summary": "Summario provisori.",
+	"apihelp-savedrafts-param-minoredit": "Valor boolean indicante si le version provisori es un modification minor."
+}

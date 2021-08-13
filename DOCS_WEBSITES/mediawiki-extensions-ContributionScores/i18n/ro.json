@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"AlexZaim",
+			"Firilacroco",
+			"KlaudiuMihaila",
+			"Minisarm",
+			"Stelistcristi"
+		]
+	},
+	"contributionscores": "Punctaje contribuții",
+	"contributionscores-desc": "Interoghează baza de date a wikiului pentru a găsi cel mai mare [[Special:ContributionScores|volum de contribuții ale unui utilizator]]",
+	"contributionscores-info": "Scorul măsoară în primul rând paginile unic modificate, cu considerație pentru volumul ridicat de modificări.",
+	"contributionscores-top": "(primii $1)",
+	"contributionscores-days": "{{PLURAL:$1|Ultima zi|Ultimele $1 zile}}",
+	"contributionscores-allrevisions": "Clasamentul tuturor timpurilor",
+	"contributionscores-score": "Scor",
+	"contributionscores-pages": "Pagini",
+	"contributionscores-changes": "Modificări",
+	"contributionscores-username": "Nume de utilizator",
+	"contributionscores-invalidusername": "Nume de utilizator incorect",
+	"contributionscores-invalidmetric": "Metrică incorectă"
+}

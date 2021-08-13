@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Siebrand"
+		]
+	},
+	"emailcapture-failure": "Je e-mailadres is '''niet''' bevestigd.",
+	"emailcapture-already-confirmed": "Je e-mailadres is al bevestigd.",
+	"emailcapture-response-body": "Hoi!\n\nBedankt voor je interesse in het verbeteren van {{SITENAME}}.\n\nVolg deze koppeling om je e-mailadres te bevestigen:\n$1\n\nJe kunt ook deze koppeling volgen:\n$2\n\nEn daar de volgende bevestigingscode invoeren:\n$3\n\nWe nemen binnenkort contact met je op over hoe u kunt helpen {{SITENAME}} te verbeteren.\n\nAls je niet hebt gevraagd om dit bericht, negeer deze e-mail dan en dan krijg je geen e-mail meer van ons.",
+	"emailcapture-success": "Bedankt!\n\nJe e-mailadres is bevestigd.",
+	"emailcapture-instructions": "Voer de code uit je e-mail in om je e-mailadres te bevestigen en klik daarna op \"{{int:emailcapture-submit}}\"."
+}

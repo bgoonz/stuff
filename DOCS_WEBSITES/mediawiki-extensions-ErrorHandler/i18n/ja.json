@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fryed-peach",
+			"Hosiryuhosi",
+			"Rxy",
+			"Shirayuki"
+		]
+	},
+	"errorhandler-desc": "MediaWiki 用のエラーハンドラー",
+	"errorhandler-errors": "エラー:",
+	"errorhandler-error-fatal": "致命的エラー",
+	"errorhandler-error-warning": "警告",
+	"errorhandler-error-parse": "パーサーエラー",
+	"errorhandler-error-notice": "注意",
+	"errorhandler-error-deprecated": "非推奨",
+	"errorhandler-error-core-error": "コアエラー",
+	"errorhandler-error-core-warning": "コア警告",
+	"errorhandler-error-compile-error": "コンパイルエラー",
+	"errorhandler-error-compile-warning": "コンパイル警告",
+	"errorhandler-error-user-error": "ユーザーエラー",
+	"errorhandler-error-user-warning": "ユーザー警告",
+	"errorhandler-error-user-notice": "ユーザー注意",
+	"errorhandler-error-user-deprecated": "ユーザー非推奨",
+	"errorhandler-error-strict": "厳格基準",
+	"errorhandler-error-recoverable": "捕捉可能な致命的エラー",
+	"errorhandler-msg-text": "$1 : $2 (ファイル $3、行 $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> (ファイル <b>$3</b>、行 <b>$4</b>)",
+	"errorhandler-trace": "トレース:",
+	"errorhandler-trace-line": "$1 (行 $2): $3",
+	"errorhandler-trace-line-internal": "[内部関数]: $1"
+}

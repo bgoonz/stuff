@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ooswesthoesbes",
+			"Siebrand"
+		]
+	},
+	"editsubpages-desc": "Geeft beheerders de mogelijkheid een pagina en alle subpagina's van die pagina te deblokkeren voor anoniem bewerken via [[MediaWiki:Unlockedpages]]",
+	"unlockedpages": " #<!-- deze regel niet wijzigen --><pre>\n# Zet pagina's die u wilt vrijgeven hieronder als volgt:\n# * paginanaam\n# Vrijgegeven pagina's moeten als ongenummerde lijst worden toegevoegd,\n# anders worden ze genegeerd. Alle overige tekst wordt behandeld als\n# Opmerkingen. Paginanamen kunnen [[link|koppeling]]en zijn, en zijn hoofdlettergevoelig.\n# Overlegpagina's worden automatisch vrijgegeven voor hun bijbehorende\n# pagina's. Zie https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages voor\n# meer informatie.\n  #</pre><!-- deze regel niet wijzigen -->"
+}

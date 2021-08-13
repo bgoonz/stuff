@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Glavkos",
+			"Omnipaedista",
+			"ZaDiak"
+		]
+	},
+	"deletebatch-caption": "Λίστα σελίδων:",
+	"deletebatch-title": "Διαγραφή δέσμης",
+	"deletebatch-link-back": "Επιστροφή στην ειδική σελίδα",
+	"deletebatch-as": "Τρέξιμο του σκριπτ ως:",
+	"deletebatch-or": "<strong>ή</strong>",
+	"deletebatch-delete": "Διαγραφή",
+	"deletebatch-page": "Σελίδες που θα διαγραφούν:",
+	"deletebatch-processing-from-file": "διαγραφή σελίδων που αναφέρονται στο αρχείο",
+	"deletebatch-file-missing": "Δεν είναι δυνατή η ανάγνωση του αρχείου",
+	"deletebatch-select-yourself": "Εσείς"
+}

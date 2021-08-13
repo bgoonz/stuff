@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kandar"
+		]
+	},
+	"right-disableaccount": "Tumpurkeun akun",
+	"disableaccount": "Tumpurkeun akun pamaké",
+	"disableaccount-user": "Sandiasma:",
+	"disableaccount-mustconfirm": "Anjeun kudu mastikeun bener-bener rék numpurkeun ieu akun.",
+	"disableaccount-nosuchuser": "Akun pamaké \"$1\" teu aya.",
+	"disableaccount-success": "Akun pamaké \"$1\" geus ditumpurkeun salilana."
+}

@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"EugeneZelenko",
+			"Jim-by",
+			"Red Winged Duck",
+			"Renessaince",
+			"Zedlik"
+		]
+	},
+	"confirmaccount-newrequests": "Чакаецца апрацоўка '''$1'''\n[[Special:ConfirmAccounts|{{PLURAL:$1|запыту на стварэньне рахунку|запытаў на стварэньне рахунку|запытаў на стварэньне рахунку}}]]. '''Зьвярніце Вашую ўвагу!'''",
+	"requestaccount-loginnotice": "Каб атрымаць рахунак, Вам неабходна '''[[Special:RequestAccount|падаць запыт]]'''.",
+	"action-confirmaccount": "праверку і пацьверджаньне рахункаў",
+	"right-confirmaccount": "прагляд [[Special:ConfirmAccounts|запытаў на стварэньне рахункаў]]",
+	"action-requestips": "прагляд IP-адрасоў аўтараў запытаў пры апрацоўцы запытаных рахункаў",
+	"right-requestips": "прагляд IP-адрасоў з якіх паступалі запыты на стварэньне рахункаў",
+	"action-lookupcredentials": "прагляд уліковых зьвестак удзельніка",
+	"right-lookupcredentials": "прагляд [[Special:UserCredentials|пасьведчаньняў ўдзельнікаў]]"
+}

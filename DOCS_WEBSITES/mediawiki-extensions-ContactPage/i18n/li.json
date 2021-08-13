@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aelske",
+			"DannyS712",
+			"Ooswesthoesbes",
+			"Pahles"
+		]
+	},
+	"contactpage": "Kóntakpaasj",
+	"contactpage-desc": "[[Special:Contact|Kóntakformuleer veur bezeuker]]",
+	"contactpage-title": "Kóntak",
+	"contactpage-pagetext": "Gebroek 't óngerstäöndje formeleer óm kóntak mit ós óp te nömme.",
+	"contactpage-legend": "Sjik e-mail",
+	"contactpage-defsubject": "Kóntakberich",
+	"contactpage-subject-and-sender": "$1 (ven $2)",
+	"contactpage-subject-and-sender-withip": "$1 (van $2 op $3)",
+	"contactpage-fromname": "Diene naam:",
+	"contactpage-fromaddress": "Die-t e-mailadres: *",
+	"contactpage-formfootnotes": "(nuuedig wen se 'n antjwaord wils óntvange)",
+	"contactpage-includeip": "Sjik mien IP-adres mit in dit berich.",
+	"contactpage-usermailererror": "Foutmeljing biej 't zenje: $1",
+	"contactpage-captcha-error": "CAPTCHA-fout",
+	"contactpage-config-error-title": "Kóntakformeleerfout",
+	"contactpage-config-error": "E kóntakformeleer is neet of ónjuus ingestèld veur dees pagina."
+}

@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"El libre",
+			"Papapep",
+			"SMP"
+		]
+	},
+	"right-disableaccount": "Desactivar comptes",
+	"disableaccount": "Deshabilita un compte d'usuari/a",
+	"disableaccount-user": "Nom d'usuari/a :",
+	"disableaccount-confirm": "Desactivació d'aquest compte d'usuari.\nL'usuari no podrà entrar al seu compte, recuperar la contrasenya o rebre notificacions per correu electònic.\nSi l'usuari està fent servir el compte actualment serà immediatament desconnectat.\n''Tingueu en compte que la desactivació d'un compte no és una operació reversible sense la intervenció d'algú amb accés al servidor del sistema.''",
+	"disableaccount-mustconfirm": "Has de confirmar que vols desactivar aquest compte.",
+	"disableaccount-nosuchuser": "El compte d'usuari/a \"$1\" no existeix.",
+	"disableaccount-success": "S'ha inhabilitat permanentment el compte d'usuari/a \"$1\"."
+}

@@ -1,3 +1,0 @@
-foo
-
-Fatal error: Call to undefined method stdClass::fatalError() in %s/bug63066.php on line 5

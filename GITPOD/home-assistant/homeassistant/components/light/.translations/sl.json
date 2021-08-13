@@ -1,8 +1,0 @@
-{
-  "device_automation": {
-    "trigger_type": {
-      "turn_off": "{name} izklopljeno",
-      "turn_on": "{name} vklopljeno"
-    }
-  }
-}

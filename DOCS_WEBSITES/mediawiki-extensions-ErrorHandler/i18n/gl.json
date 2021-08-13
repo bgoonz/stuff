@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"errorhandler-desc": "Erro do manipulador de MediaWiki",
+	"errorhandler-errors": "Erros:",
+	"errorhandler-error-fatal": "Erro fatal",
+	"errorhandler-error-warning": "Aviso",
+	"errorhandler-error-parse": "Erro de análise",
+	"errorhandler-error-notice": "Nota",
+	"errorhandler-error-deprecated": "Obsoleto",
+	"errorhandler-error-core-error": "Erro central",
+	"errorhandler-error-core-warning": "Aviso central",
+	"errorhandler-error-compile-error": "Erro de recompilación",
+	"errorhandler-error-compile-warning": "Aviso de recompilación",
+	"errorhandler-error-user-error": "Erro de usuario",
+	"errorhandler-error-user-warning": "Aviso de usuario",
+	"errorhandler-error-user-notice": "Nota de usuario",
+	"errorhandler-error-user-deprecated": "Usuario desaconsellado",
+	"errorhandler-error-strict": "Estándares estritos",
+	"errorhandler-error-recoverable": "Erro fatal recuperable",
+	"errorhandler-msg-text": "$1 : $2 en $3 (liña $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> en <b>$3</b> (liña <b>$4</b>)",
+	"errorhandler-trace": "trazo:",
+	"errorhandler-trace-line": "$1 (liña $2): $3",
+	"errorhandler-trace-line-internal": "[función interna]: $1"
+}

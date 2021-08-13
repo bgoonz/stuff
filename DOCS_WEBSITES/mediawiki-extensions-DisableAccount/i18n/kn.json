@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"VASANTH S.N.",
+			"రహ్మానుద్దీన్"
+		]
+	},
+	"disableaccount-desc": "ಒಬ್ಬನ ಖಾತೆಯನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲು ನಿರ್ವಾಹಕರಿಗೆ ಅನುಮತಿಸುತ್ತದೆ",
+	"right-disableaccount": "ಖಾತೆಗಳನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸು",
+	"disableaccount": "ಬಳಕೆದಾರ ಖಾತೆಯನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸು",
+	"disableaccount-user": "ಬಳಕೆದಾರರ ಹೆಸರು:",
+	"disableaccount-mustconfirm": "ಈ ಖಾತೆಯನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲು ನೀವು ಇಚ್ಛಿಸುವುದಾದರೆ ನೀವು ದೃಢಪಡಿಸಬೇಕು",
+	"disableaccount-nosuchuser": "ಬಳಕೆದಾರ ಖಾತೆ \"$1\"ಅಸ್ತಿತ್ವದಲ್ಲಿ ಇಲ್ಲ.",
+	"disableaccount-success": "ಬಳಕೆದಾರ ಖಾತೆ\"$1\" ಯು ಖಾಯಂ ಆಗಿ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲ್ಪಟ್ಟಿತು."
+}

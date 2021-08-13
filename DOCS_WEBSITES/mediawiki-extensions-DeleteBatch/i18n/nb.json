@@ -1,0 +1,38 @@
+{
+	"@metadata": {
+		"authors": [
+			"Danmichaelo",
+			"Harald Khan",
+			"Jon Harald Søby",
+			"Nghtwlkr"
+		]
+	},
+	"deletebatch": "Slett mange sider",
+	"deletebatch-desc": "[[Special:DeleteBatch|Slett mange sider]]",
+	"deletebatch-help": "Slett en serie av sider.\nDu kan også utføre en enkel sletting, eller slette sider listet opp i en fil.\nVelg en bruker som skal vises i slettingsloggen.\nEn opplastet fil må inneholde navnet på siden, og kan også ha en valgfri slettingsgrunn skilt fra tittelen med «|».",
+	"deletebatch-caption": "Sideliste:",
+	"deletebatch-default-reason": "Standard sletteårsaker:",
+	"deletebatch-extensionname": "Batchsletting",
+	"deletebatch-title": "Slett serie",
+	"deletebatch-link-back": "Gå tilbake til spesialsiden",
+	"deletebatch-as": "Kjør skriptet som:",
+	"deletebatch-both-modes": "Velg én side eller en liste over sider.",
+	"deletebatch-or": "<strong>eller</strong>",
+	"deletebatch-delete": "Slett",
+	"deletebatch-page": "Sider som skal slettes:",
+	"deletebatch-processing-from-file": "sletter sider som listes i filen",
+	"deletebatch-processing-from-form": "sletter sider som listes i skjemaet",
+	"deletebatch-omitting-nonexistent": "Utelater den ikke-eksisterende siden $1.",
+	"deletebatch-omitting-invalid": "Utelater den ugyldige siden $1.",
+	"deletebatch-file-bad-format": "Filen bør inneholde ren tekst",
+	"deletebatch-file-missing": "Klarte ikke lese filen",
+	"deletebatch-select-script": "slett sideskript",
+	"deletebatch-select-yourself": "Du",
+	"deletebatch-no-page": "Vennligst oppgi minst én side å slette eller velg en fil med en liste av sider.",
+	"deletebatch-system-username": "Sideslettingsskript",
+	"action-deletebatch": "masseslette sider",
+	"right-deletebatch": "Masseslett sider",
+	"action-deletebatch-spoof": "masseslette sider som «Delete page script»",
+	"right-deletebatch-spoof": "Massesletting av sider som «Sideslettingsskript»",
+	"deletebatch-deleting-file-only": "Filbeskrivelsessiden $1 finnes ikke; sletter bare filen."
+}

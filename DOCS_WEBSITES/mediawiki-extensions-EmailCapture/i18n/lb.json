@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robby",
+			"Soued031"
+		]
+	},
+	"emailcapture": "E-Mail-Iwwerpréiwung",
+	"emailcapture-desc": "Mailadressen erfaassen, an de Benotzer erlabe fir ze per Mail ze validéieren",
+	"emailcapture-failure": "Är E-Mail gouf '''net''' confirméiert.",
+	"emailcapture-invalid-code": "Net valabele Confirmatiounscode.",
+	"emailcapture-already-confirmed": "Är E-Mailadress gouf scho confirméiert.",
+	"emailcapture-response-subject": "{{SITENAME}} Mail-Confirmatioun",
+	"emailcapture-response-body": "Bonjour! \n\nMerci fir Ären Interessie fir {{SITENAME}} ze verbesseren.\n\nHuelt Iech wgl. een Ament Zäit fir Är E-Mailadress ze confirméieren, andeem Dir op dëse Link klickt:\n$1\n\nDir kënnt och dës Säit besichen:\n$2\n\nGitt do dëse Confirmatiouns-Code an:\n$3\n\nMir mellen eis geschwënn, fir Iech ze soe, wéi Dir hëllefe kënnt fir {{SITENAME}} ze verbesseren.\n\nWann Dir dës Ufro net ausgeléist hutt, ignoréiert dës E-Mail einfach. Mir schécken Iech dann och näischt méi.",
+	"emailcapture-success": "Merci!\n\nÄr E-Mailadress gouf confirméiert ginn.",
+	"emailcapture-instructions": "Fir d'Mailadress ze confirméieren, gitt de Code an deen Dir per Mail geschéckt kritt hutt a klickt \"{{int:emailcapture-submit}}\".",
+	"emailcapture-verify": "Iwwerpréiwungs-Code:",
+	"emailcapture-submit": "E-Mail-Adress iwwerpréifen"
+}

@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"emailcapture": "Потврда на е-пошта",
+	"emailcapture-desc": "Заведување на е-поштенски адреси што корисниците можат да ги потврдат преку порака",
+	"emailcapture-failure": "Вашата е-пошта '''не''' е потврдена.",
+	"emailcapture-invalid-code": "Неважечки потврден код.",
+	"emailcapture-already-confirmed": "Вашата е-поштенска адреса е веќе потврдена.",
+	"emailcapture-response-subject": "{{SITENAME}} — Потврда на е-пошта",
+	"emailcapture-response-body": "Здраво!\n\nВи благодариме што изразивте интерес да помогнете во развојот на {{SITENAME}}.\n\nПотврдете ја вашата е-пошта на следнава врска: \n\n$1\n\nМожете да ја посетите и страницата:\n\n$2\n\nВнесете го следниов потврден кон:\n\n$3\n\nНабргу ќе ви пишеме како можете да помогнете во подобрувањето на {{SITENAME}}.\n\nАко го немате побарано ова, занемарате ја поракава, и повеќе ништо нема да ви испраќаме.",
+	"emailcapture-success": "Ви благодариме!\n\nВашата е-пошта е потврдена.",
+	"emailcapture-instructions": "За да ја потврдите вашата е-пошта, внесете го кодот што ви го испративме и стиснете на „{{int:emailcapture-submit}}“.",
+	"emailcapture-verify": "Потврден код:",
+	"emailcapture-submit": "Потврди е-пошта",
+	"apihelp-emailcapture-description": "Заведи е-пошта",
+	"apihelp-emailcapture-summary": "Заведи е-пошта",
+	"apihelp-emailcapture-param-email": "Е-пошта за заведување",
+	"apihelp-emailcapture-param-info": "Дополнителни податоци за заведување, обично структурирани податоци кодирани во JSON"
+}

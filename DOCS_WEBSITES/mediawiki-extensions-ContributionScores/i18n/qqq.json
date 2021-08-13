@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby",
+			"JtFuruhata",
+			"Kalan",
+			"Liuxinyu970226",
+			"Mormegil",
+			"Purodha",
+			"Raymond",
+			"Shirayuki",
+			"Tacsipacsi"
+		]
+	},
+	"contributionscores": "{{doc-special|ContributionScores}}",
+	"contributionscores-desc": "{{desc|url=//www.mediawiki.org/wiki/Extension:Contribution_Scores|name=Contribution Scores}}",
+	"contributionscores-info": "see https://github.com/wikimedia/mediawiki-extensions-ContributionScores/blob/master/ContributionScores_body.php\n\n:COUNT(DISTINCT rev_page) AS page_count\n:COUNT(rev_id) AS rev_count\n:page_count+SQRT(rev_count-page_count)*2 AS wiki_rank",
+	"contributionscores-top": "Second part of the headings of [[Special:ContributionScores]].\n\nPLURAL is supported, but not used by the English original message.\n\nParameters:\n* $1 - limit value. Default value: 50 or 10\n{{Identical|Top}}",
+	"contributionscores-days": "Heading of [[Special:ContributionScores]].\n\nIf the number of days is not defined, {{msg-mw|Contributionscores-allrevisions}} is used.\n\nParameters:\n* $1 - number of days",
+	"contributionscores-allrevisions": "Used as a header of [[Special:ContributionScores]].\n\nSee also:\n* {{msg-mw|Contributionscores-days}}\n{{Identical|All time}}",
+	"contributionscores-score": "Used as column header of the table.\n{{Related|Contributionscores-score}}\n{{Identical|Score}}",
+	"contributionscores-rank": "{{Related|Contributionscores-score}}\n{{Identical|Rank}}",
+	"contributionscores-pages": "{{Related|Contributionscores-score}}\n{{Identical|Page}}",
+	"contributionscores-changes": "{{Related|Contributionscores-score}}\n{{Identical|Change}}",
+	"contributionscores-username": "{{Related|Contributionscores-score}}\n{{Identical|Username}}",
+	"contributionscores-invalidusername": "Used as error message if the specified username is invalid.\n\nSee example: [[Template:User Score]].\nThis template contains <code><nowiki>{{#cscore:{{PAGENAME}}|score}}</nowiki></code> and its page name is invalid as username.\n\nSee also:\n* {{msg-mw|Contributionscores-invalidmetric}}\n{{Identical|Invalid username}}",
+	"contributionscores-invalidmetric": "Used as error message if the specified metric is invalid.\n\nValid metrics are: score, changes and pages\n\nSee also:\n* {{msg-mw|Contributionscores-invalidusername}}"
+}

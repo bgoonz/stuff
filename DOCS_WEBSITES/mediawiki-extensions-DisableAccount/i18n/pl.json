@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Rail",
+			"Railfail536",
+			"Sp5uhe",
+			"Woytecr"
+		]
+	},
+	"disableaccount-desc": "Umożliwia administratorom wyłączanie poszczególnych kont.",
+	"right-disableaccount": "Wyłączanie kont",
+	"action-disableaccount": "wyłączania kont",
+	"disableaccount": "Wyłącz konto użytkownika",
+	"disableaccount-user": "Nazwa użytkownika",
+	"disableaccount-confirm": "Wyłącz konto użytkownika.\nUżytkownik nie będzie mógł się zalogować, zresetować hasła oraz otrzymywać powiadomień e‐mailem. \nJeśli użytkownik jest obecnie gdziekolwiek zalogowany, zostanie natychmiast wylogowany. \n''Zwróć uwagę, że cofnięcie tej operacji wymagać będzie interwencji administratora systemu.''",
+	"disableaccount-mustconfirm": "Musisz potwierdzić, że chcesz wyłączyć to konto.",
+	"disableaccount-nosuchuser": "Brak konta użytkownika „$1”.",
+	"disableaccount-success": "Konto użytkownika „$1” zostało trwale wyłączone.",
+	"logentry-block-disableaccount": "$1 {{GENDER:$2|zablokował|zablokowała}} konto {{GENDER:$4|$3}}."
+}

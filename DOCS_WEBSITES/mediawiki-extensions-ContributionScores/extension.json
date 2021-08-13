@@ -1,0 +1,52 @@
+{
+	"name": "ContributionScores",
+	"author": "Tim Laqua",
+	"url": "https://www.mediawiki.org/wiki/Extension:Contribution_Scores",
+	"descriptionmsg": "contributionscores-desc",
+	"version": "1.26.0",
+	"type": "specialpage",
+	"requires": {
+		"MediaWiki": ">= 1.34.0"
+	},
+	"SpecialPages": {
+		"ContributionScores": "ContributionScores"
+	},
+	"AutoloadClasses": {
+		"ContributionScores": "src/ContributionScores.php"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "ContributionScores::onParserFirstCallInit"
+	},
+	"MessagesDirs": {
+		"ContributionScores": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"ContribScoreAlias": "ContributionScores.alias.php",
+		"ContribScoreMagic": "ContributionScores.i18n.magic.php"
+	},
+	"config": {
+		"ContribScoreReports": {
+			"value": null,
+			"description": "Each array defines a report - 7,50 is \"past 7 days \" and \"LIMIT 50 \" - Can be omitted."
+		},
+		"ContribScoreIgnoreBlockedUsers": {
+			"value": false,
+			"description": "Set to true to exclude blocked users from the reporting."
+		},
+		"ContribScoreIgnoreBots": {
+			"value": false,
+			"description": "Set to true to exclude bots users from the reporting."
+		},
+		"ContribScoresUseRealName": {
+			"value": false,
+			"description": "Set to true to use real user names when available."
+		},
+		"ContribScoreDisableCache": {
+			"value": false,
+			"description": "Set to true to disable cache for parser function and inclusion of table."
+		}
+	},
+	"manifest_version": 2
+}

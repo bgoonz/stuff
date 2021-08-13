@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"HalanTul"
+		]
+	},
+	"drafts": "Черновиктар",
+	"drafts-desc": "Сирэй [[Special:Drafts|черновиктарын]] сиэрбэргэ уурары сатанар гынар",
+	"drafts-view": "ЧерновиигыКөрүү",
+	"drafts-view-summary": "Бу анал сирэйгэ черновиктар тиһиктэрэ көстөр.\nТуттуллубат черновиктар {{PLURAL:$1|1 күн|$1 күн}} буола-буола сотуллан иһэллэр.",
+	"drafts-view-article": "Сирэй",
+	"drafts-view-existing": "Билигин баар черновиктар",
+	"drafts-view-saved": "Сатанна",
+	"drafts-view-discard": "Бырах/ыраастаа",
+	"drafts-view-nonesaved": "Билигин кэлин туттарга хаалларыллыбыт черновигыҥ суох.",
+	"drafts-view-notice": "Эйиэхэ сирэй $1 турар.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|черновик|черновиктар}}",
+	"drafts-view-warn": "Бу сирэйтэн бардаххына бигэргэтиллибэтэх уларытыыларгын сүтэриэҥ.\nСалгыыгын дуо?",
+	"drafts-save": "Маны черновик быһыытынан хааллар",
+	"drafts-save-save": "Черновигы кэлин туттарга хааллар",
+	"drafts-save-saved": "Хаалларылынна",
+	"drafts-save-saving": "Хаалларыы",
+	"drafts-save-error": "Сатаан хаалларыллыбата",
+	"tooltip-drafts-save": "Харатынан хааллар"
+}

@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lam-ang"
+		]
+	},
+	"eventlogging-desc": "Batayan para iti panangilista kadagiti pasamak manipud iti kodigo ti bangir ti kliente",
+	"eventlogging-invalid-json": "Imbalido a JSON",
+	"eventlogging-revision-id": "Rebision $1",
+	"eventlogging-code-sample-logging-on-server-side": "Panangilista ti PHP",
+	"eventlogging-code-sample-logging-on-client-side": "Panangilista ti JavaScript"
+}

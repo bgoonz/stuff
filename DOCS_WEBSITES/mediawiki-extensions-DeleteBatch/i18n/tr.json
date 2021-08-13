@@ -1,0 +1,38 @@
+{
+	"@metadata": {
+		"authors": [
+			"BaRaN6161 TURK",
+			"Joseph",
+			"Mach",
+			"MuratTheTurkish",
+			"Vito Genovese"
+		]
+	},
+	"deletebatch": "Sayfa gruplarını sil",
+	"deletebatch-desc": "[[Special:DeleteBatch|Bir sayfa grubunu siler]]",
+	"deletebatch-help": "Bir grup sayfayı silin.\nTek bir silme gerçekleştirebilir veya bir dosyada listelenen sayfaları silebilirsiniz.\nSilme günlüklerinde gösterilecek olan bir kullanıcı seçin.\nYüklenen dosyalar sayfa adı ve isteğe bağlı bir neden içermeli ve \"|\" ile ayrılmalıdır.",
+	"deletebatch-caption": "Sayfa listesi:",
+	"deletebatch-default-reason": "Varsayılan silme nedeni:",
+	"deletebatch-title": "Grubu sil",
+	"deletebatch-link-back": "Özel sayfaya geri dön",
+	"deletebatch-as": "Betiği şu şekilde çalıştır:",
+	"deletebatch-both-modes": "Lütfen belirtilen bir sayfa veya verilen bir sayfa listesi seçin.",
+	"deletebatch-or": "<strong>veya</strong>",
+	"deletebatch-delete": "Sil",
+	"deletebatch-page": "Silinecek sayfalar:",
+	"deletebatch-processing-from-file": "dosyada listelenen sayfaları silme",
+	"deletebatch-processing-from-form": "formda listelenen sayfaları silme",
+	"deletebatch-omitting-nonexistent": "Mevcut olmayan $1 sayfası atlanıyor.",
+	"deletebatch-omitting-invalid": "Geçersiz olan $1 sayfası atlanıyor.",
+	"deletebatch-file-bad-format": "Dosya düz metin olmalı.",
+	"deletebatch-file-missing": "Verilen dosya okunamıyor.",
+	"deletebatch-select-script": "Sayfa betiğini sil",
+	"deletebatch-select-yourself": "Siz",
+	"deletebatch-no-page": "Sayfa listesini içeren bir sayfayı silmek ya da seçmek için lütfen en az bir sayfa belirtin.",
+	"deletebatch-system-username": "Betik sayfasını sil",
+	"action-deletebatch": "toplu sayfaları sil",
+	"right-deletebatch": "Toplu sayfaları sil",
+	"action-deletebatch-spoof": "toplu sayfaları \"Betik sayfasını sil\" olarak sil",
+	"right-deletebatch-spoof": "Toplu sayfaları \"Betik sayfasını sil\" olarak sil",
+	"deletebatch-deleting-file-only": "Dosya açıklaması sayfası $1 mevcut değil; yalnızca gerçek dosyayı silmek\nBu işlem kaydedilmeyecek."
+}

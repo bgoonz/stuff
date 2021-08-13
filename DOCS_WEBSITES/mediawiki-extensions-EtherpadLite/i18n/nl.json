@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"SPQRobin",
+			"Siebrand",
+			"Southparkfan"
+		]
+	},
+	"etherpadlite-desc": "Voegt de parsertag &lt;eplite&gt; toe om één of meer pagina's uit Etherpad Lite toe te voegen aan een pagina die lokaal of extern gehost worden op één of meerdere servers",
+	"etherpadlite-tracking-category": "Pagina's met een ingevoegde Etherpad",
+	"etherpadlite-tracking-category-desc": "De pagina sluit een Etherpad in met het label <code>&lt;eplite&gt;</code>.",
+	"etherpadlite-invalid-pad-url": "\"$1\" is geen geldige URL voor Etherpad Lite of een padnaam.",
+	"etherpadlite-url-is-not-whitelisted": "\"$1\" staat niet in de witte lijst voor Etherpad Lite-servers. {{PLURAL:$3|$2 is de enige server die gebruikt kan worden|De volgende servers kunnen gebruikt worden: $2}}.",
+	"etherpadlite-empty-whitelist": "\"$1\" staat niet in de witte lijst voor Etherpad Lite-servers. Er zijn op het moment geen servers die gebruikt kunnen worden.",
+	"etherpadlite-pad-used-more-than-once": "De pad \"$1\" wordt al gebruikt op deze pagina. U kunt meerdere pads op een pagina toevoegen, maar elke pad slechts één keer."
+}

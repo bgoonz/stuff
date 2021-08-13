@@ -1,0 +1,27 @@
+<div id="contacts">
+{{#contacts}}
+	<table class="person">
+		<tr>
+			<td class="name">{{short_title}} {{name}}</td>
+		</tr>
+		{{#phone}}
+			<tr>
+				<td>Phone: {{.}}</td>
+			</tr>
+		{{/phone}}
+		{{#twitter}}
+			<tr>
+				<td>Twitter: <a target="_blank" href="http://twitter.com/{{.}}">@{{.}}</a></td>
+			</tr>
+		{{/twitter}}
+		{{#contactform}}
+			<tr>
+				<td><a href="{{.}}" target="_blank">Contact form</a></td>
+			</tr>
+		{{/contactform}}
+		<tr>
+			<td><div id="shareOptions" class="actionDiv"><p>Done? Tell the world!</p><div><div class="social"><a href="https://www.facebook.com/sharer.php?src=sp&u=https%3A%2F%2Fmeta.wikimedia.org%2Fwiki%2FSpecial%3ANetNeutrality" style="text-decoration: none"><img src="//upload.wikimedia.org/wikipedia/commons/2/2a/WP_SOPA_sm_icon_facebook_dedede.png" height="33" width="33" border="0"/></a><br/><a href="https://www.facebook.com/sharer.php?src=sp&u=https%3A%2F%2Fmeta.wikimedia.org%2Fwiki%2FSpecial%3ANetNeutrality" style="text-decoration: none">Facebook</a></div><div class="social"><a href="https://twitter.com/intent/tweet?text=I+just+contacted+my+state+representative+in+defense+of+net+neutrality.+Find+out+how+you+can+get+involved+right+now:+https://meta.wikimedia.org/wiki/Special:NetNeutrality" style="text-decoration: none"><img src="//upload.wikimedia.org/wikipedia/foundation/4/45/WP_SOPA_sm_icon_twitter_dedede.png" height="33" width="33" border="0"/></a><br/><a href="https://twitter.com/intent/tweet?text=I+just+contacted+my+state+representative+in+defense+of+net+neutrality.+Find+out+how+you+can+get+involved+right+now:+https://meta.wikimedia.org/wiki/Special:NetNeutrality" style="text-decoration: none">Twitter</a></div></div><div style="clear: both;"></div><hr/></div></td>
+		</tr>
+	</table>
+{{/contacts}}
+</div>

@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cwlin0416",
+			"Justincheng12345",
+			"Kly",
+			"LNDDYL"
+		]
+	},
+	"eventlogging-desc": "可由用戶端程式碼記錄事件的架構",
+	"eventlogging-invalid-json": "無效的 JSON",
+	"eventlogging-revision-id": "修訂 $1",
+	"eventlogging-code-sample-logging-on-server-side": "PHP 紀錄",
+	"eventlogging-code-sample-module-setup-json": "用於 JavaScript 日誌的 extension.json 設定",
+	"eventlogging-code-sample-logging-on-client-side": "JavaScript 日誌",
+	"eventlogging-error-move-source": "架構頁面不可被重新命名",
+	"eventlogging-error-move-destination": "頁面不可被重新命名為架構頁面"
+}

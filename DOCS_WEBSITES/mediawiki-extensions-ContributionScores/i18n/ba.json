@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Assele",
+			"Haqmar",
+			"Sagan"
+		]
+	},
+	"contributionscores": "Индергән өлөштәрҙе баһалау",
+	"contributionscores-desc": "Мәғлүмәттәр базаһынан [[Special:ContributionScores|иң ҙур өлөш индергән ҡатнашыусыларҙы]] билдәләй",
+	"contributionscores-info": "Баһа түбәндәге өлөштәрҙе ҡушыу аша иҫәпләнә:\n* 1 мәрәй — һәр айырым битте мөхәррирләү өсөн;\n* 2 * ( (дөйөм үҙгәртеүҙәр һаны) - (барыһы төрлө биттәр) ) айырмаһының тамыры.\nБаһаны иҫәпләгән ваҡытта, шулай итеп, дөйөм үҙгәртеүҙәр һанына ҡарағында үҙгәртеүҙәрҙең төрлөлөгө ҙурыраҡ йоғонто яһай.",
+	"contributionscores-top": "(Тәүге $1)",
+	"contributionscores-days": "{{PLURAL:$1|1=Һуңғы көн}}",
+	"contributionscores-allrevisions": "Бөтәһе",
+	"contributionscores-score": "Баһа",
+	"contributionscores-rank": "Ранг",
+	"contributionscores-pages": "Биттәр",
+	"contributionscores-changes": "Үҙгәртеүҙәр",
+	"contributionscores-username": "Ҡатнашыусы исеме",
+	"contributionscores-invalidusername": "Ҡатнашыусы исеме дөрөҫ түгел",
+	"contributionscores-invalidmetric": "Метрика дөрөҫ түгел"
+}

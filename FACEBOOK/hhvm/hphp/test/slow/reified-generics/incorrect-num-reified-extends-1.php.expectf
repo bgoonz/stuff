@@ -1,3 +1,0 @@
-Fatal error: Uncaught exception 'BadMethodCallException' with message 'Class C requires 1 generics but 2 given' in %s:%d
-Stack trace:
-%A

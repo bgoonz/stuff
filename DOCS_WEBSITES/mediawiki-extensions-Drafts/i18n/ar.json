@@ -1,0 +1,42 @@
+{
+	"@metadata": {
+		"authors": [
+			"Meno25",
+			"OsamaK",
+			"ديفيد"
+		]
+	},
+	"drafts": "مسودات",
+	"drafts-desc": "يضيف القدرة على حفظ نسخ [[Special:Drafts|مسودة]] لصفحة على الخادم",
+	"drafts-view": "عرض المسودة",
+	"drafts-view-summary": "هذه الصفحة الخاصة تعرض قائمة بكل المسودات الموجودة.\nالمسودات غير المستخدمة سيتم التغاضي عنها بعد {{PLURAL:$1|$1 يوم|$1 يوم}} تلقائيا.",
+	"drafts-view-article": "الصفحة",
+	"drafts-view-existing": "المسودات الموجودة",
+	"drafts-view-saved": "محفوظة",
+	"drafts-view-discard": "تجاهل",
+	"drafts-view-nonesaved": "أنت ليس لديك أي مسودات محفوظة في هذا الوقت.",
+	"drafts-view-notice": "أنت لديك $1 لهذه الصفحة.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|مسودة|مسودة}}",
+	"drafts-view-warn": "هل تريد الاستمرار في التنقل بعيدًا عن هذه الصفحة؟ بذلك، ستفقد كافة التغييرات التي لم يتم حفظها في هذه الصفحة.",
+	"drafts-save": "يحفظ هذه كمسودة",
+	"drafts-save-save": "حفظ المسودة",
+	"drafts-save-saved": "محفوظة",
+	"drafts-save-saving": "حفظ",
+	"drafts-save-error": "خطأ أثناء حفظ المسودة",
+	"drafts-enable": "تمكين ميزة لحفظ مسودة في نموذج تحرير",
+	"prefs-extension-drafts": "مسودات",
+	"tooltip-drafts-save": "حفظ كمسودة",
+	"apierror-mustbeloggedin-save-drafts": "يجب تسجيل الدخول لحفظ المسودات.",
+	"apihelp-savedrafts-description": "حفظ مسودة.",
+	"apihelp-savedrafts-summary": "حفظ مسودة.",
+	"apihelp-savedrafts-param-id": "معرف المسودة.",
+	"apihelp-savedrafts-param-drafttoken": "الرمز المميز للمسودة.",
+	"apihelp-savedrafts-param-title": "عنوان المسودة.",
+	"apihelp-savedrafts-param-section": "فهرس قسم الصفحة جارٍ تعديله.",
+	"apihelp-savedrafts-param-starttime": "وقت بدء المسودة.",
+	"apihelp-savedrafts-param-edittime": "وقت تحرير المسودة.",
+	"apihelp-savedrafts-param-scrolltop": "scrollTop صندوق النص.",
+	"apihelp-savedrafts-param-text": "نص المسودة.",
+	"apihelp-savedrafts-param-summary": "ملخص المسودة.",
+	"apihelp-savedrafts-param-minoredit": "بوليان يمثل ما إذا كان المسودة تعديلا طفيفا."
+}

@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aotake",
+			"Fryed-peach",
+			"JtFuruhata",
+			"Schu",
+			"Shirayuki"
+		]
+	},
+	"contributionscores": "貢献得点",
+	"contributionscores-desc": "ウィキデータベースへの[[Special:ContributionScores|貢献度が高い利用者]]の統計",
+	"contributionscores-info": "得点では、編集したページ数を主に評価し、さらに編集回数の多さにも配慮します。",
+	"contributionscores-top": "(上位$1名)",
+	"contributionscores-days": "{{PLURAL:$1|最近1日|最近$1日間}}",
+	"contributionscores-allrevisions": "すべての期間",
+	"contributionscores-score": "得点",
+	"contributionscores-rank": "順位",
+	"contributionscores-pages": "ページ数",
+	"contributionscores-changes": "編集回数",
+	"contributionscores-username": "利用者名",
+	"contributionscores-invalidusername": "無効な利用者名",
+	"contributionscores-invalidmetric": "無効な尺度"
+}

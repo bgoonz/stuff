@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"Assele",
+			"Айбикә",
+			"Мухамадеева"
+		]
+	},
+	"deletebatch": "Биттәр йыйынтығын юйыу.",
+	"deletebatch-desc": "[[Special:DeleteBatch|Биттәр йыйынтығын юйыу]]",
+	"deletebatch-help": "Биттәр йыйынтығын юйыу.\nҺеҙ бер битте юя, йәки файлда килтерелгән битәрҙе юя алаһығыҙ.\nЮйыу яҙмалары журналында күрһәтеләсәк ҡатнашыусыны һайлағыҙ.\nТейәлгән файлдарҙа бит исеме һәм теләк буйынса юйыу сәбәбе һәр юлға \"|\" бүлгесе аша яҙылған буларға тейеш.",
+	"deletebatch-caption": "Биттәр исемлеге:",
+	"deletebatch-title": "Йыйынтыҡты юйыу",
+	"deletebatch-link-back": "Махсус биткә кире ҡайтырға",
+	"deletebatch-as": "Скриптты ошо ҡатнашыусы исеменән ебәрергә:",
+	"deletebatch-both-modes": "Зинһар, бер битте йәки бирелгән биттәр исемлеген һайлағыҙ.",
+	"deletebatch-or": "<strong>йәки</strong>",
+	"deletebatch-delete": "Юйырға",
+	"deletebatch-page": "Юйыла торған биттәр:",
+	"deletebatch-processing-from-file": "файлда һалған биттәрҙе юйыу",
+	"deletebatch-processing-from-form": "форманан биттәрҙе юйыу",
+	"deletebatch-omitting-nonexistent": "$1 булмаған битен ҡалдырыу.",
+	"deletebatch-omitting-invalid": "$1 дөрөҫ булмаған битен ҡалдырыу.",
+	"deletebatch-file-bad-format": "Файлда ябай текст булырға тейеш",
+	"deletebatch-file-missing": "Был файлды уҡып булмай",
+	"deletebatch-select-script": "Биттәрҙе юйыу скрипты",
+	"deletebatch-select-yourself": "Һеҙ",
+	"deletebatch-no-page": "Зинһар, юйыр өсөн кәмендә бер бит йәки биттәр исемлеге менән файл һайлағыҙ.",
+	"right-deletebatch": "Биттәр йыйынтығын юйыу",
+	"deletebatch-deleting-file-only": "$1 файлының һүрәтләү бите юҡ; файлдың үҙен юя алаһығыҙ. Был эшмәкәрлек журналда сағылмаясаҡ."
+}

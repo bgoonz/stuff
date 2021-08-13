@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"AnakngAraw"
+		]
+	},
+	"drafts": "Mga balangkas",
+	"drafts-desc": "Nagdaragdag ng kakayahang makapagsagip ng mga bersyon [[Special:Drafts|ng balangkas]] ng isang pahina sa loob ng serbidor",
+	"drafts-view": "TingnanBalangkas",
+	"drafts-view-summary": "Nagpapakita ang natatanging pahinang ito ng isang talaan ng lahat ng umiiral na mga balangkas.\nKusang itatapon na ang hindi nagagamit na mga balangkas pagkaraan ng {{PLURAL:$1|$1 araw|$1 mga araw}}.",
+	"drafts-view-article": "Pahina",
+	"drafts-view-existing": "Umiiral na mga balangkas",
+	"drafts-view-saved": "Nasagip na",
+	"drafts-view-discard": "Itapon (ibasura)",
+	"drafts-view-nonesaved": "Wala kang nakasagip na kahit na anong mga balangkas sa ngayon.",
+	"drafts-view-notice": "Mayroon kang $1 para sa pahinang ito.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|balangkas|mga balangkas}}",
+	"drafts-view-warn": "Sa pamamagitan ng paglalayag papalayo mula sa pahinang ito, mawawala ang lahat ng hindi nakasagip na mga pagbabago mo para sa pahinang ito.\nNais mo bang magpatuloy?",
+	"drafts-save": "Sagipin ito bilang isang balangkas",
+	"drafts-save-save": "Sagipin ang balangkas",
+	"drafts-save-saved": "Nasagip na",
+	"drafts-save-saving": "Sinasagip",
+	"drafts-save-error": "May kamalian sa pagsasagip ng balangkas",
+	"drafts-enable": "Paganahin ang tampok upang masagip ang isang burador sa loob ng pormularyong pampatnugot",
+	"prefs-extension-drafts": "Mga balangkas",
+	"tooltip-drafts-save": "Sinagip bilang isang balangkas"
+}

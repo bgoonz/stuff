@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras",
+			"Reder"
+		]
+	},
+	"drafts": "Bozze",
+	"drafts-desc": "Aggiunge l'abbilità de reggistrà le versiune de [[Special:Drafts|bozze]] de 'na pàgene sus a 'u server",
+	"drafts-view": "ViewDraft",
+	"drafts-view-summary": "Sta pàgena speciale face vedè 'n'elenghe de tutte le bozze esistende.\nLe bozze non ausate avènene scettate apprisse {{PLURAL:$1|$1 sciurne}} automaticamende.",
+	"drafts-view-article": "Vosce",
+	"drafts-view-existing": "Pruggette esistende",
+	"drafts-view-saved": "Reggistrate",
+	"drafts-view-discard": "Scitte",
+	"drafts-view-nonesaved": "Non ge tène totte le pruggette salvate jndre stù momende.",
+	"drafts-view-notice": "Tu tène $1 pè quèste pàgene.",
+	"drafts-view-notice-link": "$1 {{PLURAL:$1|pruggette|pruggette}}",
+	"drafts-view-warn": "Naviganne lundane da sta pàgene tu pirde tutte le cangiaminde non reggistrate sus a sta pàgene. Vuè ccu condinue?",
+	"drafts-save": "Salve quiste cumme bozze",
+	"drafts-save-save": "Salve 'a bozze",
+	"drafts-save-saved": "Reggistrate",
+	"drafts-save-saving": "Stoche a reggistre",
+	"drafts-save-error": "Errore de salvatagge d'u pruggette",
+	"drafts-enable": "Abbilite 'a funzionalità pe reggistrà 'na bozze jndr'à 'u module de cangiamende",
+	"prefs-extension-drafts": "Bozze",
+	"tooltip-drafts-save": "Salve cumme bozze",
+	"apierror-mustbeloggedin-save-drafts": "Tu a trasé pe reggistrà le bozze.",
+	"apihelp-savedrafts-description": "Reggistre 'na bozze.",
+	"apihelp-savedrafts-summary": "Reggistre 'na bozze.",
+	"apihelp-savedrafts-param-id": "L'ID d'a bozze.",
+	"apihelp-savedrafts-param-drafttoken": "Gettone d'a bozze.",
+	"apihelp-savedrafts-param-title": "Titole d'a bozze.",
+	"apihelp-savedrafts-param-section": "Indice d'a sezione d'a pàgene ca ste avène cangiate.",
+	"apihelp-savedrafts-param-starttime": "L'orarie de inizie d'a bozze.",
+	"apihelp-savedrafts-param-edittime": "L'orarie de fine d'a bozze.",
+	"apihelp-savedrafts-param-scrolltop": "'U scrollTop d'a buatte d'u teste.",
+	"apihelp-savedrafts-param-text": "Teste d'a bozze.",
+	"apihelp-savedrafts-param-summary": "Riepiloghe d'a bozze.",
+	"apihelp-savedrafts-param-minoredit": "Booleane ca dice ce 'a bozze jè 'nu cangiamende stuèdeche."
+}

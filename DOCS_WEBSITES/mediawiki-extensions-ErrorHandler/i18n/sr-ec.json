@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"BadDog",
+			"Михајло Анђелковић"
+		]
+	},
+	"errorhandler-desc": "Управљач грешака за Медијавики",
+	"errorhandler-errors": "Грешке:",
+	"errorhandler-error-fatal": "Фатална грешка",
+	"errorhandler-error-warning": "Упозорење",
+	"errorhandler-error-parse": "Грешка парсера",
+	"errorhandler-error-notice": "Напомена",
+	"errorhandler-error-deprecated": "Застарело",
+	"errorhandler-error-core-error": "Затвори грешку",
+	"errorhandler-error-compile-error": "Грешка приликом компајлирања",
+	"errorhandler-error-compile-warning": "Упозорење приликом компајлирања",
+	"errorhandler-error-user-error": "Корисничка грешка",
+	"errorhandler-error-user-warning": "Корисничко упозорење",
+	"errorhandler-error-user-notice": "Корисничка напомена",
+	"errorhandler-error-user-deprecated": "Застарели налог",
+	"errorhandler-error-strict": "Строги стандарди",
+	"errorhandler-msg-text": "$1 : $2 у $3 (линија $4)",
+	"errorhandler-msg-html": "<b>$1</b> : <i>$2</i> у <b>$3</b> (линија <b>$4</b>)",
+	"errorhandler-trace": "траг:",
+	"errorhandler-trace-line": "$1 (линија $2): $3",
+	"errorhandler-trace-line-internal": "[интерна функција]: $1"
+}

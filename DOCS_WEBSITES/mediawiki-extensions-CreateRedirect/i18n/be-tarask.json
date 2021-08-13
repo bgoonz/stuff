@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"EugeneZelenko",
+			"Jim-by",
+			"Wizardist"
+		]
+	},
+	"createredirect": "Стварыць перанакіраваньне",
+	"createredirect-desc": "Дадае спэцыяльную старонку для лёгкага [[Special:CreateRedirect|стварэньня перанакіраваньняў]]",
+	"createredirect-error": "Памылка: немагчыма аўтэнтыфікаць.",
+	"createredirect-instructions": "З дапамогай формы ніжэй Вы можаце ствараць старонкі-перанакіраваньні ці замяняць існуючыя старонкі перанакіраваньнямі.",
+	"createredirect-page-title": "Назва старонкі:",
+	"createredirect-redirect-done": "Створанае перанакіраваньне з «$1» на «$2».",
+	"createredirect-redirect-to": "Перанакіраваньне на:",
+	"createredirect-save": "Захаваць старонку"
+}

@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jopparn",
+			"M.M.S.",
+			"Najami",
+			"Per",
+			"WikiPhoenix"
+		]
+	},
+	"deletebatch": "Radera serier av sidor",
+	"deletebatch-desc": "[[Special:DeleteBatch|Radera en serie av sidor]]",
+	"deletebatch-help": "Radera en serie av sidor. Du kan också utföra en ensam radering, eller radera sidor listade i en fil.\nVälj en användare som kommer att visas i raderingsloggen.\nEn uppladdad fil ska innehålla sidnamn och en valfri anledning separerade med ett \"|\"-tecken på varje rad.",
+	"deletebatch-caption": "Sidlista:",
+	"deletebatch-title": "Radera serie",
+	"deletebatch-link-back": "Gå tillbaka till specialsidan",
+	"deletebatch-as": "Kör skriptet som:",
+	"deletebatch-both-modes": "Var god välj antingen en specificerad sida eller en lista över sidor.",
+	"deletebatch-or": "<strong>ELLER</strong>",
+	"deletebatch-delete": "Radera",
+	"deletebatch-page": "Sidor som ska raderas:",
+	"deletebatch-processing-from-file": "raderar sidor listade i filen",
+	"deletebatch-processing-from-form": "raderar sidor listade i formuläret",
+	"deletebatch-omitting-nonexistent": "Utelämna ej existerande sida $1.",
+	"deletebatch-omitting-invalid": "Utelämna ogiltig sida $1.",
+	"deletebatch-file-bad-format": "Filen ska innehålla ren text",
+	"deletebatch-file-missing": "Kan inte läsa filen",
+	"deletebatch-select-script": "radera sidskript",
+	"deletebatch-select-yourself": "du",
+	"deletebatch-no-page": "Var god specificera minst en sida för att radera ELLER välj en fil som innehåller en sidlista.",
+	"right-deletebatch": "Massradera sidor",
+	"deletebatch-deleting-file-only": "Filbeskrivningsidan $1 finns inte, tar endast bort själva filen.\nDenna åtgärd kommer inte att loggas."
+}

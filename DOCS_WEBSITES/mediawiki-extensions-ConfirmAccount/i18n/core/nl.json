@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Annabel",
+			"Esketti",
+			"Mainframe98",
+			"McDutchie",
+			"SPQRobin",
+			"Siebrand"
+		]
+	},
+	"confirmaccount-newrequests": "Er staa{{PLURAL:$1|t|n}} '''$1''' gebruikersaanvraag[[Special:ConfirmAccounts|gebruikersaanvra{{PLURAL:$1|ag|gen}}]] open. '''Uw aandacht is nodig!'''",
+	"requestaccount-loginnotice": "Om een gebruiker te krijgen, moet u '''[[Special:RequestAccount|een aanvraag doen]]'''.",
+	"action-confirmaccount": "accounts te bekijken en te accepteren",
+	"right-confirmaccount": "[[Special:ConfirmAccounts|Wachtrij met gebruikersaanvragen]] bekijken",
+	"action-requestips": "de IP-adressen van aanvragers te bekijken bij het verwerken bij het verwerken van gebruikersaanvragen",
+	"right-requestips": "De IP-adressen van aanvragers bekijken bij het verwerken bij het verwerken van gebruikersaanvragen",
+	"action-lookupcredentials": "gebruikersreferenties te bekijken",
+	"right-lookupcredentials": "[[Special:UserCredentials|gebruikersreferenties]] bekijken"
+}

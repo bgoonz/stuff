@@ -1,3 +1,0 @@
-Warning: Value returned from function f() must be of type C<@int>, C<string> given in %s on line 7
-
-Catchable fatal error: Value returned from async function f() must be of type C, D given in %s on line 7

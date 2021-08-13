@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Moon0319",
+			"PhiLiP",
+			"Roy17",
+			"Shinjiman",
+			"Shirayuki",
+			"Yueman"
+		]
+	},
+	"contributionscores": "貢獻分數",
+	"contributionscores-desc": "根據響wiki數據庫畀出最高嘅[[Special:ContributionScores|用戶貢獻容量]]",
+	"contributionscores-info": "呢個分數係會依主要嘅唯一編輯過嘅頁，同埋考慮高編輯量。",
+	"contributionscores-top": "(最高$1名)",
+	"contributionscores-days": "最近$1日",
+	"contributionscores-allrevisions": "有史以來",
+	"contributionscores-score": "分數",
+	"contributionscores-rank": "等級",
+	"contributionscores-pages": "版",
+	"contributionscores-changes": "更改",
+	"contributionscores-username": "用戶名",
+	"contributionscores-invalidusername": "無效嘅用戶名",
+	"contributionscores-invalidmetric": "無效嘅公制"
+}

@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cwlin0416",
+			"DannyS712",
+			"Gzdavidwong",
+			"Horacewai2",
+			"Kly",
+			"LNDDYL",
+			"Liangent",
+			"Shinjiman",
+			"Waihorace",
+			"Wrightbus"
+		]
+	},
+	"contactpage": "聯絡頁面",
+	"contactpage-desc": "[[Special:Contact|供參觀者使用的聯絡表單]]",
+	"contactpage-title": "聯絡",
+	"contactpage-pagetext": "請使用以下的表單聯絡我們。",
+	"contactpage-legend": "傳送信件",
+	"contactpage-defsubject": "聯絡訊息",
+	"contactpage-subject-and-sender": "$1 (來自 $2)",
+	"contactpage-subject-and-sender-withip": "$1 (來自 $2 位於 $3)",
+	"contactpage-fromname": "您的姓名：",
+	"contactpage-fromaddress": "您的電子郵件地址：",
+	"contactpage-formfootnotes": "(若您想要取得他人回應則必須填寫)",
+	"contactpage-includeip": "在此訊息中引用我的 IP 位址。",
+	"contactpage-usermailererror": "寄信物件回傳錯誤： $1",
+	"contactpage-captcha-error": "CAPTCHA 錯誤",
+	"contactpage-config-error-title": "聯絡表格錯誤",
+	"contactpage-config-error": "聯絡表格未配置或配置有誤。",
+	"contactpage-mustbeloggedin": "請登入來提交聯絡表單。"
+}

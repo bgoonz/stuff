@@ -1,3 +1,0 @@
-
-Warning: %S(glob://%s/../sample_dir/*): failed to open stream: wrapper does not support stream open in %s/test/slow/open_glob.php on line %d
-bool(false)

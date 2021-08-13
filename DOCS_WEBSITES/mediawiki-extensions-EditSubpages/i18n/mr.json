@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kaustubh"
+		]
+	},
+	"editsubpages-desc": "[[MediaWiki:Unlockedpages]] इथे प्रबंधकांना अनामिकरित्या संपादित करण्यासाठी पाने व त्यांची उपपाने असुरक्षित करण्याची परवानगी देते.",
+	"unlockedpages": " #<!-- leave this line alone --><pre>\n# तुम्ही असुरक्षित करू इच्छित असलेली पाने खालीलप्रमाणे लिहा\n# * लेखनाव\n# असुरक्षित करण्यासाठी पानाचे नाव * ने सुरु होणे आवश्यक आहे,\n# बाकी सर्व हे शेरा किंवा सूचना समजले जाईल\n# लेखनाव [[दुव्यांच्या]] स्वरुपात दिलेली चालतील\n# तसेच, लेखाबरोबर चर्चा पाने सुद्धा असुरक्षित होतील\n# अधिक माहितीसाठी https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages पहा\n  #</pre><!-- leave this line alone -->"
+}

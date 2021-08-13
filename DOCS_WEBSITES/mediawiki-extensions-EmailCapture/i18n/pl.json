@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrumps",
+			"Sp5uhe",
+			"Woytecr"
+		]
+	},
+	"emailcapture": "Weryfikacja adresu e‐mailowego",
+	"emailcapture-desc": "Przechowywanie adresów e‐mailowych i umożliwianie użytkownikom sprawdzenie ich poprzez e‐mail",
+	"emailcapture-failure": "Twój adres e‐mail '''nie''' został zweryfikowany.",
+	"emailcapture-invalid-code": "Nieprawidłowy kod potwierdzający.",
+	"emailcapture-already-confirmed": "Twój adres e‐mail został już potwierdzony.",
+	"emailcapture-response-subject": "{{SITENAME}} – weryfikacja adresu e‐mail",
+	"emailcapture-response-body": "Witaj!\n\nDziękujemy za zainteresowanie udoskonalaniem {{GRAMMAR:D.lp|{{SITENAME}}}}.\n\nPoświęć chwilę na potwierdzenie swojego adres e‐mail – kliknij link\n$1\n\nMożesz również odwiedzić\n$2\n\ni wprowadzić kod potwierdzający\n$3\n\nBędziemy nadal współpracować, aby udoskonalić {{GRAMMAR:B.lp|{{SITENAME}}}}.\n\nJeśli to nie Ty spowodowałeś wysłanie tego e‐maila, wystarczy że go zignorujesz – niczego więcej do Ciebie nie wyślemy.",
+	"emailcapture-success": "Dziękujemy!\n\nTwój adres e‐mail został zweryfikowany.",
+	"emailcapture-instructions": "Jeśli chcesz potwierdzić swój adres poczty elektronicznej, wprowadź poniżej kod, który otrzymałeś e‐mailem i kliknij „{{int:emailcapture-submit}}”.",
+	"emailcapture-verify": "Kod weryfikacji",
+	"emailcapture-submit": "Potwierdź adres e‐mailowy"
+}

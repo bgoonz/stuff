@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"ChrisPtDe"
+		]
+	},
+	"drafts": "Brolyons",
+	"drafts-desc": "Apond la possibilitât d’encartar les vèrsions « [[Special:Drafts|brolyons]] » d’una pâge sur lo sèrvor.",
+	"drafts-view": "Vêre lo brolyon",
+	"drafts-view-summary": "Ceta pâge spèciâla liste tôs los brolyons ègzistents.\nLos brolyons inutilisâs seront suprimâs ôtomaticament aprés $1 jorn{{PLURAL:$1||s}}.",
+	"drafts-view-article": "Pâge",
+	"drafts-view-existing": "Brolyons ègzistents",
+	"drafts-view-saved": "Encartâ",
+	"drafts-view-discard": "Abandonar",
+	"drafts-view-nonesaved": "Ora, vos éd encartâ gins de brolyon.",
+	"drafts-view-notice": "Vos avéd $1 por ceta pâge.",
+	"drafts-view-notice-link": "$1 brolyon{{PLURAL:$1||s}}",
+	"drafts-view-warn": "En naveguent en defôr de ceta pâge, vos pèrdréd tôs los changements pas encartâs de ceta pâge.\nVoléd-vos continuar ?",
+	"drafts-save": "Encartar cen coment brolyon",
+	"drafts-save-save": "Encartar lo brolyon",
+	"drafts-save-saved": "Encartâ",
+	"drafts-save-saving": "Encartâjo en cors",
+	"drafts-save-error": "Èrror d’encartâjo du brolyon",
+	"prefs-extension-drafts": "Brolyons",
+	"tooltip-drafts-save": "Encartar coment brolyon"
+}

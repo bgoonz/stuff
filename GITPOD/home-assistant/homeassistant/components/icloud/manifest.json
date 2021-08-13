@@ -1,8 +1,0 @@
-{
-  "domain": "icloud",
-  "name": "Icloud",
-  "documentation": "https://www.home-assistant.io/components/icloud",
-  "requirements": ["pyicloud==0.9.1"],
-  "dependencies": ["configurator"],
-  "codeowners": []
-}

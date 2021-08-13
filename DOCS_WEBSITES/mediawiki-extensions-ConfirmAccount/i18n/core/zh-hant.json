@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cwlin0416",
+			"Kly",
+			"LNDDYL",
+			"Mark85296341",
+			"Simon Shek",
+			"Waihorace"
+		]
+	},
+	"confirmaccount-newrequests": "'''$1''' 個開啟 Email 確認的[[Special:ConfirmAccounts|{{PLURAL:$1|帳號請求}}]]待審中。'''需要您注意！'''",
+	"requestaccount-loginnotice": "要取得個使用者帳號，您一定要'''[[Special:RequestAccount|請求一個]]'''。",
+	"action-confirmaccount": "複查並批准帳戶",
+	"right-confirmaccount": "檢視[[Special:ConfirmAccounts|待審帳戶隊列]]",
+	"right-confirmaccount-notify": "透過電子郵件來被告知有關新批准的帳號請求",
+	"action-requestips": "在處理帳號請求時檢視請求者的 IP 位址",
+	"right-requestips": "在處理帳號請求時檢視請求者的 IP 位址",
+	"action-lookupcredentials": "檢視使用者憑據",
+	"right-lookupcredentials": "檢視[[Special:UserCredentials|使用者憑據]]"
+}

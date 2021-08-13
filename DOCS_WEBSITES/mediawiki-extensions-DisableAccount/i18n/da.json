@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Christian List",
+			"Kaare",
+			"Saederup92",
+			"Sarrus",
+			"Thomsen"
+		]
+	},
+	"disableaccount-desc": "Giver administratorer mulighed for at deaktivere individuelle konti.",
+	"right-disableaccount": "Deaktivere konti",
+	"action-disableaccount": "deaktiver konti",
+	"disableaccount": "Deaktivere en brugerkonto",
+	"disableaccount-user": "Brugernavn:",
+	"disableaccount-confirm": "Deaktiver denne brugerkonto.\nDenne bruger vil ikke være i stand til at logge på, nulstille sin adgangskode eller modtage e-mailnotifikationer.\nHvis brugeren er logget på et sted, vil vedkommende blive logget af øjeblikkeligt.\n''Bemærk at deaktivering af en konto ikke kan fortrydes uden en systemadministrators indgriben.''",
+	"disableaccount-mustconfirm": "Du skal bekræfte, at du ønsker at deaktivere denne konto.",
+	"disableaccount-nosuchuser": "Brugerkontoen \"$1\" findes ikke.",
+	"disableaccount-success": "Brugerkontoen \"$1\" er blevet permanent deaktiveret.",
+	"logentry-block-disableaccount": "$1 {{GENDER:$2|deaktiverede kontoen}} for {{GENDER:$4|$3}}."
+}

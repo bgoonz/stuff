@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"contributionscores": "Puntos de collaboraciones",
+	"contributionscores-desc": "Peñera la base de datos de la wiki pa ver los mayores [[Special:ContributionScores|volumes de collaboración de los usuarios]]",
+	"contributionscores-info": "Les puntuaciones miden principalmente les ediciones de páxines úniques, teniendo en cuenta un volume d'edición altu.",
+	"contributionscores-top": "(Los $1 mayores)",
+	"contributionscores-days": "{{PLURAL:$1|Últimu día|Los últimos $1 díes}}",
+	"contributionscores-allrevisions": "De tolos tiempos",
+	"contributionscores-score": "Puntuación",
+	"contributionscores-rank": "Rangu",
+	"contributionscores-pages": "Páxines",
+	"contributionscores-changes": "Cambios",
+	"contributionscores-username": "Nome d'usuariu",
+	"contributionscores-invalidusername": "Nome d'usuariu inválidu",
+	"contributionscores-invalidmetric": "Métrica inválida"
+}

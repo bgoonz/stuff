@@ -1,0 +1,19 @@
+These is the install file for the Create Page extension.
+
+Extension page on mediawiki.org: https://www.mediawiki.org/wiki/Extension:Create_Page
+
+
+== Requirements ==
+
+Create Page requires:
+
+* MediaWiki 1.18 or above
+* PHP 5.3 or above
+
+== Installation ==
+
+Once you have downloaded the code, place the ''CreatePage'' directory within your MediaWiki
+'extensions' directory. Then add the following code to your [[Manual:LocalSettings.php|LocalSettings.php]] file:
+
+# Create Page
+require_once( "$IP/extensions/CreatePage/CreatePage.php" );

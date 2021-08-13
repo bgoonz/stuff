@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"LNDDYL",
+			"Liangent",
+			"Liuxinyu970226",
+			"Mark85296341"
+		]
+	},
+	"editsubpages-desc": "允許系統管理員透過[[MediaWiki:Unlockedpages]]將一個頁面及其子頁面解除封鎖，以便任何使用者都可以編輯。",
+	"unlockedpages": " #<!-- 本行需要保留 --><pre>\n# 使用這個形式，將您想解除封鎖的頁面寫於下方\n# * 頁面名稱\n# 解除封鎖的頁面必須以星號開頭\n# 否則無效\n# 頁面名稱可以是 [[連結]] 的形式，並且所羅列的頁面名稱對簡繁體敏感\n# 討論頁將會隨著頁面自動解除封鎖\n# 請瀏覽 https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:EditSubpages 以取得更多說明\n #</pre><!-- 本行需要保留 -->"
+}
