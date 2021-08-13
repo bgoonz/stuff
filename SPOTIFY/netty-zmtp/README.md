@@ -111,9 +111,7 @@ java -cp 'target/classes:target/test-classes:target/dependency/*' \
 7s:    7,294,591 messages/s.    (total:   46,336,682)
 ```
 
-
 ### Req/Rep Throughput
-
 
 ```
 java -cp 'target/classes:target/test-classes:target/dependency/*' \

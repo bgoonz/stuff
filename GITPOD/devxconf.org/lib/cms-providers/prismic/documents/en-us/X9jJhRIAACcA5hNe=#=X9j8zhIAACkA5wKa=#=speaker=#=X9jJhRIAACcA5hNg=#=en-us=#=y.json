@@ -1,5 +1,7 @@
 {
-  "name": [{ "type": "heading1", "content": { "text": "Jazmin Sanel", "spans": [] } }],
+  "name": [
+    { "type": "heading1", "content": { "text": "Jazmin Sanel", "spans": [] } }
+  ],
   "bio": [
     {
       "type": "paragraph",
@@ -10,10 +12,14 @@
     }
   ],
   "uid": "jazmin",
-  "title": [{ "type": "heading4", "content": { "text": "Developer", "spans": [] } }],
+  "title": [
+    { "type": "heading4", "content": { "text": "Developer", "spans": [] } }
+  ],
   "twitter": { "url": "https://twitter.com/vercel", "preview": null },
   "github": { "url": "https://github.com/vercel", "preview": null },
-  "company": [{ "type": "heading4", "content": { "text": "Company", "spans": [] } }],
+  "company": [
+    { "type": "heading4", "content": { "text": "Company", "spans": [] } }
+  ],
   "image": {
     "origin": {
       "id": "X9iy5hIAACcA5bFt",
@@ -30,7 +36,10 @@
     "provider": "imgix",
     "thumbnails": {}
   },
-  "talk": { "id": "X9j8vRIAACgA5wJP", "wioUrl": "wio://documents/X9j8vRIAACgA5wJP" },
+  "talk": {
+    "id": "X9j8vRIAACgA5wJP",
+    "wioUrl": "wio://documents/X9j8vRIAACgA5wJP"
+  },
   "name_TYPE": "StructuredText",
   "name_POSITION": 0,
   "bio_TYPE": "StructuredText",

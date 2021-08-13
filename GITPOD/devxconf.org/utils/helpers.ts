@@ -4,11 +4,11 @@ export const isEurope = () => {
 };
 
 export const setIsLoggedIn = () => {
-  localStorage.setItem('isLoggedIn', 'true');
+  localStorage.setItem("isLoggedIn", "true");
 };
 
 export const getIsLoggedIn = () => {
-  if (localStorage.getItem('isLoggedIn') === 'true') {
+  if (localStorage.getItem("isLoggedIn") === "true") {
     return true;
   }
 };

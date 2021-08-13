@@ -2,12 +2,25 @@
   "title": [
     {
       "type": "heading1",
-      "content": { "text": "You Don't Need A Compiler: A Hot Take", "spans": [] }
+      "content": {
+        "text": "You Don't Need A Compiler: A Hot Take",
+        "spans": []
+      }
     }
   ],
   "speakers": [
-    { "speaker": { "id": "X9jQ0hIAACYA5jVk", "wioUrl": "wio://documents/X9jQ0hIAACYA5jVk" } },
-    { "speaker": { "id": "X9jMFBIAACYA5h85", "wioUrl": "wio://documents/X9jMFBIAACYA5h85" } }
+    {
+      "speaker": {
+        "id": "X9jQ0hIAACYA5jVk",
+        "wioUrl": "wio://documents/X9jQ0hIAACYA5jVk"
+      }
+    },
+    {
+      "speaker": {
+        "id": "X9jMFBIAACYA5h85",
+        "wioUrl": "wio://documents/X9jMFBIAACYA5h85"
+      }
+    }
   ],
   "start": "2020-10-27T17:30:00+00:00",
   "end": "2020-10-27T18:10:00+00:00",

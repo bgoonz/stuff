@@ -1,6 +1,6 @@
 ## Foo
 
-*Bacon ipsum dolor* amet pork belly _doner_ rump brisket. [Cupim jerky shoulder][0] ball tip, jowl bacon meatloaf shank kielbasa turducken corned beef beef turkey porchetta.
+_Bacon ipsum dolor_ amet pork belly _doner_ rump brisket. [Cupim jerky shoulder][0] ball tip, jowl bacon meatloaf shank kielbasa turducken corned beef beef turkey porchetta.
 
 ### Doner meatball pork belly andouille drumstick sirloin
 

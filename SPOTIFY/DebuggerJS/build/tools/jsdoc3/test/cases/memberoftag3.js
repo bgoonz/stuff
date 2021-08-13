@@ -6,14 +6,14 @@
 */
 
 /** @class */
-exports.Forest = function(){}
+exports.Forest = function () {};
 var Forest = exports.Forest;
 
 /**
     @class
     @memberof module:terrain
 */
-Forest.prototype.Tree = function() {
-    /** A leaf */
-    this.leaf = 1;
-}
+Forest.prototype.Tree = function () {
+  /** A leaf */
+  this.leaf = 1;
+};

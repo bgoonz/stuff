@@ -1,5 +1,7 @@
 {
-  "name": [{ "type": "heading1", "content": { "text": "Terese Kreka", "spans": [] } }],
+  "name": [
+    { "type": "heading1", "content": { "text": "Terese Kreka", "spans": [] } }
+  ],
   "bio": [
     {
       "type": "paragraph",
@@ -11,11 +13,16 @@
   ],
   "uid": "terese",
   "title": [
-    { "type": "heading4", "content": { "text": "Senior Developer Advocate", "spans": [] } }
+    {
+      "type": "heading4",
+      "content": { "text": "Senior Developer Advocate", "spans": [] }
+    }
   ],
   "twitter": { "url": "https://twitter.com/vercel", "preview": null },
   "github": { "url": "https://github.com/vercel", "preview": null },
-  "company": [{ "type": "heading4", "content": { "text": "Company", "spans": [] } }],
+  "company": [
+    { "type": "heading4", "content": { "text": "Company", "spans": [] } }
+  ],
   "image": {
     "origin": {
       "id": "X9iy6xIAACkA5bGW",
@@ -32,7 +39,10 @@
     "provider": "imgix",
     "thumbnails": {}
   },
-  "talk": { "id": "X9j3OhIAACgA5ujr", "wioUrl": "wio://documents/X9j3OhIAACgA5ujr" },
+  "talk": {
+    "id": "X9j3OhIAACgA5ujr",
+    "wioUrl": "wio://documents/X9j3OhIAACgA5ujr"
+  },
   "name_TYPE": "StructuredText",
   "name_POSITION": 0,
   "bio_TYPE": "StructuredText",

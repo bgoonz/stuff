@@ -1,18 +1,16 @@
 [![Maven Central](https://img.shields.io/maven-central/v/com.spotify/trickle.svg)](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.spotify%22%20trickle*)
 [![License](https://img.shields.io/github/license/spotify/trickle.svg)](LICENSE.txt)
 
-trickle
-=======
+# trickle
 
 A small library for composing asynchronous code. The main reason for it to exist is to make it
 easier to create graphs of interconnected asynchronous calls, pushing the 'worrying about
 concurrency' aspects into the framework rather than mixing it in with the business logic.
 
-NOTE: this project is no longer supported. Feel free to fork it if you like it. Internally, we've 
+NOTE: this project is no longer supported. Feel free to fork it if you like it. Internally, we've
 switched to using CompletionStage/CompletableFuture instead.
 
 # When should I use it?
-
 
 - ~~When you are combining more than 2 asynchronous calls together, and you think the code is hard to read.~~
 - ~~When you want to separate concurrency management aspects (when code does something) from business logic (what it does).~~
@@ -70,7 +68,7 @@ Graph<Artist> artist = Trickle.call(findArtist).with(ARTIST);
 this.output = Trickle.call(combine).with(artist, tracks);
 ```
 
-Note that the ```findTracks``` node has been given a fallback, so an empty list of tracks will 
+Note that the `findTracks` node has been given a fallback, so an empty list of tracks will
 be used if the call to find tracks throws an exception. This way, you can get graceful degradation
 in case of partial failure.
 
@@ -85,15 +83,15 @@ public ListenableFuture<MyOutput> doTheThing(String keyword, String artistName) 
 See [`Examples.java`](src/examples/java/com/spotify/trickle/example/Examples.java) for more examples
 and see the wiki for more in-depth descriptions of the library.
 
-
 # Notes about maturity
 
-We're using Trickle internally at Spotify in core, production-critical services that would break 
+We're using Trickle internally at Spotify in core, production-critical services that would break
 Spotify completely if they failed. This means we have a fairly high degree of confidence that it
 works. It is, however, a young library and you shouldn't be surprised if there are API changes
 in the next few months.
 
 # Code of conduct
+
 This project adheres to the [Open Code of Conduct][code-of-conduct]. By participating, you are expected to honor this code.
 
 [code-of-conduct]: https://github.com/spotify/code-of-conduct/blob/master/code-of-conduct.md

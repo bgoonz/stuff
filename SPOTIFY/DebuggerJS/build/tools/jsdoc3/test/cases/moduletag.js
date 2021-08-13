@@ -5,7 +5,7 @@
 /**
  * @class
  */
-this.Book = function(title) {
-    /** document me */
-    this.title = title;
-}
+this.Book = function (title) {
+  /** document me */
+  this.title = title;
+};

@@ -1,24 +1,65 @@
-CodeMirror.defineMode("go", function(config, parserConfig) {
+CodeMirror.defineMode("go", function (config, parserConfig) {
   var indentUnit = config.indentUnit;
 
   var keywords = {
-    "break":true, "case":true, "chan":true, "const":true, "continue":true,
-    "default":true, "defer":true, "else":true, "fallthrough":true, "for":true,
-    "func":true, "go":true, "goto":true, "if":true, "import":true,
-    "interface":true, "map":true, "package":true, "range":true, "return":true,
-    "select":true, "struct":true, "switch":true, "type":true, "var":true
+    break: true,
+    case: true,
+    chan: true,
+    const: true,
+    continue: true,
+    default: true,
+    defer: true,
+    else: true,
+    fallthrough: true,
+    for: true,
+    func: true,
+    go: true,
+    goto: true,
+    if: true,
+    import: true,
+    interface: true,
+    map: true,
+    package: true,
+    range: true,
+    return: true,
+    select: true,
+    struct: true,
+    switch: true,
+    type: true,
+    var: true,
   };
 
   var atoms = {
-    "true":true, "false":true, "iota":true, "nil":true, "append":true,
-    "cap":true, "close":true, "complex":true, "copy":true, "delete":true, "imag":true,
-    "len":true, "make":true, "new":true, "panic":true, "print":true,
-    "println":true, "real":true, "recover":true
+    true: true,
+    false: true,
+    iota: true,
+    nil: true,
+    append: true,
+    cap: true,
+    close: true,
+    complex: true,
+    copy: true,
+    delete: true,
+    imag: true,
+    len: true,
+    make: true,
+    new: true,
+    panic: true,
+    print: true,
+    println: true,
+    real: true,
+    recover: true,
   };
 
   var blockKeywords = {
-    "else":true, "for":true, "func":true, "if":true, "interface":true,
-    "select":true, "struct":true, "switch":true
+    else: true,
+    for: true,
+    func: true,
+    if: true,
+    interface: true,
+    select: true,
+    struct: true,
+    switch: true,
   };
 
   var isOperatorChar = /[+\-*&^%:=<>!|\/]/;
@@ -70,26 +111,31 @@ CodeMirror.defineMode("go", function(config, parserConfig) {
   }
 
   function tokenString(quote) {
-    return function(stream, state) {
-      var escaped = false, next, end = false;
+    return function (stream, state) {
+      var escaped = false,
+        next,
+        end = false;
       while ((next = stream.next()) != null) {
-        if (next == quote && !escaped) {end = true; break;}
+        if (next == quote && !escaped) {
+          end = true;
+          break;
+        }
         escaped = !escaped && next == "\\";
       }
-      if (end || !(escaped || quote == "`"))
-        state.tokenize = tokenBase;
+      if (end || !(escaped || quote == "`")) state.tokenize = tokenBase;
       return "string";
     };
   }
 
   function tokenComment(stream, state) {
-    var maybeEnd = false, ch;
-    while (ch = stream.next()) {
+    var maybeEnd = false,
+      ch;
+    while ((ch = stream.next())) {
       if (ch == "/" && maybeEnd) {
         state.tokenize = tokenBase;
         break;
       }
-      maybeEnd = (ch == "*");
+      maybeEnd = ch == "*";
     }
     return "comment";
   }
@@ -102,28 +148,34 @@ CodeMirror.defineMode("go", function(config, parserConfig) {
     this.prev = prev;
   }
   function pushContext(state, col, type) {
-    return state.context = new Context(state.indented, col, type, null, state.context);
+    return (state.context = new Context(
+      state.indented,
+      col,
+      type,
+      null,
+      state.context
+    ));
   }
   function popContext(state) {
     var t = state.context.type;
     if (t == ")" || t == "]" || t == "}")
       state.indented = state.context.indented;
-    return state.context = state.context.prev;
+    return (state.context = state.context.prev);
   }
 
   // Interface
 
   return {
-    startState: function(basecolumn) {
+    startState: function (basecolumn) {
       return {
         tokenize: null,
         context: new Context((basecolumn || 0) - indentUnit, 0, "top", false),
         indented: 0,
-        startOfLine: true
+        startOfLine: true,
       };
     },
 
-    token: function(stream, state) {
+    token: function (stream, state) {
       var ctx = state.context;
       if (stream.sol()) {
         if (ctx.align == null) ctx.align = false;
@@ -147,9 +199,10 @@ CodeMirror.defineMode("go", function(config, parserConfig) {
       return style;
     },
 
-    indent: function(state, textAfter) {
+    indent: function (state, textAfter) {
       if (state.tokenize != tokenBase && state.tokenize != null) return 0;
-      var ctx = state.context, firstChar = textAfter && textAfter.charAt(0);
+      var ctx = state.context,
+        firstChar = textAfter && textAfter.charAt(0);
       if (ctx.type == "case" && /^(?:case|default)\b/.test(textAfter)) {
         state.context.type = "}";
         return ctx.indented;
@@ -159,7 +212,7 @@ CodeMirror.defineMode("go", function(config, parserConfig) {
       else return ctx.indented + (closing ? 0 : indentUnit);
     },
 
-    electricChars: "{}:"
+    electricChars: "{}:",
   };
 });
 

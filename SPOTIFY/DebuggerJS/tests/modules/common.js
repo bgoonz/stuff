@@ -5,11 +5,10 @@
  */
 
 /* Modules */
-var fs = require('fs');
-var vm = require('vm');
+var fs = require("fs");
+var vm = require("vm");
 
-(function() {
-
+(function () {
   var alreadyLoaded = {};
 
   /**
@@ -20,8 +19,7 @@ var vm = require('vm');
    *
    * @param {String} path Absolute path to the code file.
    */
-  var runInVm = function(path) {
-
+  var runInVm = function (path) {
     var code = fs.readFileSync(path);
 
     try {
@@ -30,10 +28,9 @@ var vm = require('vm');
         alreadyLoaded[path] = true;
       }
     } catch (exception) {
-      console.error('exception on parsing (%s)', path, exception);
+      console.error("exception on parsing (%s)", path, exception);
       throw exception;
     }
-
   };
 
   /**
@@ -41,7 +38,6 @@ var vm = require('vm');
    *
    */
   module.exports = {
-
     /**
      * Includes a client-side JavaScript file
      *
@@ -51,10 +47,8 @@ var vm = require('vm');
      * @param {String} path Absolute path to the file.
      *
      */
-    includeAbs: function(path) {
-
+    includeAbs: function (path) {
       runInVm(path);
-
     },
 
     /**
@@ -66,12 +60,8 @@ var vm = require('vm');
      * @param {String} path Relative path to the file.
      *
      */
-    include: function(path) {
-
-      runInVm(__dirname + '/' + path);
-
-    }
-
+    include: function (path) {
+      runInVm(__dirname + "/" + path);
+    },
   };
-
 })();

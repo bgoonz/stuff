@@ -1,39 +1,35 @@
-'use strict';
+"use strict";
 
-var url               = require('url');
-var path              = require('path');
-var fs                = require('fs');
-var log               = require('../utils/log');
-var ExtensionRewriter = require('../utils/extensionRewriter');
-var buildCallback     = require('./buildCallback');
+var url = require("url");
+var path = require("path");
+var fs = require("fs");
+var log = require("../utils/log");
+var ExtensionRewriter = require("../utils/extensionRewriter");
+var buildCallback = require("./buildCallback");
 
 var dynamicRequestHandlerFactory = function (lingon, ip, port) {
-
   var pathCache = {};
 
   var testPath = function (filePath) {
     var sourcePath = path.resolve(
-        lingon.rootPath,
-        path.join(
-          lingon.config.sourcePath,
-          filePath
-        )
-      );
+      lingon.rootPath,
+      path.join(lingon.config.sourcePath, filePath)
+    );
 
     return fs.existsSync(sourcePath);
   };
 
   var rewriteRequestPath = function (requestFilePath) {
-
     // If we don't have a cached path, or if it's no longer valid:
     // let's find it by searching all the possible filenames
-    if (!pathCache['CACHE_' + requestFilePath] ||
-        !testPath(pathCache['CACHE_' + requestFilePath])) {
-
+    if (
+      !pathCache["CACHE_" + requestFilePath] ||
+      !testPath(pathCache["CACHE_" + requestFilePath])
+    ) {
       // First, let's test of the file exists on it's own
       if (testPath(requestFilePath)) {
         // Found! Set the file to itself in the cache to speed up next request.
-        pathCache['CACHE_' + requestFilePath] = requestFilePath;
+        pathCache["CACHE_" + requestFilePath] = requestFilePath;
         return requestFilePath;
       }
 
@@ -48,14 +44,14 @@ var dynamicRequestHandlerFactory = function (lingon, ip, port) {
 
       for (var index in candidates) {
         var candidate = path.join(
-          path.dirname(requestFilePath), candidates[index]
+          path.dirname(requestFilePath),
+          candidates[index]
         );
 
         // Does the candidate file exist?
         if (testPath(candidate)) {
-
           // Put the found file in the cache for faster access next time
-          pathCache['CACHE_' + requestFilePath] = path.relative(
+          pathCache["CACHE_" + requestFilePath] = path.relative(
             path.join(lingon.rootPath),
             candidate
           );
@@ -73,16 +69,17 @@ var dynamicRequestHandlerFactory = function (lingon, ip, port) {
       }
     }
 
-    return pathCache['CACHE_' + requestFilePath];
+    return pathCache["CACHE_" + requestFilePath];
   };
 
   var requestHandler = function (request, response, next) {
     var requestPath = url.parse(request.url);
 
     // Serve directoryIndex if requestPath ends with a slash (directory)
-    if (requestPath.pathname.substr(-1, 1) === '/') {
-      requestPath = url.parse(requestPath.pathname +
-          lingon.config.server.directoryIndex);
+    if (requestPath.pathname.substr(-1, 1) === "/") {
+      requestPath = url.parse(
+        requestPath.pathname + lingon.config.server.directoryIndex
+      );
     }
 
     // Remove the slash and decode URI safe strings
@@ -95,7 +92,7 @@ var dynamicRequestHandlerFactory = function (lingon, ip, port) {
     lingon.build({
       callback: buildCallback(request, response, next),
       requestPath: requestPath,
-      targetPath: ip + ':' + port,
+      targetPath: ip + ":" + port,
       pipelineTerminators: [],
     });
   };

@@ -1,7 +1,7 @@
 All files in this directory
 
-* pass the Hack type checker (i.e. `hh_single_type_check <filename>` produces `No errors` output);
-* fail with a fatal when run under HHVM (type `php <filename>` to demonstrate this).
+- pass the Hack type checker (i.e. `hh_single_type_check <filename>` produces `No errors` output);
+- fail with a fatal when run under HHVM (type `php <filename>` to demonstrate this).
 
 Each file is named with an associated task number that has the tag `typehole`.
 

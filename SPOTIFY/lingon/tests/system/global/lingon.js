@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-'use strict';
+"use strict";
 
-var lingon = require('../../../lib/boot');
+var lingon = require("../../../lib/boot");
 
-lingon.global.name = 'bob';
+lingon.global.name = "bob";
 
-lingon.bind('serverConfigure', function() {
-  lingon.global.name = 'alice';
+lingon.bind("serverConfigure", function () {
+  lingon.global.name = "alice";
 });

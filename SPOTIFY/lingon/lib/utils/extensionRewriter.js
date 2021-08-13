@@ -1,16 +1,16 @@
-'use strict';
+"use strict";
 
-var Lexer = require('lex');
+var Lexer = require("lex");
 
 var ExtensionRewriter = {};
 
 function validateArgs(args) {
-  if (typeof args.filename === 'undefined') {
-    throw('ExtensionRewriter: Error, filename is undefined.');
+  if (typeof args.filename === "undefined") {
+    throw "ExtensionRewriter: Error, filename is undefined.";
   }
 
-  if (typeof args.extensionMap === 'undefined') {
-    throw('ExtensionRewriter: Error, extensionMap is undefined.');
+  if (typeof args.extensionMap === "undefined") {
+    throw "ExtensionRewriter: Error, extensionMap is undefined.";
   }
 
   return args;
@@ -27,20 +27,22 @@ ExtensionRewriter.transform = function (args) {
   var patterns = Object.keys(args.extensionMap);
 
   // Sort the patterns according to token size
-  patterns = patterns.sort(function (a, b) {
-    var al = (a.match(/./g) || []).length;
-    var bl = (b.match(/./g) || []).length;
+  patterns = patterns
+    .sort(function (a, b) {
+      var al = (a.match(/./g) || []).length;
+      var bl = (b.match(/./g) || []).length;
 
-    if (al < bl) {
-      return -1;
-    }
+      if (al < bl) {
+        return -1;
+      }
 
-    if (al > bl) {
-      return 1;
-    }
+      if (al > bl) {
+        return 1;
+      }
 
-    return 0;
-  }).reverse(); // Reverse array after sort, we want largest on top.
+      return 0;
+    })
+    .reverse(); // Reverse array after sort, we want largest on top.
 
   // Prepare an array for output
   var segments = [];
@@ -55,7 +57,7 @@ ExtensionRewriter.transform = function (args) {
   // Create a lexer rule for each defined input extensions.
   // When triggered, push the mapped extension based on the input.
   patterns.forEach(function (pattern) {
-    var rule = new RegExp('\\.' + pattern);
+    var rule = new RegExp("\\." + pattern);
 
     lexer.addRule(rule, function () {
       try {
@@ -64,11 +66,13 @@ ExtensionRewriter.transform = function (args) {
         // Do not push the mapped extensions if it's an empty string.
         // We want to igore empty mappings.
         if (mappedExtension && mappedExtension.length > 0) {
-          segments.push('.' + mappedExtension);
+          segments.push("." + mappedExtension);
         }
-      }catch (e) {
-        console.log('Lingon.ExtensionWriter: Fatal error: No such rewrite',
-            pattern);
+      } catch (e) {
+        console.log(
+          "Lingon.ExtensionWriter: Fatal error: No such rewrite",
+          pattern
+        );
       }
     });
   });
@@ -80,15 +84,14 @@ ExtensionRewriter.transform = function (args) {
   lexer.lex();
 
   // Return the basename + new extensions in order, or empty basename.
-  return segments.join('');
-
+  return segments.join("");
 };
 
 ExtensionRewriter.reverseTransform = function (args) {
   // Validate the function arguments
   args = validateArgs(args);
 
-  var segments = args.filename.split('.');
+  var segments = args.filename.split(".");
   var baseName = segments[0];
   segments = segments.slice(1);
 
@@ -112,15 +115,14 @@ ExtensionRewriter.reverseTransform = function (args) {
     var candidateExtensions = getKeysByValue(args.extensionMap, segment);
 
     candidateExtensions = candidateExtensions.map(function (candidate) {
-      return '.' + candidate;
+      return "." + candidate;
     });
 
     if (candidateExtensions.length > 0) {
       return candidateExtensions;
     } else {
-      return ['.' + segment];
+      return ["." + segment];
     }
-
   });
 
   function allCombinations(arr) {
@@ -128,7 +130,7 @@ ExtensionRewriter.reverseTransform = function (args) {
       return arr[0];
     } else {
       var result = [];
-      var allCasesOfRest = allCombinations(arr.slice(1));  // recur with the rest of array
+      var allCasesOfRest = allCombinations(arr.slice(1)); // recur with the rest of array
       for (var i = 0; i < allCasesOfRest.length; i++) {
         for (var j = 0; j < arr[0].length; j++) {
           result.push(arr[0][j] + allCasesOfRest[i]);
@@ -137,7 +139,6 @@ ExtensionRewriter.reverseTransform = function (args) {
 
       return result;
     }
-
   }
 
   var filenames = allCombinations([[baseName]].concat(candidates));

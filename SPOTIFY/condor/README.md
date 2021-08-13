@@ -1,16 +1,13 @@
-CONsistent Delivery Of Repositories
-===================================
+# CONsistent Delivery Of Repositories
 
-Problem
--------
+## Problem
 
 - `apt` uses the `http` protocol to grab repository metadata across multiple requests.
 - No information is available to ensure consistency across resources, leading to errors such as:
 
         Failed to fetch http://[...]  Hash Sum mismatch
 
-Solution
---------
+## Solution
 
 - Whenever we don't have a session for a client yet, or when it grabs `InRelease` or `Release.gpg`, we create a new session identified by reading a symlink. Sessions are per client, distribution and suite.
 
@@ -18,8 +15,7 @@ Solution
 
 - This only affects `dists`; `pool` is meant to be served as-is.
 
-Usage
------
+## Usage
 
 - Deploy behind nginx, with a configuration like:
 
@@ -39,7 +35,6 @@ Usage
 
 - Put an `application.conf` in your classpath overwriting any configuration you do not like (see `src/resources/reference.conf`).
 
-Known issues
-------------
+## Known issues
 
 - NAT sucks. In short, you need to make sure that `nginx` will provide a unique enough `X-Real-IP` header for each client.

@@ -2,15 +2,13 @@
     @global
     @constructor
  */
-window.Bar = new Function('', a, b, c);
+window.Bar = new Function("", a, b, c);
 
-(function() {
+(function () {
+  /** @global */
+  var foo;
 
-    /** @global */
-    var foo;
-    
-    foo = 'hello foo';
+  foo = "hello foo";
 
-    this.foo = foo;
-    
-}).apply(window);
+  this.foo = foo;
+}.apply(window));

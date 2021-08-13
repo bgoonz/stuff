@@ -1,8 +1,8 @@
-import * as agilityApi from './cms-providers/agility';
-import * as contentfulApi from './cms-providers/contentful';
-import * as datoCmsApi from './cms-providers/dato';
-import * as prismicApi from './cms-providers/prismic';
-import * as storyblokApi from './cms-providers/storyblok';
+import * as agilityApi from "./cms-providers/agility";
+import * as contentfulApi from "./cms-providers/contentful";
+import * as datoCmsApi from "./cms-providers/dato";
+import * as prismicApi from "./cms-providers/prismic";
+import * as storyblokApi from "./cms-providers/storyblok";
 
 /**
  * Copyright 2020 Vercel Inc.
@@ -19,7 +19,7 @@ import * as storyblokApi from './cms-providers/storyblok';
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { Job, Speaker, Sponsor, Stage } from '@lib/types';
+import { Job, Speaker, Sponsor, Stage } from "@lib/types";
 
 let cmsApi: {
   getAllSpeakers: () => Promise<Speaker[]>;
@@ -30,7 +30,10 @@ let cmsApi: {
 
 if (process.env.DATOCMS_READ_ONLY_API_TOKEN) {
   cmsApi = datoCmsApi;
-} else if (process.env.CONTENTFUL_ACCESS_TOKEN && process.env.CONTENTFUL_SPACE_ID) {
+} else if (
+  process.env.CONTENTFUL_ACCESS_TOKEN &&
+  process.env.CONTENTFUL_SPACE_ID
+) {
   cmsApi = contentfulApi;
 } else if (process.env.STORYBLOK_PREVIEW_TOKEN) {
   cmsApi = storyblokApi;
@@ -47,7 +50,7 @@ if (process.env.DATOCMS_READ_ONLY_API_TOKEN) {
     getAllSpeakers: async () => [],
     getAllStages: async () => [],
     getAllSponsors: async () => [],
-    getAllJobs: async () => []
+    getAllJobs: async () => [],
   };
 }
 

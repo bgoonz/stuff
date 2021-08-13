@@ -8,7 +8,7 @@
     },
     "icons": {
       "type": "array",
-      "items": {"$ref": "image"}
+      "items": { "$ref": "image" }
     },
     "id": {
       "type": "string",

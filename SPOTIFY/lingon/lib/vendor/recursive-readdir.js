@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // This code was copied from https://github.com/jergason/recursive-readdir/
 // in accordance with the MIT license.
@@ -8,14 +8,14 @@
 // to allow usage of RegExp objects as well as glob patterns. If merged we will remove this vendored
 // code and depend on the upstream project.
 
-var fs = require('fs');
-var p = require('path');
+var fs = require("fs");
+var p = require("path");
 
 // how to know when you are done?
 function readdir(path, ignores, callback) {
-  if (typeof ignores == 'function') {
+  if (typeof ignores == "function") {
     callback = ignores;
-    ignores  = [];
+    ignores = [];
   }
 
   var list = [];

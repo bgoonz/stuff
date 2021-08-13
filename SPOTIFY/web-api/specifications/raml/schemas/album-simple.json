@@ -17,10 +17,12 @@
       "type": "object",
       "description": "Known external URLs for this album.",
       "properties": {
-        "": [{
-          "type": "string",
-          "description": "The type of the URL, for example: 'spotify' - The Spotify URL for the object."
-        }]
+        "": [
+          {
+            "type": "string",
+            "description": "The type of the URL, for example: 'spotify' - The Spotify URL for the object."
+          }
+        ]
       }
     },
     "href": {

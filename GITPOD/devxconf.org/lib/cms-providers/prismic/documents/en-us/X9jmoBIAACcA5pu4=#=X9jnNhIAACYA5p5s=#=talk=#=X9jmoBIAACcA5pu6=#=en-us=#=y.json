@@ -1,9 +1,17 @@
 {
   "speakers": [
-    { "speaker": { "id": "X9jMkBIAACcA5iF1", "wioUrl": "wio://documents/X9jMkBIAACcA5iF1" } }
+    {
+      "speaker": {
+        "id": "X9jMkBIAACcA5iF1",
+        "wioUrl": "wio://documents/X9jMkBIAACcA5iF1"
+      }
+    }
   ],
   "title": [
-    { "type": "heading1", "content": { "text": "Using Preview Deploys with Vercel", "spans": [] } }
+    {
+      "type": "heading1",
+      "content": { "text": "Using Preview Deploys with Vercel", "spans": [] }
+    }
   ],
   "start": "2020-10-27T19:30:00+00:00",
   "end": "2020-10-27T20:10:00+00:00",

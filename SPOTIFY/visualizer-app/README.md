@@ -1,5 +1,4 @@
-Audio API - Sample Visualizer App
-=================================
+# Audio API - Sample Visualizer App
 
 This repository has been cleared and left intentionally empty.
 

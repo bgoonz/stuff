@@ -1,17 +1,15 @@
 sparkey-python is a ctypes-based binding for the [Sparkey](http://github.com/spotify/sparkey) library.
 
-Dependencies
-------------
+## Dependencies
 
-* Python
-* libsparkey
+- Python
+- libsparkey
 
 Optional
 
-* epydoc (to generate the API documentation)
+- epydoc (to generate the API documentation)
 
-Building
---------
+## Building
 
     # Python 2
     PYTHONPATH=. nosetests
@@ -25,27 +23,28 @@ API documentation can be generated with `epydoc`:
 
     epydoc --no-private sparkey
 
-License
--------
+## License
+
 Apache License, Version 2.0
 
-Usage
------
+## Usage
+
 To help get started, take a look at
-the [API documentation](http://spotify.github.io/sparkey-python/apidocs/0.1.0/index.html) or an 
+the [API documentation](http://spotify.github.io/sparkey-python/apidocs/0.1.0/index.html) or an
 example usage: [smoke_test.py](test/smoke_test.py)
 
-Build & Install
----------------
+## Build & Install
+
 Build and install was based off of this [article](https://hynek.me/articles/sharing-your-labor-of-love-pypi-quick-and-dirty/)
+
 ```
 pip3 install -U pip pep517 twine
 rm -rf build dist
 python3 -m pep517.build .
 ```
 
-Performance
------------
+## Performance
+
 This data is the direct output from running
 
     PYTHONPATH=. python test/bench.py
@@ -173,4 +172,3 @@ When running with pypy 2.1.0+dfsg-3 we get these results:
         file size:                 3162865465
         lookup time (wall):           15.15
         throughput (lookups/wallsec): 65993.76
-

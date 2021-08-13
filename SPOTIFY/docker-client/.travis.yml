@@ -40,7 +40,7 @@ after_success:
   # test coverage reporting
   - bash <(curl -s https://codecov.io/bash)
   # deploy snapshots to Maven central, but only from master branch
-  - "[[ $TRAVIS_BRANCH == \"master\" && $UPLOAD_SONATYPE == \"1\" ]] && mvn --settings sonatype-settings.xml -DskipTests -B deploy"
+  - '[[ $TRAVIS_BRANCH == "master" && $UPLOAD_SONATYPE == "1" ]] && mvn --settings sonatype-settings.xml -DskipTests -B deploy'
 
 # To troubleshoot a failing build, you can uncomment this block to dump the
 # docker logs in case they are needed for troubleshooting failures. We don't do

@@ -19,17 +19,17 @@ The full explanation of what happens during a Chef client run can be found
 but the aim of this document is to elaborate on what happens specifically during
 the compile-time and run-time phases.
 
-We start with a *run_list*, which expands into a collection of _recipes_.
+We start with a _run_list_, which expands into a collection of _recipes_.
 During the compile phase of a Chef run, the recipes are run in the order of the
-*run_list* (or as they are included by `include_recipe` statements).  As the
+_run_list_ (or as they are included by `include_recipe` statements). As the
 recipes run, they result in a list of _resources_ - the Chef _resource
-collection_.  When the last recipe has been run, the Chef client run moves onto
-the run phase.  During the run-time phase, each of the resources is executed in
-order of the _resource collection_.  Each resource is "converged" - the point
+collection_. When the last recipe has been run, the Chef client run moves onto
+the run phase. During the run-time phase, each of the resources is executed in
+order of the _resource collection_. Each resource is "converged" - the point
 where Chef actually inspects the system state and enforces the configured state,
 if they differ.
 
-Take for example this toy recipe:  **fb_awesomesoft/recipes/default.rb**
+Take for example this toy recipe: **fb_awesomesoft/recipes/default.rb**
 
 ```ruby
 package 'awesomesoft' do
@@ -51,7 +51,7 @@ At compile-time, this recipe evaluates into a list of resources:
 | ------------------- | ------------------------- | -------------------------- |
 | `action :upgrade`   | `action :default`         | `action [:enable, :start]` |
 
-If this recipe was the full *run_list*, then after building this list of
+If this recipe was the full _run_list_, then after building this list of
 resources, the Chef client would proceed from the compile-time into the
 run-time, running the associated action against each resource in order.
 
@@ -70,8 +70,9 @@ code reads the configured value _prior_ to the value being defined, the system
 falls apart.
 
 To make this work, we enforce the following pattern:
-* _set_ values at compile-time
-* _read_ them at run-time
+
+- _set_ values at compile-time
+- _read_ them at run-time
 
 Therefore, to use a cookbook's API, one sets the corresponding node attribute in
 their recipe _at compile time_. This is denoted with `node.default` to specify
@@ -84,14 +85,14 @@ node.default['fb_swap']['enabled'] = false
 This attribute might be set in multiple different recipes, to different values.
 This is okay, and by design; this follows the _last writer wins_ model, such
 that whatever recipe set the attribute last will have that value be the one
-that is actually implemented. Typically in the *run_list* a later recipe will
+that is actually implemented. Typically in the _run_list_ a later recipe will
 be more specific to the system, and therefore better suited to define the
 desired state.
 
 In this example, within the
 [`fb_swap`](https://github.com/facebook/chef-cookbooks/tree/master/cookbooks/fb_swap)
 cookbook, which actually implements this setting, the resources which read this
-value are only allowed to do so _at run-time_.  This is denoted with just
+value are only allowed to do so _at run-time_. This is denoted with just
 `node`, to indicate this is a _reader_:
 
 ```ruby
@@ -125,8 +126,9 @@ following cases:
 
 ### Execute phase code blocks:
 
-[comment]: # (Why an HTML table? Because GitHub doesn't support code blocks)
-[comment]: # (in markdown tables)
+[comment]: # "Why an HTML table? Because GitHub doesn't support code blocks"
+[comment]: # "in markdown tables"
+
 <table>
   <tr>
     <th>Case</th>
@@ -202,7 +204,7 @@ end
 
 Consider again `fb_awesomesoft`, this time with a new (but broken) feature - an
 API to allow the version of the package to be specified. A second recipe sets
-this value.  The *run_list* order is `fb_awesomesoft::default`,
+this value. The _run_list_ order is `fb_awesomesoft::default`,
 `fb_someapp::default`.
 
 We specify a default value for our attribute
@@ -235,7 +237,7 @@ node.default['fb_awesomesoft']['version'] = 42
 
 This doesn't work, because `version` in the package resource is evaluated _at
 compile time_, such that it reads the value prior to all recipes having a
-chance to set it.  As a result, the assembled resource collection specifies a
+chance to set it. As a result, the assembled resource collection specifies a
 version of `1`, based on the default value:
 
 | package awesomesoft | template awesomesoft.conf | service awesomed           |
@@ -249,7 +251,7 @@ by `fb_someapp`.
 ## An API Interaction Done Right
 
 To make the implementation work correctly, we need the implementing recipe to
-read the attribute at run time.  In this case, we can postpone the resolution
+read the attribute at run time. In this case, we can postpone the resolution
 of the version property using `lazy` in `fb_awesomesoft/recipes/default.rb`:
 
 ```ruby
@@ -261,7 +263,7 @@ end
 ```
 
 With a lazy property, the value saved into the resource collection is a proc,
-which will be evaluated at run time.  The resource collection is thus:
+which will be evaluated at run time. The resource collection is thus:
 
 | package awesomesoft                                  | template awesomesoft.conf | service awesomed           |
 | ---------------------------------------------------- | ------------------------- | -------------------------- |
@@ -274,6 +276,7 @@ attribute, and correctly set it to `42`.
 ## Other Examples
 
 ### harmful refactoring
+
 Take this case:
 
 ```ruby

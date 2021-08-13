@@ -7,33 +7,15 @@
   "Images": 2,
   "Driver": "aufs",
   "DriverStatus": [
-    [
-      "Root Dir",
-      "/var/lib/docker"
-    ],
-    [
-      "Backing Filesystem",
-      "extfs"
-    ],
-    [
-      "Dirs",
-      "2"
-    ],
-    [
-      "Dirperm1 Supported",
-      "true"
-    ]
+    ["Root Dir", "/var/lib/docker"],
+    ["Backing Filesystem", "extfs"],
+    ["Dirs", "2"],
+    ["Dirperm1 Supported", "true"]
   ],
   "SystemStatus": null,
   "Plugins": {
-    "Volume": [
-      "local"
-    ],
-    "Network": [
-      "bridge",
-      "null",
-      "host"
-    ],
+    "Volume": ["local"],
+    "Network": ["bridge", "null", "host"],
     "Authorization": null
   },
   "MemoryLimit": true,
@@ -61,9 +43,7 @@
   "Architecture": "x86_64",
   "IndexServerAddress": "https://index.docker.io/v1/",
   "RegistryConfig": {
-    "InsecureRegistryCIDRs": [
-      "127.0.0.0/8"
-    ],
+    "InsecureRegistryCIDRs": ["127.0.0.0/8"],
     "IndexConfigs": {
       "docker.io": {
         "Name": "docker.io",

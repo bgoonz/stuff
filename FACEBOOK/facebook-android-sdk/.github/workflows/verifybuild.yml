@@ -10,6 +10,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Run corekit testes
-        run:  GITHUB_ACTIONS=1 ./gradlew :facebook-core:test -i
+        run: GITHUB_ACTIONS=1 ./gradlew :facebook-core:test -i
       - name: Run all tests
-        run:  GITHUB_ACTIONS=1 ./gradlew :facebook:test -i
+        run: GITHUB_ACTIONS=1 ./gradlew :facebook:test -i

@@ -1,5 +1,7 @@
 {
-  "name": [{ "type": "heading1", "content": { "text": "Peg Amaterasu", "spans": [] } }],
+  "name": [
+    { "type": "heading1", "content": { "text": "Peg Amaterasu", "spans": [] } }
+  ],
   "bio": [
     {
       "type": "paragraph",
@@ -11,11 +13,16 @@
   ],
   "uid": "peg",
   "title": [
-    { "type": "heading4", "content": { "text": "Accessibility / Front-End", "spans": [] } }
+    {
+      "type": "heading4",
+      "content": { "text": "Accessibility / Front-End", "spans": [] }
+    }
   ],
   "twitter": { "url": "https://twitter.com/vercel", "preview": null },
   "github": { "url": "https://github.com/vercel", "preview": null },
-  "company": [{ "type": "heading4", "content": { "text": "Company", "spans": [] } }],
+  "company": [
+    { "type": "heading4", "content": { "text": "Company", "spans": [] } }
+  ],
   "image": {
     "origin": {
       "id": "X9iy6BIAACkA5bF-",
@@ -32,7 +39,10 @@
     "provider": "imgix",
     "thumbnails": {}
   },
-  "talk": { "id": "X9kFDxIAACkA5yi4", "wioUrl": "wio://documents/X9kFDxIAACkA5yi4" },
+  "talk": {
+    "id": "X9kFDxIAACkA5yi4",
+    "wioUrl": "wio://documents/X9kFDxIAACkA5yi4"
+  },
   "name_TYPE": "StructuredText",
   "name_POSITION": 0,
   "bio_TYPE": "StructuredText",

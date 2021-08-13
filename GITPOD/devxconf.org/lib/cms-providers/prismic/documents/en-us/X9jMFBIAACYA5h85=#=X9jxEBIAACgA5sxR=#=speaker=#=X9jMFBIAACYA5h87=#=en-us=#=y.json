@@ -1,5 +1,10 @@
 {
-  "name": [{ "type": "heading1", "content": { "text": "Ramses Reinaldo", "spans": [] } }],
+  "name": [
+    {
+      "type": "heading1",
+      "content": { "text": "Ramses Reinaldo", "spans": [] }
+    }
+  ],
   "bio": [
     {
       "type": "paragraph",
@@ -10,10 +15,17 @@
     }
   ],
   "uid": "ramses",
-  "title": [{ "type": "heading4", "content": { "text": "Lead Software Engineer", "spans": [] } }],
+  "title": [
+    {
+      "type": "heading4",
+      "content": { "text": "Lead Software Engineer", "spans": [] }
+    }
+  ],
   "twitter": { "url": "https://twitter.com/vercel", "preview": null },
   "github": { "url": "https://github.com/vercel", "preview": null },
-  "company": [{ "type": "heading4", "content": { "text": "Company", "spans": [] } }],
+  "company": [
+    { "type": "heading4", "content": { "text": "Company", "spans": [] } }
+  ],
   "image": {
     "origin": {
       "id": "X9iy7RIAACcA5bGj",
@@ -30,7 +42,10 @@
     "provider": "imgix",
     "thumbnails": {}
   },
-  "talk": { "id": "X9jw3hIAACkA5stx", "wioUrl": "wio://documents/X9jw3hIAACkA5stx" },
+  "talk": {
+    "id": "X9jw3hIAACkA5stx",
+    "wioUrl": "wio://documents/X9jw3hIAACkA5stx"
+  },
   "name_TYPE": "StructuredText",
   "name_POSITION": 0,
   "bio_TYPE": "StructuredText",

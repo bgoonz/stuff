@@ -71,8 +71,8 @@ verifies that it matches the public SSH key of one of our employees.
 
 When using the CLI there are two ways to supply a certificate to the server when needed:
 
- * Set the `HELIOS_CERT_PATH` environment variable to a path containing the pre-issued X.509 certificate and corresponding private key, named `cert.pem` and `key.pem` respectively, or
- * Let the Helios client generate a temporary X.509 certificate that is signed with your private SSH key via ssh-agent, as described above.
+- Set the `HELIOS_CERT_PATH` environment variable to a path containing the pre-issued X.509 certificate and corresponding private key, named `cert.pem` and `key.pem` respectively, or
+- Let the Helios client generate a temporary X.509 certificate that is signed with your private SSH key via ssh-agent, as described above.
 
 The latter is typically not suitable for non-interactive use cases (e.g. a script run periodically by cron). If the `HELIOS_CERT_PATH` environment variable is set this method takes precedence.
 

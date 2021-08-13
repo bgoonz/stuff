@@ -1,4 +1,4 @@
-This is the source code repository for the Go programming language.  
+This is the source code repository for the Go programming language.
 
 For documentation about how to install and use Go,
 visit http://golang.org/ or load doc/install-source.html
@@ -17,7 +17,7 @@ Binary Distribution Notes
 
 If you have just untarred a binary Go distribution, you need to set
 the environment variable $GOROOT to the full path of the go
-directory (the one containing this README).  You can omit the
+directory (the one containing this README). You can omit the
 variable if you unpack it into /usr/local/go, or if you rebuild
 from sources by running all.bash (see doc/install.html).
 You should also add the Go binary directory $GOROOT/bin

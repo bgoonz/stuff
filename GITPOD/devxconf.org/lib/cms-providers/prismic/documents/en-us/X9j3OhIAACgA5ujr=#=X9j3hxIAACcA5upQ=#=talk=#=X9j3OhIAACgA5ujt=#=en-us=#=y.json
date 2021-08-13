@@ -1,9 +1,17 @@
 {
   "title": [
-    { "type": "heading1", "content": { "text": "Will React Survive in 2030?", "spans": [] } }
+    {
+      "type": "heading1",
+      "content": { "text": "Will React Survive in 2030?", "spans": [] }
+    }
   ],
   "speakers": [
-    { "speaker": { "id": "X9jMkBIAACcA5iF1", "wioUrl": "wio://documents/X9jMkBIAACcA5iF1" } }
+    {
+      "speaker": {
+        "id": "X9jMkBIAACcA5iF1",
+        "wioUrl": "wio://documents/X9jMkBIAACcA5iF1"
+      }
+    }
   ],
   "start": "2020-10-27T19:30:00+00:00",
   "end": "2020-10-27T20:10:00+00:00",

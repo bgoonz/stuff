@@ -1,17 +1,17 @@
 /*
 Node.js runtime
-*/'use strict';
+*/ "use strict";
 /* global main, modules */
 
-var cache = _require.cache = {};
+var cache = (_require.cache = {});
 
 function _require(id) {
   var module = cache[id];
   if (!module) {
     var moduleFn = modules[id];
-    if (!moduleFn) throw new Error('module ' + id + ' not found');
+    if (!moduleFn) throw new Error("module " + id + " not found");
     module = cache[id] = {};
-    var exports = module.exports = {};
+    var exports = (module.exports = {});
     moduleFn.call(exports, _require, module, exports, global);
   }
   return module.exports;
@@ -19,7 +19,7 @@ function _require(id) {
 
 _require.node = require;
 
-_require.resolve = function(resolved) {
+_require.resolve = function (resolved) {
   return resolved;
 };
 

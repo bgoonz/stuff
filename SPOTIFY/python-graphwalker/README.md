@@ -13,30 +13,28 @@ initial concept.
 
 Notably, there are a few differences:
 
--   In the original, nodes are considered states to be verified and
-    edges actions to be taken, but this version has no ambition to
-    enforce this convention in any way, even though it is quite
-    useful.
+- In the original, nodes are considered states to be verified and
+  edges actions to be taken, but this version has no ambition to
+  enforce this convention in any way, even though it is quite
+  useful.
 
--   Python Graphwalker does not understand extended FSM labels. It
-    should ignore them, but proceed at your own risk until this is
-    definitively dealt with one way or the other.
+- Python Graphwalker does not understand extended FSM labels. It
+  should ignore them, but proceed at your own risk until this is
+  definitively dealt with one way or the other.
 
--   Python Graphwalker is quite promiscuous about letting you load
-    and combine code to implement the different components of the
-    design. Some combinations don't make sense.
+- Python Graphwalker is quite promiscuous about letting you load
+  and combine code to implement the different components of the
+  design. Some combinations don't make sense.
 
-  - Instead of the SWITCH_MODEL keywords in the original, this version
-    simply allows you to load multiple graphs and stitches them
-    together where id:s and labels match.
+- Instead of the SWITCH_MODEL keywords in the original, this version
+  simply allows you to load multiple graphs and stitches them
+  together where id:s and labels match.
 
 Generally, these simplifications makes the resulting graph much easier
 to reason about.
 
 ![The graph for the self-test of the Interactive planner.
 ](graphwalker/test/examples/selftest.png)
-
-
 
 ## Overall design
 
@@ -52,27 +50,26 @@ text graph loader.
 
 The design is separated into these parts:
 
--   Model, (normally) supplied by the user as a graph file.
+- Model, (normally) supplied by the user as a graph file.
 
--   Stop condition, which bool-converts to true if its conditions
-    are met.
+- Stop condition, which bool-converts to true if its conditions
+  are met.
 
--   Planner, which uses the model and stop condition to provide an
-    iterable of plan steps as (id, name, ...) tuples.
+- Planner, which uses the model and stop condition to provide an
+  iterable of plan steps as (id, name, ...) tuples.
 
--   Reporter, which is called on execution events.
+- Reporter, which is called on execution events.
 
--   Taps, installed by the reporter system to capture side-effects.
-    (currently stdout/stderr and logging)
+- Taps, installed by the reporter system to capture side-effects.
+  (currently stdout/stderr and logging)
 
--   Actor supplied by the user as an object with function
-    attributes, normally an object instance.
+- Actor supplied by the user as an object with function
+  attributes, normally an object instance.
 
--   Executor that, for each step in the plan, calls the reporter
-    and looks up and calls the named method on the actor. In addition
-    to the step methods, it also calls a few other methods, if present
-    on the actor.
-
+- Executor that, for each step in the plan, calls the reporter
+  and looks up and calls the named method on the actor. In addition
+  to the step methods, it also calls a few other methods, if present
+  on the actor.
 
 ### Code loader
 
@@ -80,12 +77,11 @@ There is a common code-loader interface, so it's easy to load
 custom code and supply arguments (if any, if callable) from the
 command line:
 
--   --foo=module.module
+- --foo=module.module
 
--   --foo=module.module.function
+- --foo=module.module.function
 
--   --foo=module.module.class:argument,...,keyword=value,...
-
+- --foo=module.module.class:argument,...,keyword=value,...
 
 If the object found is callable, it will be called, with any
 arguments supplied, and the result used.
@@ -110,7 +106,7 @@ Graphs for the original Graphwalker are typically drawn using
 [yEd], which normally produces graphml files, so support for these
 have been a priority.
 
-[_yEd]: http://www.yworks.com/en/products\_yed\_about.html
+[_yed]: http://www.yworks.com/en/products_yed_about.html
 
 ### dot/graphviz
 
@@ -161,6 +157,7 @@ If used, weights should sum to 1.0. If only some edges have weights,
 the remaining edges will share the remaining weight equally.
 
 #### Example
+
 `graphwalker --stopcond=Coverage --planner=Random:seed=1337 model.dot`
 
 ### Goto
@@ -176,6 +173,7 @@ list. (but not, nota bene, the specific vertices.) A repeat of zero
 will be taken to mean infinity.
 
 #### Example
+
 `graphwalker --planner=Goto:happy,random,sad,repeat=10 model.dot`
 
 ### Euler
@@ -189,9 +187,10 @@ edges to make it Eulerian. (in-degree equal to out-degree for all
 vertices) After the plan is created it run through the StopCond, to
 get rid of extraneous steps at the end.
 
-[Eulerian trail]: http://en.wikipedia.org/wiki/Eulerian\_trail
+[eulerian trail]: http://en.wikipedia.org/wiki/Eulerian_trail
 
 #### Example
+
 `graphwalker --planner=Euler model.dot`
 
 ### Interactive
@@ -202,17 +201,18 @@ edges of the current vertex and prompts for input. You can choose a
 listed edge by entering it's number, or you can use one of the
 special commands:
 
-| command  | effect
-| -------- | -------------------------------------------
-| g, goto  | Goes to the specified vertex*
-| f, force | Send some arbitrary name(s) as plan steps
-| j, jump  | Set some new vertex* as the current one
-| d, debug | Enter the pdb debugger
-| q, quit  | End the plan
+| command  | effect                                    |
+| -------- | ----------------------------------------- |
+| g, goto  | Goes to the specified vertex\*            |
+| f, force | Send some arbitrary name(s) as plan steps |
+| j, jump  | Set some new vertex\* as the current one  |
+| d, debug | Enter the pdb debugger                    |
+| q, quit  | End the plan                              |
 
-*: asks if there's more than one by the name given
+\*: asks if there's more than one by the name given
 
 #### Notes about entering the debugger
+
 If you quit from the debugger,
 you quit from the whole program. Catching BdbQuit exceptions
 doesn't seem to work, instead, use c/continue
@@ -236,6 +236,7 @@ some percentage of each. The percentages are given as keywords
 arguments named 'edges' and 'verts' or 'vertices'.
 
 ##### Examples
+
 `graphwalker --stopcond=Coverage:edges=100,verts=50 model.dot`
 
 `graphwalker --stopcond=Coverage:vertices=25 model.dot`
@@ -247,6 +248,7 @@ simply be done when it has seen all the steps it's looking for. The
 steps are given as an argument list.
 
 ##### Examples
+
 `graphwalker --stopcond=SeenSteps:a,e_once,b model.dot`
 
 ### CountSteps
@@ -257,6 +259,7 @@ been taken. The number of steps is the first argument, or the
 keyword argument 'steps', defaulting to 100.
 
 ##### Examples
+
 `graphwalker --stopcond=CountSteps:52 model.dot`
 
 `graphwalker --stopcond=CountSteps:steps=52 model.dot`
@@ -274,30 +277,29 @@ now.
 In addition to the labels in the graph, a few administrative
 methods are also called, if present:
 
--   *setup* is called at the start of the test session with a
-    dictionary containing the other instances involved in the test: the
-    reporter, the model, and so on. Notably, if you want to save
-    attachments from the test methods, you should use the reporter
-    instance here.
+- _setup_ is called at the start of the test session with a
+  dictionary containing the other instances involved in the test: the
+  reporter, the model, and so on. Notably, if you want to save
+  attachments from the test methods, you should use the reporter
+  instance here.
 
--   *step\_begin* is called before each step with the step
-    definition. The step definition is an iterable where the first is
-    the id and the second the name of the step.
+- _step_begin_ is called before each step with the step
+  definition. The step definition is an iterable where the first is
+  the id and the second the name of the step.
 
--   *step\_end* is called before after each step like step\_begin,
-    but with the addition of a failure, usually None. If the test
-    failed, or there was some other exception, step\_end is called with
-    that exception, typically an AssertionError. The step\_end method
-    can permit the testing to continue by returning the exact string
-    "RECOVER".
+- _step_end_ is called before after each step like step_begin,
+  but with the addition of a failure, usually None. If the test
+  failed, or there was some other exception, step_end is called with
+  that exception, typically an AssertionError. The step_end method
+  can permit the testing to continue by returning the exact string
+  "RECOVER".
 
--   *teardown* is called the same way as setup, at the end.
-
+- _teardown_ is called the same way as setup, at the end.
 
 ## Reporters
 
 To report the results of the tests, the reporters are all called
-for each event, notably step\_begin and step\_end.
+for each event, notably step_begin and step_end.
 
 ### Print
 
@@ -307,6 +309,7 @@ interface, you can send any file-like, writable object. Note that
 combinations of Log and Print quickly get really confusing.
 
 ##### Examples
+
 `graphwalker --reporter=Print:output=stderr model.dot`
 
 ### Log
@@ -318,6 +321,7 @@ keyword argument 'level'. Note that combinations of Log and Print
 quickly get really confusing.
 
 ##### Examples
+
 `graphwalker --reporter=Log:logger=moo,level=WARN model.dot`
 
 ### PathRecorder
@@ -331,6 +335,7 @@ keyword argument 'name'. The 'attach' keyword argument, if set (at
 all) makes it try to attach it.
 
 ##### Examples
+
 `graphwalker --reporter=PathRecorder:path=/tmp,name=steps model.dot`
 
 `graphwalker --reporter=PathRecorder:attach=true,name=steps model.dot`
@@ -346,6 +351,7 @@ keyword argument 'imgtype'. The 'attach' keyword argument, if set
 (at all) makes it try to attach it.
 
 ##### Examples
+
 `graphwalker --reporter=Cartographer model.dot`
 
 `graphwalker --reporter=Cartographer:imgtype=jpg,attach=1 model.dot`

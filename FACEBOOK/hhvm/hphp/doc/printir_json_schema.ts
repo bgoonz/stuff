@@ -55,7 +55,7 @@ enum Area {
 }
 
 type Instr = {
-  marker: {raw: FuncString} | null; // still not 100% sure what this does
+  marker: { raw: FuncString } | null; // still not 100% sure what this does
   phiPseudoInstrs: [PhiPseudoInstr];
   opcodeName: Opcode;
   typeParam: TypeString | null;
@@ -63,9 +63,9 @@ type Instr = {
   extra: ExtraString | null;
   id: InstrId | null;
   taken: LabelInfo | null;
-  tc_ranges: [TC_Range] | null // will be null specifically when asmInfo is null
+  tc_ranges: [TC_Range] | null; // will be null specifically when asmInfo is null
   dsts: [Dst];
-  srcs: {counterName: CounterName} | [Src];
+  srcs: { counterName: CounterName } | [Src];
   offset: Offset;
   profileData: [ProfileData];
 };
@@ -79,10 +79,12 @@ type SSATmp = {
 };
 
 type PhiPseudoInstr = {
-  srcs: [{
-    src: Src;
-    label: LabelInfo;
-  }];
+  srcs: [
+    {
+      src: Src;
+      label: LabelInfo;
+    }
+  ];
   dst: Dst;
 };
 
@@ -91,14 +93,14 @@ type TC_Range = {
   start: TCA;
   end: TCA;
   disasm: DisasmString;
-}
+};
 
 type ProfileData = {
   offset: Offset;
   name: ProfileString;
-  data: {profileType: ProfileType};
+  data: { profileType: ProfileType };
   // the rest of the keys in "data" will depend on the value of "profileType"
-}
+};
 
 enum ProfileType {
   ArrayAccessProfile,
@@ -134,7 +136,7 @@ type TransContext = {
   sourceFile: FileName;
   startLine: LineNum;
   endLine: LineNum;
-}
+};
 
 type SrcKey = {
   func: FuncString;
@@ -143,11 +145,11 @@ type SrcKey = {
   offset: Offset;
   resumeMode: ResumeMode;
   hasThis: boolean;
-}
+};
 
 type ResumeMode = "" | "ra" | "rg";
 
-type OpcodeStats = {[x in Opcode] : number;};
+type OpcodeStats = { [x in Opcode]: number };
 
 type InliningDecision = {
   wasInlined: boolean;
@@ -155,4 +157,4 @@ type InliningDecision = {
   caller: FuncName;
   callee: FuncName;
   reason: string;
-}
+};

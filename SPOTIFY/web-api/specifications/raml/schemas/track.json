@@ -33,20 +33,24 @@
       "type": "object",
       "description": "Known external IDs for the track.",
       "properties": {
-        "": [{
-          "type": "string",
-          "description": "The identifier type, for example: 'isrc' - International Standard Recording Code, 'ean' - International Article Number, 'upc' - Universal Product Code"
-        }]
+        "": [
+          {
+            "type": "string",
+            "description": "The identifier type, for example: 'isrc' - International Standard Recording Code, 'ean' - International Article Number, 'upc' - Universal Product Code"
+          }
+        ]
       }
     },
     "external_urls": {
       "type": "object",
       "description": "Known external URLs for this track.",
       "properties": {
-        "": [{
-          "type": "string",
-          "description": "The type of the URL, for example: 'spotify' - The Spotify URL for the object."
-        }]
+        "": [
+          {
+            "type": "string",
+            "description": "The type of the URL, for example: 'spotify' - The Spotify URL for the object."
+          }
+        ]
       }
     },
     "href": {
@@ -69,10 +73,12 @@
           "type": "object",
           "description": "Known external URLs for this track.",
           "properties": {
-            "": [{
-              "type": "string",
-              "description": "The type of the URL, for example: 'spotify' - The Spotify URL for the object."
-            }]
+            "": [
+              {
+                "type": "string",
+                "description": "The type of the URL, for example: 'spotify' - The Spotify URL for the object."
+              }
+            ]
           }
         },
         "href": {

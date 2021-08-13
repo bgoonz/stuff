@@ -50,7 +50,7 @@
   font-size: 16px;
   border: 2px solid #ba9836;
   margin-bottom: 10px;
-  margin-right: 10px;  /* yes, for both .left and .right */
+  margin-right: 10px; /* yes, for both .left and .right */
 }
 
 .comment:last-child {
@@ -147,7 +147,6 @@
 .path-file {
   color: #555;
 }
-
 
 /* Style for Code (the right-hand column) */
 

@@ -1,5 +1,5 @@
 /** @module */
 define({
-    property: "foo",
-    method: function() {}
+  property: "foo",
+  method: function () {},
 });

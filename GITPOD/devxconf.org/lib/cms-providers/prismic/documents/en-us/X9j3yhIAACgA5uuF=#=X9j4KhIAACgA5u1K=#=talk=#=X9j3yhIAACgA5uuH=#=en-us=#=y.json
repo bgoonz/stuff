@@ -1,10 +1,23 @@
 {
   "title": [
-    { "type": "heading1", "content": { "text": "Deploying to the Edge with Vercel", "spans": [] } }
+    {
+      "type": "heading1",
+      "content": { "text": "Deploying to the Edge with Vercel", "spans": [] }
+    }
   ],
   "speakers": [
-    { "speaker": { "id": "X9jRbBIAACgA5jhp", "wioUrl": "wio://documents/X9jRbBIAACgA5jhp" } },
-    { "speaker": { "id": "X9i-rhIAACgA5eQ0", "wioUrl": "wio://documents/X9i-rhIAACgA5eQ0" } }
+    {
+      "speaker": {
+        "id": "X9jRbBIAACgA5jhp",
+        "wioUrl": "wio://documents/X9jRbBIAACgA5jhp"
+      }
+    },
+    {
+      "speaker": {
+        "id": "X9i-rhIAACgA5eQ0",
+        "wioUrl": "wio://documents/X9i-rhIAACgA5eQ0"
+      }
+    }
   ],
   "start": "2020-10-27T18:50:00+00:00",
   "end": "2020-12-15T19:30:00+00:00",

@@ -20,26 +20,27 @@ This also provides benefits for simpler protocols, like [plaintext carbon](https
 where this kind of information can become painful to represent in the limited
 structure available.
 
-* [Usage](#usage)
-* [Installation](#installation)
-  * [Installing Plugins](#installing-plugins)
-* [Contributing](#contributing)
-* [Debugging](#debugging)
-* [Terminology](#terminology)
+- [Usage](#usage)
+- [Installation](#installation)
+  - [Installing Plugins](#installing-plugins)
+- [Contributing](#contributing)
+- [Debugging](#debugging)
+- [Terminology](#terminology)
 
 Other focused topics.
-* [Tunneling and multi-tenancy](docs/tunneling-and-multi-tenancy.md)
-* [Writing Plugins](docs/writing-plugins.md)
-* [Events and Metrics](docs/events-and-metrics.md)
-  * [Input Data Structure](docs/events-and-metrics.md#input-data-structure)
-  * [Output Data Structure](docs/events-and-metrics.md#output-data-structure)
-* [Schemas](docs/schemas.md)
-* [ffwd vs. collectd](docs/vs-collectd.md)
-* [JSON Reference Protocol](docs/json-protocol.md)
+
+- [Tunneling and multi-tenancy](docs/tunneling-and-multi-tenancy.md)
+- [Writing Plugins](docs/writing-plugins.md)
+- [Events and Metrics](docs/events-and-metrics.md)
+  - [Input Data Structure](docs/events-and-metrics.md#input-data-structure)
+  - [Output Data Structure](docs/events-and-metrics.md#output-data-structure)
+- [Schemas](docs/schemas.md)
+- [ffwd vs. collectd](docs/vs-collectd.md)
+- [JSON Reference Protocol](docs/json-protocol.md)
   &mdash; Documentation about the JSON reference protocol.
-* [Protobuf Protocol](docs/protobuf-protocol.md)
+- [Protobuf Protocol](docs/protobuf-protocol.md)
   &mdash; Documentation about the protobuf protocol.
-* [Statistics](docs/statistics.md) &mdash; Documentation about internally
+- [Statistics](docs/statistics.md) &mdash; Documentation about internally
   generated statistics.
 
 ## Usage
@@ -69,7 +70,7 @@ accompanied [./ffwd.d/basic-tunnel](/ffwd.d/basic-tunnel) configuration.
 ## Installation
 
 ffwd is available on rubygems so it can be installed through
-[gem](https://rubygems.org) using the ```gem``` command.
+[gem](https://rubygems.org) using the `gem` command.
 
 ```bash
 $ gem install ffwd
@@ -138,7 +139,7 @@ documentation](docs/statistics.md).
 1. Fork FastForward (or a plugin) from
    [github](https://github.com/spotify/ffwd) and clone your fork.
 2. Hack.
-3. Verify code by running any existing test-suite; ```bundle exec rspec```.
+3. Verify code by running any existing test-suite; `bundle exec rspec`.
    Try to include tests for your changes.
 4. Push the branch back to GitHub.
 5. Send a pull request to our upstream repo.
@@ -168,17 +169,17 @@ $ nc localhost 19001
 ...
 ```
 
-*As an alternative to connecting directly to the debug socket, you can also use
-the [**fwc**](#debugging-with-fwc) tool*.
+_As an alternative to connecting directly to the debug socket, you can also use
+the [**fwc**](#debugging-with-fwc) tool_.
 
 Each line consists of a JSON object with the following fields.
 
 **id** The id that the specified events can be grouped by, this indicates
 which channel the traffic was sniffed of.
 
-**type** The type of the *data* field.
+**type** The type of the _data_ field.
 
-**data** Data describing the sniffed event according to specified *type*.
+**data** Data describing the sniffed event according to specified _type_.
 
 ### Debugging with fwc
 
@@ -190,7 +191,7 @@ It can be invoked with the **--raw** and/or **--summary** switch.
 **--raw** will output everything received on the debug socket, but will also
 attempt to throttle the output to protect the users terminal.
 
-**--summary** will only output a summary of *what has been seen* on the various
+**--summary** will only output a summary of _what has been seen_ on the various
 channels.
 
 The output will look something like the following.
@@ -218,16 +219,16 @@ plugins.
 message passing between components.
 
 **PluginChannel** &mdash; [An abstraction](lib/ffwd/plugin_channel.rb) on
-top of two *Channel*'s, one dedicated to *metrics*, the other one to *events*.
+top of two _Channel_'s, one dedicated to _metrics_, the other one to _events_.
 
 **Core** &mdash; [The component](lib/ffwd/core.rb) in ffwd that ties
 everything together.
 
-The *core* component is also broken up into two other distinct parts to support
-*virtual* cores when tunneling. These are.
+The _core_ component is also broken up into two other distinct parts to support
+_virtual_ cores when tunneling. These are.
 
-* **CoreProcessor** Is responsible for running calculation engines for rates,
+- **CoreProcessor** Is responsible for running calculation engines for rates,
   histograms, etc...
-* **CoreEmitter** Is responsible for emitting metrics and events, passing them
+- **CoreEmitter** Is responsible for emitting metrics and events, passing them
   either straight to the supplied output channel or into the supplied
-  *CoreProcessor*.
+  _CoreProcessor_.

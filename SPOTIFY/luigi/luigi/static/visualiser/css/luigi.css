@@ -3,40 +3,45 @@
   stroke-width: 1.5px;
 }
 text {
-    font-size:8pt;
+  font-size: 8pt;
 }
 
 .link {
   stroke: #999;
-  stroke-opacity: .6;
+  stroke-opacity: 0.6;
 }
 
 svg {
-    border:1px solid #DDDDDD;
-    overflow: inherit;
+  border: 1px solid #dddddd;
+  overflow: inherit;
 }
 
 .taskRow {
-  word-break:break-all;
+  word-break: break-all;
 }
 
-
 @-webkit-keyframes flash {
-  0%, 50%, 100% {
+  0%,
+  50%,
+  100% {
     opacity: 1;
   }
 
-  25%, 75% {
+  25%,
+  75% {
     opacity: 0.2;
   }
 }
 
 @keyframes flash {
-  0%, 50%, 100% {
+  0%,
+  50%,
+  100% {
     opacity: 1;
   }
 
-  25%, 75% {
+  25%,
+  75% {
     opacity: 0.2;
   }
 }
@@ -86,7 +91,7 @@ svg {
 }
 
 .live.map .PENDING .status {
-  background-color: #FFFF46;
+  background-color: #ffff46;
 }
 
 .live.map .ERROR .status {
@@ -169,7 +174,6 @@ span.status-icon {
   text-align: center;
   font-size: 12px;
   line-height: 24px;
-
 }
 
 #serverSide {
@@ -218,7 +222,7 @@ span.status-icon {
 }
 
 #clear-task-filter:active {
-  box-shadow: inset -2px 3px 1px rgba(0,0,0,0.2);
+  box-shadow: inset -2px 3px 1px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar-menu li > a.sidebar-folder {
@@ -235,6 +239,6 @@ span.status-icon {
   color: white !important;
 }
 
-.popover{
-    max-width: 100% !important; 
+.popover {
+  max-width: 100% !important;
 }

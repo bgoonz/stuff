@@ -1,5 +1,5 @@
 function openURL(url) {
-  chrome.tabs.create({ "url": url })
+  chrome.tabs.create({ url: url });
 }
 
 function addLinks() {
@@ -29,11 +29,11 @@ window.addEventListener("submit", function () {
     return false;
   }
 
-  var success = function(url) {
-    console.log("matched " + t + " to: " + url)
+  var success = function (url) {
+    console.log("matched " + t + " to: " + url);
     box.value = "";
     openURL(url);
-    return false;  // cancel form submission
+    return false; // cancel form submission
   };
 
   var url = urlForInput(t);
@@ -41,6 +41,6 @@ window.addEventListener("submit", function () {
     return success(url);
   }
 
-  console.log("no match for text: " + t)
+  console.log("no match for text: " + t);
   return false;
 });

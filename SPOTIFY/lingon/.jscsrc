@@ -1,10 +1,4 @@
 {
   "preset": "airbnb",
-  "requireCurlyBraces": [
-    "if",
-    "else",
-    "for",
-    "while",
-    "do"
-  ]
+  "requireCurlyBraces": ["if", "else", "for", "while", "do"]
 }

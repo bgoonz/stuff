@@ -1,5 +1,7 @@
 {
-  "name": [{ "type": "heading1", "content": { "text": "Fabiana Aramis", "spans": [] } }],
+  "name": [
+    { "type": "heading1", "content": { "text": "Fabiana Aramis", "spans": [] } }
+  ],
   "bio": [
     {
       "type": "paragraph",
@@ -13,7 +15,9 @@
   "title": [{ "type": "heading4", "content": { "text": "CEO", "spans": [] } }],
   "twitter": { "url": "https://twitter.com/vercel", "preview": null },
   "github": { "url": "https://github.com/vercel", "preview": null },
-  "company": [{ "type": "heading4", "content": { "text": "Company", "spans": [] } }],
+  "company": [
+    { "type": "heading4", "content": { "text": "Company", "spans": [] } }
+  ],
   "image": {
     "origin": {
       "id": "X9iy5hIAACgA5bFz",
@@ -30,7 +34,10 @@
     "provider": "imgix",
     "thumbnails": {}
   },
-  "talk": { "id": "X9kFeRIAACgA5yqX", "wioUrl": "wio://documents/X9kFeRIAACgA5yqX" },
+  "talk": {
+    "id": "X9kFeRIAACgA5yqX",
+    "wioUrl": "wio://documents/X9kFeRIAACgA5yqX"
+  },
   "name_TYPE": "StructuredText",
   "name_POSITION": 0,
   "bio_TYPE": "StructuredText",

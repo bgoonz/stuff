@@ -1,7 +1,8 @@
 ---
 ---
-@import 'theme';
-@import 'bootstrap';
+
+@import "theme";
+@import "bootstrap";
 
 .jumbotron {
   .lead {
@@ -49,7 +50,7 @@ p.next {
 }
 
 a.link-to {
-  margin-left: .4em;
+  margin-left: 0.4em;
   font-size: 80%;
 }
 

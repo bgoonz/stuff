@@ -1,11 +1,29 @@
 {
   "speakers": [
-    { "speaker": { "id": "X9jBeBIAACgA5e99", "wioUrl": "wio://documents/X9jBeBIAACgA5e99" } },
-    { "speaker": { "id": "X9izVBIAACcA5bOL", "wioUrl": "wio://documents/X9izVBIAACcA5bOL" } },
-    { "speaker": { "id": "X9i28BIAACcA5cQW", "wioUrl": "wio://documents/X9i28BIAACcA5cQW" } }
+    {
+      "speaker": {
+        "id": "X9jBeBIAACgA5e99",
+        "wioUrl": "wio://documents/X9jBeBIAACgA5e99"
+      }
+    },
+    {
+      "speaker": {
+        "id": "X9izVBIAACcA5bOL",
+        "wioUrl": "wio://documents/X9izVBIAACcA5bOL"
+      }
+    },
+    {
+      "speaker": {
+        "id": "X9i28BIAACcA5cQW",
+        "wioUrl": "wio://documents/X9i28BIAACcA5cQW"
+      }
+    }
   ],
   "title": [
-    { "type": "heading1", "content": { "text": "Using i18n Routing with Next 10", "spans": [] } }
+    {
+      "type": "heading1",
+      "content": { "text": "Using i18n Routing with Next 10", "spans": [] }
+    }
   ],
   "start": "2020-10-27T18:10:00+00:00",
   "end": "2020-10-27T18:50:00+00:00",

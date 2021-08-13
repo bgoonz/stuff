@@ -48,8 +48,7 @@ instruction `Foo`, there is a function `iopFoo()`. This function contains the
 interpreter implementation of `Foo`, and takes arguments representing all of the
 immediate arguments to the instruction. For example, since the `Add` instruction
 takes no immediates, `void iopAdd()` takes no arguments. `Int`, on the other
-hand, takes a 64-bit integer immediate, so its signature is `void iopInt(int64_t
-imm)`.
+hand, takes a 64-bit integer immediate, so its signature is `void iopInt(int64_t imm)`.
 
 These functions are not called directly by the dispatch loop. Instead, the
 dispatch loop calls `iopWrapFoo()`, giving it a pointer to the appropriate

@@ -1,7 +1,7 @@
 # What is Hack?
 
 Hack is a programming language for [HHVM](https://hhvm.com) that interoperates
-seamlessly with PHP.  Hack reconciles the fast development cycle of PHP with the
+seamlessly with PHP. Hack reconciles the fast development cycle of PHP with the
 discipline provided by static typing, while adding many features commonly found
 in other modern programming languages.
 

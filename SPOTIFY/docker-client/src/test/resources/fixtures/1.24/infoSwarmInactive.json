@@ -1,7 +1,5 @@
 {
-  "SecurityOptions": [
-    "apparmor"
-  ],
+  "SecurityOptions": ["apparmor"],
   "InitCommit": {
     "Expected": "",
     "ID": ""
@@ -74,9 +72,7 @@
         "Name": "docker.io"
       }
     },
-    "InsecureRegistryCIDRs": [
-      "127.0.0.0/8"
-    ]
+    "InsecureRegistryCIDRs": ["127.0.0.0/8"]
   },
   "IndexServerAddress": "https://index.docker.io/v1/",
   "CPUShares": true,
@@ -87,15 +83,8 @@
   "MemoryLimit": true,
   "Plugins": {
     "Authorization": null,
-    "Network": [
-      "overlay",
-      "host",
-      "null",
-      "bridge"
-    ],
-    "Volume": [
-      "local"
-    ]
+    "Network": ["overlay", "host", "null", "bridge"],
+    "Volume": ["local"]
   },
   "SystemStatus": null,
   "ID": "HYU5:47IT:R4LZ:I264:MCWE:6V2U:Q5ZV:574D:ORAQ:DNNS:YC5C:LW5L",
@@ -106,22 +95,10 @@
   "Images": 1,
   "Driver": "aufs",
   "DriverStatus": [
-    [
-      "Root Dir",
-      "/var/lib/docker/aufs"
-    ],
-    [
-      "Backing Filesystem",
-      "extfs"
-    ],
-    [
-      "Dirs",
-      "16"
-    ],
-    [
-      "Dirperm1 Supported",
-      "true"
-    ]
+    ["Root Dir", "/var/lib/docker/aufs"],
+    ["Backing Filesystem", "extfs"],
+    ["Dirs", "16"],
+    ["Dirperm1 Supported", "true"]
   ],
   "CPUSet": true,
   "IPv4Forwarding": true,

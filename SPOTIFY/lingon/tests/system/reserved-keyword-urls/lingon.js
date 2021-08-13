@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-var lingon = require('../../../lib/boot');
+var lingon = require("../../../lib/boot");

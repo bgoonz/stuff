@@ -13,13 +13,15 @@ Guava's ListenableFuture class
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.spotify/futures-extra/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.spotify/futures-extra)
 
 ### Build dependencies
-* Java 8 or higher
-* Maven
+
+- Java 8 or higher
+- Maven
 
 ### Runtime dependencies
-* Java 8 or higher
-* Guava 21.0 or higher
-* Google [`api-common`](https://mvnrepository.com/artifact/com.google.api/api-common) from `com.google.api`
+
+- Java 8 or higher
+- Guava 21.0 or higher
+- Google [`api-common`](https://mvnrepository.com/artifact/com.google.api/api-common) from `com.google.api`
 
 ### Usage
 
@@ -47,12 +49,14 @@ final ListenableFuture<B> futureB = getFutureB();
 ListenableFuture<C> ret = Futures.transform(Futures.allAsList(futureA, futureB),
     (Function<List<?>, C>)list -> combine((A) list.get(0), (B) list.get(1), executor);
 ```
+
 where combine is a method with parameters of type A and B returning C.
 
 This one has the problem that you have to manually make sure that the casts and
 ordering are correct, otherwise you will get ClassCastException.
 
 You could also access the futures directly to avoid casts:
+
 ```java
 final ListenableFuture<A> futureA = getFutureA();
 final ListenableFuture<B> futureB = getFutureB();
@@ -60,6 +64,7 @@ final ListenableFuture<B> futureB = getFutureB();
 ListenableFuture<C> ret = Futures.transform(Futures.allAsList(futureA, futureB),
     (Function<List<?>, C>)list -> combine(Futures.getUnchecked(futureA), Futures.getUnchecked(futureB), executor);
 ```
+
 Now you instead need to make sure that the futures in the transform input are
 the same as the ones you getUnchecked. If you fail to do this, things may work
 anyway (which is a good way of hiding bugs), but block the thread, actually
@@ -67,6 +72,7 @@ removing the asynchronous advantage. Even worse - the future may never finish,
 blocking the thread forever.
 
 To simplify these use cases we have a couple of helper functions:
+
 ```java
 final ListenableFuture<A> futureA = getFutureA();
 final ListenableFuture<B> futureB = getFutureB();
@@ -102,6 +108,7 @@ input.
 Sometimes you want to stop waiting for a future after a specific timeout and to
 do this you generally need to have some sort of scheduling involved. To simplify
 that, you can use this:
+
 ```java
 final ListenableFuture<A> future = getFuture();
 final ListenableFuture<A> futureWithTimeout = FuturesExtra.makeTimeoutFuture(scheduledExecutor, future, 100, TimeUnit.MILLISECONDS);
@@ -111,6 +118,7 @@ final ListenableFuture<A> futureWithTimeout = FuturesExtra.makeTimeoutFuture(sch
 
 If you have some futures and want to succeed as soon as the first one succeeds,
 you can use select:
+
 ```java
 final List<ListenableFuture<A>> futures = getFutures();
 final ListenableFuture<A> firstSuccessful = FuturesExtra.select(futures, executor);
@@ -119,14 +127,15 @@ final ListenableFuture<A> firstSuccessful = FuturesExtra.select(futures, executo
 #### Success/Failure callbacks
 
 You can attach callbacks that are run depending on the results of a future:
+
 ```java
 final ListenableFuture<A> future = getFuture();
 FuturesExtra.addCallback(future, System.out::println, Throwable::printStackTrace, executor);
 ```
 
-
-Alternatively, if you are only interested in either successful or failed 
+Alternatively, if you are only interested in either successful or failed
 results of a future, you can use:
+
 ```java
 final ListenableFuture<A> future = getFuture();
 FuturesExtra.addSuccessCallback(future, System.out::println, executor);
@@ -152,6 +161,7 @@ for (int i = 0; i < 1000; i++) {
   ListenableFuture<T> future = limiter.add(() -> createFuture());
 }
 ```
+
 The concurrency limiter will ensure that at most 10 futures are created and
 incomplete at the same time. All the jobs that are passed into
 `ConcurrencyLimiter.add()` will wait in a queue until the concurrency is below
@@ -171,6 +181,7 @@ the future is completed so it won't be a blocking operation.
 
 You could use these methods for that, but they will also block if the future is not complete which may lead to
 hard to find bugs.
+
 ```java
 T value = future.get();
 T value = Futures.getUnchecked(future);
@@ -180,6 +191,7 @@ Instead you can use these methods which will never block but instead immediately
 throw an exception if the future is not completed. This is typically useful in unit tests
 (where futures should be immediate) and in general future callbacks/transforms where you know that a
 specific future must be completed for this codepath to be triggered.
+
 ```java
 T value = FuturesExtra.getCompleted(future);
 Throwable exc = FuturesExtra.getException(future);
@@ -187,28 +199,28 @@ Throwable exc = FuturesExtra.getException(future);
 
 #### JDK 8 CompletableFuture <-> ListenableFuture Conversion
 
-* From `ListenableFuture` To JDK 8 `CompletableFuture`
+- From `ListenableFuture` To JDK 8 `CompletableFuture`
 
 ```java
 ListenableFuture<V> listenable = getFuture();
 CompletableFuture<V> completable = ListenableFuturesExtra.toCompletableFuture(listenable);
 ```
 
-* From JDK 8 `CompletableFuture` To `ListenableFuture`
+- From JDK 8 `CompletableFuture` To `ListenableFuture`
 
 ```java
 CompletableFuture<V> completable = getFuture();
 ListenableFuture<V> listenable = CompletableFuturesExtra.toListenableFuture(completable);
 ```
 
-* From `ApiFuture` to JDK 8 `CompletableFuture` (especially useful when using [Google client libraries](https://github.com/googleapis/google-cloud-java/tree/master/google-cloud-clients))
+- From `ApiFuture` to JDK 8 `CompletableFuture` (especially useful when using [Google client libraries](https://github.com/googleapis/google-cloud-java/tree/master/google-cloud-clients))
 
 ```java
 ApiFuture<V> apiFuture = getFuture();
 CompletableFuture<V> completable = ApiFuturesExtra.toCompletableFuture(apiFuture);
 ```
 
-* From JDK 8 `CompletableFuture` to `ApiFuture` (especially useful when using [Google client libraries](https://github.com/googleapis/google-cloud-java/tree/master/google-cloud-clients))
+- From JDK 8 `CompletableFuture` to `ApiFuture` (especially useful when using [Google client libraries](https://github.com/googleapis/google-cloud-java/tree/master/google-cloud-clients))
 
 ```java
 CompletableFuture<V> completable = getFuture();

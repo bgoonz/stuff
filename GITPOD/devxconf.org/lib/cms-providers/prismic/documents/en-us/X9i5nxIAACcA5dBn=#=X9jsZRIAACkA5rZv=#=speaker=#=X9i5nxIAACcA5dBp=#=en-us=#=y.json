@@ -1,5 +1,7 @@
 {
-  "name": [{ "type": "heading1", "content": { "text": "Cordula Daniel", "spans": [] } }],
+  "name": [
+    { "type": "heading1", "content": { "text": "Cordula Daniel", "spans": [] } }
+  ],
   "bio": [
     {
       "type": "paragraph",
@@ -10,10 +12,14 @@
     }
   ],
   "uid": "cordula",
-  "title": [{ "type": "heading4", "content": { "text": "Co-Founder", "spans": [] } }],
+  "title": [
+    { "type": "heading4", "content": { "text": "Co-Founder", "spans": [] } }
+  ],
   "twitter": { "url": "https://twitter.com/vercel", "preview": null },
   "github": { "url": "https://github.com/vercel", "preview": null },
-  "company": [{ "type": "heading4", "content": { "text": "Company", "spans": [] } }],
+  "company": [
+    { "type": "heading4", "content": { "text": "Company", "spans": [] } }
+  ],
   "image": {
     "origin": {
       "id": "X9i5mhIAACcA5dBQ",
@@ -30,7 +36,10 @@
     "provider": "imgix",
     "thumbnails": {}
   },
-  "talk": { "id": "X9jsWRIAACgA5rYy", "wioUrl": "wio://documents/X9jsWRIAACgA5rYy" },
+  "talk": {
+    "id": "X9jsWRIAACgA5rYy",
+    "wioUrl": "wio://documents/X9jsWRIAACgA5rYy"
+  },
   "name_TYPE": "StructuredText",
   "name_POSITION": 0,
   "bio_TYPE": "StructuredText",

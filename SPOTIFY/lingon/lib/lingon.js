@@ -1,23 +1,23 @@
-'use strict';
+"use strict";
 
-var chalk             = require('chalk');
-var vfs               = require('vinyl-fs');
-var path              = require('path');
-var EventEmitter      = require('events').EventEmitter;
+var chalk = require("chalk");
+var vfs = require("vinyl-fs");
+var path = require("path");
+var EventEmitter = require("events").EventEmitter;
 
-var defaultConfig     = require('./defaults/config');
-var log               = require('./utils/log');
-var Environment       = require('./environment');
-var ProcessorStore    = require('./models/processorStore');
-var defaultProcessors = require('./defaults/defaultProcessors');
-var help              = require('./utils/help');
-var streamHelper      = require('./utils/stream');
-var buildTask         = require('./tasks/build');
-var cleanTask         = require('./tasks/clean');
-var serverTask        = require('./tasks/server');
-var staticServerTask  = require('./tasks/static');
+var defaultConfig = require("./defaults/config");
+var log = require("./utils/log");
+var Environment = require("./environment");
+var ProcessorStore = require("./models/processorStore");
+var defaultProcessors = require("./defaults/defaultProcessors");
+var help = require("./utils/help");
+var streamHelper = require("./utils/stream");
+var buildTask = require("./tasks/build");
+var cleanTask = require("./tasks/clean");
+var serverTask = require("./tasks/server");
+var staticServerTask = require("./tasks/static");
 
-var Builder           = require('./builder');
+var Builder = require("./builder");
 
 var Lingon = function (rootPath, argv) {
   this.eventEmitter = new EventEmitter();
@@ -51,12 +51,12 @@ var Lingon = function (rootPath, argv) {
   cleanTask(this);
 
   // Set up default help
-  help.describe('help', {
-    message: 'Shows this list',
+  help.describe("help", {
+    message: "Shows this list",
   });
 
-  help.describe('version', {
-    message: 'Display Lingon version',
+  help.describe("version", {
+    message: "Display Lingon version",
   });
 };
 
@@ -76,10 +76,13 @@ Lingon.prototype.registerTask = function (task, callback, description) {
   help.describe(task, description);
 
   this.taskCallbacks[task] = function () {
-    callback.call(this, function () {
-      this.task = null;
-      this.run();
-    }.bind(this));
+    callback.call(
+      this,
+      function () {
+        this.task = null;
+        this.run();
+      }.bind(this)
+    );
   }.bind(this);
 };
 
@@ -88,15 +91,21 @@ Lingon.prototype.run = function (tasks) {
     this.taskQueue = this.taskQueue.concat(tasks);
   }
 
-  if (this.task) { return; }
+  if (this.task) {
+    return;
+  }
 
   var task = this.taskQueue.shift();
   if (task) {
     var taskCallback = this.taskCallbacks[task];
 
     if (!taskCallback) {
-      console.error('[ ' + chalk.red('Lingon') + ' ] ' +
-          chalk.yellow('[Error] Unknown task "' + task + '"'));
+      console.error(
+        "[ " +
+          chalk.red("Lingon") +
+          " ] " +
+          chalk.yellow('[Error] Unknown task "' + task + '"')
+      );
       process.exit(1);
     }
 
@@ -114,14 +123,14 @@ Lingon.prototype.build = function (params) {
   // Build only requested path if defined (used to optimize server mode).
   var requestPath = params.requestPath;
 
-  this.trigger('beforeBuild');
+  this.trigger("beforeBuild");
 
   this.getEnvironment().getSourceFiles(
     requestPath ? [requestPath] : [],
-  function (sourceFiles) {
-    _this.buildWithSourceFiles(params, sourceFiles);
-  });
-
+    function (sourceFiles) {
+      _this.buildWithSourceFiles(params, sourceFiles);
+    }
+  );
 };
 
 Lingon.prototype.buildWithSourceFiles = function (params, sourceFiles) {
@@ -149,50 +158,51 @@ Lingon.prototype.buildWithSourceFiles = function (params, sourceFiles) {
 
   // Create a build pipeline for each source file
   sourceFiles = sourceFiles.map(function (sourceFile) {
-    sourceFile.targetPath = params.targetPath ||
-        path.dirname(sourceFile.path.replace(
-      _this.config.sourcePath,
-      _this.config.buildPath
-    ));
+    sourceFile.targetPath =
+      params.targetPath ||
+      path.dirname(
+        sourceFile.path.replace(_this.config.sourcePath, _this.config.buildPath)
+      );
 
-    return Builder.createPipeline.apply(this, [
+    return Builder.createPipeline.apply(
+      this,
+      [
+        // The input source file instance
+        sourceFile,
 
-      // The input source file instance
-      sourceFile,
+        // First, create the source stream by reading the file from disk.
+        Builder.source(vfs.src(sourceFile.path)),
 
-      // First, create the source stream by reading the file from disk.
-      Builder.source(vfs.src(sourceFile.path)),
+        // Parse directives and apply pre-concatenation processors on all files found.
+        Builder.preProcess({
+          rootPath: _this.rootPath,
+          processorStore: _this.preProcessors,
+          extensionMap: _this.config.extensionRewrites,
+          config: _this.config,
+          global: _this.global,
+        }),
 
-      // Parse directives and apply pre-concatenation processors on all files found.
-      Builder.preProcess({
-        rootPath: _this.rootPath,
-        processorStore: _this.preProcessors,
-        extensionMap: _this.config.extensionRewrites,
-        config: _this.config,
-        global: _this.global,
-      }),
+        // Apply post-concatenation processors
+        Builder.postProcess({
+          processorStore: _this.postProcessors,
+          global: _this.global,
+        }),
 
-      // Apply post-concatenation processors
-      Builder.postProcess({
-        processorStore: _this.postProcessors,
-        global: _this.global,
-      }),
+        // Rewrite the extension of the file based on it's input filename
+        Builder.rewriteExtension({
+          extensionMap: _this.config.extensionRewrites,
+          processorStores: [_this.preProcessors, _this.postProcessors],
+        }),
 
-      // Rewrite the extension of the file based on it's input filename
-      Builder.rewriteExtension({
-        extensionMap: _this.config.extensionRewrites,
-        processorStores: [_this.preProcessors, _this.postProcessors],
-      }),
+        // Normalize the file path relative to the target path
+        Builder.normalizeFilePath,
 
-      // Normalize the file path relative to the target path
-      Builder.normalizeFilePath,
+        // Print the processed file to stdout
+        Builder.print,
 
-      // Print the processed file to stdout
-      Builder.print,
-
-      // Apply terminator functions (write to disk, etc).
-    ].concat(pipelineTerminators));
-
+        // Apply terminator functions (write to disk, etc).
+      ].concat(pipelineTerminators)
+    );
   });
 
   // Aggregate produced streams and wait for all to finish
@@ -201,17 +211,16 @@ Lingon.prototype.buildWithSourceFiles = function (params, sourceFiles) {
   if (!!callback) {
     var fileBuffer = [];
 
-    allStreams.on('data', function (file) {
+    allStreams.on("data", function (file) {
       fileBuffer.push(file);
     });
 
-    allStreams.on('end', function () {
+    allStreams.on("end", function () {
       callback(fileBuffer);
     });
   }
 
-  this.trigger('afterBuild');
-
+  this.trigger("afterBuild");
 };
 
 Lingon.prototype.rewriteExtension = function (ext, rewrite, opts) {

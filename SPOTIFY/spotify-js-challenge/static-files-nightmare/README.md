@@ -1,5 +1,5 @@
-Static files nightmare
-======================
+# Static files nightmare
+
 ![Spotify Logo](../resources/spotify-logo.png)
 
 Our Product Owner reports that one of our websites takes a lot of time to load.

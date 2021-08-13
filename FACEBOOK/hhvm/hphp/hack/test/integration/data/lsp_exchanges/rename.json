@@ -134,47 +134,47 @@
   },
   {
     "jsonrpc": "2.0",
-     "id": 8,
-     "method": "textDocument/rename",
-     "params": {
-       "textDocument": {
-         "uri": "${php_file_uri}"
-       },
-       "position": {
-         "line": 26,
-         "character": 33
-       },
-       "newName": "new_static_method"
-     }
-   },
-   {
-     "jsonrpc": "2.0",
-     "id": 9,
-     "method": "textDocument/rename",
-     "params": {
-       "textDocument": {
-         "uri": "${php_file_uri}"
-       },
-       "position": {
-         "line": 31,
-         "character": 33
-       },
-       "newName": "new_async_method"
-     }
-   },
+    "id": 8,
+    "method": "textDocument/rename",
+    "params": {
+      "textDocument": {
+        "uri": "${php_file_uri}"
+      },
+      "position": {
+        "line": 26,
+        "character": 33
+      },
+      "newName": "new_static_method"
+    }
+  },
   {
     "jsonrpc": "2.0",
-     "id": 10,
-     "method": "textDocument/rename",
-     "params": {
-       "textDocument": {
-         "uri": "${php_file_uri}"
-       },
-       "position": {
-         "line": 36,
-         "character": 42
-       },
-       "newName": "new_static_async_method"
+    "id": 9,
+    "method": "textDocument/rename",
+    "params": {
+      "textDocument": {
+        "uri": "${php_file_uri}"
+      },
+      "position": {
+        "line": 31,
+        "character": 33
+      },
+      "newName": "new_async_method"
+    }
+  },
+  {
+    "jsonrpc": "2.0",
+    "id": 10,
+    "method": "textDocument/rename",
+    "params": {
+      "textDocument": {
+        "uri": "${php_file_uri}"
+      },
+      "position": {
+        "line": 36,
+        "character": 42
+      },
+      "newName": "new_static_async_method"
     }
   },
   {

@@ -67,7 +67,7 @@ inspiration for several decisions in this library.
 ## Implementation notes
 
 - Do as little as possible in native or other builtin code; prefer Hack code in
-  the HSL wherever  possible.
+  the HSL wherever possible.
 - Builtin APIs should be as unopinionated/thin as possible; most API design
   decisions should only affect non-builtin Hack code.
 - Do not allow requests to leak resources, such as file descriptors

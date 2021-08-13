@@ -1,5 +1,4 @@
-Echonest API Wrapper
-====================
+# Echonest API Wrapper
 
 ![Spotify Logo](../resources/spotify-logo.png)
 

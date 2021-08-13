@@ -3,16 +3,15 @@
 [![Maven Central](https://img.shields.io/maven-central/v/com.spotify/dns.svg)](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.spotify%22%20dns*)
 [![License](https://img.shields.io/github/license/spotify/dns-java.svg)](LICENSE)
 
-spotify-dns-java
-================
+# spotify-dns-java
 
 This small DNS wrapper library provides some useful pieces of functionality related to SRV lookups.
 
 ## Resilience
 
-Sometimes it is useful to default to previously returned, retained values, if a dns lookup should 
-fail or return an empty result. This behavior is controlled by the ```retainingDataOnFailures()``` 
-and  ```retentionDurationMillis(long)``` methods in
+Sometimes it is useful to default to previously returned, retained values, if a dns lookup should
+fail or return an empty result. This behavior is controlled by the `retainingDataOnFailures()`
+and `retentionDurationMillis(long)` methods in
 [DnsSrvResolvers.DnsSrvResolverBuilder](src/main/java/com/spotify/dns/DnsSrvResolvers.java).
 
 ## Watching for Changes
@@ -40,7 +39,7 @@ provides functionality that allows you to get notified when things change by imp
   }
 ```
 
-Take a look  at the [PollingUsage example](src/test/java/com/spotify/dns/examples/PollingUsage.java) for an example.
+Take a look at the [PollingUsage example](src/test/java/com/spotify/dns/examples/PollingUsage.java) for an example.
 
 ## Metrics
 
@@ -65,6 +64,7 @@ For example code, have a look at
 [PollingUsage example](src/test/java/com/spotify/dns/examples/PollingUsage.java)
 
 To include the latest released version in your maven project, do:
+
 ```xml
   <dependency>
     <groupId>com.spotify</groupId>

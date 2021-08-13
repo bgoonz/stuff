@@ -1,5 +1,7 @@
 {
-  "name": [{ "type": "heading1", "content": { "text": "Bhaskar Folami", "spans": [] } }],
+  "name": [
+    { "type": "heading1", "content": { "text": "Bhaskar Folami", "spans": [] } }
+  ],
   "bio": [
     {
       "type": "paragraph",
@@ -10,10 +12,17 @@
     }
   ],
   "uid": "bhaskar",
-  "title": [{ "type": "heading4", "content": { "text": "Software Architect", "spans": [] } }],
+  "title": [
+    {
+      "type": "heading4",
+      "content": { "text": "Software Architect", "spans": [] }
+    }
+  ],
   "twitter": { "url": "https://twitter.com/vercel", "preview": null },
   "github": { "url": "https://github.com/vercel", "preview": null },
-  "company": [{ "type": "heading4", "content": { "text": "Company", "spans": [] } }],
+  "company": [
+    { "type": "heading4", "content": { "text": "Company", "spans": [] } }
+  ],
   "image": {
     "origin": {
       "id": "X9iy7BIAACgA5bGd",
@@ -30,7 +39,10 @@
     "provider": "imgix",
     "thumbnails": {}
   },
-  "talk": { "id": "X9jpoRIAACcA5qmT", "wioUrl": "wio://documents/X9jpoRIAACcA5qmT" },
+  "talk": {
+    "id": "X9jpoRIAACcA5qmT",
+    "wioUrl": "wio://documents/X9jpoRIAACcA5qmT"
+  },
   "name_TYPE": "StructuredText",
   "name_POSITION": 0,
   "bio_TYPE": "StructuredText",

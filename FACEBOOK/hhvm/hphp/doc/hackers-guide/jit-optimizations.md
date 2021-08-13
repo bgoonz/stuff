@@ -23,25 +23,25 @@ is managed by the [IRBuilder](../../runtime/vm/jit/ir-builder.h) class. The
 important methods in this process are `IRBuilder::constrainValue()`,
 `IRBuilder::constrainLocal()`, and `IRBuilder::constrainStack()`. Whenever
 the behavior of a sequence of HHIR depends on the types of one or more values,
-the types of those values must be constrained using the constrain* methods
+the types of those values must be constrained using the constrain\* methods
 previously mentioned. Each takes the value to be constrained and how it should
 be constrained. The possible constraints are defined in the `DataTypeCategory`
 enum in [datatype.h](../../runtime/base/datatype.h) and are defined in order of
 ascending specificity:
 
-* `DataTypeGeneric` indicates that the type of the value does not matter and is
+- `DataTypeGeneric` indicates that the type of the value does not matter and is
   equivalent to not constraining the value at all. This is most often used for
   values that are simply moved from place to place.
-* `DataTypeCountness` indicates that the only use of the value is to incref or
+- `DataTypeCountness` indicates that the only use of the value is to incref or
   decref it. If the value's type is not refcounted, the type guard may be
   relaxed to `Uncounted`.
-* `DataTypeCountnessInit` is similar to `DataTypeCountness`, with the exception
+- `DataTypeCountnessInit` is similar to `DataTypeCountness`, with the exception
   that guards for the type `Uninit` will not be relaxed. This is most commonly
   used for bytecodes like `CGetL`, where `Uninit` values cause a notice to be
   raised while all other uncounted types are treated equally.
-* `DataTypeSpecific` is the default constraint, and indicates that the guard
+- `DataTypeSpecific` is the default constraint, and indicates that the guard
   should not be relaxed past a specific `DataType`.
-* `DataTypeSpecialized` indicates that in addition to requiring the value's
+- `DataTypeSpecialized` indicates that in addition to requiring the value's
   `DataType`, there is an additional type tag in the value that must be
   checked. Currently this includes object classes and array kinds, used by
   [MInstrTranslator](../../runtime/vm/jit/minstr-translator.cpp) to emit more

@@ -1,14 +1,12 @@
-helios-go [![Build Status](https://travis-ci.org/spotify/helios-go.svg?branch=master)](https://travis-ci.org/spotify/helios-go)
-=========
+# helios-go [![Build Status](https://travis-ci.org/spotify/helios-go.svg?branch=master)](https://travis-ci.org/spotify/helios-go)
 
 Go client for Helios
 
-Status
----
+## Status
+
 This is very much a work in progress. Only a couple methods have been implemented.
 
-Example
----
+## Example
 
 ```go
 import "github.com/spotify/helios-go/helios"

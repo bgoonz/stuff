@@ -1,11 +1,13 @@
-{"queries": [
-	{
-		"results": [
-			{
-				"name": "name",
-				"tags": {},
-				"values": []
-			}
-		]
-	}
-]}
+{
+  "queries": [
+    {
+      "results": [
+        {
+          "name": "name",
+          "tags": {},
+          "values": []
+        }
+      ]
+    }
+  ]
+}

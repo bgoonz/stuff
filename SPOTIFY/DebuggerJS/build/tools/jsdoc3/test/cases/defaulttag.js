@@ -6,7 +6,7 @@ var request = null;
 /**
     @default
  */
-var response = 'ok';
+var response = "ok";
 
 /**
     @default

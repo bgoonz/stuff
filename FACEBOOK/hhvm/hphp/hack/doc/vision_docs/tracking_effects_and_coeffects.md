@@ -8,14 +8,14 @@ Status: DRAFT
 
 The purpose of this proposal is twofold:
 
-* unify and systematically model reasoning about *effects,* including
+- unify and systematically model reasoning about _effects,_ including
   reactivity (all flavors), purity, determinism, global state; and
-* build a sound foundation for contextual properties, formally known
-  as *coeffects,* such as (implicit) viewer contexts or environments
+- build a sound foundation for contextual properties, formally known
+  as _coeffects,_ such as (implicit) viewer contexts or environments
 
-The proposed *capability-based* approach has the unique benefit that
+The proposed _capability-based_ approach has the unique benefit that
 it can model both effects and coeffects. The main idea is to enhance
-the typechecker with a limited form of *implicit parameters* (a simple
+the typechecker with a limited form of _implicit parameters_ (a simple
 coeffect type system) and desugar into and pass capabilities that act
 as permissions for effects or resource/context access. It has very
 little impact on the Hack syntax and almost no impact to the users.
@@ -25,14 +25,14 @@ since the last century, it wasn’t until 2015-16 that this idea was
 welcomed in the programming languages (PL) community to solve a larger
 problem of (co)effects. Around that time, two independent PL research
 labs have not only formalized their interestingly similar
-capability-based type systems; they also implemented it as a *small*
+capability-based type systems; they also implemented it as a _small_
 language extension/plug-in of Scala and shown that the approach scales
 to large & complex code base of 100K+ lines (Scala Standard
 Library). See section “Prior art” for details.
 
 To be clear, this proposal is not about exposing the feature of
 implicit parameters to the Hack users (yet); it is about building a
-*typechecker primitive* that enables other complex features (both
+_typechecker primitive_ that enables other complex features (both
 existing and upcoming) to be modeled elegantly and soundly in the
 typechecker, thus enabling Hack to be more expressive. For
 example, the (conditional) reactivity/purity would not each
@@ -50,12 +50,12 @@ code into experimental code (for stability and future compatibility).
 As outlined in the Summary, this would provide a reusable mechanism to
 neatly and soundly express existing features:
 
-* reactivity & recently introduced purity,
-* *conditional* context propagation / treatment of effects in general
+- reactivity & recently introduced purity,
+- _conditional_ context propagation / treatment of effects in general
 
 and in addition it would enable to easily start tracking a new kind of
-effect, such as IO, non-determinism, etc.  For that, a new capability
-*domain* is to be introduced, with the appropriate subtyping
+effect, such as IO, non-determinism, etc. For that, a new capability
+_domain_ is to be introduced, with the appropriate subtyping
 relationship. E.g., to track input/output that can be further refined
 into disk-based and network-based I/O, the subtyping of capabilities
 would be:
@@ -69,13 +69,13 @@ CanIO <: (CanNet | CanDisk)  // ~bottom type for effect domain IO
 Now the basic idea is to require that an appropriate capability (or a
 subtype) is available in scope, either via being:
 
-* required by a so-called *stoic* function/method; or
-* captured from a *contextful* (potentially effectful/impure) function.
+- required by a so-called _stoic_ function/method; or
+- captured from a _contextful_ (potentially effectful/impure) function.
 
 The prominent way to propagate these capabilities is to treat them as
-*implicit* parameters, as section Prior Art explains.
+_implicit_ parameters, as section Prior Art explains.
 
-***Note***:
+**_Note_**:
 The syntax `@{Capability1, ...}` below is just a **desugaring** and to
 illustrate how typechecker would see a function signature; it is
 intentionally chosen to resemble the standard “Γ **@ C**” notation for
@@ -123,19 +123,19 @@ function disk_context()@{CanDisk}: void {
 ```
 
 The new attribute `<<__Contextful>>` will be described shortly; its
-idea is to allow passing *both*:
+idea is to allow passing _both_:
 
-* functions that *not* capture/require context (e.g., pure ones), and
-* contextful functions that capture some context,
+- functions that _not_ capture/require context (e.g., pure ones), and
+- contextful functions that capture some context,
 
-which enables effect polymorphism. This *by design* solves the
-*conditional* context propagation, which is just a
+which enables effect polymorphism. This _by design_ solves the
+_conditional_ context propagation, which is just a
 specific instance of effect polymorphism (with reactivity being
 considered as effect). For convenience, we could also support
 desugaring of `log2disk` into the explicitly written lambda in the
 last function above.
 
-***Note***: `<<__Contextful>>` is can be internally desugared from the
+**_Note_**: `<<__Contextful>>` is can be internally desugared from the
 existing syntax for most use cases such as reactivity, as it will be
 explained later.
 
@@ -145,9 +145,10 @@ explained in [Rytz'14]§2.2 and [ECOOP'12]. First, it enables a
 clean mapping from a lightweight user syntax (considered in a separate HIP)
 and type-checking errors does not involve mismatches of inferred types.
 Second and more important, provides a means to accept a function that
-makes arbitrary effects in *any* domain without impact on the user syntax.
+makes arbitrary effects in _any_ domain without impact on the user syntax.
 For example, adding a new effect domain (e.g., what exception is thrown,
 whether it is deterministic, what type of IO, etc.) would require:
+
 - inferring the new capability in existing code for every call site,
   essentially regressing type-checking whenever a new effect domain is added;
 - new syntax to be placed whenver we want to account for the new domain.
@@ -155,6 +156,7 @@ whether it is deterministic, what type of IO, etc.) would require:
 The classic example is Java, where in order to consider a new
 domain of effects such as Exceptions, you need to add a new version of
 function parameterized by additional generic `E` as follows:
+
 ```
 <E> void handle_messages(
   Vector<String> msgs,
@@ -166,6 +168,7 @@ void handle_messages(
    Function<String, Void> log
 ) { ... }
 ```
+
 Therefore, the generics-based mapping does not scale well; this is further
 explained later on and in materials listed under section Prior art.
 
@@ -174,7 +177,7 @@ will surface this distinction, so the impact of the semantics and syntax
 is very limited compared to the clear benefits it provides for the users,
 as well as the soundness and performance of the typechecker.
 
-### Current ad-hoc *conditional* effects
+### Current ad-hoc _conditional_ effects
 
 Without the proposed way of supporting effect polymorphism, the above
 snippet would need to be expressed like this:
@@ -188,9 +191,9 @@ function handle_messages(
 ```
 
 Besides annotation burden, this clearly does not scale in terms of
-implementation effort because each use case of capability *Cap*
+implementation effort because each use case of capability _Cap_
 necessitates special handling of a brand new set of attributes such
-as: *AtMost{Cap}AsArgs, AtMost{Cap}AsFunc, Only{Cap}IfImpl*, etc. If
+as: _AtMost{Cap}AsArgs, AtMost{Cap}AsFunc, Only{Cap}IfImpl_, etc. If
 encoded with the old (current) system, the same challenge applies for
 every new effect domain or contextual information propagation.
 
@@ -204,7 +207,7 @@ conventions”.
 
 With the newly proposed system, one could also instead rely solely on
 the subtyping of capabilities, considering implicit parameters are in
-*covariant* position. The desired behavior would simply “fall out”
+_covariant_ position. The desired behavior would simply “fall out”
 from normal typing rules, provided that capabilities are treated as
 the last/first argument in the typechecker:
 
@@ -228,7 +231,7 @@ function disk_context()@{CanDisk}: void {
 }
 ```
 
-However, such *monomorphic* handling is *not* fine-grained — it
+However, such _monomorphic_ handling is _not_ fine-grained — it
 doesn’t tell much about what precise effects the `handle_messages`
 function can make besides “any IO effect”, which is equivalent bottom
 type for this particular capability lattice of IO effects. Introducing
@@ -253,27 +256,27 @@ the typechecker. The rest are just typechecker changes that impact
 the developers of Hack.
 
 To decouple this proposal from others, this proposal uses a
-self-contained *desugared* syntax as explained above. To repeat, the
-`@{Capability}` part is *not* the user syntax and neither is the
+self-contained _desugared_ syntax as explained above. To repeat, the
+`@{Capability}` part is _not_ the user syntax and neither is the
 `__Contexful` attribute — it is just the way how typechecker sees the
 signatures of functions and methods.
 
 All syntax used in this proposal is for explanatory purposes and a
-future HIPs on contexts and reactivity/purity will explain the *new*
+future HIPs on contexts and reactivity/purity will explain the _new_
 syntax and how it maps to the implicit capabilities in this proposal.
 
 ## Semantics
 
 The Hack users will need to be aware that capturing a capability from
 a lambda makes it more restrictive. In the [FLiu’16-17] such
-*contextful* functions are referred to as
+_contextful_ functions are referred to as
 non-stoic/free/impure. Conversely, stoic functions cannot capture a
-capability but *can* require some. In [OOPSLA’16], contextful
+capability but _can_ require some. In [OOPSLA’16], contextful
 functions are treated as 2nd-class, similar to procedures in Algol and
 Pascal but still less restrictive.
 
 This proposal calls for distinguishing stoic/monomorphic functions vs
-contextful/polymorphic functions at the *type* *level*. E.g.:
+contextful/polymorphic functions at the _type_ _level_. E.g.:
 
 ```
 function higherOrder(
@@ -289,8 +292,8 @@ a syntactic level, users do need to be aware of the semantics. The
 first 2 argument functions are stoic, meaning that they cannot close
 over (capture) a capability. The last 2 argument functions are not;
 they are effect-polymorphic in a sense that they represent a
-computation created with *arbitrary context*, thus capturing any
-number of capabilities.  Here is an example of passing each kind of
+computation created with _arbitrary context_, thus capturing any
+number of capabilities. Here is an example of passing each kind of
 argument function:
 
 ```
@@ -312,14 +315,14 @@ function throwingIOstuff()@{CanThrow,CanIO}: void {
 )
 ```
 
-In fact, implicitly passed capabilities are a restricted form of *coeffects.*
+In fact, implicitly passed capabilities are a restricted form of _coeffects._
 
 ### Implicit arguments as coeffects
 
 To understand the need for imposing restrictions on
 capability-capturing lambdas, it helps to illustrate how implicit
-parameters behave. They can be bound at either *declaration* site and
-*call* site, e.g.:
+parameters behave. They can be bound at either _declaration_ site and
+_call_ site, e.g.:
 
 ```
 function nondeterministic_context()@{NonDet}: void {
@@ -354,9 +357,9 @@ void deterministic_context(...): void {
 
 but the soundness ultimately depends on whether:
 
-* capabilities can ever be introduced “out of thin air” akin to
-  *unsafe* blocks in Rust or *FIXMEs* in Hack; and
-* lifetime of a capability can be extended beyond declaring *scope.*
+- capabilities can ever be introduced “out of thin air” akin to
+  _unsafe_ blocks in Rust or _FIXMEs_ in Hack; and
+- lifetime of a capability can be extended beyond declaring _scope._
 
 ### Implicit capabilities as effects
 
@@ -380,7 +383,7 @@ non-stoic/impure initially, allowing them to capture capabilities.
 
 The latter system is implemented in Scala, with capability being
 represented as implicit parameters, therefore it reimposes a
-*2nd-class* value discipline (the challenge is also known as the
+_2nd-class_ value discipline (the challenge is also known as the
 [funarg problem](https://en.wikipedia.org/wiki/Funarg_problem)) on
 such capabilities as well as capability-capturing functions. The
 [[OOPSLA’16]](https://dl.acm.org/doi/pdf/10.1145/2983990.2984009)
@@ -389,7 +392,7 @@ paper describes the rationale on pages 1-2:
 > Second-class values in the sense of ALGOL have the benefit of
 > following a strict stack discipline (“downward funargs”), i.e., they
 > cannot escape their defining scope. This makes them **cheaper to
-> implement** ...  Since **first-class object**s may escape their
+> implement** ... Since **first-class object**s may escape their
 > defining scope, they **cannot be used to represent static
 > capabilities** or access tokens – a task that second-class values
 > are ideally suited to because they have bounded lifetimes and they
@@ -397,18 +400,18 @@ paper describes the rationale on pages 1-2:
 
 Porting that to Hack would mean:
 
-* treating capability-capturing lambdas (e.g., `$decl_site_bound`) as
+- treating capability-capturing lambdas (e.g., `$decl_site_bound`) as
   2nd-class, preventing them from being:
-    * stored in a property; or
-    * returned (to be reconsidered, see end of previous subsection).
+  - stored in a property; or
+  - returned (to be reconsidered, see end of previous subsection).
 
 (Some of these restrictions are reconsidered under Unresolved questions.)
 
 In either porting direction, we would need to:
 
-* gradually change some functions to track effects via capabilities
+- gradually change some functions to track effects via capabilities
   desugared from the old attribute syntax or the new context syntax;
-* work around restrictions reimposed for soundness by
+- work around restrictions reimposed for soundness by
   over-approximating effects, e.g., implicitly desugaring some
   attributes or functions to have `CanEverything` capability.
 
@@ -456,22 +459,22 @@ approaches!
 For most use cases, we wouldn’t require support in the runtime. As an
 example, reactivity and purity of functions is already tracked with a
 special bit in HHVM, so they don’t need to rely on having runtime
-values for implicit capabilities/contexts.  Consequently, capabilities
-can be tracked purely *statically*, and the run-time does not need to
+values for implicit capabilities/contexts. Consequently, capabilities
+can be tracked purely _statically_, and the run-time does not need to
 know about the existence of implicit parameters — unless we decide to
 unify it with a pending HHVM proposal on implicit contexts.
 
 The feature can be implemented in the typechecker in several mostly
-*non-overlapping* phases:
+_non-overlapping_ phases:
 
 1. implement distinction between regular (stoic) lambdas and
-    effect-polymorphic/contextful ones (the distinction is also needed
-    for alternative #1)
+   effect-polymorphic/contextful ones (the distinction is also needed
+   for alternative #1)
 2. implement desugaring of contextful functions (those that can
-   capture capabilities) passed to *higher-order* functions as
+   capture capabilities) passed to _higher-order_ functions as
    2nd-class or impure/non-stoic:
-    1. either via an existing attribute syntax
-    2. or a new *contexts* syntax, to be proposed in a separate HIP;
+   1. either via an existing attribute syntax
+   2. or a new _contexts_ syntax, to be proposed in a separate HIP;
 3. modify the typechecker environment to also carry capabilities
    (multiple, or a single one using an intersection type)
 4. modify the typing rule for function application to check if
@@ -479,17 +482,17 @@ The feature can be implemented in the typechecker in several mostly
 
 Once phase 2 is finished, we should add these annotations to WWW,
 which would allow for smoke-testing
-phases 3.-4. (as well as 1.).  As a part of phase 2, we may need to
+phases 3.-4. (as well as 1.). As a part of phase 2, we may need to
 implement a subset of functionality of 2nd-class values, but this is a
 relatively easy task:
 
-* built in 2 days during a Hackathon
+- built in 2 days during a Hackathon
   (even with user syntax that is not needed here);
-* also implemented and tested in another language, Scala in *only*
- [**400 lines**](https://github.com/losvald/scala/blob/3070ee4931f0429a80a517a0c167028ed3e5865d/src/compiler/scala/tools/nsc/typechecker/EscLocal.scala#L65)
- in typechecker &
- [10 lines](https://github.com/losvald/scala/blob/9495ebca55f712ae3459fe5eb86ffab2477fde8a/src/library/scala/Esc.scala)
- in standard library (see section Prior art for details)
+- also implemented and tested in another language, Scala in _only_
+  [**400 lines**](https://github.com/losvald/scala/blob/3070ee4931f0429a80a517a0c167028ed3e5865d/src/compiler/scala/tools/nsc/typechecker/EscLocal.scala#L65)
+  in typechecker &
+  [10 lines](https://github.com/losvald/scala/blob/9495ebca55f712ae3459fe5eb86ffab2477fde8a/src/library/scala/Esc.scala)
+  in standard library (see section Prior art for details)
 
 For prototyping & unit-testing, we actually also modified the
 parser to support parsing Concrete Syntax Tree directly into
@@ -501,7 +504,7 @@ use it / be aware of this exploit.
 Multiple capabilities that express permissions to make effect in
 multiple domains (e.g., determinism, exceptions, reactivity, etc.),
 are encoded via an intersection type. E.g., `NonDet & Throwing`
-represents having *both* the capability for non-deterministic
+represents having _both_ the capability for non-deterministic
 execution as well as the one for throwing exceptions,
 respectively. Since `NonDet & Throwing <: NonDet`, it satisfies the
 requirement of / privilege for non-deterministic
@@ -525,7 +528,7 @@ type CanDefaults = (CanNonDet & CanMutateUntracked);
 The benefit of using intersection type as opposed to
 interface inheritance is apparent considering
 a hypothetical call site that passes each of
-the comprising capabilities *separately*, e.g.:
+the comprising capabilities _separately_, e.g.:
 
 ```
 // implicitly @{CanNonDet,CanMutateUntracked}=CanDefaults
@@ -550,14 +553,14 @@ class CachedNonDetFactory {
 }
 ```
 
-Conversely, if we relied on *nominal subtyping* and defined
+Conversely, if we relied on _nominal subtyping_ and defined
 
 ```
 interface CanDefaults extends CanNonDet, CanMutateUntracked {}
 ```
 
 then the call to `randomBool` would result in a typing error because
-`CanNonDet & CanMutateUntracked` would *not* be a subtype of
+`CanNonDet & CanMutateUntracked` would _not_ be a subtype of
 `CanDefaults` anymore.
 
 ### Default capabilities as an unsound migration mechanism
@@ -568,7 +571,9 @@ same as implicit parameter passing in several other languages.
 ```
 function randomUpTo(int $n)@{CanNonDet}: int
 ```
+
 would be modeled in Scala as follows:
+
 ```
 def randomUpTo(n: Int)(implicit $_: CanNonDet): Int
 ```
@@ -581,7 +586,7 @@ This is surely unsound for effect tracking as the capability is no
 longer required at the call site; in fact, it is a means of obtaining
 the corresponding privilege "out of thin air".
 
-In a language with *default* implicit parameters such as Scala,
+In a language with _default_ implicit parameters such as Scala,
 this would be written as:
 
 ```
@@ -598,7 +603,7 @@ function randomBoolUnsafe()@{ +CanNonDet}: void { ... }
 ```
 
 where the part following `+` in the braced list (`{}`) after `@`
-denotes the *unsafe* (i.e., provided but not required) capability.
+denotes the _unsafe_ (i.e., provided but not required) capability.
 
 ## Feature interactions
 
@@ -616,8 +621,8 @@ Ideally, this should influence the design of HHVM’s proposed but put
 “on hold” feature of implicit contexts because it would be nice if we
 could one day unify these two via reification:
 
-* non-reified capabilities → only static enforcement in the typechecker;
-* reified capabilities → also run-time inspection/retrieval of the
+- non-reified capabilities → only static enforcement in the typechecker;
+- reified capabilities → also run-time inspection/retrieval of the
   corresponding context.
 
 See the section Future possibilities for more details.
@@ -631,30 +636,30 @@ for problems solvable via implicit parameters, most notably effects.
 ### Alternative #0: special tags + ad-hoc typechecking logic
 
 This is mostly similar the how the current typechecker reasons about
-reactivity.  There is an extra step in typing functions and their call
+reactivity. There is an extra step in typing functions and their call
 sites, which examines the tags and validates the rules. However, this
 means that subtyping, for example, needs to be special-cased for each
 of these reactivity-like tags. Second, many attributes behave
 specially and have to be carefully handled at several stages in
 parsing & type-checking. Third, this is complicated by fact that we
-support what is known as *conditional* reactivity, i.e., a function is
+support what is known as _conditional_ reactivity, i.e., a function is
 reactive only if its argument function is reactive or a subclasses are
 known to be reactive. This clearly doesn’t scale in terms of
 implementation and complexity (due to special cases) as soon as one
 introduces new form(s) of “context” — essentially new (co)effects:
 
-* purity — cannot call `Rx\IS_ENABLED`, but otherwise stricter than `Rx`;
-* IO (e.g., from data source / or to sinks);
-* non-determinism and parallelism;
-* async, as well as sync (immediately awaited async call);
-* contexts that restrict the flow of (sensitive) data;
-* exceptions?
+- purity — cannot call `Rx\IS_ENABLED`, but otherwise stricter than `Rx`;
+- IO (e.g., from data source / or to sinks);
+- non-determinism and parallelism;
+- async, as well as sync (immediately awaited async call);
+- contexts that restrict the flow of (sensitive) data;
+- exceptions?
 
 There is a general consensus to move away from
-this verbose and overly restrictive syntax.  For the alternatives
-below, the new syntax for reactivity and purity — or *contexts*
-in general — would be *desugared* into more *reusable and
-well-known primitives*. This would solve the major challenge of the
+this verbose and overly restrictive syntax. For the alternatives
+below, the new syntax for reactivity and purity — or _contexts_
+in general — would be _desugared_ into more _reusable and
+well-known primitives_. This would solve the major challenge of the
 current approach — each “domain” of (conditional) context
 needs a special type-checking logic that is not
 well-integrated with the rest of the type system, as well as
@@ -665,24 +670,25 @@ propagation through different stages (bug-prone and inflexible).
 This is the oldest and most common way of encoding effects. Some early
 paper(s) point out different challenges in sound and not overly
 restrictive approximation of runtime behavior (especially using
-constraint-based solvers?).  The main disadvantage of this approach is
-that it is *quite invasive* — nearly every typing rule would need to
+constraint-based solvers?). The main disadvantage of this approach is
+that it is _quite invasive_ — nearly every typing rule would need to
 be modified — and effects carried in the typechecker. The latter may
 lead to significant performance overhead, and the former is also less
 than ideal in terms of implementation cost & maintenance effort, as
 well as overall complexity, of the typechecker code.
 
-The current proposal requires far *fewer* modification to typing rules;
-*only* function call needs to read from the (implicit) capability context,
-and *only* function declarations add to it. Conversely, type-and-effect
-systems require a type in *every* position to be associated with an effect
+The current proposal requires far _fewer_ modification to typing rules;
+_only_ function call needs to read from the (implicit) capability context,
+and _only_ function declarations add to it. Conversely, type-and-effect
+systems require a type in _every_ position to be associated with an effect
 (as it can potentially be a function that makes an effect).
 The trade-off is somewhat similar to that of virtual dispatch via:
+
 - vtable (context per class) -> additional capability context
   is looked up per each function call;
 - [fat pointer](https://en.wikipedia.org/wiki/Dynamic_dispatch#Fat_pointer)
-  (every pointer is *doubled* in size) -> encoding of a type
-  is bloated by being *paired* with an effect.
+  (every pointer is _doubled_ in size) -> encoding of a type
+  is bloated by being _paired_ with an effect.
 
 Since virtual dispatch in languages with a virtual machine and JIT
 has negligible performance overhead (unlike statically compiled ones),
@@ -704,19 +710,19 @@ performance wins compared to wrapping types in monads.
 Based on my high-level understanding of the relatively few papers that
 talk about it:
 
-* `+` provide a modular way for customizing effect handling
-* `-` not rigorously verified via large case studies for usability & performance;
-* `-` requires special treatment in [IR](https://dl.acm.org/doi/pdf/10.1145/3341643)/VM to efficiently do [CPS translation](https://dl.acm.org/doi/pdf/10.1145/1291151.1291179)
-    (not so practical without invading into HHVM internals)
+- `+` provide a modular way for customizing effect handling
+- `-` not rigorously verified via large case studies for usability & performance;
+- `-` requires special treatment in [IR](https://dl.acm.org/doi/pdf/10.1145/3341643)/VM to efficiently do [CPS translation](https://dl.acm.org/doi/pdf/10.1145/1291151.1291179)
+  (not so practical without invading into HHVM internals)
 
-Even if we invested a lot into building the support for *efficient*
+Even if we invested a lot into building the support for _efficient_
 translation to Continuation Passing Style (CPS), which does not look
 trivial at all (see Andrew’s [ICFP’07] paper), we would need to
 perform more “testing in the wild” as these approaches do not have
 comparable user & performance studies, unlike capability-based
-(co)effect systems.  Finally, the most well-known approach, published
+(co)effect systems. Finally, the most well-known approach, published
 in [ICFP’13](https://dl.acm.org/doi/pdf/10.1145/2500365.2500581), is
-*not* entirely static and require dependent types; and another
+_not_ entirely static and require dependent types; and another
 practical candidate
 ([Effekt @ Scala’17](https://dl.acm.org/doi/pdf/10.1145/3136000.3136007))
 requires multi-prompt delimited continuations, which would in turn be
@@ -730,19 +736,19 @@ Art.
 
 ## Impact to Hack users & WWW
 
-This proposal does *not* expose implicit arguments as 1st-class
+This proposal does _not_ expose implicit arguments as 1st-class
 language feature; so Hack users:
 
-* *cannot* pass arbitrary values/contexts implicitly;
-* do *not* need to know that contexts, such as (shallowly/locally)
+- _cannot_ pass arbitrary values/contexts implicitly;
+- do _not_ need to know that contexts, such as (shallowly/locally)
   reactive or deterministic, would be from a type-checking perspective
   propagated just like implicit arguments.
 
 Nonetheless, it does help to create a mental model behind each use case,
 by generally describing that:
 
-* contexts internally map to capabilities/permissions to do stuff;
-* they are propagated in a similar fashion as implicit arguments in
+- contexts internally map to capabilities/permissions to do stuff;
+- they are propagated in a similar fashion as implicit arguments in
   Scala and Haskell.
 
 The latter would actually help Hack developers with some experience in
@@ -755,7 +761,7 @@ may want to know:
    developers using “conditional” effect examples;
 2. that the syntax for reactive/pure contexts internally
    desugars to implicit parameters;
-3. *optional*: new “capability type” if we need to support advanced
+3. _optional_: new “capability type” if we need to support advanced
    use variable-context class hierarchies (see section Unresolved
    questions).
 
@@ -770,9 +776,9 @@ effect-polymorphic/2nd-class or monomorphic functions. As of June
 higher-order functions that would require this new type of
 annotation(s). Verified via bunnylol: `tbgs (function(`
 
-*Only* the Hack developers will care about:
+_Only_ the Hack developers will care about:
 
-* capability lattice that enforces *calling convention* for each types
+- capability lattice that enforces _calling convention_ for each types
   of contexts such as reactive, non-deterministic, etc., (each type
   corresponds to a use case of implicit arguments internally);
 
@@ -782,11 +788,11 @@ I think we should support a foundation for capability-tracking
 (co)effects, but the question is how many of the subfeatures should be
 present:
 
-* for prototyping, exposing the syntax for ad-hoc in Concrete Syntax
+- for prototyping, exposing the syntax for ad-hoc in Concrete Syntax
   Tree but gating that parser feature;
-* exposing capabilities as types in user code (see section Unresolved
+- exposing capabilities as types in user code (see section Unresolved
   questions);
-* 2nd-class treatment of capability-capturing functions vs disallow
+- 2nd-class treatment of capability-capturing functions vs disallow
   capturing capabilities from stoic functions (the former is similar
   to how functions in Pascal/Algol behave, see [OOPSLA’16]).
 
@@ -806,45 +812,45 @@ Haskell also supports them
 albeit in a somewhat more restricted form.
 
 In [ScalaDays’15], M. Odersky, the designer of Scala (and a top-notch
-PL researcher), pioneered the idea of using implicit *capabilities*
-for modeling *permissions*. Implicit parameters are already a feature
+PL researcher), pioneered the idea of using implicit _capabilities_
+for modeling _permissions_. Implicit parameters are already a feature
 in Scala since v2, and overhead of using implicits has been evaluated
 on a large corpus of real-world code in [POPL’18], shown to perform
 **5x faster than monads**.
 
 Leo's [OOPSLA’16] work has won the Distinguished Artifact Award; it
-designs, machine-proves and implements a *capability-based (co)effect*
+designs, machine-proves and implements a _capability-based (co)effect_
 system using second-class values (they give more expressiveness
 compared to the similar approach of Fengyun Liu). It also evaluates
 the annotation burden — relevant for our code-mod — showing that
 **<2% of code changed** in Scala Standard Library has to be changed to
-propagate effects (checked exceptions, parallelism).  The second
+propagate effects (checked exceptions, parallelism). The second
 author of [OOPSLA’16], G. Essertel has machine-proved in Coq:
 
-* [Simply-Typed Lambda Calculus (STLC) with 2nd-class values (1/2)](https://github.com/TiarkRompf/scala-escape/tree/master/coq#coq-proofs-for-stlc-12);
-* [System D **with subtyping** (~Scala\{DOT}) and 2nd-class values](https://github.com/TiarkRompf/scala-escape/tree/master/coq#coq-proofs-for-dsub-12).
+- [Simply-Typed Lambda Calculus (STLC) with 2nd-class values (1/2)](https://github.com/TiarkRompf/scala-escape/tree/master/coq#coq-proofs-for-stlc-12);
+- [System D **with subtyping** (~Scala\{DOT}) and 2nd-class values](https://github.com/TiarkRompf/scala-escape/tree/master/coq#coq-proofs-for-dsub-12).
 
 (System D with subtyping has been proven sound by Tiark Rompf and Nada Amin in
-[*another* OOPSLA’16 paper](https://dl.acm.org/doi/pdf/10.1145/3022671.2984008).)
+[_another_ OOPSLA’16 paper](https://dl.acm.org/doi/pdf/10.1145/3022671.2984008).)
 
 Fengyun Liu has built a similar but somewhat simpler capability-based
 effect system in his PhD dissertation [FLiu’16-17]. The two
 simplifications compared to [OOPSLA’16] are (the analogy is parenthesized):
 
-* *effect-tracking* (non-stoic) lambdas *cannot capture* capabilities
+- _effect-tracking_ (non-stoic) lambdas _cannot capture_ capabilities
   (as opposed to being treated 2nd-class);
-* capability parameters are *explicit* (less practical for users & code mod);
+- capability parameters are _explicit_ (less practical for users & code mod);
 
 He also machine-proved in Coq his approach generalized to STLC,
 System F and System D on [GitHub](https://github.com/liufengyun/stoic#stoic).
 
-The common practical challenge of effect systems is known as *effect
-polymorphism*, initially described in [POPL’88]. Papers
+The common practical challenge of effect systems is known as _effect
+polymorphism_, initially described in [POPL’88]. Papers
 [ECOOP’12, RytzOdersky’12] show how to encode effects as lattice in a
-modular way, and more importantly show how to *annotate higher-order*
+modular way, and more importantly show how to _annotate higher-order_
 functions in a lightweight way that supports effect polymorphism. The
 importance of providing effect polymorphism without heavyweight
-annotations has been reiterated by a recent work on *gradual*
+annotations has been reiterated by a recent work on _gradual_
 polymorphic effects in [OOPSLA’15]:
 
 > effect polymorphism, which is crucial for handling common
@@ -868,58 +874,58 @@ which is along the lines of [OOPSLA’16] and [FLiu’16-17], is the
 type-and-effect system presented in [RytzOdersky’12] and [Rytz’14],
 implemented in [EffScript’15], with the idea original idea originating
 from [ECOOP’12]. However, the ergonomic treatment of “relative
-declaration” requires *dependent* function types as [[Rytz’14]
+declaration” requires _dependent_ function types as [[Rytz’14]
 §3.2](https://lrytz.github.io/download/thesis-rytz.pdf#page=54) points
 out, and its implementation is quite complexed judging from
-[EffScript’15].  Fortunately, *both* the current proposal and their
-approach require the **distinction between** *effect-polymorphic* vs
-*monomorphic* functions, which confirms that this should be a
+[EffScript’15]. Fortunately, _both_ the current proposal and their
+approach require the **distinction between** _effect-polymorphic_ vs
+_monomorphic_ functions, which confirms that this should be a
 milestone on its own.
 
 [ImplicitsRevisited'19] explains design mistakes of Scala 2 implicits
 and reveals how they are being fixed in Dotty and soon in Scala 3.
 The current proposals avoids a lot of these by not exposing the
 feature as a first-class language construct and instead ports only a
-*tiny* subset of the Scala's behavior specifically suited for
+_tiny_ subset of the Scala's behavior specifically suited for
 passing contextual information and enforcing calling conventions
-(but *not* for type classes).
+(but _not_ for type classes).
 
 ## References:
 
 Most related work was implemented as extensions of Scala, but there’s
 also Haskell and others (E-lang, EffScript).
 
-* ScalaSpec: [Scala Language Specification](https://www.scala-lang.org/files/archive/spec/2.11/) (M. Odersky et al.)
-* **ScalaDays’15**: [**Scala** - where it came from, where it is going](https://www.slideshare.net/Odersky/scala-days-san-francisco-45917092) (M. Odersky), pages 44-46
-* **POPL’18**: [Simplicitly](https://dl.acm.org/doi/pdf/10.1145/3158130) (M. Odersky et al.)
-* **OOPSLA’16**: [...Affordable 2nd-Class Values for Fun and **(Co-)Effect**](https://dl.acm.org/doi/pdf/10.1145/2983990.2984009) (Leo Osvald et al.)
-    * https://www.dropbox.com/s/iag4gho34ewzk57/OOPSLA16-coeffects_code-changes%2Bresults_README.pdf?dl=1
-    * https://github.com/losvald/scala/compare/2.11.x...losvald:esc#files_bucket
-    * https://github.com/TiarkRompf/scala-escape/tree/master/coq#coq-proofs-for-dsub-12
-* **FLiu’16-17**: [A Study of Capability-Based Effect Systems](https://infoscience.epfl.ch/record/219173?ln=en) (Fengyun Liu), PhD dissertation
-    * https://github.com/liufengyun/stoic#stoic
-    * https://github.com/liufengyun/stoic/tree/master/2017
-* **Haskell’16**: [Effect capabilities for Haskell](https://www.sciencedirect.com/science/article/pii/S0167642315004062#br0170) (Figueroa, Tabareau, Tanter)
-* Elang‘98: [The E language](http://erights.org/elang/index.html) (M.S. Miller)
-* EffScript’15: [EffScript](https://pleiad.cl/research/software/effscript) (authors of [OOPSLA’15] below)
-* ImplicitsRevisited'19: [Lambda World 2019 - Implicits Revisited](https://www.youtube.com/watch?v=uPd9kJq-Z8o) (M. Odersky)
-* **SID-1**: [Scala Named and Default arguments](https://docs.scala-lang.org/sips/named-and-default-arguments.html) (L. Rytz), subsection Implicit parameters
-* **ECOOP’12**: [Lightweight Polymorphic Effects](http://www.lirmm.fr/~ducour/Doc-objets/ECOOP2012/ECOOP/ecoop/258.pdf) (Rytz, Odersky, Haller)
-* RytzOdersky’12: [Relative Effect Declarations for Lightweight Effect-Polymorphism](http://infoscience.epfl.ch/record/175546/files/rel-eff_1.pdf) (L. Rytz & M. Odersky)
-* Rytz’14: [A **Practical** Effect System for Scala](https://lrytz.github.io/download/thesis-rytz.pdf) (L. Rytz), PhD dissertation
-* OOPSLA’15: [Customizable **Gradual** Polymorphic Effects for Scala](https://dl.acm.org/doi/pdf/10.1145/2858965.2814315) (Toro & Tanter)
-* **ICALP’13**: [Coeffects: Unified static analysis of context-dependence](http://tomasp.net/academic/papers/coeffects/coeffects-icalp.pdf) (T. Petricek, D. Orchard, A. Mycroft)
-* ICFP’14: [Coeffects: A calculus of context-dependent computation](http://tomasp.net/academic/papers/structural/coeffects-icfp.pdf) (T. Petricek, D. Orchard, A. Mycroft)
-* OrchardTalk’14: [Coeffects: contextual effects / the dual of effects](https://www.cs.kent.ac.uk/people/staff/dao7/talks/coeffects-dundee2014.pdf) (D. Orchard, T. Petricek, A. Mycroft)
-* OrchardPhD’14: [Programming contextual computations](https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-854.pdf) (Dominic Orchard), PhD dissertation
-* ICFP’07: [Compiling with Continuations, Continued](https://dl.acm.org/doi/pdf/10.1145/1291151.1291179) (Andrew Kennedy)
-* ICFP’19: [Compiling with Continuations, or without? Whatever.](https://dl.acm.org/doi/pdf/10.1145/3341643) (Y. Cong, Leo Osvald, G. Essertel, T. Rompf)
-* Scala’17: [Effekt: Extensible Algebraic Effects in Scala](https://dl.acm.org/doi/pdf/10.1145/3136000.3136007) (Brachthäuser & Schuster)
-* ICFP’13: [Programming and Reasoning with Algebraic Effects and Dependent Types](https://dl.acm.org/doi/pdf/10.1145/2500365.2500581) (E. Brady)
-* DOT’16: [Type Soundness for Dependent Object Types](https://www.cs.purdue.edu/homes/rompf/papers/rompf-oopsla16.pdf) (Tiark Rompf, Nada Amin)
-* POPL’88: [Polymorphic Effect Systems](https://dl.acm.org/doi/pdf/10.1145/73560.73564) (Lucassen & Gifford)
-* Talpin‘94: [Type and Effect Discipline](https://www.sciencedirect.com/science/article/pii/S0890540184710467) (Talpin & Jouvelot)
-* JENTCS’08: [**Comonad**ic notions of computation](https://www.sciencedirect.com/science/article/pii/S1571066108003435) (Uustalu & Vene)
+- ScalaSpec: [Scala Language Specification](https://www.scala-lang.org/files/archive/spec/2.11/) (M. Odersky et al.)
+- **ScalaDays’15**: [**Scala** - where it came from, where it is going](https://www.slideshare.net/Odersky/scala-days-san-francisco-45917092) (M. Odersky), pages 44-46
+- **POPL’18**: [Simplicitly](https://dl.acm.org/doi/pdf/10.1145/3158130) (M. Odersky et al.)
+- **OOPSLA’16**: [...Affordable 2nd-Class Values for Fun and **(Co-)Effect**](https://dl.acm.org/doi/pdf/10.1145/2983990.2984009) (Leo Osvald et al.)
+  - https://www.dropbox.com/s/iag4gho34ewzk57/OOPSLA16-coeffects_code-changes%2Bresults_README.pdf?dl=1
+  - https://github.com/losvald/scala/compare/2.11.x...losvald:esc#files_bucket
+  - https://github.com/TiarkRompf/scala-escape/tree/master/coq#coq-proofs-for-dsub-12
+- **FLiu’16-17**: [A Study of Capability-Based Effect Systems](https://infoscience.epfl.ch/record/219173?ln=en) (Fengyun Liu), PhD dissertation
+  - https://github.com/liufengyun/stoic#stoic
+  - https://github.com/liufengyun/stoic/tree/master/2017
+- **Haskell’16**: [Effect capabilities for Haskell](https://www.sciencedirect.com/science/article/pii/S0167642315004062#br0170) (Figueroa, Tabareau, Tanter)
+- Elang‘98: [The E language](http://erights.org/elang/index.html) (M.S. Miller)
+- EffScript’15: [EffScript](https://pleiad.cl/research/software/effscript) (authors of [OOPSLA’15] below)
+- ImplicitsRevisited'19: [Lambda World 2019 - Implicits Revisited](https://www.youtube.com/watch?v=uPd9kJq-Z8o) (M. Odersky)
+- **SID-1**: [Scala Named and Default arguments](https://docs.scala-lang.org/sips/named-and-default-arguments.html) (L. Rytz), subsection Implicit parameters
+- **ECOOP’12**: [Lightweight Polymorphic Effects](http://www.lirmm.fr/~ducour/Doc-objets/ECOOP2012/ECOOP/ecoop/258.pdf) (Rytz, Odersky, Haller)
+- RytzOdersky’12: [Relative Effect Declarations for Lightweight Effect-Polymorphism](http://infoscience.epfl.ch/record/175546/files/rel-eff_1.pdf) (L. Rytz & M. Odersky)
+- Rytz’14: [A **Practical** Effect System for Scala](https://lrytz.github.io/download/thesis-rytz.pdf) (L. Rytz), PhD dissertation
+- OOPSLA’15: [Customizable **Gradual** Polymorphic Effects for Scala](https://dl.acm.org/doi/pdf/10.1145/2858965.2814315) (Toro & Tanter)
+- **ICALP’13**: [Coeffects: Unified static analysis of context-dependence](http://tomasp.net/academic/papers/coeffects/coeffects-icalp.pdf) (T. Petricek, D. Orchard, A. Mycroft)
+- ICFP’14: [Coeffects: A calculus of context-dependent computation](http://tomasp.net/academic/papers/structural/coeffects-icfp.pdf) (T. Petricek, D. Orchard, A. Mycroft)
+- OrchardTalk’14: [Coeffects: contextual effects / the dual of effects](https://www.cs.kent.ac.uk/people/staff/dao7/talks/coeffects-dundee2014.pdf) (D. Orchard, T. Petricek, A. Mycroft)
+- OrchardPhD’14: [Programming contextual computations](https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-854.pdf) (Dominic Orchard), PhD dissertation
+- ICFP’07: [Compiling with Continuations, Continued](https://dl.acm.org/doi/pdf/10.1145/1291151.1291179) (Andrew Kennedy)
+- ICFP’19: [Compiling with Continuations, or without? Whatever.](https://dl.acm.org/doi/pdf/10.1145/3341643) (Y. Cong, Leo Osvald, G. Essertel, T. Rompf)
+- Scala’17: [Effekt: Extensible Algebraic Effects in Scala](https://dl.acm.org/doi/pdf/10.1145/3136000.3136007) (Brachthäuser & Schuster)
+- ICFP’13: [Programming and Reasoning with Algebraic Effects and Dependent Types](https://dl.acm.org/doi/pdf/10.1145/2500365.2500581) (E. Brady)
+- DOT’16: [Type Soundness for Dependent Object Types](https://www.cs.purdue.edu/homes/rompf/papers/rompf-oopsla16.pdf) (Tiark Rompf, Nada Amin)
+- POPL’88: [Polymorphic Effect Systems](https://dl.acm.org/doi/pdf/10.1145/73560.73564) (Lucassen & Gifford)
+- Talpin‘94: [Type and Effect Discipline](https://www.sciencedirect.com/science/article/pii/S0890540184710467) (Talpin & Jouvelot)
+- JENTCS’08: [**Comonad**ic notions of computation](https://www.sciencedirect.com/science/article/pii/S1571066108003435) (Uustalu & Vene)
 
 # Unresolved questions
 
@@ -973,7 +979,7 @@ generalize dependent types and/or pocket universes?**
 ## Interaction with lazy collections
 
 This is somewhat related to the above, and has been extensively
-studied in [OOPSLA’16] (see Prior Art).  The gist of it is shown by
+studied in [OOPSLA’16] (see Prior Art). The gist of it is shown by
 the following snippet:
 
 ```
@@ -1026,20 +1032,20 @@ One can argue that we may not actually need to treat
 capability-capturing closures as 2nd-class. The supporting argument
 could go along these lines:
 
-* a context (requiring a capability) that once exists cannot disappear; e.g.:
-    * the (sub)request has access to reactive backend or it doesn’t
-    * execution context is either deterministic or non-deterministic
-* a function *cannot* introduce new permissions, it can just opt-out
+- a context (requiring a capability) that once exists cannot disappear; e.g.:
+  - the (sub)request has access to reactive backend or it doesn’t
+  - execution context is either deterministic or non-deterministic
+- a function _cannot_ introduce new permissions, it can just opt-out
   of certain permissions by not requiring certain capabilities;
-* there is no scope-like facility to introduces a capability type;
-* capabilities are not exposed as user types;
+- there is no scope-like facility to introduces a capability type;
+- capabilities are not exposed as user types;
 
 The last 2 points were the primary motivation for a conservative
 treatment of capability-capturing closures as 2nd-class in [OOPSLA’16]
 or impure in [FLiu’16-17] , and also makes the system more generic (if
 the first 2 points do not hold).
 
-**Q: Is semi 1st-class treatment of capabilities sound and sufficiently general for our *all* our use cases?**
+**Q: Is semi 1st-class treatment of capabilities sound and sufficiently general for our _all_ our use cases?**
 
 # Future possibilities
 
@@ -1053,10 +1059,10 @@ essentially a dual of effects (see
 That means that other language features could be expressed using
 implicit arguments under the hood, notably:
 
-* reactive and pure **contexts**
-* generic **effects** (by limiting the escaping of capabilities
+- reactive and pure **contexts**
+- generic **effects** (by limiting the escaping of capabilities
   through declaration site, see above)
-* **modules & features** (contextual by definition):
+- **modules & features** (contextual by definition):
   (non-)experimental and opt-in features
 
 ## Remodel reactivity flavors
@@ -1064,11 +1070,11 @@ implicit arguments under the hood, notably:
 There is a one-to-many mapping between reactivity (including purity)
 attributes and implicit parameters, e.g.:
 
-* `<<__Pure>>` → `@{CanThrow}` or `@{mixed}` if exceptions untracked
-* `<<__Rx>>` → `@{CanRx}`
-* `<<__RxShallow>>` → `@{CanRxShallow, ...}`
+- `<<__Pure>>` → `@{CanThrow}` or `@{mixed}` if exceptions untracked
+- `<<__Rx>>` → `@{CanRx}`
+- `<<__RxShallow>>` → `@{CanRxShallow, ...}`
 
-The *calling conventions* are enforced by design if these capabilities
+The _calling conventions_ are enforced by design if these capabilities
 are organized into a type lattice as follows:
 
 ```
@@ -1098,7 +1104,6 @@ work for pure functions), but it is too conservative because pure
 functions in the reactive sense do allow certain other kind of
 non-conflicting effects such as throwing an exception.
 
-
 ## HHVM’s implicit context as reified capability
 
 Ideally, this should somewhat influence the design of HHVM’s proposed
@@ -1107,7 +1112,7 @@ two via reification. Some contexts are reified by default such as
 reactive ones (tracked via a few bits at run-time), but we may want to
 start tracking certain kind of effects statically in the typechecker
 and avoid breaking changes to the run-time/VM. The way to do it mark
-some contexts/capabilities as non-reified (*internally* in the
+some contexts/capabilities as non-reified (_internally_ in the
 typechecker, since there is a finite number of them). E.g.:
 
 ```
@@ -1121,9 +1126,9 @@ function with_implicit_context()@{
 
 The main benefit of such unification include:
 
-* reified capabilities are *always* part of memoization key (since
+- reified capabilities are _always_ part of memoization key (since
   they are available at run-time);
-* non-reified capabilities are *never* part of the memoization key;
+- non-reified capabilities are _never_ part of the memoization key;
 
 which hopefully neatly solves the dilemma about impact on performance
 and/or correctness of memoization, unblocking the path to finalize the
@@ -1153,7 +1158,7 @@ context.
 ## Modules & features
 
 Further, we could enforce some encapsulated code such as experimental
-cannot be called from a normal *module*, by desugaring these
+cannot be called from a normal _module_, by desugaring these
 modules into capabilities:
 
 ```
@@ -1173,7 +1178,9 @@ module Experimental;
 
 function callee_in_experimental()/*@{Experimental}*/
 ```
+
 with the following subtyping relationship for this domain of (co)effects:
+
 ```
 Experimental <: Normal
 ```
@@ -1197,7 +1204,6 @@ where the desugaring would simply inject the capability into the
 typing environment used when type-checking anything in that file
 (but not other files).
 
-
 ## Haskell-like type constraints
 
 From [[OrchardPhD’14] §6.5 (page
@@ -1207,7 +1213,7 @@ From [[OrchardPhD’14] §6.5 (page
 > contextual-requirements of an expression. ... This section goes
 > towards unifying coeffects and type constraints, which is used in
 > the next chapter to encode a coeffect system based on sets using
-> Haskell’s type class constraints.  ...  The coeffect approach
+> Haskell’s type class constraints. ... The coeffect approach
 > describes the implicit parameter requirements of a function as
 > latent coeffects, rather than constraints on the type in the
 > approach of Lewis et al.

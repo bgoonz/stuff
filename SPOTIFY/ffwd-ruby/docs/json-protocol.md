@@ -8,7 +8,7 @@ In order to activate this protocol add [this configuration](/ffwd.d/in-json).
 ## Message Framing
 
 This protocol either operates in `TCP line-based` or `UDP frame-based` mode.
-This choice governs the use of *frame delimiter*.
+This choice governs the use of _frame delimiter_.
 
 For `TCP line-based` the framing is done with a newline character `\n`.
 
@@ -49,14 +49,14 @@ Messages are documented in the following structure.
   ...
 ```
 
-```String```, and ```Number``` are built-in types from JSON that are used below.
+`String`, and `Number` are built-in types from JSON that are used below.
 
-A ```literal``` refers to JSON literal values, such as the string ```"foo"``` or the number ```12.14```.
+A `literal` refers to JSON literal values, such as the string `"foo"` or the number `12.14`.
 
-A ```<field>``` refers to a key in a JSON object.
-The keyword ```optional``` or ```required``` refers to if the field has to be present and non-null or not.
+A `<field>` refers to a key in a JSON object.
+The keyword `optional` or `required` refers to if the field has to be present and non-null or not.
 
-A ```list``` or a ```map``` is characterized with one item which contains their type. It also contains an element ```..``` if more than the specified amount of elements are allowed. Some examples are ```[String, ..]```, ```[String, String]```, and ```{Number: String, ..}```.
+A `list` or a `map` is characterized with one item which contains their type. It also contains an element `..` if more than the specified amount of elements are allowed. Some examples are `[String, ..]`, `[String, String]`, and `{Number: String, ..}`.
 
 The following is an example definition and a corresponding, _valid_ JSON.
 
@@ -125,11 +125,11 @@ import time
 
 def setup(addr=('127.0.0.1', 19000)):
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    
+
     def send(data):
         data = json.dumps(data)
         s.sendto(data, addr)
-    
+
     return send, s.close
 
 if __name__ == "__main__":

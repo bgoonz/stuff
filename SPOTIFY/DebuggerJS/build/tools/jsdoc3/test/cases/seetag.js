@@ -1,11 +1,9 @@
 /**
-*  @see {@link bar}
-*/
-function foo() {
-}
+ *  @see {@link bar}
+ */
+function foo() {}
 
 /**
-*  @see http://example.com/someref
-*/
-function bar() {
-}
+ *  @see http://example.com/someref
+ */
+function bar() {}

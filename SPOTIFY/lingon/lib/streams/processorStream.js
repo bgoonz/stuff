@@ -1,11 +1,10 @@
-'use strict';
+"use strict";
 
-var path          = require('path');
-var es            = require('event-stream');
-var streamHelper  = require('../utils/stream');
+var path = require("path");
+var es = require("event-stream");
+var streamHelper = require("../utils/stream");
 
 module.exports = function (pipeMap, context, global, rootPath) {
-
   return es.map(function (file, cb) {
     // Rewrite path to be relative from the rootPath
     var filePath = file.path;
@@ -27,11 +26,9 @@ module.exports = function (pipeMap, context, global, rootPath) {
     var stream = streamHelper.createFromStream(file);
     stream = streamHelper.applyPipes(stream, pipes);
 
-    stream.on('data', function (newFile) {
+    stream.on("data", function (newFile) {
       newFile.path = filePath;
       cb(null, newFile);
     });
-
   });
-
 };

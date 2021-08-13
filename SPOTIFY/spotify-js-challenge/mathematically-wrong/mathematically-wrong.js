@@ -9,25 +9,21 @@ var Spotify = Spotify || {};
 /**
  * @class Spotify.Math
  */
-Spotify = (function(namespace) {
+Spotify = (function (namespace) {
+  namespace.Math = {
+    /**
+     * Counts the number of zeros in a number passed a parameter.
+     *
+     * @param {Number} number
+     * @method countZeros
+     * @return {Number}
+     */
+    countZeros: function (number) {
+      return (number + "").length - (number + "").replace(/0/g, "").length;
+    },
+  };
 
-    namespace.Math = {
-
-        /**
-         * Counts the number of zeros in a number passed a parameter.
-         *
-         * @param {Number} number
-         * @method countZeros
-         * @return {Number}
-         */
-        countZeros: function(number) {
-            return ((number + "").length - (number + "").replace(/0/g, "").length);
-        }
-
-    };
-
-    return namespace;
-
+  return namespace;
 })(Spotify);
 
 // Tests

@@ -1,5 +1,7 @@
 {
-  "name": [{ "type": "heading1", "content": { "text": "Katell Kali", "spans": [] } }],
+  "name": [
+    { "type": "heading1", "content": { "text": "Katell Kali", "spans": [] } }
+  ],
   "bio": [
     {
       "type": "paragraph",
@@ -10,10 +12,14 @@
     }
   ],
   "uid": "katell",
-  "title": [{ "type": "heading4", "content": { "text": "Creator", "spans": [] } }],
+  "title": [
+    { "type": "heading4", "content": { "text": "Creator", "spans": [] } }
+  ],
   "twitter": { "url": "https://twitter.com/vercel", "preview": null },
   "github": { "url": "https://github.com/vercel", "preview": null },
-  "company": [{ "type": "heading4", "content": { "text": "Company", "spans": [] } }],
+  "company": [
+    { "type": "heading4", "content": { "text": "Company", "spans": [] } }
+  ],
   "image": {
     "origin": {
       "id": "X9iy6hIAACgA5bGR",
@@ -30,7 +36,10 @@
     "provider": "imgix",
     "thumbnails": {}
   },
-  "talk": { "id": "X9jrThIAACkA5rFj", "wioUrl": "wio://documents/X9jrThIAACkA5rFj" },
+  "talk": {
+    "id": "X9jrThIAACkA5rFj",
+    "wioUrl": "wio://documents/X9jrThIAACkA5rFj"
+  },
   "name_TYPE": "StructuredText",
   "name_POSITION": 0,
   "bio_TYPE": "StructuredText",

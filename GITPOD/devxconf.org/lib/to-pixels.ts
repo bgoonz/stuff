@@ -19,7 +19,7 @@
 // height: ${toPixels(height)}; (supports height={20} and height="20px")
 
 const toPixels = (value: string | number) => {
-  if (typeof value === 'number') {
+  if (typeof value === "number") {
     return `${value}px`;
   }
 

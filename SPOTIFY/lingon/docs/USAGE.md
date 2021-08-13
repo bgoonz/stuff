@@ -3,6 +3,7 @@
 This document describes real use cases for Lingon. It starts by covering the basics and proceeds to more advanced uses. The usage documentation is work in progress. Please help out by documenting your use cases in a PR. Thanks!
 
 ## Table of Content
+
 - [Preface: The Lingon conventions](#preface)
 - [01 Build a basic project](#chapter-01)
 - [02 Serve the project locally](#chapter-02)
@@ -24,6 +25,7 @@ Common example: Our project consists of many JS files and we want to output one 
 Directives are Lingon-specific commands that live in the header of certain files (js, html, ejs). The commands are prefixed using the comment style of the source file and look like this:
 
 **source/app.js**
+
 ```JavaScript
 //= include '../bower_components/3rdParty/index.js'
 //= include '_app/myCode.js'
@@ -41,7 +43,7 @@ If a path starts with an underscore (such as `source/_lib/`), Lingon will ignore
 
 #### Convention 3: Files are processed based on their filename extensions
 
-Processing a file means somehow transforming it. For instance, compiling LESS to CSS, or minifying a JS file. Processors are regular Gulp streams and they are registered to a file extension. This means that you for instance tell Lingon to "minify all files names *.min.js.
+Processing a file means somehow transforming it. For instance, compiling LESS to CSS, or minifying a JS file. Processors are regular Gulp streams and they are registered to a file extension. This means that you for instance tell Lingon to "minify all files names \*.min.js.
 
 See the "Using gulp processors" section below for more details.
 
@@ -60,13 +62,13 @@ source
 ```
 
 #### lingon.js
+
 ```js
 #!/usr/bin/env node
-var lingon = require('lingon');
+var lingon = require("lingon");
 ```
 
 In the lingon.js file we import the lingon module. When lingon is imported it will automatically start itself after the entire lingon.js file has been executed.
-
 
 #### source/index.html
 
@@ -102,7 +104,7 @@ $ ./lingon
 [ Lingon ] source/index.html -> build/index.html
 ```
 
-Lingon read the source directory and found the index.html file. It was then ouputted to ``./build/index.html``
+Lingon read the source directory and found the index.html file. It was then ouputted to `./build/index.html`
 
 ## <a name="chapter-02">02 Serve the project locally</a>
 
@@ -118,7 +120,7 @@ The server "task" is the default in Lingon, so just running `./lingon.js` will a
 
 In some cases it's better to build once and then serve static files (without rebuilding on every request). This is useful when running lingon in a system / e2e test setup.
 
-To build once and start the static server, run: 
+To build once and start the static server, run:
 
 ```
 ./lingon.js static-server
@@ -128,9 +130,9 @@ To build once and start the static server, run:
 
 File directives are commands living in the header of files. They tell Lingon how to concatenate different files together. Directives are only parsed inside certain file types: `.js`, `.html`, `.less` and `.ejs`. The "Advanced Lingon usage" section below explains how to add additional files to parse.
 
-* A directive must be escaped using a js, CoffeeScript or HTML style comment.
-* When using JS or CoffeeScript comments, an additional `=` char is required.
-* When using HTML style comments the prefix `lingon: ` must be used.
+- A directive must be escaped using a js, CoffeeScript or HTML style comment.
+- When using JS or CoffeeScript comments, an additional `=` char is required.
+- When using HTML style comments the prefix `lingon: ` must be used.
 
 Example: index.js
 
@@ -148,12 +150,10 @@ A directive must exist in the header of a file. The header is defined as the beg
 
 There are two types of directives:
 
-Name | Parameters | Description
------|------------|------------
-include | A glob path | Example globs: `'_app/index.js', '_app/*.js', '_app/**/*.js', '!_app/**/*spec.js'`
-include_self | N/A | include_self is used to control where the contents of the calling file will be placed.<br>For instance if you want to include: 1. A library, 2. The file itself, 3. Another file.
-
-
+| Name         | Parameters  | Description                                                                                                                                                                       |
+| ------------ | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| include      | A glob path | Example globs: `'_app/index.js', '_app/*.js', '_app/**/*.js', '!_app/**/*spec.js'`                                                                                                |
+| include_self | N/A         | include_self is used to control where the contents of the calling file will be placed.<br>For instance if you want to include: 1. A library, 2. The file itself, 3. Another file. |
 
 ## <a name="chapter-04">04 Using file processors (Gulp streams)</a>
 
@@ -179,8 +179,8 @@ lingon.postProcessors.set('coffee', function() {
 
 In Lingon there are two types of processors:
 
-* pre-processors: Run on each individual file _before_ concatenation
-* post-processors: Run on each file written to the output path, _after_ concatenation.
+- pre-processors: Run on each individual file _before_ concatenation
+- post-processors: Run on each file written to the output path, _after_ concatenation.
 
 #### The full processor API
 
@@ -195,31 +195,27 @@ This function then returns a single (or an array of multiple) stream modifiers t
 
 ```js
 #!/usr/bin/env node
-var lingon = require('lingon');
-var ngHtml2js = require('lingon-ng-html2js');
-var uglify = require('gulp-uglify');
-var less = require('gulp-less');
+var lingon = require("lingon");
+var ngHtml2js = require("lingon-ng-html2js");
+var uglify = require("gulp-uglify");
+var less = require("gulp-less");
 
 // registering a new preprocessor and adding it to the end of the file type's processor chain
-lingon.preProcessors.push('ngt', function(context, globals) {
+lingon.preProcessors.push("ngt", function (context, globals) {
   // return a single stream modifier
-  return ngHtml2js({ base: 'source' });
+  return ngHtml2js({ base: "source" });
 });
 
 // registering a new postprocessor and adding it to the beginning of the file type's processor chain
-lingon.postProcessors.unshift('js', function(context, globals) {
+lingon.postProcessors.unshift("js", function (context, globals) {
   // return an array of stream modifiers
-  return [
-    uglify({ outSourceMap: true })
-  ];
+  return [uglify({ outSourceMap: true })];
 });
 
 // registering a new postprocessor and overwriting any existing ones for the file type
-lingon.postProcessors.set('less', function(context, globals) {
+lingon.postProcessors.set("less", function (context, globals) {
   // return an array of stream modifiers
-  return [
-    less()
-  ];
+  return [less()];
 });
 ```
 
@@ -227,29 +223,32 @@ lingon.postProcessors.set('less', function(context, globals) {
 
 An extensions rewrite is what happens when your input file "source/index.ejs" is built to "build/index.html". Lingon include sane defaults to handle the most common files (ejs, less, coffee, etc). However, you can also add your own extension rewrites using the following api:
 
-**Rewrite all *.fika files to *.js**
-```js
-var lingon = require('lingon');
+**Rewrite all _.fika files to _.js**
 
-lingon.rewriteExtension('fika', 'js');
+```js
+var lingon = require("lingon");
+
+lingon.rewriteExtension("fika", "js");
 ```
 
 You can also rewrite multiple extensions at the same time:
 
-**Rewrite all *.json.ejs files to *.json**
-```js
-var lingon = require('lingon');
+**Rewrite all _.json.ejs files to _.json**
 
-lingon.rewriteExtension('json.ejs', 'json');
+```js
+var lingon = require("lingon");
+
+lingon.rewriteExtension("json.ejs", "json");
 ```
 
 If you rewrite to an empty string the extension will simply disappear:
 
 **Remove .min from all filenames**
-```js
-var lingon = require('lingon');
 
-lingon.rewriteExtension('min', '');
+```js
+var lingon = require("lingon");
+
+lingon.rewriteExtension("min", "");
 ```
 
 ## <a name="chapter-06">06 Render EJS templates</a>
@@ -264,7 +263,7 @@ The Lingon instance has a property `lingon.global` which is available in all EJS
 
 ```js
 #!/usr/bin/env node
-var lingon = require('lingon');
+var lingon = require("lingon");
 
 lingon.global.name = "bob";
 ```
@@ -281,45 +280,45 @@ lingon.global.name = "bob";
 
 EJS templates also have access to a `context` object that contains information about the current file being processed.
 
-Name | Description
------|------------
-file | *Path to current file being rendered*
-layout | *Path to current layout (null if no layout is used)*
-template | *Path to the current source file**
+| Name     | Description                                          |
+| -------- | ---------------------------------------------------- |
+| file     | _Path to current file being rendered_                |
+| layout   | _Path to current layout (null if no layout is used)_ |
+| template | \*Path to the current source file\*\*                |
 
-**"source file" refers to the file being written to the build path after partials and layouts have been included.*
+\*_"source file" refers to the file being written to the build path after partials and layouts have been included._
 
 The `context` object can also be extended with custom properties in a pre-processor. For example, use this to get the shasum of each file and write it in the template.
 
 **Example: lingon.js**
+
 ```js
 #!/usr/bin/env node
-var lingon = require('lingon');
-var es = require('event-stream');
-var spawn  = require('child_process').spawn;
+var lingon = require("lingon");
+var es = require("event-stream");
+var spawn = require("child_process").spawn;
 
-lingon.preProcessors.unshift('ejs', function(params) {
+lingon.preProcessors.unshift("ejs", function (params) {
   // This functions takes an object of named params:
   // params.global    The file-specific context object
   // params.context   The global data object
 
-  return es.map(function(file, cb) {
-      var shasum = spawn('shasum', [
-        params.context.file
-      ]);
+  return es.map(function (file, cb) {
+    var shasum = spawn("shasum", [params.context.file]);
 
-      shasum.stdout.on('data', function (data) {
-        params.context.shasum = data.toString().trim();
-      });
-
-      shasum.on('close', function (data) {
-        cb(null, file);
-      });
+    shasum.stdout.on("data", function (data) {
+      params.context.shasum = data.toString().trim();
     });
+
+    shasum.on("close", function (data) {
+      cb(null, file);
+    });
+  });
 });
 ```
 
 **Example: home.ejs**
+
 ```html
 <div class="home">
   <h1>file: <%= context.file %></h1>
@@ -329,49 +328,50 @@ lingon.preProcessors.unshift('ejs', function(params) {
 </div>
 ```
 
-
 ### Different values during build & server
+
 It's possible to pass different data to the server and build tasks by overriding data in the `serverConfigure` event. This way the title will be 'bob' during build and 'alice' when the server has started.
 
 ```js
 #!/usr/bin/env node
-var lingon = require('lingon');
+var lingon = require("lingon");
 
 lingon.global.name = "bob";
 
-lingon.bind('serverConfigure', function() {
+lingon.bind("serverConfigure", function () {
   lingon.global.name = "alice";
 });
 ```
 
 ## <a name="chapter-07">07 Configure Lingon</a>
 
-The Lingon configuration can be directly accessed and mofied from inside the lingon.js file via the `lingon.config` object. The  following properties are available:
+The Lingon configuration can be directly accessed and mofied from inside the lingon.js file via the `lingon.config` object. The following properties are available:
 
-Name | Description
------|------------
-defaultTask | *Task that will be run when invoking lingon without any arguments, defaults to `'server'`.*
-sourcePath | *Name of the project's source folder, defaults to `'source'`.*
-buildPath | *Name of the project's build folder, defaults to `'build'`.*
-ignorePrefixPattern | *Pattern for ignoring files in the build process, defaults to `new RegExp('\/_')`.*
-directiveFileTypes | *Registered file extensions that will be parsed for directives, defaults to `['js' 'less' 'css' 'ejs' 'html' 'md']`.*
-extensionRewrites | *List of file extensions that will be converted if a postprocessor is registered for them, defaults to `{"ejs": "html", "less": "css", …}`*
-server | *Is itself a config object for the built in server mode.*
-server.directoryIndex | *Index file that is to be served per directory when using the server mode, defaults to `'index.html'`.*
-server.catchAll | *Fallback file that is to be served if the requested one could not be found using the server mode, defaults to `undefined`.*
-server.namespace | *Namespace to handle requests from a different root in server mode (e.g. `http://localhost:5678/my-namespace/index.html`), defaults to `'/'`.*
+| Name                  | Description                                                                                                                                    |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| defaultTask           | _Task that will be run when invoking lingon without any arguments, defaults to `'server'`._                                                    |
+| sourcePath            | _Name of the project's source folder, defaults to `'source'`._                                                                                 |
+| buildPath             | _Name of the project's build folder, defaults to `'build'`._                                                                                   |
+| ignorePrefixPattern   | _Pattern for ignoring files in the build process, defaults to `new RegExp('\/_')`._                                                            |
+| directiveFileTypes    | _Registered file extensions that will be parsed for directives, defaults to `['js' 'less' 'css' 'ejs' 'html' 'md']`._                          |
+| extensionRewrites     | _List of file extensions that will be converted if a postprocessor is registered for them, defaults to `{"ejs": "html", "less": "css", …}`_    |
+| server                | _Is itself a config object for the built in server mode._                                                                                      |
+| server.directoryIndex | _Index file that is to be served per directory when using the server mode, defaults to `'index.html'`._                                        |
+| server.catchAll       | _Fallback file that is to be served if the requested one could not be found using the server mode, defaults to `undefined`._                   |
+| server.namespace      | _Namespace to handle requests from a different root in server mode (e.g. `http://localhost:5678/my-namespace/index.html`), defaults to `'/'`._ |
 
 ## <a name="chapter-08">08 Advanced Lingon usage</a>
 
 #### Allowing the usage of directives (includes) in additional file types
+
 If you want to use directives (includes) in your own custom file extensions you can just add them to the array `lingon.config.directiveFileTypes`.
 By default the following file types are registered: `['js', 'less', 'css', 'ejs', 'html', 'md']`
 
 ```js
 #!/usr/bin/env node
-var lingon = require('lingon');
+var lingon = require("lingon");
 
-lingon.config.directiveFileTypes.push('ngt', 'coffee');
+lingon.config.directiveFileTypes.push("ngt", "coffee");
 ```
 
 #### Register conditional processor
@@ -382,21 +382,19 @@ Additionally some processors are only needed in certain tasks, in that case we c
 
 ```js
 #!/usr/bin/env node
-var lingon = require('lingon');
-var uglify = require('gulp-uglify');
+var lingon = require("lingon");
+var uglify = require("gulp-uglify");
 
 // match the regexp against the full path from the project's root
 lingon.preProcessors.setMatchFullPath(true);
 lingon.postProcessors.setMatchFullPath(true);
 
 // only process files that do not contain ".min" in their name
-lingon.postProcessors.push('js', /^((?!\.min).)*$/, function() {
+lingon.postProcessors.push("js", /^((?!\.min).)*$/, function () {
   var processors = [];
 
-  if(lingon.task == 'build') {
-    processors.push(
-      uglify({ outSourceMap: true })
-    );
+  if (lingon.task == "build") {
+    processors.push(uglify({ outSourceMap: true }));
   }
 
   return processors;
@@ -411,33 +409,39 @@ Use `lingon.registerTask('<TASKNAME>', fn, infoObject)` to register a new task. 
 
 ```js
 #!/usr/bin/env node
-var lingon = require('lingon');
-var imagemin = require('gulp-imagemin');
-var pngcrush = require('imagemin-pngcrush');
+var lingon = require("lingon");
+var imagemin = require("gulp-imagemin");
+var pngcrush = require("imagemin-pngcrush");
 
 // add lingon task to optimize images directly in the source folder
 // execute task via "lingon imagemin"
-lingon.registerTask('imagemin', function(callback) {
-  lingon.config.sourcePath += '/images';
-  lingon.config.buildPath = lingon.config.sourcePath;
+lingon.registerTask(
+  "imagemin",
+  function (callback) {
+    lingon.config.sourcePath += "/images";
+    lingon.config.buildPath = lingon.config.sourcePath;
 
-  var optimizeImages = function(params) {
-    return imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}],
-      use: [pngcrush()]
+    var optimizeImages = function (params) {
+      return imagemin({
+        progressive: true,
+        svgoPlugins: [{ removeViewBox: false }],
+        use: [pngcrush()],
+      });
+    };
+    lingon.postProcessors.push(
+      ["jpg", "jpeg", "png", "gif", "svg"],
+      optimizeImages
+    );
+
+    lingon.build({
+      callback: callback,
     });
-  };
-  lingon.postProcessors.push(['jpg', 'jpeg', 'png', 'gif', 'svg'], optimizeImages);
-
-  lingon.build({
-    'callback': callback
-  });
-}, {
-  message: 'Optimize images (directly in the source folder!)',
-  arguments: {
-    // 'v': 'Run in verbose mode' // this argument is made up for example purposes
+  },
+  {
+    message: "Optimize images (directly in the source folder!)",
+    arguments: {
+      // 'v': 'Run in verbose mode' // this argument is made up for example purposes
+    },
   }
-});
-
+);
 ```

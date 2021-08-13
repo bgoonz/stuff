@@ -22,10 +22,10 @@ create a deployment group whose hosts match all the specified host selectors.
 
 Here's a list of the available types of host selectors:
 
-  * [label] = foo
-  * [label] != foo
-  * [label] in (foo, bar, qux, ...)
-  * [label] notin (foo, bar, qux, ...)
+- [label] = foo
+- [label] != foo
+- [label] in (foo, bar, qux, ...)
+- [label] notin (foo, bar, qux, ...)
 
 Creating a deployment group with the same name and labels as an existing one will succeed with a
 "not modified" response. Creating a deployment group with the same name but different labels as an
@@ -107,4 +107,4 @@ Check on the status:
 
 See more deployment group commands with `helios -h`.
 
-  [1]: https://github.com/spotify/helios/blob/master/docs/user_manual.md#label-agents
+[1]: https://github.com/spotify/helios/blob/master/docs/user_manual.md#label-agents

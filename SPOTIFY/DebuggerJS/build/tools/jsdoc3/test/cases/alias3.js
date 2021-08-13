@@ -1,12 +1,12 @@
-Klass('trackr.CookieManager',
+Klass(
+  "trackr.CookieManager",
 
-    /** @class
+  /** @class
         @alias trackr.CookieManager
         @param {object} kv
     */
-    function(kv) {
-        /** document me */
-        this.value = kv;
-    }
-    
+  function (kv) {
+    /** document me */
+    this.value = kv;
+  }
 );

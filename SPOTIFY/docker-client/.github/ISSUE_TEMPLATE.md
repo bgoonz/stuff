@@ -7,7 +7,6 @@ If you're looking for help check
 
 **Is this a BUG REPORT or FEATURE REQUEST?**:
 
-
 ## Description
 
 [Add feature/bug description here]
@@ -34,4 +33,3 @@ If you're looking for help check
 ```text
 [Paste full backtrace here]
 ```
-

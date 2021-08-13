@@ -1,18 +1,17 @@
-'use strict';
+"use strict";
 
-var forEach = require('mout/collection/forEach');
-var isInteger = require('mout/lang/isInteger');
-var isArray = require('mout/lang/isArray');
-var fillIn = require('mout/object/fillIn');
+var forEach = require("mout/collection/forEach");
+var isInteger = require("mout/lang/isInteger");
+var isArray = require("mout/lang/isArray");
+var fillIn = require("mout/object/fillIn");
 
 function Control(collection, length, keys, values, next, resolve, reject) {
-
   var pending = true;
   var remaining = length;
 
   var caught, saved;
 
-  var done = function() {
+  var done = function () {
     pending = false;
     if (caught) {
       reject(caught.error);
@@ -21,7 +20,8 @@ function Control(collection, length, keys, values, next, resolve, reject) {
     } else {
       if (isArray(collection)) {
         var result = [];
-        for (var i = 0; i < length; i++) if (i in collection) result.push(collection[i]);
+        for (var i = 0; i < length; i++)
+          if (i in collection) result.push(collection[i]);
         resolve(result);
       } else {
         resolve(collection);
@@ -29,7 +29,7 @@ function Control(collection, length, keys, values, next, resolve, reject) {
     }
   };
 
-  this.resolve = function(value) {
+  this.resolve = function (value) {
     if (pending) {
       pending = false;
       resolve(value);
@@ -37,7 +37,7 @@ function Control(collection, length, keys, values, next, resolve, reject) {
     return this;
   };
 
-  this.reject = function(error) {
+  this.reject = function (error) {
     if (pending) {
       pending = false;
       reject(error);
@@ -45,7 +45,7 @@ function Control(collection, length, keys, values, next, resolve, reject) {
     return this;
   };
 
-  this.collect = function(index, value) {
+  this.collect = function (index, value) {
     if (pending) {
       collection[keys[index]] = value;
       if (!--remaining) done();
@@ -53,7 +53,7 @@ function Control(collection, length, keys, values, next, resolve, reject) {
     return this;
   };
 
-  this.catch = function(error) {
+  this.catch = function (error) {
     if (pending) {
       caught = { error: error };
       if (!--remaining) done();
@@ -61,7 +61,7 @@ function Control(collection, length, keys, values, next, resolve, reject) {
     return this;
   };
 
-  this.save = function(value) {
+  this.save = function (value) {
     if (pending) {
       saved = { value: value };
       if (!--remaining) done();
@@ -69,30 +69,30 @@ function Control(collection, length, keys, values, next, resolve, reject) {
     return this;
   };
 
-  this.skip = function() {
+  this.skip = function () {
     if (pending && !--remaining) done();
     return this;
   };
 
-  this.continue = function() {
+  this.continue = function () {
     if (pending) next();
     return this;
   };
-
 }
 
-var identity = function(promise) { return promise; };
+var identity = function (promise) {
+  return promise;
+};
 
 function use(Promise) {
-
-  if (!Promise) throw new Error('sequence needs a Promise implementation');
+  if (!Promise) throw new Error("sequence needs a Promise implementation");
 
   function sequence(list, iterator, previous) {
     var length = 0;
     var keys = [];
     var values = [];
 
-    forEach(list, function(value, key) {
+    forEach(list, function (value, key) {
       values.push(value);
       keys.push(key);
       length++;
@@ -102,11 +102,18 @@ function use(Promise) {
 
     var index = 0;
 
-    var collection = (isInteger(list.length)) ? [] : {};
+    var collection = isInteger(list.length) ? [] : {};
 
-    return new Promise(function(resolve, reject) {
-
-      var control = new Control(collection, length, keys, values, next, resolve, reject);
+    return new Promise(function (resolve, reject) {
+      var control = new Control(
+        collection,
+        length,
+        keys,
+        values,
+        next,
+        resolve,
+        reject
+      );
 
       function next() {
         if (index === length) return;
@@ -115,20 +122,22 @@ function use(Promise) {
         var key = keys[current];
         var value = values[current];
 
-        var ctrl = fillIn({
-          index: current,
-          last: index === length,
-          collect: function(value) {
-            return control.collect(current, value);
-          }
-        }, control);
+        var ctrl = fillIn(
+          {
+            index: current,
+            last: index === length,
+            collect: function (value) {
+              return control.collect(current, value);
+            },
+          },
+          control
+        );
 
         previous = iterator(value, key, ctrl, previous);
       }
 
       next();
     });
-
   }
 
   // find
@@ -138,12 +147,14 @@ function use(Promise) {
   sequence.find = function find(values, iterator) {
     if (!iterator) iterator = identity;
 
-    return sequence(values, function(value, key, control) {
-      Promise.resolve().then(function() {
-        return iterator(value, key);
-      }).then(control.resolve, function(error) {
-        control.catch(error).continue();
-      });
+    return sequence(values, function (value, key, control) {
+      Promise.resolve()
+        .then(function () {
+          return iterator(value, key);
+        })
+        .then(control.resolve, function (error) {
+          control.catch(error).continue();
+        });
     });
   };
 
@@ -153,10 +164,12 @@ function use(Promise) {
   sequence.filter = function filter(values, iterator) {
     if (!iterator) iterator = identity;
 
-    return sequence(values, function(value, key, control) {
-      Promise.resolve().then(function() {
-        return iterator(value, key);
-      }).then(control.collect, control.skip);
+    return sequence(values, function (value, key, control) {
+      Promise.resolve()
+        .then(function () {
+          return iterator(value, key);
+        })
+        .then(control.collect, control.skip);
       control.continue();
     });
   };
@@ -168,12 +181,14 @@ function use(Promise) {
   sequence.map = function map(values, iterator) {
     if (!iterator) iterator = identity;
 
-    return sequence(values, function(value, key, control) {
-      Promise.resolve().then(function() {
-        return iterator(value, key);
-      }).then(function(value) {
-        control.collect(value).continue();
-      }, control.reject);
+    return sequence(values, function (value, key, control) {
+      Promise.resolve()
+        .then(function () {
+          return iterator(value, key);
+        })
+        .then(function (value) {
+          control.collect(value).continue();
+        }, control.reject);
     });
   };
 
@@ -187,10 +202,12 @@ function use(Promise) {
   sequence.every = function every(values, iterator) {
     if (!iterator) iterator = identity;
 
-    return sequence(values, function(value, key, control) {
-      Promise.resolve().then(function() {
-        return iterator(value, key);
-      }).then(control.collect, control.catch);
+    return sequence(values, function (value, key, control) {
+      Promise.resolve()
+        .then(function () {
+          return iterator(value, key);
+        })
+        .then(control.collect, control.catch);
       control.continue();
     });
   };
@@ -205,16 +222,21 @@ function use(Promise) {
     if (!iterator) iterator = identity;
 
     var found = false;
-    return sequence(values, function(value, key, control) {
-      Promise.resolve().then(function() {
-        return iterator(value, key);
-      }).then(function(value) {
-        found = true;
-        control.collect(value);
-      }, function(error) {
-        if (control.last && !found) control.reject(error);
-        else control.skip();
-      });
+    return sequence(values, function (value, key, control) {
+      Promise.resolve()
+        .then(function () {
+          return iterator(value, key);
+        })
+        .then(
+          function (value) {
+            found = true;
+            control.collect(value);
+          },
+          function (error) {
+            if (control.last && !found) control.reject(error);
+            else control.skip();
+          }
+        );
       control.continue();
     });
   };
@@ -228,10 +250,12 @@ function use(Promise) {
   sequence.all = function all(values, iterator) {
     if (!iterator) iterator = identity;
 
-    return sequence(values, function(value, key, control) {
-      Promise.resolve().then(function() {
-        return iterator(value, key);
-      }).then(control.collect, control.reject);
+    return sequence(values, function (value, key, control) {
+      Promise.resolve()
+        .then(function () {
+          return iterator(value, key);
+        })
+        .then(control.collect, control.reject);
       control.continue();
     });
   };
@@ -243,14 +267,20 @@ function use(Promise) {
   sequence.reduce = function reduce(values, iterator, init) {
     if (!iterator) iterator = identity;
 
-    return sequence(values, function(value, key, control, promise) {
-      return promise.then(function(resolved) {
-        return iterator(resolved, value, key);
-      }).then(function(value) {
-        control.save(value).continue();
-        return value;
-      }, control.reject);
-    }, Promise.resolve(init));
+    return sequence(
+      values,
+      function (value, key, control, promise) {
+        return promise
+          .then(function (resolved) {
+            return iterator(resolved, value, key);
+          })
+          .then(function (value) {
+            control.save(value).continue();
+            return value;
+          }, control.reject);
+      },
+      Promise.resolve(init)
+    );
   };
 
   // race
@@ -260,16 +290,17 @@ function use(Promise) {
   sequence.race = function race(values, iterator) {
     if (!iterator) iterator = identity;
 
-    return sequence(values, function(value, key, control) {
-      Promise.resolve().then(function() {
-        return iterator(value, key);
-      }).then(control.resolve, control.reject);
+    return sequence(values, function (value, key, control) {
+      Promise.resolve()
+        .then(function () {
+          return iterator(value, key);
+        })
+        .then(control.resolve, control.reject);
       control.continue();
     });
   };
 
   return sequence;
-
 }
 
 exports.use = use;

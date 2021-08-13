@@ -3,5 +3,4 @@
  * @copyright Michael Mathews 2011
  */
 
-function ignoreMe() {
-}
+function ignoreMe() {}

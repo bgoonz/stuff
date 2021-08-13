@@ -26,7 +26,7 @@ timers of the soon to be forgotten cathode ray tube screen technology.
 
 For the server side functionality there is a high level API available in the
 [wsgi](crtauth/wsgi.py) module. It provides wsgi middleware functionality
-that can be used to protect a  service using the crtauth
+that can be used to protect a service using the crtauth
 authentication mechanism. [hello_world_server](example/hello_world_server) gives
 a minimal example on how this API is used. If crtauth is to be used in a
 non-WSGI environment, there is a lower level API available in the
@@ -36,7 +36,6 @@ For clients an [authentication plugin for Python Requests](https://github.com/sp
 is available. An example use of the [client](crtauth/client.py) module can be
 seen in the [hello_world_client](example/hello_world_client) example.
 
-
 ## Technical details
 
 This section gives big picture overview of how crtauth operates. For the
@@ -45,18 +44,18 @@ specifics of the protocol and it's messages, please see
 
 Command line tools that connect to a central server to perform some action or
 fetch some information can be a very useful thing. crtauth is currently specified
-to work with HTTP as transport, but it is entirely possible to re-use 
+to work with HTTP as transport, but it is entirely possible to re-use
 that exposes information about servers using an HTTP-based API.
 
 The basic operation of the protocol follows the following pattern
 
-* The client requests a challenge from the server, providing a username.
-* The server creates a challenge that gets sent back to the client.
-* The client signs the challenge and returns the response to the server.
-* The server verifies that the response is valid and if so it issues an access
+- The client requests a challenge from the server, providing a username.
+- The server creates a challenge that gets sent back to the client.
+- The client signs the challenge and returns the response to the server.
+- The server verifies that the response is valid and if so it issues an access
   token to the client.
-* The access token is provided to when calling protected services.
-* The server validates that the token is valid and if so, provides access
+- The access token is provided to when calling protected services.
+- The server validates that the token is valid and if so, provides access
   to the client.
 
 The that implement this mechanism has two parts, one for the server and one

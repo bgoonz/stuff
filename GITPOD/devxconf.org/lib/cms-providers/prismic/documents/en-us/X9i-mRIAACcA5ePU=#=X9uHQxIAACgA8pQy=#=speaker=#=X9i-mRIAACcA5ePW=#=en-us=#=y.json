@@ -1,5 +1,7 @@
 {
-  "name": [{ "type": "heading1", "content": { "text": "Manas Kerman", "spans": [] } }],
+  "name": [
+    { "type": "heading1", "content": { "text": "Manas Kerman", "spans": [] } }
+  ],
   "bio": [
     {
       "type": "paragraph",
@@ -13,8 +15,13 @@
   "title": [{ "type": "heading4", "content": { "text": "CFO", "spans": [] } }],
   "twitter": { "url": "https://twitter.com/vercel", "preview": null },
   "github": { "url": "https://github.com/vercel", "preview": null },
-  "company": [{ "type": "heading4", "content": { "text": "Company", "spans": [] } }],
-  "talk": { "id": "X9kEwBIAACcA5ydY", "wioUrl": "wio://documents/X9kEwBIAACcA5ydY" },
+  "company": [
+    { "type": "heading4", "content": { "text": "Company", "spans": [] } }
+  ],
+  "talk": {
+    "id": "X9kEwBIAACcA5ydY",
+    "wioUrl": "wio://documents/X9kEwBIAACcA5ydY"
+  },
   "image": {
     "origin": {
       "id": "X9iy6xIAACkA5bGc",

@@ -9,8 +9,7 @@ This allows for easy manipulation of these inside of a chroot,
 effectively allowing for bootstrapping a virtual base system without having to
 fire up a virtual machine.
 
-Installation
-============
+# Installation
 
 vdisk is designed to run in Debian GNU/Linux and the standard
 configuration builds a Debian Squeeze image.
@@ -21,8 +20,7 @@ command.
 
     apt-get install kpartx parted lvm2 python-argparse
 
-Usage
-=====
+# Usage
 
 All of the following commands must be run as root on a linux host.
 
@@ -47,30 +45,27 @@ machine or an emulator like qemu.
 
     qemu-system-x86_64 -hda foo.img -monitor stdio
 
-EC2
-=====
+# EC2
 
-You must include /boot/grub/menu.lst  it in your vdisk.yaml. Simple example:
+You must include /boot/grub/menu.lst it in your vdisk.yaml. Simple example:
 
 default 0
 timeout 3
 title EC2
 root (hd0,0)
 kernel /vmlinuz root=/dev/mapper/VolFoo-root ro
-initrd  /initrd.img
+initrd /initrd.img
 
 Depending on your kernel you might also need to create
 /etc/initramfs-tools/modules with xenblk and xennet modules, vdisk will execute
 update-initramfs as the final step.
 
-Important Files
-===============
+# Important Files
 
 vdisk.yaml - Contains configuration for how to create your virtual disk.
-             This should be recreated in your project and modified to suit your needs.
+This should be recreated in your project and modified to suit your needs.
 
-License & Credits
-=================
+# License & Credits
 
 This software is released under the Apache 2 license, see LICENSE.txt for details.
 

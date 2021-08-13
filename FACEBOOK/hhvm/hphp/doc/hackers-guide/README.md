@@ -8,7 +8,7 @@ Hack developer looking for documentation on using HHVM, that can be found
 HHVM is a [virtual
 machine](https://en.wikipedia.org/wiki/Virtual_machine#Process_virtual_machines)
 that executes [Hack](http://hacklang.org/) programs using a [bytecode
-interpreter](https://en.wikipedia.org/wiki/Interpreter_(computing)#Bytecode_interpreters)
+interpreter](<https://en.wikipedia.org/wiki/Interpreter_(computing)#Bytecode_interpreters>)
 and a [JIT compiler](https://en.wikipedia.org/wiki/Just-in-time_compilation)
 (the latter is vastly more complex, and will get much more airtime here).
 [PHP](https://php.net) is also currently supported for historical reasons.
@@ -81,41 +81,41 @@ executed.
 
 If you're not sure where to start, skimming these articles is a good first step:
 
-* [Directory structure](directory-structure.md)
-* [FAQ](faq.md)
-* [Glossary](glossary.md)
+- [Directory structure](directory-structure.md)
+- [FAQ](faq.md)
+- [Glossary](glossary.md)
 
 ## HHVM Internals
 
 The articles in this section go into more detail about their respective
 components:
 
-* [HHBC spec](../bytecode.specification)
-* Frontend
-  * Parser
-  * Emitter
-  * HHBBC
-  * ...
-* VM Runtime
-  * [Core data structures](data-structures.md)
-    * [Hack-visible](data-structures.md#hack-visible-values)
-      * [Datatype, Value, and TypedValue](data-structures.md#datatype-value-and-typedvalue)
-      * [ArrayData](data-structures.md#arraydata)
-      * [StringData](data-structures.md#stringdata)
-      * [ObjectData](data-structures.md#objectdata)
-      * [Smart pointer wrappers](data-structures.md#smart-pointer-wrappers)
-    * [Runtime-internal](data-structures.md#runtime-internal-data-structures)
-      * [Unit](data-structures.md#unit)
-      * [PreClass/Class](data-structures.md#preclass-and-class)
-      * [Func](data-structures.md#func)
-  * [Memory management](memory-management.md)
-  * Execution Context
-  * [Bytecode interpreter](bytecode-interpreter.md)
-  * Unwinder
-  * Treadmill
-  * Debugger
-  * ...
-* JIT Compiler
-  * [Core concepts](jit-core.md)
-  * [Optimization passes](jit-optimizations.md)
-  * ...
+- [HHBC spec](../bytecode.specification)
+- Frontend
+  - Parser
+  - Emitter
+  - HHBBC
+  - ...
+- VM Runtime
+  - [Core data structures](data-structures.md)
+    - [Hack-visible](data-structures.md#hack-visible-values)
+      - [Datatype, Value, and TypedValue](data-structures.md#datatype-value-and-typedvalue)
+      - [ArrayData](data-structures.md#arraydata)
+      - [StringData](data-structures.md#stringdata)
+      - [ObjectData](data-structures.md#objectdata)
+      - [Smart pointer wrappers](data-structures.md#smart-pointer-wrappers)
+    - [Runtime-internal](data-structures.md#runtime-internal-data-structures)
+      - [Unit](data-structures.md#unit)
+      - [PreClass/Class](data-structures.md#preclass-and-class)
+      - [Func](data-structures.md#func)
+  - [Memory management](memory-management.md)
+  - Execution Context
+  - [Bytecode interpreter](bytecode-interpreter.md)
+  - Unwinder
+  - Treadmill
+  - Debugger
+  - ...
+- JIT Compiler
+  - [Core concepts](jit-core.md)
+  - [Optimization passes](jit-optimizations.md)
+  - ...

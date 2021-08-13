@@ -1,9 +1,26 @@
 {
-  "title": [{ "type": "heading1", "content": { "text": "Keynote", "spans": [] } }],
+  "title": [
+    { "type": "heading1", "content": { "text": "Keynote", "spans": [] } }
+  ],
   "speakers": [
-    { "speaker": { "id": "X9i0lBIAACYA5blV", "wioUrl": "wio://documents/X9i0lBIAACYA5blV" } },
-    { "speaker": { "id": "X9i4gBIAACYA5ctf", "wioUrl": "wio://documents/X9i4gBIAACYA5ctf" } },
-    { "speaker": { "id": "X9i0JBIAACgA5bdM", "wioUrl": "wio://documents/X9i0JBIAACgA5bdM" } }
+    {
+      "speaker": {
+        "id": "X9i0lBIAACYA5blV",
+        "wioUrl": "wio://documents/X9i0lBIAACYA5blV"
+      }
+    },
+    {
+      "speaker": {
+        "id": "X9i4gBIAACYA5ctf",
+        "wioUrl": "wio://documents/X9i4gBIAACYA5ctf"
+      }
+    },
+    {
+      "speaker": {
+        "id": "X9i0JBIAACgA5bdM",
+        "wioUrl": "wio://documents/X9i0JBIAACgA5bdM"
+      }
+    }
   ],
   "start": "2020-10-27T17:00:00+00:00",
   "end": "2020-10-27T17:30:00+00:00",

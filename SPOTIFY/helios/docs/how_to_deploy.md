@@ -1,18 +1,18 @@
 ## Components
 
-* **Docker >= 1.0**<br />
+- **Docker >= 1.0**<br />
   The `lxc-docker` package in Ubuntu LTS 14.04 works.
 
-* **Zookeeper >= 3.4.5**<br />
+- **Zookeeper >= 3.4.5**<br />
   The `zookeeperd` package in Ubuntu LTS 14.04 works.
 
-* **Helios master**<br />
+- **Helios master**<br />
   Provided by the `helios-master` package. The API for the CLI and HTTP endpoints. Communicates with the agent through Zookeeper.
 
-* **Helios agent**<br />
+- **Helios agent**<br />
   Provided by the `helios-agent` package. Runs on each Docker host and communicates with Zookeeper. In charge of starting/stopping containers and reporting state back to Zookeeper.
 
-* **Helios command-line tools**<br />
+- **Helios command-line tools**<br />
   Provided by the `helios` package. A CLI client for interacting with the Helios master.
 
 ## Installing
@@ -52,140 +52,142 @@ $ helios -z http://localhost:5801 hosts
 
 The `helios-agent` and `helios-master` packages will install defaults files:
 
-* Agent: `/etc/default/helios-agent`
-* Master: `/etc/default/helios-master`
+- Agent: `/etc/default/helios-agent`
+- Master: `/etc/default/helios-master`
 
 You can set `HELIOS_AGENT_OPTS` and `HELIOS_MASTER_OPTS` in these files. See the options below.
 
 ### Helios master options
+
 Specify these options in the `HELIOS_MASTER_OPTS` variable in `/etc/default/helios-master`:
 
-* `--name NAME`
+- `--name NAME`
   hostname to register as (default: system FQDN)
 
-* `--zk ZK`
+- `--zk ZK`
   zookeeper connection string (default: localhost:2181) Can include multiple zookeeper hosts (example: `zookeeper1.example.com:2181,zookeeper2.example.com:2181,zookeeper3.example.com:2181`).
 
-* `--zk-session-timeout ZK_SESSION_TIMEOUT`
+- `--zk-session-timeout ZK_SESSION_TIMEOUT`
   Optional. Zookeeper session timeout (default: 60000)
 
-* `--zk-connection-timeout ZK_CONNECTION_TIMEOUT`
+- `--zk-connection-timeout ZK_CONNECTION_TIMEOUT`
   Optional. Zookeeper connection timeout (default: 15000)
 
-* `--no-metrics`
+- `--no-metrics`
   Turn off all collection and reporting of metrics (default: false)
 
-* `--domain DOMAIN`
+- `--domain DOMAIN`
   Optional. Service registration domain. Used for the master to register itself with the service registrar.
 
-* `--service-registry`
+- `--service-registry`
   Optional. Service registry address. Overrides domain. Used for the master to register itself with
   the service registrar.
 
-* `--service-registrar-plugin PATH_TO_PLUGIN`
+- `--service-registrar-plugin PATH_TO_PLUGIN`
   Optional. Service registration plugin used to register the master with an external service (etcd
   for example). These are not well documented yet. Used for the master to register itself with the
   service registrar.
 
-* `--statsd-host-port STATSD_HOST_PORT`
-  Optional. The host:port of where to send statsd metrics (to be useful, --no-metrics must *NOT* be specified)
+- `--statsd-host-port STATSD_HOST_PORT`
+  Optional. The host:port of where to send statsd metrics (to be useful, --no-metrics must _NOT_ be specified)
 
-* `-v, --verbose`
+- `-v, --verbose`
   (default: 0)
 
-* `--syslog`
+- `--syslog`
   Log to syslog. (default: false)
 
-* `--logconfig LOGCONFIG`
+- `--logconfig LOGCONFIG`
   Logback configuration file.
 
-* `--sentry-dsn SENTRY_DSN`
+- `--sentry-dsn SENTRY_DSN`
   Optional. The sentry data source name (For http://getsentry.com)
 
-* `--http HTTP`
+- `--http HTTP`
   http endpoint (default: http://0.0.0.0:5801) the master will listen on.
 
-* `--admin ADMIN`
+- `--admin ADMIN`
   admin http port (default: 5802) the master will listen on.
 
 ### Helios agent options
+
 Specify these options in the `HELIOS_AGENT_OPTS` variable in `/etc/default/helios-agent`:
 
-* `--name NAME`
+- `--name NAME`
   hostname to register as (default: system FQDN)
 
-* `--zk ZK`
+- `--zk ZK`
   zookeeper connection string (default: localhost:2181). Can include multiple zookeeper hosts
   (example: `zookeeper1.example.com:2181,zookeeper2.example.com:2181,zookeeper3.example.com:2181`).
 
-* `--zk-session-timeout ZK_SESSION_TIMEOUT`
+- `--zk-session-timeout ZK_SESSION_TIMEOUT`
   Optional. Zookeeper session timeout (default: 60000)
 
-* `--zk-connection-timeout ZK_CONNECTION_TIMEOUT`
+- `--zk-connection-timeout ZK_CONNECTION_TIMEOUT`
   Optional. Zookeeper connection timeout (default: 15000)
 
-* `--no-metrics`
+- `--no-metrics`
   Turn off all collection and reporting of metrics (default: false)
 
-* `--domain DOMAIN`
+- `--domain DOMAIN`
   Optional. Service registration domain. Used for the agent to register deployed jobs in the service registrar.
 
-* `--service-registry SERVICE_REGISTRY`
+- `--service-registry SERVICE_REGISTRY`
   Optional. Service registry address. Used for the agent to register deployed jobs in the service registrar.
 
-* `--service-registrar-plugin PATH_TO_PLUGIN`
+- `--service-registrar-plugin PATH_TO_PLUGIN`
   Optional. Service registration plugin used to register running conatiners with an external service
   (etcd for example). These are not well documented yet. Used for the agent to register deployed jobs in the service registrar.
 
-* `--no-metrics`
-  Turn off all collection and  reporting of metrics (default: false)
+- `--no-metrics`
+  Turn off all collection and reporting of metrics (default: false)
 
-* `--statsd-host-port STATSD_HOST_PORT`
-  Optional. The host:port of where to send statsd metrics (to be useful, --no-metrics must *NOT* be specified)
+- `--statsd-host-port STATSD_HOST_PORT`
+  Optional. The host:port of where to send statsd metrics (to be useful, --no-metrics must _NOT_ be specified)
 
-* `-v, --verbose`
+- `-v, --verbose`
   (default: 0)
 
-* `--syslog`
+- `--syslog`
   Log to syslog. (default: false)
 
-* `--logconfig LOGCONFIG`
+- `--logconfig LOGCONFIG`
   Logback configuration file.
 
-* `--sentry-dsn SENTRY_DSN`
+- `--sentry-dsn SENTRY_DSN`
   Optional. The sentry data source name (For http://getsentry.com)
 
-* `--no-http`
+- `--no-http`
   Disable http server (default: false)
 
-* `--http HTTP`
+- `--http HTTP`
   The http endpoint (default: http://0.0.0.0:5803) to listen on.
 
-* `--admin ADMIN`
+- `--admin ADMIN`
   The admin http port (default: 5804) to listen on.
 
-* `--id ID`
-  Agent unique ID. Generated  and  persisted  on first run if not specified.
+- `--id ID`
+  Agent unique ID. Generated and persisted on first run if not specified.
 
-* `--state-dir STATE_DIR`
+- `--state-dir STATE_DIR`
   Directory for persisting agent state locally. (default: .)
 
-* `--docker DOCKER`
+- `--docker DOCKER`
   Docker endpoint (default: detected from `DOCKER_HOST` environment variable)
 
-* `--docker-cert-path DOCKER_CERT_PATH`
+- `--docker-cert-path DOCKER_CERT_PATH`
   Directory containing client.pem and client.key or connecting to Docker over HTTPS.
 
-* `--env ENV [ENV ...]`
+- `--env ENV [ENV ...]`
   Specify environment variables that will pass down to all containers (default: [])
 
-* `--syslog-redirect-to SYSLOG_REDIRECT_TO`
+- `--syslog-redirect-to SYSLOG_REDIRECT_TO`
   Optional. Redirect container stdout/stderr to syslog running at host:port.
 
-* `--port-range PORT_RANGE`
+- `--port-range PORT_RANGE`
   Port allocation range, start:end (end exclusive). (default: 20000:32768)
 
-* `--bind VOLUME`
+- `--bind VOLUME`
   Bind the given volume into all containers. You may specify multiply `--bind` arguments. Each bind
   must conform to the [`docker run -v` syntax](https://docs.docker.com/reference/run/#volume-shared-filesystems).
 

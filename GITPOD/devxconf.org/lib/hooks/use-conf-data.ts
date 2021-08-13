@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-import { createContext, useContext } from 'react';
+import { createContext, useContext } from "react";
 
-export type PageState = 'registration' | 'ticket';
+export type PageState = "registration" | "ticket";
 
 export type UserData = {
   id?: string;

@@ -1,6 +1,6 @@
-(function(){
-var a = {};
+(function () {
+  var a = {};
 })();
-(function(){
-var b = {};
+(function () {
+  var b = {};
 })();

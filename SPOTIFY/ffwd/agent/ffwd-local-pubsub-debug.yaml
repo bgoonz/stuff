@@ -27,7 +27,7 @@ output:
 
       batching:
         flushInterval: 10000
-        batchSizeLimit: 10000  # Default: 10000
+        batchSizeLimit: 10000 # Default: 10000
         maxPendingFlushes: 10 # Default: 10
 
       project: google-test-project

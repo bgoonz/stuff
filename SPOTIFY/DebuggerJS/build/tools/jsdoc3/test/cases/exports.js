@@ -10,6 +10,6 @@
  * @param {string} [subject="world"] To whom we greet.
  * @returns {string}
  */
-exports.sayHello = function(subject) {
-    return 'Hello ' + (subject || 'World');
+exports.sayHello = function (subject) {
+  return "Hello " + (subject || "World");
 };

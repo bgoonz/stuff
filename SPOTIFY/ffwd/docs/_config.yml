@@ -6,7 +6,6 @@ collections:
   tutorials:
     output: true
 
-
 defaults:
   - scope:
       type: docs

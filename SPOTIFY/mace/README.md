@@ -1,5 +1,4 @@
-mace, _n_: a weapon for bludgeoning.
-===
+# mace, _n_: a weapon for bludgeoning.
 
 Also an agent-based system for doing coordinated deployments on large host groups
 

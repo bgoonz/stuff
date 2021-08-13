@@ -3,9 +3,9 @@
  * @enum {number}
  */
 var TriState = {
-    /** true */
-    TRUE: 1,
-    FALSE: -1,
-    /** @type {boolean} */
-    MAYBE: true
+  /** true */
+  TRUE: 1,
+  FALSE: -1,
+  /** @type {boolean} */
+  MAYBE: true,
 };

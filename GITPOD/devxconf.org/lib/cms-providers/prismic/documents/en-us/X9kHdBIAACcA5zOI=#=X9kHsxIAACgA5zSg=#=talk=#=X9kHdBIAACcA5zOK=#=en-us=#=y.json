@@ -1,7 +1,17 @@
 {
-  "title": [{ "type": "heading1", "content": { "text": "Using MDX for Markdown", "spans": [] } }],
+  "title": [
+    {
+      "type": "heading1",
+      "content": { "text": "Using MDX for Markdown", "spans": [] }
+    }
+  ],
   "speakers": [
-    { "speaker": { "id": "X9jQlhIAACYA5jQu", "wioUrl": "wio://documents/X9jQlhIAACYA5jQu" } }
+    {
+      "speaker": {
+        "id": "X9jQlhIAACYA5jQu",
+        "wioUrl": "wio://documents/X9jQlhIAACYA5jQu"
+      }
+    }
   ],
   "start": "2020-10-27T19:30:00+00:00",
   "end": "2020-10-27T20:10:00+00:00",

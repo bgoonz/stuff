@@ -2,7 +2,7 @@
 //= include '_vendor/thirdParty2.js'
 
 function hello() {
-    console.log("this is a javascript file");
+  console.log("this is a javascript file");
 }
 
 hello();

@@ -1,6 +1,13 @@
 {
-  "companyName": [{ "type": "heading4", "content": { "text": "Vercel", "spans": [] } }],
-  "title": [{ "type": "heading1", "content": { "text": "Developer Relations Lead", "spans": [] } }],
+  "companyName": [
+    { "type": "heading4", "content": { "text": "Vercel", "spans": [] } }
+  ],
+  "title": [
+    {
+      "type": "heading1",
+      "content": { "text": "Developer Relations Lead", "spans": [] }
+    }
+  ],
   "description": [
     {
       "type": "paragraph",
@@ -13,7 +20,9 @@
   "link": { "url": "https://vercel.com/careers", "preview": null },
   "discord": { "url": "https://discord.gg/d5VXPqV", "preview": null },
   "rank": "1",
-  "company_name": [{ "type": "heading4", "content": { "text": "Vercel", "spans": [] } }],
+  "company_name": [
+    { "type": "heading4", "content": { "text": "Vercel", "spans": [] } }
+  ],
   "companyName_TYPE": "StructuredText",
   "companyName_POSITION": 0,
   "company_name_TYPE": "StructuredText",

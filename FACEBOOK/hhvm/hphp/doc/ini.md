@@ -35,9 +35,9 @@ don't yet work with extensions, `ini_set()`, etc.
 You can also provide wildcards to settings signaling that you want to use the
 value of another setting for its value.
 
-* `@`: Copy the value directly into this setting.
-* `:`: Symlink the value from the other setting to this setting. If the other
-setting changes, then this setting will change with it, and vice-versa.
+- `@`: Copy the value directly into this setting.
+- `:`: Symlink the value from the other setting to this setting. If the other
+  setting changes, then this setting will change with it, and vice-versa.
 
 To use this feature, use the form
 

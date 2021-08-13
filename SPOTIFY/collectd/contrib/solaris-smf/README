@@ -8,11 +8,11 @@ detail. The original entry can be found at
 
 The files in this directory are:
 
-  README          This file
-  collectd        Start / stop script
-  collectd.xml    SMF manifest for collectd.
+README This file
+collectd Start / stop script
+collectd.xml SMF manifest for collectd.
 
-------------------------------------------------------------------------
+---
 
       SMF-izing collectd <#>
 
@@ -50,112 +50,108 @@ remarks.
 
 Manifest (based on the work of Kangurek, thanks!), see the "collectd.xml"
 file:
- 
+
 <?xml version="1.0"?>
 <!DOCTYPE service_bundle SYSTEM "/usr/share/lib/xml/dtd/service_bundle.dtd.1">
- 
+
 <service_bundle type='manifest' name='collectd'>
 <service
         name='application/collectd'
         type='service'
         version='1'>
- 
-	<create_default_instance enabled='true' />
- 
-	<single_instance/>
- 
+
+    <create_default_instance enabled='true' />
+
+    <single_instance/>
+
         <dependency
                 name='network'
                 grouping='require_all'
                 restart_on='none'
                 type='service'>
                 <service_fmri value='svc:/milestone/network:default' />
-        </dependency> 
- 
+        </dependency>
+
         <dependency
                 name='filesystem-local'
                 grouping='require_all'
                 restart_on='none'
                 type='service'>
                 <service_fmri value='svc:/system/filesystem/local:default' />
-        </dependency> 
- 
+        </dependency>
+
         <exec_method
                 type='method'
                 name='start'
                 exec='/lib/svc/method/collectd start'
                 timeout_seconds='60'>
-	    <method_context>
+        <method_context>
             	<method_credential user='root' group='root' />
     	    </method_context>
-	</exec_method>
- 
- 
+    </exec_method>
+
+
         <exec_method
                 type='method'
                 name='stop'
                 exec='/lib/svc/method/collectd stop'
                 timeout_seconds='60'>
-	    <method_context>
+        <method_context>
             	<method_credential user='root' group='root' />
     	    </method_context>
-	</exec_method>
- 
+    </exec_method>
+
         <stability value='Evolving' />
- 
+
 </service>
  
 </service_bundle>
  
- 
+
 
 Script, see the "collectd" file:
 
- 
 #!/sbin/sh
- 
+
 PIDFILE=/opt/collectd/var/run/collectd.pid
 DAEMON=/opt/collectd/sbin/collectd
- 
+
 . /lib/svc/share/smf_include.sh
- 
+
 case "$1" in
   start)
     if [ -f $PIDFILE ] ; then
       echo "Already running. Stale PID file?"
       PID=`cat $PIDFILE`
       echo "$PIDFILE contains $PID"
-      ps -p $PID
-      exit $SMF_EXIT_ERR_FATAL
-    fi
-    $DAEMON
-    if [ $? -ne 0 ] ; then
-      echo $DAEMON faild to start
-      exit $SMF_EXIT_ERR_FATAL
-    fi
-  ;;
-  stop)
-    PID=`cat $PIDFILE 2>/dev/null`
-    kill -15 $PID 2>/dev/null
-    pwait $PID 1> /dev/null 2>/dev/null
-  ;;
-  restart)
-    $0 stop
-    $0 start
-  ;;
-  status)
-    ps -ef | grep collectd | grep -v status | grep -v grep
-  ;;
-  *)
-    echo "Usage: $0 [ start | stop | restart | status ]"
-    exit 1
-  ;;
+ps -p $PID
+exit $SMF_EXIT_ERR_FATAL
+fi
+$DAEMON
+if [ $? -ne 0 ] ; then
+echo $DAEMON faild to start
+exit $SMF_EXIT_ERR_FATAL
+fi
+;;
+stop)
+PID=`cat $PIDFILE 2>/dev/null`
+kill -15 $PID 2>/dev/null
+pwait $PID 1> /dev/null 2>/dev/null
+;;
+restart)
+$0 stop
+$0 start
+;;
+status)
+ps -ef | grep collectd | grep -v status | grep -v grep
+;;
+\*)
+echo "Usage: $0 [ start | stop | restart | status ]"
+exit 1
+;;
 esac
- 
- 
+
 exit $SMF_EXIT_OK
- 
- 
 
 So you have two files: |collectd| script and |collectd.xml| manifest.
 What do you do with these files?
@@ -177,8 +173,11 @@ Now is the moment to test once again that the script is working OK. Try
 running:
 
 |# /lib/svc/method/collectd start
+
 # /lib/svc/method/collectd stop
+
 # /lib/svc/method/collectd restart
+
 |
 
 |pgrep| and |kill| are your friends here, also collectd logs. At last
@@ -233,8 +232,7 @@ Things that could or should be clarified:
       itself but I think not the processes launched inside the script. I
       have a slight idea that it is done based on so called contracts.
 
-------------------------------------------------------------------------
-
+---
 
         Komentarze do notki “SMF-izing collectd” <#comments>
 
@@ -243,8 +241,7 @@ Things that could or should be clarified:
 
 Nick
 
-------------------------------------------------------------------------
-
+---
 
     Archiwum
 
@@ -320,12 +317,10 @@ Nick
 
     * Panel administracyjny <https://login.jogger.pl/>
 
-
-------------------------------------------------------------------------
+---
 
 phosowicz is powered by Jogger <http://jogger.pl> and K2
 <http://binarybonsai.com/k2/> by Michael <http://binarybonsai.com> and
 Chris <http://chrisjdavis.org>, ported by Patryk Zawadzki.
 <http://patrys.jogger.pl/>
 Notki w RSS <http://phosowicz.jogger.pl/rss/content/html/20>
-

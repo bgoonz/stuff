@@ -8,8 +8,8 @@ This module provies an output plugin for [OpenTelemetry metrics](https://github.
 
 ## Configuration
 
-* `endpoint` - The gRPC endpoint to send metrics to.
-* `headers` - An optional map of headers to include in the [MetricService export](https://github.com/open-telemetry/opentelemetry-proto/blob/v0.7.0/opentelemetry/proto/collector/metrics/v1/metrics_service.proto#L32) RPC.
+- `endpoint` - The gRPC endpoint to send metrics to.
+- `headers` - An optional map of headers to include in the [MetricService export](https://github.com/open-telemetry/opentelemetry-proto/blob/v0.7.0/opentelemetry/proto/collector/metrics/v1/metrics_service.proto#L32) RPC.
 
 Here is an example configuration using the OpenTelemetry plugin:
 

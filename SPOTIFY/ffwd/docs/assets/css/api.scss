@@ -1,7 +1,7 @@
 ---
 ---
 
-@import 'theme';
+@import "theme";
 
 .api-endpoint {
   margin: 10px 0;
@@ -16,15 +16,15 @@
     padding-bottom: 6px;
 
     &.get {
-      border-color: #B9D7B7;
+      border-color: #b9d7b7;
     }
 
     &.post {
-      border-color: #AAA5BE;
+      border-color: #aaa5be;
     }
 
     &.delete {
-      border-color: #FDD7D8;
+      border-color: #fdd7d8;
     }
 
     .path {
@@ -41,7 +41,7 @@
   }
 
   .api-response {
-     margin-bottom: 20px;
+    margin-bottom: 20px;
 
     .icon {
     }
@@ -64,7 +64,7 @@
   }
 
   .api-accept {
-     margin-bottom: 20px;
+    margin-bottom: 20px;
 
     .status {
       margin-left: 5px;

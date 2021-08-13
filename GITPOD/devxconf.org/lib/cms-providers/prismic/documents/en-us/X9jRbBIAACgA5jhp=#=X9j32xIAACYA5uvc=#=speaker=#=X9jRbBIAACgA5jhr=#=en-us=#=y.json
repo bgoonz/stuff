@@ -1,5 +1,7 @@
 {
-  "name": [{ "type": "heading1", "content": { "text": "Neha Beatriu", "spans": [] } }],
+  "name": [
+    { "type": "heading1", "content": { "text": "Neha Beatriu", "spans": [] } }
+  ],
   "bio": [
     {
       "type": "paragraph",
@@ -10,10 +12,14 @@
     }
   ],
   "uid": "neha",
-  "title": [{ "type": "heading4", "content": { "text": "Founder", "spans": [] } }],
+  "title": [
+    { "type": "heading4", "content": { "text": "Founder", "spans": [] } }
+  ],
   "twitter": { "url": "https://twitter.com/vercel", "preview": null },
   "github": { "url": "https://github.com/vercel", "preview": null },
-  "company": [{ "type": "heading4", "content": { "text": "Company", "spans": [] } }],
+  "company": [
+    { "type": "heading4", "content": { "text": "Company", "spans": [] } }
+  ],
   "image": {
     "origin": {
       "id": "X9iy6hIAACgA5bGT",
@@ -30,7 +36,10 @@
     "provider": "imgix",
     "thumbnails": {}
   },
-  "talk": { "id": "X9j3yhIAACgA5uuF", "wioUrl": "wio://documents/X9j3yhIAACgA5uuF" },
+  "talk": {
+    "id": "X9j3yhIAACgA5uuF",
+    "wioUrl": "wio://documents/X9j3yhIAACgA5uuF"
+  },
   "name_TYPE": "StructuredText",
   "name_POSITION": 0,
   "bio_TYPE": "StructuredText",

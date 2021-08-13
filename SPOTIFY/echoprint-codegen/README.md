@@ -1,30 +1,31 @@
 # Codegen for Echoprint
 
-Echoprint is an open source music fingerprint and resolving framework powered by the [The Echo Nest](http://the.echonest.com/ "The Echo Nest"). The [code generator](http://github.com/echonest/echoprint-codegen "echoprint-codegen") (library to convert PCM samples from a microphone or file into Echoprint codes) is open source (MIT licensed) and free for any use. The [server component](http://github.com/echonest/echoprint-server "echoprint-server") that stores and resolves queries is open source (Apache 2 licensed) and free for any use. The [data for resolving to millions of songs](http://echoprint.me/data "Echoprint Data") is free for any use provided any changes or additions are merged back to the community. 
+Echoprint is an open source music fingerprint and resolving framework powered by the [The Echo Nest](http://the.echonest.com/ "The Echo Nest"). The [code generator](http://github.com/echonest/echoprint-codegen "echoprint-codegen") (library to convert PCM samples from a microphone or file into Echoprint codes) is open source (MIT licensed) and free for any use. The [server component](http://github.com/echonest/echoprint-server "echoprint-server") that stores and resolves queries is open source (Apache 2 licensed) and free for any use. The [data for resolving to millions of songs](http://echoprint.me/data "Echoprint Data") is free for any use provided any changes or additions are merged back to the community.
 
 [Read more about Echoprint here](http://echoprint.me)
 
 There are two modes of operation of the Echoprint codegen:
 
 1. the codegen library (libcodegen) is meant to be linked into code that passes it a buffer of PCM data and will output a code string.
- 
+
 2. the codegen binary runs standalone, accepts filenames as inputs and runs in a multithreaded worker mode.
 
 ## Requirements
 
 ### For libcodegen
 
-* Boost >= 1.35
-* zlib
+- Boost >= 1.35
+- zlib
 
 ### Additional requirements for the codegen binary
 
-* [TagLib](http://developer.kde.org/~wheeler/taglib.html "TagLib")
-* ffmpeg - this is called via shell and is not linked into codegen
+- [TagLib](http://developer.kde.org/~wheeler/taglib.html "TagLib")
+- ffmpeg - this is called via shell and is not linked into codegen
 
 On Ubuntu or Debian you can install these dependencies with:
 
     sudo apt-get install ffmpeg libboost1.42-dev libtag1-dev zlib1g-dev
+
 On OS-X with [homebrew](http://mxcl.github.io/homebrew/) you can use:
 
     brew install ffmpeg boost taglib
@@ -37,7 +38,7 @@ The binary generated in Windows will be named codegen by default where as on Lin
 
 ## Notes about libcodegen:
 
-Code generation takes a buffer of floating point PCM data sampled at 11025 Hz and mono. 
+Code generation takes a buffer of floating point PCM data sampled at 11025 Hz and mono.
 
     Codegen * pCodegen = new Codegen(const float* pcm, uint numSamples, int start_offset);
 
@@ -45,7 +46,7 @@ Code generation takes a buffer of floating point PCM data sampled at 11025 Hz an
     numSamples: the number of samples
     start_offset: creates a hint to the server on where the sample is taken from in the original file if known
 
-    string code = pCodegen->getCodeString(); 
+    string code = pCodegen->getCodeString();
 
 The code string is just a base64 encoding of a zlib compression of the original code string, which is a hex encoded series of ASCII numbers. See API/fp.py in echoprint-server for decoding help.
 

@@ -5,25 +5,25 @@ codecov:
     wait_for_ci: yes
 
 coverage:
-  precision: 2  # Just copied from default
-  round: down  # Just copied from default
-  range: "70...100"  # Just copied from default
+  precision: 2 # Just copied from default
+  round: down # Just copied from default
+  range: "70...100" # Just copied from default
 
   status:
     project:
-      default: false  # disable the default status that measures entire project
+      default: false # disable the default status that measures entire project
       core:
         target: 92%
-        paths: "luigi/*.py" 
-    patch:  # Just copied from default
+        paths: "luigi/*.py"
+    patch: # Just copied from default
       default:
         if_no_uploads: error
 
-    changes: true  # Just copied from default
-  
+    changes: true # Just copied from default
+
   ignore:
     - "examples/"
-    - "luigi/tools"  # These are tested as actual run commands without coverage
+    - "luigi/tools" # These are tested as actual run commands without coverage
     # List modules who's tests are not run by Travis or
     # are run in a subprocesses (like on cluster).
     - "luigi/contrib/gcs.py"

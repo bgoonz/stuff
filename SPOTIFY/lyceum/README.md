@@ -1,4 +1,5 @@
 # lyceum
+
 [![Build Status](https://travis-ci.org/spotify/lyceum.svg)](https://travis-ci.org/spotify/lyceum)
 [![Clojars Project](http://clojars.org/lyceum/latest-version.svg)](http://clojars.org/lyceum)
 
@@ -20,13 +21,13 @@ to make things manageable.
 
 Some key points.
 
-* When running tests, all external interaction is faked and verifiable (using
+- When running tests, all external interaction is faked and verifiable (using
   `check-externals`).
-* The riemann schedules is replaced with a global override of
+- The riemann schedules is replaced with a global override of
   `riemann.time/schedule!` that has a thread-local implementation without global
   state.
   With this comes also faked time (`riemann.time/unix-time` et. al.).
-* Provides a [restful HTTP service](#http-service) for evaluating rules on-the-fly.
+- Provides a [restful HTTP service](#http-service) for evaluating rules on-the-fly.
 
 # Getting Started
 
@@ -64,7 +65,7 @@ Download templates and generate a new namespace skeleton.
 #> wget https://raw.githubusercontent.com/spotify/lyceum/master/templates/test.clj -O templates/test.clj
 ```
 
-Now it's time to initialize rules for a group called __my-group__.
+Now it's time to initialize rules for a group called **my-group**.
 
 ```
 #> lein lyceum init my-group
@@ -77,11 +78,11 @@ test-cases!
 #> lein test
 ```
 
-Now you can start modifying *src/my\_rules/rules/my\_group.clj* to suit your
+Now you can start modifying _src/my_rules/rules/my_group.clj_ to suit your
 needs.
 
 Any test-cases you come up with should be added to
-*test/my\_rules/rules/my_group_test.clj*, use the generated one as inspiration
+_test/my_rules/rules/my_group_test.clj_, use the generated one as inspiration
 for writing more.
 
 When you are done, compile your rules.
@@ -109,8 +110,7 @@ add the following declaration in your riemann.config.
 ```
 
 Make sure that you start the riemann service with the system property
-`-Dlyceum.mode=real` (pass this as an argument to _java_ like `java
--Dlyceum.mode=real ... riemann.bin`).
+`-Dlyceum.mode=real` (pass this as an argument to _java_ like `java -Dlyceum.mode=real ... riemann.bin`).
 See the [externals section](#externals) for more details about this.
 
 # Time
@@ -126,15 +126,15 @@ the guide above.
 
 # Externals
 
-Lyceum uses __externals__ to interact with external systems, externals are thin
+Lyceum uses **externals** to interact with external systems, externals are thin
 wrappers around the riemann's external integrations (email, pagerduty, etc.).
 
-By default lyceum uses the __fake__ mode which will cause any external
+By default lyceum uses the **fake** mode which will cause any external
 interactions to be logged instead of realized.
 This is what allows the test-cases to verify external effects with
 `check-externals`.
 
-However when running in production, the mode is set to __real__. This will
+However when running in production, the mode is set to **real**. This will
 cause the wrapping to be discarded and the real external interaction to be
 realized.
 
@@ -143,10 +143,10 @@ be passed to your JVM.
 
 Valid modes are.
 
-* __fake (default)__ - Log any externals that are triggered to an internal
+- **fake (default)** - Log any externals that are triggered to an internal
   data-structure, allowing for later verification.
-* __test__ - Write external interaction to a log file.
-* __real__ - Realize any externals that are triggered.
+- **test** - Write external interaction to a log file.
+- **real** - Realize any externals that are triggered.
 
 Wrapping your own external is straight forward, you can use
 [the email external](src/lyceum/external/email.clj) as an example for how to do
@@ -160,7 +160,7 @@ You can start the HTTP service by running.
 #> lein run [lyceum.conf]
 ```
 
-Or the ___lyceum.service___ class in the resulting uberjar.
+Or the **_lyceum.service_** class in the resulting uberjar.
 
 ```
 #> java -jar <path-to-jar> lyceum.service [lyceum.conf]
@@ -170,22 +170,24 @@ It expects to find a [lyceum.conf](lyceum.conf) in the current working directory
 
 The service is currently capable of loading rules the following ways.
 
-+ Github through [github-rules](src/lyceum/service/rules_loader/github.clj)
-+ Filesystem through [directory-rules](src/lyceum/service/rules_loader/directory.clj)
+- Github through [github-rules](src/lyceum/service/rules_loader/github.clj)
+- Filesystem through [directory-rules](src/lyceum/service/rules_loader/directory.clj)
 
 #### POST /eval
 
-Will evaluate the received data (___VERY UNSAFE___) and apply the provided rules to them.
+Will evaluate the received data (**_VERY UNSAFE_**) and apply the provided rules to them.
 
-+ Response 200 (application/json)
-+ Response 500 (application/json)
+- Response 200 (application/json)
+- Response 500 (application/json)
 
 ###### Request Structure
+
 ```javascript
 {"data": <string>, "events": [<event>, ..]}
 ```
 
 ###### Response Structure
+
 ```javascript
 {/* contains any external events (like pagerduty) that happened */
  "reports":[<report>, ..],
@@ -195,6 +197,7 @@ Will evaluate the received data (___VERY UNSAFE___) and apply the provided rules
 ```
 
 ###### Example CURL
+
 ```
 #> curl http://localhost:8080/eval -H "Content-Type: application/json"
           -d '{"data": "(ns hello.world) (defn rules [{:keys [index]}] (fn [e] (index e)))", "events": [{"service": "foo"}]}'
@@ -206,4 +209,4 @@ Will request a list of namespaces, see [lyceum.conf](lyceum.conf) for how this i
 
 #### GET /ns/{ns}
 
-Will request the content of a specific namespace ___{ns}___, see [lyceum.conf](lyceum.conf) for how this is configured.
+Will request the content of a specific namespace **_{ns}_**, see [lyceum.conf](lyceum.conf) for how this is configured.

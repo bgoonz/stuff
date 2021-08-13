@@ -18,4 +18,3 @@ after_success:
   - mvn clean cobertura:cobertura coveralls:report -Dcoveralls.token=${COVERALLS_TOKEN}
 
 sudo: false
-

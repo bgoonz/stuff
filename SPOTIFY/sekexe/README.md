@@ -1,4 +1,5 @@
 # SEparate KErnel eXEcution
+
 [![Build Status](https://travis-ci.org/spotify/sekexe.svg?branch=master)](https://travis-ci.org/spotify/sekexe)
 
 SEKEXE uses User Mode Linux to run a Linux process within a "sub kernel",
@@ -22,10 +23,8 @@ machine, and you will have root privileges inside that pseudo-VM, but
 you will not gain privileges outside.)
 
 SEKEXE was developed for one very specific use-case: run the test-suite for
-[Docker](https://github.com/dotcloud/docker) within [Travis CI](
-https://travis-ci.org/). Docker needs root privileges, and a kernel with
+[Docker](https://github.com/dotcloud/docker) within [Travis CI](https://travis-ci.org/). Docker needs root privileges, and a kernel with
 namespaces, control groups, and AUFS support.
-
 
 ## How To Use It
 
@@ -40,7 +39,6 @@ the exit value -- which should be 42 in that case.
 If you run `./run` by itself (without arguments) you will get a shell inside
 the environment. This mode is convenient to experiment within the environment.
 
-
 ## Requirements
 
 You need the `slirp` package. On Debian/Ubuntu, `apt-get install slirp`
@@ -51,14 +49,12 @@ Slirp is used to provide network connectivity without requiring root
 permissions; if you do not need network access, and cannot install slirp,
 you can remove the `eth0=slirp...` parameter from `run`.
 
-
 ## Kernel
 
 The SEKEXE repository contains a 3.8 Linux kernel with support for LXC
 and AUFS. It has no support for block devices or real filesystems, though.
 If you want to replace it with another version of the kernel and need help,
 let me know.
-
 
 ## Internals
 

@@ -1,4 +1,5 @@
 # lingon
+
 ![Image of Lingon berries](https://farm3.staticflickr.com/2548/3873990304_1d2bd40ebc_m.jpg)<br>
 
 [![Build Status](https://travis-ci.org/spotify/lingon.svg?branch=master)](https://travis-ci.org/spotify/lingon)
@@ -16,11 +17,11 @@ gulp.js plugins.
 
 **Features**
 
-* A convention layer on top of node.js streams, compatible with Gulp.js.
-* Sprockets-like "include" directive for file concatenation
-* Uses Gulp plugins as Sprockets-like file processors
-* Built in development server.
-* Out-of-the box support for Less, EJS & Markdown
+- A convention layer on top of node.js streams, compatible with Gulp.js.
+- Sprockets-like "include" directive for file concatenation
+- Uses Gulp plugins as Sprockets-like file processors
+- Built in development server.
+- Out-of-the box support for Less, EJS & Markdown
 
 ## Get started
 
@@ -33,6 +34,7 @@ $ npm install -g lingon-cli
 ### 2. Create a new project
 
 Create a minimal lingon project using the CLI:
+
 ```bash
 $ lingon new hello-world
 ```
@@ -126,10 +128,10 @@ Lingon is inspired by Sprockets and uses a convention approach: A set of simple 
 
 Example: "index.html.ejs" will be run through the EJS processor. These processors are gulp plugins, which allows us to leverage a large collection of great existing plugins. If you want to teach Lingon something new, you just have to define the mapping between a file ending and a gulp plugin. That's it!
 
-
 ## Test it
 
 Run the [bats](https://github.com/sstephenson/bats) e2e tests:
+
 ```
 $ ./tests.sh
 ```
@@ -140,7 +142,7 @@ We'd love some help!<br />
 Take a look at our [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines.
 
 ## License
+
 Licensed under the Apache license.
 
-*Lingon photo by [thriol](https://www.flickr.com/photos/thriol/3873990304/sizes/o/)*
-
+_Lingon photo by [thriol](https://www.flickr.com/photos/thriol/3873990304/sizes/o/)_

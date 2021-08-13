@@ -73,10 +73,7 @@
   },
   "cpu_stats": {
     "cpu_usage": {
-      "percpu_usage": [
-        21169594,
-        18112083
-      ],
+      "percpu_usage": [21169594, 18112083],
       "total_usage": 39281677,
       "usage_in_kernelmode": 10000000,
       "usage_in_usermode": 20000000
@@ -150,10 +147,7 @@
   },
   "precpu_stats": {
     "cpu_usage": {
-      "percpu_usage": [
-        21169594,
-        18112083
-      ],
+      "percpu_usage": [21169594, 18112083],
       "total_usage": 39281677,
       "usage_in_kernelmode": 10000000,
       "usage_in_usermode": 20000000

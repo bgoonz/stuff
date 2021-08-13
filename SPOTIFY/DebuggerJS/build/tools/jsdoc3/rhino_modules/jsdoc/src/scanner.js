@@ -6,20 +6,18 @@
 	@license Apache License 2.0 - See file 'LICENSE.md' in this project.
  */
 
-
 var common = {
-	mixin: require('common/util').mixin,
-	events: require('common/events')
+  mixin: require("common/util").mixin,
+  events: require("common/events"),
 };
 
-var fs = require('fs');
+var fs = require("fs");
 
 /**
     @constructor
     @mixes module:common.events
  */
-exports.Scanner = function() {
-}
+exports.Scanner = function () {};
 common.mixin(exports.Scanner.prototype, common.events);
 
 /**
@@ -28,41 +26,44 @@ common.mixin(exports.Scanner.prototype, common.events);
 	@param {number} [depth=1]
 	@fires sourceFileFound
  */
-exports.Scanner.prototype.scan = function(searchPaths, depth, includeMatch, excludeMatch) {
-	var filePaths = [],
-	    that = this;
+exports.Scanner.prototype.scan = function (
+  searchPaths,
+  depth,
+  includeMatch,
+  excludeMatch
+) {
+  var filePaths = [],
+    that = this;
 
-	searchPaths = searchPaths || [];
-	depth = depth || 1;
+  searchPaths = searchPaths || [];
+  depth = depth || 1;
 
-	searchPaths.forEach(function($) {
-        if ( fs.stat($).isFile() ) {
-            filePaths.push($);
-        }
-        else {
-		    filePaths = filePaths.concat(fs.ls($, depth));
-		}
-	});
-	
-	filePaths = filePaths.filter(function($) {
-	    if (includeMatch && !includeMatch.test($)) {
-	        return false
-	    }
-	    
-	    if (excludeMatch && excludeMatch.test($)) {
-	        return false
-	    }
-	    
-	    return true;
-	});
-	
-	filePaths = filePaths.filter(function($) {
-	    var e = { fileName: $ };
-        that.fire('sourceFileFound', e);
-	    
-	    return !e.defaultPrevented;
-	});
+  searchPaths.forEach(function ($) {
+    if (fs.stat($).isFile()) {
+      filePaths.push($);
+    } else {
+      filePaths = filePaths.concat(fs.ls($, depth));
+    }
+  });
 
-	return filePaths;
-}
+  filePaths = filePaths.filter(function ($) {
+    if (includeMatch && !includeMatch.test($)) {
+      return false;
+    }
 
+    if (excludeMatch && excludeMatch.test($)) {
+      return false;
+    }
+
+    return true;
+  });
+
+  filePaths = filePaths.filter(function ($) {
+    var e = { fileName: $ };
+    that.fire("sourceFileFound", e);
+
+    return !e.defaultPrevented;
+  });
+
+  return filePaths;
+};

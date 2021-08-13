@@ -1,12 +1,10 @@
-define(
-   /** @exports some/module */
-   function () {
-       /** @class */
-       function myClass() {}
+define(/** @exports some/module */
+function () {
+  /** @class */
+  function myClass() {}
 
-       /** Some method */
-       myClass.prototype.myMethod = function () {};
+  /** Some method */
+  myClass.prototype.myMethod = function () {};
 
-       return new myClass();
-   }
-);
+  return new myClass();
+});

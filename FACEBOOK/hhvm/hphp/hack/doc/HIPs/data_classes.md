@@ -244,7 +244,6 @@ We'd probably want structural equality for `===`.
 Person[name = "x"] === Person[name = "x"]; // true
 ```
 
-
 This is inconsistent with other forms of classes though.
 
 It's also unclear what semantics `==` should have for data classes.
@@ -305,4 +304,3 @@ Kotlin has [data
 classes](https://kotlinlang.org/docs/reference/data-classes.html). They
 support inheritance and interfaces, and automatically provide equality
 and copy methods.
-

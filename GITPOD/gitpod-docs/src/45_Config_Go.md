@@ -12,7 +12,6 @@ how we do that for the example
 [go-gin-app](https://github.com/gitpod-io/definitely-gp/blob/master/go-gin-app/.gitpod) repository:
 
 ```yaml
-
 ---
 checkoutLocation: "src/github.com/demo-apps/go-gin-app"
 workspaceLocation: "."

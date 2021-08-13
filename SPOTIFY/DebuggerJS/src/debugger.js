@@ -4,8 +4,7 @@
  * @class DebuggerJS
  * @constructor
  */
-DebuggerJS = new (function() {
-
+DebuggerJS = new (function () {
   this.Parsers = {};
 
   /**
@@ -43,9 +42,11 @@ DebuggerJS = new (function() {
      * @param  {Object} object The object that will be checked.
      * @return {Boolean} Returns true if tis an array.
      */
-    isArray: Array.isArray || function(object) {
-      return Object.prototype.toString.call(object) == '[object Array]';
-    }
+    isArray:
+      Array.isArray ||
+      function (object) {
+        return Object.prototype.toString.call(object) == "[object Array]";
+      },
   };
 
   /**
@@ -54,7 +55,7 @@ DebuggerJS = new (function() {
    * @private
    * @type {String}
    */
-  var LOG = 'log';
+  var LOG = "log";
 
   /**
    * The WARN constant
@@ -62,7 +63,7 @@ DebuggerJS = new (function() {
    * @private
    * @type {String}
    */
-  var WARN = 'warn';
+  var WARN = "warn";
 
   /**
    * The ERROR constant
@@ -70,7 +71,7 @@ DebuggerJS = new (function() {
    * @private
    * @type {String}
    */
-  var ERROR = 'error';
+  var ERROR = "error";
 
   /**
    * Is set to true if the logger is on
@@ -115,8 +116,7 @@ DebuggerJS = new (function() {
    * @param {String} tag The tag of the log.
    * @return {Boolean} Returns true if the log should be run.
    */
-  var _checkFilters = function(module, tag) {
-
+  var _checkFilters = function (module, tag) {
     var tagIsAllowed = false;
     var moduleIsAllowed = false;
 
@@ -141,7 +141,6 @@ DebuggerJS = new (function() {
     }
 
     return tagIsAllowed && moduleIsAllowed;
-
   };
 
   /**
@@ -156,21 +155,20 @@ DebuggerJS = new (function() {
    * @param  {String} tag The specific tags that needs to be logged.
    * @return {Boolean} Is set to true if something was logged.
    */
-  var _log = function(type, module, message, tag) {
+  var _log = function (type, module, message, tag) {
     if (_isOn) {
-
       var parsedMessage;
 
       // Check if the message argument is an array
       if (!DebuggerJS.Utils.isArray(message)) {
-        throw new Error('The message argument should be an array');
+        throw new Error("The message argument should be an array");
       }
 
       // Make sure that the module argument is a string
-      module = typeof module === 'string' ? module : '';
+      module = typeof module === "string" ? module : "";
 
       // Make sure that the tag argument is a string
-      tag = typeof tag === 'string' ? tag : '';
+      tag = typeof tag === "string" ? tag : "";
 
       var shouldILog = _checkFilters(module, tag);
 
@@ -207,11 +205,13 @@ DebuggerJS = new (function() {
    * @return {Boolean} It returns true if nothing breaks and no exceptions are
    * thrown.
    */
-  this.register = function(identifier, logger, parser) {
-
-    if (typeof identifier !== 'string' ||
-        (typeof logger === 'undefined' || logger === null)) {
-      throw new Error('Not valid arguments');
+  this.register = function (identifier, logger, parser) {
+    if (
+      typeof identifier !== "string" ||
+      typeof logger === "undefined" ||
+      logger === null
+    ) {
+      throw new Error("Not valid arguments");
     }
 
     // Checks if this logger is not already registered.
@@ -240,7 +240,7 @@ DebuggerJS = new (function() {
    * needs to log.
    * @param {String} tag The tag that the log is associated with.
    */
-  this.log = function(module, message, tag) {
+  this.log = function (module, message, tag) {
     return _log(LOG, module, message, tag);
   };
 
@@ -255,7 +255,7 @@ DebuggerJS = new (function() {
    * needs to log.
    * @param {String} tag The tag that the log is associated with.
    */
-  this.warn = function(module, message, tag) {
+  this.warn = function (module, message, tag) {
     return _log(WARN, module, message, tag);
   };
 
@@ -270,7 +270,7 @@ DebuggerJS = new (function() {
    * needs to log.
    * @param {String} tag The tag that the log is associated with.
    */
-  this.error = function(module, message, tag) {
+  this.error = function (module, message, tag) {
     return _log(ERROR, module, message, tag);
   };
 
@@ -286,15 +286,23 @@ DebuggerJS = new (function() {
    * @param  {Array} modules An array of modules that you want to allow debugging.
    * @param  {Array} tags An array of tags that you want to allow debugging.
    */
-  this.on = function(modules, tags) {
+  this.on = function (modules, tags) {
     // Check if the message argument is an array
-    if (typeof modules !== 'undefined' && !DebuggerJS.Utils.isArray(modules) && modules !== null) {
-      throw new Error('The modules argument should be an array');
+    if (
+      typeof modules !== "undefined" &&
+      !DebuggerJS.Utils.isArray(modules) &&
+      modules !== null
+    ) {
+      throw new Error("The modules argument should be an array");
     }
 
     // Check if the tags argument is an array
-    if (typeof tags !== 'undefined' && !DebuggerJS.Utils.isArray(tags) && tags !== null) {
-      throw new Error('The tags argument should be an array');
+    if (
+      typeof tags !== "undefined" &&
+      !DebuggerJS.Utils.isArray(tags) &&
+      tags !== null
+    ) {
+      throw new Error("The tags argument should be an array");
     }
 
     _isOn = true;
@@ -302,9 +310,8 @@ DebuggerJS = new (function() {
     // Save the filters
     _filters = {
       modules: modules || [],
-      tags: tags || []
+      tags: tags || [],
     };
-
   };
 
   /**
@@ -314,9 +321,8 @@ DebuggerJS = new (function() {
    * @function
    * @name DebuggerJS#off
    */
-  this.off = function() {
+  this.off = function () {
     _isOn = false;
     _filters = {};
   };
-
-});
+})();

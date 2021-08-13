@@ -12,14 +12,10 @@
   "Tty": false,
   "OpenStdin": false,
   "StdinOnce": false,
-  "Env": [
-    "string"
-  ],
+  "Env": ["string"],
   "Cmd": null,
   "Healthcheck": {
-    "Test": [
-      "string"
-    ],
+    "Test": ["string"],
     "Interval": 0,
     "Timeout": 0,
     "Retries": 0,
@@ -34,16 +30,12 @@
   "Entrypoint": null,
   "NetworkDisabled": true,
   "MacAddress": "string",
-  "OnBuild": [
-    "string"
-  ],
+  "OnBuild": ["string"],
   "Labels": {
     "property1": "string",
     "property2": "string"
   },
   "StopSignal": "SIGTERM",
   "StopTimeout": 10,
-  "Shell": [
-    "string"
-  ]
+  "Shell": ["string"]
 }

@@ -49,7 +49,7 @@ jobs:
           TOXENV: ${{ matrix.tox-env }}
         run: tox
       - name: Codecov
-        env: 
+        env:
           COVERAGE_PROCESS_START: .coveragerc
         run: |
           pip install codecov
@@ -65,7 +65,7 @@ jobs:
           POSTGRES_PASSWORD: postgres
           POSTGRES_DB: postgres
         ports:
-        - 5432:5432
+          - 5432:5432
         # Set health checks to wait until postgres has started
         options: >-
           --health-cmd pg_isready
@@ -109,7 +109,7 @@ jobs:
           TOXENV: ${{ matrix.tox-env }}
         run: tox
       - name: Codecov
-        env: 
+        env:
           COVERAGE_PROCESS_START: .coveragerc
         run: |
           pip install codecov
@@ -155,7 +155,7 @@ jobs:
             tox-env: py38-apache
           - python-version: 3.9.4
             tox-env: py39-apache
-            
+
           - python-version: 3.6
             tox-env: py36-azureblob
           - python-version: 3.7
@@ -164,7 +164,6 @@ jobs:
             tox-env: py38-azureblob
           - python-version: 3.9
             tox-env: py39-azureblob
-
 
           - python-version: 3.9
             tox-env: flake8
@@ -194,7 +193,7 @@ jobs:
         run: tox
       - name: Codecov
         if: ${{ matrix.tox-env != 'flake8' && matrix.tox-env != 'docs' }}
-        env: 
+        env:
           COVERAGE_PROCESS_START: .coveragerc
         run: |
           pip install codecov

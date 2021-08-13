@@ -2,11 +2,19 @@
   "title": [
     {
       "type": "heading1",
-      "content": { "text": "10 Reasons You Don't Need a Custom Server", "spans": [] }
+      "content": {
+        "text": "10 Reasons You Don't Need a Custom Server",
+        "spans": []
+      }
     }
   ],
   "speakers": [
-    { "speaker": { "id": "X9jJhRIAACcA5hNe", "wioUrl": "wio://documents/X9jJhRIAACcA5hNe" } }
+    {
+      "speaker": {
+        "id": "X9jJhRIAACcA5hNe",
+        "wioUrl": "wio://documents/X9jJhRIAACcA5hNe"
+      }
+    }
   ],
   "start": "2020-10-27T18:50:00+00:00",
   "end": "2020-10-27T19:30:00+00:00",

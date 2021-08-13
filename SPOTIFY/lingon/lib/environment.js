@@ -1,13 +1,13 @@
-'use strict';
+"use strict";
 
-var path             = require('path');
-var recursiveReaddir = require('./vendor/recursive-readdir');
-var SourceFile       = require('./models/sourceFile');
+var path = require("path");
+var recursiveReaddir = require("./vendor/recursive-readdir");
+var SourceFile = require("./models/sourceFile");
 
 var ENV = function (opts) {
-  this.rootPath = opts.rootPath || '.';
-  this.sourcePath = opts.sourcePath || 'source';
-  this.ignorePrefixPattern = opts.ignorePrefixPattern || new RegExp('\/_');
+  this.rootPath = opts.rootPath || ".";
+  this.sourcePath = opts.sourcePath || "source";
+  this.ignorePrefixPattern = opts.ignorePrefixPattern || new RegExp("/_");
 };
 
 ENV.prototype.getSourceFiles = function (whitelist, callback) {
@@ -15,7 +15,8 @@ ENV.prototype.getSourceFiles = function (whitelist, callback) {
   whitelist = whitelist || [];
 
   recursiveReaddir(
-    _this.sourcePath, [_this.ignorePrefixPattern],
+    _this.sourcePath,
+    [_this.ignorePrefixPattern],
     function (err, files) {
       var whitelistedFiles;
 

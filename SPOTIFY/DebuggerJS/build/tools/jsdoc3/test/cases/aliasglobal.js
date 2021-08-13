@@ -1,7 +1,4 @@
-(function() {
-
-	/** @alias <global>.log */
-    var log = function() {
-    }
-    
+(function () {
+  /** @alias <global>.log */
+  var log = function () {};
 })();

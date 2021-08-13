@@ -7,7 +7,7 @@ want to run depends on fast file access.
 ## Example usage:
 
     Usage: mlockexec [options]
-    
+
     Options:
       -h, --help            show this help message and exit
       -m MEMORY, --max-memory=MEMORY
@@ -25,4 +25,3 @@ specific fields or glob patterns.
 
 If the total filesize of the files matching glob pattern exceeds the
 mandatory `--max-memory` option, mlockexec will fail to run.
-

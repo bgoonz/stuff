@@ -20,13 +20,13 @@ var eslint = require("gulp-eslint");
 var htmlhint = require("gulp-htmlhint");
 var csslint = require("gulp-csslint");
 
-gulp.task("test", function() {
+gulp.task("test", function () {
   return gulp
     .src("./test.html")
     .pipe(qunit({ "phantomjs-options": ["--ignore-ssl-errors=true"] }));
 });
 
-gulp.task("eslint", function() {
+gulp.task("eslint", function () {
   return gulp
     .src("*.js")
     .pipe(eslint())
@@ -34,7 +34,7 @@ gulp.task("eslint", function() {
     .pipe(eslint.failAfterError());
 });
 
-gulp.task("htmllint", function() {
+gulp.task("htmllint", function () {
   return gulp
     .src(["*.html"])
     .pipe(htmlhint())
@@ -42,7 +42,7 @@ gulp.task("htmllint", function() {
     .pipe(htmlhint.failReporter());
 });
 
-gulp.task("csslint", function() {
+gulp.task("csslint", function () {
   return gulp
     .src("*.css")
     .pipe(csslint())

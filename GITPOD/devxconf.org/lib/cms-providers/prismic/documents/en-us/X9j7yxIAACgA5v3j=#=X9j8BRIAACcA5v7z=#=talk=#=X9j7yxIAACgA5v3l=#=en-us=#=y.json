@@ -1,9 +1,17 @@
 {
   "title": [
-    { "type": "heading1", "content": { "text": "Serverless Databases at the Edge", "spans": [] } }
+    {
+      "type": "heading1",
+      "content": { "text": "Serverless Databases at the Edge", "spans": [] }
+    }
   ],
   "speakers": [
-    { "speaker": { "id": "X9i51hIAACcA5dFu", "wioUrl": "wio://documents/X9i51hIAACcA5dFu" } }
+    {
+      "speaker": {
+        "id": "X9i51hIAACcA5dFu",
+        "wioUrl": "wio://documents/X9i51hIAACcA5dFu"
+      }
+    }
   ],
   "start": "2020-10-27T18:10:00+00:00",
   "end": "2020-10-27T18:50:00+00:00",

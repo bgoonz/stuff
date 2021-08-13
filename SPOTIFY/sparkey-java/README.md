@@ -2,20 +2,22 @@ This is the java version of sparkey. It's not a binding, but a full reimplementa
 See [Sparkey](http://github.com/spotify/sparkey) for more documentation on how it works.
 
 ### Travis
+
 Continuous integration with [travis](https://travis-ci.org/spotify/sparkey-java).
 
 [![Build Status](https://travis-ci.org/spotify/sparkey-java.svg?branch=master)](https://travis-ci.org/spotify/sparkey-java)
 
 ### Dependencies
 
-* Java 6 or higher
-* Maven
+- Java 6 or higher
+- Maven
 
 ### Building
 
     mvn package
 
 ### Changelog
+
 See [changelog](CHANGELOG.md).
 
 ### Usage
@@ -68,8 +70,9 @@ on a machine with `Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz`
     LookupBenchmark.test      100000000  SNAPPY  thrpt    4   681790.103 ±   45388.918  ops/s
 
 Here we see that performance goes down slightly as more elements are added. This is caused by:
-* More frequent CPU cache misses.
-* More page faults.
+
+- More frequent CPU cache misses.
+- More page faults.
 
 If you can mlock the full dataset, the performance should be more predictable.
 
@@ -84,7 +87,7 @@ If you can mlock the full dataset, the performance should be more predictable.
 This is mostly disk bound, CPU is not fully utilized. So even though Snappy uses more CPU, it's still faster
 because there's less data to write to disk, especially when the keys and values are small.
 (The score is number of appends, not amount of data, so this may be slightly misleading)
-    
+
 #### Writing hash file
 
     Benchmark                (constructionMethod)  (numElements)  Mode  Cnt   Score   Error  Units

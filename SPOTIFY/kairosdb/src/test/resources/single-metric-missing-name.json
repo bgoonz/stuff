@@ -1,5 +1,7 @@
-[{
+[
+  {
     "name": "",
-	"datapoints": [[1349109376, 123]],
-    "tags":{"host":"test"}
-}]
+    "datapoints": [[1349109376, 123]],
+    "tags": { "host": "test" }
+  }
+]

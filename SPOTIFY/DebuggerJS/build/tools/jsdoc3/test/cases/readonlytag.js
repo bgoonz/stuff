@@ -1,10 +1,7 @@
 /**
-* @constructor
-*/
+ * @constructor
+ */
 function Collection() {
-
-    /** @readonly */
-    this.length = 0;
+  /** @readonly */
+  this.length = 0;
 }
-
-

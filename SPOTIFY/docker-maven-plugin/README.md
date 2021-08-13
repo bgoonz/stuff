@@ -1,8 +1,8 @@
 # docker-maven-plugin
+
 [![Build Status](https://travis-ci.com/spotify/docker-maven-plugin.svg?branch=master)](https://travis-ci.com/spotify/docker-maven-plugin)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.spotify/docker-maven-plugin/badge.svg?style=flat-square)](https://maven-badges.herokuapp.com/maven-central/com.spotify/docker-maven-plugin/)
 [![License](https://img.shields.io/github/license/spotify/dockerfile-maven.svg)](LICENSE)
-
 
 A Maven plugin for building and pushing Docker images.
 
@@ -19,7 +19,7 @@ began experimenting with Docker. This plugin is capable of generating a
 the `FROM` image, resources to add with `ADD`/`COPY`, etc.
 
 Over time at Spotify we have realized that the simplest way to build a Docker
-image from a Java project is to have the developer write the `Dockerfile`.  The
+image from a Java project is to have the developer write the `Dockerfile`. The
 behavior of this plugin around generating Dockerfiles, copying your project
 directory to a "staging" directory to use as the Docker build context, etc.,
 ultimately led to a lot of unnecessary confusion with our users that stemmed
@@ -31,22 +31,21 @@ This led to the creation of a second Maven plugin for building docker images,
 with Docker from Maven, for all of the reasons outlined in dockerfile-maven's
 README.
 
-
 [dockerfile-maven]: https://github.com/spotify/dockerfile-maven
-* [The future of docker-maven-plugin](#the-future-of-docker-maven-plugin)
-* [Purpose](#purpose)
-* [Setup](#setup)
-  * [Specify build info in the POM](#specify-build-info-in-the-pom)
-  * [Use a Dockerfile](#use-a-dockerfile)
-* [Usage](#usage)
-  * [Bind Docker commands to Maven phases](#bind-docker-commands-to-maven-phases)
-  * [Using with Private Registries](#using-with-private-registries)
-  * [Authentication](#authentication)
-    * [Using encrypted passwords for authentication](#using-encrypted-passwords-for-authentication)
-* [Testing](#testing)
-* [Releasing](#releasing)
-* [Known Issues](#known-issues)
 
+- [The future of docker-maven-plugin](#the-future-of-docker-maven-plugin)
+- [Purpose](#purpose)
+- [Setup](#setup)
+  - [Specify build info in the POM](#specify-build-info-in-the-pom)
+  - [Use a Dockerfile](#use-a-dockerfile)
+- [Usage](#usage)
+  - [Bind Docker commands to Maven phases](#bind-docker-commands-to-maven-phases)
+  - [Using with Private Registries](#using-with-private-registries)
+  - [Authentication](#authentication)
+    - [Using encrypted passwords for authentication](#using-encrypted-passwords-for-authentication)
+- [Testing](#testing)
+- [Releasing](#releasing)
+- [Known Issues](#known-issues)
 
 ## Purpose
 
@@ -60,7 +59,7 @@ image directly in the pom, without needing a separate `Dockerfile`.
 If you need `VOLUME` command(or any other not supported dockerfile command), then you will need
 to create a `Dockerfile` and use the `dockerDirectory` element.
 
-By default the plugin will try to connect to docker on localhost:2375. Set the DOCKER_HOST 
+By default the plugin will try to connect to docker on localhost:2375. Set the DOCKER_HOST
 environment variable to connect elsewhere.
 
     DOCKER_HOST=tcp://<host>:2375
@@ -83,7 +82,7 @@ and sets an entrypoint which runs the jar. Change `VERSION GOES HERE` to the lat
             <imageName>example</imageName>
             <baseImage>java</baseImage>
             <entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
-            <!-- copy the service's jar file from target into the root directory of the image --> 
+            <!-- copy the service's jar file from target into the root directory of the image -->
             <resources>
                <resource>
                  <targetPath>/</targetPath>
@@ -99,7 +98,7 @@ and sets an entrypoint which runs the jar. Change `VERSION GOES HERE` to the lat
 
 ### Use a Dockerfile
 
-To use a `Dockerfile`, you must specify the `dockerDirectory` element. If specified, the 
+To use a `Dockerfile`, you must specify the `dockerDirectory` element. If specified, the
 `baseImage`, `maintainer`, `cmd` and `entryPoint` elements will be ignored. The contents of the
 `dockerDirectory` will be copied into `${project.build.directory}/docker`. Use the `resources`
 element to copy additional files, such as the service's jar file.
@@ -184,9 +183,9 @@ Tags-to-be-pushed can also be specified directly on the command line with
 
 ### Bind Docker commands to Maven phases
 
-You can also bind the build, tag & push goals to the Maven phases, so the container will be built, tagged and pushed 
+You can also bind the build, tag & push goals to the Maven phases, so the container will be built, tagged and pushed
 when you run just `mvn deploy`. If you have a multi-module project where a sub-module builds an image, you
-will need to do this binding so the image gets built when maven is run from the parent project. 
+will need to do this binding so the image gets built when maven is run from the parent project.
 
     <plugin>
       <groupId>com.spotify</groupId>
@@ -220,16 +219,16 @@ will need to do this binding so the image gets built when maven is run from the 
           <configuration>
             <imageName>registry.example.com/my-image:${project.version}</imageName>
           </configuration>
-        </execution>        
+        </execution>
       </executions>
     </plugin>
 
 You can skip Docker goals bound to Maven phases with:
 
-* `-DskipDockerBuild` to skip image build
-* `-DskipDockerTag` to skip image tag
-* `-DskipDockerPush` to skip image push
-* `-DskipDocker` to skip any Docker goals
+- `-DskipDockerBuild` to skip image build
+- `-DskipDockerTag` to skip image tag
+- `-DskipDockerPush` to skip image push
+- `-DskipDocker` to skip any Docker goals
 
 To remove the image named `foobar` run the following command:
 
@@ -307,7 +306,7 @@ versions of the plugin this behavior had to be enabled with
 `<useConfigFile>true</useConfigFile>`, but now it is always active).
 
 Additionally the plugin will enable support for Google Container Registry if it
-is able to successfully load [Google's "Application Default Credentials"][ADC].
+is able to successfully load [Google's "Application Default Credentials"][adc].
 The plugin will also load Google credentials from the file pointed to by the
 environment variable `DOCKER_GOOGLE_CREDENTIALS` if it is defined. Since GCR
 authentication requires retrieving short-lived access codes for the given
@@ -315,7 +314,7 @@ credentials, support for this registry is baked into the underlying
 docker-client rather than having to first populate the docker config file
 before running the plugin.
 
-[ADC]: https://developers.google.com/identity/protocols/application-default-credentials
+[adc]: https://developers.google.com/identity/protocols/application-default-credentials
 
 Lastly, authentication credentials can be explicitly configured in your pom.xml
 and in your Maven installation's `settings.xml` file as part of the
@@ -388,7 +387,7 @@ Because the plugin uses Maven properties named like
 name `docker` you will get a rather strange-looking error from Maven:
 
 ```
-[ERROR] Failed to execute goal com.spotify:docker-maven-plugin:0.0.21:build (default) on project <....>: 
+[ERROR] Failed to execute goal com.spotify:docker-maven-plugin:0.0.21:build (default) on project <....>:
 Exception caught: system properties: docker has type STRING rather than OBJECT
 ```
 

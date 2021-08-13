@@ -1,5 +1,6 @@
 # SkyDNS [![Build Status](https://travis-ci.org/skynetservices/skydns.png)](https://travis-ci.org/skynetservices/skydns)
-*Version 2.0.0*
+
+_Version 2.0.0_
 
 SkyDNS is a distributed service for announcement and discovery of services built on
 top of [etcd](https://github.com/coreos/etcd). It utilizes DNS queries
@@ -13,28 +14,29 @@ Since then, SkyDNS has seen some changes, most notably the ability to use etcd a
 
 SkyDNS2:
 
-* Does away with Raft and uses Etcd (which uses raft).
-* Makes is possible to query arbitrary domain names.
-* Is a thin layer above etcd, that translates etcd keys and values to the DNS.
-    In the near future, SkyDNS2 will possibly be upstreamed and incorporated directly in etcd.
-* Does DNSSEC with NSEC3 instead of NSEC (Work in progress).
+- Does away with Raft and uses Etcd (which uses raft).
+- Makes is possible to query arbitrary domain names.
+- Is a thin layer above etcd, that translates etcd keys and values to the DNS.
+  In the near future, SkyDNS2 will possibly be upstreamed and incorporated directly in etcd.
+- Does DNSSEC with NSEC3 instead of NSEC (Work in progress).
 
 Note that bugs in SkyDNS1 will still be fixed, but the main development effort will be focussed on version 2.
 [Version 1 of SkyDNS can be found here](https://github.com/skynetservices/skydns1).
 
 # Future ideas
 
-* Abstract away the backend in an interface, so different backends can be used.
-* Make SkyDNS a library and provide a small server.
+- Abstract away the backend in an interface, so different backends can be used.
+- Make SkyDNS a library and provide a small server.
 
 ## Setup / Install
+
 Download/compile and run etcd. See the documentation for etcd at <https://github.com/coreos/etcd>.
 
 Then compile SkyDNS:
 
 `go get -d -v ./... && go build -v ./...`
 
-SkyDNS' configuration is stored *in* etcd: but there are also flags and environment variabes
+SkyDNS' configuration is stored _in_ etcd: but there are also flags and environment variabes
 you can set. To start SkyDNS, set the etcd machines with the environment variable ETCD_MACHINES:
 
     export ETCD_MACHINES='http://192.168.0.1:4001,http://192.168.0.2:4001'
@@ -52,24 +54,25 @@ Optionally (but recommended) give it a nameserver:
 Also see the section "NS Records".
 
 ## Configuration
+
 SkyDNS' configuration is stored in etcd as a JSON object under the key `/skydns/config`. The following parameters
 may be set:
 
-* `addr`: IP:port on which SkyDNS should listen, defaults to `127.0.0.1:53`.
-* `domain`: domain for which SkyDNS is authoritative, defaults to `skydns.local.`.
-* `dnssec`: enable DNSSEC
-* `hostmaster`: hostmaster email address to use.
-* `local`: optional unique value for this skydns instance, default is none. This is returned
-    when queried for `local.dns.skydns.local`.
-* `round_robin`: enable round-robin sorting for A and AAAA responses, defaults to true.
-* `nameservers`: forward DNS requests to these nameservers (array of IP:port combination), when not
-    authoritative for a domain.
-* `read_timeout`: network read timeout, for DNS and talking with etcd.
-* `ttl`: default TTL in seconds to use on replies when none is set in etcd, defaults to 3600.
-* `min_ttl`: minimum TTL in seconds to use on NXDOMAIN, defaults to 30.
-* `scache`: the capacity of the DNSSEC signature cache, defaults to 10000 records if not set.
-* `rcache`: the capacity of the response cache, defaults to 0 records if not set.
-* `rcache-ttl`: the TTL of the response cache, defaults to 60 if not set.
+- `addr`: IP:port on which SkyDNS should listen, defaults to `127.0.0.1:53`.
+- `domain`: domain for which SkyDNS is authoritative, defaults to `skydns.local.`.
+- `dnssec`: enable DNSSEC
+- `hostmaster`: hostmaster email address to use.
+- `local`: optional unique value for this skydns instance, default is none. This is returned
+  when queried for `local.dns.skydns.local`.
+- `round_robin`: enable round-robin sorting for A and AAAA responses, defaults to true.
+- `nameservers`: forward DNS requests to these nameservers (array of IP:port combination), when not
+  authoritative for a domain.
+- `read_timeout`: network read timeout, for DNS and talking with etcd.
+- `ttl`: default TTL in seconds to use on replies when none is set in etcd, defaults to 3600.
+- `min_ttl`: minimum TTL in seconds to use on NXDOMAIN, defaults to 30.
+- `scache`: the capacity of the DNSSEC signature cache, defaults to 10000 records if not set.
+- `rcache`: the capacity of the response cache, defaults to 0 records if not set.
+- `rcache-ttl`: the TTL of the response cache, defaults to 60 if not set.
 
 To set the configuration, use something like:
 
@@ -83,41 +86,41 @@ You can also use the command line options, however the settings in etcd take pre
 
 ### Commandline flags
 
-* `-local`: used to specify a unique service for this SkyDNS instance. This should point to a (unique) domain into Etcd, when
-    SkyDNS receives a query for the name `local.dns.skydns.local` it will fetch this service and return it.
-    For instance: `-local e2016c14-fbba-11e3-ae08-10604b7efbe2.dockerhosts.skydns.local` and then 
+- `-local`: used to specify a unique service for this SkyDNS instance. This should point to a (unique) domain into Etcd, when
+  SkyDNS receives a query for the name `local.dns.skydns.local` it will fetch this service and return it.
+  For instance: `-local e2016c14-fbba-11e3-ae08-10604b7efbe2.dockerhosts.skydns.local` and then
 
         curl -XPUT http://127.0.0.1:4001/v2/keys/skydns/local/skydns/dockerhosts/2016c14-fbba-11e3-ae08-10604b7efbe2 \
             -d value='{"host":"10.1.1.16"}'
 
-    To register the local IP address. Now when SkyDNS receives a query for local.dns.skydns.local it will fetch the above
-    key and returns that one service. In other words skydns will substitute `e2016c14-fbba-11e3-ae08-10604b7efbe2.dockerhosts.skydns.local`
-    for `local.dns.skydns.local`. This follows the same rules as the other services, so it can also be an external names, which
-    will be resolved.
+  To register the local IP address. Now when SkyDNS receives a query for local.dns.skydns.local it will fetch the above
+  key and returns that one service. In other words skydns will substitute `e2016c14-fbba-11e3-ae08-10604b7efbe2.dockerhosts.skydns.local`
+  for `local.dns.skydns.local`. This follows the same rules as the other services, so it can also be an external names, which
+  will be resolved.
 
-    Also see the section Host Local Values.
+  Also see the section Host Local Values.
 
 ### Environment Variables
 
 SkyDNS uses these environment variables:
 
-* `ETCD_MACHINES` - list of etcd machines, "http://localhost:4001,http://etcd.example.com:4001".
-* `ETCD_TLSKEY` - path of TLS client certificate - private key.
-* `ETCD_TLSPEM` - path of TLS client certificate - public key.
-* `ETCD_CACERT` - path of TLS certificate authority public key
-* `SKYDNS_ADDR` - specify address to bind to
-* `SKYDNS_DOMAIN` - set a default domain if not specified by etcd config
-* `SKYDNS_NAMESERVERS` - set a list of nameservers to forward DNS requests to when not authoritative for a domain, "8.8.8.8:53,8.8.4.4:53".
+- `ETCD_MACHINES` - list of etcd machines, "http://localhost:4001,http://etcd.example.com:4001".
+- `ETCD_TLSKEY` - path of TLS client certificate - private key.
+- `ETCD_TLSPEM` - path of TLS client certificate - public key.
+- `ETCD_CACERT` - path of TLS certificate authority public key
+- `SKYDNS_ADDR` - specify address to bind to
+- `SKYDNS_DOMAIN` - set a default domain if not specified by etcd config
+- `SKYDNS_NAMESERVERS` - set a list of nameservers to forward DNS requests to when not authoritative for a domain, "8.8.8.8:53,8.8.4.4:53".
 
 And these are used for statistics:
 
-* `GRAPHITE_SERVER`
-* `GRAPHITE_PREFIX`
-* `STATHAT_USER`
-* `INFLUX_SERVER`
-* `INFLUX_DATABASE`
-* `INFLUX_USER`
-* `INFLUX_PASSWORD`
+- `GRAPHITE_SERVER`
+- `GRAPHITE_PREFIX`
+- `STATHAT_USER`
+- `INFLUX_SERVER`
+- `INFLUX_DATABASE`
+- `INFLUX_USER`
+- `INFLUX_PASSWORD`
 
 ### SSL Usage and Authentication with Client Certificates
 
@@ -125,24 +128,25 @@ In order to connect to an SSL-secured etcd, you will at least need to set ETCD_C
 of the Certificate Authority which signed the server certificate.
 
 If the SSL-secured etcd expects client certificates to authorize connections, you also need to set ETCD_TLSKEY
-to the *private* key of the client, and ETCD_TLSPEM to the *public* key of the client.
+to the _private_ key of the client, and ETCD_TLSPEM to the _public_ key of the client.
 
 ## Service Announcements
+
 Announce your service by submitting JSON over HTTP to etcd with information about your service.
 This information will then be available for queries via DNS.
 We use the directory `/skydns` to anchor all names.
 
 When providing information you will need to fill out (some of) the following values.
 
-* Path - The path of the key in etcd, e.g. if the domain you want to register is "rails.production.east.skydns.local", you need to reverse it and replace the dots with slashes. So the name here becomes:
-    `local/skydns/east/production/rails`.
+- Path - The path of the key in etcd, e.g. if the domain you want to register is "rails.production.east.skydns.local", you need to reverse it and replace the dots with slashes. So the name here becomes:
+  `local/skydns/east/production/rails`.
   Then prefix the `/skydns/` string too, so the final path becomes
-    `/v2/keys/skdydns/local/skydns/east/production/rails`
-* Host - The name of your service, e.g., `service5.mydomain.com`,  and IP address (either v4 or v6)
-* Port - the port where the service can be reached.
-* Priority - the priority of the service, the lower the value, the more preferred;
-* Weight - a weight factor that will be used for services with the same Priority.
-* TTL - the time-to-live of the service, overriding the default TTL. If the etcd key also has a TTL, the minimum of this value and the etcd TTL is used.
+  `/v2/keys/skdydns/local/skydns/east/production/rails`
+- Host - The name of your service, e.g., `service5.mydomain.com`, and IP address (either v4 or v6)
+- Port - the port where the service can be reached.
+- Priority - the priority of the service, the lower the value, the more preferred;
+- Weight - a weight factor that will be used for services with the same Priority.
+- TTL - the time-to-live of the service, overriding the default TTL. If the etcd key also has a TTL, the minimum of this value and the etcd TTL is used.
 
 Path and Host are mandatory.
 
@@ -161,19 +165,19 @@ When querying the DNS for services you can use wildcards or query for subdomains
 The Weight of a service is calculated as follows. We treat Weight as a percentage, so if there are
 3 services, the weight is set to 33 for each:
 
-| Service | Weight  | SRV.Weight |
-| --------| ------- | ---------- |
-|    a    |   100   |    33      |
-|    b    |   100   |    33      |
-|    c    |   100   |    33      |
+| Service | Weight | SRV.Weight |
+| ------- | ------ | ---------- |
+| a       | 100    | 33         |
+| b       | 100    | 33         |
+| c       | 100    | 33         |
 
 If we add other weights to the equation some services will get a different Weight:
 
-| Service | Weight  | SRV.Weight |
-| --------| ------- | ---------- |
-|    a    |   120   |    34      |
-|    b    |   100   |    28      |
-|    c    |   130   |    37      |
+| Service | Weight | SRV.Weight |
+| ------- | ------ | ---------- |
+| a       | 120    | 34         |
+| b       | 100    | 28         |
+| c       | 130    | 37         |
 
 Note, all calculations are rounded down, so the sum total might be lower than 100.
 
@@ -183,10 +187,10 @@ You can find services by querying SkyDNS via any DNS client or utility. It uses 
 
 For the purpose of this document, let's suppose we have added the following services to etcd:
 
-* 1.rails.production.east.skydns.local, mapping to service1.example.com
-* 2.rails.production.west.skydns.local, mapping to service2.example.com
-* 4.rails.staging.east.skydns.local, mapping to 10.0.1.125
-* 6.rails.staging.east.skydns.local, mapping to 2003::8:1
+- 1.rails.production.east.skydns.local, mapping to service1.example.com
+- 2.rails.production.west.skydns.local, mapping to service2.example.com
+- 4.rails.staging.east.skydns.local, mapping to 10.0.1.125
+- 6.rails.staging.east.skydns.local, mapping to 2003::8:1
 
 These names can be added with:
 
@@ -211,7 +215,7 @@ Testing one of the names with `dig`:
 
 ### Wildcards
 
-Of course using the full names isn't *that* useful, so SkyDNS lets you query for subdomains, and returns responses based upon the amount of services matched by the subdomain or from the wildcard query.
+Of course using the full names isn't _that_ useful, so SkyDNS lets you query for subdomains, and returns responses based upon the amount of services matched by the subdomain or from the wildcard query.
 
 If we are interested in all the servers in the `east` region, we simply omit the rightmost labels from our query:
 
@@ -263,6 +267,7 @@ Get all Services in staging.east:
     6.rails.staging.east.skydns.local. 3600 IN AAAA 2003::8:1
 
 #### A/AAAA Records
+
 To return A records, simply run a normal DNS query for a service matching the above patterns.
 
 Now do a normal DNS query:
@@ -283,6 +288,7 @@ listed, so this is only useful when you're querying for services running on
 ports known to you in advance.
 
 #### CNAME Records
+
 If for an A or AAAA query the IP address can not be parsed, SkyDNS will try to see if there is
 a chain of names that will lead to an IP address. The chain can not be longer than 8. So for instance
 if the following services have been registered:
@@ -340,7 +346,7 @@ Registers `ns.dns.skydns.local` as a nameserver with ip address 172.16.0.1:
     ;; ADDITIONAL SECTION:
     ns.dns.skydns.local.    3600    IN  A   172.16.0.1
 
-The first nameserver should have the hostname `ns`  (as this is used in the SOA record). Having the nameserver(s)
+The first nameserver should have the hostname `ns` (as this is used in the SOA record). Having the nameserver(s)
 in Etcd make sense because usualy it is hard for SkyDNS to figure this out by itself, espcially when
 running behind NAT or running on 127.0.0.1:53 and being forwarded packets IPv6 packets, etc. etc.
 
@@ -366,7 +372,7 @@ These can be added with:
 
 If SkyDNS receives a PTR query it will check these paths and will return the
 contents. Note that these replies are sent with the AA (Authoritative Answer)
-bit *off*. If nothing is found locally the query is forwarded to the local
+bit _off_. If nothing is found locally the query is forwarded to the local
 recursor (if so configured), otherwise SERVFAIL is returned.
 
 This also works for IPv6 addresses, except that the reverse path is quite long.
@@ -430,6 +436,7 @@ in the etcd backend so a restart of SkyDNS with the same unique value will give 
     local.dns.skydns.local. 3600 IN  A   192.0.2.1
 
 ## License
+
 The MIT License (MIT)
 
 Copyright © 2014 The SkyDNS Authors

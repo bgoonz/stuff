@@ -1,6 +1,4 @@
 /**
     @version 1.2.3
 */
-function foo(x) {
-    
-}
+function foo(x) {}

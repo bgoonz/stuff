@@ -1,5 +1,7 @@
 {
-  "companyName": [{ "type": "heading4", "content": { "text": "ACME", "spans": [] } }],
+  "companyName": [
+    { "type": "heading4", "content": { "text": "ACME", "spans": [] } }
+  ],
   "title": [
     {
       "type": "heading1",
@@ -18,7 +20,9 @@
   "link": { "url": "https://vercel.com/careers", "preview": null },
   "discord": { "url": "https://discord.gg/d5VXPqV", "preview": null },
   "rank": "2",
-  "company_name": [{ "type": "heading4", "content": { "text": "ACME", "spans": [] } }],
+  "company_name": [
+    { "type": "heading4", "content": { "text": "ACME", "spans": [] } }
+  ],
   "companyName_TYPE": "StructuredText",
   "companyName_POSITION": 0,
   "company_name_TYPE": "StructuredText",

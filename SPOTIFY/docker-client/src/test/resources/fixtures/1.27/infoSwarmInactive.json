@@ -7,35 +7,15 @@
   "Images": 0,
   "Driver": "aufs",
   "DriverStatus": [
-    [
-      "Root Dir",
-      "/mnt/sda1/var/lib/docker/aufs"
-    ],
-    [
-      "Backing Filesystem",
-      "extfs"
-    ],
-    [
-      "Dirs",
-      "0"
-    ],
-    [
-      "Dirperm1 Supported",
-      "true"
-    ]
+    ["Root Dir", "/mnt/sda1/var/lib/docker/aufs"],
+    ["Backing Filesystem", "extfs"],
+    ["Dirs", "0"],
+    ["Dirperm1 Supported", "true"]
   ],
   "SystemStatus": null,
   "Plugins": {
-    "Volume": [
-      "local"
-    ],
-    "Network": [
-      "bridge",
-      "host",
-      "macvlan",
-      "null",
-      "overlay"
-    ],
+    "Volume": ["local"],
+    "Network": ["bridge", "host", "macvlan", "null", "overlay"],
     "Authorization": null
   },
   "MemoryLimit": true,
@@ -62,9 +42,7 @@
   "Architecture": "x86_64",
   "IndexServerAddress": "https://index.docker.io/v1/",
   "RegistryConfig": {
-    "InsecureRegistryCIDRs": [
-      "127.0.0.0/8"
-    ],
+    "InsecureRegistryCIDRs": ["127.0.0.0/8"],
     "IndexConfigs": {
       "docker.io": {
         "Name": "docker.io",
@@ -82,9 +60,7 @@
   "HttpsProxy": "",
   "NoProxy": "",
   "Name": "17.03.1",
-  "Labels": [
-    "provider=virtualbox"
-  ],
+  "Labels": ["provider=virtualbox"],
   "ExperimentalBuild": false,
   "ServerVersion": "17.03.1-ce",
   "ClusterStore": "",
@@ -138,7 +114,5 @@
     "ID": "949e6fa",
     "Expected": "949e6fa"
   },
-  "SecurityOptions": [
-    "name=seccomp,profile=default"
-  ]
+  "SecurityOptions": ["name=seccomp,profile=default"]
 }

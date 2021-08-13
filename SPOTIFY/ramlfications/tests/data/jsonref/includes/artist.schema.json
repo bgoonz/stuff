@@ -5,9 +5,11 @@
     "external_urls": {
       "type": "object",
       "description": "Known external URLs for this artist.",
-      "": [{
-        "type": "string"
-      }]
+      "": [
+        {
+          "type": "string"
+        }
+      ]
     },
     "genres": {
       "type": "array",

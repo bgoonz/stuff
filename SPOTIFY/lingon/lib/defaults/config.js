@@ -1,17 +1,17 @@
-'use strict';
+"use strict";
 
-var defaultExtensionMap = require('./defaultExtensionMap');
+var defaultExtensionMap = require("./defaultExtensionMap");
 
 module.exports = {
-  defaultTask: 'server',
-  sourcePath: 'source',
-  buildPath: 'build',
-  ignorePrefixPattern: new RegExp('\/_'),
-  directiveFileTypes: ['js', 'less', 'css', 'ejs', 'html', 'md'],
+  defaultTask: "server",
+  sourcePath: "source",
+  buildPath: "build",
+  ignorePrefixPattern: new RegExp("/_"),
+  directiveFileTypes: ["js", "less", "css", "ejs", "html", "md"],
   server: {
-    directoryIndex: 'index.html',
+    directoryIndex: "index.html",
     catchAll: undefined,
-    namespace: '/',
+    namespace: "/",
   },
   extensionRewrites: defaultExtensionMap,
 };

@@ -27,7 +27,7 @@ output:
     - type: debug
       batching:
         flushInterval: 20000
-      filter: ["key","foobar"]
+      filter: ["key", "foobar"]
     - type: http
       batching:
         flushInterval: 20000
@@ -37,6 +37,6 @@ output:
     - type: signalfx
       batching:
         flushInterval: 20000
-      filter: ["key","foobar"]
+      filter: ["key", "foobar"]
       authToken: "foobar"
       soTimeout: 1000

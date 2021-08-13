@@ -1,18 +1,13 @@
-pyEOS
-=====
+# pyEOS
 
 Python API for devices running EOS
 
-Documentation
-=============
+# Documentation
 
 See the [Read the Docs](http://pyeos.readthedocs.org)
 
-Install
-=======
+# Install
 
 To install, execute:
 
-``
-   pip install pyEOS
-``
+` pip install pyEOS`

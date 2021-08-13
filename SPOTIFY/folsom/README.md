@@ -13,19 +13,18 @@ API.
 
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.spotify/folsom/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.spotify/folsom)
 
-
 ### Build dependencies
 
-* Java 8 or higher
-* Maven
-* Docker - to run integration tests.
+- Java 8 or higher
+- Maven
+- Docker - to run integration tests.
 
 ### Runtime dependencies
 
-* Netty 4
-* Google Guava
-* Yammer metrics (optional)
-* OpenCensus (optional)
+- Netty 4
+- Google Guava
+- Yammer metrics (optional)
+- OpenCensus (optional)
 
 ### Usage
 
@@ -122,20 +121,20 @@ If you are still on Java 7, you can depend on the older version:
 
 ### Design goals
 
-* Robustness - If you request something, the future you get back should always complete at some point.
-* Error detection - If something goes wrong (the memcache server is behaving incorrectly or some internal bug occurs),
+- Robustness - If you request something, the future you get back should always complete at some point.
+- Error detection - If something goes wrong (the memcache server is behaving incorrectly or some internal bug occurs),
   we try to detect it and drop the connection to prevent further problems.
-* Simplicity - The code base is intended to be small and well abstracted.
+- Simplicity - The code base is intended to be small and well abstracted.
   We prefer simple solutions that solve the major usecases and avoid implementing optimizations
   that would give small returns.
-* Fail-fast - If something happens (the memcached service is slow or gets disconnected) we try to fail as fast as possible.
+- Fail-fast - If something happens (the memcached service is slow or gets disconnected) we try to fail as fast as possible.
   How to handle the error is up to you, and you probably want to know about the error as soon as possible.
-* Modularity - The complex client code is isolated in a single class, and all the extra functionality are in composable modules:
+- Modularity - The complex client code is isolated in a single class, and all the extra functionality are in composable modules:
   (ketama, reconnecting, retry, roundrobin)
-* Efficiency - We want to support a high traffic throughput without using too much CPU or memory resources.
-* Asynchronous - We fully support the idea of writing asynchronous code instead of blocking threads, and this is
+- Efficiency - We want to support a high traffic throughput without using too much CPU or memory resources.
+- Asynchronous - We fully support the idea of writing asynchronous code instead of blocking threads, and this is
   achieved through Java 8 futures.
-* Low amount of synchronization - Code that uses a lot of synchronization primitives is more likely to have
+- Low amount of synchronization - Code that uses a lot of synchronization primitives is more likely to have
   race condition bugs and deadlocks. We try to isolate that as much as possible to minimize the risk,
   and most of the code base doesn't have to care.
 
@@ -169,6 +168,7 @@ interface BinaryMemcacheClient<T> extends MemcacheClient<T> {}
 ```
 
 ### Changelog
+
 See [changelog](CHANGELOG.md).
 
 ### Features
@@ -203,16 +203,18 @@ builder.withTracer(OpenCensus.tracer());
 
 #### Cluster auto-discovery
 
-Nodes in a memcache clusters can be auto-discovered. Folsom supports discovery through 
+Nodes in a memcache clusters can be auto-discovered. Folsom supports discovery through
 DNS SRV records using the `com.spotify.folsom.SrvResolver` or AWS ElastiCache using the
 `com.spotify.folsom.elasticache.ElastiCacheResolver`.
 
 SrvResolver:
+
 ```
 builder.withResolver(SrvResolver.newBuilder("foo._tcp.example.org").build());
 ```
 
 ElastiCacheResolver:
+
 ```
 builder.withResolver(ElastiCacheResolver.newBuilder("cluster-configuration-endpoint-hostname").build());
 ```
@@ -224,6 +226,7 @@ mvn package
 ```
 
 ## Code of conduct
+
 This project adheres to the [Open Code of Conduct][code-of-conduct]. By participating, you are expected to honor this code.
 
 ### Authors

@@ -1,5 +1,4 @@
-docker-{stress,monitor}
-=======================
+# docker-{stress,monitor}
 
 Simple Docker (http://docker.io/) stress testing and monitoring tools.
 
@@ -8,7 +7,7 @@ Simple Docker (http://docker.io/) stress testing and monitoring tools.
                      [-e [EMAIL [EMAIL ...]]] [-v]
 
     docker stress test
-    
+
     optional arguments:
       -h, --help            show this help message and exit
       -f JOBS, --jobs JOBS  jobs file (default: jobs.json)
@@ -27,9 +26,9 @@ Simple Docker (http://docker.io/) stress testing and monitoring tools.
     usage: docker-monitor [-h] [-d CLI] [-H ENDPOINT] [-t INTERVAL]
                           [-e [EMAIL [EMAIL ...]]] [-v] [-r RIEMANN]
                           [--syslog SYSLOG]
-    
+
     docker health check monitor
-    
+
     optional arguments:
       -h, --help            show this help message and exit
       -d CLI, --cli CLI     docker cli (default: /usr/bin/docker)

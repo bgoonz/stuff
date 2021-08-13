@@ -26,7 +26,7 @@ Adding this file to lib/ffwd/plugin/foo.rb will make FFWD automatically
 discover it.
 
 You can try this in the **ffwd** project and then test it with
-```bin/ffwd --plugins```.
+`bin/ffwd --plugins`.
 
 ```bash
 $ bin/ffwd --plugins
@@ -121,13 +121,13 @@ end
 
 With this we learn two new things.
 
-*FastForward plugins runs inside of EventMachine*, so in order to periodically
+_FastForward plugins runs inside of EventMachine_, so in order to periodically
 do something we can use
 [EM::PeriodicTimer](http://eventmachine.rubyforge.org/EventMachine/PeriodicTimer.html).
 
 The provided block gets invoked anytime **Core** decides that our plugin should be
 stopped.
-*Omitting this* would cause the timer to continue firing even though an input
+_Omitting this_ would cause the timer to continue firing even though an input
 plugin is supposed to have been stopped which would have very strange effects.
 
 There is nothing about our newly created plugin that is particularly
@@ -189,9 +189,9 @@ difficulty.
 
 The **bind** part of the **protocol stack** reads the following parameters.
 
-* **:host**&mdash;The host to bind.
-* **:port**&mdash;The port to bind.
-* **:path**&mdash;The file to used when protocol is **unix+<tcp/udp>**.
+- **:host**&mdash;The host to bind.
+- **:port**&mdash;The port to bind.
+- **:path**&mdash;The file to used when protocol is **unix+<tcp/udp>**.
 
 We're also using **FFWD::Connection**, this is not terribly important at this
 phase and you could just as well have used a regular **EM::Connection**.
@@ -335,15 +335,15 @@ implement the **send_all**, **send_event** and **send_metric** methods.
 
 The **connect** part of the **protocol stack** reads the following parameters.
 
-* **:host**&mdash;The host to connect to.
-* **:port**&mdash;The port to connect to.
-* **:flush_period**&mdash;If set, causes the connection to buffer messages, and
+- **:host**&mdash;The host to connect to.
+- **:port**&mdash;The port to connect to.
+- **:flush_period**&mdash;If set, causes the connection to buffer messages, and
   only flush at the specified period (in seconds) using **send_all**.
   Otherwise will send each message as they arrive, calling **send_event**
   and **send_metric** respectively.
   If the buffer has not been successfully flushed during the specified period,
   the next buffer will be dropped.
-* **:outbound_limit**&mdash;The allowed number of bytes that are allowed to be
+- **:outbound_limit**&mdash;The allowed number of bytes that are allowed to be
   in the buffer used for the outbound TCP buffer.
   If this is full, incoming events and metrics will be dropped.
 

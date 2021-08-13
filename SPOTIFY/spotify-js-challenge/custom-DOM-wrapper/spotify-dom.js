@@ -7,7 +7,7 @@
  *  - tag name e.g. 'li'
  * @return {SpotifyDOM}
  */
-var SpotifyDOM = function(selector) {};
+var SpotifyDOM = function (selector) {};
 
 /**
  * Changes or returns the content of the element.
@@ -20,7 +20,7 @@ var SpotifyDOM = function(selector) {};
  * is a collection,
  *  e.g. SpotifyDOM(‘li’).html(‘test’)
  */
-SpotifyDOM.prototype.html = function(content) {};
+SpotifyDOM.prototype.html = function (content) {};
 
 /**
  * Applies the callback to every element of the collection, the callback will
@@ -32,10 +32,10 @@ SpotifyDOM.prototype.html = function(content) {};
  * @param {Function} callback
  * @return {SpotifyDOM}
  */
-SpotifyDOM.prototype.each = function(callback) {};
+SpotifyDOM.prototype.each = function (callback) {};
 
 /**
  * @method isCollection
  * @return {Boolean} true if the currently selected element is a collection(e.g. ‘li’).
  */
-SpotifyDOM.prototype.isCollection = function() {};
+SpotifyDOM.prototype.isCollection = function () {};

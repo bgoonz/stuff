@@ -1,6 +1,6 @@
 # git-test -- test your commits
 
-Run tests on each *distinct* tree in a revision list, skipping versions whose
+Run tests on each _distinct_ tree in a revision list, skipping versions whose
 contents have already been tested.
 
 The 99% example is simply:
@@ -38,14 +38,13 @@ For ease, `git-test` offers a few advantages over a simple for loop over a
   factor into the test result. (Useful if cleaning fails if there is nothing
   to clean, for instance.)
 - Configuration of housekeeping and verification steps using
-    - `git config`,
-    - environment variables or
-    - command line arguments
+  - `git config`,
+  - environment variables or
+  - command line arguments
 - Selective redo, for where you trust failures but not successes, vice versa,
   or trust nothing.
 - Save output (both `STDOUT` and `STDERR`) from cleaning and verifying to
   an easily referenced symlink farm.
-
 
 ## Configure
 
@@ -60,7 +59,6 @@ to default to testing against origin/master:
 to do the same, but for a single branch:
 
     git config branch.mybranch.test parentbranch
-
 
 ## Self-Test
 
@@ -87,7 +85,6 @@ To regression test properly:
 tests, and the reason for naming it based on the current commit is to key the
 cache correctly.)
 
-
 ## Installation
 
 You can just have the `git-test` script in your `PATH`, but there are other
@@ -103,8 +100,7 @@ If you have [Homebrew](http://brew.sh) installed, you can install
 ### From source
 
 Aside from the packaging, you can also install from source. It's a single
-POSIX shell script that uses core git, so all that's required for plain `git
-test` to work (besides git, of course) is that `git-test` needs to be
+POSIX shell script that uses core git, so all that's required for plain `git test` to work (besides git, of course) is that `git-test` needs to be
 somewhere in your `PATH` (or `GIT_EXEC_PATH`).
 
 You can install from source by doing the following:

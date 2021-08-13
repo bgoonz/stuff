@@ -1,5 +1,4 @@
-{% extends "layout.html" %}
-{% block content %}
+{% extends "layout.html" %} {% block content %}
 <div class="row">
   <div class="span6">
     <h3>Info</h3>
@@ -19,7 +18,11 @@
         </tr>
         <tr>
           <td>More</td>
-          <td><a href="/history/by_name/{{task.name}}">All "{{task.name}}" runs</a></td>
+          <td>
+            <a href="/history/by_name/{{task.name}}"
+              >All "{{task.name}}" runs</a
+            >
+          </td>
         </tr>
       </tbody>
     </table>
@@ -35,10 +38,10 @@
   </thead>
   <tbody>
     {% for (k, param) in task.parameters.items() %}
-      <tr>
-        <td>{{k}}</td>
-        <td>{{param.value}}</td>
-      </tr>
+    <tr>
+      <td>{{k}}</td>
+      <td>{{param.value}}</td>
+    </tr>
     {% end %}
   </tbody>
 </table>
@@ -52,12 +55,11 @@
   </thead>
   <tbody>
     {% for event in task.events %}
-      <tr>
-        <td>{{event.event_name}}</td>
-        <td>{{event.ts}}</td>
-      </tr>
+    <tr>
+      <td>{{event.event_name}}</td>
+      <td>{{event.ts}}</td>
+    </tr>
     {% end %}
-
   </tbody>
 </table>
 {% end %}

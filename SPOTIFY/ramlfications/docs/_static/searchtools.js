@@ -9,55 +9,53 @@
  *
  */
 
-
 /**
  * Porter Stemmer
  */
-var Stemmer = function() {
-
+var Stemmer = function () {
   var step2list = {
-    ational: 'ate',
-    tional: 'tion',
-    enci: 'ence',
-    anci: 'ance',
-    izer: 'ize',
-    bli: 'ble',
-    alli: 'al',
-    entli: 'ent',
-    eli: 'e',
-    ousli: 'ous',
-    ization: 'ize',
-    ation: 'ate',
-    ator: 'ate',
-    alism: 'al',
-    iveness: 'ive',
-    fulness: 'ful',
-    ousness: 'ous',
-    aliti: 'al',
-    iviti: 'ive',
-    biliti: 'ble',
-    logi: 'log'
+    ational: "ate",
+    tional: "tion",
+    enci: "ence",
+    anci: "ance",
+    izer: "ize",
+    bli: "ble",
+    alli: "al",
+    entli: "ent",
+    eli: "e",
+    ousli: "ous",
+    ization: "ize",
+    ation: "ate",
+    ator: "ate",
+    alism: "al",
+    iveness: "ive",
+    fulness: "ful",
+    ousness: "ous",
+    aliti: "al",
+    iviti: "ive",
+    biliti: "ble",
+    logi: "log",
   };
 
   var step3list = {
-    icate: 'ic',
-    ative: '',
-    alize: 'al',
-    iciti: 'ic',
-    ical: 'ic',
-    ful: '',
-    ness: ''
+    icate: "ic",
+    ative: "",
+    alize: "al",
+    iciti: "ic",
+    ical: "ic",
+    ful: "",
+    ness: "",
   };
 
-  var c = "[^aeiou]";          // consonant
-  var v = "[aeiouy]";          // vowel
-  var C = c + "[^aeiouy]*";    // consonant sequence
-  var V = v + "[aeiou]*";      // vowel sequence
+  var c = "[^aeiou]"; // consonant
+  var v = "[aeiouy]"; // vowel
+  var C = c + "[^aeiouy]*"; // consonant sequence
+  var V = v + "[aeiou]*"; // vowel sequence
 
-  var mgr0 = "^(" + C + ")?" + V + C;                      // [C]VC... is m>0
-  var meq1 = "^(" + C + ")?" + V + C + "(" + V + ")?$";    // [C]VC[V] is m=1
-  var mgr1 = "^(" + C + ")?" + V + C + V + C;              // [C]VCVC... is m>1
-  var s_v   = "^(" + C + ")?" + v;                         // vowel in stem
+  var mgr0 = "^(" + C + ")?" + V + C; // [C]VC... is m>0
+  var meq1 = "^(" + C + ")?" + V + C + "(" + V + ")?$"; // [C]VC[V] is m=1
+  var mgr1 = "^(" + C + ")?" + V + C + V + C; // [C]VCVC... is m>1
+  var s_v = "^(" + C + ")?" + v; // vowel in stem
 
   this.stemWord = function (w) {
     var stem;
@@ -65,26 +63,22 @@ var Stemmer = function() {
     var firstch;
     var origword = w;
 
-    if (w.length < 3)
-      return w;
+    if (w.length < 3) return w;
 
     var re;
     var re2;
     var re3;
     var re4;
 
-    firstch = w.substr(0,1);
-    if (firstch == "y")
-      w = firstch.toUpperCase() + w.substr(1);
+    firstch = w.substr(0, 1);
+    if (firstch == "y") w = firstch.toUpperCase() + w.substr(1);
 
     // Step 1a
     re = /^(.+?)(ss|i)es$/;
     re2 = /^(.+?)([^s])s$/;
 
-    if (re.test(w))
-      w = w.replace(re,"$1$2");
-    else if (re2.test(w))
-      w = w.replace(re2,"$1$2");
+    if (re.test(w)) w = w.replace(re, "$1$2");
+    else if (re2.test(w)) w = w.replace(re2, "$1$2");
 
     // Step 1b
     re = /^(.+?)eed$/;
@@ -94,10 +88,9 @@ var Stemmer = function() {
       re = new RegExp(mgr0);
       if (re.test(fp[1])) {
         re = /.$/;
-        w = w.replace(re,"");
+        w = w.replace(re, "");
       }
-    }
-    else if (re2.test(w)) {
+    } else if (re2.test(w)) {
       var fp = re2.exec(w);
       stem = fp[1];
       re2 = new RegExp(s_v);
@@ -106,14 +99,11 @@ var Stemmer = function() {
         re2 = /(at|bl|iz)$/;
         re3 = new RegExp("([^aeiouylsz])\\1$");
         re4 = new RegExp("^" + C + v + "[^aeiouwxy]$");
-        if (re2.test(w))
-          w = w + "e";
+        if (re2.test(w)) w = w + "e";
         else if (re3.test(w)) {
           re = /.$/;
-          w = w.replace(re,"");
-        }
-        else if (re4.test(w))
-          w = w + "e";
+          w = w.replace(re, "");
+        } else if (re4.test(w)) w = w + "e";
       }
     }
 
@@ -123,19 +113,18 @@ var Stemmer = function() {
       var fp = re.exec(w);
       stem = fp[1];
       re = new RegExp(s_v);
-      if (re.test(stem))
-        w = stem + "i";
+      if (re.test(stem)) w = stem + "i";
     }
 
     // Step 2
-    re = /^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$/;
+    re =
+      /^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$/;
     if (re.test(w)) {
       var fp = re.exec(w);
       stem = fp[1];
       suffix = fp[2];
       re = new RegExp(mgr0);
-      if (re.test(stem))
-        w = stem + step2list[suffix];
+      if (re.test(stem)) w = stem + step2list[suffix];
     }
 
     // Step 3
@@ -145,26 +134,23 @@ var Stemmer = function() {
       stem = fp[1];
       suffix = fp[2];
       re = new RegExp(mgr0);
-      if (re.test(stem))
-        w = stem + step3list[suffix];
+      if (re.test(stem)) w = stem + step3list[suffix];
     }
 
     // Step 4
-    re = /^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$/;
+    re =
+      /^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$/;
     re2 = /^(.+?)(s|t)(ion)$/;
     if (re.test(w)) {
       var fp = re.exec(w);
       stem = fp[1];
       re = new RegExp(mgr1);
-      if (re.test(stem))
-        w = stem;
-    }
-    else if (re2.test(w)) {
+      if (re.test(stem)) w = stem;
+    } else if (re2.test(w)) {
       var fp = re2.exec(w);
       stem = fp[1] + fp[2];
       re2 = new RegExp(mgr1);
-      if (re2.test(stem))
-        w = stem;
+      if (re2.test(stem)) w = stem;
     }
 
     // Step 5
@@ -175,24 +161,20 @@ var Stemmer = function() {
       re = new RegExp(mgr1);
       re2 = new RegExp(meq1);
       re3 = new RegExp("^" + C + v + "[^aeiouwxy]$");
-      if (re.test(stem) || (re2.test(stem) && !(re3.test(stem))))
-        w = stem;
+      if (re.test(stem) || (re2.test(stem) && !re3.test(stem))) w = stem;
     }
     re = /ll$/;
     re2 = new RegExp(mgr1);
     if (re.test(w) && re2.test(w)) {
       re = /.$/;
-      w = w.replace(re,"");
+      w = w.replace(re, "");
     }
 
     // and turn initial Y back to y
-    if (firstch == "y")
-      w = firstch.toLowerCase() + w.substr(1);
+    if (firstch == "y") w = firstch.toLowerCase() + w.substr(1);
     return w;
-  }
-}
-
-
+  };
+};
 
 /**
  * Simple result scoring code.
@@ -212,48 +194,53 @@ var Scorer = {
   // or matches in the last dotted part of the object name
   objPartialMatch: 6,
   // Additive scores depending on the priority of the object
-  objPrio: {0:  15,   // used to be importantResults
-            1:  5,   // used to be objectResults
-            2: -5},  // used to be unimportantResults
+  objPrio: {
+    0: 15, // used to be importantResults
+    1: 5, // used to be objectResults
+    2: -5,
+  }, // used to be unimportantResults
   //  Used when the priority is not in the mapping.
   objPrioDefault: 0,
 
   // query found in title
   title: 15,
   // query found in terms
-  term: 5
+  term: 5,
 };
-
 
 /**
  * Search Module
  */
 var Search = {
+  _index: null,
+  _queued_query: null,
+  _pulse_status: -1,
 
-  _index : null,
-  _queued_query : null,
-  _pulse_status : -1,
-
-  init : function() {
-      var params = $.getQueryParameters();
-      if (params.q) {
-          var query = params.q[0];
-          $('input[name="q"]')[0].value = query;
-          this.performSearch(query);
-      }
+  init: function () {
+    var params = $.getQueryParameters();
+    if (params.q) {
+      var query = params.q[0];
+      $('input[name="q"]')[0].value = query;
+      this.performSearch(query);
+    }
   },
 
-  loadIndex : function(url) {
-    $.ajax({type: "GET", url: url, data: null,
-            dataType: "script", cache: true,
-            complete: function(jqxhr, textstatus) {
-              if (textstatus != "success") {
-                document.getElementById("searchindexloader").src = url;
-              }
-            }});
+  loadIndex: function (url) {
+    $.ajax({
+      type: "GET",
+      url: url,
+      data: null,
+      dataType: "script",
+      cache: true,
+      complete: function (jqxhr, textstatus) {
+        if (textstatus != "success") {
+          document.getElementById("searchindexloader").src = url;
+        }
+      },
+    });
   },
 
-  setIndex : function(index) {
+  setIndex: function (index) {
     var q;
     this._index = index;
     if ((q = this._queued_query) !== null) {
@@ -262,30 +249,27 @@ var Search = {
     }
   },
 
-  hasIndex : function() {
-      return this._index !== null;
+  hasIndex: function () {
+    return this._index !== null;
   },
 
-  deferQuery : function(query) {
-      this._queued_query = query;
+  deferQuery: function (query) {
+    this._queued_query = query;
   },
 
-  stopPulse : function() {
-      this._pulse_status = 0;
+  stopPulse: function () {
+    this._pulse_status = 0;
   },
 
-  startPulse : function() {
-    if (this._pulse_status >= 0)
-        return;
+  startPulse: function () {
+    if (this._pulse_status >= 0) return;
     function pulse() {
       var i;
       Search._pulse_status = (Search._pulse_status + 1) % 4;
-      var dotString = '';
-      for (i = 0; i < Search._pulse_status; i++)
-        dotString += '.';
+      var dotString = "";
+      for (i = 0; i < Search._pulse_status; i++) dotString += ".";
       Search.dots.text(dotString);
-      if (Search._pulse_status > -1)
-        window.setTimeout(pulse, 500);
+      if (Search._pulse_status > -1) window.setTimeout(pulse, 500);
     }
     pulse();
   },
@@ -293,30 +277,62 @@ var Search = {
   /**
    * perform a search for something (or wait until index is loaded)
    */
-  performSearch : function(query) {
+  performSearch: function (query) {
     // create the required interface elements
-    this.out = $('#search-results');
-    this.title = $('<h2>' + _('Searching') + '</h2>').appendTo(this.out);
-    this.dots = $('<span></span>').appendTo(this.title);
+    this.out = $("#search-results");
+    this.title = $("<h2>" + _("Searching") + "</h2>").appendTo(this.out);
+    this.dots = $("<span></span>").appendTo(this.title);
     this.status = $('<p style="display: none"></p>').appendTo(this.out);
     this.output = $('<ul class="search"/>').appendTo(this.out);
 
-    $('#search-progress').text(_('Preparing search...'));
+    $("#search-progress").text(_("Preparing search..."));
     this.startPulse();
 
     // index already loaded, the browser was quick!
-    if (this.hasIndex())
-      this.query(query);
-    else
-      this.deferQuery(query);
+    if (this.hasIndex()) this.query(query);
+    else this.deferQuery(query);
   },
 
   /**
    * execute search (requires search index to be loaded)
    */
-  query : function(query) {
+  query: function (query) {
     var i;
-    var stopwords = ["a","and","are","as","at","be","but","by","for","if","in","into","is","it","near","no","not","of","on","or","such","that","the","their","then","there","these","they","this","to","was","will","with"];
+    var stopwords = [
+      "a",
+      "and",
+      "are",
+      "as",
+      "at",
+      "be",
+      "but",
+      "by",
+      "for",
+      "if",
+      "in",
+      "into",
+      "is",
+      "it",
+      "near",
+      "no",
+      "not",
+      "of",
+      "on",
+      "or",
+      "such",
+      "that",
+      "the",
+      "their",
+      "then",
+      "there",
+      "these",
+      "they",
+      "this",
+      "to",
+      "was",
+      "will",
+      "with",
+    ];
 
     // stem the searchterms and add them to the correct list
     var stemmer = new Stemmer();
@@ -327,11 +343,14 @@ var Search = {
     var objectterms = [];
     for (i = 0; i < tmp.length; i++) {
       if (tmp[i] !== "") {
-          objectterms.push(tmp[i].toLowerCase());
+        objectterms.push(tmp[i].toLowerCase());
       }
 
-      if ($u.indexOf(stopwords, tmp[i].toLowerCase()) != -1 || tmp[i].match(/^\d+$/) ||
-          tmp[i] === "") {
+      if (
+        $u.indexOf(stopwords, tmp[i].toLowerCase()) != -1 ||
+        tmp[i].match(/^\d+$/) ||
+        tmp[i] === ""
+      ) {
         // skip this "word"
         continue;
       }
@@ -339,19 +358,17 @@ var Search = {
       var word = stemmer.stemWord(tmp[i].toLowerCase());
       var toAppend;
       // select the correct list
-      if (word[0] == '-') {
+      if (word[0] == "-") {
         toAppend = excluded;
         word = word.substr(1);
-      }
-      else {
+      } else {
         toAppend = searchterms;
         hlterms.push(tmp[i].toLowerCase());
       }
       // only add if not already in the list
-      if (!$u.contains(toAppend, word))
-        toAppend.push(word);
+      if (!$u.contains(toAppend, word)) toAppend.push(word);
     }
-    var highlightstring = '?highlight=' + $.urlencode(hlterms.join(" "));
+    var highlightstring = "?highlight=" + $.urlencode(hlterms.join(" "));
 
     // console.debug('SEARCH: searching for:');
     // console.info('required: ', searchterms);
@@ -363,18 +380,27 @@ var Search = {
 
     // array of [filename, title, anchor, descr, score]
     var results = [];
-    $('#search-progress').empty();
+    $("#search-progress").empty();
 
     // lookup as object
     for (i = 0; i < objectterms.length; i++) {
-      var others = [].concat(objectterms.slice(0, i),
-                             objectterms.slice(i+1, objectterms.length));
-      results = results.concat(this.performObjectSearch(objectterms[i], others));
+      var others = [].concat(
+        objectterms.slice(0, i),
+        objectterms.slice(i + 1, objectterms.length)
+      );
+      results = results.concat(
+        this.performObjectSearch(objectterms[i], others)
+      );
     }
 
     // lookup as search terms in fulltext
-    results = results.concat(this.performTermsSearch(searchterms, excluded, terms, Scorer.term))
-                     .concat(this.performTermsSearch(searchterms, excluded, titleterms, Scorer.title));
+    results = results
+      .concat(
+        this.performTermsSearch(searchterms, excluded, terms, Scorer.term)
+      )
+      .concat(
+        this.performTermsSearch(searchterms, excluded, titleterms, Scorer.title)
+      );
 
     // let the scorer override scores with a custom scoring function
     if (Scorer.score) {
@@ -385,7 +411,7 @@ var Search = {
     // now sort the results by score (in opposite order of appearance, since the
     // display function below uses pop() to retrieve items) and then
     // alphabetically
-    results.sort(function(a, b) {
+    results.sort(function (a, b) {
       var left = a[4];
       var right = b[4];
       if (left > right) {
@@ -396,7 +422,7 @@ var Search = {
         // same score: sort alphabetically
         left = a[1].toLowerCase();
         right = b[1].toLowerCase();
-        return (left > right) ? -1 : ((left < right) ? 1 : 0);
+        return left > right ? -1 : left < right ? 1 : 0;
       }
     });
 
@@ -411,46 +437,67 @@ var Search = {
       if (results.length) {
         var item = results.pop();
         var listItem = $('<li style="display:none"></li>');
-        if (DOCUMENTATION_OPTIONS.FILE_SUFFIX === '') {
+        if (DOCUMENTATION_OPTIONS.FILE_SUFFIX === "") {
           // dirhtml builder
-          var dirname = item[0] + '/';
+          var dirname = item[0] + "/";
           if (dirname.match(/\/index\/$/)) {
-            dirname = dirname.substring(0, dirname.length-6);
-          } else if (dirname == 'index/') {
-            dirname = '';
+            dirname = dirname.substring(0, dirname.length - 6);
+          } else if (dirname == "index/") {
+            dirname = "";
           }
-          listItem.append($('<a/>').attr('href',
-            DOCUMENTATION_OPTIONS.URL_ROOT + dirname +
-            highlightstring + item[2]).html(item[1]));
+          listItem.append(
+            $("<a/>")
+              .attr(
+                "href",
+                DOCUMENTATION_OPTIONS.URL_ROOT +
+                  dirname +
+                  highlightstring +
+                  item[2]
+              )
+              .html(item[1])
+          );
         } else {
           // normal html builders
-          listItem.append($('<a/>').attr('href',
-            item[0] + DOCUMENTATION_OPTIONS.FILE_SUFFIX +
-            highlightstring + item[2]).html(item[1]));
+          listItem.append(
+            $("<a/>")
+              .attr(
+                "href",
+                item[0] +
+                  DOCUMENTATION_OPTIONS.FILE_SUFFIX +
+                  highlightstring +
+                  item[2]
+              )
+              .html(item[1])
+          );
         }
         if (item[3]) {
-          listItem.append($('<span> (' + item[3] + ')</span>'));
+          listItem.append($("<span> (" + item[3] + ")</span>"));
           Search.output.append(listItem);
-          listItem.slideDown(5, function() {
+          listItem.slideDown(5, function () {
             displayNextItem();
           });
         } else if (DOCUMENTATION_OPTIONS.HAS_SOURCE) {
-          $.ajax({url: DOCUMENTATION_OPTIONS.URL_ROOT + '_sources/' + item[0] + '.txt',
-                  dataType: "text",
-                  complete: function(jqxhr, textstatus) {
-                    var data = jqxhr.responseText;
-                    if (data !== '') {
-                      listItem.append(Search.makeSearchSummary(data, searchterms, hlterms));
-                    }
-                    Search.output.append(listItem);
-                    listItem.slideDown(5, function() {
-                      displayNextItem();
-                    });
-                  }});
+          $.ajax({
+            url:
+              DOCUMENTATION_OPTIONS.URL_ROOT + "_sources/" + item[0] + ".txt",
+            dataType: "text",
+            complete: function (jqxhr, textstatus) {
+              var data = jqxhr.responseText;
+              if (data !== "") {
+                listItem.append(
+                  Search.makeSearchSummary(data, searchterms, hlterms)
+                );
+              }
+              Search.output.append(listItem);
+              listItem.slideDown(5, function () {
+                displayNextItem();
+              });
+            },
+          });
         } else {
           // no source available, just display title
           Search.output.append(listItem);
-          listItem.slideDown(5, function() {
+          listItem.slideDown(5, function () {
             displayNextItem();
           });
         }
@@ -458,11 +505,19 @@ var Search = {
       // search finished, update title and status message
       else {
         Search.stopPulse();
-        Search.title.text(_('Search Results'));
+        Search.title.text(_("Search Results"));
         if (!resultCount)
-          Search.status.text(_('Your search did not match any documents. Please make sure that all words are spelled correctly and that you\'ve selected enough categories.'));
+          Search.status.text(
+            _(
+              "Your search did not match any documents. Please make sure that all words are spelled correctly and that you've selected enough categories."
+            )
+          );
         else
-            Search.status.text(_('Search finished, found %s page(s) matching the search query.').replace('%s', resultCount));
+          Search.status.text(
+            _(
+              "Search finished, found %s page(s) matching the search query."
+            ).replace("%s", resultCount)
+          );
         Search.status.fadeIn(500);
       }
     }
@@ -472,7 +527,7 @@ var Search = {
   /**
    * search for object names
    */
-  performObjectSearch : function(object, otherterms) {
+  performObjectSearch: function (object, otherterms) {
     var filenames = this._index.filenames;
     var objects = this._index.objects;
     var objnames = this._index.objnames;
@@ -483,15 +538,15 @@ var Search = {
 
     for (var prefix in objects) {
       for (var name in objects[prefix]) {
-        var fullname = (prefix ? prefix + '.' : '') + name;
+        var fullname = (prefix ? prefix + "." : "") + name;
         if (fullname.toLowerCase().indexOf(object) > -1) {
           var score = 0;
-          var parts = fullname.split('.');
+          var parts = fullname.split(".");
           // check for different match types: exact matches of full name or
           // "last name" (i.e. last dotted part)
           if (fullname == object || parts[parts.length - 1] == object) {
             score += Scorer.objNameMatch;
-          // matches in last name
+            // matches in last name
           } else if (parts[parts.length - 1].indexOf(object) > -1) {
             score += Scorer.objPartialMatch;
           }
@@ -501,8 +556,15 @@ var Search = {
           // If more than one term searched for, we require other words to be
           // found in the name/title/description
           if (otherterms.length > 0) {
-            var haystack = (prefix + ' ' + name + ' ' +
-                            objname + ' ' + title).toLowerCase();
+            var haystack = (
+              prefix +
+              " " +
+              name +
+              " " +
+              objname +
+              " " +
+              title
+            ).toLowerCase();
             var allfound = true;
             for (i = 0; i < otherterms.length; i++) {
               if (haystack.indexOf(otherterms[i]) == -1) {
@@ -514,20 +576,25 @@ var Search = {
               continue;
             }
           }
-          var descr = objname + _(', in ') + title;
+          var descr = objname + _(", in ") + title;
 
           var anchor = match[3];
-          if (anchor === '')
-            anchor = fullname;
-          else if (anchor == '-')
-            anchor = objnames[match[1]][1] + '-' + fullname;
+          if (anchor === "") anchor = fullname;
+          else if (anchor == "-")
+            anchor = objnames[match[1]][1] + "-" + fullname;
           // add custom score for some objects according to scorer
           if (Scorer.objPrio.hasOwnProperty(match[2])) {
             score += Scorer.objPrio[match[2]];
           } else {
             score += Scorer.objPrioDefault;
           }
-          results.push([filenames[match[0]], fullname, '#'+anchor, descr, score]);
+          results.push([
+            filenames[match[0]],
+            fullname,
+            "#" + anchor,
+            descr,
+            score,
+          ]);
         }
       }
     }
@@ -538,7 +605,7 @@ var Search = {
   /**
    * search for full-text terms in the index
    */
-  performTermsSearch : function(searchterms, excluded, terms, score) {
+  performTermsSearch: function (searchterms, excluded, terms, score) {
     var filenames = this._index.filenames;
     var titles = this._index.titles;
 
@@ -550,18 +617,15 @@ var Search = {
     for (i = 0; i < searchterms.length; i++) {
       var word = searchterms[i];
       // no match but word was a required one
-      if ((files = terms[word]) === undefined)
-        break;
+      if ((files = terms[word]) === undefined) break;
       if (files.length === undefined) {
         files = [files];
       }
       // create the mapping
       for (j = 0; j < files.length; j++) {
         file = files[j];
-        if (file in fileMap)
-          fileMap[file].push(word);
-        else
-          fileMap[file] = [word];
+        if (file in fileMap) fileMap[file].push(word);
+        else fileMap[file] = [word];
       }
     }
 
@@ -570,13 +634,14 @@ var Search = {
       var valid = true;
 
       // check if all requirements are matched
-      if (fileMap[file].length != searchterms.length)
-          continue;
+      if (fileMap[file].length != searchterms.length) continue;
 
       // ensure that none of the excluded terms is in the search result
       for (i = 0; i < excluded.length; i++) {
-        if (terms[excluded[i]] == file ||
-          $u.contains(terms[excluded[i]] || [], file)) {
+        if (
+          terms[excluded[i]] == file ||
+          $u.contains(terms[excluded[i]] || [], file)
+        ) {
           valid = false;
           break;
         }
@@ -584,7 +649,7 @@ var Search = {
 
       // if we have still a valid result we can add it to the result list
       if (valid) {
-        results.push([filenames[file], titles[file], '', null, score]);
+        results.push([filenames[file], titles[file], "", null, score]);
       }
     }
     return results;
@@ -597,26 +662,26 @@ var Search = {
    * words. the first one is used to find the occurance, the
    * latter for highlighting it.
    */
-  makeSearchSummary : function(text, keywords, hlwords) {
+  makeSearchSummary: function (text, keywords, hlwords) {
     var textLower = text.toLowerCase();
     var start = 0;
-    $.each(keywords, function() {
+    $.each(keywords, function () {
       var i = textLower.indexOf(this.toLowerCase());
-      if (i > -1)
-        start = i;
+      if (i > -1) start = i;
     });
     start = Math.max(start - 120, 0);
-    var excerpt = ((start > 0) ? '...' : '') +
+    var excerpt =
+      (start > 0 ? "..." : "") +
       $.trim(text.substr(start, 240)) +
-      ((start + 240 - text.length) ? '...' : '');
+      (start + 240 - text.length ? "..." : "");
     var rv = $('<div class="context"></div>').text(excerpt);
-    $.each(hlwords, function() {
-      rv = rv.highlightText(this, 'highlighted');
+    $.each(hlwords, function () {
+      rv = rv.highlightText(this, "highlighted");
     });
     return rv;
-  }
+  },
 };
 
-$(document).ready(function() {
+$(document).ready(function () {
   Search.init();
 });

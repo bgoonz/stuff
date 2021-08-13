@@ -14,20 +14,20 @@ These are discussed in more detail below.
 
 ### Automatic code generation
 
-Robolectric has a large amount of boilerplate code in the form of the <code>shadowOf()</code> methods that form a convenient type-safe wrapper around the <code>shadowOf_()</code> base method. This is boilerplate code that must be kept in sync with the actual state of the shadows and imposes extra maintenance overhead. RAP can generate these methods automatically using the information contained in the annotations on the shadows.
+Robolectric has a large amount of boilerplate code in the form of the <code>shadowOf()</code> methods that form a convenient type-safe wrapper around the <code>shadowOf\_()</code> base method. This is boilerplate code that must be kept in sync with the actual state of the shadows and imposes extra maintenance overhead. RAP can generate these methods automatically using the information contained in the annotations on the shadows.
 
 ### Constraint enforcement
 
 There are a number of usages and constraints implicit in Robolectric's annotation model which if violated will introduce bugs. Many of these cannot be expressed using the simple type system in the annotations themselves. Testing for violations of these constraints at present is enforced by unit tests such as `RobolectricWiringTest`.
 
-RAP employs the philosophy that the earlier in the development cycle you can perform these tests, the better. RAP allows detection of constraint violations at *compile time* rather than during unit testing, which helps to further shorten the development cycle.
+RAP employs the philosophy that the earlier in the development cycle you can perform these tests, the better. RAP allows detection of constraint violations at _compile time_ rather than during unit testing, which helps to further shorten the development cycle.
 
 Constraints currently enforced by RAP are:
 
-* <code>@Resetter</code> on a method that is not public static void with no parameters.
-* <code>@RealObject</code> or <code>@Resetter</code> on a class not annotated by <code>@Implements</code>
-* <code>@RealObject</code> annotated field with a type that is not assignment compatible with the implemented class.
-* <code>@Implements</code> specifying an unknown class.
+- <code>@Resetter</code> on a method that is not public static void with no parameters.
+- <code>@RealObject</code> or <code>@Resetter</code> on a class not annotated by <code>@Implements</code>
+- <code>@RealObject</code> annotated field with a type that is not assignment compatible with the implemented class.
+- <code>@Implements</code> specifying an unknown class.
 
 Eventually it should be possible to migrate all of the relevant unit tests (such as `RobolectricWiringTest`) to RAP so that all the relevant constraints are enforced by the compiler.
 
@@ -60,12 +60,12 @@ However, with some few modifications some of the features (such as the constrain
 
 In developing RAP I forsaw a number of enhancements that would be potentially useful:
 
-* Some of the features in this list have not yet been added due to limitations in the testing framework - if I haven't been able to fully test a feature I haven't added it. Hopefully improvements in the compile-testing library will rectify this situation in the near future.
-* Ability to use RAP outside of the context of developing the Robolectric core, to be able to validate your own shadows.
-* Validation of <code>@Implementation</code>-annotated methods to make sure that their method signatures matched appropriately (similar to the <code>@Overrides</code> annotation). I know personally that mismatching method signatures in shadows has caused me grief in the past and the error reporting for such conditions is not all that obvious. I think that this feature could help many Robolectric developers working on core or custom shadow implementations.
-* Warn when the type of a <code>@RealObject</code> is not the narrowest available type.
-* Better handling of shadows of generic types. At present the checking of appropriate generic types is limited and there is a lot more that could be done to help the developer. Also, the auto-generated <code>shadowOf()</code> methods do not include the type parameters which can lead to "unchecked" warnings in client code.
-* Generally speaking, there is probably a lot more which Robolectric currently does at initialization/run time that could conceivably be pre-computed at compile time using RAP or something similar, to improve runtime performance.
+- Some of the features in this list have not yet been added due to limitations in the testing framework - if I haven't been able to fully test a feature I haven't added it. Hopefully improvements in the compile-testing library will rectify this situation in the near future.
+- Ability to use RAP outside of the context of developing the Robolectric core, to be able to validate your own shadows.
+- Validation of <code>@Implementation</code>-annotated methods to make sure that their method signatures matched appropriately (similar to the <code>@Overrides</code> annotation). I know personally that mismatching method signatures in shadows has caused me grief in the past and the error reporting for such conditions is not all that obvious. I think that this feature could help many Robolectric developers working on core or custom shadow implementations.
+- Warn when the type of a <code>@RealObject</code> is not the narrowest available type.
+- Better handling of shadows of generic types. At present the checking of appropriate generic types is limited and there is a lot more that could be done to help the developer. Also, the auto-generated <code>shadowOf()</code> methods do not include the type parameters which can lead to "unchecked" warnings in client code.
+- Generally speaking, there is probably a lot more which Robolectric currently does at initialization/run time that could conceivably be pre-computed at compile time using RAP or something similar, to improve runtime performance.
 
 ## Credits
 

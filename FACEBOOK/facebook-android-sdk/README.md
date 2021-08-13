@@ -1,5 +1,5 @@
-Facebook SDK for Android
-========================
+# Facebook SDK for Android
+
 ![Verify build with gradle](https://github.com/facebook/facebook-android-sdk/workflows/Verify%20build%20with%20gradle/badge.svg)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.facebook.android/facebook-android-sdk/badge.svg?style=flat)](https://maven-badges.herokuapp.com/maven-central/com.facebook.android/facebook-android-sdk)
 
@@ -7,23 +7,23 @@ This open-source library allows you to integrate Facebook into your Android app.
 
 Learn more about the provided samples, documentation, integrating the SDK into your app, accessing source code, and more at https://developers.facebook.com/docs/android
 
-TRY IT OUT
-----------
+## TRY IT OUT
+
 1. Check-out the tutorials available online at https://developers.facebook.com/docs/android/getting-started
 2. Start coding! Visit https://developers.facebook.com/docs/android/ for tutorials and reference documentation.
 
-FEATURES
---------
-* [Login](https://developers.facebook.com/docs/facebook-login)
-* [Sharing](https://developers.facebook.com/docs/sharing)
-* [Messenger](https://developers.facebook.com/docs/messenger-expressions)
-* [App Links](https://developers.facebook.com/docs/applinks)
-* [Analytics](https://developers.facebook.com/docs/analytics)
-* [Graph API](https://developers.facebook.com/docs/android/graph)
-* [Marketing](https://developers.facebook.com/docs/app-events/marketing-kit)
+## FEATURES
 
-STRUCTURE
----------
+- [Login](https://developers.facebook.com/docs/facebook-login)
+- [Sharing](https://developers.facebook.com/docs/sharing)
+- [Messenger](https://developers.facebook.com/docs/messenger-expressions)
+- [App Links](https://developers.facebook.com/docs/applinks)
+- [Analytics](https://developers.facebook.com/docs/analytics)
+- [Graph API](https://developers.facebook.com/docs/android/graph)
+- [Marketing](https://developers.facebook.com/docs/app-events/marketing-kit)
+
+## STRUCTURE
+
 The SDK is separated into modules with the following structure.
 
     +----------------------------------------------------+
@@ -48,18 +48,18 @@ The SDK is separated into modules with the following structure.
     |                                                    |
     +----------------------------------------------------+
 
-USAGE
------
+## USAGE
+
 Facebook SDKs are broken up into separate modules as shown above. To ensure the most optimized use of
 space only install the modules that you intend to use. To get started, see the Installation section below.
 
 Any Facebook SDK initialization must occur only in the main process of the app. Use of Facebook SDK in processes other than the main process is not supported and will likely cause problems.
 
+## INSTALLATION
 
-INSTALLATION
-------------
 Facebook SDKs are published to Maven as independent modules. To utilize a feature listed above
 include the appropriate dependency (or dependencies) listed below in your `app/build.gradle` file.
+
 ```gradle
 dependencies {
     // Facebook Core only (Analytics)
@@ -83,6 +83,7 @@ dependencies {
 ```
 
 You may also need to add the following to your project/build.gradle file.
+
 ```gradle
 buildscript {
     repositories {
@@ -91,8 +92,8 @@ buildscript {
 }
 ```
 
-GIVE FEEDBACK
--------------
+## GIVE FEEDBACK
+
 Please report bugs or issues to https://developers.facebook.com/bugs/
 
 You can also visit our [Facebook Developer Community Forum](https://developers.facebook.com/community/),
@@ -100,26 +101,26 @@ join the [Facebook Developers Group on Facebook](https://www.facebook.com/groups
 ask questions on [Stack Overflow](http://facebook.stackoverflow.com),
 or open an issue in this repository.
 
-SECURITY
---------
+## SECURITY
+
 See the [SECURITY POLICY](SECURITY.md) for more info on our bug bounty program.
 
-CONTRIBUTING
--------------
+## CONTRIBUTING
+
 We are able to accept contributions to the Facebook SDK for Android. To contribute please do the following.
+
 - Follow the instructions in the [CONTRIBUTING.md](https://github.com/facebook/facebook-android-sdk/blob/master/CONTRIBUTING.md).
 - Submit your pull request to the [master](https://github.com/facebook/facebook-android-sdk/tree/master) branch. This allows us to merge your change into our internal master and then push out the change in the next release.
 
-LICENSE
--------
+## LICENSE
+
 Except as otherwise noted, the Facebook SDK for Android is licensed under the Facebook Platform License (https://github.com/facebook/facebook-android-sdk/blob/master/LICENSE.txt).
 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the License for the specific language governing permissions and limitations under the License.
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 
-DEVELOPER TERMS
----------------
+## DEVELOPER TERMS
 
-- By enabling Facebook integrations, including through this SDK, you can share information with Facebook, including information about people’s use of your app. Facebook will use information received in accordance with our Data Use Policy (https://www.facebook.com/about/privacy/), including to provide you with insights about the effectiveness of your ads and the use of your app.  These integrations also enable us and our partners to serve ads on and off Facebook.
+- By enabling Facebook integrations, including through this SDK, you can share information with Facebook, including information about people’s use of your app. Facebook will use information received in accordance with our Data Use Policy (https://www.facebook.com/about/privacy/), including to provide you with insights about the effectiveness of your ads and the use of your app. These integrations also enable us and our partners to serve ads on and off Facebook.
 
 - You may limit your sharing of information with us by updating the Insights control in the developer tool (https://developers.facebook.com/apps/[app_id]/settings/advanced).
 

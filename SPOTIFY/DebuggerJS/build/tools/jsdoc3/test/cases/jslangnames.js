@@ -1,15 +1,14 @@
-
 /** @namespace */
 var constructor = {
-    /** document me */
-    toString: function(){}
+  /** document me */
+  toString: function () {},
 };
 
 /** @namespace */
 var prototye = {
-    /** document me */
-    valueOf: function(){}
-}
+  /** document me */
+  valueOf: function () {},
+};
 
 /** 
     This is Object

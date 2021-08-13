@@ -6,7 +6,7 @@ I’d like to ease a few HHVM restrictions on type constant overriding, and alon
 
 ## Motivation
 
-The attribute-based approach to conditional purity  (and conditional reactivity) worked like this.
+The attribute-based approach to conditional purity (and conditional reactivity) worked like this.
 
 ```Hack
 abstract class A {
@@ -55,7 +55,7 @@ HHVM doesn’t allow non-abstract constants in an interface to conflict with non
 
 ## Background
 
-*Note: I’ve compacted class definitions as I think the examples are easier to read this way.*
+_Note: I’ve compacted class definitions as I think the examples are easier to read this way._
 
 Constants in HHVM can be overridden in subclasses, which is a behavior inherited from PHP.
 
@@ -64,7 +64,7 @@ class A           { const int X = 3;              }
 class B extends A { const int X = 4; /* allowed*/ }
 ```
 
-Hack allows this behavior to match the runtime. However, if an *interface* declares a constant with the same name, then we have an error when the subclass is loaded.
+Hack allows this behavior to match the runtime. However, if an _interface_ declares a constant with the same name, then we have an error when the subclass is loaded.
 
 ```Hack
 class A     { const int X = 3; }
@@ -140,161 +140,185 @@ class B extends A { use T; } // no runtime error!
 
 ## Proposal
 
-* We use the abstract keyword instead of the presence of a value to denote abstractness for type constants in HHVM. We have committed changes to expose this in HackC and HHVM.
-* We require that any classlike (class, interface, trait) has *at most* a single, canonical concrete constant for a given name. If there is a conflict in two defaults for an abstract type constant, we require the developer to redeclare the desired one. Finally, if there are two conflicting defaults but also a single concrete type constant in the hierarchy, the concrete one wins without error.
-    * Trivial, existing behavior
-      ```Hack
-      abstract class A  { abstract const type T = int; }
+- We use the abstract keyword instead of the presence of a value to denote abstractness for type constants in HHVM. We have committed changes to expose this in HackC and HHVM.
+- We require that any classlike (class, interface, trait) has _at most_ a single, canonical concrete constant for a given name. If there is a conflict in two defaults for an abstract type constant, we require the developer to redeclare the desired one. Finally, if there are two conflicting defaults but also a single concrete type constant in the hierarchy, the concrete one wins without error.
 
-      class C extends A {} /* const type T = int; */
-      class D extends A { const type T = string; }
+  - Trivial, existing behavior
 
-      class X extends C {
-        const type T = string; // error, cannot override concrete C::T
-      }
-      ```
-    * Inherited concrete winning over a inherited abstract
-      ```Hack
-      abstract class A   { abstract const type T = int; }
-      interface I        { const type T = string; }
+    ```Hack
+    abstract class A  { abstract const type T = int; }
 
-      class C extends A implements I {} // ok, C::T = I::T
-      class D extends A implements I {
-        const type T = int; // error, conflicts with I::T
-      }
-      ```
-    * Two conflicting defaults
-      ```Hack
-      abstract class A   { abstract const type T = int; }
-      interface IAbs     { abstract const type T = string; }
+    class C extends A {} /* const type T = int; */
+    class D extends A { const type T = string; }
 
-      class C extends A implements IAbs {
-        // error, must declare a concrete T
-      }
-      abstract class D extends A implements IAbs {
-        // error, must redeclare T and choose a default
-        // (can do abstract or concrete)
-      }
-      ```
-    * Two conflicting defaults, but concrete wins
-      ```Hack
-      abstract class A   { abstract const type T = int; }
-      interface IAbs     { abstract const type T = string; }
-      interface IConc    { const type T = float; }
+    class X extends C {
+      const type T = string; // error, cannot override concrete C::T
+    }
+    ```
 
-      class C extends A implements IAbs, IConc {
-         // ok, C::T = IConc
-      }
-      ```
-    * **Design question**: Two conflicting defaults **with same default**
-      ```Hack
-      abstract class A   { abstract const type T = int; }
-      interface IAbs     { abstract const type T = int; }
+  - Inherited concrete winning over a inherited abstract
 
-      class C extends A implements IAbs {
-         // should this error?
-      }
-      ```
-    * Abstract override concrete (from class)
-      ```Hack
-      abstract class A { const type T = int; }
+    ```Hack
+    abstract class A   { abstract const type T = int; }
+    interface I        { const type T = string; }
 
-      abstract class B extends A {
-        // error, abstract cannot override concrete
-        abstract const type T = string;
-      };
+    class C extends A implements I {} // ok, C::T = I::T
+    class D extends A implements I {
+      const type T = int; // error, conflicts with I::T
+    }
+    ```
 
-      interface I { // same error
-        require extends A;
-        abstract const type T = bool;
-      }
+  - Two conflicting defaults
 
-      trait T { // same error
-        require extends A;
-        abstract const type T = float;
-      }
-      ```
-    * Abstract override concrete (from interface)
-        * Note: the runtime doesn’t check `require extends` or `require implements`, so those local errors would be in Hack only. The runtime would error later when the interface is implemented or the trait is used.
+    ```Hack
+    abstract class A   { abstract const type T = int; }
+    interface IAbs     { abstract const type T = string; }
 
-      ```Hack
-      interface I { const type T = int; }
+    class C extends A implements IAbs {
+      // error, must declare a concrete T
+    }
+    abstract class D extends A implements IAbs {
+      // error, must redeclare T and choose a default
+      // (can do abstract or concrete)
+    }
+    ```
 
-      abstract class A implements I {
-        // error, abstract cannot override concrete
-        abstract const type T = string;
-      };
+  - Two conflicting defaults, but concrete wins
 
-      interface I1 extends I { // same error
-        abstract const type T = bool;
-      }
+    ```Hack
+    abstract class A   { abstract const type T = int; }
+    interface IAbs     { abstract const type T = string; }
+    interface IConc    { const type T = float; }
 
-      trait T1 implements I { // same error
-        abstract const type T = float;
-      }
+    class C extends A implements IAbs, IConc {
+       // ok, C::T = IConc
+    }
+    ```
 
-      trait T2 { // same error
-        require implements I;
-        abstract const type T = float;
-      }
-      ```
-    * Abstract override concrete (from trait)
-      ```Hack
-      trait T { const type T = int; }
+  - **Design question**: Two conflicting defaults **with same default**
 
-      abstract class A {
-        // error, abstract cannot override concrete
-        use T;
-        abstract const type T = string;
-      };
+    ```Hack
+    abstract class A   { abstract const type T = int; }
+    interface IAbs     { abstract const type T = int; }
 
-      trait U { // same error
-        use T;
-        abstract const type T = float;
-      }
-      ```
-    * Two conflicting concretes
-      ```Hack
-      interface I { const type T = int; }
-      interface J { const type T = string; }
+    class C extends A implements IAbs {
+       // should this error?
+    }
+    ```
 
-      interface K extends I {
-        const type T = string; // error, conflict with I::T;
-      }
-      interface L extends I, J {} // error, J::T conflicts with I::T
-      ```
-    * Inherited concrete winning over inherited abstract
-      ```Hack
-      interface I { abstract const type T = int; }
-      trait Tr    { const type T = string; }
+  - Abstract override concrete (from class)
 
-      class C implements I { use Tr; } // C::T = string
-      ```
+    ```Hack
+    abstract class A { const type T = int; }
 
-      ```Hack
-      interface I { const type T = int; }
-      trait Tr    { abstract const type T = string; }
+    abstract class B extends A {
+      // error, abstract cannot override concrete
+      abstract const type T = string;
+    };
 
-      class C implements I { use Tr; } // C::T = int
-      ```
-      Note that while we are requiring users to redeclare in cases of conflicting defaults, the bounds in the redeclared type constant must still satisfy the all of the bounds in all of the parents. All of the examples above are `as mixed super nothing`. Example:
-      ```Hack
-      abstract class A   { abstract const type T as arraykey = arraykey; }
-      interface IAbs     { abstract const type T as int; }
-      interface IConc    { const type T = float; }
+    interface I { // same error
+      require extends A;
+      abstract const type T = bool;
+    }
 
-      class C extends A implements IConc {
-        // error, IConc::T = float, but T is `as arraykey`
-      }
+    trait T { // same error
+      require extends A;
+      abstract const type T = float;
+    }
+    ```
 
-      abstract class D extends A implements IAbs {
-        // error, IAbs::T brings in constraint `as int`
-        // must redeclare T with a default that satisfies this constraint
-      }
-      ```
-    * The first draft of this proposal did not require users to resolve default conflicts, instead taking the last default in the linearization. Feedback was to require explicit resolution and drop the inherited conflicting defaults.
+  - Abstract override concrete (from interface)
 
-* We make type_structure start failing on abstract type constants with defaults, to push them to behave closer to abstract type constants without defaults. We also do the same for direct references via the class. Of course, as with all runtime changes, we start by logging and sampling before moving to hard enforcement.
+    - Note: the runtime doesn’t check `require extends` or `require implements`, so those local errors would be in Hack only. The runtime would error later when the interface is implemented or the trait is used.
+
+    ```Hack
+    interface I { const type T = int; }
+
+    abstract class A implements I {
+      // error, abstract cannot override concrete
+      abstract const type T = string;
+    };
+
+    interface I1 extends I { // same error
+      abstract const type T = bool;
+    }
+
+    trait T1 implements I { // same error
+      abstract const type T = float;
+    }
+
+    trait T2 { // same error
+      require implements I;
+      abstract const type T = float;
+    }
+    ```
+
+  - Abstract override concrete (from trait)
+
+    ```Hack
+    trait T { const type T = int; }
+
+    abstract class A {
+      // error, abstract cannot override concrete
+      use T;
+      abstract const type T = string;
+    };
+
+    trait U { // same error
+      use T;
+      abstract const type T = float;
+    }
+    ```
+
+  - Two conflicting concretes
+
+    ```Hack
+    interface I { const type T = int; }
+    interface J { const type T = string; }
+
+    interface K extends I {
+      const type T = string; // error, conflict with I::T;
+    }
+    interface L extends I, J {} // error, J::T conflicts with I::T
+    ```
+
+  - Inherited concrete winning over inherited abstract
+
+    ```Hack
+    interface I { abstract const type T = int; }
+    trait Tr    { const type T = string; }
+
+    class C implements I { use Tr; } // C::T = string
+    ```
+
+    ```Hack
+    interface I { const type T = int; }
+    trait Tr    { abstract const type T = string; }
+
+    class C implements I { use Tr; } // C::T = int
+    ```
+
+    Note that while we are requiring users to redeclare in cases of conflicting defaults, the bounds in the redeclared type constant must still satisfy the all of the bounds in all of the parents. All of the examples above are `as mixed super nothing`. Example:
+
+    ```Hack
+    abstract class A   { abstract const type T as arraykey = arraykey; }
+    interface IAbs     { abstract const type T as int; }
+    interface IConc    { const type T = float; }
+
+    class C extends A implements IConc {
+      // error, IConc::T = float, but T is `as arraykey`
+    }
+
+    abstract class D extends A implements IAbs {
+      // error, IAbs::T brings in constraint `as int`
+      // must redeclare T with a default that satisfies this constraint
+    }
+    ```
+
+  - The first draft of this proposal did not require users to resolve default conflicts, instead taking the last default in the linearization. Feedback was to require explicit resolution and drop the inherited conflicting defaults.
+
+- We make type_structure start failing on abstract type constants with defaults, to push them to behave closer to abstract type constants without defaults. We also do the same for direct references via the class. Of course, as with all runtime changes, we start by logging and sampling before moving to hard enforcement.
+
   ```Hack
   abstract class A  {
       abstract const type T;
@@ -309,17 +333,20 @@ class B extends A { use T; } // no runtime error!
     A::U $b, // this currently does not
   ): void {}
   ```
-* Optional: We ban overriding of class constants in Hack to match the type constant behavior. A benefit of this is that `static::X` and `self::X` will have identical meanings in concrete classes. We then ban overriding of concrete class constants and concrete type constants in HHVM.
+
+- Optional: We ban overriding of class constants in Hack to match the type constant behavior. A benefit of this is that `static::X` and `self::X` will have identical meanings in concrete classes. We then ban overriding of concrete class constants and concrete type constants in HHVM.
 
   ```Hack
   class A           { const int X = 3;           }
   class B extends A { const int X = 4; /* ban */ }
   ```
-* Possibly for coherence, we should add default values to abstract class constants as well.
+
+- Possibly for coherence, we should add default values to abstract class constants as well.
 
   ```Hack
   abstract class A  { abstract const int X = 3; }
   class B extends A {}
   class C extends A { const int X = 4; /* override */ }
   ```
-    * If we implement this and the previous bullet, the semantics of class constants will become identical to type constants across HHVM and Hack.
+
+  - If we implement this and the previous bullet, the semantics of class constants will become identical to type constants across HHVM and Hack.

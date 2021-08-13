@@ -17,22 +17,21 @@ Group 1
 Group 2
 ├ message8
 └ message9
-*/'use strict';
+*/ "use strict";
 
-var prime = require('prime');
-var isString = require('mout/lang/isString');
+var prime = require("prime");
+var isString = require("mout/lang/isString");
 
 var slice = Array.prototype.slice;
 
 var Message = prime({
-
-  constructor: function(type, value, parent) {
+  constructor: function (type, value, parent) {
     this.type = type;
     this.value = value;
     this.parent = parent;
   },
 
-  print: function(last, opts) {
+  print: function (last, opts) {
     if (!this.parent) return this; // don't print messages without a parent.
 
     if (isString(opts)) {
@@ -41,11 +40,11 @@ var Message = prime({
       opts.last = opts.item = opts.join = opts.line = opts.spcr = str;
     } else {
       opts = opts || {};
-      if (!opts.last) opts.last = '└─';
-      if (!opts.item) opts.item = '├─';
-      if (!opts.join) opts.join = '  ';
-      if (!opts.line) opts.line = '│';
-      if (!opts.spcr) opts.spcr = ' ';
+      if (!opts.last) opts.last = "└─";
+      if (!opts.item) opts.item = "├─";
+      if (!opts.join) opts.join = "  ";
+      if (!opts.line) opts.line = "│";
+      if (!opts.spcr) opts.spcr = " ";
     }
 
     var isRoot = !this.parent.parent;
@@ -62,61 +61,62 @@ var Message = prime({
         // break when no parent of grandparent is found.
         if (!grand.parent) break;
         // if parent is the last parent use a different character
-        var isParentLastOfGrand = (grand.values[grand.values.length - 1] === parent);
+        var isParentLastOfGrand =
+          grand.values[grand.values.length - 1] === parent;
         chr.unshift(isParentLastOfGrand ? opts.spcr : opts.line);
       }
       console[this.type](chr.join(opts.join), this.value);
     }
 
     return this;
-  }
+  },
 });
 
 var Group = prime({
-
   inherits: Message,
 
-  constructor: function(type, name, parent) {
+  constructor: function (type, name, parent) {
     Group.parent.constructor.call(this, type, name, parent);
     this.values = [];
   },
 
-  push: function(stmnt) {
+  push: function (stmnt) {
     this.values.push(stmnt);
     return this;
   },
 
-  print: function(last, opts) {
+  print: function (last, opts) {
     Group.parent.print.call(this, last, opts);
     var values = this.values;
-    for (var i = 0; i < values.length; i++) values[i].print(i === values.length - 1, opts);
+    for (var i = 0; i < values.length; i++)
+      values[i].print(i === values.length - 1, opts);
     return this;
-  }
-
+  },
 });
 
 var Konsole = prime({
-
-  constructor: function(type) {
+  constructor: function (type) {
     this.type = type;
-    this.history = [this.current = new Group(this.type)];
+    this.history = [(this.current = new Group(this.type))];
   },
 
-  write: function() {
+  write: function () {
     var parent = this.current;
-    parent.push(new Message(this.type, slice.call(arguments).join(' '), parent));
+    parent.push(
+      new Message(this.type, slice.call(arguments).join(" "), parent)
+    );
     return this;
   },
 
-  group: function(name) {
+  group: function (name) {
     var parent = this.current;
-    var group = this.current = new Group(this.type, name, parent);
+    var group = (this.current = new Group(this.type, name, parent));
     parent.push(group);
     this.history.unshift(group);
     return this;
   },
 
-  groupEnd: function() {
+  groupEnd: function () {
     var history = this.history;
     if (history.length > 1) {
       history.shift();
@@ -125,11 +125,10 @@ var Konsole = prime({
     return this;
   },
 
-  print: function(opts) {
+  print: function (opts) {
     this.history[0].print(true, opts);
     return this;
-  }
-
+  },
 });
 
 Konsole.Message = Message;

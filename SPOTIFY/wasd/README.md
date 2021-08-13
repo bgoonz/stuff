@@ -1,9 +1,6 @@
-wasd, service↔machine discovery
-===============================
+# wasd, service↔machine discovery
 
-
-Usage
------
+## Usage
 
 - This service ingests Cassandra rings and DNS records across multiple sites at a regular interval, then exposes information about hosts and services.
 
@@ -13,9 +10,7 @@ Usage
 
 - The configuration is handled by typesafe's config; we recommend putting an `application.conf` in the classpath of the service.
 
-
-Status
-------
+## Status
 
 - Our command line clients are not ready for public distribution.
 
@@ -23,9 +18,7 @@ Status
 
 - Patches are welcome.
 
-
-Example configuration
----------------------
+## Example configuration
 
     Server { RefreshRate: 60s }
     Sites {

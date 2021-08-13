@@ -1,10 +1,7 @@
-create(
-    'Observable',
-    {
-        /** @memberof Observable */
-        cache: [],
-        
-        /** @memberof Observable.prototype */
-        publish: function(msg) {}
-    }
-);
+create("Observable", {
+  /** @memberof Observable */
+  cache: [],
+
+  /** @memberof Observable.prototype */
+  publish: function (msg) {},
+});

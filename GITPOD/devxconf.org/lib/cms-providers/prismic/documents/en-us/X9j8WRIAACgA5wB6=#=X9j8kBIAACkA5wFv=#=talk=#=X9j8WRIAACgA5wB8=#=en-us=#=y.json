@@ -1,9 +1,17 @@
 {
   "title": [
-    { "type": "heading1", "content": { "text": "Using a CMS with Next.js (And Why)", "spans": [] } }
+    {
+      "type": "heading1",
+      "content": { "text": "Using a CMS with Next.js (And Why)", "spans": [] }
+    }
   ],
   "speakers": [
-    { "speaker": { "id": "X9jSWRIAACgA5jyo", "wioUrl": "wio://documents/X9jSWRIAACgA5jyo" } }
+    {
+      "speaker": {
+        "id": "X9jSWRIAACgA5jyo",
+        "wioUrl": "wio://documents/X9jSWRIAACgA5jyo"
+      }
+    }
   ],
   "start": "2020-10-27T17:30:00+00:00",
   "end": "2020-10-27T18:10:00+00:00",

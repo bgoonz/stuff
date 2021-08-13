@@ -1,15 +1,19 @@
 # Feature Name: int/intish shape keys
+
 ## Start Date: 2020-06-29
+
 ## Status: Draft
 
 # Summary:
 
 Shape keys are currently required to be:
+
 - string literals that do not start with an int
 - class constants
 
 This proposal is to permit any `arraykey` literal, in addition to class
 constants. More specifically:
+
 - permit int literal shape keys
 - permit any string literal shape key, even if they would be converted to ints
   by PHP
@@ -26,7 +30,7 @@ constants. More specifically:
   passed around
 - This would remove some special-casing from the typechecker
 
-# User experience: 
+# User experience:
 
 Generally as already-present for `Regex\Match`; additionally, this will now be
 possible:
@@ -50,15 +54,15 @@ Already present for Regex\Match; no change expected.
 
 # Implementation details:
 
-* How the feature will interact with other Hack features
+- How the feature will interact with other Hack features
   - will make HSL Regex more consistent; other interactions as already applying
-* How the feature will be implemented
+- How the feature will be implemented
   - removal of restrictions/special-casing
-* A description of corner cases
+- A description of corner cases
   - existing problems with class constants
-* Any changes to HHVM
+- Any changes to HHVM
   - none
-* If applicable, strategies for codemodding
+- If applicable, strategies for codemodding
   - n/a
 
 # Design rationale and alternatives:
@@ -75,7 +79,7 @@ The rest of this section addresses alternatives for actual `int` shape keys.
 For example, `$shape['0']`. The main problem is potential future issues: while
 PCRE currently bans named capture groups that start with a number, the syntax
 for referncing them differs; it appears that it would be possible to remove
-this restriction without breaking compatibility, *unless* we introduce this
+this restriction without breaking compatibility, _unless_ we introduce this
 syntax.
 
 This would also have a minor drawback from usability/familiarity benefit, as it
@@ -102,7 +106,7 @@ These natively support sequential integer keys, however they have several
 drawbacks here:
 
 - it's valid to mix named and positional captures (and common, especially for 0);
-  in practice, would likely return  both a tuple and shape, especially from some APIs
+  in practice, would likely return both a tuple and shape, especially from some APIs
 - no sub-typing; in particular, most requests for specifying a type are for "I want
   to take any regexp with at least these captures" - for example:
   - whole string, and a specific named capture: `shape(0 => string, 'foo' => string, ...)`
@@ -116,7 +120,7 @@ at least `n` elements - however, in the regexp case, the user normally cares
 about presence of a specific n, not `0..=n`, which is a problem already addressed
 by shapes.
 
-# Drawbacks: 
+# Drawbacks:
 
 - may be misused when tuples are a better fit
 - can not be converted to be class-based in the future
@@ -125,9 +129,8 @@ by shapes.
 - can not be converted to 'data classes' (a.k.a. 'records') in the future
   - likely already impractical due to class constant hole and lack of runtime enforcement
 
-# Unresolved questions: 
+# Unresolved questions:
 
 # Future possibilities:
 
 - remove class constant support
-

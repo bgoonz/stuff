@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { Job, Sponsor, Stage, Speaker } from '@lib/types';
+import { Job, Sponsor, Stage, Speaker } from "@lib/types";
 
 const API_URL = `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`;
 const API_TOKEN = process.env.CONTENTFUL_ACCESS_TOKEN;
 
 async function fetchCmsAPI(query: string) {
   const res = await fetch(API_URL, {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${API_TOKEN}`
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${API_TOKEN}`,
     },
     body: JSON.stringify({
-      query
-    })
+      query,
+    }),
   });
 
   const json = await res.json();
   if (json.errors) {
     // eslint-disable-next-line no-console
     console.error(json.errors);
-    throw new Error('Failed to fetch API');
+    throw new Error("Failed to fetch API");
   }
 
   return json.data;
@@ -109,7 +109,7 @@ export async function getAllStages(): Promise<Stage[]> {
   return data.stageCollection.items.reduce((allStages: any, stage: any) => {
     const schedule = stage.scheduleCollection.items.map((talk: any) => ({
       speaker: talk.speakerCollection.items.map((speaker: any) => speaker),
-      ...talk
+      ...talk,
     }));
     return [{ schedule, ...stage }, ...(allStages || [])];
   }, []);
@@ -144,9 +144,12 @@ export async function getAllSponsors(): Promise<Sponsor[]> {
     }
   `);
 
-  return data.companyCollection.items.reduce((allSponsors: any, sponsor: any) => {
-    return [{ id: sponsor.sys.id, ...sponsor }, ...(allSponsors || [])];
-  }, []);
+  return data.companyCollection.items.reduce(
+    (allSponsors: any, sponsor: any) => {
+      return [{ id: sponsor.sys.id, ...sponsor }, ...(allSponsors || [])];
+    },
+    []
+  );
 }
 
 export async function getAllJobs(): Promise<Job[]> {

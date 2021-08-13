@@ -1,5 +1,5 @@
-Documentation for /proc/sys/		kernel version 2.2.10
-	(c) 1998, 1999,  Rik van Riel <riel@nl.linux.org>
+Documentation for /proc/sys/ kernel version 2.2.10
+(c) 1998, 1999, Rik van Riel <riel@nl.linux.org>
 
 'Why', I hear you ask, 'would anyone even _want_ documentation
 for them sysctl files? If anybody really needs it, it's all in
@@ -17,6 +17,7 @@ be actually used, not just for the fun of programming it :-)
 Legal blurb:
 
 As usual, there are two main things to consider:
+
 1. you get what you pay for
 2. it's free
 
@@ -44,6 +45,7 @@ at run-time, and the /proc/sys/ directory is there so that you
 don't even need special tools to do it!
 In fact, there are only four things needed to use these config
 facilities:
+
 - a running Linux system
 - root access
 - common sense (this is especially hard to come by these days)
@@ -55,20 +57,20 @@ one part of the kernel, so you can do configuration on a piece
 by piece basis, or just some 'thematic frobbing'.
 
 The subdirs are about:
-abi/		execution domains & personalities
-debug/		<empty>
-dev/		device specific information (eg dev/cdrom/info)
-fs/		specific filesystems
-		filehandle, inode, dentry and quota tuning
-		binfmt_misc <Documentation/binfmt_misc.txt>
-kernel/		global kernel info / tuning
-		miscellaneous stuff
-net/		networking stuff, for documentation look in:
-		<Documentation/networking/>
-proc/		<empty>
-sunrpc/		SUN Remote Procedure Call (NFS)
-vm/		memory management tuning
-		buffer and cache management
+abi/ execution domains & personalities
+debug/ <empty>
+dev/ device specific information (eg dev/cdrom/info)
+fs/ specific filesystems
+filehandle, inode, dentry and quota tuning
+binfmt_misc <Documentation/binfmt_misc.txt>
+kernel/ global kernel info / tuning
+miscellaneous stuff
+net/ networking stuff, for documentation look in:
+<Documentation/networking/>
+proc/ <empty>
+sunrpc/ SUN Remote Procedure Call (NFS)
+vm/ memory management tuning
+buffer and cache management
 
 These are the subdirs I have on my system. There might be more
 or other subdirs in another setup. If you see another dir, I'd

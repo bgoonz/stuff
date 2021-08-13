@@ -1,5 +1,10 @@
 {
-  "name": [{ "type": "heading1", "content": { "text": "Lothaire Darius", "spans": [] } }],
+  "name": [
+    {
+      "type": "heading1",
+      "content": { "text": "Lothaire Darius", "spans": [] }
+    }
+  ],
   "bio": [
     {
       "type": "paragraph",
@@ -10,10 +15,17 @@
     }
   ],
   "uid": "lothaire",
-  "title": [{ "type": "heading4", "content": { "text": "Software Developer", "spans": [] } }],
+  "title": [
+    {
+      "type": "heading4",
+      "content": { "text": "Software Developer", "spans": [] }
+    }
+  ],
   "twitter": { "url": "https://twitter.com/vercel", "preview": null },
   "github": { "url": "https://github.com/vercel", "preview": null },
-  "company": [{ "type": "heading4", "content": { "text": "Company", "spans": [] } }],
+  "company": [
+    { "type": "heading4", "content": { "text": "Company", "spans": [] } }
+  ],
   "image": {
     "origin": {
       "id": "X9iy6xIAACcA5bGX",
@@ -30,7 +42,10 @@
     "provider": "imgix",
     "thumbnails": {}
   },
-  "talk": { "id": "X9j2tRIAACgA5uZq", "wioUrl": "wio://documents/X9j2tRIAACgA5uZq" },
+  "talk": {
+    "id": "X9j2tRIAACgA5uZq",
+    "wioUrl": "wio://documents/X9j2tRIAACgA5uZq"
+  },
   "name_TYPE": "StructuredText",
   "name_POSITION": 0,
   "bio_TYPE": "StructuredText",

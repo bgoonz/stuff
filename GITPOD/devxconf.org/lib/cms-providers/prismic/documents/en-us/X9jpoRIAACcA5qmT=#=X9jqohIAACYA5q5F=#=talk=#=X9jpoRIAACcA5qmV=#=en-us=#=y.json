@@ -1,9 +1,17 @@
 {
   "title": [
-    { "type": "heading1", "content": { "text": "When And When Not To useEffect", "spans": [] } }
+    {
+      "type": "heading1",
+      "content": { "text": "When And When Not To useEffect", "spans": [] }
+    }
   ],
   "speakers": [
-    { "speaker": { "id": "X9jT0hIAACgA5kON", "wioUrl": "wio://documents/X9jT0hIAACgA5kON" } }
+    {
+      "speaker": {
+        "id": "X9jT0hIAACgA5kON",
+        "wioUrl": "wio://documents/X9jT0hIAACgA5kON"
+      }
+    }
   ],
   "start": "2020-10-27T18:50:00+00:00",
   "end": "2020-10-27T19:30:00+00:00",

@@ -8,100 +8,99 @@ simple messages
 - messages.group(groupName).group(subGroupName).log(message);
 - messages.log(message);
 - messages.print(printer); // printer is a simple function that gets (type, message).
-*/'use strict';
+*/ "use strict";
 
-var prime = require('prime');
+var prime = require("prime");
 
-var forIn = require('mout/object/forIn');
-var forEach = require('mout/array/forEach');
-var size = require('mout/object/size');
+var forIn = require("mout/object/forIn");
+var forEach = require("mout/array/forEach");
+var size = require("mout/object/size");
 
-var microseconds = require('microseconds');
+var microseconds = require("microseconds");
 
 var Message = prime({
-
-  constructor: function(type, statement) {
+  constructor: function (type, statement) {
     this.type = type;
     this.statement = statement;
-  }
-
+  },
 });
 
 var Messages = prime({
-
-  constructor: function(name) {
+  constructor: function (name) {
     this.name = name;
     this.reset();
   },
 
-  group: function(name, collapsed) {
+  group: function (name, collapsed) {
     var group = this.groups[name] || (this.groups[name] = new Messages(name));
     group.collapsed = !!collapsed;
     return group;
   },
 
-  groupCollapsed: function(name) {
+  groupCollapsed: function (name) {
     return this.group(name, true);
   },
 
-  error: function(statement) {
-    this.messages.push(new Message('error', statement));
+  error: function (statement) {
+    this.messages.push(new Message("error", statement));
     return this;
   },
 
-  warn: function(statement) {
-    this.messages.push(new Message('warn', statement));
+  warn: function (statement) {
+    this.messages.push(new Message("warn", statement));
     return this;
   },
 
-  info: function(statement) {
-    this.messages.push(new Message('info', statement));
+  info: function (statement) {
+    this.messages.push(new Message("info", statement));
     return this;
   },
 
-  log: function(statement) {
+  log: function (statement) {
     return this.info(statement);
   },
 
-  time: function(id) {
+  time: function (id) {
     this.timeStamps[id] = microseconds.now();
     return this;
   },
 
-  timeEnd: function(id, name) {
+  timeEnd: function (id, name) {
     var timestamp = this.timeStamps[id];
     if (timestamp) {
       var end = microseconds.since(timestamp);
       var timeStampString = microseconds.parse(end).toString();
-      this.messages.push(new Message('time', {id: name || id, message: timeStampString}));
+      this.messages.push(
+        new Message("time", { id: name || id, message: timeStampString })
+      );
     }
     return this;
   },
 
-  print: function(format) {
+  print: function (format) {
     if (!this.messages.length && !size(this.groups)) return;
 
-    if (this.name) format(this.collapsed ? 'groupCollapsed' : 'group', this.name);
+    if (this.name)
+      format(this.collapsed ? "groupCollapsed" : "group", this.name);
 
-    forIn(this.groups, function(group) {
+    forIn(this.groups, function (group) {
       group.print(format);
     });
 
-    forEach(this.messages, function(message) {
+    forEach(this.messages, function (message) {
       format(message.type, message.statement);
     });
 
-    if (this.name) format('groupEnd');
+    if (this.name) format("groupEnd");
 
     return this;
   },
 
-  reset: function() {
+  reset: function () {
     this.messages = [];
     this.groups = {};
     this.timeStamps = {};
-  }
-
+  },
 });
 
 module.exports = Messages;

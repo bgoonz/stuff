@@ -1,7 +1,5 @@
 {
-  "SecurityOptions": [
-    "name=apparmor"
-  ],
+  "SecurityOptions": ["name=apparmor"],
   "InitCommit": {
     "Expected": "949e6fa",
     "ID": "949e6fa"
@@ -25,10 +23,10 @@
         },
         "TaskDefaults": {},
         "CAConfig": {
-          "NodeCertExpiry": 7.776e+15
+          "NodeCertExpiry": 7.776e15
         },
         "Dispatcher": {
-          "HeartbeatPeriod": 5e+09
+          "HeartbeatPeriod": 5e9
         },
         "Raft": {
           "HeartbeatTick": 1,
@@ -91,9 +89,7 @@
         "Name": "docker.io"
       }
     },
-    "InsecureRegistryCIDRs": [
-      "127.0.0.0/8"
-    ]
+    "InsecureRegistryCIDRs": ["127.0.0.0/8"]
   },
   "IndexServerAddress": "https://index.docker.io/v1/",
   "CPUShares": true,
@@ -104,16 +100,8 @@
   "MemoryLimit": true,
   "Plugins": {
     "Authorization": null,
-    "Network": [
-      "bridge",
-      "host",
-      "macvlan",
-      "null",
-      "overlay"
-    ],
-    "Volume": [
-      "local"
-    ]
+    "Network": ["bridge", "host", "macvlan", "null", "overlay"],
+    "Volume": ["local"]
   },
   "SystemStatus": null,
   "ID": "XEXC:3APE:GMUY:XU7F:LY2H:SFMO:4MMM:5GAX:7JNU:NBPS:KMHI:WGGG",
@@ -124,22 +112,10 @@
   "Images": 70,
   "Driver": "aufs",
   "DriverStatus": [
-    [
-      "Root Dir",
-      "/var/lib/docker/aufs"
-    ],
-    [
-      "Backing Filesystem",
-      "extfs"
-    ],
-    [
-      "Dirs",
-      "148"
-    ],
-    [
-      "Dirperm1 Supported",
-      "true"
-    ]
+    ["Root Dir", "/var/lib/docker/aufs"],
+    ["Backing Filesystem", "extfs"],
+    ["Dirs", "148"],
+    ["Dirperm1 Supported", "true"]
   ],
   "CPUSet": true,
   "IPv4Forwarding": true,

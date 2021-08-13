@@ -1,5 +1,10 @@
 {
-  "name": [{ "type": "heading1", "content": { "text": "Chariovalda Magdalena", "spans": [] } }],
+  "name": [
+    {
+      "type": "heading1",
+      "content": { "text": "Chariovalda Magdalena", "spans": [] }
+    }
+  ],
   "bio": [
     {
       "type": "paragraph",
@@ -10,10 +15,14 @@
     }
   ],
   "uid": "chariovalda",
-  "title": [{ "type": "heading4", "content": { "text": "Tech Lead", "spans": [] } }],
+  "title": [
+    { "type": "heading4", "content": { "text": "Tech Lead", "spans": [] } }
+  ],
   "twitter": { "url": "https://twitter.com/vercel", "preview": null },
   "github": { "url": "https://github.com/vercel", "preview": null },
-  "company": [{ "type": "heading4", "content": { "text": "Company", "spans": [] } }],
+  "company": [
+    { "type": "heading4", "content": { "text": "Company", "spans": [] } }
+  ],
   "image": {
     "origin": {
       "id": "X9iy6hIAACcA5bGL",
@@ -30,7 +39,10 @@
     "provider": "imgix",
     "thumbnails": {}
   },
-  "talk": { "id": "X9jmGxIAACkA5plN", "wioUrl": "wio://documents/X9jmGxIAACkA5plN" },
+  "talk": {
+    "id": "X9jmGxIAACkA5plN",
+    "wioUrl": "wio://documents/X9jmGxIAACkA5plN"
+  },
   "name_TYPE": "StructuredText",
   "name_POSITION": 0,
   "bio_TYPE": "StructuredText",

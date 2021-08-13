@@ -11,7 +11,7 @@ JSON protocol is exposed on port 19000 UDP.
 ## Message Framing
 
 This protocol either operates in `TCP line-based` or `UDP frame-based` mode.
-This choice governs the use of *frame delimiter*.
+This choice governs the use of _frame delimiter_.
 
 For `TCP line-based` the framing is done with a newline character `\n`.
 

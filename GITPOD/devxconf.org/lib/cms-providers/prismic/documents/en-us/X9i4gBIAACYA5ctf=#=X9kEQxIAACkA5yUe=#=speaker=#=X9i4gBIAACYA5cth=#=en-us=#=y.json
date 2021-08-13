@@ -1,5 +1,10 @@
 {
-  "name": [{ "type": "heading1", "content": { "text": "Blagun Dobromil", "spans": [] } }],
+  "name": [
+    {
+      "type": "heading1",
+      "content": { "text": "Blagun Dobromil", "spans": [] }
+    }
+  ],
   "bio": [
     {
       "type": "paragraph",
@@ -10,10 +15,17 @@
     }
   ],
   "uid": "blagun",
-  "title": [{ "type": "heading4", "content": { "text": "Designer & Developer", "spans": [] } }],
+  "title": [
+    {
+      "type": "heading4",
+      "content": { "text": "Designer & Developer", "spans": [] }
+    }
+  ],
   "twitter": { "url": "https://twitter.com/vercel", "preview": null },
   "github": { "url": "https://github.com/vercel", "preview": null },
-  "company": [{ "type": "heading4", "content": { "text": "Company", "spans": [] } }],
+  "company": [
+    { "type": "heading4", "content": { "text": "Company", "spans": [] } }
+  ],
   "image": {
     "origin": {
       "id": "X9i4ehIAACkA5ctD",
@@ -30,7 +42,10 @@
     "provider": "imgix",
     "thumbnails": {}
   },
-  "talk": { "id": "X9kEExIAACcA5yQ_", "wioUrl": "wio://documents/X9kEExIAACcA5yQ_" },
+  "talk": {
+    "id": "X9kEExIAACcA5yQ_",
+    "wioUrl": "wio://documents/X9kEExIAACcA5yQ_"
+  },
   "name_TYPE": "StructuredText",
   "name_POSITION": 0,
   "bio_TYPE": "StructuredText",

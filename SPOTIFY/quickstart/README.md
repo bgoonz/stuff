@@ -8,10 +8,10 @@ A CommonJS module resolver, loader and compiler for node.js and browsers.
 
 ## Features
 
-* Runs in node.js **and browsers**.
-* Supports (most) node builtins and globals.
-* SpiderMonkey AST based Plugin system.
-* Stylish logs.
+- Runs in node.js **and browsers**.
+- Supports (most) node builtins and globals.
+- SpiderMonkey AST based Plugin system.
+- Stylish logs.
 
 ## General Usage
 
@@ -28,6 +28,7 @@ cd my-awesome-app
 ```
 
 index.html
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -40,6 +41,7 @@ index.html
 ```
 
 package.json
+
 ```json
 {
   "name": "my-awesome-app"
@@ -90,16 +92,18 @@ This value might be read from these locations in this order:
 
 QuickStart has two types of plugins: transforms and parsers.
 
-* Parser plugins transform a specific type of source code to a SpiderMonkey AST object.
-* Transform plugins transform a SpiderMonkey AST object to a SpiderMonkey AST object.
+- Parser plugins transform a specific type of source code to a SpiderMonkey AST object.
+- Transform plugins transform a SpiderMonkey AST object to a SpiderMonkey AST object.
 
 ## node.js interface
 
 ```js
-var quickstart = require('quickstart');
+var quickstart = require("quickstart");
 
 // the quickstart function returns a promise.
-quickstart({/* options */}).then(function(compiled) {
+quickstart({
+  /* options */
+}).then(function (compiled) {
   var ast = compiled.ast;
   var source = compiled.source;
   var sourceMap = compiled.sourceMap;
@@ -149,33 +153,39 @@ quickstart --help
 ```
 
 When `--output` is set to a string, it will send the JavaScript output to that file instead of STDOUT.
+
 ```
 quickstart --output output.js
 ```
 
 When `--source-map` is set to a string, it will send the source map output to that file instead of STDOUT.
+
 ```
 quickstart --source-map output.map > output.js
 ```
 
 When `--source-map` is set without a value, and `--output` is set, it will append an inline base64 encoded source map to the output.
+
 ```
 quickstart --source-map > output.js
 quickstart --source-map --output output.js
 ```
 
 When `--source-map` is set and `--output` is unset (`--no-output`) it will write the source map to STDOUT (no value) or the file (value).
+
 ```
 quickstart --no-output --source-map > output.map
 quickstart --no-output --source-map output.map
 ```
 
 When `--ast` is set without a value the ast is printed to STDOUT.
+
 ```
 quickstart --ast > output.ast
 ```
 
 This is useful, for instance, to pipe the AST to UglifyJS or any other program that accepts a SpiderMonkey AST:
+
 ```
 quickstart --ast --source-map | uglifyjs --spidermonkey > out.js
 ```

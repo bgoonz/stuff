@@ -6,7 +6,12 @@
     }
   ],
   "speakers": [
-    { "speaker": { "id": "X9i8PxIAACkA5dov", "wioUrl": "wio://documents/X9i8PxIAACkA5dov" } }
+    {
+      "speaker": {
+        "id": "X9i8PxIAACkA5dov",
+        "wioUrl": "wio://documents/X9i8PxIAACkA5dov"
+      }
+    }
   ],
   "start": "2020-10-27T19:30:00+00:00",
   "end": "2020-10-27T20:10:00+00:00",

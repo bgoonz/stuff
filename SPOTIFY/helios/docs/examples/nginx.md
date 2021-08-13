@@ -29,4 +29,3 @@ Undeploy the nginx job
 Remove the nginx job
 
     helios remove nginx:v1
-

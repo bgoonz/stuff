@@ -5,5 +5,4 @@
     @copyright 2011 (c) Michael Mathews <micmath@gmail.com>
     @license Apache Version 2 <http://www.apache.org/licenses/LICENSE-2.0>
  */
-function blah(url) {
-}
+function blah(url) {}

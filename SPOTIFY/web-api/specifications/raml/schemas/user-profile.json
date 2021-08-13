@@ -9,9 +9,11 @@
     "external_urls": {
       "type": "object",
       "description": "Known external URLs for this user.",
-      "": [{
-        "type": "string"
-      }]
+      "": [
+        {
+          "type": "string"
+        }
+      ]
     },
     "followers": { "$ref": "followers" },
     "href": {

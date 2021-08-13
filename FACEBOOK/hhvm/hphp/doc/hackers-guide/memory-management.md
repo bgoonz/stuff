@@ -16,7 +16,7 @@ Two reference count values are special:
 values live longer than a single Hack request, and have their lifetime managed
 by other mechanisms.
 [`Static`](https://github.com/facebook/hhvm/blob/HHVM-3.27/hphp/runtime/base/header-kind.h#L122)
-values are never freed once created. Together, these are called *persistent*
+values are never freed once created. Together, these are called _persistent_
 values, which is where the `KindOfPersistent*` `DataType` names come from.
 Persistent values are allocated with `malloc()` and cannot refer to counted
 values, which live in request-specific heaps and are allocated by HHVM's request

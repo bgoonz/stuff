@@ -40,7 +40,7 @@ Using Visual C++ 2010 Express
 ### FFmpeg
 
 1. Download ffmpeg: http://ffmpeg.zeranoe.com/builds/win32/static/ffmpeg-latest-win32-static.7z
-2. Uncompress and move somewhere in your path or 
+2. Uncompress and move somewhere in your path or
 3. Update your path to include the ffmpeg\bin directory
 
 ## Compiling codegen
@@ -50,7 +50,6 @@ Using Visual C++ 2010 Express
 3. Make sure release is selected in the top bar (next to the play button)
 4. In the solution explorer, right click on tag project and select Build
 
- 
 ## Running
 
 Copy tag.dll and zlib.dll into the same directory as codegen.exe. Make sure that the ffmpeg bin directory is on your PATH.

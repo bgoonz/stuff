@@ -7,7 +7,7 @@
       "Target": "/usr/share/nginx/html",
       "Type": "volume",
       "VolumeOptions": {
-        "DriverConfig": { },
+        "DriverConfig": {},
         "Labels": {
           "com.example.something": "something-value"
         }
@@ -20,14 +20,8 @@
   ],
   "User": "33",
   "DNSConfig": {
-    "Nameservers": [
-      "8.8.8.8"
-    ],
-    "Search": [
-      "example.org"
-    ],
-    "Options": [
-      "timeout:3"
-    ]
+    "Nameservers": ["8.8.8.8"],
+    "Search": ["example.org"],
+    "Options": ["timeout:3"]
   }
 }

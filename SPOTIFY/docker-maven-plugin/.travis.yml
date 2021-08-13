@@ -38,4 +38,4 @@ after_success:
   # test coverage reporting
   - bash <(curl -s https://codecov.io/bash)
   # deploy snapshots to Maven central, but only from master branch
-  - "[[ $TRAVIS_BRANCH == \"master\" ]] && mvn --settings sonatype-settings.xml -DskipTests -B deploy"
+  - '[[ $TRAVIS_BRANCH == "master" ]] && mvn --settings sonatype-settings.xml -DskipTests -B deploy'

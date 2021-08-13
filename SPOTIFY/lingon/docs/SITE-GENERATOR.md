@@ -22,7 +22,7 @@ source
   home.html
 ```
 
-#### File: source/_layouts/index.html
+#### File: source/\_layouts/index.html
 
 The layout is a regular html file that defines an inline lingon yield directive. The yield directive will be replaced with the contents of the template.
 
@@ -55,6 +55,7 @@ Easy! Follow the above example, but change the home.html template to a Markdown 
 
 ```markdown
 <!-- lingon: layout '_layouts/index.ejs' -->
+
 # Welcome
 
 This is a website.

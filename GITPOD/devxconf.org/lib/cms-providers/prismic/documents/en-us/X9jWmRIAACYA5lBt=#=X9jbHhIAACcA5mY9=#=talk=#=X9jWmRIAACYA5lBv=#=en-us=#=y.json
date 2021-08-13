@@ -1,8 +1,14 @@
 {
   "title": [
-    { "type": "heading1", "content": { "text": "How To Use Dynamic Routing", "spans": [] } }
+    {
+      "type": "heading1",
+      "content": { "text": "How To Use Dynamic Routing", "spans": [] }
+    }
   ],
-  "speaker_temp": { "id": "X9jUfxIAACcA5ka7", "wioUrl": "wio://documents/X9jUfxIAACcA5ka7" },
+  "speaker_temp": {
+    "id": "X9jUfxIAACcA5ka7",
+    "wioUrl": "wio://documents/X9jUfxIAACcA5ka7"
+  },
   "start": "2020-10-27T18:50:00+00:00",
   "end": "2020-10-27T19:30:00+00:00",
   "description": [
@@ -15,7 +21,12 @@
     }
   ],
   "speakers": [
-    { "speaker": { "id": "X9jUfxIAACcA5ka7", "wioUrl": "wio://documents/X9jUfxIAACcA5ka7" } }
+    {
+      "speaker": {
+        "id": "X9jUfxIAACcA5ka7",
+        "wioUrl": "wio://documents/X9jUfxIAACcA5ka7"
+      }
+    }
   ],
   "title_TYPE": "StructuredText",
   "title_POSITION": 0,

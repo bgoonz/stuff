@@ -1,4 +1,4 @@
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 MOTOROLA MICROPROCESSOR & MEMORY TECHNOLOGY GROUP
 M68000 Hi-Performance Microprocessor Division
 M68060 Software Package
@@ -25,47 +25,47 @@ so long as this entire notice is retained without alteration in any modified and
 redistributed versions, and that such modified versions are clearly identified as such.
 No licenses are granted by implication, estoppel or otherwise under any patents
 or trademarks of Motorola, Inc.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Files in this directory:
--------------------------
+```
 
-fpsp.sa		Full FP Kernel Module - hex image
-fpsp.s		Full FP Kernel Module - source code
-fpsp.doc	Full FP Kernel Module - on-line documentation
+## Files in this directory:
 
-pfpsp.sa	Partial FP Kernel Module - hex image
-pfpsp.s		Partial FP Kernel Module - source code
+fpsp.sa Full FP Kernel Module - hex image
+fpsp.s Full FP Kernel Module - source code
+fpsp.doc Full FP Kernel Module - on-line documentation
 
-fplsp.sa	FP Library Module - hex image
-fplsp.s		FP Library Module - source code
-fplsp.doc	FP Library Module - on-line documentation
+pfpsp.sa Partial FP Kernel Module - hex image
+pfpsp.s Partial FP Kernel Module - source code
 
-isp.sa		Integer Unimplemented Kernel Module - hex image
-isp.s		Integer Unimplemented Kernel Module - source code
-isp.doc		Integer Unimplemented Kernel Module - on-line doc
+fplsp.sa FP Library Module - hex image
+fplsp.s FP Library Module - source code
+fplsp.doc FP Library Module - on-line documentation
 
-ilsp.sa		Integer Unimplemented Library Module - hex image
-ilsp.s		Integer Unimplemented Library Module - source code
-ilsp.doc	Integer Unimplemented Library Module - on-line doc
+isp.sa Integer Unimplemented Kernel Module - hex image
+isp.s Integer Unimplemented Kernel Module - source code
+isp.doc Integer Unimplemented Kernel Module - on-line doc
 
-fskeleton.s	Sample Call-outs needed by fpsp.sa and pfpsp.sa
+ilsp.sa Integer Unimplemented Library Module - hex image
+ilsp.s Integer Unimplemented Library Module - source code
+ilsp.doc Integer Unimplemented Library Module - on-line doc
 
-iskeleton.s	Sample Call-outs needed by isp.sa
+fskeleton.s Sample Call-outs needed by fpsp.sa and pfpsp.sa
 
-os.s		Sample Call-outs needed by fpsp.sa, pfpsp.sa, and isp.sa
+iskeleton.s Sample Call-outs needed by isp.sa
 
-ftest.sa	Simple test program to test that {p}fpsp.sa
-		was connected properly; hex image
-ftest.s		above test; source code
+os.s Sample Call-outs needed by fpsp.sa, pfpsp.sa, and isp.sa
 
-itest.sa	Simple test program to test that isp.sa was
-		connected properly; hex image
-itest.s		above test; source code
+ftest.sa Simple test program to test that {p}fpsp.sa
+was connected properly; hex image
+ftest.s above test; source code
 
-test.doc	on-line documentation for {i,f}test.sa
+itest.sa Simple test program to test that isp.sa was
+connected properly; hex image
+itest.s above test; source code
 
-README		This file
+test.doc on-line documentation for {i,f}test.sa
 
-ERRATA		Known errata for this release
+README This file
 
-MISC		Release file version numbers
+ERRATA Known errata for this release
+
+MISC Release file version numbers

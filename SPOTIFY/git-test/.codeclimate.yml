@@ -6,8 +6,8 @@ engines:
     enabled: true
 ratings:
   paths:
-  - "git-test"
-  - "test.sh"
-  - "regress.sh"
+    - "git-test"
+    - "test.sh"
+    - "regress.sh"
 exclude_paths:
-- debian/
+  - debian/

@@ -20,7 +20,8 @@ iframe {
   right: 16px;
 }
 
-#correctness-label, #render-timing-label {
+#correctness-label,
+#render-timing-label {
   float: right;
   margin: 2px;
 }

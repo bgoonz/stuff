@@ -3,8 +3,7 @@
 */
 var foo;
 
-
 /**
     @type integer
 */
-var bar = +(new Date()).getTime();
+var bar = +new Date().getTime();

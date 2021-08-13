@@ -1,5 +1,4 @@
-Helios [![Circle CI](https://circleci.com/gh/spotify/helios/tree/master.png?style=badge)](https://circleci.com/gh/spotify/helios/tree/master) [![Slack Status](http://slackin.spotify.com/badge.svg)](http://slackin.spotify.com) [ ![Download](https://api.bintray.com/packages/spotify/deb/helios/images/download.svg) ](https://bintray.com/spotify/deb/helios/_latestVersion)
-======
+# Helios [![Circle CI](https://circleci.com/gh/spotify/helios/tree/master.png?style=badge)](https://circleci.com/gh/spotify/helios/tree/master) [![Slack Status](http://slackin.spotify.com/badge.svg)](http://slackin.spotify.com) [ ![Download](https://api.bintray.com/packages/spotify/deb/helios/images/download.svg) ](https://bintray.com/spotify/deb/helios/_latestVersion)
 
 ## Status: Bug-fix only
 
@@ -14,9 +13,7 @@ API as well as a command-line client to interact with servers running
 your containers. It also keeps a history of events in your cluster including
 information such as deploys, restarts and version changes.
 
-
-Usage Example
--------------
+## Usage Example
 
 ```sh
 # Create an nginx job using the nginx container image, exposing it on the host on port 8080
@@ -44,16 +41,14 @@ $ helios undeploy -a nginx:v1
 $ helios remove nginx:v1
 ```
 
-Getting Started
----------------
+## Getting Started
 
 If you're looking for how to use Helios, see the [docs directory](docs).
 Most probably the [User Manual](docs/user_manual.md) is what you're looking for.
 
 If you're looking for how to download, build, install and run Helios, keep reading.
 
-Prerequisites
---------------
+## Prerequisites
 
 The binary release of Helios is built for Ubuntu 14.04.1 LTS, but Helios should
 be buildable on any platform with at least Java 8 and a recent Maven 3
@@ -61,14 +56,13 @@ available.
 
 Other components that are required for a helios installation are:
 
-* [Docker 1.0](https://github.com/docker/docker) or newer
-* [Zookeeper 3.4.0](https://zookeeper.apache.org/) or newer
+- [Docker 1.0](https://github.com/docker/docker) or newer
+- [Zookeeper 3.4.0](https://zookeeper.apache.org/) or newer
 
-
-Install & Run
--------------
+## Install & Run
 
 ### Quick start for local usage
+
 Use [helios-solo](https://github.com/spotify/helios/blob/master/docs/helios_solo.md)
 to launch a local environment with a Helios master and agent.
 
@@ -133,8 +127,7 @@ instructions below, you should be able to start the agent and master:
 
 If you see any issues, make sure you have the prerequisites (Docker and Zookeeper) installed.
 
-Build & Test
-------------
+## Build & Test
 
 First, make sure you have Docker installed locally. If you're using OS X, we
 recommend using [docker-machine](https://docs.docker.com/machine/).
@@ -147,8 +140,7 @@ of running:
 For more info on setting up a development environment and an introduction to
 the source code, see the [Developer Guide](docs/developer_guide.md).
 
-How it all fits together
-------------------------
+## How it all fits together
 
 The `helios` command line tool connects to your helios master via HTTP. The
 Helios master is connected to a Zookeeper cluster that is used both as
@@ -163,25 +155,22 @@ helios-master services can respond to HTTP requests concurrently, removing
 any single point of failure in the helios setup using straight forward HTTP
 load balancing strategies.
 
+## Production Readiness
 
-Production Readiness
---------------------
 We at Spotify are running Helios in production (as of October 2015) with dozens
-of critical backend services, so we trust it.  Whether you should trust it to
+of critical backend services, so we trust it. Whether you should trust it to
 not cause smoking holes in your infrastructure is up to you.
 
-
-Why Helios?
------------
+## Why Helios?
 
 There are a number of Docker orchestration systems, why should you
 choose Helios?
 
-* Helios is pragmatic.  We're not trying to solve everything *today*,
-  but what we have, we try hard to ensure is rock-solid.  So we don't
-  have things like resource limits or dynamic scheduling yet.  Today,
+- Helios is pragmatic. We're not trying to solve everything _today_,
+  but what we have, we try hard to ensure is rock-solid. So we don't
+  have things like resource limits or dynamic scheduling yet. Today,
   for us, it has been more important to get the CI/CD use cases, and
-  surrounding tooling solid first.  That said, we eventually want to
+  surrounding tooling solid first. That said, we eventually want to
   do dynamic scheduling, composite jobs, etc. (see below for more).
   But what we provide, we use (i.e. we eat our own dogfood), so you
   can have reasonable assurances that anything that's been in the
@@ -189,42 +178,42 @@ choose Helios?
   frequently (usually, at least weekly) into production here at
   Spotify.
 
-* Helios should be able to fit in the way you already do ops.  Of the
+- Helios should be able to fit in the way you already do ops. Of the
   popular Docker orchestration frameworks, Helios is the only one
   we're aware of that doesn't have anything much in the way of system
-  dependencies.  That is, we don't require that you run in AWS or GCE,
-  etc.  We don't require a specific network topology.  We don't
-  require you run a specific operating system.  We don't require that
-  you're using Mesos.  Our only requirement is that you have a
+  dependencies. That is, we don't require that you run in AWS or GCE,
+  etc. We don't require a specific network topology. We don't
+  require you run a specific operating system. We don't require that
+  you're using Mesos. Our only requirement is that you have a
   ZooKeeper cluster somewhere and a JVM on the machines which
-  Helios runs on.  So if you're using Puppet, Chef, etc., to manage the
+  Helios runs on. So if you're using Puppet, Chef, etc., to manage the
   rest of the OS install and configuration, you can still continue to
   do so with whatever Linux OS you're using.
 
-* Don't have to drink *all* the Kool-Aid.  Generally, we try to make
+- Don't have to drink _all_ the Kool-Aid. Generally, we try to make
   it so you only have to take the features you want to use, and should
-  be able to ignore the rest.  For example, Helios doesn't prescribe a
+  be able to ignore the rest. For example, Helios doesn't prescribe a
   discovery service: we happen to provide a plugin for SkyDNS, and we
   hear that someone else is working on one for another service, but if
   you don't want to even use a discovery service, you don't have to.
 
-* Scalability.  We're already at hundreds of machines in
+- Scalability. We're already at hundreds of machines in
   production, but we're nowhere near the limit before the existing
-  architecture would need to be revisited.  Helios can also scale down
+  architecture would need to be revisited. Helios can also scale down
   well in that you can run a single machine instance if you want to
   run it all locally.
 
-Other Software You Might Want To Consider
------------------------------------------
+## Other Software You Might Want To Consider
+
 Here are a few other things you probably want to consider using alongside
 Helios:
-* [docker-gc](https://github.com/spotify/docker-gc) Garbage collects dead containers and removes unused images.
-* [helios-skydns](https://github.com/spotify/helios-skydns) Makes it so you can auto register services in SkyDNS.  If you use leading underscores in your SRV record names, let us know, we have a patch for etcd which disables the "hidden" node feature which makes this use case break.
-* [skygc](https://github.com/spotify/skygc)  When using SkyDNS, especially if you're using the Helios Testing Framework, can leave garbage in the skydns tree within etcd.  This will clean out dead stuff.
-* [docker-maven-plugin](https://github.com/spotify/docker-maven-plugin)  Simplifies the building of Docker containers if you're using Maven (and most likely Java).
 
-Findbugs
---------
+- [docker-gc](https://github.com/spotify/docker-gc) Garbage collects dead containers and removes unused images.
+- [helios-skydns](https://github.com/spotify/helios-skydns) Makes it so you can auto register services in SkyDNS. If you use leading underscores in your SRV record names, let us know, we have a patch for etcd which disables the "hidden" node feature which makes this use case break.
+- [skygc](https://github.com/spotify/skygc) When using SkyDNS, especially if you're using the Helios Testing Framework, can leave garbage in the skydns tree within etcd. This will clean out dead stuff.
+- [docker-maven-plugin](https://github.com/spotify/docker-maven-plugin) Simplifies the building of Docker containers if you're using Maven (and most likely Java).
+
+## Findbugs
 
 To run [findbugs](http://findbugs.sourceforge.net) on the helios codebase, do
 `mvn clean compile site`. This will build helios and then run an analysis,
@@ -233,8 +222,7 @@ emitting reports in `helios-*/target/site/findbugs.html`.
 To silence an irrelevant warning, add a filter match along with a justification
 in `findbugs-exclude.xml`.
 
-The Nickel Tour
----------------
+## The Nickel Tour
 
 The sources for the Helios master and agent are under [helios-services](helios-services).
 The CLI source is under [helios-tools](helios-tools).
@@ -253,18 +241,16 @@ The Helios services use [Dropwizard](http://www.dropwizard.io/0.7.1/docs/) which
 bundle of Jetty, Jersey, Jackson, Yammer Metrics, Guava, Logback and
 other Java libraries.
 
+## Community Ideas
 
-Community Ideas
----------------
-
-These are things we want, but haven't gotten to.  If you feel
+These are things we want, but haven't gotten to. If you feel
 inspired, we'd love to talk to you about these (in no particular
 order):
 
-* Host groups
-* ACLs - on jobs, hosts, and deployments
-* Composite jobs -- be able to deploy related containers as a unit on a machine
-* Run once jobs -- for batch jobs
-* Resource specification and enforcement -- That is: restrict my container to *X* MB of RAM, *X* CPUs, and *X* MB disk and perhaps other things like IOPs, network bandwidth, etc.
-* Dynamic scheduling of jobs -- either within Helios itself or as a layer on top
-* Packaging/Config for other Linux distributions such as RedHat, CoreOS, etc.
+- Host groups
+- ACLs - on jobs, hosts, and deployments
+- Composite jobs -- be able to deploy related containers as a unit on a machine
+- Run once jobs -- for batch jobs
+- Resource specification and enforcement -- That is: restrict my container to _X_ MB of RAM, _X_ CPUs, and _X_ MB disk and perhaps other things like IOPs, network bandwidth, etc.
+- Dynamic scheduling of jobs -- either within Helios itself or as a layer on top
+- Packaging/Config for other Linux distributions such as RedHat, CoreOS, etc.

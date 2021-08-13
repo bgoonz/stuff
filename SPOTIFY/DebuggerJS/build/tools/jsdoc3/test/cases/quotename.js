@@ -6,7 +6,6 @@ var chat = {};
  */
 chat["#channel"] = {};
 
-
 /**
 	@member
 	@type {boolean}

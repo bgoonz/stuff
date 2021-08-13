@@ -1,7 +1,7 @@
 comment:
   layout: header, diff
 
-coverage: 
+coverage:
   status:
     # set a github PR status for overall project coverage with an automatically
     # calculated coverage target

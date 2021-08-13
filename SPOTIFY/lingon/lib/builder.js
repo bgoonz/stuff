@@ -1,15 +1,15 @@
-'use strict';
+"use strict";
 
-var log                   = require('./utils/log');
-var chalk                 = require('chalk');
-var es                    = require('event-stream');
-var path                  = require('path');
-var vfs                   = require('vinyl-fs');
+var log = require("./utils/log");
+var chalk = require("chalk");
+var es = require("event-stream");
+var path = require("path");
+var vfs = require("vinyl-fs");
 
-var directiveStream       = require('./streams/directiveStream');
-var streamHelper          = require('./utils/stream');
-var ExtensionRewriter     = require('./utils/extensionRewriter');
-var utils                 = require('./utils/utils');
+var directiveStream = require("./streams/directiveStream");
+var streamHelper = require("./utils/stream");
+var ExtensionRewriter = require("./utils/extensionRewriter");
+var utils = require("./utils/utils");
 
 var Builder = {};
 
@@ -51,10 +51,10 @@ Builder.preProcess = function (params) {
 Builder.postProcess = function (params) {
   return function (sourceFile) {
     var pipes = streamHelper.pipesForFileExtensions(
-                  sourceFile.path,
-                  params.processorStore,
-                  params.global
-                );
+      sourceFile.path,
+      params.processorStore,
+      params.global
+    );
 
     // Apply all pipes to stream
     sourceFile.stream = streamHelper.applyPipes(sourceFile.stream, pipes);
@@ -101,17 +101,24 @@ Builder.rewriteExtension = function (params) {
 };
 
 Builder.print = function (sourceFile) {
-  log.info(chalk.green(sourceFile.path, '->',
-      path.join(sourceFile.targetPath, sourceFile.targetFilename)));
+  log.info(
+    chalk.green(
+      sourceFile.path,
+      "->",
+      path.join(sourceFile.targetPath, sourceFile.targetFilename)
+    )
+  );
   return sourceFile;
 };
 
 Builder.normalizeFilePath = function (sourceFile) {
-  sourceFile.stream.pipe(es.map(function (file, cb) {
-    file.base = path.resolve(process.cwd(), sourceFile.targetPath);
-    file.path = path.resolve(file.base, path.basename(file.path));
-    cb(null, file);
-  }));
+  sourceFile.stream.pipe(
+    es.map(function (file, cb) {
+      file.base = path.resolve(process.cwd(), sourceFile.targetPath);
+      file.path = path.resolve(file.base, path.basename(file.path));
+      cb(null, file);
+    })
+  );
 
   return sourceFile;
 };

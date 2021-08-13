@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var SourceFile = function (params) {
   this.name = params.name;

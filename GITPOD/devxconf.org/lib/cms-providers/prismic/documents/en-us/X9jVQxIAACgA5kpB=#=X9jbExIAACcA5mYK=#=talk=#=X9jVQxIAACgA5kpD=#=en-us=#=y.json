@@ -1,6 +1,14 @@
 {
-  "title": [{ "type": "heading1", "content": { "text": "React Fundamentals", "spans": [] } }],
-  "speaker_temp": { "id": "X9jSfBIAACgA5j1U", "wioUrl": "wio://documents/X9jSfBIAACgA5j1U" },
+  "title": [
+    {
+      "type": "heading1",
+      "content": { "text": "React Fundamentals", "spans": [] }
+    }
+  ],
+  "speaker_temp": {
+    "id": "X9jSfBIAACgA5j1U",
+    "wioUrl": "wio://documents/X9jSfBIAACgA5j1U"
+  },
   "start": "2020-10-27T19:30:00+00:00",
   "end": "2020-10-27T20:10:00+00:00",
   "description": [
@@ -13,7 +21,12 @@
     }
   ],
   "speakers": [
-    { "speaker": { "id": "X9jSfBIAACgA5j1U", "wioUrl": "wio://documents/X9jSfBIAACgA5j1U" } }
+    {
+      "speaker": {
+        "id": "X9jSfBIAACgA5j1U",
+        "wioUrl": "wio://documents/X9jSfBIAACgA5j1U"
+      }
+    }
   ],
   "title_TYPE": "StructuredText",
   "title_POSITION": 0,

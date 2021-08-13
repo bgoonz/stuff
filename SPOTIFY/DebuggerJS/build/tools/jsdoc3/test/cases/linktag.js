@@ -2,14 +2,12 @@
 var ns = {};
 
 /**
-*  Similar to [the bar function]{@link bar}.
-*  @see {@link bar}
-*/
-ns.foo = function () {
-}
+ *  Similar to [the bar function]{@link bar}.
+ *  @see {@link bar}
+ */
+ns.foo = function () {};
 
 /**
-*  @see {@link ns.foo}
-*/
-function bar() {
-}
+ *  @see {@link ns.foo}
+ */
+function bar() {}

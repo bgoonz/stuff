@@ -1,42 +1,42 @@
 // Thin types
-type ArchNameStr = string;   // uncertain of format
-type BCInstrStr = string;    // uncertain of format
-type BinaryStr = string;     // uncertain of format, may be arch-dependent
-type BlockId = number;       // unsigned int
-type CallDestStr = string;   // uncertain of format
-type CodeStr = string;       // uncertain of format
-type CodeLen = number;       // uint32_t
+type ArchNameStr = string; // uncertain of format
+type BCInstrStr = string; // uncertain of format
+type BinaryStr = string; // uncertain of format, may be arch-dependent
+type BlockId = number; // unsigned int
+type CallDestStr = string; // uncertain of format
+type CodeStr = string; // uncertain of format
+type CodeLen = number; // uint32_t
 type ConfigFileStr = string; // maybe empty, should I make this null if empty?
-type CounterName = string;   // uncertain of format
-type DisasmString = string;  // uncertain of format
-type EventCount = number;    // uint64_t
-type ExtraString = string;   // uncertain of format
-type FileName = string;      // uncertain of format
-type FuncId = number;        // uint32_t
-type FuncName = string;      // uncertain of format
-type FuncString = string;    // uncertain of format
-type GuardString = string;   // uncertain of format
-type InstrId = number;       // uint32_t
-type InstrLen = number       // uint32_t
-type LineNum = number;       // int
-type Offset = number;        // int32_t
-type Opcode = string;        // Some sort of enum
-type OptIndex = number;      // int
-type ProfCount = number;     // uint64_t
+type CounterName = string; // uncertain of format
+type DisasmString = string; // uncertain of format
+type EventCount = number; // uint64_t
+type ExtraString = string; // uncertain of format
+type FileName = string; // uncertain of format
+type FuncId = number; // uint32_t
+type FuncName = string; // uncertain of format
+type FuncString = string; // uncertain of format
+type GuardString = string; // uncertain of format
+type InstrId = number; // uint32_t
+type InstrLen = number; // uint32_t
+type LineNum = number; // int
+type Offset = number; // int32_t
+type Opcode = string; // Some sort of enum
+type OptIndex = number; // int
+type ProfCount = number; // uint64_t
 type ProfileString = string; // uncertain of format
 type RepoSchemaStr = string; // uncertain of format
-type SHA1 = string;          // SHA1.toString()
-type SSATmpId = number;      // uint32_t
-type TCA = string;           // unsigned char*, casted to void* for sformat
-type TransId = number;       // int32_t
-type TypeString = string;    // uncertain of format
-type UnitFuncStr = string;   // maybe fix? see TODO in tc-print.cpp
+type SHA1 = string; // SHA1.toString()
+type SSATmpId = number; // uint32_t
+type TCA = string; // unsigned char*, casted to void* for sformat
+type TransId = number; // int32_t
+type TypeString = string; // uncertain of format
+type UnitFuncStr = string; // maybe fix? see TODO in tc-print.cpp
 
 type TCDump = {
   configFile: ConfigFileStr;
   repoSchema: RepoSchemaStr;
   translations: [Translation | null];
-}
+};
 
 type Translation = {
   transRec: TransRec;
@@ -50,7 +50,7 @@ type Translation = {
   };
   transId: TransId;
   ir_annotation: PrintIR_Unit | string;
-}
+};
 
 type TransRec = {
   id: TransId;
@@ -63,7 +63,7 @@ type TransRec = {
   coldLen: CodeLen;
   frozenStart: TCA;
   frozenLen: CodeLen;
-}
+};
 
 type TransRecSrc = {
   sha1: SHA1;
@@ -74,7 +74,7 @@ type TransRecSrc = {
   prologue: boolean;
   bcStartOffset: Offset;
   guards: [GuardString];
-}
+};
 
 enum ResumeMode {
   None,
@@ -99,32 +99,32 @@ type Block = {
   start: Offset;
   end: Offset;
   unit: UnitFuncStr | null;
-}
+};
 
 type EventType =
-"cycles" |
-"branch-misses" |
-"L1-icache-misses" |
-"L1-dcache-misses" |
-"cache-misses" |
-"LLC-store-misses" |
-"iTLB-misses" |
-"dTLB-misses" |
-string; // Technically there can be user-defined events too
+  | "cycles"
+  | "branch-misses"
+  | "L1-icache-misses"
+  | "L1-dcache-misses"
+  | "cache-misses"
+  | "LLC-store-misses"
+  | "iTLB-misses"
+  | "dTLB-misses"
+  | string; // Technically there can be user-defined events too
 
-type EventCounts = {[event in EventType]: EventCount;}
+type EventCounts = { [event in EventType]: EventCount };
 
 type TCARegionInfo = {
   tcRegion: TCRegion;
   ranges: [TCARangeInfo];
-}
+};
 
 enum TCRegion {
   hot,
   main,
   profile,
   cold,
-  frozen
+  frozen,
 }
 
 type TCARangeInfo = {
@@ -142,7 +142,7 @@ type TCARangeInfo = {
     instrId: InstrId;
     blockId: BlockId;
   };
-}
+};
 
 type TCADisasmInfo = {
   binary: BinaryStr;
@@ -151,21 +151,21 @@ type TCADisasmInfo = {
   perfEvents: EventCounts;
   ip: TCA;
   instrLen: InstrLen;
-}
+};
 
 enum Area {
   Main,
   Cold,
-  Frozen
+  Frozen,
 }
 
 type PrintIR_Unit = {
   transContext: PrintIR_TransContext;
-  blocks: {[x in string]: PrintIR_Block;};
+  blocks: { [x in string]: PrintIR_Block };
   // This is actually a map from BlockId to Block, but with
   // the BlockIds interpreted as strings for JSON object compatibility
   inliningDecision: [PrintIR_InliningDecision];
-}
+};
 
 type PrintIR_TransContext = {
   kind: TransKind;
@@ -176,7 +176,7 @@ type PrintIR_TransContext = {
   sourceFile: FileName;
   startLine: LineNum;
   endLine: LineNum;
-}
+};
 
 type PrintIR_SrcKey = {
   funcStr: FuncString;
@@ -185,7 +185,7 @@ type PrintIR_SrcKey = {
   offset: Offset;
   resumeMode: ResumeMode;
   hasThis: boolean;
-}
+};
 
 type ResumeMode = "" | "ra" | "rg";
 
@@ -195,10 +195,10 @@ type PrintIR_Block = {
   hint: Hint;
   profCount: ProfCount;
   next: BlockId | null;
-  instrs: {[x in string]: PrintIR_Instr;};
+  instrs: { [x in string]: PrintIR_Instr };
   // This is actually a map from InstrId to Instr, but with
   // the InstrIds interpreted as strings for JSON object compatibility
-}
+};
 
 enum Hint {
   Unused,
@@ -220,33 +220,33 @@ type PrintIR_Instr = {
   dsts: [PrintIR_SSATmp];
   offset: Offset;
   profileData: PrintIR_Profile;
-  srcs: [PrintIR_SSATmp] | null;   // exactly one of srcs and counterName should
+  srcs: [PrintIR_SSATmp] | null; // exactly one of srcs and counterName should
   counterName: CounterName | null; // be defined
-}
+};
 
 type PrintIR_PhiPseudoInstrs = {
   srcs: [[PrintIR_SSATmp, BlockId]];
   dst: PrintIR_SSATmp;
-}
+};
 
 type PrintIR_SSATmp = {
   id: SSATmpId;
   type: TypeString;
-}
+};
 
 type PrintIR_TCRange = {
   area: Area;
   start: TCA;
   end: TCA;
   disasm: string;
-}
+};
 
 type PrintIR_Profile = {
   offset: Offset;
   name: ProfileString;
-  data: {profileType: ProfileType};
+  data: { profileType: ProfileType };
   // the rest of the keys in "data" will depend on the value of "profileType"
-}
+};
 
 enum ProfileType {
   ArrayAccessProfile,
@@ -267,4 +267,4 @@ type PrintIR_InliningDecision = {
   callerName: FuncName | null;
   calleeName: FuncName | null;
   reason: string;
-}
+};

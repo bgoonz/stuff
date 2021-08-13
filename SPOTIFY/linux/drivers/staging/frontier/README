@@ -30,9 +30,10 @@ the lights and screen. But it's fairly lousy for handling input events and
 very lousy for watching the state of the shuttle wheel.
 
 A linux input events interface is great for the input events and shuttle wheel.
-* It's theoretically OK on LEDs.
-* A fader can be mapped to an absolute mouse device.
-* But there is no LCD support at all, or fader feedback support in that API
+
+- It's theoretically OK on LEDs.
+- A fader can be mapped to an absolute mouse device.
+- But there is no LCD support at all, or fader feedback support in that API
 
 So, thus, these stubby drivers exist.
 

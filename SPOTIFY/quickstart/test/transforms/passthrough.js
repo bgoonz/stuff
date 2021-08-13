@@ -1,5 +1,5 @@
-'use strict';
+"use strict";
 
-module.exports = function(path, tree) {
+module.exports = function (path, tree) {
   return tree;
 };

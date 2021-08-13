@@ -12,13 +12,12 @@
 	@requires jsdoc/tag/type
  */
 
-	
 var jsdoc = {
-    tag: {
-        dictionary: require('jsdoc/tag/dictionary'),
-        validator: require('jsdoc/tag/validator'),
-        type: require('jsdoc/tag/type')
-    }
+  tag: {
+    dictionary: require("jsdoc/tag/dictionary"),
+    validator: require("jsdoc/tag/validator"),
+    type: require("jsdoc/tag/type"),
+  },
 };
 
 /**
@@ -29,80 +28,85 @@ var jsdoc = {
     @param {string=} tagBody
     @param {object=} meta
  */
-exports.Tag = function(tagTitle, tagBody, meta) {
-    var tagDef = jsdoc.tag.dictionary.lookUp(tagTitle),
-        meta = meta  || {};
-    	
-    this.originalTitle = trim(tagTitle);
-    
-    /** The title part of the tag: @title text */
-    this.title = jsdoc.tag.dictionary.normalise( this.originalTitle );
-    
-    /** The text part of the tag: @title text */
-    this.text = trim(tagBody, tagDef.keepsWhitespace);
-    
-    if (this.text) {
-        
-        if (tagDef.onTagText) {
-            this.text = tagDef.onTagText(this.text);
-        }
-        
-        if (tagDef.canHaveType) {
-        
-            /** The value propertiy represents the result of parsing the tag text. */
-            this.value = {};
-            
-            var [
-                /*Array.<string>*/ typeNames,
-                /*any*/ remainingText,
-                /*?boolean*/ optional,
-                /*?boolean*/ nullable,
-                /*?boolean*/ variable
-            ] = jsdoc.tag.type.parse(this.text);
-            
-            if (typeNames.length) {
-                this.value.type = {
-                    names:    typeNames,
-                    optional: optional,
-                    nullable: nullable,
-                    variable: variable
-                };
-            }
+exports.Tag = function (tagTitle, tagBody, meta) {
+  var tagDef = jsdoc.tag.dictionary.lookUp(tagTitle),
+    meta = meta || {};
 
-            if (remainingText) {
-                if (tagDef.canHaveName) {
-                    var [paramName, paramDesc, paramOptional, paramDefault]
-                        = parseParamText(remainingText);
-                    
-                    // note the dash is a special case: as a param name it means "no name"
-                    if (paramName && paramName !== '-') { this.value.name = paramName; }
-                    
-                    if (paramDesc)     { this.value.description = paramDesc; }
-                    if (paramOptional) { this.value.optional = paramOptional; }
-                    if (paramDefault)  { this.value.defaultvalue = paramDefault; }
-                }
-                else {
-                    this.value.description = remainingText;
-                }
-            }
-        }
-        else {
-            this.value = this.text;
-        }
+  this.originalTitle = trim(tagTitle);
+
+  /** The title part of the tag: @title text */
+  this.title = jsdoc.tag.dictionary.normalise(this.originalTitle);
+
+  /** The text part of the tag: @title text */
+  this.text = trim(tagBody, tagDef.keepsWhitespace);
+
+  if (this.text) {
+    if (tagDef.onTagText) {
+      this.text = tagDef.onTagText(this.text);
     }
-    
-    jsdoc.tag.validator.validate(this, meta);
-}
+
+    if (tagDef.canHaveType) {
+      /** The value propertiy represents the result of parsing the tag text. */
+      this.value = {};
+
+      var [
+        /*Array.<string>*/ typeNames,
+        /*any*/ remainingText,
+        /*?boolean*/ optional,
+        /*?boolean*/ nullable,
+        /*?boolean*/ variable,
+      ] = jsdoc.tag.type.parse(this.text);
+
+      if (typeNames.length) {
+        this.value.type = {
+          names: typeNames,
+          optional: optional,
+          nullable: nullable,
+          variable: variable,
+        };
+      }
+
+      if (remainingText) {
+        if (tagDef.canHaveName) {
+          var [paramName, paramDesc, paramOptional, paramDefault] =
+            parseParamText(remainingText);
+
+          // note the dash is a special case: as a param name it means "no name"
+          if (paramName && paramName !== "-") {
+            this.value.name = paramName;
+          }
+
+          if (paramDesc) {
+            this.value.description = paramDesc;
+          }
+          if (paramOptional) {
+            this.value.optional = paramOptional;
+          }
+          if (paramDefault) {
+            this.value.defaultvalue = paramDefault;
+          }
+        } else {
+          this.value.description = remainingText;
+        }
+      }
+    } else {
+      this.value = this.text;
+    }
+  }
+
+  jsdoc.tag.validator.validate(this, meta);
+};
 
 function trim(text, newlines) {
-	if (!text) { return ''; }
-	
-	if (newlines) {
-	    return text.replace(/^[\n\r\f]+|[\n\r\f]+$/g, '');
-	}
-	else {
-	    return text.replace(/^\s+|\s+$/g, '');
-	}
+  if (!text) {
+    return "";
+  }
+
+  if (newlines) {
+    return text.replace(/^[\n\r\f]+|[\n\r\f]+$/g, "");
+  } else {
+    return text.replace(/^\s+|\s+$/g, "");
+  }
 }
 
 /**
@@ -114,21 +118,21 @@ function trim(text, newlines) {
 	@returns {Array.<string, string, boolean, boolean>} [pname, pdesc, poptional, pdefault].
  */
 function parseParamText(tagText) {
-	var pname, pdesc, poptional, pdefault;
-	
-	// like: pname, pname pdesc, or name - pdesc
-	tagText.match(/^(\[[^\]]+\]|\S+)((?:\s*\-\s*|\s+)(\S[\s\S]*))?$/);
-	pname = RegExp.$1;
-	pdesc = RegExp.$3;
+  var pname, pdesc, poptional, pdefault;
 
-	if ( /^\[\s*(.+?)\s*\]$/.test(pname) ) {
-		pname = RegExp.$1;
-		poptional = true;
-		
-		if ( /^(.+?)\s*=\s*(.+)$/.test(pname) ) {
-			pname = RegExp.$1;
-			pdefault = RegExp.$2;
-		}
-	}
-	return [pname, pdesc, poptional, pdefault];
+  // like: pname, pname pdesc, or name - pdesc
+  tagText.match(/^(\[[^\]]+\]|\S+)((?:\s*\-\s*|\s+)(\S[\s\S]*))?$/);
+  pname = RegExp.$1;
+  pdesc = RegExp.$3;
+
+  if (/^\[\s*(.+?)\s*\]$/.test(pname)) {
+    pname = RegExp.$1;
+    poptional = true;
+
+    if (/^(.+?)\s*=\s*(.+)$/.test(pname)) {
+      pname = RegExp.$1;
+      pdefault = RegExp.$2;
+    }
+  }
+  return [pname, pdesc, poptional, pdefault];
 }

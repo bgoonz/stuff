@@ -1,9 +1,6 @@
 {
   "Id": "1009",
-  "Names": [
-    "test",
-    "ports"
-  ],
+  "Names": ["test", "ports"],
   "Image": "ports as string test",
   "Command": "test",
   "Created": 1,

@@ -120,14 +120,14 @@ you may want to skim through the following terms:
 - [Bytecode](https://en.wikipedia.org/wiki/Bytecode)
 - [Basic block](https://en.wikipedia.org/wiki/Basic_block)
 - **CFG**: [control flow graph](https://en.wikipedia.org/wiki/Control_flow_graph) or [context-free grammar](https://en.wikipedia.org/wiki/Context-free_grammar) (nearly always the former here).
-- [Compilation unit/translation unit](https://en.wikipedia.org/wiki/Translation_unit_(programming))
+- [Compilation unit/translation unit](<https://en.wikipedia.org/wiki/Translation_unit_(programming)>)
 - [COW/copy-on-write](https://en.wikipedia.org/wiki/Copy-on-write)
 - [CPU cache](https://en.wikipedia.org/wiki/CPU_cache). Also d-cache, data cache, i-cache, instruction cache.
 - [IR/intermediate representation](https://en.wikipedia.org/wiki/Intermediate_representation).
 - [FP/frame pointer](https://en.wikipedia.org/wiki/Call_stack#Stack_and_frame_pointers).
 - **ICF/identical code folding**: a compiler/linker optimization that detects and de-duplicates identical blocks of code.
 - [TLB/iTLB/dTLB](https://en.wikipedia.org/wiki/Translation_lookaside_buffer)
-- [Bytecode interpreter](https://en.wikipedia.org/wiki/Interpreter_(computing)#Bytecode_interpreters)
+- [Bytecode interpreter](<https://en.wikipedia.org/wiki/Interpreter_(computing)#Bytecode_interpreters>)
 - [JIT/just-in-time compilation](https://en.wikipedia.org/wiki/Just-in-time_compilation)
 - **Leaf function**: a function that calls no other functions; a leaf node in the control flow graph.
 - [NUMA/non-uniform memory acces](https://en.wikipedia.org/wiki/Non-uniform_memory_access)

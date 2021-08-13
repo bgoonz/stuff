@@ -1,5 +1,5 @@
 var utils = {
-    doSomething: function() {
-        return true;
-    }
-}
+  doSomething: function () {
+    return true;
+  },
+};

@@ -64,10 +64,7 @@
     "UsernsMode": "",
     "ShmSize": 67108864,
     "Runtime": "runc",
-    "ConsoleSize": [
-      0,
-      0
-    ],
+    "ConsoleSize": [0, 0],
     "Isolation": "",
     "CpuShares": 0,
     "Memory": 0,
@@ -121,9 +118,7 @@
     "Image": "rohan/memcached-mini:latest",
     "Volumes": null,
     "WorkingDir": "",
-    "Entrypoint": [
-      "memcached"
-    ],
+    "Entrypoint": ["memcached"],
     "OnBuild": null,
     "Labels": {}
   },

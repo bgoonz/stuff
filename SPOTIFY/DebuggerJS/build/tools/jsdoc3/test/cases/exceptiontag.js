@@ -1,20 +1,14 @@
 /**
     @throws {InvalidArgumentException}
 */
-function foo(x) {
-    
-}
+function foo(x) {}
 
 /**
     @exception Will throw an error if argument is null.
 */
-function bar(x) {
-    
-}
+function bar(x) {}
 
 /**
     @exception {DivideByZero} Argument x must be non-zero.
 */
-function pez(x) {
-    
-}
+function pez(x) {}

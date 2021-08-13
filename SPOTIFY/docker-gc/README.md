@@ -9,26 +9,24 @@
 
 Consider using [`docker system prune`][prune] instead.
 
-
-* [Building](#building)
-* [Installing](#installing)
-* [Usage](#usage)
-  * [Excluding Images From Garbage Collection](#excluding-images-from-garbage-collection)
-  * [Excluding Containers From Garbage Collection](#excluding-containers-from-garbage-collection)
-  * [Running as a Docker Image](#running-as-a-docker-image)
-    * [Build the Docker Image](#build-the-docker-image)
-    * [Running as a Docker Container](#running-as-a-docker-container)
+- [Building](#building)
+- [Installing](#installing)
+- [Usage](#usage)
+  - [Excluding Images From Garbage Collection](#excluding-images-from-garbage-collection)
+  - [Excluding Containers From Garbage Collection](#excluding-containers-from-garbage-collection)
+  - [Running as a Docker Image](#running-as-a-docker-image)
+    - [Build the Docker Image](#build-the-docker-image)
+    - [Running as a Docker Container](#running-as-a-docker-container)
 
 A simple Docker container and image garbage collection script.
 
-* Containers that exited more than an hour ago are removed.
-* Images that don't belong to any remaining container after that are removed.
-* Optionally, remove volumes that are not associated to any remaining container after removal (Available only for docker >= 1.9.0)
+- Containers that exited more than an hour ago are removed.
+- Images that don't belong to any remaining container after that are removed.
+- Optionally, remove volumes that are not associated to any remaining container after removal (Available only for docker >= 1.9.0)
 
 Although docker normally prevents removal of images that are in use by
 containers, we take extra care to not remove any image tags (e.g., ubuntu:14.04,
-busybox, etc) that are in use by containers. A naive `docker rmi $(docker images
--q)` will leave images stripped of all tags, forcing docker to re-pull the
+busybox, etc) that are in use by containers. A naive `docker rmi $(docker images -q)` will leave images stripped of all tags, forcing docker to re-pull the
 repositories when starting new containers even though the images themselves are
 still on disk.
 
@@ -36,7 +34,6 @@ This script is intended to be run as a cron job, but you can also run it as a Do
 container (see [below](#running-as-a-docker-container)).
 
 ## Building the Debian Package
-
 
 ```sh
 sudo apt-get install git devscripts debhelper build-essential dh-make
@@ -46,7 +43,6 @@ debuild -us -uc -b
 ```
 
 If you get lintian errors during `debuild`, try `debuild --no-lintian -us -uc -b`.
-
 
 ## Installing the Debian Package
 
@@ -75,22 +71,22 @@ To use the script manually, run `docker-gc`. The system user under
 which `docker-gc` runs needs to have read and write access to
 the `$STATE_DIR` environment variable which defaults to `/var/lib/docker-gc`.
 
-
 ### Excluding Images From Garbage Collection
 
 There can be images that are large that serve as a common base for
 many application containers, and as such, make sense to pin to the
-machine, as many derivative containers will use it.  This can save
-time in pulling those kinds of images.  There may be other reasons to
-exclude images from garbage collection.  To do so, create
+machine, as many derivative containers will use it. This can save
+time in pulling those kinds of images. There may be other reasons to
+exclude images from garbage collection. To do so, create
 `/etc/docker-gc-exclude`, or if you want the file to be read from
 elsewhere, set the `EXCLUDE_FROM_GC` environment variable to its
-location.  This file can contain image name patterns (in the `grep`
+location. This file can contain image name patterns (in the `grep`
 sense), one per line, such as `spotify/cassandra:latest` or it can
 contain image ids (truncated to the length shown in `docker images`
 which is 12.
 
 An example image excludes file might contain:
+
 ```
 spotify/cassandra:latest
 redis:.*
@@ -107,6 +103,7 @@ variable to its location. This file should contain name patterns (in
 the `grep` sense), one per line, such as `mariadb-data`.
 
 An example container excludes file might contain:
+
 ```
 mariadb-data
 drunk_goodall
@@ -144,8 +141,8 @@ with `MINIMUM_IMAGES_TO_SAVE=10`.
 ### Forcing deletion of containers
 
 By default, if an error is encountered when cleaning up a container, Docker
-will report the error back and leave it on disk.  This can sometimes lead to
-containers accumulating.  If you run into this issue, you can force the removal
+will report the error back and leave it on disk. This can sometimes lead to
+containers accumulating. If you run into this issue, you can force the removal
 of the container by setting the environment variable below:
 
 ```
@@ -163,12 +160,12 @@ GRACE_PERIOD_SECONDS=86400 docker-gc
 This setting also prevents the removal of images that have been created less than `GRACE_PERIOD_SECONDS` seconds ago.
 
 ### Dry run
+
 By default, docker-gc will proceed with deletion of containers and images. To test your command-line options set the `DRY_RUN` variable to override this default.
 
 ```
 DRY_RUN=1 docker-gc
 ```
-
 
 ## Running as a Docker Image
 
@@ -178,12 +175,13 @@ the container will start up, run a single garbage collection, and shut down.
 The image is published as `spotify/docker-gc`.
 
 #### Building the Docker Image
+
 The image is currently built with Docker 17.09.0-ce, but to build it against a newer
 Docker version (to ensure that the API version of the command-line interface
 matches with your Docker daemon), simply edit [the `ENV DOCKER_VERSION` line in
-`Dockerfile`][dockerfile-ENV] prior to the build step below.
+`Dockerfile`][dockerfile-env] prior to the build step below.
 
-[dockerfile-ENV]: https://github.com/spotify/docker-gc/blob/fd6640fa8c133de53a0395a36e8dcbaf29842684/Dockerfile#L3
+[dockerfile-env]: https://github.com/spotify/docker-gc/blob/fd6640fa8c133de53a0395a36e8dcbaf29842684/Dockerfile#L3
 
 Build the Docker image with `make -f Makefile.docker image` or:
 

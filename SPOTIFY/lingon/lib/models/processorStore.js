@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var path = require('path');
+var path = require("path");
 
 // The actual processor store
 var ProcessorStore = function (processors) {
@@ -35,7 +35,7 @@ ProcessorStore.prototype.get = function (extension, file) {
 // Helper function to add new processor pipes
 var addProcessor = function (arrayModifierFn, extension, fileMatches, factory) {
   fileMatches = fileMatches || null;
-  if (typeof fileMatches === 'function') {
+  if (typeof fileMatches === "function") {
     factory = fileMatches;
     fileMatches = null;
   }
@@ -58,12 +58,12 @@ ProcessorStore.prototype.set = function (extension, fileMatches, factory) {
 
 // Appends a processor pipe for the given file extension
 ProcessorStore.prototype.push = function (extension, fileMatches, factory) {
-  return addProcessor.call(this, 'push', extension, fileMatches, factory);
+  return addProcessor.call(this, "push", extension, fileMatches, factory);
 };
 
 // Prepends a processor pipe for the given file extension
 ProcessorStore.prototype.unshift = function (extension, fileMatches, factory) {
-  return addProcessor.call(this, 'unshift', extension, fileMatches, factory);
+  return addProcessor.call(this, "unshift", extension, fileMatches, factory);
 };
 
 // Removes a processor pipe for the given file extension
@@ -73,18 +73,19 @@ ProcessorStore.prototype.remove = function (extension, fileMatches, factory) {
       delete this.processors[extension];
     } else {
       var indexToBeDeleted = [];
-      if (typeof fileMatches === 'function') {
+      if (typeof fileMatches === "function") {
         factory = fileMatches;
         fileMatches = null;
       }
 
-      for (var i = this.processors[extension].length; i--;) {
-        var isFileValid = !fileMatches ||
-            (this.processors[extension][i].fileMatches &&
-              this.processors[extension][i].fileMatches
-                .toString() == fileMatches.toString());
-        var isFactoryValid = !factory ||
-            (this.processors[extension][i].pipe === factory);
+      for (var i = this.processors[extension].length; i--; ) {
+        var isFileValid =
+          !fileMatches ||
+          (this.processors[extension][i].fileMatches &&
+            this.processors[extension][i].fileMatches.toString() ==
+              fileMatches.toString());
+        var isFactoryValid =
+          !factory || this.processors[extension][i].pipe === factory;
 
         if (factory && isFactoryValid && fileMatches && isFileValid) {
           indexToBeDeleted.push(i);
@@ -95,7 +96,7 @@ ProcessorStore.prototype.remove = function (extension, fileMatches, factory) {
         }
       }
 
-      for (var j = indexToBeDeleted.length; j--;) {
+      for (var j = indexToBeDeleted.length; j--; ) {
         this.processors[extension].splice(indexToBeDeleted[j], 1);
       }
     }
@@ -118,7 +119,7 @@ ProcessorStoreManager.prototype.get = function (extensions, file) {
   }
 
   var results = [];
-  for (var i = extensions.length; i--;) {
+  for (var i = extensions.length; i--; ) {
     var result = this.store.get(extensions[i], file);
     if (result) {
       results = result.concat(results);
@@ -133,7 +134,7 @@ var setter = function (setterType, extensions, file, factory) {
     extensions = [extensions];
   }
 
-  for (var i = extensions.length; i--;) {
+  for (var i = extensions.length; i--; ) {
     this.store[setterType](extensions[i], file, factory);
   }
 
@@ -141,19 +142,19 @@ var setter = function (setterType, extensions, file, factory) {
 };
 
 ProcessorStoreManager.prototype.set = function (extensions, file, factory) {
-  return setter.call(this, 'set', extensions, file, factory);
+  return setter.call(this, "set", extensions, file, factory);
 };
 
 ProcessorStoreManager.prototype.push = function (extensions, file, factory) {
-  return setter.call(this, 'push', extensions, file, factory);
+  return setter.call(this, "push", extensions, file, factory);
 };
 
 ProcessorStoreManager.prototype.unshift = function (extensions, file, factory) {
-  return setter.call(this, 'unshift', extensions, file, factory);
+  return setter.call(this, "unshift", extensions, file, factory);
 };
 
 ProcessorStoreManager.prototype.remove = function (extensions, file, factory) {
-  return setter.call(this, 'remove', extensions, file, factory);
+  return setter.call(this, "remove", extensions, file, factory);
 };
 
 // @TODO: refactor this function away with the next major release

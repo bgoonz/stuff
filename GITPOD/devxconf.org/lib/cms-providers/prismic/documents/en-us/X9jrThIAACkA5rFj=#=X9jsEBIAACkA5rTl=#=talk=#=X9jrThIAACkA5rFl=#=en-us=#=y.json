@@ -1,9 +1,17 @@
 {
   "title": [
-    { "type": "heading1", "content": { "text": "Is Twitter Good Or Bad For You?", "spans": [] } }
+    {
+      "type": "heading1",
+      "content": { "text": "Is Twitter Good Or Bad For You?", "spans": [] }
+    }
   ],
   "speakers": [
-    { "speaker": { "id": "X9jK8xIAACkA5hoI", "wioUrl": "wio://documents/X9jK8xIAACkA5hoI" } }
+    {
+      "speaker": {
+        "id": "X9jK8xIAACkA5hoI",
+        "wioUrl": "wio://documents/X9jK8xIAACkA5hoI"
+      }
+    }
   ],
   "start": "2020-10-27T18:50:00+00:00",
   "end": "2020-10-27T19:30:00+00:00",

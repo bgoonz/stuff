@@ -1,5 +1,7 @@
 {
-  "name": [{ "type": "heading1", "content": { "text": "Cerere Eetu", "spans": [] } }],
+  "name": [
+    { "type": "heading1", "content": { "text": "Cerere Eetu", "spans": [] } }
+  ],
   "bio": [
     {
       "type": "paragraph",
@@ -10,10 +12,17 @@
     }
   ],
   "uid": "cerere",
-  "title": [{ "type": "heading4", "content": { "text": "Software Engineer", "spans": [] } }],
+  "title": [
+    {
+      "type": "heading4",
+      "content": { "text": "Software Engineer", "spans": [] }
+    }
+  ],
   "twitter": { "url": "https://twitter.com/vercel", "preview": null },
   "github": { "url": "https://github.com/vercel", "preview": null },
-  "company": [{ "type": "heading4", "content": { "text": "Company", "spans": [] } }],
+  "company": [
+    { "type": "heading4", "content": { "text": "Company", "spans": [] } }
+  ],
   "image": {
     "origin": {
       "id": "X9iyAxIAACkA5a1n",
@@ -30,7 +39,10 @@
     "provider": "imgix",
     "thumbnails": {}
   },
-  "talk": { "id": "X9jddRIAACcA5nEu", "wioUrl": "wio://documents/X9jddRIAACcA5nEu" },
+  "talk": {
+    "id": "X9jddRIAACcA5nEu",
+    "wioUrl": "wio://documents/X9jddRIAACcA5nEu"
+  },
   "name_TYPE": "StructuredText",
   "name_POSITION": 0,
   "bio_TYPE": "StructuredText",

@@ -19,6 +19,7 @@ tracking is necessary for soundness. We expect there to be additional future
 features that can make use of this system.
 
 Additional benefits include:
+
 1. HHVM can produce optimizations based on the guarantees described below when utilizing these features.
 2. Provability that an API requesting a unique value is actually given one
 
@@ -27,6 +28,7 @@ Additional benefits include:
 ### The Four States of Ownership
 
 There are four states of ownership:
+
 1. Unowned (The default)
 2. Owned
 3. Borrowed
@@ -38,34 +40,35 @@ Borrowed objects are enforcibly linear, Unowned objects are not, though they may
 be natuarally, and MaybeOwned may or may not be forcibly linear.
 
 Described in terms of the operations allowed on them, the states are as follows:
+
 1. Unowned - The default state in hack. May already have aliases
-(i.e. be nonlinear). May be freely aliased.
+   (i.e. be nonlinear). May be freely aliased.
 2. Borrowed - Cannot be aliased and is a non-owner of the object. The owner
-of the object is a (possibly indirect) caller, so no other code with a reference
-to this object can run until this function returns (or further lends the object
-to a more deeply nested callee). Because of this restriction, we consider the
-object to still be linear in this state. If the caller did not opt in to stricter
-tracking aliases may already exist, but the borrowing code will not make new ones.
-See the next section for more details
+   of the object is a (possibly indirect) caller, so no other code with a reference
+   to this object can run until this function returns (or further lends the object
+   to a more deeply nested callee). Because of this restriction, we consider the
+   object to still be linear in this state. If the caller did not opt in to stricter
+   tracking aliases may already exist, but the borrowing code will not make new ones.
+   See the next section for more details
 3. Owned - Does not have aliases and cannot be aliased. May be lent to a
-(synchronous or immediately awaited async) callee, which preserves the invariant
-that at most one runnable frame has a reference. Can transfer ownership and can
-release ownership, moving the object into the unowned state.
+   (synchronous or immediately awaited async) callee, which preserves the invariant
+   that at most one runnable frame has a reference. Can transfer ownership and can
+   release ownership, moving the object into the unowned state.
 4. MaybeOwned - May be an object in any of the previous 3 states. This state is
-distinct from Borrowed because some features built on ownership tracking (purity
-and const classes) need to allow mutations only on linear (i.e. Owned or
-Borrowed) values. Functions that only need to read from an object will be more
-widely reusable if they receive objects in this state rather than Borrowed.
-See the next section for more details
+   distinct from Borrowed because some features built on ownership tracking (purity
+   and const classes) need to allow mutations only on linear (i.e. Owned or
+   Borrowed) values. Functions that only need to read from an object will be more
+   widely reusable if they receive objects in this state rather than Borrowed.
+   See the next section for more details
 
 As a Table, where LHS is current state, and Column is whether they have a specific
 capability:
 
 |            | Has alias | May alias | May move/disown |
-|:----------:|:---------:|:---------:|:---------------:|
-| Unowned    |   maybe   |    yes    |       no        |
-| Owned      |    no     |    no     |       yes       |
-| Borrowed   |   maybe*  |    no     |       no        |
+| :--------: | :-------: | :-------: | :-------------: |
+|  Unowned   |   maybe   |    yes    |       no        |
+|   Owned    |    no     |    no     |       yes       |
+|  Borrowed  |  maybe\*  |    no     |       no        |
 | MaybeOwned |   maybe   |    no     |       no        |
 
 \* This is a choice for the caller. If they opt in to stricter tracking, then
@@ -75,8 +78,8 @@ Described in terms of what parameters they may be passed to given that
 the parameter is defined to be a specific state:
 
 1. Unowned - Can be passed to Unowned or MaybeOwned. Whether it can pass to
-borrowed depends on whether the caller opts in to stricter tracking. See the
-next section for more details.
+   borrowed depends on whether the caller opts in to stricter tracking. See the
+   next section for more details.
 2. Owned - Can be passed to Borrowed or MaybeOwned, or may transfer ownership to Owned.
 3. Borrowed - Can be passed to Borrowed or MaybeOwned.
 4. MaybeOwned - Can be passed to MaybeOwned.
@@ -86,11 +89,11 @@ to a param of that state (or used as the $this in a method invocation,
 when otherwise permitted):
 
 |            | Unowned | Owned | Borrowed | MaybeOwned |
-|:----------:|:-------:|:-----:|:--------:|:---------:|
-| Unowned    |    yes  |   no  |  maybe*  |    yes    |
-| Owned      |    no   | moved |   yes    |    yes    |
-| Borrowed   |    no   |   no  |   yes    |    yes    |
-| MaybeOwned |    no   |   no  |   no     |    yes    |
+| :--------: | :-----: | :---: | :------: | :--------: |
+|  Unowned   |   yes   |  no   | maybe\*  |    yes     |
+|   Owned    |   no    | moved |   yes    |    yes     |
+|  Borrowed  |   no    |  no   |   yes    |    yes     |
+| MaybeOwned |   no    |  no   |    no    |    yes     |
 
 \* This is a choice for the caller. If they opt in to stricter tracking, then
 Borrowed cannot have an alias. See next section.
@@ -194,8 +197,7 @@ public maybeowned function foo(IFoo $foo): Foo { return new Foo(); }
 
 While it is logically sound for $this to be owned, with ownership transferred to
 the method call, this is not permitted due to runtime considerations. There are
-major issues with `$this` being available via things like stack traces rather
-than just within the method itself. Further, unsetting `$this` is not something
+major issues with `$this`being available via things like stack traces rather than just within the method itself. Further, unsetting`$this` is not something
 the runtime can support at present.
 
 ### Moving Between States
@@ -256,7 +258,6 @@ The `own` keyword may be used to receive an owned value from a function marked
 as returning an owned value. Additionally, if the expression being returned is
 one on which `own` can be used, `own` is also not required, and, in order to
 remain consistent, disallowed:
-
 
 ```
 function returns_owned(): owned Foo {
@@ -404,6 +405,7 @@ function my_function(
 ```
 
 #### Capturing values in closures
+
 Locals that contain Owned, Borrowed or MaybeOwned values cannot be captured as
 that creates an implicit alias, breaking linearity
 
@@ -435,7 +437,7 @@ function captures_owned(
 
 Constructors pose something of an unique problem for ownership tracking. In
 order for tracking to work, one must be allowed to `own` the result of a
-constructor call. However, if linearity is broken *within* the constructor, then
+constructor call. However, if linearity is broken _within_ the constructor, then
 that no longer holds true.
 
 The solution landed upon is for constructors to be opt-out for linearity instead
@@ -548,7 +550,6 @@ code, we can straightforwardly suggest how to annotate the unannotated code to
 facilitate progress. When annotated code calls annotated code, the error messages
 will be similar to standard type errors where they will explain why the different
 states are incompatible and it will be up to the user to fix them.
-
 
 ## Implementation details
 
@@ -704,11 +705,12 @@ This is another example of the discussion above regarding requiring linearity
 for the purpose of mutability.
 
 In the experimental version, there are 4 states of mutability:
+
 1. Immutable (the default) - an immutable nonlinear value
-2. Owned Mutable -  an owned linear value that is mutable
+2. Owned Mutable - an owned linear value that is mutable
 3. Borrowed Mutable - a borrowed linear value that is mutable
 4. Maybe Mutable - a value that may or may not be linear, so is immutable but also
-must be treated as if it was linear.
+   must be treated as if it was linear.
 
 The states of this proposal can replace the previous states 1-1:
 Immutable -> unowned
@@ -718,6 +720,7 @@ Maybe Mutable -> MaybeOwned
 
 If Purity is rewritten to use the ownership annotations, it must only add
 the 2 rules, everything else directly falls out of this proposal.
+
 1. Only Owned or Borrowed objects may be mutated.
 2. Value types may always be mutated.
 
@@ -833,17 +836,17 @@ Note, however, that the initial plan is to have the system implicitly back both
 disposables and the experimental Reactivity/Purity syntax under the hood,
 so we should hopefully know prior to full rollout if revert is necessary.
 
-
 ## Design rationale and alternatives
 
 This design was created under a few basic principles:
+
 1. Opt-in feeling: It is important for a large codebase that this need not be the default
 2. Usability: The states are not conceptually difficult and hack-errors can
-be used to direct newcomers towards correct patterns, as situations of the
-form "You are doing A, which is wrong, but B would be OK" are common.
+   be used to direct newcomers towards correct patterns, as situations of the
+   form "You are doing A, which is wrong, but B would be OK" are common.
 3. HHVM Enforceability and efficiency: In order to be used for optimizations,
-HHVM must be confident of the guarantees. Therefore, it must be enforceable.
-Therefore, it must be efficient.
+   HHVM must be confident of the guarantees. Therefore, it must be enforceable.
+   Therefore, it must be efficient.
 
 This is a completely new segment of the language such that attempting to do this
 via existing features is a nonstarter.
@@ -876,7 +879,7 @@ return $this for the purpose of chaining.
 
 An alternative to the `disown` keyword is to use `release`. Bikeshedding welcome.
 
-The __ReturnsBorrowedThis attribute is technically unecessary as the emitter
+The \_\_ReturnsBorrowedThis attribute is technically unecessary as the emitter
 can infer when it would be required and handle the situation appropriately. We
 think it's better to be explicit here.
 
@@ -937,6 +940,7 @@ for representation of borrowed. It's more similar to haskel's polymorphism due
 to its lack of a borrowed state.
 
 Also, from another paper or note:
+
 > Uniqueness types, in Idris, are being replaced by linear types
 
 #### Papers on the subject:
@@ -952,6 +956,7 @@ disposables, and general alias management and concept encapsulation.
 
 Three major concepts: `read` `unique` and `free` where `read` is similar to const,
 and the other two are about whether aliases are allowed.
+
 > A variable z many be unrestricted, read, unique, free, read and unique, or read and free.
 
 Interestingly, here 'unique' means that there is only one reference to an object
@@ -969,6 +974,7 @@ reference by destructively reading a `unique` heap-based reference. Further,
 `free` refence or assigned into an `unique` one).
 
 I honestly, don't understand this restriction and description.
+
 > If a method receiver is unique, then every parameter and the result must be
 > read or unique or free.
 > Unique is a transitive property. If an object’s acquaintances are aliased,
@@ -999,6 +1005,7 @@ Their main goal is to be able to track mutations for safe concurrent reads, whic
 while not identical to our goals, is more or less translatable.
 
 They concur on our decision to mark misbehaved constructors
+
 > A constructor can keep a reference to the object it is creating in a globally
 > accessible location; not all constructors create unshared objects. Thus a
 > constructor that does create an unshared object should be declared as such.
@@ -1007,7 +1014,8 @@ They concur on our decision to mark misbehaved constructors
 > initializing it. Therefore constructors that “return” unique objects are
 > annotated as having borrowed receiver
 
-Their system of ownership and borrowing seems *very* similar to our own
+Their system of ownership and borrowing seems _very_ similar to our own
+
 > An alias of a variable for our purposes is a variable that refers to the same
 > object as the first variable. This definition is nonstandard, but is convenient
 > for languages such as Java that do not have explicit dereferencing
@@ -1025,6 +1033,7 @@ to an owned object or an unowned object.
 
 However, they further recognize that the existance of a union state of this
 description results in issues with tracking mutations.
+
 > Weakening a uniqueness variant to admit dynamic aliases makes it easier to
 > program with unique variables than with destructive reads alone, but this
 > weakening comes with a cost. One main purpose in avoiding aliasing was to make
@@ -1066,7 +1075,7 @@ to pass to other borrowedly notated states.
 
 This sentence in isolation is somewhat inscrutable. Based on context and later
 descriptions, I believe this is noting that a shared value may pass into a parameter
-declared as accepting borrowed. This seems *potentially* fine considering it's
+declared as accepting borrowed. This seems _potentially_ fine considering it's
 specificalyl stricter, but it doesn't allow making any assumptions about borrowed parameters
 
 > a unique value may be passed to a procedure expecting a shared parameter, but
@@ -1077,6 +1086,7 @@ This seems like a tenuous assertion if you want to statically prove unique
 objects aren't leaking refs.
 
 They further note that
+
 > The analysis also uses an annotation on procedures that indicates which variables it may read
 
 but then never mention this again. I believe this is specifically related to
@@ -1135,6 +1145,7 @@ at a crucial fork and ends up in a place that doesn't quite solve our problems
 [Linear Haskell: Practical Linearity in a Higher-Order Polymorphic Language](https://arxiv.org/pdf/1710.09756.pdf)
 
 A relevant quote:
+
 > Seen as a system of constraints, uniqueness typing is a non-aliasing analysis
 > while linear typing provides a cardinality analysis....The former aims at
 > in-place updates and related optimisations, the latter at inlining and fusion.
@@ -1152,7 +1163,7 @@ to parameters that promise not to store lasting aliases do not cause additional
 problems. They refer to these as `limited`.
 
 They, too, consider `limited` to be a promise rather than a requirement.
-This is contrasted with `unique` parameters that *require* the object passed in
+This is contrasted with `unique` parameters that _require_ the object passed in
 to be unique (and consumed upon passing). This is similar to the concepts by
 Boyland in his above paper (which actually came later than this one).
 
@@ -1162,8 +1173,7 @@ Boyland in his above paper (which actually came later than this one).
 > Limited unique parameters are unaliased within a certain dynamic context and
 > have the properties of both unique and limited parameters
 
-Their `unique` is obviously analogous to our `owned`. limited` is generally
-analogous to our MaybeOwned with `limited unique` being their borrowed.
+Their `unique` is obviously analogous to our `owned`. limited`is generally analogous to our MaybeOwned with`limited unique` being their borrowed.
 
 They additionally consider the possibility of storing unique values within other objects:
 
@@ -1197,6 +1207,7 @@ local/global/both aliases are allow to read and/or write to a reference.
 They make the interesting choice to note receiver state between the fn keyword and the fn name.
 
 This seems unenforceable statically (box being disallows global writes):
+
 > If an actor has a box reference to an object, no alias can be used by other
 > actors to write to that object. This means that other actors may be able to
 > read the object, and aliases in the same actor may be able to write to it
@@ -1219,6 +1230,7 @@ further async methods invoked upon them. Those async methods may see `this` as
 why this distinction makes mutating their inner state safe.
 
 Apparently you can store tag reference to an otherwise iso (global deny, local allow) reference
+
 > a newly created alias of an iso reference must be neither readable nor writeable (i.e. a tag).
 
 At this point, I decided that the system described was significantly more complicated
@@ -1250,6 +1262,7 @@ They consider the concept of "roles", which map to the different set types. This
 is used for the purpose of more abstractly separating (and keeping separate) of sets.
 
 An important quote that also applies to our own system:
+
 > Note that although they are similar, aliasing mode checking and type checking
 > are completely orthogonal. An expression’s aliasing mode correctness implies
 > nothing about its type correctness, and vice versa.
@@ -1260,11 +1273,13 @@ An important quote that also applies to our own system:
 These modes are/work as follows:
 
 arg: The state visible externaly.
+
 > only provide access to the immutable interface of the objects to which they
 > refer. There are no restrictions upon the transfer or use of arg expressions
 > around a program
 
 rep: The state inivisible externally.
+
 > Can change and be changed, can be stored and retrieved from internal containers
 > but can never be exported from the object to which they belong
 
@@ -1273,12 +1288,14 @@ free: Objects with a reference count of exactly 1 (such as recently created obje
 var: "provides a loophole for auxiliary objects which provide weaker aliasing guarantees"
 Works like the default symantics of non-alias checking languages except for the
 assignment compatibility constraints.
+
 > a mutable object which may be aliased. Expressions with mode var may be changed
 > freely, may change asynchronously, and can be passed into or returned from
 > messages sent to objects
 
 val: Value types.
 The following is because their value types are truly immutable rather than COW:
+
 > has the same semantics as the arg mode, however, we have introduced a separate
 > val mode so that explicit arg roles are not required for value types
 
@@ -1290,6 +1307,7 @@ used for any of the others.
 
 They note that depending on the overall API of an object, it may or may not be
 aliased in different ways.
+
 > For example, if an object uses only modes arg, free, and val, it will be a
 > “clean” immutable object, that is, it will implement a referentially transparent
 > value type. If all of an object’s method’s parameters and return values (except
@@ -1369,7 +1387,7 @@ precense of cases that require the feature (i.e. const classes, disposables, and
 This would ensure a tighter rollout that wouldn't affect quite as many
 developers.
 
-Would we want something like class-level where clauses to mark that *all* methods
+Would we want something like class-level where clauses to mark that _all_ methods
 on a class required, for example, borrowed `$this`?
 
 Is `own $f = new Foo();` a viable alternative for creating a newly owned value?
@@ -1394,11 +1412,13 @@ Suggestion: rename "Borrowed" to "Uniquely Borrowed", or "Unaliased"
 Suggestion: rename "Unowned" to "Shared" as it's similar to C++ use cases for
 shared_ptr.
 
-Suggestion: rename "MaybeOwned"  to "Restricted".
+Suggestion: rename "MaybeOwned" to "Restricted".
+
 ```
 function foo(restricted Foo $f): void {}
 public restricted function foo(): void {}
 ```
+
 From the user perspective, it is nonobvious what restricted means here.
 Further, we can imagine that restricted is a bit too vague considering
 potential restrictions other than ownership.
@@ -1420,7 +1440,7 @@ Should we generally re-describe this from `ownership` to `uniqueness`?
 Something like
 Old -> New, Keyword
 Owned -> uniq, `uniq`
-Borrowed -> uniq ref,  `uniq&` / `&uniq`
+Borrowed -> uniq ref, `uniq&` / `&uniq`
 MaybeOwned -> maybe uniq ref, `uniq?&` / `?uniq&` / `?&uniq` etc
 unowned -> nonuniq ref, still no keyword
 with the state-changing operations being `move`, `uniq`, and `share`.
@@ -1458,7 +1478,7 @@ probably utilize the coeffects system to enforce transitivity
 Hack Native has specifically requested we don't close the door on the possibility
 of utilizing this system to globally track Arrays and strings in order to avoid
 the need for refcounting them. The major blocker for this is that for that to
-work, those types would need to *never* be unowned, which would result in a huge
+work, those types would need to _never_ be unowned, which would result in a huge
 usability degredation.
 
 ### Deeper Tracking
@@ -1468,13 +1488,14 @@ area has not been too deeply explored due to our lack of obvious need for it.
 However, were we to add this, here are some considerations:
 
 Some options:
+
 1. We'd have to do something special when you disown the containing object such
-as recursively disowning any properties.
+   as recursively disowning any properties.
 2. Ban disowning such objects (linear forever)
 3. When disowning objects, if they have any props marked as containing owned,
-assert they're null or throw. That would work in the runtime but it would be
-difficult for the typechecker to enforce (since it would have to keep track of
-if every owned prop is null or not).
+   assert they're null or throw. That would work in the runtime but it would be
+   difficult for the typechecker to enforce (since it would have to keep track of
+   if every owned prop is null or not).
 
 Note that we'd have to extend the "passing multiple refs" rule to include
 referencing a prop and the outer object at the same time.
@@ -1485,14 +1506,14 @@ There are a handful of questions that don't fit in the above HIP, but were
 themes among feedback received.
 
 **Q** Should we consider making the unowned -> borrowed conversion opt-in via an
-<<__AllowUnowned>> attribute on the function decl header? This makes the
-system strict _unless_ explicitly opted out.
+<<\__AllowUnowned>> attribute on the function decl header? This makes the
+system strict \_unless_ explicitly opted out.
 
 **A** This makes the system more complicated and is probably the wrong default.
 
-**Q** Do we need a __Soft equivilant?
+**Q** Do we need a \_\_Soft equivilant?
 
-**A** Since unowned can flow into most things, a __Soft doesn't buy much.
+**A** Since unowned can flow into most things, a \_\_Soft doesn't buy much.
 
 **Q** HHVM can produce optimizations based on the guarantees described below when
 utilizing these features. Can I break these guarantees with HH_FIXME, typeholes,
@@ -1521,10 +1542,12 @@ logically owned.
 **Q** why `$f = own new Foo();` instead of `own $f = new Foo();`?
 
 **A** The problem comes into play for things like this:
+
 ```
 function foo(own Foo $f): void { }
 foo(own new Foo());
 ```
+
 For runtime enforcement, we need to correctly forward `owned`ness across
 function boundaries. This may be possible in the case of an explicit `new`,
 but becomes even more complicated in the presence of functions returning owned

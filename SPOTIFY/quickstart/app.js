@@ -1,5 +1,5 @@
-'use strict';
+"use strict";
 
-var quickstart = require('quickstart');
-var config = require('./@config.json');
+var quickstart = require("quickstart");
+var config = require("./@config.json");
 quickstart(config);

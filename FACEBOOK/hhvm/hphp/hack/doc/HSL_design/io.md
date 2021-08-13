@@ -10,22 +10,22 @@ Used in Facebook www in limited places due to ‘experimental’ status.
 
 HSL IO aims:
 
-* to be a 100% replacement for PHP IO builtins functions and and related resources (files, sockets, stdio, etc); it is meant to unblock their removal (among other things), so a 90% solution is not acceptable.
-* to replace or reduce the need for additional HHVM extensions when async clients for network services are needed
-* be a true ‘async-first’ design
-* use the type system for as much safety as possible. For example, files opened read-only do not have ‘write’ methods; this is comparable to Java exposing separate InputBuffer and OutputBuffers.
+- to be a 100% replacement for PHP IO builtins functions and and related resources (files, sockets, stdio, etc); it is meant to unblock their removal (among other things), so a 90% solution is not acceptable.
+- to replace or reduce the need for additional HHVM extensions when async clients for network services are needed
+- be a true ‘async-first’ design
+- use the type system for as much safety as possible. For example, files opened read-only do not have ‘write’ methods; this is comparable to Java exposing separate InputBuffer and OutputBuffers.
 
 It is composed of several new namespaces:
 
-* `HH\Lib\OS`: this is a thin layer exposing the traditional C File-Descriptor-based APIs; minimal changes are made to the C APIs.
-    * Direct usage is *strongly* discouraged: no attempt is made to make APIs hard-to-misuse. For example, if `OS\write("foo")` only writes 1 character, this is considered success, not a failure, and users must check for it - just like in C.
-* `HH\Lib\{File, Unix, TCP}`: functions, classes, and interfaces that are specific to a particular kind of IO ‘handle’.
-* `HH\Lib\{IO, Network}`: functions, classes, and interfaces that are shared or reusable between multiple kinds of IO handles
+- `HH\Lib\OS`: this is a thin layer exposing the traditional C File-Descriptor-based APIs; minimal changes are made to the C APIs.
+  - Direct usage is _strongly_ discouraged: no attempt is made to make APIs hard-to-misuse. For example, if `OS\write("foo")` only writes 1 character, this is considered success, not a failure, and users must check for it - just like in C.
+- `HH\Lib\{File, Unix, TCP}`: functions, classes, and interfaces that are specific to a particular kind of IO ‘handle’.
+- `HH\Lib\{IO, Network}`: functions, classes, and interfaces that are shared or reusable between multiple kinds of IO handles
 
 ## Why a design document:
 
-* While this is not a language change, it will be part of a fundamental change to how Hack programs work: it should eventually replace `php://input`, `php://output`, `print()`, etc. See ‘Future Work’ for details.
-* there are some contentious design issues; **the primary contentious issue is that the user-facing APIs are not ‘disposable-first’.**
+- While this is not a language change, it will be part of a fundamental change to how Hack programs work: it should eventually replace `php://input`, `php://output`, `print()`, etc. See ‘Future Work’ for details.
+- there are some contentious design issues; **the primary contentious issue is that the user-facing APIs are not ‘disposable-first’.**
 
 This document is **not** intended to be a full API design review of the library; however, for completeness, the full APIs can be reviewed in the documentation at https://docs.hhvm.com/hsl-experimental/reference/
 
@@ -33,24 +33,24 @@ This document is **not** intended to be a full API design review of the library;
 
 The primary motivations are:
 
-* async support: this is already needed by projects such as HHAST, and is desired externally to allow replacing the PHP redis extension with an async library.
-* portable, reliable error detection and handling. The PHP builtins return false and log a warning, while `posix_get_last_error()` , `posix_errno()`, and `socket_last_error()` are unreliable, especially when async or CLI server mode is being used; they also depend on mutable global state.
-* it is a necessary step in the removal of PHP `resource` types; file/stream/socket resources have observable destructor-like behavior
+- async support: this is already needed by projects such as HHAST, and is desired externally to allow replacing the PHP redis extension with an async library.
+- portable, reliable error detection and handling. The PHP builtins return false and log a warning, while `posix_get_last_error()` , `posix_errno()`, and `socket_last_error()` are unreliable, especially when async or CLI server mode is being used; they also depend on mutable global state.
+- it is a necessary step in the removal of PHP `resource` types; file/stream/socket resources have observable destructor-like behavior
 
 Additional motivations are:
 
-* type system: with current PHP APIs, files, mysql connections, streams, curl handles all share the same `resource` type
-* type system: `T | false` return types are prevalent and not supported by the Hack type system.
-* consistency: sockets are sometimes stream resources, sometimes socket resources, depending on how they are created. Each has different limitations
+- type system: with current PHP APIs, files, mysql connections, streams, curl handles all share the same `resource` type
+- type system: `T | false` return types are prevalent and not supported by the Hack type system.
+- consistency: sockets are sometimes stream resources, sometimes socket resources, depending on how they are created. Each has different limitations
 
 ## Prioritization factors:
 
 Making HSL IO built-in will unblock work on:
 
-* removing PHP IO primitives
-* redesigning the entrypoint API - for example, removing `STDIN`, `STDOUT`, `php://input`, `php://output`
-    * this in turn currently blocks removal of PHP globals
-    * this is a soft-blocker on adding a friendly, type-safe alternative to the current xbox parallelism APIs
+- removing PHP IO primitives
+- redesigning the entrypoint API - for example, removing `STDIN`, `STDOUT`, `php://input`, `php://output`
+  - this in turn currently blocks removal of PHP globals
+  - this is a soft-blocker on adding a friendly, type-safe alternative to the current xbox parallelism APIs
 
 # User experience:
 
@@ -108,17 +108,16 @@ if ($stdin is IO\FDHandle) {
 }
 ```
 
-
 `$file` is a `File\CloseableWriteHandle`; in turn, this is an `IO\CloseableSeekableWriteHandle` and:
 
-* an `IO\Handle`: this is an empty base interface
-* an `IO\CloseableHandle`: an `IO\Handle` with `close()`; currently, all concrete `IO\Handle`s are closeable, but others have been suggested in the past; e.g. a `IO\server_error()` handle returning process STDERR; an individual request should not be able to close HHVM server stderr.
-* a  `IO\WritableHandle` and an `IO\SeekableHandle`
-* an `IO\FDHandle`: this is the integration point with the `OS\` namespace: this means that:
-    * `$file->getFileDescriptor()` is available and returns an `OS\FileDescriptor`
-    * The majority of operations (e.g. writing) are implemented using `OS\` functions, e.g. `writeAllAsync()` is implemented with `OS\write()`  and `OS\poll_async()`
+- an `IO\Handle`: this is an empty base interface
+- an `IO\CloseableHandle`: an `IO\Handle` with `close()`; currently, all concrete `IO\Handle`s are closeable, but others have been suggested in the past; e.g. a `IO\server_error()` handle returning process STDERR; an individual request should not be able to close HHVM server stderr.
+- a `IO\WritableHandle` and an `IO\SeekableHandle`
+- an `IO\FDHandle`: this is the integration point with the `OS\` namespace: this means that:
+  - `$file->getFileDescriptor()` is available and returns an `OS\FileDescriptor`
+  - The majority of operations (e.g. writing) are implemented using `OS\` functions, e.g. `writeAllAsync()` is implemented with `OS\write()` and `OS\poll_async()`
 
-`$conn` is also a  `Closeable`, `Writable`, and `FileDescriptor` Handle, but it is not a `Seekable` handle.
+`$conn` is also a `Closeable`, `Writable`, and `FileDescriptor` Handle, but it is not a `Seekable` handle.
 
 These interfaces are best thought of as intersections: a FooBarBazHandle is a FooBarHandle, FooBazHandle, BarBazHandle, FooHandle, BarHandle, and BazHandle. Concretely, a CloseableReadWriteHandle is a CloseableHandle, a ReadHandle, a WriteHandle, a ReadWriteHandle, a CloseableReadHandle, and CloseableWriteHandle. Function authors should aim to describe what functionality they need when restricting input types, and take less specific interface possible - for example, if a function only needs to call `writeAllAsync()`, it should take an `IO\WriteHandle`, not a `File\WriteHandle`
 
@@ -128,25 +127,25 @@ These interfaces are best thought of as intersections: a FooBarBazHandle is a Fo
 
 The majority of `IO\Handle`s are `IO\FDHandles`, built on top of an `OS\FileDescriptor`. This is a native object which is a thin wrapper around the C int file descriptor concept, which ensures that:
 
-* file descriptors are not left open at the end of the request. Refcounting is not observable - if not explicitly closed, file descriptors are closed at the end of the request.
-* they are transferred between the client and server correctly in CLI server mode
-* if a closed FD number is re-used, operations on the original handle will fail, instead of working on the new FD with the same number. This is essential for correctness in a multi-request single-process environment.
+- file descriptors are not left open at the end of the request. Refcounting is not observable - if not explicitly closed, file descriptors are closed at the end of the request.
+- they are transferred between the client and server correctly in CLI server mode
+- if a closed FD number is re-used, operations on the original handle will fail, instead of working on the new FD with the same number. This is essential for correctness in a multi-request single-process environment.
 
 For example, a `writeAllowPartialSuccessAsync()` call ends up being a call to `OS\write($this->fd)`.
 
 `OS\write()` is a very thin Hack wrapper around the native builtin `HH\Lib\_Private\_OS\write()`; the separation of responsibilities is that:
 
-* native functions are responsible for cross-request correctness/isolation
-* everything else is the responsibility of the Hack code
+- native functions are responsible for cross-request correctness/isolation
+- everything else is the responsibility of the Hack code
 
-For example, `_OS\write()` may throw an `_OS\ErrnoException()`, and `OS\write()`  may catch this and instead throw an `OS\FileNotFoundException`; as user-facing exception hierarchy is a very subjective and opinionated area, it is left for the Hack code.
+For example, `_OS\write()` may throw an `_OS\ErrnoException()`, and `OS\write()` may catch this and instead throw an `OS\FileNotFoundException`; as user-facing exception hierarchy is a very subjective and opinionated area, it is left for the Hack code.
 
 Async support for IO`\FDHandle` is built on `O_NONBLOCK`, and libevent/libevent2’s FD support.
 
 The current exception hierarchy is based on Python 3’s work, which appears well received. Concretely, there is:
 
-* `OS\ErrnoException`: this is both a base class, and instantiable when there is not a more specific exception
-* many subclasses for failures that frequently caught, e.g. `OS\AlreadyExistsException`, `OS\IsADirectoryException`, `OS\IsNotADirectoryException`
+- `OS\ErrnoException`: this is both a base class, and instantiable when there is not a more specific exception
+- many subclasses for failures that frequently caught, e.g. `OS\AlreadyExistsException`, `OS\IsADirectoryException`, `OS\IsNotADirectoryException`
 
 While `catch (OS\ErrnoException $e) { switch ($e->getErrno()) { /* ... */ }}` is possible, the hierarchy aims to make this an antipattern in the common case.
 
@@ -160,14 +159,14 @@ Implementing this HIP would require moving the relevant code from Facebook’s w
 
 There were previously strong opinions that all IO handles should be Disposable, and closed when disposed.
 
-### Context: current usage of *“PHP IO”* features is not representative of IO as a whole
+### Context: current usage of _“PHP IO”_ features is not representative of IO as a whole
 
 The vast majority of PHP IO usage in Facebook WWW should be using Disposable-based APIs, specifically APIs focussed on temporary files. However, the majority of IO does not go through PHP IO, or things we usually think of as “the IO library” - it uses dedicated extensions, such as:
 
-* Thrift
-* McRouter
-* MySQL
-* Various FB-proprietary extensions
+- Thrift
+- McRouter
+- MySQL
+- Various FB-proprietary extensions
 
 We aim for HSL IO to be usable for implementing clients instead of extensions for other services that are not currently supported (for example, gRPC, Redis) but solve similar use cases; as such, we should be asking ourselves: “would this design choice prevent us from reimplementing McRouter in Hack using HSL IO?”.
 
@@ -177,19 +176,19 @@ I do not believe that disposable-only Thrift/McRouter/MySQL/<censored> APIs woul
 
 Alternatively: Disposable is a ban on encapsulation.
 
-* this makes them impossible to use as a hidden implementation detail of a higher-level API
-* as such, they can never be an essential part of an API that we expect others to build on
+- this makes them impossible to use as a hidden implementation detail of a higher-level API
+- as such, they can never be an essential part of an API that we expect others to build on
 
 If HSL IO was Disposable-based, and a 100% replacement:
 
-*  a pure Hack async Redis client could not contain a `TCP\Socket` as an implementation detail. Instead, either:
-    * it would need to be passed around to every function, and could not be hidden in a ‘Connection’ object or similar
-    * every operation on Redis would need to open a new TCP connection. This is unacceptable from a performance perspective.
-* TLS/SSL can not be implemented as a wrapper around TCP or Unix IO handles, or other transports. Users would need to explicitly wait for events on the socket handle, pass them (and the socket) on to the TLS handler, and see if any post-TLS state change was observable.
-* `interface Logger { public function logAsync(string $message): Awaitable<void> }` could be implemented in three ways, none of which are practical:
-    * Open and close the file descriptor inside that method every time `logAsync()` is called; this is unacceptable performance-wise even for local files, and definitely for networked logging services.
-    * Take any necessary IO handles as `<<__AcceptDisposable>> IO\WriteHandle` parameters. This is bad for usability, prevents implementation hiding, and requires a codemod to add an extra arg to every callsite if we ever want to log to two places (e.g. when migrating logging frameworks).
-    * Discard the log message, without displaying or saving
+- a pure Hack async Redis client could not contain a `TCP\Socket` as an implementation detail. Instead, either:
+  - it would need to be passed around to every function, and could not be hidden in a ‘Connection’ object or similar
+  - every operation on Redis would need to open a new TCP connection. This is unacceptable from a performance perspective.
+- TLS/SSL can not be implemented as a wrapper around TCP or Unix IO handles, or other transports. Users would need to explicitly wait for events on the socket handle, pass them (and the socket) on to the TLS handler, and see if any post-TLS state change was observable.
+- `interface Logger { public function logAsync(string $message): Awaitable<void> }` could be implemented in three ways, none of which are practical:
+  - Open and close the file descriptor inside that method every time `logAsync()` is called; this is unacceptable performance-wise even for local files, and definitely for networked logging services.
+  - Take any necessary IO handles as `<<__AcceptDisposable>> IO\WriteHandle` parameters. This is bad for usability, prevents implementation hiding, and requires a codemod to add an extra arg to every callsite if we ever want to log to two places (e.g. when migrating logging frameworks).
+  - Discard the log message, without displaying or saving
 
 ### ‘Virality’
 
@@ -199,14 +198,13 @@ Using the previous `Logger` example: if we make the IO handle a parameter, any c
 
 If the common ‘controller’ pattern is used:
 
-* due to the composition restrictions, this must be an explicit parameter to every single method
-* if those composition restrictions were weakened to allow disposables to contain other disposables, there seem to be two approaches:
-    * add a disposable ‘callcontext’ parameter to every method instead of needing the IO handle to be its’ own parameter
-    * make every controller disposable, and likely the majority of the call stack in both directions; store the ‘callcontext’ as a property
-* both are substantial changes to code structure, and will lead to a large amount of boilerplate
+- due to the composition restrictions, this must be an explicit parameter to every single method
+- if those composition restrictions were weakened to allow disposables to contain other disposables, there seem to be two approaches:
+  - add a disposable ‘callcontext’ parameter to every method instead of needing the IO handle to be its’ own parameter
+  - make every controller disposable, and likely the majority of the call stack in both directions; store the ‘callcontext’ as a property
+- both are substantial changes to code structure, and will lead to a large amount of boilerplate
 
-
-For some use cases (e.g. live stream uploads), it *must* be possible to access raw IO streams for POST data; this means that the web controller stack would have similar needs to the hypothetical logger case.
+For some use cases (e.g. live stream uploads), it _must_ be possible to access raw IO streams for POST data; this means that the web controller stack would have similar needs to the hypothetical logger case.
 
 ### An alternative: special cases
 
@@ -220,11 +218,11 @@ This could be avoided by implementing a special API to ‘strip’ d
 
 ### An alternative: ‘leases’
 
-Instead of the disposable actually controlling open/close, it could be an indirect reference to the *real* IO handle (similar to a shared_ptr). This would address:
+Instead of the disposable actually controlling open/close, it could be an indirect reference to the _real_ IO handle (similar to a shared_ptr). This would address:
 
-* the ‘every method call needs a reconnect/reopen’ problem
-* the ‘pass stderr/a log device to every function’ problem
-* the ‘if I don’t get passed stderr, but get it from a global accessor, a disposable for stderr in my function, and it’s disposed, have I just closed it for every other function?’ problem
+- the ‘every method call needs a reconnect/reopen’ problem
+- the ‘pass stderr/a log device to every function’ problem
+- the ‘if I don’t get passed stderr, but get it from a global accessor, a disposable for stderr in my function, and it’s disposed, have I just closed it for every other function?’ problem
 
 This is not actually a solution for Disposable-based IO handles: it is equivalent to “not Disposable-based” as it requires there to be an underlying non-disposable IO handle backing this, and requires it to be possible to acquire one from a disposable, removing the desired safety.
 
@@ -295,8 +293,8 @@ An early version of HSL IO did not have read-write handles; instead, you could h
 
 This feature was removed and replaced with ReadWrite handles as there is not adequate portable support in libc:
 
-* opening the resource twice, in different modes, is not possible for some kinds of FDs
-* if split with the C `dup()` call, they are not truly independent, and behavior various by platform. For example, a `seek()` on the ‘read’ FD may also seek the ‘write’ FD.
+- opening the resource twice, in different modes, is not possible for some kinds of FDs
+- if split with the C `dup()` call, they are not truly independent, and behavior various by platform. For example, a `seek()` on the ‘read’ FD may also seek the ‘write’ FD.
 
 # Prior art:
 
@@ -335,16 +333,16 @@ Java IO is similar to HSL IO for handling of read (via `InputStream`), write (vi
 - `var_dump()`, `print_r()`, etc: setting `O_NONBLOCK` on stderr breaks a lot of debugging utiltities, especially with large outputs. Should they set `O_NONBLOCK off temporarily, or should they be async, or hidden `HH\Asio\join`?
 
 - What do we ‘encourage’ in www, e.g. via namespace aliasing?
-  * `IO\`: yes, especially the interfaces
-  * `OS\`: yes: while the functions in this namespace should very rarely be used directly, the exception classes should, and this is the correct place for them
-  * `File\`: maybe; we may want to only encourage wrappers instead, e.g. restricting what paths can be opened.
-  * `TCP\`, `Unix\`, `Network\`: yes: these will be rarely used, but are so niche that it is unlikely that general-purpose wrappers will be written.
+  - `IO\`: yes, especially the interfaces
+  - `OS\`: yes: while the functions in this namespace should very rarely be used directly, the exception classes should, and this is the correct place for them
+  - `File\`: maybe; we may want to only encourage wrappers instead, e.g. restricting what paths can be opened.
+  - `TCP\`, `Unix\`, `Network\`: yes: these will be rarely used, but are so niche that it is unlikely that general-purpose wrappers will be written.
 
 # Future possibilities:
 
 ## Entrypoint API
 
-In order to remove the PHP STDIN, STDOUT, STDERR constants, $_POST, $_GET and similar, we need to define a replacement. This should be built on HSL IO, and will effectively tie all Hack programs to some aspects of HSL IO’s design - in particular, if HSL IO handles were disposable, this would apply severe constraints to the design of Hack programs.
+In order to remove the PHP STDIN, STDOUT, STDERR constants, $\_POST, $\_GET and similar, we need to define a replacement. This should be built on HSL IO, and will effectively tie all Hack programs to some aspects of HSL IO’s design - in particular, if HSL IO handles were disposable, this would apply severe constraints to the design of Hack programs.
 
 Suggestions have included:
 
@@ -382,29 +380,29 @@ While the specific API does not matter at this point, this both constrains - and
 
 IO `resource`s inherited from PHP are:
 
-* one of the remaining cases of observable refcounting/destructor-like behavior
-* poorly typed: it should be a type error to pass a file resource to curl_exec when a curl handle is expected
+- one of the remaining cases of observable refcounting/destructor-like behavior
+- poorly typed: it should be a type error to pass a file resource to curl_exec when a curl handle is expected
 
 Once HSL IO is built-in, we can start to remove these.
 
-* removing the PHP builtin STDIN, STDOUT, STDERR constants will be possible when a new entrypoint API is agreed on; that will potentially allow complete removal of the ‘PlainFile’ resource type too
-* removing further resource types will be possible as HSL IO is extended, in particular with TLS and subprocess support.
+- removing the PHP builtin STDIN, STDOUT, STDERR constants will be possible when a new entrypoint API is agreed on; that will potentially allow complete removal of the ‘PlainFile’ resource type too
+- removing further resource types will be possible as HSL IO is extended, in particular with TLS and subprocess support.
 
 ## Denotable intersection types
 
 There are various operations that are only appropriate for some handles, e.g.:
 
-* read()
-* write()
-* seek()
-* getpeername()
+- read()
+- write()
+- seek()
+- getpeername()
 
 Each set of related operations is represented by an interface, e.g.:
 
-* `IO\ReadHandle`
-* `IO\WriteHandle`
-* `IO\SeekableHandle`
-* `Network\Socket`
+- `IO\ReadHandle`
+- `IO\WriteHandle`
+- `IO\SeekableHandle`
+- `Network\Socket`
 
 As mentioned in ‘user experience’, each combination needs its’ own interface in order to be usable as a parameter type; for example, if a function needs to read, write, and seek, it takes an `IO\SeekableReadWriteHandle`.
 
@@ -412,14 +410,13 @@ Early versions of HSL IO contained manual definitions of the ‘reasonable’ co
 
 There have been requests/suggestions for additional interfaces, e.g.:
 
-* TruncatableHandle
-* RewindableHandle as distinct to Seekable
-* DisposableHandle
+- TruncatableHandle
+- RewindableHandle as distinct to Seekable
+- DisposableHandle
 
 If these (or any other 3) were added, there would be 245 generated interfaces; if 5 were added, we’d get to 1010. This is not scalable.
 
 We will either need to be extremely selective about what new interfaces are added, or we will need a new way to represent these types. Denotable intersection types are the clearest fit, as these empty interfaces are effectively defining intersections:
-
 
 ```
 - interface ReadWriteHandle extends ReadHandle, WriteHandle {}
@@ -430,13 +427,13 @@ The main advantage is that the intersections do not need to be predefined: curre
 
 If denotable intersection types were supported:
 
-* if `IO\SeekableReadHandle` was defined as an intersection, it would not need to be explicitly present in the type hierarchy of the concrete implementations
-* `IO\SeekableReadHandle` does not need to be predefined: a function could take a `IO\SeekableHandle & IO\ReadHandle` parameter instead.
+- if `IO\SeekableReadHandle` was defined as an intersection, it would not need to be explicitly present in the type hierarchy of the concrete implementations
+- `IO\SeekableReadHandle` does not need to be predefined: a function could take a `IO\SeekableHandle & IO\ReadHandle` parameter instead.
 
 This would:
 
-* greatly simplify the type hierarchy (below)
-* allow decisions about interfaces to be made purely on the usability/correctness merits
+- greatly simplify the type hierarchy (below)
+- allow decisions about interfaces to be made purely on the usability/correctness merits
 
 ### The type hierarchy of a read-write file handle without denotable intersection types
 
@@ -484,8 +481,8 @@ using $f = new File('/tmp/bar');
 
 This should be a separate HIP, but I believe it would be the best approach:
 
-* no need for 2x the classes/interfaces: good for maintainability and discoverability
-* good for discoverability: only one API
+- no need for 2x the classes/interfaces: good for maintainability and discoverability
+- good for discoverability: only one API
 
 There is one major issue with this concept though:
 
@@ -501,4 +498,4 @@ takes_rh($f); // error?
 ```
 
 Error: it is being used as a disposable, so should act like one
-No error:  IOptionallyDisposable would primarily be useful for convenience; it should not be considered an ‘ownership’ model. As such, it is likely that `__dispose()` calls another public method (like `close()`), so if something keeps hold of the handle after __dispose was called, it may be in a bad state, but this state would be reachable even if it wasn’t disposable.
+No error: IOptionallyDisposable would primarily be useful for convenience; it should not be considered an ‘ownership’ model. As such, it is likely that `__dispose()` calls another public method (like `close()`), so if something keeps hold of the handle after \_\_dispose was called, it may be in a bad state, but this state would be reachable even if it wasn’t disposable.

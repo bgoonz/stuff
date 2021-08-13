@@ -15,9 +15,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { Job, Sponsor, Stage, Speaker } from '@lib/types';
+import { Job, Sponsor, Stage, Speaker } from "@lib/types";
 
-const API_URL = 'https://gapi.storyblok.com/v1/api';
+const API_URL = "https://gapi.storyblok.com/v1/api";
 const API_TOKEN = process.env.STORYBLOK_PREVIEW_TOKEN;
 
 /**
@@ -29,15 +29,15 @@ const API_TOKEN = process.env.STORYBLOK_PREVIEW_TOKEN;
 function transformResponse(response: any[], _speakers?: any) {
   const content = response.map((r: any) => (r.content ? r.content : r));
   content.map((item: any) => {
-    Object.keys(item).map(key => {
+    Object.keys(item).map((key) => {
       // assign the urls directly if not an image
-      const noAssign = ['image', 'logo', 'cardImage'];
+      const noAssign = ["image", "logo", "cardImage"];
       if (item[key].url && noAssign.indexOf(key) === -1) {
         item[key] = item[key].url;
       }
 
       // remove nesting from schedule and assign speakers
-      if (key === 'schedule') {
+      if (key === "schedule") {
         item[key] = item[key].map((slot: { content: any; speaker: any }) => {
           slot = slot.content;
           const speakers = _speakers?.filter(
@@ -53,24 +53,27 @@ function transformResponse(response: any[], _speakers?: any) {
   return content;
 }
 
-async function fetchCmsAPI(query: string, { variables }: { variables?: Record<string, any> } = {}) {
+async function fetchCmsAPI(
+  query: string,
+  { variables }: { variables?: Record<string, any> } = {}
+) {
   const res = await fetch(API_URL, {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
-      Token: `${API_TOKEN}`
+      "Content-Type": "application/json",
+      Token: `${API_TOKEN}`,
     },
     body: JSON.stringify({
       query,
-      variables
-    })
+      variables,
+    }),
   });
 
   const json = await res.json();
   if (json.errors) {
     // eslint-disable-next-line no-console
     console.error(json.errors);
-    throw new Error('Failed to fetch API');
+    throw new Error("Failed to fetch API");
   }
 
   return json.data;

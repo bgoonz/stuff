@@ -1,3 +1,3 @@
-var lib = function() {
-  console.log('A lib function');
-}
+var lib = function () {
+  console.log("A lib function");
+};

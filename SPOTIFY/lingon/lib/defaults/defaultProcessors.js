@@ -1,10 +1,10 @@
-'use strict';
+"use strict";
 
-var ejs          = require('gulp-ejs');
-var less         = require('gulp-less');
-var markdown     = require('gulp-markdown');
-var es           = require('event-stream');
-var streamHelper = require('../utils/stream');
+var ejs = require("gulp-ejs");
+var less = require("gulp-less");
+var markdown = require("gulp-markdown");
+var es = require("event-stream");
+var streamHelper = require("../utils/stream");
 
 module.exports = {
   pre: {
@@ -20,11 +20,11 @@ module.exports = {
             stream = stream.pipe(ejs(obj));
 
             var returnedFile = null;
-            stream.on('data', function (file) {
+            stream.on("data", function (file) {
               returnedFile = file;
             });
 
-            stream.on('end', function () {
+            stream.on("end", function () {
               cb(null, returnedFile);
             });
           });

@@ -16,8 +16,8 @@ This HIP presents feature that overlays a coeffect system into the Hack type sys
 
 Several important in-progress language features require us to alter behavior dependent on the executing context. Examples of this include:
 
-* **Context Implicit Purpose Policies (CIPP)**: Inside of a CIPP context, there are stricter rules about how data can be handled in order to ensure their purposes are maintained.
-* **Purity/Reactivity:** In a pure/reactive context, the programmer cannot access global data nor mutate external references in order to achieve enforced determinism.
+- **Context Implicit Purpose Policies (CIPP)**: Inside of a CIPP context, there are stricter rules about how data can be handled in order to ensure their purposes are maintained.
+- **Purity/Reactivity:** In a pure/reactive context, the programmer cannot access global data nor mutate external references in order to achieve enforced determinism.
 
 In order to support execution contexts with different permissions/restrictions, we propose adding **Contextual Effects (Coeffects)** to the Hack type system. Coeffects are expressive enough to support generalized execution scopes while also lending themselves nicely to syntactic sugar that will make them easy to use and require minimal changes to typechecker internals.
 
@@ -314,7 +314,7 @@ The invocation of `pp_coinflip` from `pure_fun` is obviously unsafe, as invoking
 ## Subtyping & Hierarchies
 
 Semantically, capabilities work as if they were required parameters
-to functions, and are thus contravariant.  This means that, for example,
+to functions, and are thus contravariant. This means that, for example,
 a closure that requires a `[rand]` or `[]` (pure) context may be passed
 where the expected type is a function that requires `[rand, io]`.
 (The converse is disallowed because that would mean giving an
@@ -346,7 +346,7 @@ In the above, the contexts on the methods in `Parent` and `Child` are required f
 
 In reality, there may also exist a subtyping relationship between
 capabilities; suppose that a new capability `FileInput` is defined.
-Since reading from a file does *not* preclude one from reading
+Since reading from a file does _not_ preclude one from reading
 a special file such as `/dev/random` on a UNIX-like system,
 the semantic model should conservatively assume that a function
 with capability `FileInput` must also have the `Rand` capability.
@@ -589,14 +589,14 @@ The parameters are automatically looked up and checked during type
 inference of call expressions via the `$#capability` local.
 Coeffect-enforced local operations (such as I/O and throwing)
 look up and check if the `$#local_capability` has the
-appropriate type.  Multiple capabilities are encoded using
+appropriate type. Multiple capabilities are encoded using
 an intersection type, i.e., a capability set `{C1, C2, C3}`
 would be represented as `(C1 & C2 & C3)`, assuming an
 oversimplification (for now) that there exists a one-to-one mapping
-between contexts and same-named types.  In either case,
-the *available* capability needs to be a subtype of the *required*
+between contexts and same-named types. In either case,
+the _available_ capability needs to be a subtype of the _required_
 one in order for type-checking to succeed (note that a set is a
-subtype of any of its supersets).  This way, we reuse existing
+subtype of any of its supersets). This way, we reuse existing
 typing infrastructure, and get subtyping for free.
 
 ```
@@ -622,24 +622,24 @@ function h(/* (A & A2) $#capability */)[A, A2]: void {
 }   //                  available^^^^^^      ^required
 ```
 
-So, a function with a `mixed` coeffect has *none* of the capabilities we define, and can be called by any function. By comparison, a function with a nothing coeffect has every capability, but can only be called by other functions whose coeffect is `nothing`. In practice, we won’t use `nothing`, but rather an intersection type that covers a *default* set of capabilities, namely `defaults`.
+So, a function with a `mixed` coeffect has _none_ of the capabilities we define, and can be called by any function. By comparison, a function with a nothing coeffect has every capability, but can only be called by other functions whose coeffect is `nothing`. In practice, we won’t use `nothing`, but rather an intersection type that covers a _default_ set of capabilities, namely `defaults`.
 
 ### Mapping of contexts to capabilities
 
 The intended place to define new contexts and capabilities is an
-`.hhi` file under `hphp/hack/src/hhi/coeffect`.  In the same directory,
+`.hhi` file under `hphp/hack/src/hhi/coeffect`. In the same directory,
 there is also a GraphViz visualization that concisely describes the
 relationship between contexts and capabilities system in a way
 that may be more understandable to an average Hack developer.
 
-The kind of coeffects coincides with the kind of types.  The syntactic
+The kind of coeffects coincides with the kind of types. The syntactic
 piece `[C1, ..., Cn]` is interpreted during naming as follows. Each
 annotation `Ck` must either be:
 
-* a *fully* namespace-qualified type using the preferred CamelCase naming,
+- a _fully_ namespace-qualified type using the preferred CamelCase naming,
   e.g., `\HH\Capabilities\Rand`;
 
-* or an *unqualified* type representing a *context* using a snake case name,
+- or an _unqualified_ type representing a _context_ using a snake case name,
   e.g., `rand`, which is an alias to one or more of the above
   (multiple types are intersected on the right-hand side)
 
@@ -651,14 +651,13 @@ it provides a general mechanism that facilitates top-down migrations
 In case a context requires and provides multiple capabilities, there
 are two choices:
 
-* declare a (sealed interface) supertype of the desired capabilities; or
-* declare an alias and use intersection types (preferred).
+- declare a (sealed interface) supertype of the desired capabilities; or
+- declare an alias and use intersection types (preferred).
 
 Declaring an alias to an intersection of capabilities (or other
 aliases) is strongly preferred as it allow the requirements to be
 constructible in multiple ways; e.g., if a context `composite_context`
-maps to capabilities (and contexts) `Cap1` (`context1`) and `Cap2
-`(`context2`), then the following code would still work fine as expected,
+maps to capabilities (and contexts) `Cap1` (`context1`) and `Cap2 `(`context2`), then the following code would still work fine as expected,
 
 ```
 function callee()[composite_context]: void {}
@@ -700,16 +699,16 @@ capabilities, the type of `$#local_capability` simplifies to:
 
 This kind of coeffect(s) is tracked orthogonally to the one used to
 enforce calling conventions and they are always sound; no context
-can *unsafely* conjure a capability to perform a local operation.
+can _unsafely_ conjure a capability to perform a local operation.
 
 ### Enforcing calling conventions
 
 To establish calling conventions in the typechecker,
 user-denoted contexts are mapped to two sets of capabilities:
 
-- *C*: intersection of types define by `\HH\Contexts\contextI`
+- _C_: intersection of types define by `\HH\Contexts\contextI`
   (exactly as described in the previous subsection)
-- *Cunsafe*: intersection of types defined by
+- _Cunsafe_: intersection of types defined by
   `\HH\Contexts\Unsafe\contextI`
   (analogous to the above modulo the namespace resolution)
 
@@ -717,12 +716,12 @@ Then the `$#capability` local is typed as `(C & Cunsafe)`;
 intuitively, this means that the set of available capabilities
 for performing a function/method call is the set union of
 the safe and unsafe counterparts of each context, where `mixed`
-corresponds to an empty set (i.e., it is no-op).  Notably,
-this means that usage of a context is *always* sound if the
+corresponds to an empty set (i.e., it is no-op). Notably,
+this means that usage of a context is _always_ sound if the
 underlying type `\HH\Contexts\Unsafe\context = mixed`.
 On the contrary, `\HH\Contexts\Unsafe\context = (C1 & C2)`,
 for example, would mean that the usage of the context is unsound
-as it *unsafely* conjures capabilities `C1` and `C2`,
+as it _unsafely_ conjures capabilities `C1` and `C2`,
 thereby potentially allowing calls into contexts that require
 capabilities `C1` and `C2` that would otherwise not be available.
 
@@ -767,12 +766,13 @@ When a context list is omitted from a lambda, the type-checker
 does not need redefine the two coeffects mentioned above
 (for calling and for performing local operations); instead
 it exploits capturing of `$#capability` and `$#local_capability`
-from the *enclosing scope* (since they are local variables).
+from the _enclosing scope_ (since they are local variables).
 This enables memory and CPU savings during type-checking.
 
 Observe that there is no semantic difference between inheriting
 capabilities on lambda vs capturing (some of) them from the
 enclosing function/method, e.g.:
+
 ```
 function pp_coinflip()[io, rand]: void {
   $coinflip = () ==> { // capture `rand` */
@@ -785,7 +785,7 @@ function pp_coinflip()[io, rand]: void {
 
 Such capturing is disallowed when context list is present
 by merely overwriting the locals with the types resolved
-during the context resolution into capabilities.  Partial
+during the context resolution into capabilities. Partial
 capturing (i.e., capturing some capabilities but explicitly
 requiring others through the context list) is anyway
 discouraged for reasons explained in the [vision document](https://www.internalfb.com/intern/diffusion/FBS/browsefile/master/fbcode/hphp/hack/facebook/vision_docs/tracking_effects_and_coeffects.md):
@@ -816,14 +816,15 @@ Runtime will have a native knowledge of each co-effect. We will not allow co-eff
 These restrictions are in place due to performance and correctness requirements of the implementation. Correctness requirement is presence and absence of some of the enforced co-effects enable usage of various features discussed above and in order to grant access to these features, runtime needs to natively know these co-effects. Performance requirement is that the runtime will need to implement some sort of validation and the number of co-effects present will heavily influence the cost of this check. Specific runtime strategies for this check is discussed in implementation details section.
 
 The runtime will enforce the co-effects as a part of the calling convention. The exact order of these checks is still subject to change as most of these checks do not depend on each other for correctness but for those that do, the runtime will create the best topological sorting of the checks. The list of checks that happen as a part of calling convention are the following in their current order:
-1) Function name resolution
-2) Visibility checks
-3) Inout arity and parity checks
-4) Forbidden dynamic-call checks
-5) Reified generic arity/parity checks
-6) Function parameter arity checks
-7) Co-effect enforcement
-8) Parameter type enforcement
+
+1. Function name resolution
+2. Visibility checks
+3. Inout arity and parity checks
+4. Forbidden dynamic-call checks
+5. Reified generic arity/parity checks
+6. Function parameter arity checks
+7. Co-effect enforcement
+8. Parameter type enforcement
 
 This means that co-effect enforcement errors will be triggered prior to parameter type errors and other similar errors that trigger the error handler. Co-effect enforcement error will trigger a `BadMethodCallException` that can be caught in the userland to recover.
 
@@ -850,10 +851,10 @@ The rules are as follows:
 
 Given a list of coeffects [*concrete<sub>1</sub>*, ... *concrete<sub>n</sub>*, *this::C<sub>1</sub>*, ... *this::C<sub>n</sub>*, *ctx $arg<sub>a</sub>*, ... *ctx $arg<sub>z</sub>*, *$arg<sub>a</sub>::C<sub>1</sub>*, ... *$arg<sub>z</sub>::C<sub>n</sub>*]
 
-* *concrete<sub>k</sub>* -> STATIC<{concrete<sub>k</sub>}>
-* *ctx $arg<sub>k</sub>* -> if *$arg<sub>k</sub>* is the name of argument *i* -> FUN_ARG<*i*>. If no arguments are named *$arg<sub>k</sub>*, raise an error.
-* *$arg<sub>k</sub>::C<sub>l</sub>* -> if *$arg<sub>k</sub>* is the name of argument *i* -> CC_ARG<*i*, *C<sub>l</sub>*>. If no arguments are named *$arg<sub>k</sub>*, raise an error.
-* *this::C<sub>k</sub>* -> CC_THIS<*C<sub>k</sub>*>
+- _concrete<sub>k</sub>_ -> STATIC<{concrete<sub>k</sub>}>
+- _ctx $arg<sub>k</sub>_ -> if _$arg<sub>k</sub>_ is the name of argument _i_ -> FUN*ARG<\_i*>. If no arguments are named _$arg<sub>k</sub>_, raise an error.
+- _$arg<sub>k</sub>::C<sub>l</sub>_ -> if _$arg<sub>k</sub>_ is the name of argument _i_ -> CC*ARG<\_i*, _C<sub>l</sub>_>. If no arguments are named _$arg<sub>k</sub>_, raise an error.
+- _this::C<sub>k</sub>_ -> CC*THIS<\_C<sub>k</sub>*>
 
 Following generation, the STATIC rules are set-unioned into a single rule, and rules are otherwise deduplicated syntactically.
 
@@ -1029,7 +1030,7 @@ Historically, adding enforcement to the runtime (parameter and return type enfor
 2. Have the runtime aware of each possible co-effect: This means that each co-effect must be defined in the runtime.
 3. Have a hard limit on how many co-effects there can be: A bounded set of co-effects may be efficiently enforced in O(1) time, while an unbounded set of co-effects will require O(n) checks on each call. The chosen bound will be influenced by call ABI and implementation specific constraints within the runtime.
 4. Build tracking of more types than we currently do: Currently HHVM does not do any sort of tracking of types for lambdas and type constants. In order to efficiently enforce the above requirements we would need to build such tracking in HHBBC as well as the JIT so that the aforementioned specialized translations can be done. This is, in general, a good direction for the runtime; however, it is also massive amounts of work.
-5. Future co-effects which may influence runtime behavior and have additional correctness requirements: An example to this would be, without going into too much detail, banning memoization of functions that use polymorphic co-effects and co-effect type constants. For co-effects such as cipp, we will be depending on the enforcement to assure correctness for implicit contexts. Since for memoized functions we need to know at JIT time whether to memoize the context or not, and we cannot specialize on this for correctness reasons. Any function that must be memoized along with the context must be annotated with non-polymorphic coeffect list, such as [cipp] and have the __Memoize attribute. Runtime will not need to determine dynamically whether to capture the context during memoization.
+5. Future co-effects which may influence runtime behavior and have additional correctness requirements: An example to this would be, without going into too much detail, banning memoization of functions that use polymorphic co-effects and co-effect type constants. For co-effects such as cipp, we will be depending on the enforcement to assure correctness for implicit contexts. Since for memoized functions we need to know at JIT time whether to memoize the context or not, and we cannot specialize on this for correctness reasons. Any function that must be memoized along with the context must be annotated with non-polymorphic coeffect list, such as [cipp] and have the \_\_Memoize attribute. Runtime will not need to determine dynamically whether to capture the context during memoization.
 6. We will disallow partially forwarding polymorphic co-effects: This is discussed with an example above.
 
 # Motivating usecases
@@ -1105,7 +1106,7 @@ $wrapped_result = Cipp\eval(Policy::MY_POLICY, () ==> {
 # Design rationale and alternatives:
 
 The [vision document on tracking (co)effects](https://www.internalfb.com/intern/diffusion/FBS/browsefile/master/fbcode/hphp/hack/facebook/vision_docs/tracking_effects_and_coeffects.md)
-motivates our decision to use a *capability*-based **coeffect** system
+motivates our decision to use a _capability_-based **coeffect** system
 as opposed to alternatives documented there.
 
 ## Why this needs to be a language feature
@@ -1176,7 +1177,7 @@ function breakit(mixed $fun): void {
 }
 ```
 
-Therefore, we would also require an additional annotation: whether a function type *may* contain a value that would trigger a dynamic invocation error if used directly.
+Therefore, we would also require an additional annotation: whether a function type _may_ contain a value that would trigger a dynamic invocation error if used directly.
 
 In the above case, something like the following would be required:
 

@@ -100,28 +100,28 @@ This section describes each lowering process and some of the optimizations.
 
 Once a bytecode region has been selected, it is lowered into [HipHop
 Intermediate Representation](../ir.specification), commonly referred to as
-HHIR.  HHIR is an
+HHIR. HHIR is an
 [SSA-form](https://en.wikipedia.org/wiki/Static_single_assignment_form),
 strongly-typed intermediate representation positioned between HHBC and machine
 code. A few different classes and modules are involved in this process:
 
-* `irgen`: Declared in [irgen.h](../../runtime/vm/jit/irgen.h), this module is
+- `irgen`: Declared in [irgen.h](../../runtime/vm/jit/irgen.h), this module is
   used to convert the bytecode instructions from a RegionDesc into a sequence
-  of HHIR instructions.  One `emitFoo()` function is defined for every HHBC
+  of HHIR instructions. One `emitFoo()` function is defined for every HHBC
   instruction. The implementations for these functions are grouped into
   `irgen-*.cpp` files (e.g.
   [irgen-basic.cpp](../../runtime/vm/jit/irgen-basic.cpp),
   [irgen-arith.cpp](../../runtime/vm/jit/irgen-arith.cpp)).
-* `IRGS`: Defined in [irgen-state.h](../../runtime/vm/jit/irgen-state.h), this
+- `IRGS`: Defined in [irgen-state.h](../../runtime/vm/jit/irgen-state.h), this
   class contains all the state tracked during the irgen process. The two most
   important pieces are `IRBuilder` and `IRUnit`:
-* `IRBuilder`: Defined in [ir-builder.h](../../runtime/vm/jit/ir-builder.h),
+- `IRBuilder`: Defined in [ir-builder.h](../../runtime/vm/jit/ir-builder.h),
   this class tracks state during symbolic execution and performs some very
   basic optimizations based on this state.
-* `IRUnit`: Defined in [ir-unit.h](../../runtime/vm/jit/ir-unit.h), this class
+- `IRUnit`: Defined in [ir-unit.h](../../runtime/vm/jit/ir-unit.h), this class
   is responsible for creating and storing the runtime data structures that
   represent HHIR instructions, values, and blocks.
-* `simplify`: Declared in [simplify.h](../../runtime/vm/jit/simplify.h), this
+- `simplify`: Declared in [simplify.h](../../runtime/vm/jit/simplify.h), this
   module is responsible for performing state-free optimizations such as
   constant folding and propagation or anything else that only requires
   inspecting an instruction and its sources.
@@ -162,50 +162,50 @@ Note that the types used here are more specific than what can be discriminated
 by user code (e.g., `StaticStr` and `CountedStr` both appear as type "string" at
 the Hack level).
 
-  Type           | HHVM representation
-  ---------------|-------------------
-  Uninit         | `KindOfUninit`
-  InitNull       | `KindOfNull`
-  Null           | `{Uninit+InitNull}`
-  Bool           | `false=0`, `true=1` (8 bits at runtime)
-  Int            | `int64_t` (64-bit two's complement binary integer)
-  Dbl            | `double` (IEEE 754 64-bit binary floating point)
-  StaticStr      | `StringData*` where `isStatic() == true`
-  UncountedStr   | `StringData*` where `isUncounted() == true`
-  PersistentStr  | `StringData*` `{StaticStr+UncountedStr}`
-  CountedStr     | `StringData*` where `isRefCounted() == true`
-  Str            | `StringData*` `{PersistentStr+CountedStr}`
-  \*Arr          | `ArrayData*` (same variants as `Str`)
-  \*Vec          | `ArrayData*` where `kind() == Vec`
-  \*Dict         | `ArrayData*` where `kind() == Dict`
-  \*Keyset       | `ArrayData*` where `kind() == Keyset`
-  UncountedInit  | `TypedValue`: `{Null+Bool+Int+Dbl+PersistentStr+PersistentArr}`
-  Uncounted      | `TypedValue`: `{UncountedInit+Uninit}`
-  Obj            | `ObjectData*`
-  Obj<=Class     | `ObjectData*` of the specified Class or one of its subclasses
-  Obj=Class      | `ObjectData*` of the specified Class (not a subtype)
-  Cls            | `Class*`
-  Func           | `Func*`
-  Counted        | `{CountedStr+CountedArr+Obj+BoxedCell}`
-  Cell           | `{Null+Bool+Int+Dbl+Str+Arr+Obj}`
+| Type          | HHVM representation                                             |
+| ------------- | --------------------------------------------------------------- |
+| Uninit        | `KindOfUninit`                                                  |
+| InitNull      | `KindOfNull`                                                    |
+| Null          | `{Uninit+InitNull}`                                             |
+| Bool          | `false=0`, `true=1` (8 bits at runtime)                         |
+| Int           | `int64_t` (64-bit two's complement binary integer)              |
+| Dbl           | `double` (IEEE 754 64-bit binary floating point)                |
+| StaticStr     | `StringData*` where `isStatic() == true`                        |
+| UncountedStr  | `StringData*` where `isUncounted() == true`                     |
+| PersistentStr | `StringData*` `{StaticStr+UncountedStr}`                        |
+| CountedStr    | `StringData*` where `isRefCounted() == true`                    |
+| Str           | `StringData*` `{PersistentStr+CountedStr}`                      |
+| \*Arr         | `ArrayData*` (same variants as `Str`)                           |
+| \*Vec         | `ArrayData*` where `kind() == Vec`                              |
+| \*Dict        | `ArrayData*` where `kind() == Dict`                             |
+| \*Keyset      | `ArrayData*` where `kind() == Keyset`                           |
+| UncountedInit | `TypedValue`: `{Null+Bool+Int+Dbl+PersistentStr+PersistentArr}` |
+| Uncounted     | `TypedValue`: `{UncountedInit+Uninit}`                          |
+| Obj           | `ObjectData*`                                                   |
+| Obj<=Class    | `ObjectData*` of the specified Class or one of its subclasses   |
+| Obj=Class     | `ObjectData*` of the specified Class (not a subtype)            |
+| Cls           | `Class*`                                                        |
+| Func          | `Func*`                                                         |
+| Counted       | `{CountedStr+CountedArr+Obj+BoxedCell}`                         |
+| Cell          | `{Null+Bool+Int+Dbl+Str+Arr+Obj}`                               |
 
 The VM also manipulates values of various internal types, which are never
 visible at the PHP level.
 
-  Type           | HHVM representation
-  ---------------|--------------------
-  PtrToT         | Exists for all T in `Cell`. Represents a `TypedValue*`
-  Bottom         | No value, `{}`. Subtype of every other type
-  Top            | Supertype of every other type
-  VarEnv         | `VarEnv*`
-  NamedEntity    | `NamedEntity*`
-  Cctx           | A `Class*` with the lowest bit set (as stored in `ActRec::m_cls`)
-  Ctx            | `{Obj+Cctx}`
-  RetAddr        | Return address
-  StkPtr         | Pointer into VM execution stack
-  FramePtr       | Pointer to a frame on the VM execution stack
-  TCA            | Machine code address
-  Nullptr        | C++ `nullptr`
+| Type        | HHVM representation                                               |
+| ----------- | ----------------------------------------------------------------- |
+| PtrToT      | Exists for all T in `Cell`. Represents a `TypedValue*`            |
+| Bottom      | No value, `{}`. Subtype of every other type                       |
+| Top         | Supertype of every other type                                     |
+| VarEnv      | `VarEnv*`                                                         |
+| NamedEntity | `NamedEntity*`                                                    |
+| Cctx        | A `Class*` with the lowest bit set (as stored in `ActRec::m_cls`) |
+| Ctx         | `{Obj+Cctx}`                                                      |
+| RetAddr     | Return address                                                    |
+| StkPtr      | Pointer into VM execution stack                                   |
+| FramePtr    | Pointer to a frame on the VM execution stack                      |
+| TCA         | Machine code address                                              |
+| Nullptr     | C++ `nullptr`                                                     |
 
 ### Usage guidelines
 
@@ -235,12 +235,10 @@ compactly, `val->isA(TInt)`. Using exact equality in this situation would give
 unexpected results if `val` had a constant type, like `Int<5>`, or if we ever
 added other subtypes of `Int` (with value range information, for example).
 
-A related problem is determining when a value is *not* of a certain type. Here,
+A related problem is determining when a value is _not_ of a certain type. Here,
 the difference between "`val` is not known to be an `Int`" and "`val` is known
-to not be an `Int`" is crucial. The former is expressed with `!(val->type() <=
-TInt)`, while the latter is `!val->type().maybe(TInt)`. Types like `{Str+Int}`
-illustrate the difference between these two predicates: `((TStr | TInt) <= Int)
-== false` and `(TStr | TInt).maybe(TInt) == true`.
+to not be an `Int`" is crucial. The former is expressed with `!(val->type() <= TInt)`, while the latter is `!val->type().maybe(TInt)`. Types like `{Str+Int}`
+illustrate the difference between these two predicates: `((TStr | TInt) <= Int) == false` and `(TStr | TInt).maybe(TInt) == true`.
 
 #### Inner types
 
@@ -334,8 +332,7 @@ B4:
 
 After control flow splits at the end of B1, B2 and B3 each do their own
 computation and then pass the result to the `DefLabel` at the join point,
-B4. This is equivalent to the following phi-node: `t5:{Int|Dbl} = phi(B2 ->
-t2:Int, B3 -> t4:Dbl)`
+B4. This is equivalent to the following phi-node: `t5:{Int|Dbl} = phi(B2 -> t2:Int, B3 -> t4:Dbl)`
 
 ## Optimizations
 

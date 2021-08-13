@@ -1,5 +1,4 @@
-Mathematically wrong
-====================
+# Mathematically wrong
 
 ![Spotify Logo](../resources/spotify-logo.png)
 

@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
-module.exports = function(/*path, text*/) {
+module.exports = function (/*path, text*/) {
   return {
-    "type": "Program",
-    "body": []
+    type: "Program",
+    body: [],
   };
 };

@@ -2,13 +2,13 @@
 
 # Spotify coding challenge for [PHP Conference Argentina - 2014](http://2014.phpconference.com.ar)
 
-* You need to solve at least one challenge in order to win a Spotify prize. Each problem has a different difficulty level. Feel free to start with the problem you prefer or that is more relevant for you.
+- You need to solve at least one challenge in order to win a Spotify prize. Each problem has a different difficulty level. Feel free to start with the problem you prefer or that is more relevant for you.
 
-* **IMPORTANT: You need to be at the conference to pick up the prize.**
+- **IMPORTANT: You need to be at the conference to pick up the prize.**
 
-* You don’t need to have a perfect solutions, we will enjoy to discuss with you your approach to solve the challenges! So, come to talk with us. 
+- You don’t need to have a perfect solutions, we will enjoy to discuss with you your approach to solve the challenges! So, come to talk with us.
 
-* Also, **we are hiring ;)!**. Check with us what are our open positions.
+- Also, **we are hiring ;)!**. Check with us what are our open positions.
 
 ## How to proceed
 
@@ -26,16 +26,16 @@
 
 ## 3 points
 
-* [Echonest API wrapper, unit tested](/echonest-API-wrapper/README.md)
-* [Custom DOM wrapper](/custom-DOM-wrapper/README.md)
+- [Echonest API wrapper, unit tested](/echonest-API-wrapper/README.md)
+- [Custom DOM wrapper](/custom-DOM-wrapper/README.md)
 
 ## 2 points
 
-* [Unit testing and refactoring](/unit-testing-and-refactoring/README.md)
-* [Secure enough](/secure-enough/README.md)
+- [Unit testing and refactoring](/unit-testing-and-refactoring/README.md)
+- [Secure enough](/secure-enough/README.md)
 
 ## 1 point
 
-* [Mathematically wrong](/mathematically-wrong/README.md)
-* [Static files nightmare](/static-files-nightmare/README.md)
-* [Risky search](/risky-search/README.md)
+- [Mathematically wrong](/mathematically-wrong/README.md)
+- [Static files nightmare](/static-files-nightmare/README.md)
+- [Risky search](/risky-search/README.md)

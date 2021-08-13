@@ -7,6 +7,6 @@ $ svn co http://llvm.org/svn/llvm-project/compiler-rt/trunk
 $ cd compiler-rt/lib/tsan/go
 $ ./buildgo.sh
 
-Tested with gcc 4.6.1 and 4.7.0.  On Windows it's built with 64-bit MinGW.
+Tested with gcc 4.6.1 and 4.7.0. On Windows it's built with 64-bit MinGW.
 
 Current runtime is built on rev 191161.

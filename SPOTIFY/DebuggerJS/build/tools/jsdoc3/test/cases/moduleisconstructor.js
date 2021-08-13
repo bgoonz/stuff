@@ -10,8 +10,8 @@
     @alias module:mymodule/config
 */
 function Config(id) {
-   /** Document me. */
-   this.id = id;
+  /** Document me. */
+  this.id = id;
 }
 
 module.exports = Config;

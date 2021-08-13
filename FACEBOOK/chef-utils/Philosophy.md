@@ -8,12 +8,12 @@ these apply at any scale, but certainly make large scale easier.
 
 We try to always keep these basic scaling building blocks in mind:
 
-* idempotent - it should be safe to run the system at any time and know
+- idempotent - it should be safe to run the system at any time and know
   it will only make the necessary changes
-* distributed - the more work pushed to the clients, the better it scales.
-* extensible - the easier it is to extend it for local requirements, the
+- distributed - the more work pushed to the clients, the better it scales.
+- extensible - the easier it is to extend it for local requirements, the
   better it will work for any environment
-* flexible - it needs to work with existing work flows, not dictate strict
+- flexible - it needs to work with existing work flows, not dictate strict
   new ones
 
 ## Data-driven configuration
@@ -36,7 +36,7 @@ crons = {
 
 It's easy set global defaults, and then build upon them in a way that provides
 automatic inheritance. Global configs can define crons that need to be
-everywhere, and other systems can simply add to those as necessary.  Someone
+everywhere, and other systems can simply add to those as necessary. Someone
 else can come along and do:
 
 ```ruby
@@ -145,7 +145,7 @@ default['fb_cron']['jobs'] = {
   },
   ...
 }
-````
+```
 
 These are crons that should be on all boxes. Then in `recipes/default.rb`, we
 do:

@@ -1,4 +1,4 @@
 cron:
-- description: GC
-  url: /gc
-  schedule: every 6 hours
+  - description: GC
+    url: /gc
+    schedule: every 6 hours

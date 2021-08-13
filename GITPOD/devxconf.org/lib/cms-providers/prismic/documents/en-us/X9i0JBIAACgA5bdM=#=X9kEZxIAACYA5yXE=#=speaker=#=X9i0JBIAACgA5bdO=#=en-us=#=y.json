@@ -1,5 +1,7 @@
 {
-  "name": [{ "type": "heading1", "content": { "text": "Harshad İrem", "spans": [] } }],
+  "name": [
+    { "type": "heading1", "content": { "text": "Harshad İrem", "spans": [] } }
+  ],
   "bio": [
     {
       "type": "paragraph",
@@ -10,10 +12,17 @@
     }
   ],
   "uid": "harshad",
-  "title": [{ "type": "heading4", "content": { "text": "Senior Software Engineer", "spans": [] } }],
+  "title": [
+    {
+      "type": "heading4",
+      "content": { "text": "Senior Software Engineer", "spans": [] }
+    }
+  ],
   "twitter": { "url": "https://twitter.com/vercel", "preview": null },
   "github": { "url": "https://github.com/vercel", "preview": null },
-  "company": [{ "type": "heading4", "content": { "text": "Company", "spans": [] } }],
+  "company": [
+    { "type": "heading4", "content": { "text": "Company", "spans": [] } }
+  ],
   "image": {
     "origin": {
       "id": "X9iy5hIAACYA5bFs",
@@ -30,7 +39,10 @@
     "provider": "imgix",
     "thumbnails": {}
   },
-  "talk": { "id": "X9kEExIAACcA5yQ_", "wioUrl": "wio://documents/X9kEExIAACcA5yQ_" },
+  "talk": {
+    "id": "X9kEExIAACcA5yQ_",
+    "wioUrl": "wio://documents/X9kEExIAACcA5yQ_"
+  },
   "name_TYPE": "StructuredText",
   "name_POSITION": 0,
   "bio_TYPE": "StructuredText",

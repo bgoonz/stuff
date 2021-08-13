@@ -1,5 +1,5 @@
-'use strict';
+"use strict";
 
-module.exports = function(/*path, ast*/) {
-  throw new Error('transform error');
+module.exports = function (/*path, ast*/) {
+  throw new Error("transform error");
 };

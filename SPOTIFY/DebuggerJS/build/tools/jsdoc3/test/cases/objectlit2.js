@@ -1,8 +1,8 @@
 /** document me */
 var position = {
-    axis: {
-        /** document me */
-        x: 0,
-        y: 0
-    }
+  axis: {
+    /** document me */
+    x: 0,
+    y: 0,
+  },
 };

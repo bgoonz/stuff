@@ -1,12 +1,10 @@
-Style Guide
-===========
+# Style Guide
 
 As far as indentation rules go, ocp-indent should be used as the final word.
 
 However, here are some examples.
 
-Let Expressions
----------------
+## Let Expressions
 
 Try to fit a `let ... in` onto one line:
 
@@ -27,8 +25,7 @@ If the second line is still too long, fall back to
         long_arg_2
         long_arg_3 in
 
-Match Clauses
--------------
+## Match Clauses
 
 Don't indent the clauses of a standalone match expression
 
@@ -79,10 +76,9 @@ Note that the `in` should be on its own line. I.e. avoid
       | None -> ...  in
     ...
 
-Functions
----------
+## Functions
 
-Function expressions that span multiple lines should be wrapped in a `begin ...  end`:
+Function expressions that span multiple lines should be wrapped in a `begin ... end`:
 
     List.iter foo begin fun x ->
       ...
@@ -99,8 +95,7 @@ if `fun` comes right after an operator (typically one of `>>=`, `@@`, or `>>|`):
     some_monadic_y >>= fun y ->
     return x + y
 
-Modules
--------
+## Modules
 
 Top-level modules (those created by individual files) should be named using
 Underscore_separated_words. Modules within files should be CamelCase.
@@ -118,8 +113,7 @@ or use local opens:
 Modules should have the name of their containing directory as a prefix. E.g.
 modules under typing/ should be named as `Typing_foo`.
 
-Parentheses
------------
+## Parentheses
 
 Generally, there are only two cases where parentheses / `begin ... end` are
 necessary: for nesting `with` clauses and for inserting multiple
@@ -146,17 +140,15 @@ If the test expression is too long, the following is also acceptable:
       do_another_thing ();
     end
 
-Variants
---------
+## Variants
 
 Variants should be named using `Capitalized_underscore_separated_words`.
 
-This includes polymorphic variants; i.e. we want `\`Foo` and not `\`foo`. In
+This includes polymorphic variants; i.e. we want `\`Foo`and not`\`foo`. In
 fact, the OCaml manual suggests that lowercase polymorphic variants may be
 deprecated in future versions.
 
-Miscellany
-----------
+## Miscellany
 
 Boolean function parameters should always be labeled. Consider labeling
 integer parameters as well.

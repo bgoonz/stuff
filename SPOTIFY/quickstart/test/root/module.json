@@ -1,6 +1,5 @@
 {
   "animals": [
-
     {
       "name": "fox",
       "color": "brown",
@@ -16,6 +15,5 @@
       "lazy": true,
       "jumps": null
     }
-
   ]
 }

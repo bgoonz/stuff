@@ -17,18 +17,19 @@ features or even fixing non-critical bugs. Feel free to fork this repo though.**
 This is a [Docker](https://github.com/docker/docker) client written in Java.
 It is used in many critical production systems at Spotify.
 
-* [Version compatibility](#version-compatibility)
-* [Download](#download)
-* [Usage Example](#usage-example)
-* [Getting Started](#getting-started)
-* [Prerequisites](#prerequisites)
-* [Testing](#testing)
-* [Releasing](#releasing)
-* [A Note on Shading](#a-note-on-shading)
-* [Code of Conduct](#code-of-conduct)
-* [User Manual](https://github.com/spotify/docker-client/blob/master/docs/user_manual.md)
+- [Version compatibility](#version-compatibility)
+- [Download](#download)
+- [Usage Example](#usage-example)
+- [Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
+- [Testing](#testing)
+- [Releasing](#releasing)
+- [A Note on Shading](#a-note-on-shading)
+- [Code of Conduct](#code-of-conduct)
+- [User Manual](https://github.com/spotify/docker-client/blob/master/docs/user_manual.md)
 
 ## Version compatibility
+
 docker-client is built and tested against the six most recent minor releases of Docker.
 Right now these are 17.03.1~ce - 17.12.1~ce (specifically the ones [here][1]).
 We upload the artifact tested on Docker 17.12.1~ce.
@@ -45,7 +46,6 @@ Download the latest JAR or grab [via Maven][maven-search].
   <version>LATEST-VERSION</version>
 </dependency>
 ```
-
 
 ## Usage Example
 
@@ -176,16 +176,14 @@ Shaded:
 **This is particularly important if you use Jersey 1.x in your project. To avoid conflicts with
 docker-client and Jersey 2.x, you will need to explicitly specify the shaded version above.**
 
-
-  [1]: https://travis-ci.org/spotify/docker-client
-  [2]: docs/user_manual.md
-  [3]: https://docs.docker.com/engine/api/v1.27/#section/Versioning
-
+[1]: https://travis-ci.org/spotify/docker-client
+[2]: docs/user_manual.md
+[3]: https://docs.docker.com/engine/api/v1.27/#section/Versioning
 
 ## Code of conduct
 
 This project adheres to the [Open Code of Conduct][code-of-conduct]. By participating, you are
 expected to honor this code.
 
-  [code-of-conduct]: https://github.com/spotify/code-of-conduct/blob/master/code-of-conduct.md
-  [maven-search]: https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.spotify%22%20docker-client
+[code-of-conduct]: https://github.com/spotify/code-of-conduct/blob/master/code-of-conduct.md
+[maven-search]: https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.spotify%22%20docker-client

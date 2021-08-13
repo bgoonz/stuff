@@ -1,5 +1,5 @@
 {
-  "$schema":"http://json-schema.org/draft-03/schema",
+  "$schema": "http://json-schema.org/draft-03/schema",
   "type": "object",
   "properties": {
     "album_type": {
@@ -7,9 +7,9 @@
       "description": "The type of the album: one of 'album', 'single', or 'compilation'."
     },
     "artists": {
-        "type": "array",
-        "description": "The artists of the album. Each artist object includes a link in href to more detailed information about the artist.",
-        "items": [{ "$ref": "file:includes/artist.schema.json#properties" }]
+      "type": "array",
+      "description": "The artists of the album. Each artist object includes a link in href to more detailed information about the artist.",
+      "items": [{ "$ref": "file:includes/artist.schema.json#properties" }]
     }
   }
 }

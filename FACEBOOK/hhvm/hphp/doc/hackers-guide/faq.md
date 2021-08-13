@@ -45,12 +45,13 @@ $ hhvm -vEval.DumpHhas=1 hello.php
 
 This gives output similar to
 [this](https://gist.github.com/swtaarrs/4b2fffacd74c31d4e65298888922805d).
-Running with `-vEval.DumpHhas=1` will *not* execute the script after printing
+Running with `-vEval.DumpHhas=1` will _not_ execute the script after printing
 its bytecode.
 
 Why are there two ways to dump bytecode with slightly different semantics? It's
 partly for historical reasons that may be cleaned up at some point, but there
 are a few meaningful differences between the two:
+
 - `DumpBytecode` shows bytecode offsets, while `DumpHhas` doesn't. This is because HHAS is designed to be human-writable, so it uses labels rather than raw offsets for control flow. However, the offsets are useful if you're working in the interpreter or JIT, as they use bytecode offsets to locate code.
 - `DumpBytecode` writes to the current `TRACE` file (see the next section for details), while `DumpHhas` writes to stdout.
 - Metadata is printed explicitly, separately from function bodies with `DumpBytecode`, while `DumpHhas` either has the same metadata represented inline in the bytecode, or left out when it can be inferred from the bytecode itself.
@@ -69,7 +70,7 @@ you want to enable tracing.
 
 ### Basic usage
 
-The `TRACE_MODULES` macro in `trace.h` defines a series of *trace modules*, each
+The `TRACE_MODULES` macro in `trace.h` defines a series of _trace modules_, each
 with a short name. To enable one or more modules, set the `TRACE` environment
 variable to a comma-separated list of `module:level` pairs. All levels default
 to 0, and higher levels are typically more verbose (this is only by convention,

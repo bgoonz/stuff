@@ -8,7 +8,7 @@ structure for the messages being consumed from the queue.
 For this purpose ffwd provides **schemas**.
 
 These are pluggable components that knows how to dump the internal data
-structures of ffwd into a specific structure of a specific *content type*.
+structures of ffwd into a specific structure of a specific _content type_.
 
 The use of a specific schema looks like the following in the configuration
 file.
@@ -22,7 +22,7 @@ file.
 
 To list all availble schemas and content types, use **ffwd --schemas**.
 
-This assumes that *my-schema-v01* is provided by a component which has been
+This assumes that _my-schema-v01_ is provided by a component which has been
 loaded.
 
 Writing a schema is very straight forward, it's only a matter of placing

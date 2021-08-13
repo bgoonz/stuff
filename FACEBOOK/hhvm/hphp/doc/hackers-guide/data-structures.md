@@ -82,7 +82,7 @@ one of them. The wrapper type can be found by dropping the `Data` suffix, so
 `StringData`'s wrapper is [`String`](../../runtime/base/type-string.h). Note
 that like most smart pointer types, these wrappers can all represent a `null`
 value, but the pointer in a `TypedValue` representing an array, string, etc.
-must *never* be `nullptr`. A `null` value is represented using `KindOfNull`.
+must _never_ be `nullptr`. A `null` value is represented using `KindOfNull`.
 
 ## Runtime-internal data structures
 
@@ -131,7 +131,7 @@ reference to a `Func` without a full 64-bit pointer<sup>[2](#f2)</sup>.
 `FuncId`s are also guaranteed to be unique for the lifetime of the process,
 unlike `Func*`.
 
---------
+---
 
 <b id="f1">1:</b> This is what HHVM presents to the user, but we have
 mechanisms to avoid the work of actually redefining everything in every request

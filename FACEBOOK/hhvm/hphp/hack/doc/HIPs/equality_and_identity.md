@@ -29,11 +29,11 @@ We'd like to simplify and correct the mistakes of the previous design
    4. Hack Collections: pointer equality (they are objects)
 2. `==`
    1. Objects: compares all properties using `==`
-     1. note that closures still don’t compare equal because they’re instances of different objects
-   2. arrays: compares all elements (keys and values) using `===` for keys and `==` for values, ignoring order for `dicts`/`darrays`/`keysets`
-   3. values: value equality following complex PHP coercion rules.
-   4. Hack Collections: compares all elements using `==`,  ignoring order for `Map`/`Set`
-   5. If comparing different types will attempt to coerce one side to the type of the other before comparing
+   1. note that closures still don’t compare equal because they’re instances of different objects
+   1. arrays: compares all elements (keys and values) using `===` for keys and `==` for values, ignoring order for `dicts`/`darrays`/`keysets`
+   1. values: value equality following complex PHP coercion rules.
+   1. Hack Collections: compares all elements using `==`, ignoring order for `Map`/`Set`
+   1. If comparing different types will attempt to coerce one side to the type of the other before comparing
 3. `<=`, `>=`: Use `==` under the hood. No `===` variant.
 4. Sorts and switch statements implicitly use the == behaviour under the hood
 
@@ -125,8 +125,8 @@ function compare_nodes(): void {
   $b = $n == $n2;
 }
 ```
-The obvious recursive function for structural equality would loop infinitely on $n == $n2.
 
+The obvious recursive function for structural equality would loop infinitely on $n == $n2.
 
 ## Future possibilities
 

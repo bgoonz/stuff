@@ -1,9 +1,9 @@
 /* Custom styles */
 
 body {
-    color: black;
+  color: black;
 }
 
 blockquote.epigraph {
-    transform: skew(-15deg, 0deg);
+  transform: skew(-15deg, 0deg);
 }

@@ -17,45 +17,52 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-var-requires */
 
-const agilityContentSync = require('@agility/content-sync');
-const agilityFileSystem = require('@agility/content-sync/src/store-interface-filesystem');
+const agilityContentSync = require("@agility/content-sync");
+const agilityFileSystem = require("@agility/content-sync/src/store-interface-filesystem");
 
-import { Job, Speaker, Sponsor, Stage } from '../types';
+import { Job, Speaker, Sponsor, Stage } from "../types";
 
 const agilityConfig = {
   guid: process.env.AGILITY_GUID,
   fetchAPIKey: process.env.AGILITY_API_FETCH_KEY,
   previewAPIKey: process.env.AGILITY_API_PREVIEW_KEY,
-  languageCode: 'en-us',
-  channelName: 'website',
-  securityKey: process.env.AGILITY_SECURITY_KEY
+  languageCode: "en-us",
+  channelName: "website",
+  securityKey: process.env.AGILITY_SECURITY_KEY,
 };
 
 export async function getAllSpeakers(): Promise<Speaker[]> {
   const agility = await syncContentAndGetClient(null);
   const speakers = await agility.getContentList({
-    referenceName: 'speakers',
-    languageCode: agilityConfig.languageCode
+    referenceName: "speakers",
+    languageCode: agilityConfig.languageCode,
   });
   const schedule = await agility.getContentList({
-    referenceName: 'schedule',
-    languageCode: agilityConfig.languageCode
+    referenceName: "schedule",
+    languageCode: agilityConfig.languageCode,
   });
   const languageCode = agilityConfig.languageCode;
 
   const lst: Speaker[] = [];
 
   await asyncForEach(speakers, async (speaker: any) => {
-    speaker = await expandContentItem({ agility, contentItem: speaker, languageCode, depth: 1 });
+    speaker = await expandContentItem({
+      agility,
+      contentItem: speaker,
+      languageCode,
+      depth: 1,
+    });
 
     const talks = schedule
       .filter((t: any) => {
-        return `,${t.fields.speakerIDs},`.indexOf(`,${speaker.contentID},`) !== -1;
+        return (
+          `,${t.fields.speakerIDs},`.indexOf(`,${speaker.contentID},`) !== -1
+        );
       })
       .map((t: any) => {
         return {
           title: t.fields.name,
-          description: t.fields.description
+          description: t.fields.description,
         };
       });
 
@@ -85,11 +92,21 @@ export async function getAllSpeakers(): Promise<Speaker[]> {
 export async function getAllStages(): Promise<Stage[]> {
   const agility = await syncContentAndGetClient(null);
   const languageCode = agilityConfig.languageCode;
-  const stages = await agility.getContentList({ referenceName: 'stages', languageCode });
-  await expandContentList({ agility, contentItems: stages, languageCode, depth: 2 });
+  const stages = await agility.getContentList({
+    referenceName: "stages",
+    languageCode,
+  });
+  await expandContentList({
+    agility,
+    contentItems: stages,
+    languageCode,
+    depth: 2,
+  });
 
   const lst: Stage[] = stages
-    .sort((a: any, b: any) => (a.properties.itemOrder > b.properties.itemOrder ? 1 : -1))
+    .sort((a: any, b: any) =>
+      a.properties.itemOrder > b.properties.itemOrder ? 1 : -1
+    )
     .map((stage: any) => {
       const schedule: any[] = stage.fields.schedule?.map((talk: any) => {
         return {
@@ -101,10 +118,10 @@ export async function getAllStages(): Promise<Stage[]> {
               name: speaker.fields.name,
               slug: speaker.fields.slug,
               image: {
-                url: `${speaker.fields.image.url}?w=120&h=120&c=1`
-              }
+                url: `${speaker.fields.image.url}?w=120&h=120&c=1`,
+              },
             };
-          })
+          }),
         };
       });
 
@@ -113,7 +130,7 @@ export async function getAllStages(): Promise<Stage[]> {
         slug: stage.fields.slug,
         stream: stage.fields.stream,
         discord: stage.fields.discord,
-        schedule
+        schedule,
       };
     });
 
@@ -125,10 +142,12 @@ export async function getAllSponsors(): Promise<Sponsor[]> {
   const languageCode = agilityConfig.languageCode;
 
   let companies = await agility.getContentList({
-    referenceName: 'companies',
-    languageCode: agilityConfig.languageCode
+    referenceName: "companies",
+    languageCode: agilityConfig.languageCode,
   });
-  companies = companies.sort((a: any, b: any) => (a.fields.tierRank > b.fields.tierRank ? 1 : -1));
+  companies = companies.sort((a: any, b: any) =>
+    a.fields.tierRank > b.fields.tierRank ? 1 : -1
+  );
 
   const lst: Sponsor[] = [];
   await asyncForEach(companies, async (company: any) => {
@@ -136,9 +155,9 @@ export async function getAllSponsors(): Promise<Sponsor[]> {
       agility,
       contentItem: company,
       languageCode,
-      fieldName: 'links',
+      fieldName: "links",
       sortIDField: null,
-      excludeNonSortedIds: false
+      excludeNonSortedIds: false,
     });
 
     let links = [];
@@ -147,7 +166,7 @@ export async function getAllSponsors(): Promise<Sponsor[]> {
       links = company.fields.links.map((link: any) => {
         return {
           url: link.fields.link.href,
-          text: link.fields.link.text
+          text: link.fields.link.text,
         };
       });
     }
@@ -165,12 +184,12 @@ export async function getAllSponsors(): Promise<Sponsor[]> {
       cardImage: {
         // eslint-disable-next-line
         // @ts-ignore
-        url: `${company.fields.cardImage.url}`
+        url: `${company.fields.cardImage.url}`,
       },
       logo: {
-        url: `${company.fields.logo.url}`
+        url: `${company.fields.logo.url}`,
       },
-      links
+      links,
     });
   });
 
@@ -181,13 +200,20 @@ export async function getAllJobs(): Promise<Job[]> {
   const agility = await syncContentAndGetClient(null);
   const languageCode = agilityConfig.languageCode;
   let jobs = await agility.getContentList({
-    referenceName: 'jobs',
-    languageCode: agilityConfig.languageCode
+    referenceName: "jobs",
+    languageCode: agilityConfig.languageCode,
   });
 
-  jobs = jobs.sort((a: any, b: any) => (a.fields.rank > b.fields.rank ? 1 : -1));
+  jobs = jobs.sort((a: any, b: any) =>
+    a.fields.rank > b.fields.rank ? 1 : -1
+  );
 
-  await expandContentList({ agility, contentItems: jobs, languageCode, depth: 1 });
+  await expandContentList({
+    agility,
+    contentItems: jobs,
+    languageCode,
+    depth: 1,
+  });
 
   return jobs
     .map((job: any) => {
@@ -198,7 +224,7 @@ export async function getAllJobs(): Promise<Job[]> {
         description: job.fields.description,
         discord: job.fields.discord,
         link: job.fields.link,
-        rank: parseInt(job.fields.rank)
+        rank: parseInt(job.fields.rank),
       };
     })
     .sort((a: any, b: any) => (a.rank > b.rank ? 1 : -1));
@@ -208,26 +234,30 @@ const getSyncClient = (context: any) => {
   let { isPreview, isDevelopmentMode } = context || {};
 
   if (isDevelopmentMode === undefined) {
-    isDevelopmentMode = process.env.NODE_ENV === 'development';
+    isDevelopmentMode = process.env.NODE_ENV === "development";
   }
 
   if (isPreview === undefined) {
     isPreview = isDevelopmentMode;
   }
 
-  const apiKey = isPreview ? agilityConfig.previewAPIKey : agilityConfig.fetchAPIKey;
+  const apiKey = isPreview
+    ? agilityConfig.previewAPIKey
+    : agilityConfig.fetchAPIKey;
 
   if (!agilityConfig.guid) {
-    console.log('Agility CMS => No GUID was provided.');
+    console.log("Agility CMS => No GUID was provided.");
     return null;
   }
 
-  let cachePath = `node_modules/@agility/content-sync/cache/${agilityConfig.guid}/${
-    isPreview ? 'preview' : 'live'
-  }`;
+  let cachePath = `node_modules/@agility/content-sync/cache/${
+    agilityConfig.guid
+  }/${isPreview ? "preview" : "live"}`;
 
   if (!isDevelopmentMode) {
-    cachePath = `/tmp/agilitycache/${agilityConfig.guid}/${isPreview ? 'preview' : 'live'}`;
+    cachePath = `/tmp/agilitycache/${agilityConfig.guid}/${
+      isPreview ? "preview" : "live"
+    }`;
   }
 
   const client = agilityContentSync.getSyncClient({
@@ -239,9 +269,9 @@ const getSyncClient = (context: any) => {
     store: {
       interface: agilityFileSystem,
       options: {
-        rootPath: cachePath
-      }
-    }
+        rootPath: cachePath,
+      },
+    },
   });
 
   return client;
@@ -259,7 +289,7 @@ const expandContentList = async ({
   agility,
   contentItems,
   languageCode,
-  depth
+  depth,
 }: {
   agility: any;
   contentItems: any;
@@ -275,7 +305,7 @@ const expandContentItem = async ({
   agility,
   contentItem,
   languageCode,
-  depth = 1
+  depth = 1,
 }: {
   agility: any;
   contentItem: any;
@@ -297,18 +327,18 @@ const expandContentItem = async ({
         const childItem = await api.getContentItem({
           contentID: fieldValue.contentid,
           languageCode,
-          depth: depth - 1
+          depth: depth - 1,
         });
         if (childItem != null) fields[fieldName] = childItem;
       } else if (fieldValue.sortids && fieldValue.sortids.split) {
-        const sortIDAry = fieldValue.sortids.split(',');
+        const sortIDAry = fieldValue.sortids.split(",");
         const childItems = [];
 
         for (const childItemID of sortIDAry) {
           const childItem = await api.getContentItem({
             contentID: childItemID,
             languageCode,
-            depth: depth - 1
+            depth: depth - 1,
           });
           if (childItem != null) childItems.push(childItem);
         }
@@ -325,7 +355,7 @@ const expandLinkedList = async ({
   languageCode,
   fieldName,
   sortIDField = null,
-  excludeNonSortedIds = false
+  excludeNonSortedIds = false,
 }: {
   agility: any;
   contentItem: any;
@@ -344,7 +374,9 @@ const expandLinkedList = async ({
 
   const referenceName = fieldObj.referencename;
   if (!referenceName)
-    throw Error(`A referencename property was not found on the ${fieldName} value.`);
+    throw Error(
+      `A referencename property was not found on the ${fieldName} value.`
+    );
 
   let listItems = await agility.getContentList({ referenceName, languageCode });
   if (listItems?.length > 0) {
@@ -352,7 +384,7 @@ const expandLinkedList = async ({
       const sortIDs = contentItem.fields[sortIDField];
 
       if (sortIDs?.length > 0 && sortIDs?.split) {
-        const sortIDAry = sortIDs.split(',');
+        const sortIDAry = sortIDs.split(",");
         const sortedItems = [];
 
         for (const idStr of sortIDAry) {

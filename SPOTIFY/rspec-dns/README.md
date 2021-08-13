@@ -1,5 +1,4 @@
-rspec-dns
-=========
+# rspec-dns
 
 [![Gem Version](https://badge.fury.io/rb/rspec-dns.svg)](http://badge.fury.io/rb/rspec-dns)
 [![Build Status](https://travis-ci.org/spotify/rspec-dns.png?branch=master)](https://travis-ci.org/spotify/rspec-dns)
@@ -7,8 +6,8 @@ rspec-dns
 
 rspec-dns is an rspec plugin for easy DNS testing. It uses dnsruby instead of the standard library for the name resolution.
 
-Installation
-------------
+## Installation
+
 If you're using bundler, add this line to your application's `Gemfile`:
 
 ```ruby
@@ -21,8 +20,8 @@ Or install it manually with:
 
     $ gem install rspec-dns
 
-Usage
------
+## Usage
+
 RSpec DNS is best described by example. First, require `rspec-dns` in your `spec_helper.rb`:
 
 ```ruby
@@ -59,12 +58,12 @@ end
 
 Currently the following chaining methods are supported:
 
-- at\_least
-- in\_authority
-- refuse\_request
+- at_least
+- in_authority
+- refuse_request
 - config
-- in\_zone\_file
-- in\_additional
+- in_zone_file
+- in_additional
 
 Here's some usage examples:
 
@@ -134,8 +133,8 @@ Failure/Error: it { is_expected.to have_dns.with_type('TXT').and_ttl(300).and_da
 
 For this reason, you should always check the `type` attribute first in your chain.
 
-Configuring
------------
+## Configuring
+
 All configurations can be in your project root at `config/dns.yml`. This YAML file directly corresponds to the Resolv DNS initializer.
 
 For example, to directly query your DNS servers (necessary for correct TTL tests), create a `config/dns.yml` file like this:
@@ -178,14 +177,14 @@ nameserver:
 timeouts: 3
 ```
 
-Contributing
-------------
+## Contributing
+
 1. Fork the project on github
 2. Create your feature branch
 3. Open a Pull Request
 
-License & Authors
------------------
+## License & Authors
+
 - Seth Vargo (sethvargo@gmail.com)
 - Johannes Russek (jrussek@spotify.com)
 - Alexey Lapitsky (lex@realisticgroup.com)

@@ -1,5 +1,4 @@
-Linux for the Q40
-=================
+# Linux for the Q40
 
 You may try http://www.geocities.com/SiliconValley/Bay/2602/ for
 some up to date information. Booter and other tools will be also
@@ -24,31 +23,26 @@ Only possible cure is getting a 82072 controller with fifo instead of
 the 8272A.
 
 drivers used by the Q40, apart from the very obvious (console etc.):
-	drivers/char/q40_keyb.c		# use PC keymaps for national keyboards
-		     serial.c		# normal PC driver - any speed
-	             lp.c		# printer driver
-		     genrtc.c		# RTC
-		char/joystick/*		# most of this should work, not
-				        # in default config.in
-	        block/q40ide.c		# startup for ide
-		      ide*		# see Documentation/ide.txt
-		      floppy.c		# normal PC driver, DMA emu in asm/floppy.h
-					# and arch/m68k/kernel/entry.S
-					# see drivers/block/README.fd
-		net/ne.c
-		video/q40fb.c
-		parport/*
-		sound/dmasound_core.c
-		      dmasound_q40.c
+drivers/char/q40_keyb.c # use PC keymaps for national keyboards
+serial.c # normal PC driver - any speed
+lp.c # printer driver
+genrtc.c # RTC
+char/joystick/_ # most of this should work, not # in default config.in
+block/q40ide.c # startup for ide
+ide_ # see Documentation/ide.txt
+floppy.c # normal PC driver, DMA emu in asm/floppy.h # and arch/m68k/kernel/entry.S # see drivers/block/README.fd
+net/ne.c
+video/q40fb.c
+parport/\*
+sound/dmasound_core.c
+dmasound_q40.c
 
 Various other PC drivers can be enabled simply by adding them to
 arch/m68k/config.in, especially 8 bit devices should be without any
 problems. For cards using 16bit io/mem more care is required, like
-checking byte order issues, hacking memcpy_*_io etc.
+checking byte order issues, hacking memcpy\_\*\_io etc.
 
-
-Debugging
-=========
+# Debugging
 
 Upon startup the kernel will usually output "ABCQGHIJ" into the SRAM,
 preceded by the booter signature. This is a trace just in case something
@@ -70,11 +64,9 @@ Make sure to configure the parallel port as SPP and remove IRQ/DMA jumpers
 for first testing. The Q40 does not support DMA and may have trouble with
 parallel ports version of interrupts.
 
+# Q40 Hardware Description
 
-Q40 Hardware Description
-========================
-
-This is just an overview, see asm-m68k/* for details ask if you have any
+This is just an overview, see asm-m68k/\* for details ask if you have any
 questions.
 
 The Q40 consists of a 68040@40 MHz, 1MB video RAM, up to 32MB RAM, AT-style
@@ -88,23 +80,19 @@ regions of the memory.
 The main interrupt register IIRQ_REG will indicate whether an IRQ was internal
 or from some ISA devices, EIRQ_REG can distinguish up to 8 ISA IRQs.
 
-The Q40 custom chip is programmable to provide 2 periodic timers:
-	- 50 or 200 Hz - level 2, !!THIS CANT BE DISABLED!!
-	- 10 or 20 KHz - level 4, used for dma-sound
+The Q40 custom chip is programmable to provide 2 periodic timers: - 50 or 200 Hz - level 2, !!THIS CANT BE DISABLED!! - 10 or 20 KHz - level 4, used for dma-sound
 
 Linux uses the 200 Hz interrupt for timer and beep by default.
 
-
-Interrupts
-==========
+# Interrupts
 
 q40 master chip handles only a subset of level triggered interrupts.
 
 Linux has some requirements wrt interrupt architecture, these are
 to my knowledge:
-	(a) interrupt handler must not be reentered even when sti() is called
-	    from within handler
-	(b) working enable/disable_irq
+(a) interrupt handler must not be reentered even when sti() is called
+from within handler
+(b) working enable/disable_irq
 
 Luckily these requirements are only important for drivers shared
 with other architectures - ide,serial,parallel, ethernet.
@@ -116,8 +104,7 @@ One thing to keep in mind when hacking around the interrupt code is
 that there is no way to find out which IRQ caused a request, [EI]IRQ_REG
 displays current state of the various IRQ lines.
 
-Keyboard
-========
+# Keyboard
 
 q40 receives AT make/break codes from the keyboard, these are translated to
 the PC scancodes x86 Linux uses. So by theory every national keyboard should
@@ -128,11 +115,6 @@ documentation of it is absolutely minimal - thus some exotic keys may not
 behave exactly as expected.
 
 There is still hope that it can be fixed completely though. If you encounter
-problems, email me ideally this:
-	- exact keypress/release sequence
-	- 'showkey -s' run on q40, non-X session
-	- 'showkey -s' run on a PC, non-X session
-	- AT codes as displayed by the q40 debugging ROM
+problems, email me ideally this: - exact keypress/release sequence - 'showkey -s' run on q40, non-X session - 'showkey -s' run on a PC, non-X session - AT codes as displayed by the q40 debugging ROM
 btw if the showkey output from PC and Q40 doesn't differ then you have some
 classic configuration problem - don't send me anything in this case
-

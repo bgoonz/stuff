@@ -4,47 +4,41 @@ This guide gives an overview of Helios, and what you need to know to deploy and 
 
 Note that this guide assumes that you are familiar with [Docker](http://docker.io) and concepts like images and containers. If you aren't familiar with Docker, see the [getting started page](https://docs.docker.com/engine/getstarted/).
 
+- [Basic Concepts in Helios](#basic-concepts-in-helios)
+- [Install the Helios CLI](#install-the-helios-cli)
+- [Using the Helios CLI](#using-the-helios-cli)
+- [Managing Helios Agents](#managing-helios-agents)
+- [Creating Your Job](#creating-your-job)
+  - [A basic job](#a-basic-job)
+  - [Specifying a command to run](#specifying-a-command-to-run)
+  - [Passing environment variables](#passing-environment-variables)
+  - [Using a Helios job config file](#using-a-helios-job-config-file)
+  - [All Helios Job Options](#all-helios-job-options)
+  - [Health Checks](#health-checks)
+  - [Specifying an Access Token](#specifying-an-access-token)
+- [Deploying Your Job](#deploying-your-job)
+  - [Checking deployment status and history](#checking-deployment-status-and-history)
+  - [Undeploying](#undeploying)
+  - [Using Deployment Groups](#using-deployment-groups)
+- [Once Inside The Container](#once-inside-the-container)
 
-* [Basic Concepts in Helios](#basic-concepts-in-helios)
-* [Install the Helios CLI](#install-the-helios-cli)
-* [Using the Helios CLI](#using-the-helios-cli)
-* [Managing Helios Agents](#managing-helios-agents)
-* [Creating Your Job](#creating-your-job)
-  * [A basic job](#a-basic-job)
-  * [Specifying a command to run](#specifying-a-command-to-run)
-  * [Passing environment variables](#passing-environment-variables)
-  * [Using a Helios job config file](#using-a-helios-job-config-file)
-  * [All Helios Job Options](#all-helios-job-options)
-  * [Health Checks](#health-checks)
-  * [Specifying an Access Token](#specifying-an-access-token)
-* [Deploying Your Job](#deploying-your-job)
-  * [Checking deployment status and history](#checking-deployment-status-and-history)
-  * [Undeploying](#undeploying)
-  * [Using Deployment Groups](#using-deployment-groups)
-* [Once Inside The Container](#once-inside-the-container)
+## Basic Concepts in Helios
 
+- **Job:** A job configuration tells Helios how to run your Docker container. It consists of things like a job name, a job version, the name of your Docker image, any environment variables you wish to pass to the running container, ports you wish to expose, and the command to run inside the container, if any.
 
+- **Master:** Helios masters are the servers that the Helios CLI and other tools talk to. They coordinate the deployment of your Docker containers onto Helios agents.
 
-Basic Concepts in Helios
----
+- **Agents:** Helios agents, sometimes known as Helios hosts, are the machines on which the images you built eventually run. The masters tell agents to download jobs and run them.
 
-* **Job:** A job configuration tells Helios how to run your Docker container. It consists of things like a job name, a job version, the name of your Docker image, any environment variables you wish to pass to the running container, ports you wish to expose, and the command to run inside the container, if any.
+## Install the Helios CLI
 
-* **Master:** Helios masters are the servers that the Helios CLI and other tools talk to. They coordinate the deployment of your Docker containers onto Helios agents.
-
-* **Agents:** Helios agents, sometimes known as Helios hosts, are the machines on which the images you built eventually run. The masters tell agents to download jobs and run them.
-
-Install the Helios CLI
----
-
-Whichever environment you are deploying to, you should install the CLI locally so you can talk to 
+Whichever environment you are deploying to, you should install the CLI locally so you can talk to
 Helios clusters without having to SSH to another machine.
 
-  * Ubuntu Trusty: `dpkg -i helios_all.deb` [download from here](https://github.com/spotify/helios/releases)
-  * Mac OS X: `brew install helios` (after installing [Spotify's homebrew tap](https://github.com/spotify/homebrew-public))
+- Ubuntu Trusty: `dpkg -i helios_all.deb` [download from here](https://github.com/spotify/helios/releases)
+- Mac OS X: `brew install helios` (after installing [Spotify's homebrew tap](https://github.com/spotify/homebrew-public))
 
-Using the Helios CLI
----
+## Using the Helios CLI
 
 The `helios` command is your primary interface for interacting with the Helios cluster.
 
@@ -76,7 +70,7 @@ List agents with `helios hosts [optional hostname pattern]`. If your agents have
 `key=value` (see below on how to label agents), you can use host selector expressions like
 `helios hosts -s key1=value1 -s key2!=value2 -s "key3 in (value3a, value3b)"`.
 Hosts matching these expressions will be returned. Multiple conditions can be
-specified, separated by spaces (as separate  arguments). If multiple conditions are given,
+specified, separated by spaces (as separate arguments). If multiple conditions are given,
 all must be fulfilled. Operators supported are =, !=, in and notin. See `helios hosts -h` for more
 info.
 
@@ -86,8 +80,8 @@ You can add labels to your agents when starting the Helios agent process by pass
 `java AgentMain ... --labels key1=value1 --labels key2=value2`. Labels are used by
 [deployment groups](#using-deployment-groups).
 
-Creating Your Job
----
+## Creating Your Job
+
 Once you have a Docker image you want to deploy, you need to tell Helios how you want it run. First we tell Helios the relevant details.
 
 ### A basic job
@@ -105,7 +99,7 @@ If you didn't specify an `ENTRYPOINT` in your Dockerfile, you can specify a comm
 
     $ helios create testjob:1 ubuntu:12.04 -- \
         /bin/sh -c 'while true; do date; sleep 60; done'
-    Creating job: {"command":["/bin/sh","-c","while true; do date; sleep 60;        
+    Creating job: {"command":["/bin/sh","-c","while true; do date; sleep 60;
     done"],"env":{},"expires":null,"id":"testjob:1:4f7125bff35d3cecaac237da3ab17efca8a765f9",
     "image":"ubuntu:12.04","ports":{},"registration":{},"registrationDomain":"","volumes":{}}
     Done.
@@ -139,55 +133,55 @@ example that uses all the available configuration keys with an explanation of ea
 
 ```json
 {
-  "addCapabilities" : [ "IPC_LOCK", "SYSLOG" ],
-  "dropCapabilities" : [ "SYS_BOOT", "KILL" ],
-  "command" : [ "server", "serverconfig.yaml" ],
-  "env" : {
-    "JVM_ARGS" : "-Ddw.feature.randomFeatureFlagEnabled=true"
+  "addCapabilities": ["IPC_LOCK", "SYSLOG"],
+  "dropCapabilities": ["SYS_BOOT", "KILL"],
+  "command": ["server", "serverconfig.yaml"],
+  "env": {
+    "JVM_ARGS": "-Ddw.feature.randomFeatureFlagEnabled=true"
   },
-  "expires" : "2014-06-01T12:00:00Z",
+  "expires": "2014-06-01T12:00:00Z",
   "gracePeriod": 60,
-  "healthCheck" : {
-    "type" : "http",
-    "path" : "/healthcheck",
-    "port" : "http-admin"
+  "healthCheck": {
+    "type": "http",
+    "path": "/healthcheck",
+    "port": "http-admin"
   },
-  "id" : "myservice:0.5:3539b7bc2235d53f79e6e8511942bbeaa8816265",
-  "image" : "myregistry:80/janedoe/myservice:0.5-98c6ff4",
+  "id": "myservice:0.5:3539b7bc2235d53f79e6e8511942bbeaa8816265",
+  "image": "myregistry:80/janedoe/myservice:0.5-98c6ff4",
   "hostname": "myhost",
-  "metadata": { 
+  "metadata": {
     "foo": "bar"
   },
-  "networkMode" : "bridge",
-  "ports" : {
-    "http" : {
-      "externalPort" : 8080,
-      "internalPort" : 8080,
-      "protocol" : "tcp"
+  "networkMode": "bridge",
+  "ports": {
+    "http": {
+      "externalPort": 8080,
+      "internalPort": 8080,
+      "protocol": "tcp"
     },
-    "http-admin" : {
-      "externalPort" : 8081,
-      "internalPort" : 8081,
-      "ip" : "127.0.0.1",
-      "protocol" : "tcp"
+    "http-admin": {
+      "externalPort": 8081,
+      "internalPort": 8081,
+      "ip": "127.0.0.1",
+      "protocol": "tcp"
     }
   },
   "ramdisks": {
     "/mount/point/in/container": "mount-options"
   },
-  "registration" : {
-    "fooservice/http" : {
-      "ports" : {
-        "http" : { }
+  "registration": {
+    "fooservice/http": {
+      "ports": {
+        "http": {}
       }
     }
   },
-  "registrationDomain" : "",
-  "resources" : {
-    "memory" : 10485760,
-    "memorySwap" : 10485760,
-    "cpuset" : "0",
-    "cpuShares" : 512
+  "registrationDomain": "",
+  "resources": {
+    "memory": 10485760,
+    "memorySwap": 10485760,
+    "cpuset": "0",
+    "cpuShares": 512
   },
   "rolloutOptions": {
     "migrate": false,
@@ -198,11 +192,11 @@ example that uses all the available configuration keys with an explanation of ea
     "ignoreFailures": false
   },
   "secondsToWaitBeforeKill": 120,
-  "securityOpt" : [ "label:user:USER", "apparmor:PROFILE" ],
+  "securityOpt": ["label:user:USER", "apparmor:PROFILE"],
   "token": "insecure-access-token",
   "runtime": "nvidia",
-  "volumes" : {
-    "/destination/path/in/container.yaml:ro" : "/source/path/in/host.yaml"
+  "volumes": {
+    "/destination/path/in/container.yaml:ro": "/source/path/in/host.yaml"
   }
 }
 ```
@@ -216,49 +210,60 @@ parameters in version-controlled files in your project directory. This allows
 you to tie your Helios job params to changes in your application code.
 
 #### addCapabilities
+
 The Linux capabilities to add to the container. Optional. See [Docker docs][1].
 
 #### dropCapabilities
+
 The Linux capabilities to remove from the container. Optional. See [Docker docs][1].
 
 #### command
+
 The command(s) to pass to the container. Optional.
 
 #### env
+
 Environment variables. Optional.
 
 #### expires
+
 An ISO-8601 string representing the date/time when this job should expire. The
-job will be undeployed from all hosts and removed at this time. 
+job will be undeployed from all hosts and removed at this time.
 
 Example value: `2014-06-01T12:00:00Z`
 
 Optional, if not specified the job does not expire.
 
 #### gracePeriod
+
 If is specified, Helios will unregister from service discovery and wait the
 specified number of seconds before undeploying. Optional, defaults to `0` for
 no grace period.
 
 The CLI will prevent you from creating a job that contains both a grace period and
-a static port, as these two options conflict with each other (the new container 
+a static port, as these two options conflict with each other (the new container
 cannot be started if the external port is in use by the old container) and often
 cause `rolling-update` timeouts.
 
 #### healthCheck
+
 A health check Helios will execute on the container. See the health checks
 section below. Optional.
 
 #### id
+
 The id of the job. Required.
 
 #### image
+
 The docker image to use. Required.
 
 #### hostname
+
 The hostname to be passed to the container. Optional.
 
 #### metadata
+
 Arbitrary key-value pairs that can be stored with the Job. Optional.
 
 The Helios service does not act on these metadata labels, but will store them
@@ -268,31 +273,32 @@ If the environment variable `GIT_COMMIT` is set, the helios CLI command
 `helios create` will set a metadata field for `"GIT_COMMIT": <the value>`.
 
 #### networkMode
-Sets the networking mode for the container. 
 
-Supported values are: 
-  - `bridge`
-  - `host`
-  - `container:<name|id>`. 
-  
+Sets the networking mode for the container.
+
+Supported values are:
+
+- `bridge`
+- `host`
+- `container:<name|id>`.
+
 For further reference see [Docker docs](https://docs.docker.com/reference/run/#network-settings).
 
 #### ports
+
 Specifies how ports inside the container should be mapped/published to the host
 the container runs on. Port mappings are optional, by default nothing is mapped
 to the host.
 
-Specify an endpoint name and a single port (e.g.  `{"http": {"internalPort":
-8080}}`) for dynamic port mapping (i.e. Docker chooses the external port).
+Specify an endpoint name and a single port (e.g. `{"http": {"internalPort": 8080}}`) for dynamic port mapping (i.e. Docker chooses the external port).
 
-For static port mapping, specify the internal and external ports like `{"http":
-{"internalPort": 8080, "externalPort": 80}}`.
-  
-For example, `{"foo": {"internalPort": 4711}}`  will  map the internal port
-4711 of the container to an arbitrary external port on the host. 
-  
+For static port mapping, specify the internal and external ports like `{"http": {"internalPort": 8080, "externalPort": 80}}`.
+
+For example, `{"foo": {"internalPort": 4711}}` will map the internal port
+4711 of the container to an arbitrary external port on the host.
+
 Specifying `{"foo": {"internalPort": 4711, "externalPort": 80}}` will map
-internal port 4711  of the container to port 80 on the host.
+internal port 4711 of the container to port 80 on the host.
 
 The `ip` attribute is optional and specifies the IP address on which the port
 will be exposed. Although Helios will check the IP string is a valid IP address,
@@ -300,20 +306,22 @@ it won't verify the address is routable or whether it'll work at deploy-time.
 
 The protocol will be TCP by default. For UDP, add `"protocol": udp`, for
 example `{"quic": {"internalPort": 80, "protocol": "udp"}}` or
-`{"dns": {"internalPort": 53, "externalPort": 53, "protocol": "udp"}}`. 
+`{"dns": {"internalPort": 53, "externalPort": 53, "protocol": "udp"}}`.
 
 The name of the endpoint specified in the port mapping will be used if
 specifying service registration using the `registration` below.
 
 The CLI will prevent you from creating a job that contains both a grace period and
-a static port, as these two options conflict with each other (the new container 
+a static port, as these two options conflict with each other (the new container
 cannot be started if the external port is in use by the old container) and often
 cause `rolling-update` timeouts.
 
 #### ramdisks
+
 Memory-backed (tmpfs) mounts that are created and mounted when the container is run. Optional.
 
 Format:
+
 ```
 "ramdisks": {
   "<mount-point>": "<mount-options>",
@@ -325,6 +333,7 @@ The mount point is the path where the ramdisk will be mounted in the container.
 The mount point must be an absolute path.
 
 Example:
+
 ```
 "ramdisks": {
   "/tmp": "rw,size=32m",
@@ -333,11 +342,12 @@ Example:
 ```
 
 #### registration
+
 Service discovery registration. Optional, by default no ports/services are
-registered. 
+registered.
 
 Specify a service name, the port name and a protocol in the format
-`service/protocol=port`. 
+`service/protocol=port`.
 
 For example `{"website/tcp": {"ports": {"http": {}}}}` will register a service
 named `website` with the port named `http` (referring to the `ports` section)
@@ -348,29 +358,33 @@ this will be used by default and it will be enough to specify only the service
 name, e.g. `{"wordpress": {}}`.
 
 #### registrationDomain
+
 If set, overrides the default domain in which discovery service registration
 occurs. Optional.
 
 #### resources
+
 Sets the runtime constraints for a container. Available keys are "memory" (,
 "memorySwap", "cpuset", and "cpuShares".
-* "memory": a positive integer limiting the number of bytes of memory
-* "memorySwap": a positive integer limiting the number of bytes of total memory (memory + swap)
-* "cpuset": CPUs in which to allow execution, e.g. 0-3
-* "cpuShares": CPU shares (relative weight, defaults to 1024)
+
+- "memory": a positive integer limiting the number of bytes of memory
+- "memorySwap": a positive integer limiting the number of bytes of total memory (memory + swap)
+- "cpuset": CPUs in which to allow execution, e.g. 0-3
+- "cpuShares": CPU shares (relative weight, defaults to 1024)
 
 These settings correspond to the ones in the [Docker docs][2].
 
 What is allowed here will vary based upon the discovery service plugin used.
 
 #### rolloutOptions
+
 When you run `helios rolling-update`, the rolling-update options will be constructed from the
 values you provide on the CLI and the job configuration (see above JSON for an example of a full job
- config) with the following precedence:
+config) with the following precedence:
 
-* Parameters included in the API request (eg, flags passed on the command line)
-* Parameters defined in the job configuration (of the job being rolled out)
-* The default value for the parameter as defined in the RolloutOptions class
+- Parameters included in the API request (eg, flags passed on the command line)
+- Parameters defined in the job configuration (of the job being rolled out)
+- The default value for the parameter as defined in the RolloutOptions class
 
 Example:
 
@@ -403,13 +417,15 @@ Since timeout, migrate, and token weren't specified either via CLI or job config
 values from the defaults in [`RolloutOptions`][rollout-options-code].
 
 #### runtime
-Optional. Container runtime to use. When specifying a runtime, you will need to ensure that 
+
+Optional. Container runtime to use. When specifying a runtime, you will need to ensure that
 the docker daemon knows about the specified runtime. For example, to enable nvidia runtime,
 you will need to ensure that the host has the nvidia runtime libraries the container needs.
 
-[Example of setting up nvidia container runtime.](https://github.com/NVIDIA/nvidia-docker) 
+[Example of setting up nvidia container runtime.](https://github.com/NVIDIA/nvidia-docker)
 
 #### secondsToWaitBeforeKill
+
 Optional. When a job is being stopped or undeployed, the helios-agent will ask
 Docker to stop the container (which sends SIGTERM) and pass along a value for
 how many seconds to wait for the container to shutdown before resorting to
@@ -422,6 +438,7 @@ before that period of time has passed. In most cases this option likely does
 not need to be specified.
 
 #### securityOpt
+
 Optional. A list of strings denoting security options for running Docker
 containers, e.g. `docker run --security-opt <value...>`.
 
@@ -429,6 +446,7 @@ For more details, see the [Docker
 docs](https://docs.docker.com/reference/run/#security-configuration).
 
 #### token
+
 Insecure access token meant to prevent accidental changes to your job (e.g.
 undeploys). Optional.
 
@@ -437,7 +455,8 @@ CLI when managing instances of the job, for example when undeploying a running
 container.
 
 #### volumes
-Container volumes. Optional. 
+
+Container volumes. Optional.
 
 Specify a single path to create a data volume, a container path and a source
 path to mount a directory from the host, or a container path and a name to mount
@@ -450,9 +469,9 @@ Format: `"[container-path]:[rw|ro]": "[host-path|volume-name]"`.
 
 Examples:
 
-  * Mount a new data volume (name assigned by docker) to `/foo` in the container: `"volumes": {"/foo": ""}`
-  * Mount `/src` from the host to `/dst` in the container: `"volumes": {"/dst": "/src"}`
-  * Mount a volume named `my-vol` to `/dst` in the container: `"volumes": {"/dst": "my-vol"}`
+- Mount a new data volume (name assigned by docker) to `/foo` in the container: `"volumes": {"/foo": ""}`
+- Mount `/src` from the host to `/dst` in the container: `"volumes": {"/dst": "/src"}`
+- Mount a volume named `my-vol` to `/dst` in the container: `"volumes": {"/dst": "my-vol"}`
 
 [volumes]: https://docs.docker.com/engine/reference/run/#volume-shared-filesystems
 
@@ -462,16 +481,17 @@ When a job is started, Helios can optionally run a health check before registeri
 service discovery. This prevents the service from receiving traffic before it is ready. After the
 container starts, Helios will execute the health check as follows.
 
-* Begin executing health checks and mark the job as "HEALTHCHECKING".
-* Start with a 1 second interval, then back off exponentially until reaching a maximum interval of 30 seconds.
-* If a health check succeeds
-  * Stop running health checks
-  * Register service with service discovery (if job is configured to do so)
-  * Mark the job as "RUNNING"
-* If a health check doesn't succeed, Helios will leave the job in the "HEALTHCHECKING" state forever
+- Begin executing health checks and mark the job as "HEALTHCHECKING".
+- Start with a 1 second interval, then back off exponentially until reaching a maximum interval of 30 seconds.
+- If a health check succeeds
+  - Stop running health checks
+  - Register service with service discovery (if job is configured to do so)
+  - Mark the job as "RUNNING"
+- If a health check doesn't succeed, Helios will leave the job in the "HEALTHCHECKING" state forever
   for debugging purposes.
 
 #### HTTP
+
 This health check makes an HTTP request to the specified port and path and considers a return
 code of 2xx or 3xx as successful. HTTP health checks are specified in the form `port_name:path`,
 where `port_name` is the **name** of the exposed port (as set in the `--port` argument), and `path`
@@ -494,6 +514,7 @@ or instead to specify the healthcheck in your Helios job config file:
 ```
 
 #### TCP
+
 This health check succeeds if it is able to connect to the specified port. You must specify the
 **name** of the port as set in the `--port` argument. Each request will timeout after 500ms.
 
@@ -544,8 +565,8 @@ will fail with a `FORBIDDEN` status code.
 **Note:** This token is intended only to prevent unintentional operations. The token mechanism does
 not provide actual security, and will not prevent malicious behavior.
 
-Deploying Your Job
----
+## Deploying Your Job
+
 Now that you've created a Helios job, you can deploy it to Helios hosts. You'll need to find a running Helios host to do so. You can see which hosts are available using the CLI. For example:
 
     $ helios hosts
@@ -610,19 +631,18 @@ deploys the specified job.
 [Here's more information](https://github.com/spotify/helios/blob/master/docs/deployment_groups.md)
 on how to use deployment groups and their motivation.
 
-Once Inside The Container
----
+## Once Inside The Container
 
 Now once you are inside your container, if you have exposed ports,
-you'll find a few environment variables set that you may need.  If you
+you'll find a few environment variables set that you may need. If you
 have a port named `foo`, there will be an environment variable named
 `HELIOS_PORT_foo` set to the host and port of the port named `foo` as
-it is seen *from outside the container*.  So if you had `-p foo=2121`
+it is seen _from outside the container_. So if you had `-p foo=2121`
 in your job creation commmand, once deployed on a host named
 `foo.example.com`, from inside the container you would see
 `HELIOS_PORT_foo` set to something like `foo.example.com:23238`
 depending on what port was allocated when it was deployed.
 
-  [1]: https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities
-  [2]: https://docs.docker.com/engine/reference/run/#runtime-constraints-on-resources
-  [rollout-options-code]: https://github.com/spotify/helios/blob/master/helios-client/src/main/java/com/spotify/helios/common/descriptors/RolloutOptions.java
+[1]: https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities
+[2]: https://docs.docker.com/engine/reference/run/#runtime-constraints-on-resources
+[rollout-options-code]: https://github.com/spotify/helios/blob/master/helios-client/src/main/java/com/spotify/helios/common/descriptors/RolloutOptions.java

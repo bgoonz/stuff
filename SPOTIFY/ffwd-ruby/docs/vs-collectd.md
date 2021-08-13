@@ -10,7 +10,7 @@ administrator to choose which is the most appropriate method of collecting and
 supports a wide array of community accepted protocols to receive them.
 
 **collectd** does as well support alternative input protocols and is indeed
-moving towards being more *middleware*-oriented.
+moving towards being more _middleware_-oriented.
 
 However, doing collection inside the agent puts strains on the architecture
 which we intend to avoid with **FFWD**.
@@ -24,40 +24,40 @@ This makes **FFWD** slower.
 
 It also distinguishes **FFWD** in that.
 
-* **memory management** is easier.
-* **dynamic datastructures** are readily available.
-* **error conditions** can be handled by fewer lines of codes, usually simply
+- **memory management** is easier.
+- **dynamic datastructures** are readily available.
+- **error conditions** can be handled by fewer lines of codes, usually simply
   by correct exception handling (but not always!).
-* A ton of easy to use libraries are available in ruby. While both a blessing
+- A ton of easy to use libraries are available in ruby. While both a blessing
   and a curse it typically means fewer lines of codes compared to their
   C counterpart, which allows for faster development iterations.
 
 ## collectd relies on threads. FFWD is [event-based](http://rubyeventmachine.com/).
 
-The use of threads is not controversial, but having the *Core* of **FFWD**
+The use of threads is not controversial, but having the _Core_ of **FFWD**
 running on a single thread means that a lot of tasks to allow for introspection
 are easier to implement. **collectd** being a bit of a black box has always
 been an issue to us.
 
 This does however mean that plugin authors have to be aware that their
-*consumption* loop could potentially block the entire application.
+_consumption_ loop could potentially block the entire application.
 
-However, since **FFWD** only focuses on *ffwding* from one type of plugin to
+However, since **FFWD** only focuses on _ffwding_ from one type of plugin to
 another, we expect the amount of plugins to be far less than that of
 **collectd**.
 
 ## collectd saves metrics. FFWD drops metrics.
 
-Now building a reliable transport for metrics is *hard*, in FFWD we've opted for
-*dropping* information, but making the system *aware* of that it's doing it.
+Now building a reliable transport for metrics is _hard_, in FFWD we've opted for
+_dropping_ information, but making the system _aware_ of that it's doing it.
 
-*Core* has no buffers, instead it is up to each individual output plugin to
+_Core_ has no buffers, instead it is up to each individual output plugin to
 decide weither they should or should not buffer their data.
 Most plugins that we have written use the following scheme.
 
 1. Data received is put on a small (limited) buffer.
 2. Data is periodically batched.
-3. *If batching takes longer than the configured period*,
+3. _If batching takes longer than the configured period_,
    start dropping data.
 4. Generate new metrics indicating that data is being dropped, display them on
    a side-channel.

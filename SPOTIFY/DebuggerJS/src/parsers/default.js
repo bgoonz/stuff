@@ -6,8 +6,7 @@
  * @class Default
  * @constructor
  */
-DebuggerJS.Parsers.Default = (function() {
-
+DebuggerJS.Parsers.Default = function () {
   /**
    * Returns an array with the formated log message.
    *
@@ -19,9 +18,8 @@ DebuggerJS.Parsers.Default = (function() {
    * @param {String} tag The tag that the log is associated with.
    * @return {Array} The array that will be send to the logger.
    */
-  this.parse = function(module, message, tag) {
-    module = module + ' |';
-    return [module].concat(message).concat('| Tag: ' + tag);
+  this.parse = function (module, message, tag) {
+    module = module + " |";
+    return [module].concat(message).concat("| Tag: " + tag);
   };
-
-});
+};

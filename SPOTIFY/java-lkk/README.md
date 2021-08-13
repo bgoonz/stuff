@@ -1,5 +1,4 @@
-LeanKitKanban Client for Java
-=============================
+# LeanKitKanban Client for Java
 
 This is a java java implementation to simplify integration with the
 [LeanKitKanban restful

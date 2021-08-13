@@ -2,62 +2,62 @@
 
 This user manual is made to correspond to Docker's [API docs][1] (e.g. [API 1.18][2]).
 
-* [Creating a DockerClient](#creating-a-docker-client)
-  * [Unix socket support](#unix-socket-support)
-  * [HTTPS support](#https-support)
-  * [Connection pooling](#connection-pooling)
-* [Authentication to private registries](#authentication-to-private-registries)
-* [Containers](#containers)
-  * [List containers](#list-containers)
-  * [Create a container](#create-a-container)
-  * [Inspect a container](#inspect-a-container)
-  * [List processes running inside a container](#list-processes-running-inside-a-container)
-  * [Get container logs](#get-container-logs)
-  * [Inspect changes on a container's filesystem](#inspect-changes-on-a-containers-filesystem)
-  * [Export a container](#export-a-container)
-  * [Get container stats based on resource usage](#get-container-stats-based-on-resource-usage)
-  * [Resize a container TTY](#resize-a-container-tty)
-  * [Start a container](#start-a-container)
-  * [Stop a container](#stop-a-container)
-  * [Restart a container](#restart-a-container)
-  * [Kill a container](#kill-a-container)
-  * [Rename a container](#rename-a-container)
-  * [Pause a container](#pause-a-container)
-  * [Unpause a container](#unpause-a-container)
-  * [Attach to a container](#attach-to-a-container)
-  * [Attach to a container (websocket)](#attach-to-a-container-websocket)
-  * [Wait a container](#wait-a-container)
-  * [Remove a container](#remove-a-container)
-  * [Copy files or folders from a container](#copy-files-or-folders-from-a-container)
-* [Secrets](#secrets)
-  * [Create Secret](#create-secret)
-* [Images](#images)
-  * [List Images](#list-images)
-  * [Build image from a Dockerfile](#build-image-from-a-dockerfile)
-  * [Create an image](#create-an-image)
-  * [Inspect an image](#inspect-an-image)
-  * [Get the history of an image](#get-the-history-of-an-image)
-  * [Push an image on the registry](#push-an-image-on-the-registry)
-  * [Tag an image into a repository](#tag-an-image-into-a-repository)
-  * [Remove an image](#remove-an-image)
-  * [Search images](#search-images)
-* [Miscellaneous](#miscellaneous)
-  * [Check auth configuration](#check-auth-configuration)
-  * [Display system-wide information](#display-system-wide-information)
-  * [Show the docker version information](#show-the-docker-version-information)
-  * [Ping the docker server](#ping-the-docker-server)
-  * [Create a new image from a container’s changes](#create-a-new-image-from-a-containers-changes)
-  * [Monitor Docker’s events](#monitor-dockers-events)
-  * [Get a tarball containing all images in a repository](#get-a-tarball-containing-all-images-in-a-repository)
-  * [Get a tarball containing all images.](#get-a-tarball-containing-all-images)
-  * [Load a tarball with a set of images and tags into docker](#load-a-tarball-with-a-set-of-images-and-tags-into-docker)
-  * [Image tarball format](#image-tarball-format)
-  * [Exec Create](#exec-create)
-  * [Exec Start](#exec-start)
-  * [Exec Resize](#exec-resize)
-  * [Exec Inspect](#exec-inspect)
-  * [Mounting volumes in a container](#mounting-volumes-in-a-container)
-* [Troubleshooting](#troubleshooting)
+- [Creating a DockerClient](#creating-a-docker-client)
+  - [Unix socket support](#unix-socket-support)
+  - [HTTPS support](#https-support)
+  - [Connection pooling](#connection-pooling)
+- [Authentication to private registries](#authentication-to-private-registries)
+- [Containers](#containers)
+  - [List containers](#list-containers)
+  - [Create a container](#create-a-container)
+  - [Inspect a container](#inspect-a-container)
+  - [List processes running inside a container](#list-processes-running-inside-a-container)
+  - [Get container logs](#get-container-logs)
+  - [Inspect changes on a container's filesystem](#inspect-changes-on-a-containers-filesystem)
+  - [Export a container](#export-a-container)
+  - [Get container stats based on resource usage](#get-container-stats-based-on-resource-usage)
+  - [Resize a container TTY](#resize-a-container-tty)
+  - [Start a container](#start-a-container)
+  - [Stop a container](#stop-a-container)
+  - [Restart a container](#restart-a-container)
+  - [Kill a container](#kill-a-container)
+  - [Rename a container](#rename-a-container)
+  - [Pause a container](#pause-a-container)
+  - [Unpause a container](#unpause-a-container)
+  - [Attach to a container](#attach-to-a-container)
+  - [Attach to a container (websocket)](#attach-to-a-container-websocket)
+  - [Wait a container](#wait-a-container)
+  - [Remove a container](#remove-a-container)
+  - [Copy files or folders from a container](#copy-files-or-folders-from-a-container)
+- [Secrets](#secrets)
+  - [Create Secret](#create-secret)
+- [Images](#images)
+  - [List Images](#list-images)
+  - [Build image from a Dockerfile](#build-image-from-a-dockerfile)
+  - [Create an image](#create-an-image)
+  - [Inspect an image](#inspect-an-image)
+  - [Get the history of an image](#get-the-history-of-an-image)
+  - [Push an image on the registry](#push-an-image-on-the-registry)
+  - [Tag an image into a repository](#tag-an-image-into-a-repository)
+  - [Remove an image](#remove-an-image)
+  - [Search images](#search-images)
+- [Miscellaneous](#miscellaneous)
+  - [Check auth configuration](#check-auth-configuration)
+  - [Display system-wide information](#display-system-wide-information)
+  - [Show the docker version information](#show-the-docker-version-information)
+  - [Ping the docker server](#ping-the-docker-server)
+  - [Create a new image from a container’s changes](#create-a-new-image-from-a-containers-changes)
+  - [Monitor Docker’s events](#monitor-dockers-events)
+  - [Get a tarball containing all images in a repository](#get-a-tarball-containing-all-images-in-a-repository)
+  - [Get a tarball containing all images.](#get-a-tarball-containing-all-images)
+  - [Load a tarball with a set of images and tags into docker](#load-a-tarball-with-a-set-of-images-and-tags-into-docker)
+  - [Image tarball format](#image-tarball-format)
+  - [Exec Create](#exec-create)
+  - [Exec Start](#exec-start)
+  - [Exec Resize](#exec-resize)
+  - [Exec Inspect](#exec-inspect)
+  - [Mounting volumes in a container](#mounting-volumes-in-a-container)
+- [Troubleshooting](#troubleshooting)
 
 ## Creating a docker-client
 
@@ -397,7 +397,6 @@ final String returnedImageId = docker.build(
 
 ### Create an image
 
-
 ```java
 // By pulling
 final RegistryAuth registryAuth = RegistryAuth.builder()
@@ -564,7 +563,6 @@ try (OutputStream imageOutput = new BufferedOutputStream(new FileOutputStream(im
 }
 ```
 
-
 ### Get a tarball containing all images.
 
 ```java
@@ -630,7 +628,9 @@ final List<Volume> volumes = volumeList.volumes();
 ```
 
 ### Create a volume
+
 Create a volume with specified properties:
+
 ```java
 final Volume toCreate = Volume.builder()
   .name("volumeName")
@@ -641,6 +641,7 @@ final Volume created = docker.createVolume(toCreate);
 ```
 
 Or create an anonymous volume:
+
 ```java
 final Volume created = docker.createVolume();
 ```
@@ -652,21 +653,27 @@ final Volume volume = docker.inspectVolume("volumeName");
 ```
 
 ### Remove a volume
+
 By name
+
 ```java
 docker.removeVolume("volumeName");
 ```
 
 Or by object reference
+
 ```java
 docker.removeVolume(volume);
 ```
 
 # Going Further
+
 ## Mounting directories in a container
+
 To mount a host directory into a container, create the container with a `HostConfig`.
 You can set the local path and remote path in the `binds()` method on the `HostConfig.Builder`.
 There are two ways to make a bind:
+
 1. Pass `binds()` a set of strings of the form `"local_path:container_path"` for read/write or `"local_path:container_path:ro"` for read only.
 2. Create a `Bind` object and pass it to `binds()` (or `appendBinds()` if you want to incrementally add multiple `Bind`s).
 
@@ -696,24 +703,25 @@ final ContainerConfig volumeConfig =
 ```
 
 ### A note on mounts
+
 Be aware that, starting with API version 1.20 (docker version 1.8.x), information
 about a container's volumes is returned with the key `"Mounts"`, not `"Volumes"`.
 As such, the `ContainerInfo.volumes()` method is deprecated. Instead, use
 `ContainerInfo.mounts()`.
 
-  [1]: https://docs.docker.com/engine/reference/api/docker_remote_api/
-  [2]: https://docs.docker.com/engine/reference/api/docker_remote_api_v1.18/
-  
+[1]: https://docs.docker.com/engine/reference/api/docker_remote_api/
+[2]: https://docs.docker.com/engine/reference/api/docker_remote_api_v1.18/
+
 # Troubleshooting
 
 ## HTTP 500 errors returned from the Docker Remote API
 
-docker-client communicates with your local Docker daemon using the HTTP Remote 
+docker-client communicates with your local Docker daemon using the HTTP Remote
 API and any unexpected errors that the daemon encounters will be reported as a
-500 Internal Server Error, which bubbles up from docker-client as an exception 
+500 Internal Server Error, which bubbles up from docker-client as an exception
 like:
 
 > Caused by: com.spotify.docker.client.shaded.javax.ws.rs.InternalServerErrorException: HTTP 500 Internal Server Error
 
-Check the Docker daemon log (typically at `/var/log/docker.log` or 
+Check the Docker daemon log (typically at `/var/log/docker.log` or
 `/var/log/upstart/docker.log`) for more details as to the root cause.

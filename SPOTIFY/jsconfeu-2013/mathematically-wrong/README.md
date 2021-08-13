@@ -1,5 +1,5 @@
-Mathematically wrong
-====================
+# Mathematically wrong
+
 ![Spotify Logo](../resources/spotify-logo.png)
 
 Tell us what's wrong in this fragment of a math library.
@@ -8,5 +8,5 @@ Tell us what's wrong in this fragment of a math library.
 
 Given the proposed piece of code: [mathematically-wrong.js](./mathematically-wrong.js)
 
-* Tell us what's wrong.
-* No to need to check cross-browser compatibility. The code has been reviewed only in Chrome.
+- Tell us what's wrong.
+- No to need to check cross-browser compatibility. The code has been reviewed only in Chrome.

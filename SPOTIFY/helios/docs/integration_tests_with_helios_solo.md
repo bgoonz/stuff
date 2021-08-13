@@ -3,7 +3,7 @@ an integration test using a JUnit `@ClassRule`/`@Rule`.
 
 This allows for integration tests that will automatically install (and clean
 up) helios-solo for you without having to install `helios-solo` and remember to
-start it before running your tests.  The only requirement is that the machine
+start it before running your tests. The only requirement is that the machine
 running the integration test have Docker installed.
 
 # How to use it
@@ -38,7 +38,6 @@ Then use a `RuleChain` to guarantee that `HeliosSoloDeployment` and then `Tempor
 are created in that order and torn down in the reverse order. Otherwise, you might
 have leftover containers from your tests.
 
-
 ```java
 @ClassRule
 public static final RuleChain chain = RuleChain
@@ -47,24 +46,25 @@ public static final RuleChain chain = RuleChain
 ```
 
 ## @ClassRule vs @Rule
+
 The `@ClassRule RuleChain` above will set up `HeliosSoloDeployment` once for all of the tests
 in your `Test` class. To instead set up (and tear down) a
-`HeliosSoloDeployment` for *each individual* test in the class, change the
-`@ClassRule` to a `@Rule` and remove the `static` modifier. 
+`HeliosSoloDeployment` for _each individual_ test in the class, change the
+`@ClassRule` to a `@Rule` and remove the `static` modifier.
 
 Since there is a bit of set up work in creating a `HeliosSoloDeployment`, this
 will add a lot of overhead to each test. We recommend using
 `HeliosSoloDeployment` as a `@ClassRule`.
 
 [helios-solo]: ./helios_solo.md
-[TemporaryJobs]: ./testing_framework.md
+[temporaryjobs]: ./testing_framework.md
 
 ## Known Issues
 
 ### `DOCKER_HOST` refers to `localhost` or `127.0.0.1`
 
 In order to deploy jobs to itself, the helios-solo container needs to talk to
-the docker daemon running on the host. 
+the docker daemon running on the host.
 
 If your `DOCKER_HOST` environment variable points to a Unix socket, or refers
 to an address that is not `localhost` or `127.0.0.1` then this should work fine
@@ -81,19 +81,21 @@ can workaround this by making sure your test is launched with a `DOCKER_HOST`
 value that is not localhost.
 
 ### Docker for Mac: TemporaryJob without healthcheck is immediately "up"
+
 When using Docker for Mac, if you deploy a TemporaryJob with a port mapping but
 without any healthchecks, your test will run immediately after the container
 for TemporaryJob has started, which may be before the service inside it has
 fully initialized.
 
 This is because Docker for Mac seems to accept connections on the mapped port
-immediately, before the container starts to listen on the port.  Helios-testing
+immediately, before the container starts to listen on the port. Helios-testing
 connects to the mapped port to judge when the container has finished starting
 up.
 
 To work around this, add a healthcheck to your TemporaryJob.
 
 ### Docker for Mac: address for TemporaryJob containers is returned as 127.0.0.1
+
 HeliosSoloDeployment has [special checks when running under Docker for
 Mac][hsd-dfm] in order to determine what IP address should be used for your
 test to communicate with the container running your TemporaryJob, i.e. the
@@ -108,8 +110,7 @@ TemporaryJob talk to another.
 These checks rely on having [the hostname of the local host be resolved into a
 non-localhost IP address][hostaddress].
 
-If you are encountering a problem where the return value of `job.address("port
-name")` is `127.0.0.1`, check to make sure that you are not mapping your
+If you are encountering a problem where the return value of `job.address("port name")` is `127.0.0.1`, check to make sure that you are not mapping your
 hostname to localhost in `/etc/hosts` (some [bugs for IntelliJ may have
 workarounds that call for doing this][intellij-bug]).
 

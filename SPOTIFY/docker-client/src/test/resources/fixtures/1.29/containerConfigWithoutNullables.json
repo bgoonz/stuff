@@ -18,7 +18,5 @@
   "MacAddress": "string",
   "StopSignal": "SIGTERM",
   "StopTimeout": 10,
-  "Shell": [
-    "string"
-  ]
+  "Shell": ["string"]
 }

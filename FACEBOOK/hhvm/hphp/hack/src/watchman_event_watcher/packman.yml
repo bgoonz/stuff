@@ -7,7 +7,7 @@ packages:
         # Packman looks for the targets in buck-out/gen
         # binaries are placed in buck-out/bin
         ../bin/hphp/hack/src/watchman_event_watcher/watcher_bin/watcher_bin.opt:
-          owner: 'root'
-          group: 'root'
-          mode: '0755'
+          owner: "root"
+          group: "root"
+          mode: "0755"
           path: bin/hh-watchman-event-watcher

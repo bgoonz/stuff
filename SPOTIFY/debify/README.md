@@ -1,11 +1,10 @@
-Debify
-===
+# Debify
 
 Debify takes a directory full of Debian packages and creates a signed and properly-structured
 Debian repository out of them.
 
-Usage
----
+## Usage
+
 Run the Debify image, mounting two volumes to special mount points:
 
 1. `/.gnpug`: Mount your GPG directory containing the key you want to sign the repository with here.
@@ -29,8 +28,8 @@ http://example.com/apt:
                  -v ~/my-debs:/debs \
                  spotify/debify
 
-Serving
----
+## Serving
+
 As an example, if you publish the contents of the tarball to `http://example.com/apt`, users can
 consume it like this:
 
@@ -44,31 +43,31 @@ If you haven't published the key, Debify will not generate a `go` script. Your u
 need to add your key using `apt-key add` and then add your repo to their `sources.list` by hand.
 Barbaric.
 
-Configuration
----
+## Configuration
+
 Here are some optional environment variables you can specify when running a Debify container:
 
-* `GPG_PASSPHRASE`: A passphrase to use when running GPG, if you need it.
+- `GPG_PASSPHRASE`: A passphrase to use when running GPG, if you need it.
 
-* `GPG_PASSPHRASE_FILE`: A passphrase file to use when running GPG, if you need it (hint: mount this
+- `GPG_PASSPHRASE_FILE`: A passphrase file to use when running GPG, if you need it (hint: mount this
   file into the container somewhere and specify the path in the container).
 
-* `APTLY_DISTRIBUTION`: Defaults to `unstable`. Some projects may choose to use a specific Debian
+- `APTLY_DISTRIBUTION`: Defaults to `unstable`. Some projects may choose to use a specific Debian
   distribution (wheezy, trusty, jessie, etc.), while cross-distribution packages might want to just
   use the project name (for example, "docker").
 
-* `APTLY_ARCHITECTURES`: List of architectures to consider. Will try to guess if not provided.
+- `APTLY_ARCHITECTURES`: List of architectures to consider. Will try to guess if not provided.
 
-* `APTLY_COMPONENT`: Defaults to `main`. See [the Debian wiki](https://wiki.debian.org/RepositoryFormat#Components)
+- `APTLY_COMPONENT`: Defaults to `main`. See [the Debian wiki](https://wiki.debian.org/RepositoryFormat#Components)
   if you're confused about this.
 
-* `KEYSERVER`: Defaults to `keyserver.ubuntu.com`. The keyserver where your GPG key has been published.
+- `KEYSERVER`: Defaults to `keyserver.ubuntu.com`. The keyserver where your GPG key has been published.
   Used for the `go` script.
 
-* `URI`: The URI where this Debian repo will be published. Used for the `go` script.
+- `URI`: The URI where this Debian repo will be published. Used for the `go` script.
 
-Under the Covers
----
+## Under the Covers
+
 Debify is a wrapper around [Aptly](http://www.aptly.info/).
 
 ### Build & release

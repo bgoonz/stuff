@@ -9,11 +9,11 @@ var A = {};
  */
 var f = {};
 
-(function(ns) {
-    /**
-     * @return {String}
-     */
-    f.method = function(){};
+(function (ns) {
+  /**
+   * @return {String}
+   */
+  f.method = function () {};
 
-    ns.F = f;
+  ns.F = f;
 })(A);

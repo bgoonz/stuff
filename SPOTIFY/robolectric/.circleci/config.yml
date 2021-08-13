@@ -7,11 +7,10 @@ job_config: &job_config
     JVM_OPTS: -Xmx4096m
     GRADLE_MAX_PARALLEL_FORKS: 2
 
-
 version: 2
 jobs:
   build:
-    << : *job_config
+    <<: *job_config
     steps:
       - checkout
       - run:
@@ -46,7 +45,7 @@ jobs:
             - "[a-zA-Z]*" # not .git
 
   test_16_17_18:
-    << : *job_config
+    <<: *job_config
     steps:
       - attach_workspace:
           at: ~/code
@@ -75,7 +74,7 @@ jobs:
           destination: reports
 
   test_19_21_22:
-    << : *job_config
+    <<: *job_config
     steps:
       - attach_workspace:
           at: ~/code
@@ -104,7 +103,7 @@ jobs:
           destination: reports
 
   test_23_24:
-    << : *job_config
+    <<: *job_config
     steps:
       - attach_workspace:
           at: ~/code
@@ -133,7 +132,7 @@ jobs:
           destination: reports
 
   test_25_26:
-    << : *job_config
+    <<: *job_config
     steps:
       - attach_workspace:
           at: ~/code
@@ -162,7 +161,7 @@ jobs:
           destination: reports
 
   test_27_28:
-    << : *job_config
+    <<: *job_config
     steps:
       - attach_workspace:
           at: ~/code
@@ -190,9 +189,8 @@ jobs:
           path: build/reports
           destination: reports
 
-
   finish:
-    << : *job_config
+    <<: *job_config
     steps:
       - attach_workspace:
           at: ~/code

@@ -8,30 +8,30 @@ packages:
   - python-argparse
 
 files:
-# init file
+  # init file
   - from: /*
     to: /
     mode: 0755
   - from: /sbin/*
     to: /sbin/
     mode: 0755
-# configuration files
+  # configuration files
   - from: /etc/*
     to: /etc/
   - from: /etc/dhclient-exit-hooks.d/*
     to: /etc/dhcp/dhclient-exit-hooks.d/
     mode: 0755
-# installer library
+  # installer library
   - from: /lib/libduck.sh
     to: /lib/
     mode: 0755
   - from: /lib/python-duck/duck/*
     to: /lib/python-duck/duck/
-# installation steps
+  # installation steps
   - from: /lib/duck.d/*
     to: /lib/duck.d/
     mode: 0755
-# hooks
+  # hooks
   - from: /lib/duck-hooks.d/*
     to: /lib/duck-hooks.d/
     mode: 0755
@@ -50,6 +50,6 @@ fixes:
 keyring:
   keyserver: "subkeys.pgp.net"
   keys:
-# debian archive keys
+    # debian archive keys
     - "473041FA"
     - "B98321F9"

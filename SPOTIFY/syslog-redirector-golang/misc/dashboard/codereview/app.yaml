@@ -4,21 +4,21 @@ runtime: go
 api_version: go1
 
 inbound_services:
-- mail
+  - mail
 
 handlers:
-- url: /static/(.*)
-  static_files: static/\1
-  upload: static/.*
-- url: /_ah/mail/.*
-  script: _go_app
-  login: admin
-- url: /_ah/queue/go/delay
-  script: _go_app
-  login: admin
-- url: /(gc|update-cl)
-  script: _go_app
-  login: admin
-- url: /.*
-  script: _go_app
-  login: required
+  - url: /static/(.*)
+    static_files: static/\1
+    upload: static/.*
+  - url: /_ah/mail/.*
+    script: _go_app
+    login: admin
+  - url: /_ah/queue/go/delay
+    script: _go_app
+    login: admin
+  - url: /(gc|update-cl)
+    script: _go_app
+    login: admin
+  - url: /.*
+    script: _go_app
+    login: required

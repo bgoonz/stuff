@@ -1,6 +1,10 @@
 {
-  "company_name": [{ "type": "heading4", "content": { "text": "Vercel", "spans": [] } }],
-  "title": [{ "type": "heading1", "content": { "text": "Security Lead", "spans": [] } }],
+  "company_name": [
+    { "type": "heading4", "content": { "text": "Vercel", "spans": [] } }
+  ],
+  "title": [
+    { "type": "heading1", "content": { "text": "Security Lead", "spans": [] } }
+  ],
   "description": [
     {
       "type": "paragraph",

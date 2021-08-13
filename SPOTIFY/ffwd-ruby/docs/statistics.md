@@ -9,7 +9,7 @@ The following sections document what metrics various models generate.
 
 ### FFWD::PluginChannel
 
-Plugin channels are a combination of *two* regular channels, one for events and
+Plugin channels are a combination of _two_ regular channels, one for events and
 one for metrics.
 
 <dl>
@@ -26,7 +26,7 @@ UDP.
 
 All plugins implementing FFWD::UDP::Bind has the following set of tags.
 
-*Note: A specific plugin can also provide it's own set of tags.*
+_Note: A specific plugin can also provide it's own set of tags._
 
 <dl>
   <dt>family</dt>
@@ -58,7 +58,7 @@ TCP.
 
 All plugins implementing FFWD::TCP::Bind has the following set of tags.
 
-*Note: A specific plugin can also provide it's own set of tags.*
+_Note: A specific plugin can also provide it's own set of tags._
 
 <dl>
   <dt>family</dt>
@@ -92,7 +92,7 @@ which peer this specific instance is communicating with.
 All plugins implementing FFWD::UDP::Connect has the following set of
 tags.
 
-*Note: A specific plugin can also provide it's own set of tags.*
+_Note: A specific plugin can also provide it's own set of tags._
 
 <dl>
   <dt>type</dt>
@@ -143,7 +143,7 @@ They are intended to buffer data and flush tham at timely intervals.
 All plugins implementing FFWD::TCP::FlushingConnect has the following set of
 tags.
 
-*Note: A specific plugin can also provide it's own set of tags.*
+_Note: A specific plugin can also provide it's own set of tags._
 
 <dl>
   <dt>type</dt>

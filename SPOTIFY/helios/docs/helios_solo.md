@@ -1,13 +1,11 @@
-Using helios-solo
-===
+# Using helios-solo
 
 helios-solo provides a local Helios cluster running in a Docker container. This
 gives you a single Helios master and agent to play around with. All Helios jobs
 are run on the local Docker instance. The only prerequisite is
 [Docker](https://docs.docker.com/installation/).
 
-Install & Run
----
+## Install & Run
 
 ### OS X
 
@@ -94,8 +92,7 @@ $ helios-up
 If `helios-up` fails, ensure that Docker is running and your client is correctly
 configured. A good test is to run `docker info` and make sure it works.
 
-Usage
----
+## Usage
 
 Here are some example commands:
 
@@ -136,34 +133,32 @@ $ helios-solo undeploy -a --yes test:1
 $ helios-solo remove test:1
 ```
 
-Commands
---------
+## Commands
 
-* `helios-up`<br />
+- `helios-up`<br />
   Brings up the helios-solo container.
 
-* `helios-down`<br />
+- `helios-down`<br />
   Destroys the helios-solo container.
 
-* `helios-solo ...`<br />
+- `helios-solo ...`<br />
   Wrapper around the helios CLI for talking to helios-solo.
   Essentially identical to `eval $(helios-env) && helios -z $HELIOS_URI ...`.
 
-* `helios-restart`<br />
+- `helios-restart`<br />
   Destroy and restart the helios-solo container.
 
-* `helios-cleanup`<br />
+- `helios-cleanup`<br />
   Remove all helios-solo jobs and containers.
 
-* `helios-env`<br />
+- `helios-env`<br />
   Utility for setting `HELIOS_URI` environment variable in your
   shell: `eval $(helios-env)`.
 
-* `helios-use` [version]<br />
+- `helios-use` [version]<br />
   Lists the available versions of Helios, switches the underlying Helios version, or upgrades to the latest version.
 
-Container Logging
------------------
+## Container Logging
 
 To see the logs for a container deployed by helios-solo, run:
 
@@ -171,8 +166,7 @@ To see the logs for a container deployed by helios-solo, run:
 
 You can get the ID's of all running containers with `docker ps`.
 
-Debugging
----------
+## Debugging
 
 The following commands can be helpful for debugging helios-solo:
 
@@ -182,7 +176,6 @@ $ docker logs helios-solo-container
 $ helios-up && docker exec -it helios-solo-container bash
 ```
 
-Known issues
-------------
+## Known issues
 
- * SkyDNS does not handle DNS TCP responses well. We have a workaround in place to use UDP for responses up to 32768 bytes in size. Any response larger than that will cause a `SERVFAIL`. When this happens SkyDns will log `skydns: failure to forward request "dns: failed to unpack truncated message"`. See https://github.com/spotify/helios/pull/900 and https://github.com/spotify/helios/pull/1081 for more information.
+- SkyDNS does not handle DNS TCP responses well. We have a workaround in place to use UDP for responses up to 32768 bytes in size. Any response larger than that will cause a `SERVFAIL`. When this happens SkyDns will log `skydns: failure to forward request "dns: failed to unpack truncated message"`. See https://github.com/spotify/helios/pull/900 and https://github.com/spotify/helios/pull/1081 for more information.

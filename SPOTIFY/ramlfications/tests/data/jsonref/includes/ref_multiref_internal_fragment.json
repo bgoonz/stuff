@@ -4,6 +4,6 @@
     "two": true
   },
   "name": "foo",
-  "is_this_internal?": {"$ref": "#/references/internal"},
-  "two_references": {"$ref": "#/references/two"}
+  "is_this_internal?": { "$ref": "#/references/internal" },
+  "two_references": { "$ref": "#/references/two" }
 }

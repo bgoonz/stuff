@@ -1,5 +1,7 @@
 {
-  "name": [{ "type": "heading1", "content": { "text": "Vercel", "spans": [] } }],
+  "name": [
+    { "type": "heading1", "content": { "text": "Vercel", "spans": [] } }
+  ],
   "uid": "vercel",
   "logo": {
     "origin": {
@@ -32,7 +34,10 @@
     }
   ],
   "call_to_action": [
-    { "type": "paragraph", "content": { "text": "Next.js Analytics", "spans": [] } }
+    {
+      "type": "paragraph",
+      "content": { "text": "Next.js Analytics", "spans": [] }
+    }
   ],
   "call_to_action_link": {
     "url": "http://nextjs.org/analytics?utm_source=conference-demo&utm_medium=expo&utm_campaign=examples",
@@ -51,7 +56,10 @@
     },
     {
       "link_text": "Import Next.js Project",
-      "link": { "url": "https://vercel.com/signup?next=/import", "preview": null }
+      "link": {
+        "url": "https://vercel.com/signup?next=/import",
+        "preview": null
+      }
     },
     {
       "link_text": "Give",
@@ -75,7 +83,11 @@
     "credits": null,
     "width": 1068,
     "height": 577,
-    "edit": { "zoom": 1, "crop": { "x": 0, "y": 0 }, "background": "transparent" },
+    "edit": {
+      "zoom": 1,
+      "crop": { "x": 0, "y": 0 },
+      "background": "transparent"
+    },
     "thumbnails": {}
   },
   "name_TYPE": "StructuredText",

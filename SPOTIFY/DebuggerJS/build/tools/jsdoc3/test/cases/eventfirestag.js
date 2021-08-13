@@ -1,8 +1,7 @@
 /**
  * @class
  */
-var Hurl = function () {
-};
+var Hurl = function () {};
 
 /**
  * Throw a snowball.
@@ -11,8 +10,8 @@ var Hurl = function () {
  * @fires Hurl#event:brick
  */
 Hurl.prototype.snowball = function () {
-    /**
-     * @event Hurl#snowball
-     */
-    this.emit('snowball', {});
+  /**
+   * @event Hurl#snowball
+   */
+  this.emit("snowball", {});
 };

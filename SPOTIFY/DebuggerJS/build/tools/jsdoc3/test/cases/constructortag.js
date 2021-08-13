@@ -5,11 +5,9 @@
     @param {string} url
     @throws MalformedURL
  */
-function Feed(url) {
-}
+function Feed(url) {}
 
 /**
     Document your method here.
 */
-Feed.prototype.refresh = function() {
-}
+Feed.prototype.refresh = function () {};

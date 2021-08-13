@@ -2,10 +2,9 @@
     @memberof mathlib
  */
 function Data() {
-
-    /** @member */
-    this.point = {};
+  /** @member */
+  this.point = {};
 }
 
 /** @namespace */
-mathlib = {Data: Data};
+mathlib = { Data: Data };

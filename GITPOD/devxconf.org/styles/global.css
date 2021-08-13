@@ -90,7 +90,7 @@ html {
   height: 100%;
   box-sizing: border-box;
   touch-action: manipulation;
-  font-feature-settings: 'case' 1, 'rlig' 1, 'calt' 0;
+  font-feature-settings: "case" 1, "rlig" 1, "calt" 0;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -103,13 +103,14 @@ body {
   min-height: 100%;
   margin: 0;
   line-height: 1.65;
-  font-family: 'ABCDiatype', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: "ABCDiatype", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   font-size: var(--body-big);
   font-weight: 400;
   color: var(--text-white);
   direction: ltr;
-  font-feature-settings: 'kern';
+  font-feature-settings: "kern";
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -170,7 +171,7 @@ svg circle {
   color: #fff;
 }
 
-[role='grid']:focus {
+[role="grid"]:focus {
   outline: none;
 }
 
@@ -288,7 +289,7 @@ button:hover {
   cursor: pointer;
 }
 
-a[role='button'] {
+a[role="button"] {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -396,7 +397,7 @@ input:focus {
 }
 
 .dashed-list li::before {
-  content: '–';
+  content: "–";
   position: absolute;
   left: 0;
 }

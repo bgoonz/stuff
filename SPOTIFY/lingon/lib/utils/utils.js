@@ -1,11 +1,10 @@
-'use strict';
+"use strict";
 
 module.exports = {
   // This function selects only extension rewrites whose source files extensions
   // have a registered preProcessor.
   registeredWithProcessor: function (processorStores, extension) {
     for (var i = 0; i < processorStores.length; i++) {
-
       var processorStore = processorStores[i];
 
       if (!!processorStore.get(extension)) {
@@ -17,7 +16,9 @@ module.exports = {
   },
 
   getRegisteredExtensions: function (
-    sourceFilename, extensionMap, processorStores
+    sourceFilename,
+    extensionMap,
+    processorStores
   ) {
     var registeredExtensionMap = {};
 
@@ -33,11 +34,12 @@ module.exports = {
       // Add this extension if it's either:
       // A: Registered with a processor
       // B: Manually enforced with the "always" flag
-      if (this.registeredWithProcessor(processorStores, extension) ||
-          opts && opts.always) {
+      if (
+        this.registeredWithProcessor(processorStores, extension) ||
+        (opts && opts.always)
+      ) {
         registeredExtensionMap[extension] = extensionMapping;
       }
-
     }
 
     return registeredExtensionMap;

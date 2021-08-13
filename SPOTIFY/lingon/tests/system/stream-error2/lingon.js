@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-'use strict';
+"use strict";
 
-var lingon = require('../../../lib/boot');
+var lingon = require("../../../lib/boot");
