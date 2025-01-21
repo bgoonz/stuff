@@ -7,7 +7,7 @@ This is a [Datasette](https://datasette.io/) template configured for ephemeral d
 Click the button below to start a new development environment:
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/gitpod-io/template-datasette)
-
+[![Open in Codeanywhere](https://codeanywhere.com/img/open-in-codeanywhere-btn.svg)](https://app.codeanywhere.com/#https://github.com/template-datasette)
 ## Get Started With Your Own Project
 
 ### A new project
