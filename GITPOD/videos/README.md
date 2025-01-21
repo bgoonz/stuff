@@ -7,3 +7,4 @@ Making neat videos about coding without friction. 📺 🍌
 - [Make a suggestion](https://github.com/gitpod-io/videos/issues/new)
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/gitpod-io/videos/)
+[![Open in Codeanywhere](https://codeanywhere.com/img/open-in-codeanywhere-btn.svg)](https://app.codeanywhere.com/#https://github.com/videos)
